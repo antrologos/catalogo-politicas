@@ -76,6 +76,24 @@ export default function (eleventyConfig) {
 }`;
   });
 
+  eleventyConfig.addFilter("citacaoApa", (p) => {
+    const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
+    const acesso = new Date().toLocaleDateString("pt-BR");
+    return `FRM/IESP-UERJ. (${ano}). ${p.nome_programa}. Catálogo de Políticas Públicas Brasileiras (1ª onda). Recuperado em ${acesso}, de https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/`;
+  });
+
+  eleventyConfig.addFilter("citacaoRis", (p) => {
+    const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
+    return `TY  - GEN
+AU  - FRM/IESP-UERJ
+TI  - ${p.nome_programa}
+PY  - ${ano}
+T2  - Catálogo de Políticas Públicas Brasileiras (1ª onda)
+UR  - https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/
+LA  - pt-BR
+ER  - `;
+  });
+
   // ---- Coleções derivadas
   eleventyConfig.addCollection("politicasPorUf", (collectionApi) => {
     // mantemos vazio aqui; lógica fica no template via _data/policies.js

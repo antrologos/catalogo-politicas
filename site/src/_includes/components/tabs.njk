@@ -1,32 +1,33 @@
 {# Componente: Tabs ARIA W3C-compliant (E.5 §2.9, NF-M-07).
-   Implementa W3C ARIA Authoring Practices Guide (APG) — Tabs Pattern.
-   https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
+   W3C ARIA Authoring Practices Guide — Tabs Pattern (manual activation).
+
+   Espera variáveis globais:
+     tabsList   (array de { id, label, panel }; panel é HTML string)
+     tabsLabel  (string, opcional — aria-label do tablist; default: "Seções")
+     tabsId     (string, opcional — id da instância para JS; default: "tabs-default")
 
    Uso:
-     {% set tabs = [
-       { id: "resumo", label: "Resumo", panel: "<p>conteúdo HTML do resumo</p>" },
+     {% set tabsList = [
+       { id: "resumo", label: "Resumo", panel: "<p>...</p>" },
        { id: "detalhes", label: "Detalhes", panel: "<dl>...</dl>" }
      ] %}
-     {% include "components/tabs.njk" with { tabs: tabs, label: "Seções da ficha" } %}
+     {% set tabsLabel = "Seções da ficha" %}
+     {% set tabsId = "tabs-pronatec" %}
+     {% include "components/tabs.njk" %}
 
-   A11y:
-   - role="tablist" + aria-label
-   - role="tab" + aria-controls + aria-selected + tabindex (-1 inativo, 0 ativo)
-   - role="tabpanel" + aria-labelledby + tabindex=0 (focável)
-   - Navegação por teclado: setas ←→ entre tabs, Home/End primeiro/último,
-     Enter/Space ativa (manual activation pattern; gerenciado por tabs.js).
-   - Fallback CSS-only: sem JS, todos panels visíveis (degradação graciosa).
-   - Mobile: opcional reverter para <details>/<summary> via classe data-mobile-collapse. #}
+   A11y: role=tablist + role=tab + role=tabpanel; setas ←→/Home/End/Enter/Space.
+   Sem JS: apenas o primeiro panel visível (degradação aceitável). #}
 
-{% set listLabel = label or "Seções" %}
+{% set _tLabel = tabsLabel or "Seções" %}
+{% set _tId = tabsId or "tabs-default" %}
 
-<div class="tabs js-tabs" data-tabs-instance="{{ id or 'tabs-default' }}">
-  <div role="tablist" aria-label="{{ listLabel }}" class="flex flex-wrap gap-2xs border-b border-neutral-200 mb-md">
-    {% for tab in tabs %}
+<div class="tabs js-tabs" data-tabs-instance="{{ _tId }}">
+  <div role="tablist" aria-label="{{ _tLabel }}" class="flex flex-wrap gap-2xs border-b border-neutral-200 mb-md">
+    {% for tab in tabsList %}
       <button
         role="tab"
-        id="tab-{{ tab.id }}"
-        aria-controls="panel-{{ tab.id }}"
+        id="tab-{{ _tId }}-{{ tab.id }}"
+        aria-controls="panel-{{ _tId }}-{{ tab.id }}"
         aria-selected="{{ 'true' if loop.first else 'false' }}"
         tabindex="{{ '0' if loop.first else '-1' }}"
         class="tab-btn px-md py-sm font-medium border-b-2 -mb-px {{ 'border-primary text-primary' if loop.first else 'border-transparent text-neutral-700 hover:text-primary' }}"
@@ -36,11 +37,11 @@
     {% endfor %}
   </div>
 
-  {% for tab in tabs %}
+  {% for tab in tabsList %}
     <section
       role="tabpanel"
-      id="panel-{{ tab.id }}"
-      aria-labelledby="tab-{{ tab.id }}"
+      id="panel-{{ _tId }}-{{ tab.id }}"
+      aria-labelledby="tab-{{ _tId }}-{{ tab.id }}"
       tabindex="0"
       class="tab-panel focus:outline-none"
       {% if not loop.first %}hidden{% endif %}>

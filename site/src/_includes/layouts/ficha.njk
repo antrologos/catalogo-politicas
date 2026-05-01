@@ -1,120 +1,221 @@
 ---
 layout: layouts/base.njk
 ---
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: ("Políticas " + p.uf), href: ("/buscar/?uf=" + p.uf) },
+  { texto: p.nome_programa }
+] %}
+{% include "components/breadcrumb.njk" %}
+
 <article data-pagefind-body
          data-pagefind-meta="uf:{{ p.uf }}"
          data-pagefind-filter="uf:{{ p.uf }}, situacao:{{ p.situacao_atual }}, tipo:{{ p.tipo_politica }}"
          class="prose prose-neutral max-w-none">
 
-  <nav aria-label="Navegação contextual" class="text-sm mb-md">
-    <a href="{{ '/' }}">Início</a> ›
-    <a href="{{ '/buscar/?uf=' + p.uf }}">Políticas {{ p.uf }}</a> ›
-    <span aria-current="page">{{ p.nome_programa }}</span>
-  </nav>
-
   <header class="border-b border-neutral-200 pb-lg mb-xl">
     <h1>{{ p.nome_programa }}</h1>
     <p class="text-sm text-neutral-700 mt-sm flex flex-wrap gap-md items-center">
       {% include "components/tag-status.njk" %}
+      {% if p.isFederal %}
+        <span class="tag tag--federal">Federal</span>
+      {% else %}
+        <span class="tag tag--estadual">{{ p.uf }}</span>
+      {% endif %}
       <span aria-label="Identificador universal">ID: <code>{{ p.id_universal }}</code></span>
-      <span>UF: <strong>{{ p.uf }}</strong></span>
       {% if p.revisado_em_br %}
       <span>Revisado em <time datetime="{{ p.data_revisao }}">{{ p.revisado_em_br }}</time></span>
       {% endif %}
-      <span class="bg-info/10 text-info-dark px-sm py-2xs rounded text-xs"
-            title="Completude dos metadados">
-        Completude: {{ p.completude_pct }}%
-      </span>
+      {% if p.completude_pct %}
+        {% set badgeValor = p.completude_pct %}
+        {% set badgeSufixo = "%" %}
+        {% set badgeLabel = "Completude dos metadados" %}
+        {% set badgeVariant = "" %}
+        {% include "components/badge.njk" %}
+      {% endif %}
     </p>
   </header>
 
-  {% if p.resumo %}
-  <section aria-labelledby="resumo-h">
-    <h2 id="resumo-h">Resumo</h2>
-    <p>{{ p.resumo }}</p>
-  </section>
-  {% endif %}
+  {# === Conteúdo das abas (capturado via {% set %}) === #}
+  {% set abaResumo %}
+    {% if p.descricao_simples %}
+      <h3>Em linguagem simples</h3>
+      <p>{{ p.descricao_simples }}</p>
+    {% endif %}
+    {% if p.resumo %}
+      <h3>Resumo</h3>
+      <p>{{ p.resumo }}</p>
+    {% endif %}
+    {% if p.apresentacao and p.apresentacao != p.descricao_tecnica %}
+      <h3>Apresentação</h3>
+      <p>{{ p.apresentacao }}</p>
+    {% endif %}
+    {% if not p.descricao_simples and not p.resumo and not p.apresentacao %}
+      <p class="text-neutral-700">Sem descrição cadastrada nesta versão da ficha.</p>
+    {% endif %}
+  {% endset %}
 
-  <section aria-labelledby="ident-h">
-    <h2 id="ident-h">Identificação</h2>
+  {% set abaDetalhes %}
+    <h3 class="sr-only">Detalhes institucionais</h3>
     <dl class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-x-md gap-y-sm">
       <dt class="font-semibold text-neutral-700">Tipo de política</dt>
-      <dd>{{ p.tipo_politica }}</dd>
+      <dd>{{ p.tipo_politica or '—' }}</dd>
 
       {% if p.esfera_formulacao %}
-      <dt class="font-semibold text-neutral-700">Esfera de formulação</dt>
-      <dd>{{ p.esfera_formulacao }}</dd>
+        <dt class="font-semibold text-neutral-700">Esfera de formulação</dt>
+        <dd>{{ p.esfera_formulacao }}</dd>
       {% endif %}
-
       {% if p.esfera_execucao %}
-      <dt class="font-semibold text-neutral-700">Esfera de execução</dt>
-      <dd>{{ p.esfera_execucao }}</dd>
+        <dt class="font-semibold text-neutral-700">Esfera de execução</dt>
+        <dd>{{ p.esfera_execucao }}</dd>
       {% endif %}
-
       {% if p.abrangencia_territorial %}
-      <dt class="font-semibold text-neutral-700">Abrangência territorial</dt>
-      <dd>{{ p.abrangencia_territorial }}</dd>
+        <dt class="font-semibold text-neutral-700">Abrangência territorial</dt>
+        <dd>{{ p.abrangencia_territorial }}</dd>
       {% endif %}
-
+      {% if p.tipo_oferta %}
+        <dt class="font-semibold text-neutral-700">Tipo de oferta</dt>
+        <dd>{{ p.tipo_oferta }}</dd>
+      {% endif %}
       {% if p.modalidade_oferta %}
-      <dt class="font-semibold text-neutral-700">Modalidade de oferta</dt>
-      <dd>{{ p.modalidade_oferta }}</dd>
+        <dt class="font-semibold text-neutral-700">Modalidade da oferta</dt>
+        <dd>{{ p.modalidade_oferta }}</dd>
       {% endif %}
-
+      {% if p.arranjo_logistico %}
+        <dt class="font-semibold text-neutral-700">Arranjo logístico</dt>
+        <dd>{{ p.arranjo_logistico }}</dd>
+      {% endif %}
+      {% if p.carga_horaria %}
+        <dt class="font-semibold text-neutral-700">Carga horária</dt>
+        <dd>{{ p.carga_horaria }}</dd>
+      {% endif %}
       {% if p.ano_criacao %}
-      <dt class="font-semibold text-neutral-700">Ano de criação</dt>
-      <dd>{{ p.ano_criacao }}</dd>
+        <dt class="font-semibold text-neutral-700">Ano de criação</dt>
+        <dd>{{ p.ano_criacao }}</dd>
+      {% endif %}
+      {% if p.fonte_financiamento %}
+        <dt class="font-semibold text-neutral-700">Fonte de financiamento</dt>
+        <dd>{{ p.fonte_financiamento }}</dd>
+      {% endif %}
+      {% if p.transferencia_recursos %}
+        <dt class="font-semibold text-neutral-700">Transferência de recursos</dt>
+        <dd>{{ p.transferencia_recursos }}</dd>
+      {% endif %}
+      {% if p.continuidade_governos %}
+        <dt class="font-semibold text-neutral-700">Continuidade entre governos</dt>
+        <dd>{{ p.continuidade_governos }}</dd>
+      {% endif %}
+      {% if p.orgaos_lista and p.orgaos_lista | length %}
+        <dt class="font-semibold text-neutral-700">Órgãos responsáveis</dt>
+        <dd>
+          <ul class="list-disc pl-md">
+            {% for o in p.orgaos_lista %}<li>{{ o }}</li>{% endfor %}
+          </ul>
+        </dd>
+      {% endif %}
+      {% if p.integra_lista and p.integra_lista | length %}
+        <dt class="font-semibold text-neutral-700">Integra com</dt>
+        <dd>
+          <ul class="list-disc pl-md">
+            {% for i in p.integra_lista %}<li>{{ i }}</li>{% endfor %}
+          </ul>
+        </dd>
       {% endif %}
     </dl>
-  </section>
+  {% endset %}
 
-  {% if p.base_legal %}
-  <section aria-labelledby="legal-h">
-    <h2 id="legal-h">Base legal</h2>
-    <p>{{ p.base_legal }}</p>
-  </section>
-  {% endif %}
+  {% set abaBaseLegal %}
+    <h3 class="sr-only">Base legal</h3>
+    {% if p.base_legal %}
+      <p class="whitespace-pre-line">{{ p.base_legal }}</p>
+    {% else %}
+      <p class="text-neutral-700">Base legal não cadastrada nesta versão da ficha.</p>
+    {% endif %}
+  {% endset %}
 
-  {% if p.apresentacao %}
-  <section aria-labelledby="apres-h">
-    <h2 id="apres-h">Apresentação detalhada</h2>
-    <p>{{ p.apresentacao }}</p>
-  </section>
-  {% endif %}
-
-  {% if p.fonte_url %}
-  <section aria-labelledby="fonte-h">
-    <h2 id="fonte-h">Documento oficial</h2>
-    <ul class="space-y-sm">
-      <li>
-        <a href="{{ p.fonte_url }}" rel="external nofollow"
-           class="inline-flex items-center gap-2xs">
-          🔗 Ver no portal oficial
+  {% set abaDocumentos %}
+    <h3 class="sr-only">Documentos e fonte oficial</h3>
+    {% if p.fonte_url %}
+      <p>
+        <strong>Fonte oficial:</strong>
+        <a href="{{ p.fonte_url }}" rel="external nofollow noopener" target="_blank">
+          Acessar no portal oficial ↗
         </a>
-      </li>
-      {% if p.fonte_arquivo_path %}
-      <li>
-        <span class="text-neutral-700 text-sm">
-          Snapshot capturado em
-          {% if p.fonte_data_acesso %}<time datetime="{{ p.fonte_data_acesso }}">{{ p.fonte_data_acesso | dataBR }}</time>{% endif %}
-          (SHA-256: <code class="text-xs">{{ p.fonte_sha256 | truncate(12, true, '…') }}</code>)
-        </span>
-      </li>
+        <span class="text-xs text-neutral-700">(abre em nova aba)</span>
+      </p>
+    {% endif %}
+
+    {% if p.fonte_arquivo_path %}
+      <p class="mt-md">
+        <strong>Snapshot capturado:</strong>
+        {% if p.fonte_data_acesso_br %}
+          em <time datetime="{{ p.fonte_data_acesso }}">{{ p.fonte_data_acesso_br }}</time>
+        {% endif %}
+        {% if p.fonte_extensao %}
+          (formato: {{ p.fonte_extensao | upper }})
+        {% endif %}
+      </p>
+      {% if p.fonte_sha256 %}
+        <p class="text-xs text-neutral-700 mt-2xs">
+          SHA-256: <code>{{ p.fonte_sha256 | truncate(16, true, '…') }}</code>
+        </p>
       {% endif %}
-    </ul>
-  </section>
-  {% endif %}
+    {% else %}
+      <p class="mt-md text-neutral-700">
+        Snapshot integral ainda não capturado. Veja
+        <a href="/sobre/cobertura/">cobertura e limites</a>
+        para detalhes sobre URLs com falha persistente (gov.br WAF, planalto timeout).
+      </p>
+    {% endif %}
 
-  <section aria-labelledby="cita-h" class="mt-2xl bg-neutral-100 p-lg rounded">
-    <h2 id="cita-h">Como citar</h2>
-    <details class="mt-sm">
-      <summary class="cursor-pointer font-semibold">ABNT</summary>
-      <pre class="mt-sm whitespace-pre-wrap text-sm bg-white p-md rounded border border-neutral-200"><code>{{ p | citacaoAbnt }}</code></pre>
-    </details>
-    <details class="mt-sm">
-      <summary class="cursor-pointer font-semibold">BibTeX</summary>
-      <pre class="mt-sm whitespace-pre-wrap text-sm bg-white p-md rounded border border-neutral-200"><code>{{ p | citacaoBibtex }}</code></pre>
-    </details>
-  </section>
+    {% if p.atribuicao %}
+      <p class="mt-md text-sm text-neutral-700">
+        <strong>Atribuição:</strong> {{ p.atribuicao }}
+      </p>
+    {% endif %}
+    {% if p.licenca_inferida %}
+      <p class="text-sm text-neutral-700">
+        <strong>Licença da fonte:</strong> {{ p.licenca_inferida }}
+      </p>
+    {% endif %}
+  {% endset %}
 
+  {% set abaCitacao %}
+    {% include "components/citation-box.njk" %}
+  {% endset %}
+
+  {% set tabsList = [
+    { id: "resumo", label: "Resumo", panel: abaResumo },
+    { id: "detalhes", label: "Detalhes", panel: abaDetalhes },
+    { id: "base-legal", label: "Base legal", panel: abaBaseLegal },
+    { id: "documentos", label: "Documentos", panel: abaDocumentos },
+    { id: "citacao", label: "Como citar", panel: abaCitacao }
+  ] %}
+
+  {% set tabsLabel = "Seções da ficha" %}
+  {% set tabsId = "tabs-" + p.slug %}
+  {% include "components/tabs.njk" %}
+
+  <footer class="mt-2xl pt-md border-t border-neutral-200 text-sm text-neutral-700">
+    <h2 class="text-base mt-0">Proveniência</h2>
+    <dl class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-x-md gap-y-2xs mt-sm">
+      {% if p.revisado_por %}
+        <dt class="font-semibold">Revisado por</dt><dd>{{ p.revisado_por }}</dd>
+      {% endif %}
+      {% if p.proxima_revisao_br %}
+        <dt class="font-semibold">Próxima revisão prevista</dt>
+        <dd><time datetime="{{ p.proxima_revisao_prevista }}">{{ p.proxima_revisao_br }}</time></dd>
+      {% endif %}
+      <dt class="font-semibold">Versão do catálogo</dt><dd>{{ p.data_versao_catalogo }}</dd>
+      <dt class="font-semibold">ID interno</dt><dd><code>{{ p.id_interno }}</code></dd>
+    </dl>
+
+    <p class="mt-md">
+      Encontrou erro ou tem sugestão?
+      <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=Correção:+{{ p.nome_programa | urlencode }}"
+         rel="noopener" target="_blank">
+        Abrir issue no GitHub ↗
+      </a>
+    </p>
+  </footer>
 </article>
