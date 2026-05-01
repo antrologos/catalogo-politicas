@@ -1,70 +1,194 @@
 ---
 layout: layouts/base.njk
 title: "Início"
-description: "Catálogo interativo de políticas públicas brasileiras sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação."
+description: "Catálogo interativo de 439 políticas públicas brasileiras sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação."
 ---
 <section aria-labelledby="hero-h" class="text-center py-2xl">
   <h1 id="hero-h" class="text-4xl sm:text-5xl">{{ site.title }}</h1>
   <p class="text-lg text-neutral-700 mt-md max-w-2xl mx-auto">
     {{ site.description }}
   </p>
-  <div class="mt-xl flex flex-wrap gap-md justify-center">
-    <a href="{{ '/buscar/' }}"
-       class="bg-primary text-white px-lg py-md rounded font-semibold no-underline hover:bg-primary-dark inline-flex items-center gap-2xs">
-      🔍 Buscar políticas
-    </a>
-    <a href="{{ '/sobre/' }}"
-       class="border-2 border-primary text-primary px-lg py-md rounded font-semibold no-underline hover:bg-primary hover:text-white">
-      Sobre o catálogo
-    </a>
-  </div>
+
+  {# Caixa de busca proeminente — leva para /buscar/ com query #}
+  <form action="/buscar/" method="get" role="search" class="mt-xl max-w-xl mx-auto">
+    <label for="busca-hero" class="visually-hidden">Buscar políticas no catálogo</label>
+    <div class="flex flex-col sm:flex-row gap-sm">
+      <input
+        type="search"
+        id="busca-hero"
+        name="q"
+        placeholder="Digite nome, sigla, base legal..."
+        autocomplete="off"
+        class="flex-1 px-md py-md border-2 border-neutral-500 rounded text-base"
+      >
+      <button type="submit" class="btn btn--primary">
+        <span aria-hidden="true">🔍</span> Buscar
+      </button>
+    </div>
+    <p class="text-sm text-neutral-700 mt-sm">
+      Exemplos:
+      <a href="/buscar/?q=PRONATEC" class="text-primary">PRONATEC</a>,
+      <a href="/buscar/?q=EJA" class="text-primary">EJA</a>,
+      <a href="/buscar/?q=Bolsa" class="text-primary">Bolsa</a>
+    </p>
+  </form>
 </section>
 
 <section aria-labelledby="kpi-h" class="grid grid-cols-1 sm:grid-cols-3 gap-lg my-2xl">
   <h2 id="kpi-h" class="sr-only">Estatísticas do catálogo</h2>
 
   <div class="bg-primary text-white p-lg rounded text-center">
-    <p class="text-4xl font-bold">{{ policies | length }}</p>
+    <p class="text-4xl font-bold">{{ agregados.total }}</p>
     <p class="text-sm mt-2xs">políticas catalogadas</p>
   </div>
 
   <div class="bg-success text-neutral-900 p-lg rounded text-center">
-    <p class="text-4xl font-bold">9 + Federal</p>
+    <p class="text-4xl font-bold">{{ agregados.ufsCobertas | length }}</p>
     <p class="text-sm mt-2xs">UFs cobertas (1ª onda)</p>
   </div>
 
   <div class="bg-info-dark text-white p-lg rounded text-center">
-    <p class="text-4xl font-bold">148</p>
-    <p class="text-sm mt-2xs">snapshots normativos</p>
+    <p class="text-4xl font-bold">{{ agregados.urlsUnicasComSnapshot }}</p>
+    <p class="text-sm mt-2xs">snapshots integrais únicos</p>
+    <p class="text-xs mt-2xs opacity-80">
+      ({{ agregados.snapshotsDisponiveis }} fichas com fonte preservada)
+    </p>
   </div>
 </section>
 
-<section aria-labelledby="amostra-h">
-  <h2 id="amostra-h">Políticas em destaque</h2>
-  <p class="text-sm text-neutral-700">Mostrando 12 fichas selecionadas. <a href="/buscar/">Ver todas as {{ policies | length }} políticas →</a></p>
+<section aria-labelledby="dist-tipo-h" class="my-2xl">
+  <h2 id="dist-tipo-h">Distribuição por tipo de política</h2>
+  <p class="text-sm text-neutral-700">
+    Categorias canônicas conforme vocabulário oficial do catálogo (3 valores).
+  </p>
 
-  <ul class="grid gap-md mt-lg sm:grid-cols-2 list-none p-0">
-    {% for p in policies | slice(12) | first %}
-    <li class="border border-neutral-200 rounded p-lg hover:shadow-md transition-shadow">
-      <h3 class="text-lg mt-0">
-        <a href="{{ '/politica/' + p.slug + '/' }}">{{ p.nome_programa }}</a>
-      </h3>
-      <p class="text-sm text-neutral-700 my-sm">
-        <strong>UF:</strong> {{ p.uf }} ·
-        <strong>Tipo:</strong> {{ p.tipo_politica }}
-      </p>
-      <p class="text-sm">{{ (p.resumo or p.descricao_tecnica or '') | truncate(180) }}</p>
-      <p class="mt-sm">{% include "components/tag-status.njk" %}</p>
-    </li>
+  <ul class="mt-md space-y-md list-none p-0">
+    {% for d in agregados.distribuicaoTipo %}
+      <li>
+        <div class="flex justify-between text-sm mb-2xs">
+          <span class="font-semibold">{{ d.tipo }}</span>
+          <span class="text-neutral-700">{{ d.n }} políticas ({{ d.pct }}%)</span>
+        </div>
+        <div class="bg-neutral-100 rounded-full h-md overflow-hidden" role="img"
+             aria-label="{{ d.tipo }}: {{ d.n }} políticas, {{ d.pct }} por cento do total">
+          <div class="bg-primary h-full rounded-full" style="width: {{ d.pct }}%"></div>
+        </div>
+      </li>
     {% endfor %}
   </ul>
 </section>
 
-<section aria-labelledby="cobertura-h" class="mt-2xl bg-neutral-100 p-lg rounded">
-  <h2 id="cobertura-h">Cobertura geográfica (1ª onda)</h2>
-  <p>O catálogo cobre <strong>9 unidades da federação + Federal</strong>: SP, RJ, MG, PR, RS, BA, PA, PE, CE.</p>
-  <p class="text-sm text-neutral-700 mt-sm">
-    Outras UFs não estão cobertas nesta primeira onda. Planejamos expansão em ondas futuras —
-    veja <a href="{{ '/sobre/cobertura/' }}">cronograma de cobertura</a>.
+<section aria-labelledby="dist-sit-h" class="my-2xl">
+  <h2 id="dist-sit-h">Situação atual</h2>
+
+  <ul class="mt-md grid grid-cols-2 sm:grid-cols-4 gap-md list-none p-0">
+    {% for d in agregados.distribuicaoSituacao %}
+      <li class="border border-neutral-200 rounded p-md">
+        <p class="text-2xl font-bold">{{ d.n }}</p>
+        <p class="text-sm">
+          <span class="tag tag--{{ d.classe }}">
+            <span aria-hidden="true">
+              {%- if d.classe == "ativa" -%}●
+              {%- elif d.classe == "encerrada" -%}■
+              {%- elif d.classe == "suspensa" -%}▲
+              {%- elif d.classe == "descontinuada" -%}○
+              {%- elif d.classe == "planejamento" -%}◆
+              {%- else -%}—
+              {%- endif -%}
+            </span>
+            {{ d.situacao }}
+          </span>
+        </p>
+        <p class="text-xs text-neutral-700 mt-2xs">{{ d.pct }}% do total</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section aria-labelledby="cobertura-uf-h" class="my-2xl">
+  <h2 id="cobertura-uf-h">Cobertura por UF</h2>
+  <p class="text-sm text-neutral-700">
+    Lista textual completa das UFs catalogadas — fonte canônica acessível.
+    Mapa coroplético interativo virá em fase posterior do projeto.
+  </p>
+
+  <table class="w-full mt-md border-collapse">
+    <caption class="sr-only">
+      Cobertura por unidade federativa: {{ agregados.ufsCobertas | length }} UFs
+      catalogadas na 1ª onda, ordenadas por número de políticas (decrescente).
+    </caption>
+    <thead>
+      <tr class="border-b-2 border-neutral-500 text-left">
+        <th scope="col" class="p-sm font-semibold">UF</th>
+        <th scope="col" class="p-sm font-semibold">Região</th>
+        <th scope="col" class="p-sm font-semibold num">Políticas</th>
+        <th scope="col" class="p-sm font-semibold">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for uf in agregados.ufsCobertas %}
+        {% set info = ufs[uf] %}
+        <tr class="border-b border-neutral-200 hover:bg-neutral-100">
+          <th scope="row" class="p-sm font-medium">
+            {% if uf == "BR" %}
+              <span class="tag tag--federal">{{ info.nome if info else uf }}</span>
+            {% else %}
+              <span class="tag tag--estadual">{{ uf }}</span> — {{ info.nome if info else uf }}
+            {% endif %}
+          </th>
+          <td class="p-sm text-neutral-700">{{ info.regiao if info else "—" }}</td>
+          <td class="p-sm num font-semibold">{{ agregados.countByUf[uf] }}</td>
+          <td class="p-sm">
+            <a href="/buscar/?q=&filter[uf]={{ uf }}" class="text-primary">
+              Ver políticas →
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</section>
+
+<section aria-labelledby="rapido-h" class="my-2xl bg-neutral-100 p-lg rounded">
+  <h2 id="rapido-h">Acesso rápido</h2>
+  <ul class="grid grid-cols-1 sm:grid-cols-2 gap-md mt-md list-none p-0">
+    <li>
+      <a href="/buscar/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
+        <strong class="text-primary">🔍 Buscar com filtros</strong>
+        <p class="text-sm text-neutral-700 mt-2xs">5 facetas: UF, Situação, Tipo, Modalidade, Snapshot.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/sobre/cobertura/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
+        <strong class="text-primary">🗺️ Cobertura e próximas UFs</strong>
+        <p class="text-sm text-neutral-700 mt-2xs">Por que 9 UFs? O que falta? Cronograma.</p>
+      </a>
+    </li>
+    <li>
+      <a href="/sobre/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
+        <strong class="text-primary">📖 Metodologia + Como citar</strong>
+        <p class="text-sm text-neutral-700 mt-2xs">Equipe, vocabulário, licença CC-BY 4.0.</p>
+      </a>
+    </li>
+    <li>
+      <a href="https://github.com/antrologos/catalogo-politicas" rel="external noopener" target="_blank"
+         class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
+        <strong class="text-primary">📦 Repositório (GitHub) ↗</strong>
+        <p class="text-sm text-neutral-700 mt-2xs">Código, dados em JSON, issues, contribuição.</p>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section aria-labelledby="proximas-h" class="my-2xl">
+  <h2 id="proximas-h">Próximas UFs (transparência metodológica)</h2>
+  <p class="text-sm text-neutral-700">
+    A 1ª onda cobre <strong>{{ agregados.ufsCobertas | length }}</strong> entes federativos.
+    O Brasil tem 27 (26 estados + DF) — outras 17 UFs estão em planejamento.
+  </p>
+  <p class="text-sm mt-sm">
+    <a href="/sobre/cobertura/" class="text-primary">
+      Ver lista completa de UFs e cronograma →
+    </a>
   </p>
 </section>
