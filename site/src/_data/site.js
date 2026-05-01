@@ -5,7 +5,7 @@ export default {
     "Mapeamento de políticas públicas federais e estaduais sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação.",
   url: "https://antrologos.github.io",
   pathPrefix: "/catalogo-politicas/",
-  baseUrl: "https://antrologos.github.io/catalogo-politicas/",
+  baseUrl: "https://antrologos.github.io/catalogo-politicas",
   author: "FRM/IESP-UERJ",
   language: "pt-BR",
   versao: "PoC-2026-05-01",

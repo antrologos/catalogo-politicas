@@ -7,8 +7,8 @@ layout: layouts/base.njk
          class="prose prose-neutral max-w-none">
 
   <nav aria-label="Navegação contextual" class="text-sm mb-md">
-    <a href="{{ '/' | url }}">Início</a> ›
-    <a href="{{ '/buscar/?uf=' + p.uf | url }}">Políticas {{ p.uf }}</a> ›
+    <a href="{{ '/' }}">Início</a> ›
+    <a href="{{ '/buscar/?uf=' + p.uf }}">Políticas {{ p.uf }}</a> ›
     <span aria-current="page">{{ p.nome_programa }}</span>
   </nav>
 

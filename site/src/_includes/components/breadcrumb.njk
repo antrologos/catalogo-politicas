@@ -12,7 +12,7 @@
     {% for item in crumbs %}
       <li>
         {% if item.href and not loop.last %}
-          <a href="{{ item.href | url }}">{{ item.texto }}</a>
+          <a href="{{ item.href }}">{{ item.texto }}</a>
         {% else %}
           <span aria-current="page">{{ item.texto }}</span>
         {% endif %}

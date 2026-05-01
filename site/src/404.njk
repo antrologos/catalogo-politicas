@@ -11,11 +11,11 @@ permalink: /404.html
   </p>
 
   <div class="mt-xl flex flex-wrap gap-md justify-center">
-    <a href="{{ '/' | url }}"
+    <a href="{{ '/' }}"
        class="bg-primary text-white px-lg py-md rounded font-semibold no-underline hover:bg-primary-dark">
       Voltar à página inicial
     </a>
-    <a href="{{ '/buscar/' | url }}"
+    <a href="{{ '/buscar/' }}"
        class="border-2 border-primary text-primary px-lg py-md rounded font-semibold no-underline hover:bg-primary hover:text-white">
       Buscar políticas
     </a>
@@ -27,7 +27,7 @@ permalink: /404.html
   <ul class="mt-md grid gap-sm sm:grid-cols-2 list-none p-0">
     {% for p in policies %}
     <li>
-      <a href="{{ ('/politica/' + p.slug + '/') | url }}">{{ p.nome_programa }}</a>
+      <a href="{{ ('/politica/' + p.slug + '/') }}">{{ p.nome_programa }}</a>
       <span class="text-xs text-neutral-700"> · {{ p.uf }}</span>
     </li>
     {% endfor %}

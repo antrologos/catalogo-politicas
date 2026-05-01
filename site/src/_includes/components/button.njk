@@ -13,7 +13,7 @@
 {% set classes = "btn btn--" + v %}
 
 {% if href %}
-  <a href="{{ href | url }}"
+  <a href="{{ href }}"
      class="{{ classes }}"
      {% if rel %}rel="{{ rel }}"{% endif %}
      {% if attrs %}{{ attrs | safe }}{% endif %}>
