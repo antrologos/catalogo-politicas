@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+Sitemap: https://legislacao.fazenda.rj.gov.br/wp-sitemap.xml

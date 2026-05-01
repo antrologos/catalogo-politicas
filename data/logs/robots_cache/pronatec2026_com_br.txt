@@ -1,0 +1,9 @@
+Sitemap: https://pronatec2026.com.br/wp-sitemap.xml
+
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+# ---------------------------
+# END YOAST BLOCK

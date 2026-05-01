@@ -1,0 +1,31 @@
+# =============================================================================
+# .claude/.gitignore — exclusões dentro da pasta .claude/
+# =============================================================================
+# Regra geral: tudo em .claude/ deve ser versionado (rules, skills, agents,
+# hooks, context, decisions, plans, working, README). As exceções abaixo
+# protegem segredos, caches locais e outputs intermediários grandes que não
+# trazem valor a longo prazo.
+# =============================================================================
+
+# Settings locais (NUNCA versionar — podem conter tokens/segredos pessoais)
+settings.local.json
+
+# Cache eventual de skills/hooks (se virarem necessários)
+cache/
+.cache/
+
+# Logs locais de execução de hooks (debugging)
+logs/
+*.log
+
+# Outputs de rodadas em formato bruto/temporário — descomentar se virar problema
+# Hoje mantemos working/ versionado porque vira histórico do raciocínio.
+# working/R*-RAW.md
+
+# Memory local opcional — escolha de cada colaborador
+memory/local/
+
+# Lixo do sistema (paranoia)
+.DS_Store
+Thumbs.db
+desktop.ini

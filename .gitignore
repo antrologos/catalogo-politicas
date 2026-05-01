@@ -1,0 +1,174 @@
+# =============================================================================
+# .gitignore RAIZ — projeto FRM_CatalogoPoliticas
+# =============================================================================
+# IMPORTANTE: este projeto vive dentro de Google Drive compartilhado. Por isso
+# o .gitignore precisa ser AGRESSIVO para não estourar quotas de sync e não
+# enviar artefatos pesados ao remoto. Ver também: .claude/.gitignore (escopo
+# interno) e architecture/ para a estratégia geral de armazenamento.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Builds e dependências (NUNCA sincronizar via Drive — quebram sync, enchem cota)
+# -----------------------------------------------------------------------------
+node_modules/
+.next/
+dist/
+out/
+build/
+.cache/
+.parcel-cache/
+.turbo/
+.svelte-kit/
+.nuxt/
+
+# -----------------------------------------------------------------------------
+# Python
+# -----------------------------------------------------------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+*.egg
+
+# -----------------------------------------------------------------------------
+# Lock files temporários do Excel/Word (criados quando arquivo está aberto)
+# -----------------------------------------------------------------------------
+~$*.xlsx
+~$*.xls
+~$*.xlsm
+~$*.docx
+~$*.doc
+~$*.pptx
+
+# -----------------------------------------------------------------------------
+# Lixo do sistema operacional
+# -----------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+*.swp
+*.swo
+*~
+
+# -----------------------------------------------------------------------------
+# IDEs e editores
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.history/
+
+# -----------------------------------------------------------------------------
+# Settings locais e segredos — NUNCA commitar
+# -----------------------------------------------------------------------------
+.claude/settings.local.json
+.env
+.env.local
+.env.*.local
+*.secret.json
+*.secrets.json
+secrets/
+credentials/
+*.pem
+*.key
+
+# -----------------------------------------------------------------------------
+# Snapshots binários grandes (Bloco D em diante)
+# Mantemos a metadata e o índice; os binários ficam só no Drive (compactados).
+# -----------------------------------------------------------------------------
+data/external_snapshots/**/*.html
+data/external_snapshots/**/*.htm
+data/external_snapshots/**/*.pdf
+data/external_snapshots/**/*.docx
+data/external_snapshots/**/*.doc
+data/external_snapshots/**/*.odt
+data/external_snapshots/**/*.rtf
+
+# Mas SIM versionar metadata e índices (são pequenos e críticos para auditoria):
+!data/external_snapshots/**/*.meta.json
+!data/external_snapshots/**/*.metadata.json
+!data/external_snapshots/index.json
+!data/external_snapshots/.gitkeep
+!data/external_snapshots/**/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Logs e histórico de execução
+# -----------------------------------------------------------------------------
+logs/*.jsonl
+logs/*.log
+data/logs/*.jsonl
+data/logs/*.log
+!logs/.gitkeep
+!data/logs/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Texto extraído (regenerável a partir dos snapshots)
+# Mantemos a metadata; o texto bruto pode ser regenerado.
+# -----------------------------------------------------------------------------
+data/extracted_text/**/*.txt
+data/extracted_text/**/*.md
+!data/extracted_text/**/*.metadata.json
+!data/extracted_text/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Temporários e relatórios efêmeros
+# -----------------------------------------------------------------------------
+.tmp/
+tmp/
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# -----------------------------------------------------------------------------
+# Coverage / artifacts de CI
+# -----------------------------------------------------------------------------
+coverage/
+junit.xml
+test-results/
+
+# -----------------------------------------------------------------------------
+# Ferramentas externas (Tesseract data, LibreOffice — instalações grandes)
+# -----------------------------------------------------------------------------
+data/external_tools/
+
+# -----------------------------------------------------------------------------
+# Backups (snapshots locais grandes; usar Releases do GitHub)
+# -----------------------------------------------------------------------------
+backups/*.tar.gz
+backups/*.zip
+!backups/.gitkeep
+
+# -----------------------------------------------------------------------------
+# Arquivos de exportação grandes (regenerar pelo pipeline)
+# -----------------------------------------------------------------------------
+data/derived/**/*.parquet.gz
+data/derived/**/*.zip
+data/derived/**/*.tar.gz
+
+# Mas mantemos os JSONs/CSVs canônicos:
+!data/derived/**/*.json
+!data/derived/**/*.csv
+
+# -----------------------------------------------------------------------------
+# NÃO ignorar: .claude/ (versionar tudo dentro, exceto o que .claude/.gitignore exclui)
+# -----------------------------------------------------------------------------
+!.claude/

@@ -1,0 +1,27 @@
+{
+  "_comentario_top": "TEMPLATE — copie este arquivo para 'settings.local.json' (sem o sufixo .template) para ativá-lo. O arquivo settings.local.json é gitignored e serve para overrides PESSOAIS de cada colaborador (modelo customizado, env vars sensíveis, permissões adicionais durante desenvolvimento, etc.).",
+  "_hierarquia_precedencia": "Managed (org) > settings.local.json (este, gitignored) > settings.json (versionado) > ~/.claude/settings.json (user global)",
+  "_aviso_seguranca": "Nunca commite tokens, senhas ou caminhos de máquinas específicas em settings.json. Use settings.local.json para isso.",
+  "_dica_remova_underscores": "Os campos começando com '_' são comentários ignorados por convenção. Quando ativar este arquivo, remova-os ou deixe-os para si.",
+
+  "permissions": {
+    "_dica_allow": "Adicione aqui permissões pessoais que não fazem sentido para todo o time. Ex.: ferramentas instaladas só na sua máquina.",
+    "allow": [
+      "Bash(my_local_tool:*)",
+      "WebFetch(domain:meu-dominio-de-teste.local)"
+    ],
+    "_dica_ask": "Permissões que você quer ser perguntado pessoalmente, mesmo que padrão do projeto seja allow.",
+    "ask": []
+  },
+
+  "env": {
+    "_dica_envs": "Defina envs sensíveis OU específicas da sua máquina aqui — não em settings.json.",
+    "API_TOKEN_PESSOAL_EXEMPLO": "ghp_xxxxxxxxxxxxxxxxxxxxxxxx",
+    "PROXY_LOCAL_EXEMPLO": "http://127.0.0.1:8888"
+  },
+
+  "_dica_model_override": "Para usar um modelo diferente do default da sessão (cuidado: custo). Remova esta linha ou deixe null para herdar.",
+  "model": null,
+
+  "_dica_effort_override": "low | medium | high | xhigh | max — override só para você."
+}

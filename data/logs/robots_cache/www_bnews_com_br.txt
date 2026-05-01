@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /preview/
+Allow: /
+
+Sitemap: https://www.bnews.com.br/sitemap.xml
+Sitemap: https://www.bnews.com.br/sitemapgooglenews.xml

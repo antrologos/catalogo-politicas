@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+User-agent: AdsBot-Google
+Allow: /
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+Sitemap: https://www.educacao.mg.gov.br/sitemap.xml

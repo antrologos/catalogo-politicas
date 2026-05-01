@@ -1,0 +1,2864 @@
+[
+  {
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "domain": "www.educacao.sp.gov.br",
+    "n_referenciada_por": 5,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0001",
+      "FRM-CP-2026-EDU-0015",
+      "FRM-CP-2026-EDU-0016",
+      "FRM-CP-2026-EDU-0017",
+      "FRM-CP-2026-EDU-0057"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0001",
+        "FRM-CP-2026-EDU-0015",
+        "FRM-CP-2026-EDU-0016",
+        "FRM-CP-2026-EDU-0017",
+        "FRM-CP-2026-EDU-0057"
+      ]
+    }
+  },
+  {
+    "url": "https://alfabetizacao.mec.gov.br/pba",
+    "domain": "alfabetizacao.mec.gov.br",
+    "n_referenciada_por": 5,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0002",
+      "FRM-CP-2026-EDU-0019",
+      "FRM-CP-2026-EDU-0038",
+      "FRM-CP-2026-EDU-0058",
+      "FRM-CP-2026-EDU-0156"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0002",
+        "FRM-CP-2026-EDU-0019",
+        "FRM-CP-2026-EDU-0038",
+        "FRM-CP-2026-EDU-0058",
+        "FRM-CP-2026-EDU-0156"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/pacto-eja",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 9,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0003",
+      "FRM-CP-2026-EDU-0020",
+      "FRM-CP-2026-EDU-0039",
+      "FRM-CP-2026-EDU-0059",
+      "FRM-CP-2026-EDU-0079",
+      "FRM-CP-2026-EDU-0116",
+      "FRM-CP-2026-EDU-0138",
+      "FRM-CP-2026-EDU-0157",
+      "FRM-CP-2026-EDU-0178"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0003",
+        "FRM-CP-2026-EDU-0020",
+        "FRM-CP-2026-EDU-0039",
+        "FRM-CP-2026-EDU-0059",
+        "FRM-CP-2026-EDU-0079",
+        "FRM-CP-2026-EDU-0116",
+        "FRM-CP-2026-EDU-0138",
+        "FRM-CP-2026-EDU-0157",
+        "FRM-CP-2026-EDU-0178"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 11,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0004",
+      "FRM-CP-2026-EDU-0022",
+      "FRM-CP-2026-EDU-0040",
+      "FRM-CP-2026-EDU-0060",
+      "FRM-CP-2026-EDU-0080",
+      "FRM-CP-2026-EDU-0093",
+      "FRM-CP-2026-EDU-0117",
+      "FRM-CP-2026-EDU-0135",
+      "FRM-CP-2026-EDU-0159",
+      "FRM-CP-2026-EDU-0172",
+      "FRM-CP-2026-EDU-0173"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0004",
+        "FRM-CP-2026-EDU-0022",
+        "FRM-CP-2026-EDU-0040",
+        "FRM-CP-2026-EDU-0060",
+        "FRM-CP-2026-EDU-0080",
+        "FRM-CP-2026-EDU-0093",
+        "FRM-CP-2026-EDU-0117",
+        "FRM-CP-2026-EDU-0135",
+        "FRM-CP-2026-EDU-0159",
+        "FRM-CP-2026-EDU-0172",
+        "FRM-CP-2026-EDU-0173"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.mec.gov.br/escola-de-gestores-da-educacao-basica/259-programas-e-acoes-1921564125/proeja-406236091",
+    "domain": "portal.mec.gov.br",
+    "n_referenciada_por": 7,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0005",
+      "FRM-CP-2026-EDU-0024",
+      "FRM-CP-2026-EDU-0036",
+      "FRM-CP-2026-EDU-0061",
+      "FRM-CP-2026-EDU-0077",
+      "FRM-CP-2026-EDU-0100",
+      "FRM-CP-2026-EDU-0185"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0005",
+        "FRM-CP-2026-EDU-0024",
+        "FRM-CP-2026-EDU-0036",
+        "FRM-CP-2026-EDU-0061",
+        "FRM-CP-2026-EDU-0077",
+        "FRM-CP-2026-EDU-0100",
+        "FRM-CP-2026-EDU-0185"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/pnept?utm_source=",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 9,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0006",
+      "FRM-CP-2026-EDU-0025",
+      "FRM-CP-2026-EDU-0050",
+      "FRM-CP-2026-EDU-0062",
+      "FRM-CP-2026-EDU-0083",
+      "FRM-CP-2026-EDU-0099",
+      "FRM-CP-2026-EDU-0118",
+      "FRM-CP-2026-EDU-0139",
+      "FRM-CP-2026-EDU-0160"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0006",
+        "FRM-CP-2026-EDU-0025",
+        "FRM-CP-2026-EDU-0050",
+        "FRM-CP-2026-EDU-0062",
+        "FRM-CP-2026-EDU-0083",
+        "FRM-CP-2026-EDU-0099",
+        "FRM-CP-2026-EDU-0118",
+        "FRM-CP-2026-EDU-0139",
+        "FRM-CP-2026-EDU-0160"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/juros-por-educacao",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 10,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0007",
+      "FRM-CP-2026-EDU-0026",
+      "FRM-CP-2026-EDU-0045",
+      "FRM-CP-2026-EDU-0063",
+      "FRM-CP-2026-EDU-0082",
+      "FRM-CP-2026-EDU-0097",
+      "FRM-CP-2026-EDU-0119",
+      "FRM-CP-2026-EDU-0126",
+      "FRM-CP-2026-EDU-0140",
+      "FRM-CP-2026-EDU-0162"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0007",
+        "FRM-CP-2026-EDU-0026",
+        "FRM-CP-2026-EDU-0045",
+        "FRM-CP-2026-EDU-0063",
+        "FRM-CP-2026-EDU-0082",
+        "FRM-CP-2026-EDU-0097",
+        "FRM-CP-2026-EDU-0119",
+        "FRM-CP-2026-EDU-0126",
+        "FRM-CP-2026-EDU-0140",
+        "FRM-CP-2026-EDU-0162"
+      ]
+    }
+  },
+  {
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos",
+    "domain": "www.cnj.jus.br",
+    "n_referenciada_por": 9,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0052",
+      "FRM-CP-2026-EDU-0064",
+      "FRM-CP-2026-EDU-0078",
+      "FRM-CP-2026-EDU-0098",
+      "FRM-CP-2026-EDU-0120",
+      "FRM-CP-2026-EDU-0163",
+      "FRM-CP-2026-EDU-0170",
+      "FRM-CP-2026-PSOC-0001",
+      "FRM-CP-2026-PSOC-0013"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0001",
+        "FRM-CP-2026-PSOC-0013",
+        "FRM-CP-2026-EDU-0052",
+        "FRM-CP-2026-EDU-0064",
+        "FRM-CP-2026-EDU-0078",
+        "FRM-CP-2026-EDU-0098",
+        "FRM-CP-2026-EDU-0120",
+        "FRM-CP-2026-EDU-0163",
+        "FRM-CP-2026-EDU-0170"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/assuntos/eb/programa-de-apoio-ao-novo-ensino-medio-pronem",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 10,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0008",
+      "FRM-CP-2026-EDU-0018",
+      "FRM-CP-2026-EDU-0051",
+      "FRM-CP-2026-EDU-0065",
+      "FRM-CP-2026-EDU-0085",
+      "FRM-CP-2026-EDU-0101",
+      "FRM-CP-2026-EDU-0121",
+      "FRM-CP-2026-EDU-0164",
+      "FRM-CP-2026-EDU-0188",
+      "FRM-CP-2026-PSOC-0066"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0008",
+        "FRM-CP-2026-EDU-0018",
+        "FRM-CP-2026-EDU-0051",
+        "FRM-CP-2026-EDU-0065",
+        "FRM-CP-2026-EDU-0085",
+        "FRM-CP-2026-EDU-0101",
+        "FRM-CP-2026-EDU-0121",
+        "FRM-CP-2026-PSOC-0066",
+        "FRM-CP-2026-EDU-0164",
+        "FRM-CP-2026-EDU-0188"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11692.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 7,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0002",
+      "FRM-CP-2026-PSOC-0014",
+      "FRM-CP-2026-PSOC-0028",
+      "FRM-CP-2026-PSOC-0033",
+      "FRM-CP-2026-PSOC-0051",
+      "FRM-CP-2026-PSOC-0065",
+      "FRM-CP-2026-PSOC-0067"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0002",
+        "FRM-CP-2026-PSOC-0014",
+        "FRM-CP-2026-PSOC-0028",
+        "FRM-CP-2026-PSOC-0033",
+        "FRM-CP-2026-PSOC-0051",
+        "FRM-CP-2026-PSOC-0065",
+        "FRM-CP-2026-PSOC-0067"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/secretariageral/pt-br/juventude/estacaojuventude",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 3,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0003",
+      "FRM-CP-2026-PSOC-0029",
+      "FRM-CP-2026-PSOC-0083"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0003",
+        "FRM-CP-2026-PSOC-0029",
+        "FRM-CP-2026-PSOC-0083"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0134",
+      "FRM-CP-2026-PSOC-0004",
+      "FRM-CP-2026-PSOC-0022",
+      "FRM-CP-2026-PSOC-0030",
+      "FRM-CP-2026-PSOC-0035",
+      "FRM-CP-2026-PSOC-0046",
+      "FRM-CP-2026-PSOC-0080",
+      "FRM-CP-2026-PSOC-0089"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0004",
+        "FRM-CP-2026-PSOC-0022",
+        "FRM-CP-2026-PSOC-0030",
+        "FRM-CP-2026-PSOC-0035",
+        "FRM-CP-2026-PSOC-0046",
+        "FRM-CP-2026-EDU-0134",
+        "FRM-CP-2026-PSOC-0080",
+        "FRM-CP-2026-PSOC-0089"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0005",
+      "FRM-CP-2026-PSOC-0020",
+      "FRM-CP-2026-PSOC-0024",
+      "FRM-CP-2026-PSOC-0036",
+      "FRM-CP-2026-PSOC-0043",
+      "FRM-CP-2026-PSOC-0061",
+      "FRM-CP-2026-PSOC-0069",
+      "FRM-CP-2026-PSOC-0075"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0005",
+        "FRM-CP-2026-PSOC-0020",
+        "FRM-CP-2026-PSOC-0024",
+        "FRM-CP-2026-PSOC-0036",
+        "FRM-CP-2026-PSOC-0043",
+        "FRM-CP-2026-PSOC-0061",
+        "FRM-CP-2026-PSOC-0069",
+        "FRM-CP-2026-PSOC-0075"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 7,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0006",
+      "FRM-CP-2026-PSOC-0021",
+      "FRM-CP-2026-PSOC-0025",
+      "FRM-CP-2026-PSOC-0037",
+      "FRM-CP-2026-PSOC-0044",
+      "FRM-CP-2026-PSOC-0062",
+      "FRM-CP-2026-PSOC-0076"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0006",
+        "FRM-CP-2026-PSOC-0021",
+        "FRM-CP-2026-PSOC-0025",
+        "FRM-CP-2026-PSOC-0037",
+        "FRM-CP-2026-PSOC-0044",
+        "FRM-CP-2026-PSOC-0062",
+        "FRM-CP-2026-PSOC-0076"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 9,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0007",
+      "FRM-CP-2026-PSOC-0016",
+      "FRM-CP-2026-PSOC-0026",
+      "FRM-CP-2026-PSOC-0038",
+      "FRM-CP-2026-PSOC-0045",
+      "FRM-CP-2026-PSOC-0055",
+      "FRM-CP-2026-PSOC-0063",
+      "FRM-CP-2026-PSOC-0072",
+      "FRM-CP-2026-PSOC-0077"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0007",
+        "FRM-CP-2026-PSOC-0016",
+        "FRM-CP-2026-PSOC-0026",
+        "FRM-CP-2026-PSOC-0038",
+        "FRM-CP-2026-PSOC-0045",
+        "FRM-CP-2026-PSOC-0055",
+        "FRM-CP-2026-PSOC-0063",
+        "FRM-CP-2026-PSOC-0072",
+        "FRM-CP-2026-PSOC-0077"
+      ]
+    }
+  },
+  {
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "domain": "www.caixa.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0008",
+      "FRM-CP-2026-PSOC-0017",
+      "FRM-CP-2026-PSOC-0027",
+      "FRM-CP-2026-PSOC-0039",
+      "FRM-CP-2026-PSOC-0041",
+      "FRM-CP-2026-PSOC-0056",
+      "FRM-CP-2026-PSOC-0064",
+      "FRM-CP-2026-PSOC-0085"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0008",
+        "FRM-CP-2026-PSOC-0017",
+        "FRM-CP-2026-PSOC-0027",
+        "FRM-CP-2026-PSOC-0039",
+        "FRM-CP-2026-PSOC-0041",
+        "FRM-CP-2026-PSOC-0056",
+        "FRM-CP-2026-PSOC-0064",
+        "FRM-CP-2026-PSOC-0085"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 9,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0001",
+      "FRM-CP-2026-TRAB-0025",
+      "FRM-CP-2026-TRAB-0030",
+      "FRM-CP-2026-TRAB-0052",
+      "FRM-CP-2026-TRAB-0063",
+      "FRM-CP-2026-TRAB-0079",
+      "FRM-CP-2026-TRAB-0092",
+      "FRM-CP-2026-TRAB-0131",
+      "FRM-CP-2026-TRAB-0151"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0001",
+        "FRM-CP-2026-TRAB-0025",
+        "FRM-CP-2026-TRAB-0030",
+        "FRM-CP-2026-TRAB-0052",
+        "FRM-CP-2026-TRAB-0063",
+        "FRM-CP-2026-TRAB-0079",
+        "FRM-CP-2026-TRAB-0092",
+        "FRM-CP-2026-TRAB-0131",
+        "FRM-CP-2026-TRAB-0151"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/2003/l10.748.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 9,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0002",
+      "FRM-CP-2026-TRAB-0026",
+      "FRM-CP-2026-TRAB-0032",
+      "FRM-CP-2026-TRAB-0053",
+      "FRM-CP-2026-TRAB-0073",
+      "FRM-CP-2026-TRAB-0085",
+      "FRM-CP-2026-TRAB-0124",
+      "FRM-CP-2026-TRAB-0137",
+      "FRM-CP-2026-TRAB-0152"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0002",
+        "FRM-CP-2026-TRAB-0026",
+        "FRM-CP-2026-TRAB-0032",
+        "FRM-CP-2026-TRAB-0053",
+        "FRM-CP-2026-TRAB-0073",
+        "FRM-CP-2026-TRAB-0085",
+        "FRM-CP-2026-TRAB-0124",
+        "FRM-CP-2026-TRAB-0137",
+        "FRM-CP-2026-TRAB-0152"
+      ]
+    }
+  },
+  {
+    "url": "https://cnm.org.br/comunicacao/noticias/cons%C3%B3rcio-da-juventude-%C3%A9-implantado-em-30-munic%C3%ADpios-mineiros",
+    "domain": "cnm.org.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0003"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0003"
+      ]
+    }
+  },
+  {
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "domain": "abmes.org.br",
+    "n_referenciada_por": 10,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0004",
+      "FRM-CP-2026-TRAB-0011",
+      "FRM-CP-2026-TRAB-0044",
+      "FRM-CP-2026-TRAB-0055",
+      "FRM-CP-2026-TRAB-0078",
+      "FRM-CP-2026-TRAB-0087",
+      "FRM-CP-2026-TRAB-0101",
+      "FRM-CP-2026-TRAB-0126",
+      "FRM-CP-2026-TRAB-0139",
+      "FRM-CP-2026-TRAB-0154"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0004",
+        "FRM-CP-2026-TRAB-0011",
+        "FRM-CP-2026-TRAB-0044",
+        "FRM-CP-2026-TRAB-0055",
+        "FRM-CP-2026-TRAB-0078",
+        "FRM-CP-2026-TRAB-0087",
+        "FRM-CP-2026-TRAB-0101",
+        "FRM-CP-2026-TRAB-0126",
+        "FRM-CP-2026-TRAB-0139",
+        "FRM-CP-2026-TRAB-0154"
+      ]
+    }
+  },
+  {
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "domain": "jovemaprendiz.sp.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0005",
+      "FRM-CP-2026-TRAB-0013",
+      "FRM-CP-2026-TRAB-0056",
+      "FRM-CP-2026-TRAB-0088",
+      "FRM-CP-2026-TRAB-0095",
+      "FRM-CP-2026-TRAB-0123",
+      "FRM-CP-2026-TRAB-0140",
+      "FRM-CP-2026-TRAB-0155"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0005",
+        "FRM-CP-2026-TRAB-0013",
+        "FRM-CP-2026-TRAB-0056",
+        "FRM-CP-2026-TRAB-0088",
+        "FRM-CP-2026-TRAB-0095",
+        "FRM-CP-2026-TRAB-0123",
+        "FRM-CP-2026-TRAB-0140",
+        "FRM-CP-2026-TRAB-0155"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/areas-de-atuacao/educacao-profissional-e-tecnologica/pronatec",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0006",
+      "FRM-CP-2026-TRAB-0014",
+      "FRM-CP-2026-TRAB-0035",
+      "FRM-CP-2026-TRAB-0057",
+      "FRM-CP-2026-TRAB-0064",
+      "FRM-CP-2026-TRAB-0096",
+      "FRM-CP-2026-TRAB-0120",
+      "FRM-CP-2026-TRAB-0150"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0006",
+        "FRM-CP-2026-TRAB-0014",
+        "FRM-CP-2026-TRAB-0035",
+        "FRM-CP-2026-TRAB-0057",
+        "FRM-CP-2026-TRAB-0064",
+        "FRM-CP-2026-TRAB-0096",
+        "FRM-CP-2026-TRAB-0120",
+        "FRM-CP-2026-TRAB-0150"
+      ]
+    }
+  },
+  {
+    "url": "https://fnp.org.br/noticias/item/531-governo-lanca-pronatec-aprendiz-para-as-micro-e-pequenas-empresas",
+    "domain": "fnp.org.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0007",
+      "FRM-CP-2026-TRAB-0028",
+      "FRM-CP-2026-TRAB-0036",
+      "FRM-CP-2026-TRAB-0058",
+      "FRM-CP-2026-TRAB-0076",
+      "FRM-CP-2026-TRAB-0121",
+      "FRM-CP-2026-TRAB-0141",
+      "FRM-CP-2026-TRAB-0156"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0007",
+        "FRM-CP-2026-TRAB-0028",
+        "FRM-CP-2026-TRAB-0036",
+        "FRM-CP-2026-TRAB-0058",
+        "FRM-CP-2026-TRAB-0076",
+        "FRM-CP-2026-TRAB-0121",
+        "FRM-CP-2026-TRAB-0141",
+        "FRM-CP-2026-TRAB-0156"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 7,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0008",
+      "FRM-CP-2026-TRAB-0016",
+      "FRM-CP-2026-TRAB-0059",
+      "FRM-CP-2026-TRAB-0065",
+      "FRM-CP-2026-TRAB-0128",
+      "FRM-CP-2026-TRAB-0132",
+      "FRM-CP-2026-TRAB-0148"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0008",
+        "FRM-CP-2026-TRAB-0016",
+        "FRM-CP-2026-TRAB-0059",
+        "FRM-CP-2026-TRAB-0065",
+        "FRM-CP-2026-TRAB-0128",
+        "FRM-CP-2026-TRAB-0132",
+        "FRM-CP-2026-TRAB-0148"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2019/lei/L13874.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 10,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0009",
+      "FRM-CP-2026-TRAB-0024",
+      "FRM-CP-2026-TRAB-0041",
+      "FRM-CP-2026-TRAB-0060",
+      "FRM-CP-2026-TRAB-0071",
+      "FRM-CP-2026-TRAB-0084",
+      "FRM-CP-2026-TRAB-0115",
+      "FRM-CP-2026-TRAB-0127",
+      "FRM-CP-2026-TRAB-0142",
+      "FRM-CP-2026-TRAB-0149"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0009",
+        "FRM-CP-2026-TRAB-0024",
+        "FRM-CP-2026-TRAB-0041",
+        "FRM-CP-2026-TRAB-0060",
+        "FRM-CP-2026-TRAB-0071",
+        "FRM-CP-2026-TRAB-0084",
+        "FRM-CP-2026-TRAB-0115",
+        "FRM-CP-2026-TRAB-0127",
+        "FRM-CP-2026-TRAB-0142",
+        "FRM-CP-2026-TRAB-0149"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/ensino-medio-mais",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 10,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0009",
+      "FRM-CP-2026-EDU-0029",
+      "FRM-CP-2026-EDU-0046",
+      "FRM-CP-2026-EDU-0066",
+      "FRM-CP-2026-EDU-0084",
+      "FRM-CP-2026-EDU-0102",
+      "FRM-CP-2026-EDU-0122",
+      "FRM-CP-2026-EDU-0141",
+      "FRM-CP-2026-EDU-0165",
+      "FRM-CP-2026-EDU-0186"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0009",
+        "FRM-CP-2026-EDU-0029",
+        "FRM-CP-2026-EDU-0046",
+        "FRM-CP-2026-EDU-0066",
+        "FRM-CP-2026-EDU-0084",
+        "FRM-CP-2026-EDU-0102",
+        "FRM-CP-2026-EDU-0122",
+        "FRM-CP-2026-EDU-0141",
+        "FRM-CP-2026-EDU-0165",
+        "FRM-CP-2026-EDU-0186"
+      ]
+    }
+  },
+  {
+    "url": "https://buscaativaescolar.org.br/",
+    "domain": "buscaativaescolar.org.br",
+    "n_referenciada_por": 6,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0010",
+      "FRM-CP-2026-EDU-0034",
+      "FRM-CP-2026-EDU-0042",
+      "FRM-CP-2026-EDU-0087",
+      "FRM-CP-2026-EDU-0104",
+      "FRM-CP-2026-EDU-0179"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0010",
+        "FRM-CP-2026-EDU-0034",
+        "FRM-CP-2026-EDU-0042",
+        "FRM-CP-2026-EDU-0087",
+        "FRM-CP-2026-EDU-0104",
+        "FRM-CP-2026-EDU-0179"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0009",
+      "FRM-CP-2026-PSOC-0018",
+      "FRM-CP-2026-PSOC-0031",
+      "FRM-CP-2026-PSOC-0040",
+      "FRM-CP-2026-PSOC-0057",
+      "FRM-CP-2026-PSOC-0059",
+      "FRM-CP-2026-PSOC-0074",
+      "FRM-CP-2026-PSOC-0081"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0009",
+        "FRM-CP-2026-PSOC-0018",
+        "FRM-CP-2026-PSOC-0031",
+        "FRM-CP-2026-PSOC-0040",
+        "FRM-CP-2026-PSOC-0057",
+        "FRM-CP-2026-PSOC-0059",
+        "FRM-CP-2026-PSOC-0074",
+        "FRM-CP-2026-PSOC-0081"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.mec.gov.br/docman/documentos-pdf/1634-port-971/file",
+    "domain": "portal.mec.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0011",
+      "FRM-CP-2026-EDU-0031",
+      "FRM-CP-2026-EDU-0068",
+      "FRM-CP-2026-EDU-0103",
+      "FRM-CP-2026-EDU-0123",
+      "FRM-CP-2026-EDU-0143",
+      "FRM-CP-2026-EDU-0166",
+      "FRM-CP-2026-EDU-0180"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0011",
+        "FRM-CP-2026-EDU-0031",
+        "FRM-CP-2026-EDU-0068",
+        "FRM-CP-2026-EDU-0103",
+        "FRM-CP-2026-EDU-0123",
+        "FRM-CP-2026-EDU-0143",
+        "FRM-CP-2026-EDU-0166",
+        "FRM-CP-2026-EDU-0180"
+      ]
+    }
+  },
+  {
+    "url": "https://repositorio.ufjf.br/jspui/handle/ufjf/5317?locale=es",
+    "domain": "repositorio.ufjf.br",
+    "n_referenciada_por": 3,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0012",
+      "FRM-CP-2026-EDU-0069",
+      "FRM-CP-2026-EDU-0181"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0012",
+        "FRM-CP-2026-EDU-0069",
+        "FRM-CP-2026-EDU-0181"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/assuntos/eb/programa-de-fomento-as-escolas-de-ensino-medio-em-tempo-integral-emti",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 8,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0013",
+      "FRM-CP-2026-EDU-0032",
+      "FRM-CP-2026-EDU-0070",
+      "FRM-CP-2026-EDU-0088",
+      "FRM-CP-2026-EDU-0089",
+      "FRM-CP-2026-EDU-0124",
+      "FRM-CP-2026-EDU-0145",
+      "FRM-CP-2026-EDU-0167"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0013",
+        "FRM-CP-2026-EDU-0032",
+        "FRM-CP-2026-EDU-0070",
+        "FRM-CP-2026-EDU-0088",
+        "FRM-CP-2026-EDU-0089",
+        "FRM-CP-2026-EDU-0124",
+        "FRM-CP-2026-EDU-0145",
+        "FRM-CP-2026-EDU-0167"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/decreto/d12048.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 10,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0014",
+      "FRM-CP-2026-EDU-0033",
+      "FRM-CP-2026-EDU-0048",
+      "FRM-CP-2026-EDU-0067",
+      "FRM-CP-2026-EDU-0086",
+      "FRM-CP-2026-EDU-0105",
+      "FRM-CP-2026-EDU-0125",
+      "FRM-CP-2026-EDU-0144",
+      "FRM-CP-2026-EDU-0168",
+      "FRM-CP-2026-EDU-0184"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0014",
+        "FRM-CP-2026-EDU-0033",
+        "FRM-CP-2026-EDU-0048",
+        "FRM-CP-2026-EDU-0067",
+        "FRM-CP-2026-EDU-0086",
+        "FRM-CP-2026-EDU-0105",
+        "FRM-CP-2026-EDU-0125",
+        "FRM-CP-2026-EDU-0144",
+        "FRM-CP-2026-EDU-0168",
+        "FRM-CP-2026-EDU-0184"
+      ]
+    }
+  },
+  {
+    "url": "https://atendimento.educacao.sp.gov.br/knowledgebase/article/SED-08102/pt-br",
+    "domain": "atendimento.educacao.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0021"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0021"
+      ]
+    }
+  },
+  {
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2011/decreto-57238-17.08.2011.html",
+    "domain": "www.al.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0023"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0023"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/acoes-e-programas/politicas-nacionais-penais/-educacao-prisional/2020-2024/sp.pdf",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0023"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-EDU-0023"
+      ]
+    }
+  },
+  {
+    "url": "https://legislacao.prefeitura.sp.gov.br/leis/decreto-43802-de-16-de-setembro-de-2003",
+    "domain": "legislacao.prefeitura.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0027"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0027"
+      ]
+    }
+  },
+  {
+    "url": "https://prefeitura.sp.gov.br/web/imigrantes_e_trabalho_decente/w/programas_e_projetos/portas_abertas/259304",
+    "domain": "prefeitura.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0028"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0028"
+      ]
+    }
+  },
+  {
+    "url": "https://teses.usp.br/teses/disponiveis/48/48134/tde-09102007-093437/publico/DissertacaoAlineAbbonizio.pdf",
+    "domain": "teses.usp.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0030"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0030"
+      ]
+    }
+  },
+  {
+    "url": "https://www.desenvolvimentosocial.sp.gov.br/sec_desenvolv_social/noticias/informacoes-sobre-o-programa-acao-jovem-430",
+    "domain": "www.desenvolvimentosocial.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0010"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0010"
+      ]
+    }
+  },
+  {
+    "url": "https://prefeitura.sp.gov.br/web/lgbti/w/menu/150965",
+    "domain": "prefeitura.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0011"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0011"
+      ]
+    }
+  },
+  {
+    "url": "https://jau.sp.gov.br/noticia/10538/plano-mobilidade-jahu",
+    "domain": "jau.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0012"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0012"
+      ]
+    }
+  },
+  {
+    "url": "https://prefeitura.sp.gov.br/web/comunicacao/w/noticias/122295",
+    "domain": "prefeitura.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0015"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0015"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 7,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0019",
+      "FRM-CP-2026-PSOC-0034",
+      "FRM-CP-2026-PSOC-0047",
+      "FRM-CP-2026-PSOC-0052",
+      "FRM-CP-2026-PSOC-0058",
+      "FRM-CP-2026-PSOC-0068",
+      "FRM-CP-2026-PSOC-0079"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0019",
+        "FRM-CP-2026-PSOC-0034",
+        "FRM-CP-2026-PSOC-0047",
+        "FRM-CP-2026-PSOC-0052",
+        "FRM-CP-2026-PSOC-0058",
+        "FRM-CP-2026-PSOC-0068",
+        "FRM-CP-2026-PSOC-0079"
+      ]
+    }
+  },
+  {
+    "url": "https://prefeitura.sp.gov.br/web/assistencia_social/w/rede_socioassistencial/criancas_e_adolescentes/331325",
+    "domain": "prefeitura.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0023"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0023"
+      ]
+    }
+  },
+  {
+    "url": "https://www.trampolim.sp.gov.br/",
+    "domain": "www.trampolim.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0012"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0012"
+      ]
+    }
+  },
+  {
+    "url": "https://www.desenvolvimentoeconomico.sp.gov.br/DesenvolvimentoEconomico/institucional/Programas/pat_programa",
+    "domain": "www.desenvolvimentoeconomico.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0015"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0015"
+      ]
+    }
+  },
+  {
+    "url": "https://univesp.br/cursos/qualificacao-profissional",
+    "domain": "univesp.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0017"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0017"
+      ]
+    }
+  },
+  {
+    "url": "https://servicos.sp.gov.br/fcarta/AA22C3A3-0BC3-439B-B369-6D84D5A83922",
+    "domain": "servicos.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0018"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0018"
+      ]
+    }
+  },
+  {
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2025/decreto-69680-08.07.2025.html",
+    "domain": "www.al.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0019"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0019"
+      ]
+    }
+  },
+  {
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2025/decreto-69680-08.07.2025.html?utm_source",
+    "domain": "www.al.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0020"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0020"
+      ]
+    }
+  },
+  {
+    "url": "https://www.desenvolvimentoeconomico.sp.gov.br/DesenvolvimentoEconomico/institucional/Programas/pacto_pela_inclusao",
+    "domain": "www.desenvolvimentoeconomico.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0021"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0021"
+      ]
+    }
+  },
+  {
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2023/decreto-67980-25.09.2023.html",
+    "domain": "www.al.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0022"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0022"
+      ]
+    }
+  },
+  {
+    "url": "https://www.justica.sp.gov.br/sec_justica/imprensa/noticias/spjovemgovernodespeunesplancamprogramaparaincentivarempreendedorismoeprotagonismojuvenil",
+    "domain": "www.justica.sp.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0023"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0023"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seeduc.rj.gov.br/cidad%C3%A3o/matr%C3%ADcula",
+    "domain": "www.seeduc.rj.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0035"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0035"
+      ]
+    }
+  },
+  {
+    "url": "https://www.frm.org.br/institucional/a-fundacao/como-chegamos-ate-aqui/2009",
+    "domain": "www.frm.org.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0037"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0037"
+      ]
+    }
+  },
+  {
+    "url": "https://api.arca.fiocruz.br/api/core/bitstreams/823bdc3b-7030-4a1f-a517-19925d631826/content",
+    "domain": "api.arca.fiocruz.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0037"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-EDU-0037"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.mec.gov.br/dmdocuments/ensino_inovador.pdf",
+    "domain": "portal.mec.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0041",
+      "FRM-CP-2026-EDU-0081"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0041",
+        "FRM-CP-2026-EDU-0081"
+      ]
+    }
+  },
+  {
+    "url": "https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/837253/5353",
+    "domain": "doweb.rio.rj.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0043"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0043"
+      ]
+    }
+  },
+  {
+    "url": "https://www.folha1.com.br/geral/2023/08/1292858-mprj-assina-pacto-estadual-para-combater-a-evasao-escolar-na-rede-publica.html",
+    "domain": "www.folha1.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0044"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0044"
+      ]
+    }
+  },
+  {
+    "url": "https://leisestaduais.com.br/rj/decreto-n-31548-2002-rio-de-janeiro-dispoe-sobre-o-programa-de-primeiro-emprego-no-ambito-do-estado-do-rio-de-janeiro-implementado-pela-secretaria-de-estado-de-trabalho-e-da-outras-providencias?__cf_chl_tk=awLzvES0A2WCa2c05U3g3jhBc8e71mLxszMjL49FNdk-1771882529-1.0.1.1-_qJdTMoEDWDmSvAC2zf9C5WGfuD8x7qilbE7BEWNr6Y",
+    "domain": "leisestaduais.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0031"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0031"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional?utm_source=chatgpt.com",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0034",
+      "FRM-CP-2026-TRAB-0075"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0034",
+        "FRM-CP-2026-TRAB-0075"
+      ]
+    }
+  },
+  {
+    "url": "https://arquivo.proderj.rj.gov.br/emop_imagens/site/bs_visualiza.asp?id=736",
+    "domain": "arquivo.proderj.rj.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0037"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0037"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/sistema-nacional-de-emprego-sine/casa-do-trabalhador",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 3,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0038",
+      "FRM-CP-2026-TRAB-0090",
+      "FRM-CP-2026-TRAB-0130"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0038",
+        "FRM-CP-2026-TRAB-0090",
+        "FRM-CP-2026-TRAB-0130"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/mte/sine",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0039"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0039"
+      ]
+    }
+  },
+  {
+    "url": "https://legislacao.fazenda.rj.gov.br/letra-r/rio-simples",
+    "domain": "legislacao.fazenda.rj.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0040"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0040"
+      ]
+    }
+  },
+  {
+    "url": "https://www.rj.gov.br/trabalho/acoes_e_programas?utm_source=chatgpt.com",
+    "domain": "www.rj.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0043"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0043"
+      ]
+    }
+  },
+  {
+    "url": "https://www.faetec.rj.gov.br/historia",
+    "domain": "www.faetec.rj.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0047"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0047"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0049"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0049"
+      ]
+    }
+  },
+  {
+    "url": "https://www.mg.gov.br/servico/concluir-o-ensino-medio-por-meio-de-cursos-oferecidos-pelos-cesec",
+    "domain": "www.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0053"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0053"
+      ]
+    }
+  },
+  {
+    "url": "https://www.educacao.mg.gov.br/servicos/exames-de-ensino-fundamental-e-medio",
+    "domain": "www.educacao.mg.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0054",
+      "FRM-CP-2026-EDU-0055"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0054",
+        "FRM-CP-2026-EDU-0055"
+      ]
+    }
+  },
+  {
+    "url": "https://plataforma.buscaativaescolar.org.br/",
+    "domain": "plataforma.buscaativaescolar.org.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0056",
+      "FRM-CP-2026-EDU-0114"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0056",
+        "FRM-CP-2026-EDU-0114"
+      ]
+    }
+  },
+  {
+    "url": "https://agenciaminas.mg.gov.br/noticia/educacao-lanca-oficialmente-campanha-de-busca-ativa-escolar-2025-para-reintegrar-estudantes-infrequentes",
+    "domain": "agenciaminas.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0032"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0032"
+      ]
+    }
+  },
+  {
+    "url": "https://www.trilhasdefuturo.mg.gov.br/perguntas-frequentes/index.html",
+    "domain": "www.trilhasdefuturo.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0045"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0045"
+      ]
+    }
+  },
+  {
+    "url": "https://www.educacao.mg.gov.br/governo-de-minas-abre-pre-inscricao-para-o-trilhas-de-futuro-jovens-e-adultos",
+    "domain": "www.educacao.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0046"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0046"
+      ]
+    }
+  },
+  {
+    "url": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-forma",
+    "domain": "social.mg.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0047",
+      "FRM-CP-2026-TRAB-0062"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0047",
+        "FRM-CP-2026-TRAB-0062"
+      ]
+    }
+  },
+  {
+    "url": "https://utramig.mg.gov.br/",
+    "domain": "utramig.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0048"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0048"
+      ]
+    }
+  },
+  {
+    "url": "https://desenvolvimento.mg.gov.br/inicio/projetos/projeto/1143",
+    "domain": "desenvolvimento.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0049"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0049"
+      ]
+    }
+  },
+  {
+    "url": "https://www.descubraaprendizagem.mg.gov.br/",
+    "domain": "www.descubraaprendizagem.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0050"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0050"
+      ]
+    }
+  },
+  {
+    "url": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-programando",
+    "domain": "social.mg.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0051"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0051"
+      ]
+    }
+  },
+  {
+    "url": "https://portalgerais.com/minas-forma-abre-10-mil-vagas-de-cursos-gratuitos-e-foca-em-mulheres",
+    "domain": "portalgerais.com",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0062"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-TRAB-0062"
+      ]
+    }
+  },
+  {
+    "url": "https://professor.escoladigital.pr.gov.br/eja",
+    "domain": "professor.escoladigital.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0071"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0071"
+      ]
+    }
+  },
+  {
+    "url": "https://www.educacao.pr.gov.br/eja_exames_certificacao_legislacao",
+    "domain": "www.educacao.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0072"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0072"
+      ]
+    }
+  },
+  {
+    "url": "https://professor.escoladigital.pr.gov.br/combate_abandono_escolar",
+    "domain": "professor.escoladigital.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0073"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0073"
+      ]
+    }
+  },
+  {
+    "url": "https://feccompar.com.br/biblioteca/plano-estadual-de-educacao-no-sistema-prisional-do-parana",
+    "domain": "feccompar.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0074"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0074"
+      ]
+    }
+  },
+  {
+    "url": "https://professor.escoladigital.pr.gov.br/eja/proeduse/legislacao",
+    "domain": "professor.escoladigital.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0075"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0075"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/brasil-alfabetizado",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 3,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0076",
+      "FRM-CP-2026-EDU-0109",
+      "FRM-CP-2026-EDU-0177"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0076",
+        "FRM-CP-2026-EDU-0109",
+        "FRM-CP-2026-EDU-0177"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/projovem",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0042",
+      "FRM-CP-2026-PSOC-0086"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0042",
+        "FRM-CP-2026-PSOC-0086"
+      ]
+    }
+  },
+  {
+    "url": "https://www.trabalho.pr.gov.br/Pagina/Qualifica-Parana-2026",
+    "domain": "www.trabalho.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0066"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0066"
+      ]
+    }
+  },
+  {
+    "url": "https://www.parana.pr.gov.br/aen/Noticia/Programa-Carretas-do-Conhecimento-tera-investimento-de-R-22-milhoes-em-2023",
+    "domain": "www.parana.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0067"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0067"
+      ]
+    }
+  },
+  {
+    "url": "https://www.parana.pr.gov.br/aen/Noticia/Qualificacao-profissional-gratuita-do-Estado-alcancara-os-399-municipios-do-Parana",
+    "domain": "www.parana.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0068"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0068"
+      ]
+    }
+  },
+  {
+    "url": "https://www.trabalho.pr.gov.br/Noticia/Projeto-Bora-Circular-reforca-compromisso-com-inovacao-e-desenvolvimento-sustentavel",
+    "domain": "www.trabalho.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0068"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-TRAB-0068"
+      ]
+    }
+  },
+  {
+    "url": "https://www.fomento.pr.gov.br/Banco-da-Mulher-Paranaense",
+    "domain": "www.fomento.pr.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0069"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0069"
+      ]
+    }
+  },
+  {
+    "url": "https://www.bemparana.com.br/noticias/economia/banco-da-mulher-paranaense-repassa-quase-r-300-milhoes-em-credito-as-empreendedoras",
+    "domain": "www.bemparana.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0069"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-TRAB-0069"
+      ]
+    }
+  },
+  {
+    "url": "https://institutoligabadu.org.br/bora-circular",
+    "domain": "institutoligabadu.org.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0070"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0070"
+      ]
+    }
+  },
+  {
+    "url": "https://ole.uff.br/wp-content/uploads/sites/296/2017/12/projeto-escola-fabrica.pdf",
+    "domain": "ole.uff.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0072"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0072"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/migracoes/politica-nacional-de-migracoes-refugio-e-apatridia-1",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0048",
+      "FRM-CP-2026-PSOC-0087"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0048",
+        "FRM-CP-2026-PSOC-0087"
+      ]
+    }
+  },
+  {
+    "url": "https://educacao.rs.gov.br/carta-de-servicos/servicos?servico=2259",
+    "domain": "educacao.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0090"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0090"
+      ]
+    }
+  },
+  {
+    "url": "https://educacao.rs.gov.br/neejas-nucleos-estaduais-de-educacao-de-jovens-e-adultos",
+    "domain": "educacao.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0091"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0091"
+      ]
+    }
+  },
+  {
+    "url": "https://escola.rs.gov.br/matriculas",
+    "domain": "escola.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0092"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0092"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_Ato2023-2026/2024/Decreto/D12048.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0094"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0094"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/decreto/D10959.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0095"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0095"
+      ]
+    }
+  },
+  {
+    "url": "https://ssps.rs.gov.br/upload/arquivos/202301/24100513-19131940-plano-educacao-para-pessoas-presas.pdf",
+    "domain": "ssps.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0096"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0096"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ceed.rs.gov.br/upload/arquivos/202512/16094032-resolucao-391-ept.pdf",
+    "domain": "www.ceed.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0099"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-EDU-0099"
+      ]
+    }
+  },
+  {
+    "url": "https://planoriogrande.rs.gov.br/plano-rio-grande",
+    "domain": "planoriogrande.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0049"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0049"
+      ]
+    }
+  },
+  {
+    "url": "https://planoriogrande.rs.gov.br/normativas",
+    "domain": "planoriogrande.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0049"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-PSOC-0049"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/secom/pt-br/assuntos/noticias-regionalizadas/novo-bolsa-familia/jan.26/bolsa-familia-chega-a-mais-de-542-1-mil-beneficiarios-do-rio-grande-do-sul-a-partir-desta-segunda-19",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0053"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0053"
+      ]
+    }
+  },
+  {
+    "url": "https://revistanews.com.br/2022/09/19/rs-e-o-segundo-estado-da-regiao-sul-com-mais-familias-atendidas-pelo-auxilio-brasil-em-setembro",
+    "domain": "revistanews.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0054"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0054"
+      ]
+    }
+  },
+  {
+    "url": "https://fgtas.rs.gov.br/sistema-nacional-de-emprego",
+    "domain": "fgtas.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0080"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0080"
+      ]
+    }
+  },
+  {
+    "url": "https://fgtas.rs.gov.br/agencias-fgtas-sine",
+    "domain": "fgtas.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0080"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-TRAB-0080"
+      ]
+    }
+  },
+  {
+    "url": "https://trabalho.rs.gov.br/rs-qualificacao",
+    "domain": "trabalho.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0081"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0081"
+      ]
+    }
+  },
+  {
+    "url": "https://trabalho.rs.gov.br/rs-qualificacao-recomecar-2025",
+    "domain": "trabalho.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0082"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0082"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12513.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0083"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0083"
+      ]
+    }
+  },
+  {
+    "url": "https://www.jb.com.br/pais/noticias/2007/03/14/consorcio-da-juventude-inseriu-quase-60-no-mercado-formal-de-trabalho.html?utm_source=chatgpt.com",
+    "domain": "www.jb.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0086"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0086"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14457.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 3,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0091",
+      "FRM-CP-2026-TRAB-0116",
+      "FRM-CP-2026-TRAB-0143"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0091",
+        "FRM-CP-2026-TRAB-0116",
+        "FRM-CP-2026-TRAB-0143"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/assuntos/noticias/2025/junho/divulgados-planos-estaduais-de-educacao-nas-prisoes",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0106"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0106"
+      ]
+    }
+  },
+  {
+    "url": "https://www.estado.rs.gov.br/com-foco-no-combate-a-evasao-na-rede-estadual-governo-lanca-politica-de-protecao-a-trajetoria-escolar",
+    "domain": "www.estado.rs.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0107"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0107"
+      ]
+    }
+  },
+  {
+    "url": "https://jornadapedagogica.educacao.ba.gov.br/eja",
+    "domain": "jornadapedagogica.educacao.ba.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0108"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0108"
+      ]
+    }
+  },
+  {
+    "url": "https://ojs.observatoriolatinoamericano.com/ojs/index.php/olel/article/view/805/512",
+    "domain": "ojs.observatoriolatinoamericano.com",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0111"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0111"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ba.gov.br/educacao/bahia-alfabetizada",
+    "domain": "www.ba.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0113"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0113"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ecoescolas.org.br/casas-familiares-rurais-da-bahia-inspiram-o-mundo-na-conferencia-internacional-do-programa-eco-escolas",
+    "domain": "www.ecoescolas.org.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0115"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0115"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ba.gov.br/educacao/bolsa-presenca",
+    "domain": "www.ba.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0060"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0060"
+      ]
+    }
+  },
+  {
+    "url": "https://servidores.rhbahia.ba.gov.br/noticias/2025-01-08/governo-do-estado-oferta-educacao-profissional-e-tecnologica-todos-os",
+    "domain": "servidores.rhbahia.ba.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0093"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0093"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.ifba.edu.br/noticias/2025/ifba-inicia-cursos-pelo-pronatec-em-13-campi",
+    "domain": "portal.ifba.edu.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0094"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0094"
+      ]
+    }
+  },
+  {
+    "url": "https://publicadministration.un.org/en/Research/Case-Studies/unpsacases/ctl/NominationProfilev2014/mid/1170/id/2407",
+    "domain": "publicadministration.un.org",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0097"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0097"
+      ]
+    }
+  },
+  {
+    "url": "https://www.idacba.org.br/site/2022/08/02/programa-qualifica-bahia",
+    "domain": "www.idacba.org.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0098"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0098"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/setembro/mte-lanca-edital-para-qualificacao-profissional-de-600-pessoas-pelo-programa-manuel-querino",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0099"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0099"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "domain": "www.ba.gov.br",
+    "n_referenciada_por": 7,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0100",
+      "FRM-CP-2026-TRAB-0105",
+      "FRM-CP-2026-TRAB-0106",
+      "FRM-CP-2026-TRAB-0110",
+      "FRM-CP-2026-TRAB-0111",
+      "FRM-CP-2026-TRAB-0113",
+      "FRM-CP-2026-TRAB-0114"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0100",
+        "FRM-CP-2026-TRAB-0105",
+        "FRM-CP-2026-TRAB-0106",
+        "FRM-CP-2026-TRAB-0110",
+        "FRM-CP-2026-TRAB-0111",
+        "FRM-CP-2026-TRAB-0113",
+        "FRM-CP-2026-TRAB-0114"
+      ]
+    }
+  },
+  {
+    "url": "https://servidores.rhbahia.ba.gov.br/noticias/2021-12-27/governo-oferta-5-mil-vagas-para-cursos-de-qualificacao-profissional",
+    "domain": "servidores.rhbahia.ba.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0102"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0102"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ba.gov.br/trabalho/noticia/2024-08/5635/ministro-do-trabalho-diz-que-programa-manuel-querino-vai-abrir-portas-e",
+    "domain": "www.ba.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0103"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0103"
+      ]
+    }
+  },
+  {
+    "url": "https://leisestaduais.com.br/ba/decreto-n-20401-2021-bahia-institui-o-programa-educar-para-trabalhar-e-da-outras-providencias",
+    "domain": "leisestaduais.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0104"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0104"
+      ]
+    }
+  },
+  {
+    "url": "https://www.bahianoticias.com.br/noticia/282876-programa-juventude-produtiva-oferece-vagas-para-capacitacao-no-senac-e-sinebahia",
+    "domain": "www.bahianoticias.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0107"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0107"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/qualificacao-profissional/caminho-digital",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0108"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0108"
+      ]
+    }
+  },
+  {
+    "url": "https://www.youtube.com/live/JKwTQgBHdlM",
+    "domain": "www.youtube.com",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0109"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0109"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ba.gov.br/trabalho/noticia/2024-02/4167/forca-jovem-da-largada-com-oficina-de-roteiro-para-audiovisual",
+    "domain": "www.ba.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0112"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0112"
+      ]
+    }
+  },
+  {
+    "url": "https://www.bnews.com.br/noticias/economia-e-mercado/a-bahia-e-lider-na-geracao-de-empregos-no-nordeste-destaca-secretario-durante-inauguracao-de-nova-sede-do-sinebahia.html",
+    "domain": "www.bnews.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0117"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0117"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/RELATORIO%20DE%20GESTA%CC%83O%202022-393a2.pdf",
+    "domain": "www.seduc.pa.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0128"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0128"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seduc.pa.gov.br/pagina/3986-ed--jovens-e-adultos-eja",
+    "domain": "www.seduc.pa.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0129",
+      "FRM-CP-2026-EDU-0133"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0129",
+        "FRM-CP-2026-EDU-0133"
+      ]
+    }
+  },
+  {
+    "url": "https://egpa.pa.gov.br/noticias/projeto-mundiar-desenvolve-aprendizado-multidisciplinar",
+    "domain": "egpa.pa.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0130"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0130"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ce.pdf",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0131",
+      "FRM-CP-2026-EDU-0187"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0131",
+        "FRM-CP-2026-EDU-0187"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seaster.pa.gov.br/taxonomy/term/170",
+    "domain": "www.seaster.pa.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0118"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0118"
+      ]
+    }
+  },
+  {
+    "url": "https://www.agenciapara.com.br/noticia/67291/rede-estadual-intensifica-busca-ativa-escolar-para-garantir-direito-a-educacao",
+    "domain": "www.agenciapara.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0132"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0132"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2024/resolucao-no-20-de-9-de-setembro-de-2024/view",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0136"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0136"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.mec.gov.br/setec/arquivos/pdf1/proejadecreto5840.pdf",
+    "domain": "portal.mec.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0137"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0137"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2024/lei/l14818.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0070"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0070"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/janeiro/seguro-desemprego-2025-atualizacao-das-faixas-e-valores-do-beneficio",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0119"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0119"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14457",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0122"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0122"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.mec.gov.br/component/tags/tag/pronatec-aprendiz",
+    "domain": "portal.mec.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0125"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0125"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seaster.pa.gov.br/node/736",
+    "domain": "www.seaster.pa.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0126"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-TRAB-0126"
+      ]
+    }
+  },
+  {
+    "url": "https://www.parapaz.pa.gov.br/en/noticia/f%C3%A1brica-esperan%C3%A7a-garante-capacita%C3%A7%C3%A3o-profissional-ex-detentos",
+    "domain": "www.parapaz.pa.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0129"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0129"
+      ]
+    }
+  },
+  {
+    "url": "https://www.acnur.org/br/o-que-fazemos/politicas-publicas",
+    "domain": "www.acnur.org",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0073"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0073"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seduc.pa.gov.br/noticia/11277-ensino-da-educacao-de-jovens-e-adultos--eja--abre-portas-para-o-mercado-de-trabalho",
+    "domain": "www.seduc.pa.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0142"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0142"
+      ]
+    }
+  },
+  {
+    "url": "https://agenciapara.com.br/noticia/34987/seduc-promove-formacao-continuada-sobre-programa-trilhas-no-para",
+    "domain": "agenciapara.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0146"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0146"
+      ]
+    }
+  },
+  {
+    "url": "https://transparencia.pe.gov.br/wp-content/uploads/2023/12/plano-estadual-de-educacao_versao-final-07-06-2015-1.pdf",
+    "domain": "transparencia.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0147"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0147"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.educacao.pe.gov.br/see-oferta-18-908-vagas-para-a-educacao-de-jovens-e-adultos",
+    "domain": "portal.educacao.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0148"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0148"
+      ]
+    }
+  },
+  {
+    "url": "https://g1.globo.com/pe/petrolina-regiao/noticia/2024/09/10/escolas-estaduais-de-petrolina-recebem-inscricoes-para-o-eja-campo-veja-lista.ghtml",
+    "domain": "g1.globo.com",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0149"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0149"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2020-2024/pe.pdf",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0150"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0150"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.educacao.pe.gov.br/supletivo-anual",
+    "domain": "portal.educacao.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0151"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0151"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/RELATORIO-ANUAL-DE-INDICADORES-2024.pdf",
+    "domain": "portal.educacao.pe.gov.br",
+    "n_referenciada_por": 4,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0152",
+      "FRM-CP-2026-EDU-0153",
+      "FRM-CP-2026-EDU-0154",
+      "FRM-CP-2026-EDU-0155"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0152",
+        "FRM-CP-2026-EDU-0153",
+        "FRM-CP-2026-EDU-0154",
+        "FRM-CP-2026-EDU-0155"
+      ]
+    }
+  },
+  {
+    "url": "https://portalantigo.ifsertaope.edu.br/index.php/proeja/1186-ifsertaope/ingresso-if/cursos-tecnicos-ing/proeja-fic",
+    "domain": "portalantigo.ifsertaope.edu.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0158"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0158"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.educacao.pe.gov.br/projovem-urbano-oferta-1-500-vagas-em-pernambuco",
+    "domain": "portal.educacao.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0161"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0161"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/mec/pt-br/pe-de-meia",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0078"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0078"
+      ]
+    }
+  },
+  {
+    "url": "https://www.sedepe.pe.gov.br/sedepe-inaugura-primeira-casa-do-trabalhador-do-pais",
+    "domain": "www.sedepe.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0133"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0133"
+      ]
+    }
+  },
+  {
+    "url": "https://www.sedepe.pe.gov.br/qualifica-pe-e-lancado-como-maior-programa-de-cursos-profissionalizantes-em-todo-o-estado",
+    "domain": "www.sedepe.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0134"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0134"
+      ]
+    }
+  },
+  {
+    "url": "https://pronatec2026.com.br/pronatec-2026-pe",
+    "domain": "pronatec2026.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0135"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0135"
+      ]
+    }
+  },
+  {
+    "url": "https://portal.educacao.pe.gov.br/programa-trilhatec-abre-inscricoes-para-cursos-gratuitos-em-parceria-com-o-senac-em-todo-o-estado",
+    "domain": "portal.educacao.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0136"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0136"
+      ]
+    }
+  },
+  {
+    "url": "https://atualmt.com.br/2026/03/18/seja-pro-trabalho-e-emprego-amplia-qualificacao-profissional-em-pernambuco",
+    "domain": "atualmt.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0144"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0144"
+      ]
+    }
+  },
+  {
+    "url": "https://www.sigas.pe.gov.br/pernambuco-sem-fome-e-com-acolhimento-mulheres",
+    "domain": "www.sigas.pe.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0082"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0082"
+      ]
+    }
+  },
+  {
+    "url": "https://falapernambuco.com.br/2025/12/23/pernambuco-sem-fome-completa-dois-anos-com-avancos-no-combate-a-inseguranca-alimentar",
+    "domain": "falapernambuco.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0082"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-PSOC-0082"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seduc.ce.gov.br/educacao-de-jovens-e-adultos-eja",
+    "domain": "www.seduc.ce.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0169",
+      "FRM-CP-2026-EDU-0171"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0169",
+        "FRM-CP-2026-EDU-0171"
+      ]
+    }
+  },
+  {
+    "url": "https://novoscaminhos-sc.com.br/nacionalizacao",
+    "domain": "novoscaminhos-sc.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0170"
+    ],
+    "campos_origem": {
+      "informacoes_complementares": [
+        "FRM-CP-2026-EDU-0170"
+      ]
+    }
+  },
+  {
+    "url": "https://belt.al.ce.gov.br/index.php/legislacao-do-ceara/denominacao-de-equipamentos-publicos/item/download/2557_3186959b85710af0a5f386183eca33e8",
+    "domain": "belt.al.ce.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0174"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0174"
+      ]
+    }
+  },
+  {
+    "url": "https://www.seduc.ce.gov.br/projeto-professor-diretor-de-turma-ppdt",
+    "domain": "www.seduc.ce.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0175"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0175"
+      ]
+    }
+  },
+  {
+    "url": "https://leisestaduais.com.br/ce/lei-ordinaria-n-17572-2021-ceara-dispoe-sobre-o-programa-ceara-educa-mais-consistente-em-acoes-destinadas-a",
+    "domain": "leisestaduais.com.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-EDU-0176"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-EDU-0176"
+      ]
+    }
+  },
+  {
+    "url": "https://www.cearasemfome.ce.gov.br/ceara-sem-fome-e-seduc-dialogam-oferta-de-alfabetizacao-de-jovens-e-adultos-para-beneficiarios-do-programa",
+    "domain": "www.cearasemfome.ce.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0084"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0084"
+      ]
+    }
+  },
+  {
+    "url": "https://www.gov.br/secom/pt-br/assuntos/noticias-regionalizadas/novo-bolsa-familia/mar.26/bolsa-familia-chega-a-mais-de-1-3-milhao-de-beneficiarios-do-ceara-a-partir-desta-quarta-18",
+    "domain": "www.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-PSOC-0091"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-PSOC-0091"
+      ]
+    }
+  },
+  {
+    "url": "https://www.sps.ce.gov.br/qualificacao-profissional",
+    "domain": "www.sps.ce.gov.br",
+    "n_referenciada_por": 2,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0145",
+      "FRM-CP-2026-TRAB-0146"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0145",
+        "FRM-CP-2026-TRAB-0146"
+      ]
+    }
+  },
+  {
+    "url": "https://belt.al.ce.gov.br/index.php/legislacao-do-ceara/organizacao-tematica/direitos-humanos-e-cidadania/item/7346-lei-n-18-037-22-04-22-d-o-22-04-22",
+    "domain": "belt.al.ce.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0147"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0147"
+      ]
+    }
+  },
+  {
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "domain": "www.ecosdofuturo.org.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0153"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0153"
+      ]
+    }
+  },
+  {
+    "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/Mpv/mpv1116.htm",
+    "domain": "www.planalto.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0157"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0157"
+      ]
+    }
+  },
+  {
+    "url": "https://www.centec.org.br/programas/qualificar-mais",
+    "domain": "www.centec.org.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0158"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0158"
+      ]
+    }
+  },
+  {
+    "url": "https://www.cearasemfome.ce.gov.br/qualificacao-e-renda",
+    "domain": "www.cearasemfome.ce.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0159"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0159"
+      ]
+    }
+  },
+  {
+    "url": "https://www.sps.ce.gov.br/tag/transformando-vidas",
+    "domain": "www.sps.ce.gov.br",
+    "n_referenciada_por": 1,
+    "referenciada_por": [
+      "FRM-CP-2026-TRAB-0160"
+    ],
+    "campos_origem": {
+      "fonte_url": [
+        "FRM-CP-2026-TRAB-0160"
+      ]
+    }
+  }
+]

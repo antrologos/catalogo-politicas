@@ -1,0 +1,215 @@
+{
+  "_versao_schema": "1.0",
+  "_data_atualizacao": "2026-05-01",
+  "_origem": "Bloco C.1.b — exploração rica dos 439 fichas da planilha-fonte (1ª onda)",
+  "_documentacao": "Estrutura e instruções de uso em vocabulario-canonico.md (mesma pasta).",
+  "_como_usar": [
+    "1. canonical_values: lista FECHADA de valores aceitos (case-sensitive, exatos).",
+    "2. variants: dicionário variante_lowercased -> canonical, consumido por scripts/etl/normalize.py e skill normalize-categorico.",
+    "3. Valores não-mapeados são logados em data/logs/normalize_unmapped_*.csv para revisão; não bloqueiam o pipeline (estratégia flexível com warning).",
+    "4. Toda mudança aqui requer ADR em .claude/decisions/."
+  ],
+  "_estrategia": "Flexível com warning — valores fora da lista são preservados como-estão e logados, não rejeitados. Schema continua aceitando string para o campo; vocabulário é guideline para normalização.",
+  "_decisoes": [
+    "Sufixos descritivos em esfera_execucao (ex.: '+ rede ofertante', '+ Sistema S') NÃO são parte do canonical: foram movidos para esfera_execucao_apoios_parcerias quando o pipeline detecta. Aqui ficam apenas as variantes do tronco principal.",
+    "Versões longas com explicação entre parênteses na situacao_atual e abrangencia_territorial são tratadas como variantes da versão curta canônica.",
+    "Outliers únicos descritivos (ex.: 'Incentivo financeiro-educacional federal...' em origem_proposta) são logados para revisão manual; não entram em variants.",
+    "Aspas tipográficas «» e en-dash – em arranjo_logistico/esfera_execucao são normalizadas antes do lookup."
+  ],
+
+  "campos": {
+
+    "tipo_politica": {
+      "canonical_values": [
+        "Educacional direta",
+        "Trabalho/qualificação direta",
+        "Proteção social com impacto educacional"
+      ],
+      "variants": {},
+      "descricao": "Tipo canônico de política pública (3 categorias fechadas). Sem drift detectado (188+160+91=439 fichas, 100% canônico)."
+    },
+
+    "esfera_formulacao": {
+      "canonical_values": [
+        "União",
+        "Estado",
+        "Município",
+        "Não governamental",
+        "Interfederativa: União-Estado",
+        "Interfederativa: União-Estado-Município"
+      ],
+      "variants": {
+        "interfederativa: união–estado": "Interfederativa: União-Estado",
+        "interfederativa: união–estado–município": "Interfederativa: União-Estado-Município"
+      },
+      "_outliers_observados": [
+        "interfederativa/interinstitucional: União-Estado-Município+Sistema S+entidades formadoras+empresasis, além do Sistema S, sistema de justiça (1 ocorrência; mover sufixo descritivo para descricao_tecnica)"
+      ],
+      "descricao": "6 valores canônicos em uso (de ~12 oficiais na aba Modelo categorias). Drift principal: en-dash → hífen."
+    },
+
+    "origem_proposta": {
+      "canonical_values": [
+        "Governamental",
+        "Mista",
+        "Organismos internacionais",
+        "Academia/centros de pesquisa",
+        "Sociedade civil/OSC"
+      ],
+      "variants": {},
+      "_outliers_observados": [
+        "Incentivo financeiro-educacional federal para apoiar permanência e conclusão do ensino médio. (1 ocorrência; descrição livre que entrou no campo errado)"
+      ],
+      "descricao": "5 valores canônicos. Não está na aba Modelo categorias mas é coluna padrão das fichas."
+    },
+
+    "esfera_execucao": {
+      "canonical_values": [
+        "União",
+        "Estado",
+        "Município",
+        "Compartilhada interfederativa: União-Estado",
+        "Compartilhada interfederativa: União-Estado-Município",
+        "Compartilhada interfederativa: Estado-Município",
+        "Compartilhada interfederativa: União-Município",
+        "Interinstitucional: descentralizada via Comitê Gestor"
+      ],
+      "variants": {
+        "compartilhada interfederativa: união–estado–município": "Compartilhada interfederativa: União-Estado-Município",
+        "compartilhada interfederativa: união - estado - município": "Compartilhada interfederativa: União-Estado-Município",
+        "compartilhada interfederativa: união-estado-município": "Compartilhada interfederativa: União-Estado-Município",
+        "compartilhada interfederativa:: união - estado": "Compartilhada interfederativa: União-Estado",
+        "compartilhada interfederativa: união–estado": "Compartilhada interfederativa: União-Estado",
+        "compartilhada interfederativa: união - estado": "Compartilhada interfederativa: União-Estado",
+        "compartilhada interfederativa: união- município": "Compartilhada interfederativa: União-Município",
+        "compartilhada interfederativa: união - município": "Compartilhada interfederativa: União-Município",
+        "compartilhada interfederativa: estado–município": "Compartilhada interfederativa: Estado-Município",
+        "compartilhada interfederativa: estado- município": "Compartilhada interfederativa: Estado-Município",
+        "compartilhada interfederativa: estado - município": "Compartilhada interfederativa: Estado-Município",
+        "interfederativa: união–estado–município": "Compartilhada interfederativa: União-Estado-Município",
+        "compartilhada interfederativamente: estado + união + sociedade civil + setor privado": "Compartilhada interfederativa: União-Estado",
+        "compartilhada interfederativa: estado -  municípios + parcerias": "Compartilhada interfederativa: Estado-Município",
+        "interinstitucional descentralizada, por meio de comitê gestor interinstitucional": "Interinstitucional: descentralizada via Comitê Gestor"
+      },
+      "_outliers_observados": [
+        "União - Empresas empregadoras + Entidades qualificadoras (13 ocorrências) — sufixo '+...' move para esfera_execucao_apoios_parcerias; tronco vira 'União'",
+        "União + Empresas empregadoras + Entidades qualificadoras (9) — idem",
+        "União + Setor privado + Rede ofertante (4) — idem",
+        "Compartilhada Interfederativa: União - Município + Rede executora (10) — idem; tronco vira 'Compartilhada interfederativa: União-Município'",
+        "Compartilhada Interfederativa: União–Estado–Município + rede executora (9) — idem",
+        "Compartilhada Interfederativa: União–Estado–Município + rede ofertante (3) — idem",
+        "Compartilhada Interfederativa: União - Estado + Redes (escolas) (2) — idem",
+        "Compartilhada Interfederativa: União - Estado - Município + Rede federal de ensino (1) — idem",
+        "Compartilhada Interfederativa: União - Estado - Município + rede ofertante (1) — idem",
+        "União - Setor Privado - Rede ofertante (1) — sufixo livre; manter como variant",
+        "União - Setor privado + Rede ofertante (1) — idem",
+        "Estado + rede de execução + instituições de ensino públicas/privadas (1) — sufixo livre"
+      ],
+      "descricao": "8 valores canônicos no tronco principal. Drift sério (31 variantes detectadas). Sufixos descritivos '+ rede X', '+ Sistema S' devem migrar para esfera_execucao_apoios_parcerias na normalização. Variants mapeadas cobrem ~80% dos casos com sufixo simples."
+    },
+
+    "abrangencia_territorial": {
+      "canonical_values": [
+        "Nacional",
+        "Estadual",
+        "Municipal",
+        "Sem recorte territorial específico/difusa"
+      ],
+      "variants": {
+        "estadual (cobertura em uma uf)": "Estadual",
+        "sem recorte territorial específico/ difusa": "Sem recorte territorial específico/difusa"
+      },
+      "descricao": "4 valores canônicos. Drift: descrição entre parênteses incorporada ao valor; espaçamento variável."
+    },
+
+    "situacao_atual": {
+      "canonical_values": [
+        "Ativa / em execução",
+        "Encerrada",
+        "Suspensa / pausada",
+        "Descontinuada",
+        "Sem informação"
+      ],
+      "variants": {
+        "ativa / em execução (está funcionando e ofertando algo no momento. mesmo que com ajustes)": "Ativa / em execução",
+        "encerrada (terminou oficialmente - fim de vigência, término do ciclo, último edital encerrado)": "Encerrada",
+        "suspensa / pausada (teve interrupção declarada -por contingenciamento, transição, crise), com possibilidade de retorno)": "Suspensa / pausada",
+        "descontinuada (foi encerrada sem continuidade, ou perdeu institucionalidade)": "Descontinuada"
+      },
+      "descricao": "5 valores canônicos. Drift: a planilha tem versões longas com definição entre parênteses; canônico é a versão curta."
+    },
+
+    "tipo_oferta": {
+      "canonical_values": [
+        "Misto",
+        "Curso/Formação",
+        "Benefício/Auxílio financeiro",
+        "Oferta educacional",
+        "Serviço/Atendimento",
+        "Apoio produtivo/financeiro",
+        "Não aplicável",
+        "Certificação de escolaridade/competências"
+      ],
+      "variants": {
+        "misto (combina múltiplos tipos de oferta sem predominância clara)": "Misto",
+        "curso/formação (qualificação profissional, capacitação)": "Curso/Formação",
+        "benefício/auxílio financeiro (bolsa, subsídio, incentivo, vale-transporte)": "Benefício/Auxílio financeiro",
+        "oferta educacional (vaga/matrícula/turma/polo)\" - (ex.: eja, correção de fluxo, turmas noturnas, expansão de vagas)": "Oferta educacional",
+        "oferta educacional (vaga/matrícula/turma/polo)": "Oferta educacional",
+        "serviço/atendimento (orientação, tutoria, acompanhamento, busca ativa, encaminhamento)": "Serviço/Atendimento",
+        "apoio produtivo/financeiro (crédito, fomento, incubação, assistência técnica produtiva)": "Apoio produtivo/financeiro",
+        "certificação de escolaridade/competências": "Certificação de escolaridade/competências"
+      },
+      "_outliers_observados": [
+        "Presencial (1 ocorrência; valor de Modalidade colado neste campo; corrigir manualmente na planilha futura)"
+      ],
+      "descricao": "8 valores canônicos. Drift: descrições explicativas entre parênteses; aspas escapadas. Outlier: 'Presencial' é valor de Modalidade colado errado."
+    },
+
+    "modalidade_oferta": {
+      "canonical_values": [
+        "Mista",
+        "Presencial",
+        "Não aplicável",
+        "Educação à distância (EaD)",
+        "Semipresencial/híbrida",
+        "Sem informação"
+      ],
+      "variants": {
+        "mista (múltiplas modalidades sem predominância clara": "Mista",
+        "mista (múltiplas modalidades sem predominância clara)": "Mista",
+        "educação à distância (ead)": "Educação à distância (EaD)",
+        "semi-presencial/ híbrida": "Semipresencial/híbrida",
+        "sem informação/ não identificável": "Sem informação"
+      },
+      "_outliers_observados": [
+        "Unidade fixa / oferta fixa (1 ocorrência; valor de Arranjo logístico colado neste campo; corrigir manualmente na planilha)"
+      ],
+      "descricao": "6 valores canônicos. Drift: parêntese desfechado em 'Mista', hífen em 'Semipresencial', barra+espaço em 'Sem informação'. Outlier: 'Unidade fixa' é valor de Arranjo colado errado."
+    },
+
+    "arranjo_logistico": {
+      "canonical_values": [
+        "Unidade fixa",
+        "Misto (fixa + itinerante)",
+        "Itinerante",
+        "Não aplicável",
+        "Sem informação"
+      ],
+      "variants": {
+        "unidade fixa/ oferta fixa": "Unidade fixa",
+        "unidade fixa / oferta fixa": "Unidade fixa",
+        "«misto (fixa + itinerante)»": "Misto (fixa + itinerante)",
+        "«não aplicável»": "Não aplicável",
+        "«itinerante» (equipes/unidades móveis, ações em comunidades)": "Itinerante",
+        "sem informação / não identificável": "Sem informação"
+      },
+      "descricao": "5 valores canônicos. Drift: aspas tipográficas «» em ~ metade das ocorrências; variantes 'Unidade fixa/ oferta fixa' (sem espaço). Variants cobrem ~99% dos casos."
+    }
+  },
+
+  "_revisao_de_humanos": [
+    "Outliers individuais (1 ocorrência) listados em _outliers_observados foram preservados na fonte (planilha) e devem ser corrigidos manualmente em onda futura. Pipeline mantém o valor original e loga em data/logs/normalize_unmapped_2026-05-01.csv.",
+    "Sufixos '+ rede X', '+ Sistema S' em esfera_execucao são candidatos para migração automática para esfera_execucao_apoios_parcerias — implementar lógica em normalize.py."
+  ]
+}

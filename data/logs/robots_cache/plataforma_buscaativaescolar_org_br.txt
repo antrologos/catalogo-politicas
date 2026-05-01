@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:ng="http://angularjs.org">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/vendor.css?hash=1720535641547"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/app.css?hash=1720535641547"
+    />
+
+    <link
+      href="//fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Maps CSS removido - não é necessário -->
+
+    <meta name="theme-color" content="#62c031" />
+    <meta name="msapplication-navbutton-color" content="#62c031" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta http-equiv="cache-control" content="no-store" />
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Open Graph / WhatsApp / Telegram / redes sociais -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Busca Ativa Escolar" />
+    <meta property="og:title" content="Busca Ativa Escolar" />
+    <meta property="og:description" content="A Busca Ativa Escolar é uma estratégia composta por uma metodologia social e uma ferramenta tecnológica disponibilizadas gratuitamente para estados e municípios. Desenvolvida pelo UNICEF em parceria com a Undime, com apoio do Congemas e do Conasems. Apoia os governos na identificação, registro, controle e acompanhamento de crianças e adolescentes fora da escola ou em risco de evasão, com dados para planejar políticas públicas que contribuam para a garantia de direitos." />
+    <meta property="og:image" content="/images/og-painel-rematriculas.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Busca Ativa Escolar" />
+    <meta name="twitter:description" content="A Busca Ativa Escolar é uma estratégia composta por uma metodologia social e uma ferramenta tecnológica disponibilizadas gratuitamente para estados e municípios. Desenvolvida pelo UNICEF em parceria com a Undime, com apoio do Congemas e do Conasems. Apoia os governos na identificação, registro, controle e acompanhamento de crianças e adolescentes fora da escola ou em risco de evasão, com dados para planejar políticas públicas que contribuam para a garantia de direitos." />
+    <meta name="twitter:image" content="/images/og-painel-rematriculas.png" />
+    <meta name="description" content="Estratégia com metodologia social e ferramenta tecnológica gratuitas para estados e municípios. UNICEF, Undime, Congemas e Conasems. Identificação e acompanhamento de crianças e adolescentes fora da escola ou em risco de evasão." />
+
+    <!-- Powered by LQDI Digital - www.lqdi.net -->
+
+    <title>Busca Ativa Escolar - UNICEF</title>
+
+    <base href="/" />
+
+    <!-- Browser Update Warning -->
+    <script>
+      var $buoop = { c: 2 };
+
+      function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "/vendor/browser-update/update.min.js";
+        document.body.appendChild(e);
+      }
+
+      try {
+        document.addEventListener("DOMContentLoaded", $buo_f, false);
+      } catch (e) {
+        window.attachEvent("onload", $buo_f);
+      }
+    </script>
+
+    <!-- Browser polyfills -->
+    <script>
+      /* Disable minification (remove `.min` from URL path) for more info */
+
+      (function (undefined) {}).call(
+        ("object" === typeof window && window) ||
+          ("object" === typeof self && self) ||
+          ("object" === typeof global && global) ||
+          {}
+      );
+    </script>
+
+    <!-- Data Tables -->
+    <script src="/vendor/jquery/dist/jquery.js"></script>
+
+    <!-- Core vendor libs -->
+    <script
+      type="text/javascript"
+      src="/vendor/lodash/dist/lodash.min.js"
+    ></script>
+    <script type="text/javascript" src="/js/vendor.js"></script>
+  </head>
+
+  <body id="ng-app" ng-app="BuscaAtivaEscolar">
+    <app-navbar></app-navbar>
+    <app-print-header></app-print-header>
+
+    <toast></toast>
+    <app-header-warnings></app-header-warnings>
+
+    <app-loading-feedback></app-loading-feedback>
+    <app-support-widget></app-support-widget>
+    <div class="container app-container" ui-view></div>
+
+    <footer
+      class="app-footer"
+      ng-include="'/views/components/app_footer.html'"
+    ></footer>
+
+    <!-- Additional vendor libraries / locales -->
+    <script
+      type="text/javascript"
+      src="/vendor/angular-i18n/angular-locale_pt-br.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/vendor/numeral/languages/pt-br.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/vendor/moment/locale/pt-br.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/vendor/highcharts/modules/map.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/vendor/ace-builds/src-min/ace.js"
+    ></script>
+    <script
+      data-require="jspdf@1.2.61"
+      data-semver="1.2.61"
+      src="/vendor/jspdf/1.2.61/jspdf.debug.js"
+    ></script>
+
+    <script src="/vendor/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+    <!--		<script src="https://github.com/devongovett/pdfkit/releases/download/v0.6.2/pdfkit.js"></script>-->
+    <!-- PDF/libs servidos em /vendor: evita Tracking Prevention em scripts de CDN. -->
+    <script src="/vendor/pdfmake/0.1.62/pdfmake.min.js"></script>
+
+    <script
+      type="text/javascript"
+      src="/vendor/fusion-chart/fusioncharts/fusioncharts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/vendor/fusion-chart/fusioncharts/fusioncharts.charts.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/vendor/fusion-chart/fusioncharts/fusioncharts.maps.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="/vendor/fusion-chart/fusioncharts/themes/fusioncharts.theme.fusion.js"
+    ></script>
+
+    <!-- Core app file -->
+    <script
+      type="text/javascript"
+      defer
+      src="/js/app.js?hash=1720535641547"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="/vendor/fusion-chart/angularjs-fusioncharts/dist/angular-fusioncharts.js"
+    ></script>
+
+    <!-- Google Maps API - TEMPORARIAMENTE DESATIVADO -->
+    <!-- 
+    <script
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=XXXXX&libraries=geometry,places"
+    ></script>
+    -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-130432930-1"
+    ></script>
+
+    <!-- Google Maps - Implementação Manual (sem dependências externas) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "UA-130432930-1");
+    </script>
+
+    <!-- utilitários discretos -->
+    <style>
+      .tw-label {
+        display: block;
+        margin: 0 0 6px;
+        color: #0f172a;
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      .tw-input {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid #dfe3e8;
+        border-radius: 8px;
+        background: #fff;
+        color: #111827;
+        font-size: 14px;
+        outline: none;
+        box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
+      }
+
+      .tw-input[readonly],
+      .tw-input:disabled {
+        background: #f3f4f6;
+        color: #6b7280;
+      }
+
+      .tw-input:focus {
+        border-color: #93c5fd;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+      }
+
+      .tw-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -8px;
+      }
+
+      .tw-col {
+        padding: 0 8px;
+        margin-bottom: 14px;
+      }
+
+      .tw-card {
+        background: #fff;
+        border: 1px solid #e5e7eb;
+        border-radius: 8px;
+        padding: 14px;
+        box-shadow: 0 1px 4px rgba(15, 23, 42, 0.04);
+      }
+
+      .tw-actions {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 8px;
+      }
+
+      .tw-btn {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.25;
+        border: 1px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+        transition: background-color 0.15s ease, border-color 0.15s ease,
+          box-shadow 0.15s ease, transform 0.08s ease;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .tw-btn:hover,
+      .tw-btn:focus {
+        text-decoration: none;
+      }
+
+      .tw-btn:focus {
+        outline: none;
+      }
+
+      .tw-btn:focus-visible {
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.28);
+      }
+
+      .tw-btn-primary {
+        background: #00b8ed;
+        color: #fff;
+        border-color: #00b8ed;
+      }
+
+      .tw-btn-primary:hover {
+        background: #00a2ed;
+        color: #fff;
+        border-color: #00a2ed;
+        box-shadow: 0 4px 10px rgba(13, 110, 253, 0.22);
+      }
+
+      .tw-btn-primary:active {
+        background: #00a2ed;
+        border-color: #00a2ed;
+        color: #fff;
+        transform: translateY(1px);
+        box-shadow: 0 2px 6px rgba(13, 110, 253, 0.2);
+      }
+
+      .tw-btn-ghost {
+        background: #fff;
+        color: #00b8ed;
+        border-color: #b6d4fe;
+      }
+
+      .tw-btn-ghost:hover {
+        background: #e7f1ff;
+        border-color: #9ec5fe;
+        box-shadow: 0 2px 6px rgba(13, 110, 253, 0.1);
+      }
+      .tw-btn-ghost:active {
+        background: #d6e9ff;
+        border-color: #86b7fe;
+        transform: translateY(1px);
+        box-shadow: 0 1px 4px rgba(13, 110, 253, 0.12);
+      }
+
+      .tw-btn[disabled],
+      .tw-btn.disabled {
+        opacity: 0.6;
+        pointer-events: none;
+        box-shadow: none;
+      }
+
+      .tw-section {
+        margin-top: 6px;
+        color: #475569;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .tw-divider {
+        height: 1px;
+        background: #e5e7eb;
+        border: 0;
+        margin: 14px 0;
+      }
+
+      .tw-step-inner {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 40px;
+        padding: 6px 12px;
+        text-align: right;
+        line-height: 1.25;
+      }
+
+      .tw-step-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .tw-step-when {
+        font-size: 12px;
+        color: #64748b;
+      }
+
+      .tw-step-title {
+        color: #0f172a;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .step {
+        position: relative;
+      }
+
+      .step:after {
+        top: 50% !important;
+        transform: translateY(-50%);
+      }
+
+      @media (min-width: 992px) {
+        .tw-col-2 {
+          width: 16.6667%;
+        }
+        .tw-col-3 {
+          width: 25%;
+        }
+        .tw-col-4 {
+          width: 33.3333%;
+        }
+        .tw-col-6 {
+          width: 50%;
+        }
+        .tw-col-8 {
+          width: 66.6667%;
+        }
+        .tw-col-9 {
+          width: 72%;
+        }
+        .tw-col-12 {
+          width: 100%;
+        }
+      }
+      @media (max-width: 991px) {
+        .tw-col-2,
+        .tw-col-3,
+        .tw-col-4,
+        .tw-col-6,
+        .tw-col-8,
+        .tw-col-12 {
+          width: 100%;
+        }
+      }
+
+      .chip {
+        --chip-bg: #f8fafc;
+        --chip-border: #e5e7eb;
+        --chip-text: #0f172a;
+
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 12px;
+        border-radius: 9999px;
+        border: 1px solid var(--chip-border);
+        background: var(--chip-bg);
+        color: var(--chip-text);
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 1.2;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+      }
+
+      .chip i {
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      .chip--warning {
+        --chip-bg: #fff7ed;
+        --chip-border: #fed7aa;
+        --chip-text: #9a3412;
+      }
+
+      .chip--danger {
+        --chip-bg: #fee2e2;
+        --chip-border: #fecaca;
+        --chip-text: #b91c1c;
+      }
+
+      .chip--info {
+        --chip-bg: #e0f2fe;
+        --chip-border: #bae6fd;
+        --chip-text: #075985;
+      }
+
+      .chip--emphasis {
+        font-weight: 800;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+      }
+
+      .chip--sm {
+        padding: 6px 10px;
+        font-size: 11px;
+      }
+
+      .gender-chip {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 999px;
+        padding: 0;
+        background: #f8fafc;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+      }
+
+      .gender-chip i {
+        color: #64748b;
+      }
+
+      .gender-chip:hover {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+        box-shadow: 0 2px 6px rgba(15, 23, 42, 0.1);
+      }
+
+      .gender-chip:hover i {
+        color: #475569;
+      }
+    </style>
+  </body>
+</html>

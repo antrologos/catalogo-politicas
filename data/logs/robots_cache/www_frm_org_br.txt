@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /demo
+Disallow: /preview
+Disallow: /area-restrita
+
+# Host
+Host: https://www.frm.org.br
+
+# Sitemaps
+Sitemap: https://www.frm.org.br/sitemap-index.xml
+Sitemap: https://www.frm.org.br/sitemap.xml
+Sitemap: https://www.frm.org.br/server-sitemap.xml

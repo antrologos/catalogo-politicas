@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Read(g:/Drives compartilhados/FRM_CatalogoPoliticas/**)",
+      "Bash(python:*)",
+      "Bash(pytest:*)",
+      "Bash(git:status)",
+      "Bash(git:log:*)",
+      "Bash(git:diff:*)",
+      "Bash(ls:*)",
+      "Glob(g:/Drives compartilhados/FRM_CatalogoPoliticas/**)",
+      "Grep(g:/Drives compartilhados/FRM_CatalogoPoliticas/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/data/derived/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/data/external_snapshots/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/data/extracted_text/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/data/logs/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/data/tests/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/.claude/working/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/.claude/decisions/**)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/.claude/plans/**)",
+      "Edit(g:/Drives compartilhados/FRM_CatalogoPoliticas/.claude/**)",
+      "Edit(g:/Drives compartilhados/FRM_CatalogoPoliticas/CLAUDE.md)",
+      "Edit(g:/Drives compartilhados/FRM_CatalogoPoliticas/scripts/**)",
+      "WebFetch(domain:gov.br)",
+      "WebFetch(domain:planalto.gov.br)",
+      "WebFetch(domain:in.gov.br)",
+      "WebFetch(domain:mec.gov.br)",
+      "WebFetch(domain:inep.gov.br)",
+      "WebFetch(domain:camara.leg.br)",
+      "WebFetch(domain:senado.leg.br)"
+    ],
+    "deny": [
+      "Edit(g:/Drives compartilhados/FRM_CatalogoPoliticas/Fichas das Políticas - 1ª onda.xlsx)",
+      "Write(g:/Drives compartilhados/FRM_CatalogoPoliticas/Fichas das Políticas - 1ª onda.xlsx)",
+      "Bash(rm:-rf:*)",
+      "Bash(git:push:--force:*)"
+    ],
+    "ask": [
+      "Bash(git:push:*)",
+      "Bash(git:reset:--hard:*)"
+    ]
+  },
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONIOENCODING": "utf-8",
+    "PYTHONUNBUFFERED": "1"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/block_xlsx_write.py",
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/warn_lock_file.py",
+            "timeout": 3
+          }
+        ]
+      },
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/validate_json_schema.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

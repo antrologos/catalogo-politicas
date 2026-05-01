@@ -1,0 +1,83 @@
+# =========================================================
+# ROBOTS.TXT FOR www.jb.com.br
+# =========================================================
+
+# --- SECTION 1: SITEMAPS (The Map for the Bots) ---
+Sitemap: https://www.jb.com.br/sitemap.xml
+Sitemap: https://www.jb.com.br/sitemap/1.xml
+Sitemap: https://www.jb.com.br/sitemap/2.xml
+
+# --- SECTION 2: MAJOR SEARCH ENGINES ---
+User-agent: Googlebot
+User-agent: Googlebot-News
+User-agent: Bingbot
+User-agent: Slurp               #  YAHOO
+User-agent: DuckDuckBot         # Privacy search (growing in Brazil)
+User-agent: Applebot            # Siri / Spotlight Suggestions
+User-agent: Yandex              # Global Major (Russia)
+User-agent: Baiduspider         # Global Major (China)
+User-agent: MSNBot              # Legacy Microsoft (still used)
+User-agent: Teoma               # Ask.com
+Allow: /
+
+# --- SECTION 3: SOCIAL MEDIA & CONTENT PREVIEWS ---
+User-agent: FacebookExternalHit
+User-agent: Twitterbot
+User-agent: TikTokBot
+User-agent: WhatsApp
+User-agent: LinkedInBot
+User-agent: Pinterest
+User-agent: TelegramBot
+User-agent: Discordbot
+Allow: /
+
+# --- SECTION 4: AI & INNOVATION (Referrals & Training) ---
+# Allowing these enables ChatGPT, Gemini, and others to cite you.
+User-agent: GPTBot              # OpenAI (Training)
+User-agent: ChatGPT-User        # OpenAI (Browsing)
+User-agent: OAI-SearchBot       # OpenAI (Search)
+User-agent: Google-Extended     # Gemini / Bard
+User-agent: Anthropic-ai        # Claude
+User-agent: Claude-Web          # Claude (Browsing)
+User-agent: PerplexityBot       # Perplexity (Answer Engine)
+User-agent: CCBot               # Common Crawl (Base for many AIs)
+User-agent: FacebookBot         # Meta AI
+User-agent: Amazonbot           # Alexa / Q
+Allow: /
+
+# --- SECTION 5: LOCAL AGGREGATORS & GENERAL CRAWLERS ---
+# Catches smaller "local" engines or news readers (like Flipboard).
+User-agent: FlipboardProxy
+User-agent: FeedFetcher-Google
+User-agent: PaperLiBot
+Allow: /
+
+# --- SECTION 6: GENERAL FALLBACK ---
+User-agent: *
+Allow: /
+
+# --- SECTION 7: LGPD & SERVER SAFETY (The "Guardrails") ---
+# 1. Protect User Privacy (Critical for Brazil)
+Disallow: /comments/
+Disallow: /profiles/
+Disallow: /users/
+Disallow: /subscribers/
+Disallow: /my-account/
+Disallow: /invoices/
+
+# 2. Prevent Server Crashes & Duplicate Content
+Disallow: /_conteudos/
+Disallow: /*.json
+Disallow: /*.php
+Disallow: /webparts/
+Disallow: /search/
+Disallow: /tags/
+Disallow: /autor/
+Disallow: /?s=
+Disallow: /api/
+Disallow: /cgi-bin/
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /login/
+Disallow: /cart/
+Disallow: /checkout/

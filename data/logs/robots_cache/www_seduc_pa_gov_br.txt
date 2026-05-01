@@ -1,0 +1,7 @@
+User-agent: *
+Crawl-delay: 5
+Allow: /
+Sitemap: https://www.seduc.pa.gov.br/sitemap.xml
+#User-agent: *
+#Allow: /
+#Sitemap: https://www.seduc.pa.gov.br/sitemap.xml

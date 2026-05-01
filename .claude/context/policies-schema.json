@@ -1,0 +1,364 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://frm-catalogopoliticas.local/schemas/policies-schema.json",
+  "title": "Schema canônico de políticas públicas — FRM Catálogo",
+  "description": "Schema JSON Schema draft-07 que define o formato canônico de cada ficha de política pública no projeto FRM_CatalogoPoliticas. Incorpora os 10 padrões importados da pesquisa de benchmark (R3.2): URL persistente (slug), fonte clicável + snapshot, badge de qualidade (completude_pct), unidade de medida controlada, citação acadêmica, tesauro hierárquico, versionamento + validade, vocabulário canônico fechado, timestamps de auditoria e versão acessível (descricao_simples + descricao_tecnica). Versão 0.1 — abre revisão a cada Bloco do roadmap.",
+  "type": "object",
+
+  "required": [
+    "id_interno",
+    "slug",
+    "nome",
+    "esfera_formulacao",
+    "esfera_execucao",
+    "tipo_politica",
+    "fonte_url",
+    "fonte_tipo",
+    "criado_em",
+    "atualizado_em"
+  ],
+
+  "properties": {
+    "id_interno": {
+      "type": "string",
+      "pattern": "^FRM-CP-\\d{4}-[A-Z]{2,5}-\\d{4}$",
+      "description": "ID estável e imutável do projeto. Formato: FRM-CP-{ano}-{escopo}-{seq}, ex.: FRM-CP-2026-EDU-0001 (educacional), FRM-CP-2026-TRAB-0042. Inspirado em CELEX (EUR-Lex). Nunca mudar após criado; redirecionamentos vão em redirect_from."
+    },
+
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "minLength": 3,
+      "maxLength": 120,
+      "description": "URL-slug único e estável; gerado por regra determinística a partir de nome+UF+ano. Apenas [a-z0-9-]. Padrão #1 R3.2 (URL persistente bookmarkável)."
+    },
+
+    "redirect_from": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": [],
+      "description": "Slugs antigos que devem redirecionar para o atual; preserva URLs externas em caso de renomeação."
+    },
+
+    "nome": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 300,
+      "description": "Nome oficial da política/programa, como aparece no documento normativo principal."
+    },
+
+    "tipo_politica": {
+      "enum": [
+        "Educacional direta",
+        "Trabalho/qualificação direta",
+        "Proteção social com impacto educacional"
+      ],
+      "description": "Tipo canônico (3 categorias fechadas, conforme aba Modelo categorias da planilha-fonte)."
+    },
+
+    "esfera_formulacao": {
+      "type": "string",
+      "description": "Esfera responsável pela formulação da política. Vocabulário canônico em vocabulario-canonico.json (~12 valores oficiais)."
+    },
+
+    "esfera_execucao": {
+      "type": "string",
+      "description": "Esfera responsável pela execução. Vocabulário canônico em vocabulario-canonico.json (~20 valores oficiais; alvo de drift ortográfico sério na planilha-fonte)."
+    },
+
+    "abrangencia_territorial": {
+      "type": ["string", "null"],
+      "description": "Vocabulário fechado: Nacional / Estadual / Municipal / Sem recorte territorial específico/difusa (8 oficiais; 4 em uso)."
+    },
+
+    "tipo_oferta": {
+      "type": ["string", "null"],
+      "description": "Vocabulário canônico (10 valores oficiais)."
+    },
+
+    "modalidade_oferta": {
+      "type": ["string", "null"],
+      "description": "Vocabulário canônico (6 valores oficiais)."
+    },
+
+    "arranjo_logistico": {
+      "type": ["string", "null"],
+      "description": "Arranjo logístico-territorial. Vocabulário canônico (5 valores oficiais)."
+    },
+
+    "situacao_atual": {
+      "enum": [
+        "Ativa / em execução",
+        "Encerrada",
+        "Suspensa / pausada",
+        "Descontinuada",
+        "Sem informação"
+      ],
+      "description": "Status operacional da política (5 valores canônicos)."
+    },
+
+    "ano_criacao": {
+      "type": ["string", "integer", "null"],
+      "description": "Ano de criação. Aceita string para casos de incerteza ('1996?', 'década de 1990')."
+    },
+
+    "base_legal": {
+      "type": ["string", "null"],
+      "description": "Texto livre listando lei/decreto/portaria/IN que fundamenta a política. Recomenda-se usar formato 'Lei 9.394/1996' separado por ';'."
+    },
+
+    "orgaos_responsaveis": {
+      "type": ["array", "null"],
+      "items": { "type": "string" },
+      "description": "Lista de órgãos formalmente responsáveis (formuladores e executores)."
+    },
+
+    "publico_alvo": {
+      "type": ["string", "null"],
+      "description": "Descrição do público-alvo (jovens, EJA, beneficiários do CadÚnico, etc.)."
+    },
+
+    "carga_horaria": {
+      "type": ["string", "null"],
+      "description": "Carga horária quando aplicável; texto livre por enquanto (futuro: campo numérico + unidade)."
+    },
+
+    "fonte_financiamento": {
+      "type": ["string", "null"],
+      "description": "Origem dos recursos (FUNDEB, FAT, FNDE, recursos estaduais, etc.)."
+    },
+
+    "transferencia_recursos": {
+      "type": ["string", "null"],
+      "description": "Como os recursos são transferidos (fundo a fundo, repasse direto, convênio, etc.)."
+    },
+
+    "integra_outras_politicas": {
+      "type": ["array", "null"],
+      "items": { "type": "string" },
+      "description": "IDs ou nomes de políticas com as quais esta se articula. Inspirado em CourtListener Authorities (R3.2 padrão #6)."
+    },
+
+    "continuidade_governos": {
+      "type": ["string", "null"],
+      "description": "Histórico de continuidade entre governos / mudanças de denominação."
+    },
+
+    "fonte_url": {
+      "type": "string",
+      "format": "uri",
+      "pattern": "^https?://",
+      "description": "URL canônica da fonte primária (lei/decreto/página oficial). Padrão #2 R3.2: toda ficha tem fonte clicável validada."
+    },
+
+    "fonte_tipo": {
+      "enum": [
+        "lei",
+        "decreto",
+        "portaria",
+        "instrucao_normativa",
+        "resolucao",
+        "edital",
+        "pagina_programa",
+        "outros"
+      ],
+      "description": "Categoria da fonte (vocabulário fechado para filtragem)."
+    },
+
+    "fonte_data_acesso": {
+      "type": "string",
+      "format": "date",
+      "description": "Data ISO 8601 (YYYY-MM-DD) em que a fonte foi acessada/capturada pela última vez."
+    },
+
+    "fonte_arquivo_path": {
+      "type": ["string", "null"],
+      "description": "Caminho relativo do snapshot integral local em data/external_snapshots/<sha256[:2]>/<sha256>.<ext>. Null enquanto não capturado. Padrão #2 R3.2 + R5/R6 captura-responsavel."
+    },
+
+    "fonte_sha256": {
+      "type": ["string", "null"],
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "SHA-256 hex (64 chars) do conteúdo bruto do snapshot. Permite verificar integridade e detectar mudanças entre capturas. Null enquanto não capturado. (Adicionado no schema v0.2, Bloco D)"
+    },
+
+    "fonte_extensao": {
+      "enum": ["html", "pdf", "docx", "doc", "odt", "txt", "json", "xml", null],
+      "description": "Extensão/formato do snapshot capturado. Null enquanto não capturado. (Adicionado no schema v0.2)"
+    },
+
+    "fonte_ocr_aplicado": {
+      "type": "boolean",
+      "default": false,
+      "description": "True se o texto do snapshot foi extraído via OCR (PDF escaneado processado por Tesseract+ocrmypdf). Permite filtrar/sinalizar fichas com possível menor precisão de texto. (Adicionado no schema v0.2)"
+    },
+
+    "atribuicao": {
+      "type": ["string", "null"],
+      "description": "Texto de atribuição por força legal (Lei 9.610/98 art. 8º) ou licença CC. Default por domínio: 'Brasil. Presidência da República. Casa Civil.', 'Governo Federal — gov.br (CC BY-ND 3.0)', etc. (R9 captura-responsavel)."
+    },
+
+    "licenca_inferida": {
+      "type": ["string", "null"],
+      "description": "Licença inferida do conteúdo: 'dominio_publico_lei_8_iv', 'CC BY-ND 3.0', 'sem_licenca_explicita', etc."
+    },
+
+    "versao": {
+      "type": ["string", "null"],
+      "description": "Versão da política (ex.: '2.0' após reformulação). Padrão #7 R3.2 (versionamento)."
+    },
+
+    "data_validade_inicio": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Data ISO em que a versão atual entrou em vigor."
+    },
+
+    "data_validade_fim": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Data ISO em que a versão deixou de vigorar (null se ainda vigente)."
+    },
+
+    "supersedes_id": {
+      "type": ["string", "null"],
+      "description": "id_interno da política que esta substitui (cadeia histórica)."
+    },
+
+    "superseded_by_id": {
+      "type": ["string", "null"],
+      "description": "id_interno da política que substituiu esta (caso esta esteja revogada)."
+    },
+
+    "is_federal_replica": {
+      "type": "boolean",
+      "default": false,
+      "description": "True quando a ficha estadual replica uma política federal (~33 federais aparecem em cada UF). Marca para deduplicação."
+    },
+
+    "federal_source_id": {
+      "type": ["string", "null"],
+      "description": "Quando is_federal_replica=true, id_interno da ficha federal de origem."
+    },
+
+    "uf": {
+      "type": ["string", "null"],
+      "pattern": "^(BR|[A-Z]{2})$",
+      "description": "UF de execução: 'BR' para federal, ou sigla de UF (ex.: 'SP', 'RJ', 'MG', 'PR', 'RS', 'BA', 'PA', 'PE', 'CE')."
+    },
+
+    "categorias_temas": {
+      "type": "array",
+      "description": "Tesauro hierárquico inspirado em EuroVoc (R3.2 padrão #6). Cada item tem ID estável, label PT, parent opcional.",
+      "items": {
+        "type": "object",
+        "required": ["id", "label_pt"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "ID estável do tema (ex.: 'eja', 'qualificacao-profissional', 'inclusao-produtiva')."
+          },
+          "label_pt": {
+            "type": "string",
+            "description": "Rótulo em português."
+          },
+          "label_en": {
+            "type": "string",
+            "description": "Rótulo em inglês (futuro Bloco F+)."
+          },
+          "descricao": {
+            "type": "string",
+            "description": "Descrição textual do tema."
+          },
+          "parent_id": {
+            "type": ["string", "null"],
+            "description": "ID do tema-pai (estrutura hierárquica); null para temas-raiz."
+          }
+        }
+      }
+    },
+
+    "unidade_medida": {
+      "type": ["string", "null"],
+      "description": "Unidade controlada para indicadores comparáveis: 'BRL/mês', '% população', 'beneficiários/ano', 'matrículas/ano', etc. Padrão #4 R3.2 (comparação requer unidade coerente)."
+    },
+
+    "completude_pct": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Badge de qualidade (0-100) calculado pelo pipeline a partir de % de campos preenchidos com peso por importância. Inspirado em data.gouv.fr (R3.2 padrão #3)."
+    },
+
+    "descricao_simples": {
+      "type": ["string", "null"],
+      "description": "Descrição em linguagem simples para cidadão (acessibilidade WCAG; padrão #10 R3.2)."
+    },
+
+    "descricao_tecnica": {
+      "type": ["string", "null"],
+      "description": "Descrição técnica completa para gestores/pesquisadores."
+    },
+
+    "resumo": {
+      "type": ["string", "null"],
+      "description": "Resumo executivo (1-3 parágrafos)."
+    },
+
+    "apresentacao": {
+      "type": ["string", "null"],
+      "description": "Texto de apresentação como aparece em material institucional."
+    },
+
+    "informacoes_complementares": {
+      "type": ["string", "null"],
+      "description": "Notas adicionais que não cabem nos campos estruturados."
+    },
+
+    "duvidas_revisor": {
+      "type": ["string", "null"],
+      "description": "Notas do revisor / pendências (campo dual-uso na planilha-fonte: 'EM TODOS OS ESTADOS' = marcador de replicação federal; demais = notas reais)."
+    },
+
+    "criado_em": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp ISO 8601 de criação da ficha (padrão #9 R3.2)."
+    },
+
+    "atualizado_em": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp ISO 8601 da última atualização (padrão #9 R3.2)."
+    },
+
+    "revisado_por": {
+      "type": ["string", "null"],
+      "description": "Nome ou ID do revisor humano responsável (padrão #9 R3.2)."
+    },
+
+    "proxima_revisao_prevista": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Data ISO da próxima revisão programada (TTL conforme tipo: lei=365d, portaria=90d, página=30d)."
+    },
+
+    "citacao_apa": {
+      "type": ["string", "null"],
+      "description": "Citação no formato APA derivada pelo pipeline a partir de fonte_url + atribuicao + fonte_data_acesso + data_versao_catalogo. Padrão #5 R3.2."
+    },
+
+    "citacao_bibtex": {
+      "type": ["string", "null"],
+      "description": "Citação no formato BibTeX derivada pelo pipeline. Padrão #5 R3.2."
+    },
+
+    "data_versao_catalogo": {
+      "type": ["string", "null"],
+      "format": "date",
+      "description": "Versão do catálogo (data de release) na qual esta ficha foi publicada — necessário para citação acadêmica reproduzível."
+    }
+  },
+
+  "additionalProperties": false
+}

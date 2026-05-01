@@ -1,0 +1,5018 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w,d,s,l,i){
+			w[l]=w[l]||[];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event:'gtm.js'
+			});
+			var f = d.getElementsByTagName(s)[0],
+			j=d.createElement(s),
+			dl=l!='dataLayer'?'&l='+l:'';
+			j.async=true;
+			j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+			f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-WNLJX84Q');
+	</script>
+	<!-- End Google Tag Manager -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<!-- rel=dynamic-content indicates an element that is replaced with the contents produced by the specified href. 
+	 dyn-cs:* URIs are resolved using the values within the 'wp_dynamicContentSpots_85' theme module. -->
+	<link rel="stylesheet" href="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/sp/mashup:ra:collection?soffset=0&amp;eoffset=18&amp;themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fcss&amp;lm=1777435300000&amp;entry=wp_toolbar_common__0.0%3Ahead_css&amp;entry=wp_dialog_css__0.0%3Ahead_css&amp;entry=wp_toolbar_logo__0.0%3Ahead_css&amp;entry=wp_theme_portal_edit_85__0.0%3Ahead_css&amp;entry=wp_theme_portal_85__0.0%3Ahead_css&amp;entry=wp_portlet_css__0.0%3Ahead_css&amp;entry=wp_toolbar_common_actionbar__0.0%3Ahead_css&amp;entry=wp_simple_contextmenu_css__0.0%3Ahead_css&amp;entry=wp_toolbar_actionbar__0.0%3Ahead_css&amp;entry=wp_ic4_wai_resources__0.0%3Ahead_css&amp;entry=wp_toolbar_sitepreview__0.0%3Ahead_css&amp;entry=wp_gridlayout__0.0%3Ahead_css&amp;entry=wp_toolbar_moremenu__0.0%3Ahead_css&amp;entry=wp_status_bar__0.0%3Ahead_css&amp;entry=wp_toolbar_projectmenu__0.0%3Ahead_css&amp;entry=wp_analytics_aggregator__0.0%3Ahead_css&amp;entry=wp_oob_sample_styles__0.0%3Ahead_css" type="text/css"/><link rel="alternate" id="head_css_deferred" href="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/sp/mashup:ra:collection?soffset=0&amp;eoffset=8&amp;themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fcss&amp;lm=1777435300000&amp;entry=wp_contextmenu_css__0.0%3Ahead_css&amp;entry=wp_federated_documents_picker__0.0%3Ahead_css&amp;entry=wp_analytics_tags__0.0%3Ahead_css&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Ahead_css&amp;entry=wp_dnd_css__0.0%3Ahead_css&amp;entry=wcm_inplaceEdit__0.0%3Ahead_css&amp;entry=wp_content_targeting_cam__0.0%3Ahead_css&amp;deferred=true"/><script type="text/javascript">var djConfig={"baseUrl":"/portal_dojo/v1.9/dojo/","locale":"pt_BR","isDebug":false,"debugAtAllCosts":false,"parseOnLoad":false,"afterOnLoad":false,"has":{"dojo-bidi":true},"modulePaths":{"com":"/themeModules/js/com","ibm":"/themeModules/js/ibm","pagebuilder":"/themeModules/modules/pagebuilder/js","portalclient":"/themeModules/modules/portalclient/js","asa":"/themeModules/modules/asa/js","contentmapping":"/themeModules/modules/contentmapping/js","federation":"/themeModules/modules/federation/js"}};djConfig.locale=djConfig.locale.replace(/_/g, "-").replace(/iw/, "he").toLowerCase();(function(){if (typeof(wpModules) == 'undefined') wpModules = {}; if (typeof(wpModules.state) == 'undefined') wpModules.state = {}; if (typeof(wpModules.state.page) == 'undefined') wpModules.state.page = {};wpModules.state.page._initial=[{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"selection","value":["Z6_086423G03HEOD06U7G8HUVUIC5"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"labelMappings","value":["Z6_000000000000000000000000A0","Z6_086423G03HEOD06U7G8HUVUIC5","Z6_086423G03HEOD06U7G8HUVUIC5","Z6_000000000000000000000000A0"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"expansions","value":["Z6_000000000000000000000000A0"]}];wpModules.state.page.selectionPath=['Z6_000000000000000000000000A0','Z6_086423G03HEOD06U7G8HUVUIC5'];wpModules.state.page.supportsEditMode=true;wpModules.state.page.supportsToolbar=true;wpModules.state.page.path='';wpModules.state.page.protectedPath='/usuario';wpModules.state.page.publicPath='';})();</script><script type="text/javascript" src="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777435300000&amp;entry=wp_client_main__0.0%3Ahead_js&amp;entry=wp_client_ext__0.0%3Ahead_js&amp;entry=wp_client_logging__0.0%3Ahead_js&amp;entry=wp_client_tracing__0.0%3Ahead_js&amp;entry=wp_modules__0.0%3Ahead_js&amp;entry=wp_photon_dom__0.0%3Ahead_js&amp;entry=wp_toolbar_common__0.0%3Ahead_js&amp;entry=wp_dialog_util__0.0%3Ahead_js&amp;entry=wp_dialog_draggable__0.0%3Ahead_js&amp;entry=wp_dialog_main__0.0%3Ahead_js&amp;entry=wp_a11y__0.0%3Ahead_js&amp;entry=wp_state_page__0.0%3Ahead_js&amp;entry=wp_theme_portal_85__0.0%3Ahead_js&amp;entry=wp_theme_utils__0.0%3Ahead_js&amp;entry=wp_toolbar_viewframe_validator__0.0%3Ahead_js&amp;entry=wp_analytics_aggregator__0.0%3Ahead_js"></script><link rel="alternate" id="head_js_deferred" href="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1738690798000&amp;entry=dojo_19__0.0%3Ahead_js&amp;entry=dojo_app_19__0.0%3Ahead_js&amp;entry=dojo_fx_19__0.0%3Ahead_js&amp;entry=dojo_dom_19__0.0%3Ahead_js&amp;entry=dojo_dnd_basic_19__0.0%3Ahead_js&amp;entry=dojo_data_19__0.0%3Ahead_js&amp;entry=dojo_selector_lite_19__0.0%3Ahead_js&amp;entry=dijit_19__0.0%3Ahead_js&amp;entry=dojo_dnd_ext_19__0.0%3Ahead_js&amp;entry=dijit_layout_basic_19__0.0%3Ahead_js&amp;entry=dojox_layout_basic_19__0.0%3Ahead_js&amp;entry=dijit_menu_19__0.0%3Ahead_js&amp;entry=dojo_fmt_19__0.0%3Ahead_js&amp;entry=dijit_tree_19__0.0%3Ahead_js&amp;entry=wp_dnd_namespace__0.0%3Ahead_js&amp;entry=wp_dnd_source__0.0%3Ahead_js&amp;entry=dijit_layout_ext_19__0.0%3Ahead_js&amp;entry=dijit_form_19__0.0%3Ahead_js&amp;entry=wp_client_selector__0.0%3Ahead_js&amp;entry=wp_client_dnd__0.0%3Ahead_js&amp;entry=wp_contextmenu_js__0.0%3Ahead_js&amp;entry=wp_dnd_target__0.0%3Ahead_js&amp;entry=wp_dnd_util__0.0%3Ahead_js&amp;entry=wcm_inplaceEdit__0.0%3Ahead_js&amp;deferred=true"/><link id="tzDeUPbp_W3" rel="alternate" href="https://www.justica.sp.gov.br/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/"><script type="text/javascript">(function() {
+	var element = document.getElementById("tzDeUPbp_W3");
+	if (element) {
+		wpModules.theme.WindowUtils.baseURL.resolve(element.href);
+	}
+}());</script><style id="layout-wstate-styles"></style><base href="https://www.justica.sp.gov.br/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/">
+<title>SEC. JUSTIÇA</title>
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content='SEC. JUSTIÇA' />
+  <meta property="og:url" content="www.sggd.sp.gov.br" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:description" content="CMS - Sistema de Gestão de Conteúdo do estado de São Paulo" />
+  <meta property="og:image" content="https://sggd.sp.gov.br/statics/img/logo-meta.png" />
+ 
+
+<link id="com.ibm.lotus.NavStateUrl" rel="alternate" href="/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/dz/d5/L2dJQSEvUUt3QS80TmxFL1o2XzA4NjQyM0cwM0hFT0QwNlU3RzhIVVZVSUM1/" />
+
+
+<link href="/statics/src/favicon.ico" keepNavigationalState="false" lateBinding="false" protected="false" rel="shortcut icon" type="image/x-icon">
+
+
+  <!-- Bootstrap core CSS -->
+  <link href="/statics/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="/statics/css/custom.css" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="/statics/src/core.css" rel="stylesheet">
+  <link href="/statics/fontawesome/css/all.min.css" rel="stylesheet" />
+  <link href="/statics/fontawesome-6.4.2/css/all.min.css" rel="stylesheet">
+  <link href="/statics/favicon/favicon-16x16.png" rel="icon" type="image/png">
+  <link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/statics/slick/slick/slick.css">
+  <link rel="stylesheet" type="text/css" href="/statics/slick/slick/slick-theme.css">
+   
+  <!-- Script -->
+  <script src="/statics/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    
+   <!-- Slick -->
+   <script type="text/javascript" src="/statics/js/jquery-migrate-3.4.1.min.js"></script>
+   <script type="text/javascript" src="/statics/slick/slick/slick.min.js"></script>
+
+   <!-- Acessibilidade -->
+   <link rel="stylesheet" type="text/css" href="/statics/css/acessibilidade.css">
+   
+   <!-- Plugin JQuery-->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+
+    <script src="/statics/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+    	
+  	<script src="/statics/js/custom.js" type="text/javascript"></script>
+  	<script src="/statics/js/agenda.js" type="text/javascript"></script>
+  	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  	<!-- V1.2-->
+<script>
+$( document ).ready(function() {
+	$("head").append(document.getElementById('analytics'));
+});
+</script>
+
+<style>
+
+.tooltipContextMenu,
+.wpToolbarLogo .wpLogoTooltip {
+	display: none;
+}
+
+.wpthemeControlBody, .wpthemeOverflowAuto, .wpthemeClear {
+	overflow:hidden;
+}
+ 
+.wpthemeInner, .wpthemeSecondaryNav {
+    margin: 0 auto;
+	width: 100%;
+}
+ 
+.wptheme1Col .wpthemeCol {
+  	width: 100%;
+}
+
+.wpthemeCol {
+  	margin: 0px;
+}
+
+.wpthemeControl{
+	margin: 0px;
+}
+
+.wpthemeLayoutContainers{
+	padding: 0px
+}
+</style></head>
+
+<body cz-shortcut-listen="true">
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLJX84Q"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<div id="analytics">
+		<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FWPF95F2X3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FWPF95F2X3');
+</script>
+
+</div>
+	<!-- site toolbar -->
+	<!--VLibras-->
+	<div vw class="enabled">
+		<div vw-access-button class="active"></div>
+
+		<div vw-plugin-wrapper>
+			<div class="vw-plugin-top-wrapper"></div>
+		</div>
+	</div>
+	<div id="barra-gov">
+		<div class="gov-mobile">
+			<img src="/statics/img/logo-gov-branco.png" alt="SP.Gov.br" class="img-fluid">
+		</div>
+		<div class="container">
+			<div class="row align-items-center justify-content-between px-4">
+				<div class="col-md col-lg-auto">
+					
+<span data-href="/sec_justica" id="stHomeLink" class="stDisplayNone" ></span>
+
+<style>
+#linkLogo:hover{
+background-image: none !important;
+}
+.navbar .nav-item.dropdown i {
+  color: #;
+  transition: 0.3s;
+}
+
+.navbar .nav-item.show > a{
+  border-bottom: 3px solid #;
+}
+</style>
+
+
+
+
+<a id="linkLogo" class="logo">
+            <span class="org only-text">
+              Secretaria da
+              <strong>Justiça e Cidadania</strong>
+            </span>
+ </a>
+
+
+
+<script>
+let linkHomeA = document.querySelector("#stHomeLink");
+let tagALogo = document.querySelector("#linkLogo");
+tagALogo.setAttribute('href', linkHomeA.attributes["data-href"].nodeValue);
+</script></div>
+				<div class="col-auto">
+					<img class="govbr" src="/statics/img/logo-gov.png" alt="sp.gov.br">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	
+
+     <nav class="navbar navbar-expand-xl navbar-light" aria-label="Portal Application" role="navigation" tabindex="-1">
+    	<div class="container">
+		      
+	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+	    aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      
+				      <div class="collapse navbar-collapse" id="navbarCollapse">
+				        <ul class="navbar-nav mr-auto">
+
+                
+							<li class="nav-item dropdown">				
+		                     <a class="nav-link dropdown-toggle" href="#" id="Institucional" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Institucional<i class="fas fa-chevron-down"></i>
+                             </a>
+                        <ul class="dropdown-menu" aria-labelledby="Institucional">
+                        
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/sobre">
+							        <span lang="pt-BR" dir="ltr">
+						                      Sobre
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/organograma">
+							        <span lang="pt-BR" dir="ltr">
+						                      Organograma
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/relacaoAutoridades">
+							        <span lang="pt-BR" dir="ltr">
+						                      Relação de Autoridades
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/agenda">
+							        <span lang="pt-BR" dir="ltr">
+						                      Agenda de compromissos públicos
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/legislacao">
+							        <span lang="pt-BR" dir="ltr">
+						                      Legislação
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/horario_de_atendimento_endereco_e_telefone">
+							        <span lang="pt-BR" dir="ltr">
+						                      Horário de atendimento, endereço e telefone
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/carta_de_servicos">
+							        <span lang="pt-BR" dir="ltr">
+						                      Carta de serviços
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/integridade">
+							        <span lang="pt-BR" dir="ltr">
+						                      Integridade
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/institucional/secret%C3%A1rios%20da%20justi%C3%A7a">
+							        <span lang="pt-BR" dir="ltr">
+						                      Secretários da Justiça
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+			       			    <li class="dropdown-item dropdown">	             
+		            			      <a class="dropdown-toggle" id="Comissões3-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							             <span lang="pt-BR" dir="ltr">
+						                      Comissões<i class="fas fa-chevron-right"></i>
+						                  </span>
+	                                  </a>
+	                             
+	                             
+	                         <ul class="dropdown-menu" aria-labelledby="Comissões3-1">
+			                
+                                <li class="dropdown-item">
+                                	<a href="/sec_justica/institucional/%23/discrimina%C3%A7%C3%A3o%20em%20raz%C3%A3o%20de%20orienta%C3%A7%C3%A3o%20sexual%20ou%20identidade%20de%20g%C3%AAnero">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Discriminação em Razão de Orientação Sexual ou Identidade de Gênero
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      
+                                <li class="dropdown-item">
+                                	<a href="/sec_justica/institucional/%23/discrimina%C3%A7%C3%A3o%20aos%20portadores%20do%20v%C3%ADrus%20hiv%20ou%20%C3%A0s%20pessoas%20com%20aids">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Discriminação aos Portadores do Vírus HIV ou às Pessoas com AIDS
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      
+                                <li class="dropdown-item">
+                                	<a href="/sec_justica/institucional/%23/discrimina%C3%A7%C3%A3o%20racial">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Discriminação Racial
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      	
+		        		    </ul>
+		        		    </li>
+	                         
+		             </ul>
+		             
+							<li class="nav-item dropdown">				
+		                     <a class="nav-link dropdown-toggle" href="#" id="Canais de Comunicação" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Canais de Comunicação<i class="fas fa-chevron-down"></i>
+                             </a>
+                        <ul class="dropdown-menu" aria-labelledby="Canais de Comunicação">
+                        
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/canaisComunicacao/ouvidoria">
+							        <span lang="pt-BR" dir="ltr">
+						                      Ouvidoria
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="https://fala.sp.gov.br/">
+							        <span lang="pt-BR" dir="ltr">
+						                      Fala SP
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="https://www.controladoriageral.sp.gov.br/cge/canaisComunicacao/privacidade_e_protecao_de_dados_lgpd">
+							        <span lang="pt-BR" dir="ltr">
+						                      Privacidade de Proteção de Dados - LGPD
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/canaisComunicacao/Divisao-de-arquivo-e-gestao-documental">
+							        <span lang="pt-BR" dir="ltr">
+						                      Divisão de Arquivo e Gestão Documental
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/canaisComunicacao/conselho%20de%20usu%C3%A1rios">
+							        <span lang="pt-BR" dir="ltr">
+						                      Conselho de Usuários
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/canaisComunicacao/fale%20conosco">
+							        <span lang="pt-BR" dir="ltr">
+						                      Fale conosco
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/canaisComunicacao/den%C3%BAncia%20online">
+							        <span lang="pt-BR" dir="ltr">
+						                      Denúncia Online
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/canaisComunicacao/perguntas_frequentes">
+							        <span lang="pt-BR" dir="ltr">
+						                      Perguntas frequentes
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+		             </ul>
+		             
+							<li class="nav-item dropdown">				
+		                     <a class="nav-link dropdown-toggle" href="#" id="Transparência" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Transparência<i class="fas fa-chevron-down"></i>
+                             </a>
+                        <ul class="dropdown-menu" aria-labelledby="Transparência">
+                        
+			       			    <li class="dropdown-item dropdown">	             
+		            			      <a class="dropdown-toggle" id="Servidores públicos3-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							             <span lang="pt-BR" dir="ltr">
+						                      Servidores públicos<i class="fas fa-chevron-right"></i>
+						                  </span>
+	                                  </a>
+	                             
+	                             
+	                         <ul class="dropdown-menu" aria-labelledby="Servidores públicos3-1">
+			                
+                                <li class="dropdown-item">
+                                	<a href="https://www.transparencia.sp.gov.br/Home/Servidor">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Remuneração Mensal
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      
+                                <li class="dropdown-item">
+                                	<a href="https://www.transparencia.sp.gov.br/Home/Diarias">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Diárias e Passagens Aéreas
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      	
+		        		    </ul>
+		        		    </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/transparencia/programas%20e%20a%C3%A7%C3%B5es">
+							        <span lang="pt-BR" dir="ltr">
+						                      Programas e Ações
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+			       			    <li class="dropdown-item dropdown">	             
+		            			      <a class="dropdown-toggle" id="Participação social3-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							             <span lang="pt-BR" dir="ltr">
+						                      Participação social<i class="fas fa-chevron-right"></i>
+						                  </span>
+	                                  </a>
+	                             
+	                             
+	                         <ul class="dropdown-menu" aria-labelledby="Participação social3-1">
+			                
+                                <li class="dropdown-item">
+                                	<a href="/sec_justica/transparencia/participacao_social/audiencias_e_consultas_publicas">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Audiências e Consultas Públicas
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      
+                                <li class="dropdown-item">
+                                	<a href="/sec_justica/transparencia/participacao_social/conselhos_e_orgaos_colegiados">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Conselhos e Órgãos Colegiados
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      
+                                <li class="dropdown-item">
+                                	<a href="/sec_justica/transparencia/participacao_social/avaliacao_dos_servicos_publicos">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Avaliação dos Serviços Públicos
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      	
+		        		    </ul>
+		        		    </li>
+	                         
+			       			    <li class="dropdown-item dropdown">	             
+		            			      <a class="dropdown-toggle" id="Contratos e compras públicas3-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							             <span lang="pt-BR" dir="ltr">
+						                      Contratos e compras públicas<i class="fas fa-chevron-right"></i>
+						                  </span>
+	                                  </a>
+	                             
+	                             
+	                         <ul class="dropdown-menu" aria-labelledby="Contratos e compras públicas3-1">
+			                
+                                <li class="dropdown-item">
+                                	<a href="/sec_justica/transparencia/contratos_e_compras_publicas/sistemas_e%20_cadastros_de_contratos_e_compras_publicas">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Sistemas e Cadastros de Contratos e Compras Públicas
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      
+                                <li class="dropdown-item">
+                                	<a href="http://www.transparencia.sp.gov.br/Home/DespContratos">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Painel da Transparência de Despesas com Contratos
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      	
+		        		    </ul>
+		        		    </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/transparencia/convenios_repasses_e_transferencias">
+							        <span lang="pt-BR" dir="ltr">
+						                      Convênios, repasses e transferências
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+			       			    <li class="dropdown-item dropdown">	             
+		            			      <a class="dropdown-toggle" id="Receitas e despesas3-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							             <span lang="pt-BR" dir="ltr">
+						                      Receitas e despesas<i class="fas fa-chevron-right"></i>
+						                  </span>
+	                                  </a>
+	                             
+	                             
+	                         <ul class="dropdown-menu" aria-labelledby="Receitas e despesas3-1">
+			                
+                                <li class="dropdown-item">
+                                	<a href="https://www.transparencia.sp.gov.br/Home/Demonstra">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Receitas
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      
+                                <li class="dropdown-item">
+                                	<a href="https://www.transparencia.sp.gov.br/Home/Investimentos">
+	                                  	<span lang="pt-BR" dir="ltr">
+			                  				Despesas
+			                          	</span>
+		                           	</a>
+		                	    </li>
+		                      	
+		        		    </ul>
+		        		    </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="https://www.transparencia.sp.gov.br/Home/ObrasPublicas">
+							        <span lang="pt-BR" dir="ltr">
+						                      Obras públicas
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/transparencia/informacoes_classificadas_e_desclassificadas">
+							        <span lang="pt-BR" dir="ltr">
+						                      Informações classificadas e desclassificadas
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/transparencia/emendas%20parlamentares">
+							        <span lang="pt-BR" dir="ltr">
+						                      Emendas Parlamentares
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/transparencia/dados%20abertos">
+							        <span lang="pt-BR" dir="ltr">
+						                      Dados Abertos
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+		             </ul>
+		             
+							<li class="nav-item dropdown">				
+		                     <a class="nav-link dropdown-toggle" href="#" id="Coordenações" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Coordenações<i class="fas fa-chevron-down"></i>
+                             </a>
+                        <ul class="dropdown-menu" aria-labelledby="Coordenações">
+                        
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/fundo%20de%20interesses%20difusos%20(fid)">
+							        <span lang="pt-BR" dir="ltr">
+						                      Fundo de Interesses Difusos (FID)
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/popula%C3%A7%C3%A3o%20negra">
+							        <span lang="pt-BR" dir="ltr">
+						                      População Negra
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/diversidade%20sexual">
+							        <span lang="pt-BR" dir="ltr">
+						                      Diversidade Sexual
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/departamento%20de%20engenharia">
+							        <span lang="pt-BR" dir="ltr">
+						                      Engenharia
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/direitos%20humanos">
+							        <span lang="pt-BR" dir="ltr">
+						                      Direitos Humanos
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/administra%C3%A7%C3%A3o">
+							        <span lang="pt-BR" dir="ltr">
+						                      Administração
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/povos%20ind%C3%ADgenas">
+							        <span lang="pt-BR" dir="ltr">
+						                      Povos Indígenas
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/coordenacoes/juventude">
+							        <span lang="pt-BR" dir="ltr">
+						                      Juventude
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+		             </ul>
+		             
+							<li class="nav-item dropdown">
+								<a href="/sec_justica/peritos" class="nav-link">
+
+                           		
+		                            <span lang="pt-BR" dir="ltr">Peritos</span>
+		                        </a>
+							
+		                        
+		
+		                    </li>
+						
+							<li class="nav-item dropdown">				
+		                     <a class="nav-link dropdown-toggle" href="#" id="Programas" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Programas<i class="fas fa-chevron-down"></i>
+                             </a>
+                        <ul class="dropdown-menu" aria-labelledby="Programas">
+                        
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/programas/cic">
+							        <span lang="pt-BR" dir="ltr">
+						                      CIC
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/programas/apoio%20%C3%A0%20v%C3%ADtima%20(cravi)">
+							        <span lang="pt-BR" dir="ltr">
+						                      Apoio à Vítima (CRAVI)
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/programas/f%C3%B3rum%20inter-religioso">
+							        <span lang="pt-BR" dir="ltr">
+						                      Fórum Inter-Religioso
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/programas/tr%C3%A1fico%20de%20pessoas%20(detp)">
+							        <span lang="pt-BR" dir="ltr">
+						                      Tráfico de Pessoas (DETP)
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/programas/crian%C3%A7a%20e%20adolescente%20(ppcaam)">
+							        <span lang="pt-BR" dir="ltr">
+						                      Criança e Adolescente (PPCAAM)
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/programas/prote%C3%A7%C3%A3o%20%C3%A0%20testemunha%20(provita)">
+							        <span lang="pt-BR" dir="ltr">
+						                      Proteção à Testemunha (PROVITA)
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+		             </ul>
+		             
+							<li class="nav-item dropdown">				
+		                     <a class="nav-link dropdown-toggle" href="#" id="Vinculadas" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Vinculadas<i class="fas fa-chevron-down"></i>
+                             </a>
+                        <ul class="dropdown-menu" aria-labelledby="Vinculadas">
+                        
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/vinculadas/funda%C3%A7%C3%A3o%20casa">
+							        <span lang="pt-BR" dir="ltr">
+						                      Fundação CASA
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/vinculadas/imesc">
+							        <span lang="pt-BR" dir="ltr">
+						                      Imesc
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/vinculadas/ipem">
+							        <span lang="pt-BR" dir="ltr">
+						                      Ipem
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/vinculadas/procon">
+							        <span lang="pt-BR" dir="ltr">
+						                      Procon
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+		             </ul>
+		             
+							<li class="nav-item dropdown">				
+		                     <a class="nav-link dropdown-toggle" href="#" id="Imprensa" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false">Imprensa<i class="fas fa-chevron-down"></i>
+                             </a>
+                        <ul class="dropdown-menu" aria-labelledby="Imprensa">
+                        
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/imprensa/noticias">
+							        <span lang="pt-BR" dir="ltr">
+						                      Noticias
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/imprensa/galeria_de_fotos">
+							        <span lang="pt-BR" dir="ltr">
+						                      Galeria de Fotos
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/imprensa/contatos">
+							        <span lang="pt-BR" dir="ltr">
+						                      Contatos
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+		             </ul>
+		             
+               
+             </ul>
+            </div>
+           </div>
+        </nav>
+        <div class="wpthemeClear"></div>
+	<script>
+
+    let linkLi = document.createElement("li");
+    linkLi.classList.add("nav-item");
+    let tagA = document.createElement("a");
+    tagA.classList.add("nav-link");
+    tagA.classList.add("dropdown");
+    let linkHome = document.querySelector("#stHomeLink");
+    tagA.setAttribute('href', linkHome.attributes["data-href"].nodeValue);
+    tagA.textContent = 'Início';
+    linkLi.appendChild(tagA);
+    let lista = document.querySelector("ul.navbar-nav.mr-auto");
+
+    if (!(lista === null)) {
+        lista.prepend(linkLi);
+    }
+
+
+
+    function extrairPartesDominio(url) {
+      if (!url || typeof url !== 'string') return [];
+      let dominio = url.toLowerCase()
+        .replace(/^https?:\/\//, '')   
+        .replace(/^www\./i, '');      
+      const indiceCorte = dominio.search(/[/?&#:]/);
+      if (indiceCorte !== -1) {
+        dominio = dominio.substring(0, indiceCorte);
+      }
+      dominio = dominio.replace(/\.sp\.gov\.br$/i, '');
+      return dominio
+        .trim()
+        .split('.')
+        .filter(part => part.length > 0);
+    }
+
+ function temPalavraEmComum(array1 = [], array2 = []) {
+  const PALAVRAS_CHAVE = new Set(['Poupatempo'].map(s => s.toLowerCase()));
+
+  return [...array1, ...array2].some(item => {
+    if (typeof item !== 'string') return false;
+    return PALAVRAS_CHAVE.has(item.trim().toLowerCase());
+  });
+}
+
+function initExternalLinkHandler() {
+  const links = document.querySelectorAll('ul.navbar-nav.mr-auto a[href]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      
+      if (!href || href.startsWith('#') || href.startsWith('javascript:')) {
+        return;
+      }
+      
+      const currentDomain = window.location.hostname;
+      const tempLink = document.createElement('a');
+      tempLink.href = href;
+      const linkDomain = tempLink.hostname;
+       
+      const currentDomainParts = extrairPartesDominio(currentDomain); 
+       const linkDomainParts = extrairPartesDominio(linkDomain);
+
+          if (temPalavraEmComum(currentDomainParts, linkDomainParts)) {
+            link.target = '_self';  
+            return;
+          }
+      
+      if (linkDomain && linkDomain !== currentDomain) {
+        e.preventDefault();
+        window.open(href, '_blank', 'noopener,noreferrer');
+      }
+    });
+  });
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initExternalLinkHandler);
+} else {
+  initExternalLinkHandler();
+}
+</script>
+
+<script>
+    const config = [
+    {
+      url: "https://poupatempo.sp.gov.br/",
+      label: "poupatempo"
+    },
+    {
+      url: "https://www.procon.sp.gov.br/",
+      label: "procon"
+    }
+  ];
+
+  function atualizarLinkLogo() {
+    const urlAtual = window.location.host;
+    const termo = config.find(item => urlAtual.toLowerCase().includes(item.label.toLowerCase()));
+   
+    const linkLogo = document.getElementById("linkLogo");
+    if (linkLogo && termo) {
+      linkLogo.href = termo.url;
+    }
+  }
+
+  function redirecionar() {
+   
+    const urlAtual = window.location.href;
+    if (!urlAtual.toLowerCase().includes('admin')) {
+      const pathname = window.location.pathname;
+      if (pathname === '/poupatempo' || pathname === '/poupatempo/') {
+        window.location.replace('https://poupatempo.sp.gov.br/');
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    atualizarLinkLogo();
+    redirecionar();
+  });
+
+</script><div class="container">
+		<section id="warning-alert-cms">
+			<div class="row">
+				<div class="col-md-12 mx-auto">
+					<div
+					class="alert alert-warning alert-dismissible fade show d-flex justify-content-between py-3"
+					role="alert"
+					>
+					<i class="fa-solid fa-triangle-exclamation p-3 fa-2x"></i>
+					<div class="col-md-11 p-2">
+						Para garantir <strong>rastreabilidade e segurança</strong> nas
+						integrações via <strong>iframe</strong>, solicitamos o envio da
+						<strong>relação de URLs utilizadas.</strong> Com base nessas
+						informações, realizaremos o cadastramento em
+						<strong>whitelist</strong>, assegurando a continuidade dos
+						redirecionamentos. Pedimos, por gentileza, o
+						<strong>envio até 22/05.</strong> A ausência dessas informações
+						poderá acarretar <strong>bloqueios preventivos</strong> de
+						acesso. Contamos com a colaboração de todos.
+						<strong>Equipe CMS.</strong>
+					</div>
+					<button
+						type="button"
+						class="close"
+						data-dismiss="alert"
+						aria-label="Close"
+					>
+						<span aria-hidden="true">&times;</span>
+					</button>
+					</div>
+				</div>
+        	</div>
+		</section>
+	</div>
+
+	<div id="modalCustomWarning" class="modal-warning-cms">
+		<div class="modal-content">
+			<button class="close btn-close-modal-warning-cms">&times;</button>
+
+			<img src="/statics/img/warnings/e-mail-novos-grupos.png" alt="Imagem novos grupos" class="modal-img">
+		</div>
+	</div>
+	<div class="wpthemeMainContent" role="main" tabindex="-1" aria-label="HCL Digital Experience">
+		<main role="main">
+			
+<div class="asa.page asa-hidden" id="asa.page">
+	<span class="asa.page.id">Z6_086423G03HEOD06U7G8HUVUIC5</span>
+
+	
+
+</div>
+
+<div class="wpthemeClear"></div>
+			
+<div class="wpthemeInner">
+	<div id="wpthemeStatusBarContainer" class="wpthemeStatusBarContainer">
+
+		
+		<noscript>
+			<div class="wpthemeMessage" role="alert" wairole="alert">
+				<img class="wpthemeMsgIcon wpthemeMsgIconError" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Error" />
+				<span class="wpthemeAltText">Error:</span>
+				<div class="wpthemeMessageBody">Javascript está desativado neste navegador. Esta página requer Javascript. Modifique as configurações do seu navegador para permitir que o Javascript seja executado. Consulte a documentação do navegador para as instruções específicas.</div>
+			</div>
+		</noscript>
+
+	</div>
+</div>
+<!-- required - do not remove -->
+			<div style="display:none" id="portletState">{}</div><div id="layoutContainers" class="wpthemeLayoutContainers wpthemeLayoutContainersHidden">
+				<div class="wpthemeInner">
+					<div class="hiddenWidgetsDiv">
+	<!-- widgets in this container are hidden in the UI by default -->
+	<div class='component-container ibmDndRow wpthemeRow hiddenWidgetsContainer wpthemeCol12of12 wpthemeFull id-Z7_086423G03HEOD06U7G8HUVUIS0' name='ibmHiddenWidgets' ><div class='component-control id-Z7_086423G03HVND06HTCK64184M7' ><span id="Z7_086423G03HVND06HTCK64184M7"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HVND06HTCK64184M7">
+		<span class="asa.portlet.id">Z7_086423G03HVND06HTCK64184M7</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <!-- MAP Hero Banner Modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d {}
+
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .carousel-acesso .slick-dots li.slick-active button::before,
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .slick-dots li.slick-active button::before {
+    color: #FF0000;
+  }
+
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .carousel-acesso .slick-prev::before,
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .carousel-acesso .slick-next::before,
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .slick-prev::before,
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .slick-next::before {
+    color: #FF0000 !important;
+  }
+
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .btnSemDegradeComBackground {
+    background: #FF0000 !important;
+    /* color: #fff !important; */
+  }
+
+  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .btnSemDegradeSemBackground {
+    border-color: #FF0000 !important;
+  }
+</style>
+
+
+
+
+<section id='bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d'  class="banner-global">
+
+  <!-- MN - Banners rotativos -->
+<!-- Inicio NotEditMode -->
+
+
+
+<div>
+  <div class="hero-banner">
+    <a href=''>
+      <div class="row align-items-center">
+        <div class="col">
+          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/df0cad0e-583b-46e5-9302-0bf4349fe601/renditions/22fa9b30-2666-413e-9556-559031990655?binary=true'
+            alt="" class="d-none d-md-block w-100 img-fluid img-full">
+          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/880b526c-c33c-4e3d-90a1-4208140a6ebc/renditions/6e15904c-fc41-4fec-9f4c-775d72fcf723?binary=true' alt=""
+            class="d-block d-md-none w-100 img-fluid img-full">            
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Inicio EditMode -->
+<!-- MN - Banners rotativos -->
+<!-- Inicio NotEditMode -->
+
+
+
+<div>
+  <div class="hero-banner">
+    <a href='/sec_justica/imprensa/noticias/abrilindigenareunecomunidadesparacelebraradataefortalecerodialogointercultural'>
+      <div class="row align-items-center">
+        <div class="col">
+          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/58dab278-be18-4ba1-b2d6-cea571e0bfd2/renditions/fbcc58eb-8269-42f5-9266-6c2439dad503?binary=true'
+            alt="" class="d-none d-md-block w-100 img-fluid img-full">
+          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/c9a76ac8-3be6-4c23-941d-e398d95120a9/renditions/bab27b44-5987-4e02-873c-4de28c6bb630?binary=true' alt=""
+            class="d-block d-md-none w-100 img-fluid img-full">            
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Inicio EditMode -->
+<!-- MN - Banners rotativos -->
+<!-- Inicio NotEditMode -->
+
+
+
+<div>
+  <div class="hero-banner">
+    <a href='/sec_justica/imprensa/noticias/governodespinaugura70novosleitosdeutinasantacasadesaopaulo'>
+      <div class="row align-items-center">
+        <div class="col">
+          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/36ff9a88-761e-4e88-85b0-678a0aa954a5/renditions/60878d55-f027-477b-9762-bad054d7f2ac?binary=true'
+            alt="" class="d-none d-md-block w-100 img-fluid img-full">
+          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/76a83c80-2b09-4215-ae0f-21d13f675b52/renditions/cd3c950b-f675-4532-8e34-bcf1058e0215?binary=true' alt=""
+            class="d-block d-md-none w-100 img-fluid img-full">            
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- Inicio EditMode -->
+
+
+</section>
+
+
+<script>
+function bannerVideo(src, id){
+  let videoBanner = document.getElementById(`videoBanner${id}`);
+  videoBanner.setAttribute('src', src);
+}
+
+function fecharModal(id){
+  let videoBanner = document.getElementById(`videoBanner${id}`);
+  videoBanner.setAttribute('src', '');
+}
+</script>
+
+
+
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div></div></div>
+<!-- this layout has one main container -->
+<div class="wptheme1Col">
+	<div class='component-container wpthemeLeft wpthemeCol ibmDndColumn wpthemeCol12of12 wpthemeFull wpthemePrimary id-Z7_086423G03HEOD06U7G8HUVUIS4' name='ibmMainContainer' ><div class='component-control id-Z7_086423G03HMOD063KA8KIV2EH1' ><span id="Z7_086423G03HMOD063KA8KIV2EH1"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HMOD063KA8KIV2EH1">
+		<span class="asa.portlet.id">Z7_086423G03HMOD063KA8KIV2EH1</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <!-- MAP - Banner Rotativo -->
+
+
+
+
+
+<!-- Sem Modo de Edição -->
+
+<style>
+    .banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0 .slick-prev::before {
+        color: #000000 !important;
+    }
+
+    .banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0 .slick-next::before {
+        color: #000000 !important;
+    }
+
+    .banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0 .slick-dots li.slick-active button::before {
+        color: #000000 !important;
+    }
+</style>
+<main role="main">
+    <div class='container banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0'>
+        <div class="banner-simples-rotativo">
+
+<!-- Pagina do site -->
+<div>
+    <a href='/sec_justica/imprensa/noticias/governodespabreeditalder300milhoesparafinanciarprojetosmunicipais'>
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/10308529-9611-44e6-bd7f-059c3690c9dc/renditions/99e5c873-4168-4b4e-8752-6785b5c59c8e?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/10308529-9611-44e6-bd7f-059c3690c9dc/renditions/99e5c873-4168-4b4e-8752-6785b5c59c8e?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
+    </a>
+</div>
+
+
+
+
+
+
+<!-- Pagina do site -->
+<div>
+    <a href='/sec_justica/imprensa/noticias/setursplancaguiaturisticodereligioesorientaiseconsolidasegmentacaoreligiosanoestado'>
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/311d7973-2233-4927-9a18-9a594674aafa/renditions/e0da46e2-51f3-4c42-bcda-b5f731f7d77f?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/311d7973-2233-4927-9a18-9a594674aafa/renditions/e0da46e2-51f3-4c42-bcda-b5f731f7d77f?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
+    </a>
+</div>
+
+
+
+
+
+
+<!-- Pagina do site -->
+<div>
+    <a href='/sec_justica/imprensa/noticias/4encontrodajuventudereuniumaisde180municipiosemlins'>
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/e52e04fa-2e76-4d0d-9efa-f7d7f172f3a3/renditions/2710ebc7-0870-4e72-90cd-6cf32fa5f7f2?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/e52e04fa-2e76-4d0d-9efa-f7d7f172f3a3/renditions/2710ebc7-0870-4e72-90cd-6cf32fa5f7f2?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
+    </a>
+</div>
+
+
+
+
+
+
+<!-- Pagina do site -->
+<div>
+    <a href='/sec_justica/imprensa/noticias/cidadaniaitineranteofereceservicosgratuitosemquatrocidadesedoisbairrosdesaopaulo'>
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/532681ec-6bba-40f5-98fa-e878103499d9/renditions/102c5476-2799-481c-87d8-bd1f3cb6aec6?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/532681ec-6bba-40f5-98fa-e878103499d9/renditions/102c5476-2799-481c-87d8-bd1f3cb6aec6?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
+    </a>
+</div>
+
+
+
+
+
+
+<!-- Pagina do site -->
+<div>
+    <a href='/sec_justica/imprensa/noticias/ipemsprealizacerimoniadeaberturadasemanametrologica2026emcomemoracaoaos59anosdoinstituto'>
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/78d1c7cd-1956-4e59-b484-75c1988f4af6/renditions/7ee0e7f7-69f3-45d8-a3b2-b02b9cb78016?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/78d1c7cd-1956-4e59-b484-75c1988f4af6/renditions/7ee0e7f7-69f3-45d8-a3b2-b02b9cb78016?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
+    </a>
+</div>
+
+
+
+
+
+
+<!-- Pagina do site -->
+<div>
+    <a href='/sec_justica/imprensa/noticias/educacaodesplancadiretrizesparaescolasindigenasesetornaoprimeiroestadodopaisaadotaramedida'>
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/042bde24-f537-4db6-818d-de8812f5cb3b/renditions/5ee455fd-533f-45f1-806b-e705d0a71ea9?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
+      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/042bde24-f537-4db6-818d-de8812f5cb3b/renditions/5ee455fd-533f-45f1-806b-e705d0a71ea9?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
+    </a>
+</div>
+
+
+
+
+</div>
+    </div>
+</main>
+<script>
+    let indicadoresbanner_simples_rotativo = document.querySelectorAll("ol.carousel-indicators li");
+    for (let i = 0; i < indicadoresbanner_simples_rotativo.length; i++) {
+        if (i == 0) {
+            indicadoresbanner_simples_rotativo[i].setAttribute("data-slide-to", i);
+            indicadoresbanner_simples_rotativo[i].classList.add("active");
+        } else {
+            indicadoresbanner_simples_rotativo[i].setAttribute("data-slide-to", i);
+        }
+    }
+    let itensCarrouselbanner_simples_rotativo = document.querySelector(".carousel-item");
+    if (itensCarrouselbanner_simples_rotativo == null) {
+    }else {
+        itensCarrouselbanner_simples_rotativo.classList.add("active");
+    }
+
+</script>
+
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div><div class='component-control id-Z7_086423G03PLOD06HM6KBQR2003' ><span id="Z7_086423G03PLOD06HM6KBQR2003"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03PLOD06HM6KBQR2003">
+		<span class="asa.portlet.id">Z7_086423G03PLOD06HM6KBQR2003</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            
+
+
+
+
+<div class="container">
+<section id="busca-home" style="margin: 44px 44px;">
+   <h3 class="tit-busca d-flex justify-content-center mb-3">PESQUISAR</h3>
+   <form action='?urile=wcm:path:/sec_justica_content/sec_justica/resultado-busca' method="post">
+        <div class='row'>
+          <div class="col-lg-6 mx-auto text-center mb-3">
+            <div class="br-input large input-button">
+              <div class="input-group">
+
+
+
+
+                <input id="input-search-large"  type="text" placeholder="Busque pelo serviço desejado"  name="search_query"/>  
+                <button class="br-button" type="submit" aria-label="Buscar">
+                  <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+     </form>
+ </section>
+
+</div>
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div><div class='component-control id-Z7_086423G03HEOD06U7G8HUVUI24' ><span id="Z7_086423G03HEOD06U7G8HUVUI24"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HEOD06U7G8HUVUI24">
+		<span class="asa.portlet.id">Z7_086423G03HEOD06U7G8HUVUI24</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <!-- MAP Noticia Destaque -->
+
+
+
+
+
+
+
+<style>
+  .noticiaDestaqued9d90559-b5aa-4ab3-b08c-83ce8a39cd94 .noticia.noticias-secundarias p {
+    border-color: #CC0000 !important;
+  }
+</style>
+
+
+
+  
+  <section id="noticias-home" class='noticiaDestaqued9d90559-b5aa-4ab3-b08c-83ce8a39cd94'
+    style="background-color:#ededed">
+    
+    <div class="container">
+      
+
+            
+      <h3 id='ÚLTIMAS NOTÍCIAS' class="tit-area"
+        style='border-color: #CC0000'>ÚLTIMAS NOTÍCIAS</h3>
+      
+      <a href="/sec_justica/imprensa/noticias"
+        style="display:none;">Clique aqui</a>
+      <div class="row">
+        
+        
+        <div class="col-lg-6">
+          <!-- Notícia principal -->
+
+<div class="noticia noticia-principal">
+  <a href="?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/secretariadajusticaecidadaniaparticipadecerimoniadeposseadministrativadoprocuradorgeraldejusticadoestadodesaopaulo">
+    <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/3701e335-20aa-4df9-839e-118bbacaec03/renditions/6bf4ab52-4dba-4b23-8ffd-d85e433b0f26?binary=true' class="img-fluid">
+      <p>Secretaria da Justiça e Cidadania participa de cerimônia de posse administrativa do Procurador-Geral de Justiça do Estado de São Paulo</p>
+      <small>16/04/2026</small>
+  </a>
+</div>
+
+
+
+        </div>
+        
+        
+        
+        <div class="col-lg-6">
+          
+<div class="noticia noticias-secundarias" style='border-color: #'>
+  <a href='?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/ipemspinauguralaboratoriosdeinovacaoedesoldagemnocentrotecnologicodacapital'>
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <p>Ipem-SP inaugura Laboratórios de Inovação e de Soldagem no Centro Tecnológico da capital</p>
+        <small>30/04/2026</small>
+      </div>
+      <div class="col-md-4">
+        <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/a19578cf-2cda-420d-9201-21eab3d4fa29/renditions/ab73354f-f567-4ce5-914f-e89229450a0a?binary=true'
+          alt="Imagem Notícia" class="img-fluid">
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="noticia noticias-secundarias" style='border-color: #'>
+  <a href='?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/ipemsprealizacerimoniadeaberturadasemanametrologica2026emcomemoracaoaos59anosdoinstituto'>
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <p>Ipem-SP realiza cerimônia de abertura da Semana Metrológica 2026 em comemoração aos 59 anos do instituto</p>
+        <small>29/04/2026</small>
+      </div>
+      <div class="col-md-4">
+        <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/30856603-2bcc-4f58-9e63-1c7c990ec140/renditions/f3f156f2-85f5-4a8b-9813-d0d8e69af411?binary=true'
+          alt="Imagem Notícia" class="img-fluid">
+      </div>
+    </div>
+  </a>
+</div>
+
+
+<div class="noticia noticias-secundarias" style='border-color: #'>
+  <a href='?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/4encontrodajuventudereuniumaisde180municipiosemlins'>
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <p>4&ordm; Encontro da Juventude reuniu mais de 180 municípios em Lins</p>
+        <small>29/04/2026</small>
+      </div>
+      <div class="col-md-4">
+        <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/034057e1-212d-4242-a076-5f1f61175879/renditions/b304aa53-50c1-4faa-abd7-e398a20373d1?binary=true'
+          alt="Imagem Notícia" class="img-fluid">
+      </div>
+    </div>
+  </a>
+</div>
+
+</div>
+        </div>
+        
+      </div>
+      <div class="container text-right mt-3">
+        <a href="/sec_justica/imprensa/noticias"
+          class="btn btn-outline-custom-dark rounded-pill">
+          Mais notícias <i class="fa-solid fa-chevron-right ml-2"></i>
+        </a>
+      </div>
+
+    </div>
+    
+  
+</section>
+
+
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div><div class='component-control id-Z7_086423G03HMOD063KA8KIV2PL0' ><span id="Z7_086423G03HMOD063KA8KIV2PL0"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HMOD063KA8KIV2PL0">
+		<span class="asa.portlet.id">Z7_086423G03HMOD063KA8KIV2PL0</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            
+
+
+
+
+
+
+
+
+<section id="painel-destaque" class='painelImagens17fed9ae-dc61-4196-aee1-03e4ab48b3de' style='background-color: #FFFFFF'>
+
+
+     <div class="container">
+        <h1 class="tit-area" style='border-color: # !important;'>Destaques</h1>
+        
+        <div class="row">
+
+
+
+
+
+
+
+
+
+
+<!--MEDIO-->
+
+
+<!-- INICIO TAMANHO MEDIO-->
+
+
+
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+<div class="col-lg-6">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/617cb699-37f6-45cd-8e9e-99c590741e4c/renditions/b3237349-adf2-4194-9443-85de4c55aa2f?binary=true') no-repeat center;">
+              
+              <a href='/sec_justica/Edital_FID'>
+              
+                <div class="overlay" style="background:none;"></div>
+                
+                <div class="painel-title" style="background:none;">
+                </div>
+              
+              </a>
+              
+            </div>
+          </div>
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+<!-- FIM TAMANHO MEDIO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--MEDIO-->
+
+
+<!-- INICIO TAMANHO MEDIO-->
+
+
+
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+<div class="col-lg-6">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/e63dca55-8790-44c8-8ed9-32d6a40bafdd/renditions/821eda4b-bd14-4e23-8811-f111e2ba29a0?binary=true') no-repeat center;">
+              
+              <a href='/sec_justica/peritos'>
+              
+                <div class="overlay" style="background:none;"></div>
+                
+                <div class="painel-title" style="background:none;">
+                </div>
+              
+              </a>
+              
+            </div>
+          </div>
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+<!-- FIM TAMANHO MEDIO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--MEDIO-->
+
+
+<!-- INICIO TAMANHO MEDIO-->
+
+
+
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+<div class="col-lg-6">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/d78a8bc4-14d2-4297-b33f-021ef1750c95/renditions/74aba632-5997-4d18-aa48-6837f5b093aa?binary=true') no-repeat center;">
+              
+              <a href='/sec_justica/cursos_cic'>
+              
+                <div class="overlay" style="background:none;"></div>
+                
+                <div class="painel-title" style="background:none;">
+                </div>
+              
+              </a>
+              
+            </div>
+          </div>
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+<!-- FIM TAMANHO MEDIO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--MEDIO-->
+
+
+<!-- INICIO TAMANHO MEDIO-->
+
+
+
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+<div class="col-lg-6">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/bd380e7c-fb75-4e9c-b3cd-6e41baea43cf/renditions/e8d98bd2-091c-4446-8641-0bccfddae5d8?binary=true') no-repeat center;">
+              
+              <a href='/sec_justica/transparencia/participacao_social/conselhos_e_orgaos_colegiados'>
+              
+                <div class="overlay" style="background:none;"></div>
+                
+                <div class="painel-title" style="background:none;">
+                </div>
+              
+              </a>
+              
+            </div>
+          </div>
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+<!-- FIM TAMANHO MEDIO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--MEDIO-->
+
+
+<!-- INICIO TAMANHO MEDIO-->
+
+
+
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+<div class="col-lg-6">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/c9df6ae1-c184-4538-b3f6-20d245a8436f/renditions/ef2087a4-5869-411d-9432-a311eab29dca?binary=true') no-repeat center;">
+              
+              <a href='/sec_justica/8-Conferencia-Estadual-de-Direitos-Humanos'>
+              
+                <div class="overlay" style="background:none;"></div>
+                
+                <div class="painel-title" style="background:none;">
+                </div>
+              
+              </a>
+              
+            </div>
+          </div>
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+<!-- FIM TAMANHO MEDIO -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--MEDIO-->
+
+
+<!-- INICIO TAMANHO MEDIO-->
+
+
+
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+<div class="col-lg-6">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/bd84b575-1436-45c6-83bb-7bff22766be8/renditions/b09985e4-4f6d-4ea8-a701-eb340f423af3?binary=true') no-repeat center;">
+              
+              <a href='https://l1nk.dev/1JgkV'>
+              
+                <div class="overlay" style="background:none;"></div>
+                
+                <div class="painel-title" style="background:none;">
+                </div>
+              
+              </a>
+              
+            </div>
+          </div>
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+<!-- FIM TAMANHO MEDIO -->
+
+
+
+
+
+        </div>
+        <!-- Se não tiver texto não tem botão -->
+        
+    </div>
+</section>
+
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div><div class='component-control id-Z7_086423G03HTOD06HM6PALK2AF2' ><span id="Z7_086423G03HTOD06HM6PALK2AF2"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HTOD06HM6PALK2AF2">
+		<span class="asa.portlet.id">Z7_086423G03HTOD06HM6PALK2AF2</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <!-- MAP Desenvolvido -->
+
+
+
+
+
+
+
+
+
+<style>
+    .bordaHover {
+        border-left: 4px solid
+    }
+
+    .exbirMaisPerguntas i {
+        transform: rotate(180deg);
+        transition: 0.3s;
+    }
+
+    .cardOculto {
+        display: none !important;
+    }
+
+    .cardParaOcultar {
+        display: flex !important;
+    }
+
+    .cardsServicos7ce19242-ac24-419d-96d9-f4d44f590a85 .btn-outline-danger:hover {
+        border-color: #;
+    }
+
+    .corDetalhesHover {
+        text-decoration-color: # !important;
+    }
+
+    .corDetalhesTitulo {
+        border-color: # !important;
+    }
+
+    .corDosIcones {
+        color: # !important;
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        
+        <section id="categoria-servicos" style="background-color:#fff" class="iamspe">
+            
+            
+                
+                <div class="container">
+                    <!-- Card com Icone -->
+                    
+                    <!-- Titulo -->
+                    
+                    <h3 class="tit-area corDetalhesTitulo">
+                        ACESSO RÁPIDO</h3>
+                    
+                    
+                    <div class="row">
+                       
+                            <div class="col-lg-12 mx-auto">
+                                <div class='cardsServicos7ce19242-ac24-419d-96d9-f4d44f590a85
+                                  row justify-content-center mx-auto'>
+                                    
+
+                                    
+                                    <!-- Caminho dos conteudos para o Cards com Icone -->
+                                    
+                                    
+                                    
+                                    <!-- Menu dos cards com Icone -->
+                                    <!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/programas/cic'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-people-roof corDosIcones'></i>
+            <span>CIC</span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+<!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/transparencia/participacao_social/conselhos_e_orgaos_colegiados'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-people-arrows corDosIcones'></i>
+            <span>Conselhos </span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+<!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/lista%20coordena%C3%A7%C3%B5es'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-arrows-to-circle corDosIcones'></i>
+            <span>Coordenações</span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+<!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/programas/apoio%20%C3%A0%20v%C3%ADtima%20(cravi)'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-people-group corDosIcones'></i>
+            <span>CRAVI</span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+<!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/canaisComunicacao/den%C3%BAncia%20online'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-bullhorn corDosIcones'></i>
+            <span>Denúncias</span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+<!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/peritos'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-file-invoice-dollar corDosIcones'></i>
+            <span>Peritos(as) - Extratos </span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+<!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/lista%20programas'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-file corDosIcones'></i>
+            <span>Programas</span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+<!-- MN (Cards com icone) -->
+
+
+
+<!-- Cards -->
+<!-- link interno -->
+<div class="col-md-auto col-6 text-center">
+    <div class="card card-body d-flex flex-column justify-content-center align-items-center">
+        
+        <!-- link interno -->
+        <a href='/sec_justica/lista%20vinculadas'
+            class="stretched-link corDetalhesHover">
+            <i class='fa-solid fa-network-wired corDosIcones'></i>
+            <span>Vinculadas</span>
+        </a>
+        
+        
+        
+        
+        
+        
+    </div>
+</div>
+
+
+                                </div>
+                            </div>
+                        
+                    </div>
+                    
+                    <!-- Cards com Imagem -->
+                    
+                <script>
+                    function cardsMostraCarsOcultaCards(id){
+  let btnIcon = document.querySelector(`#btnCards_${id}`);
+  let cardsOcultos = document.querySelectorAll(`.cardsServicos${id} .cardOculto`);
+  if(cardsOcultos.length > 0){
+    btnIcon.classList.add("exbirMaisPerguntas");
+    cardsOcultos.forEach((elemento) => {
+    elemento.classList.add("cardParaOcultar");
+    elemento.classList.remove("cardOculto");
+   })
+  }else{
+    btnIcon.classList.remove("exbirMaisPerguntas");
+    let cardsParaOcultar = document.querySelectorAll(`.cardsServicos${id} .cardParaOcultar`);
+    cardsParaOcultar.forEach((elemento) => {
+    elemento.classList.remove("cardParaOcultar");
+    elemento.classList.add("cardOculto");
+   })
+  }
+  
+}
+
+function ajustarDesktopCards(id){
+  let larguraTela = document.body.clientWidth;
+  
+  if(larguraTela >= 992){
+         let cardsServico = document.querySelectorAll(`.cardsServicos${id} .col-md-auto`);
+         if(cardsServico.length > 4 && cardsServico.length < 8){
+           for(let i = 4; i < cardsServico.length; i++){
+           let btnIcon = document.querySelector(`#btnCards_${id}`);
+           btnIcon.classList.remove("d-none");
+           cardsServico[i].classList.add("cardOculto");
+          }
+       }
+    }else{
+         let cardsServico = document.querySelectorAll(`.cardsServicos${id} .card`);
+         let btnIcon = document.querySelector(`#btnCards_${id}`);
+         if(cardsServico.length > 2 && cardsServico.length < 4){
+           for(let i = 2; i < cardsServico.length; i++){
+           btnIcon.classList.remove("d-none");
+           cardsServico[i].classList.add("cardOculto");
+          }
+       }else if(cardsServico.length > 4 && cardsServico.length < 6){
+         for(let i = 4; i < cardsServico.length; i++){
+           btnIcon.classList.remove("d-none");
+           cardsServico[i].classList.add("cardOculto");
+          }
+       }else if(cardsServico.length > 6 && cardsServico.length < 8){
+                for(let i = 6; i < cardsServico.length; i++){
+                btnIcon.classList.remove("d-none");
+                cardsServico[i].classList.add("cardOculto");
+           }
+       }else{
+         return;
+       }
+
+  }
+}
+
+                    ajustarDesktopCards('7ce19242-ac24-419d-96d9-f4d44f590a85')
+                </script>
+                <script>
+function bannerVideo(src, id){
+  let videoBanner = document.getElementById(`videoBanner${id}`);
+  videoBanner.setAttribute('src', src);
+}
+
+function fecharModal(id){
+  let videoBanner = document.getElementById(`videoBanner${id}`);
+  videoBanner.setAttribute('src', '');
+}
+</script>
+                
+                
+            
+        </section>
+        
+        
+        
+
+<script>
+    function cardsMostraCarsOcultaCards(id){
+  let btnIcon = document.querySelector(`#btnCards_${id}`);
+  let cardsOcultos = document.querySelectorAll(`.cardsServicos${id} .cardOculto`);
+  if(cardsOcultos.length > 0){
+    btnIcon.classList.add("exbirMaisPerguntas");
+    cardsOcultos.forEach((elemento) => {
+    elemento.classList.add("cardParaOcultar");
+    elemento.classList.remove("cardOculto");
+   })
+  }else{
+    btnIcon.classList.remove("exbirMaisPerguntas");
+    let cardsParaOcultar = document.querySelectorAll(`.cardsServicos${id} .cardParaOcultar`);
+    cardsParaOcultar.forEach((elemento) => {
+    elemento.classList.remove("cardParaOcultar");
+    elemento.classList.add("cardOculto");
+   })
+  }
+  
+}
+
+function ajustarDesktopCards(id){
+  let larguraTela = document.body.clientWidth;
+  
+  if(larguraTela >= 992){
+         let cardsServico = document.querySelectorAll(`.cardsServicos${id} .col-md-auto`);
+         if(cardsServico.length > 4 && cardsServico.length < 8){
+           for(let i = 4; i < cardsServico.length; i++){
+           let btnIcon = document.querySelector(`#btnCards_${id}`);
+           btnIcon.classList.remove("d-none");
+           cardsServico[i].classList.add("cardOculto");
+          }
+       }
+    }else{
+         let cardsServico = document.querySelectorAll(`.cardsServicos${id} .card`);
+         let btnIcon = document.querySelector(`#btnCards_${id}`);
+         if(cardsServico.length > 2 && cardsServico.length < 4){
+           for(let i = 2; i < cardsServico.length; i++){
+           btnIcon.classList.remove("d-none");
+           cardsServico[i].classList.add("cardOculto");
+          }
+       }else if(cardsServico.length > 4 && cardsServico.length < 6){
+         for(let i = 4; i < cardsServico.length; i++){
+           btnIcon.classList.remove("d-none");
+           cardsServico[i].classList.add("cardOculto");
+          }
+       }else if(cardsServico.length > 6 && cardsServico.length < 8){
+                for(let i = 6; i < cardsServico.length; i++){
+                btnIcon.classList.remove("d-none");
+                cardsServico[i].classList.add("cardOculto");
+           }
+       }else{
+         return;
+       }
+
+  }
+}
+
+    ajustarDesktopCards('7ce19242-ac24-419d-96d9-f4d44f590a85')
+
+</script>
+<script>
+function bannerVideo(src, id){
+  let videoBanner = document.getElementById(`videoBanner${id}`);
+  videoBanner.setAttribute('src', src);
+}
+
+function fecharModal(id){
+  let videoBanner = document.getElementById(`videoBanner${id}`);
+  videoBanner.setAttribute('src', '');
+}
+</script>
+
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div><div class='component-control id-Z7_086423G03HTOD06HM6PALK21L3' ><span id="Z7_086423G03HTOD06HM6PALK21L3"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HTOD06HM6PALK21L3">
+		<span class="asa.portlet.id">Z7_086423G03HTOD06HM6PALK21L3</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <!-- MAP -->
+
+
+
+
+
+
+
+<style>
+  .galeriaDeCards41583a3d-6247-42dd-af11-cfb22a322a0d article .overlay-perfil {
+    border-color: # !important;
+  }
+ .corTituloModal{
+border-color: #;
+}
+
+</style>
+<!-- Cores de Fundo -->
+
+  
+  <section id="GaleriaCards" style="background-color:#ededed"class="py-5">
+    
+    <div class='container galeriaDeCards41583a3d-6247-42dd-af11-cfb22a322a0d'>
+      <section id='preview-cards'>
+        <h1 class="tit-area corTituloModal">MATERIAIS DIDÁTICOS</h1>
+        <p></p>
+        <div class="row">
+          
+          
+          
+          
+          <!-- MN Galeria de Cards -->
+
+
+
+
+
+
+
+<div class="col-lg-3 col-md-6 col-12">
+    <article>
+        <a href='/dx/api/dam/v1/collections/241ca032-6cf9-4240-85fe-506344cf61b1/items/4328ff51-9cc4-4eb1-b0b7-9971d8e85ef2/renditions/8b59f789-fcb8-411d-a5ce-9c9195d97160?binary=true' target="_blank">
+            <img src='/dx/api/dam/v1/collections/075fbe8d-9af1-4bae-b7e1-faebeaafea76/items/d53786e1-4f40-4e38-8338-9d610dc23986/renditions/85704bd0-d644-4c4b-9d51-98c0b5ed5059?binary=true'
+                alt="Foto genérica" class="img-fluid">
+            <div class="overlay-perfil  ">
+                <p>
+                    DIVERSIDADE SEXUAL E A CIDADANIA
+                    <small></small>
+                </p>
+            </div>
+        </a>
+    </article>
+</div>
+
+
+
+
+
+
+<!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos9462a3e4-89ec-4b32-b4a6-182b51b2df0c'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+                
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Sim', '9462a3e4-89ec-4b32-b4a6-182b51b2df0c');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos0b8cf24d-8eaf-488c-b92e-cd2e702468d9'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '0b8cf24d-8eaf-488c-b92e-cd2e702468d9');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos2389aa86-0be3-466d-8164-c919d3917156'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '2389aa86-0be3-466d-8164-c919d3917156');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos900f7cc3-2d92-4845-a163-b720a86bb27b'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
+</script>
+
+
+<!-- MN Galeria de Cards -->
+
+
+
+
+
+
+
+<div class="col-lg-3 col-md-6 col-12">
+    <article>
+        <a href='/dx/api/dam/v1/collections/241ca032-6cf9-4240-85fe-506344cf61b1/items/f6aa1b9e-b37b-479e-871a-29c95e3ab529/renditions/bd22f525-3319-427a-b96c-fa892f25eb18?binary=true' target="_blank">
+            <img src='/dx/api/dam/v1/collections/075fbe8d-9af1-4bae-b7e1-faebeaafea76/items/82e41066-f54b-4175-88c2-4d9d3044ce2e/renditions/a7625367-e644-4df4-9001-84219514134a?binary=true'
+                alt="Foto genérica" class="img-fluid">
+            <div class="overlay-perfil  ">
+                <p>
+                    CENTRO DE REFERÊNCIA E APOIO À VÍTIMA (CRAVI)
+                    <small></small>
+                </p>
+            </div>
+        </a>
+    </article>
+</div>
+
+
+
+
+
+
+<!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos9462a3e4-89ec-4b32-b4a6-182b51b2df0c'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+                
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Sim', '9462a3e4-89ec-4b32-b4a6-182b51b2df0c');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos0b8cf24d-8eaf-488c-b92e-cd2e702468d9'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '0b8cf24d-8eaf-488c-b92e-cd2e702468d9');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos2389aa86-0be3-466d-8164-c919d3917156'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '2389aa86-0be3-466d-8164-c919d3917156');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos900f7cc3-2d92-4845-a163-b720a86bb27b'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
+</script>
+
+
+<!-- MN Galeria de Cards -->
+
+
+<div class="col-lg-3 col-md-6 col-12">
+    <article>
+        
+        
+
+        <a href=''>
+            <img src='/dx/api/dam/v1/collections/075fbe8d-9af1-4bae-b7e1-faebeaafea76/items/0a6c0da8-e731-42a4-adf6-d67b81cc3931/renditions/d782bfef-92db-4dd5-b061-21e8c5fc0d8b?binary=true'
+                alt="Foto genérica" class="img-fluid">
+            <div class="overlay-perfil ">
+                <p>
+                    Em Breve
+                    <small></small>
+                </p>
+            </div>
+        </a>
+    </article>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos9462a3e4-89ec-4b32-b4a6-182b51b2df0c'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+                
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Sim', '9462a3e4-89ec-4b32-b4a6-182b51b2df0c');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos0b8cf24d-8eaf-488c-b92e-cd2e702468d9'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '0b8cf24d-8eaf-488c-b92e-cd2e702468d9');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos2389aa86-0be3-466d-8164-c919d3917156'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '2389aa86-0be3-466d-8164-c919d3917156');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos900f7cc3-2d92-4845-a163-b720a86bb27b'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
+</script>
+
+
+<!-- MN Galeria de Cards -->
+
+
+<div class="col-lg-3 col-md-6 col-12">
+    <article>
+        
+        
+
+        <a href=''>
+            <img src='/dx/api/dam/v1/collections/075fbe8d-9af1-4bae-b7e1-faebeaafea76/items/faa5e498-a08e-4fe8-87b0-b37d708672a7/renditions/910eea95-b853-4cea-a02d-46eb0fd6790f?binary=true'
+                alt="Foto genérica" class="img-fluid">
+            <div class="overlay-perfil ">
+                <p>
+                    Em Breve
+                    <small></small>
+                </p>
+            </div>
+        </a>
+    </article>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos9462a3e4-89ec-4b32-b4a6-182b51b2df0c'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+                
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    
+                </a>
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Sim', '9462a3e4-89ec-4b32-b4a6-182b51b2df0c');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos0b8cf24d-8eaf-488c-b92e-cd2e702468d9'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '0b8cf24d-8eaf-488c-b92e-cd2e702468d9');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos2389aa86-0be3-466d-8164-c919d3917156'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '2389aa86-0be3-466d-8164-c919d3917156');
+</script><!-- MN Modal Galeria de Cards -->
+<div class="modal fade modal-conteudos" id='modalTextos900f7cc3-2d92-4845-a163-b720a86bb27b'
+    tabindex="-1" aria-labelledby="modalTextosLabel" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="tit-area corTituloModal"></h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <!-- Botão 1 -->
+                
+                
+              
+                <a href=''
+                    class="btn btn-outline-danger rounded-pill">
+                    Saiba mais
+                </a>
+                
+
+                
+
+                
+
+                
+
+                <!-- Botão 2 -->
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+function ocultarModalFooter(opcao1,opcao2, idFooter){
+    if(opcao1 === 'Não' && opcao2 === 'Não'){
+       document.querySelector(`#modalTextos${idFooter} .modal-footer`).classList.add("d-none");
+    }
+}
+
+ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
+</script>
+
+
+
+          
+        </div>
+      </section>
+    </div>
+    
+  </section>
+  
+  
+
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div><div class='component-control id-Z7_086423G03HVND06HTCK6418HL4' ><span id="Z7_086423G03HVND06HTCK6418HL4"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HVND06HTCK6418HL4">
+		<span class="asa.portlet.id">Z7_086423G03HVND06HTCK6418HL4</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <style>
+  #btnCopyPaste1bf705b22-af1d-4224-8762-aab37a353d20 {
+    border-color: # !important;
+  }
+
+  #btnCopyPaste1bf705b22-af1d-4224-8762-aab37a353d20:hover {
+    background-color: # !important;
+  }
+
+  .textoCorbf705b22-af1d-4224-8762-aab37a353d20 p {
+    border-color: # !important;
+  }
+</style>
+
+
+<!-- Layout 1-->
+
+<section class="jumbotron exibir_bg textoCorbf705b22-af1d-4224-8762-aab37a353d20" id="banner-bg" style="background-color: #ffffff;">
+  
+  
+    <div class="container textoComImagembf705b22-af1d-4224-8762-aab37a353d20">
+      <div class="col-lg-10 mx-auto">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-7 order-2 order-sm-1">
+            <h2>GALERIA DE FOTOS</h2>
+            <p dir="ltr">Acesse nosso Flickr e fique por dentro dos principais acontecimentos da Secretaria da Justiça e Cidadania.</p>
+            <!-- d-none d-md-block -->
+             <div class="d-block">
+              <div class="row">
+                
+                <div class="col-auto">
+                  
+
+                  
+
+                   <a id='btnCopyPaste1bf705b22-af1d-4224-8762-aab37a353d20'
+                    href='https://www.flickr.com/photos/justica-sp/albums/'
+                    target="_blank" class="btn btn-outline-custom rounded-pill"> Saiba mais </a> 
+
+                  
+
+                  
+
+                  
+
+                  
+                </div>
+
+                
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-5 order-1 order-sm-2"> <img
+              src='/dx/api/dam/v1/collections/5b3a9d70-9405-481a-9880-47d819771ce8/items/f569829c-9226-4c16-98c0-fd73212f3d4b/renditions/eecb8c54-7e58-4032-a30f-df76af6007bf?binary=true'
+              alt="Imagens do aplicativo do SGGD" class="img-fluid img-banner"> </div>
+          <div class="col order-3">
+            <!-- Solução aplicada abaixo para inverter as classes: d-none d-md-block    --> 
+            <!--
+            <div class="d-block d-md-none">
+              <div class="row">
+                <div class="col-auto"> <small class="d-block">Android</small> <a href="" target="_blank"> <img
+                      src="/wcm/myconnect/66255891-3968-4473-b86e-3c053b824aa8/disponivel-google-play-badge+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-66255891-3968-4473-b86e-3c053b824aa8-p1kXbK3"
+                      alt="Disponível no Google Play" class="img-fluid"> </a> </div>
+                <div class="col-auto"> <small class="d-block">iOS</small> <a href="" target="_blank"> <img
+                      src="/wcm/myconnect/48c2fce8-8190-4212-92e1-12bbf9e5c960/disponivel-na-app-store-botao-1+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-48c2fce8-8190-4212-92e1-12bbf9e5c960-p1kXbK3"
+                      alt="Disponível na App Store" class="img-fluid"> </a> </div>
+              </div>
+            </div>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  
+  
+
+
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div><div class='component-control id-Z7_086423G03HEOD06U7G8HUVUI26' ><span id="Z7_086423G03HEOD06U7G8HUVUI26"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_086423G03HEOD06U7G8HUVUI26">
+		<span class="asa.portlet.id">Z7_086423G03HEOD06U7G8HUVUI26</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <style>
+    .nao_exibir {
+        display: none;
+    }
+
+    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item a:hover::before {
+        background-color: # !important;
+    }
+
+    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item a:hover {
+        background-color: # !important;
+    }
+
+    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item a:hover i {
+        color: white !important;
+        transform: translate(-50%, -50%) scale(0.5);
+        background-color: #;
+        border-radius: 100%;
+        width: 80px;
+        padding: 18px 20px;
+        height: 80px;
+        margin: auto;
+    }
+
+    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item i {
+        color: #;
+    }
+
+    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item i:hover {
+        background: #;
+    }
+
+    .lead p {
+        font-size: 24px;
+        font-family: "rawline";
+        font-style: normal;
+        font-weight: 400;
+    }
+</style>
+
+
+
+    
+    
+        
+        <section id="redes-sociais" style="background-color:#ededed">
+            
+
+            <div class='container linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624'>
+                <section id="redes-home" class="componente">
+                    <h3 class="tit-area" style="border-color:#">
+                        Nossas redes sociais
+                    </h3>
+                    <div id='Redes Sociais' class="row">
+                        <div class="col-lg-6 lead">
+                            <p dir="ltr">Siga nossas redes sociais e fique por dentro das novidades</p>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <!-- início UL redes -->
+                            <ul class="list-inline">
+
+                                
+                                <!-- INICIO FACEBOOK -->
+                                <li class="list-inline-item exibir">
+                                    <a href="https://www.facebook.com/justicasp/"
+                                        target="_blank" title="">
+                                        <i class='fab fa-facebook-f fa-3x'></i>
+                                    </a>
+                                </li>
+                                <!-- FIM FACEBOOK -->
+                                
+
+
+                                
+                                <!-- INICIO TWITTER  -->
+                                <li class="list-inline-item exibir">
+                                    <a href="https://twitter.com/JusticaSP"
+                                        target="_blank" title="">
+                                        <i class='fa-brands fa-x-twitter fa-3x'></i>
+                                    </a>
+                                </li>
+                                <!-- FIM TWITTER  -->
+                                
+
+                                
+                                <!-- INICIO INSTAGRAM  -->
+                                <li class="list-inline-item exibir">
+                                    <a href="https://www.instagram.com/justicasp/"
+                                        target="_blank" title="">
+                                        <i class='fab fa-instagram fa-3x'></i>
+                                    </a>
+                                </li>
+                                <!-- FIM INSTAGRAM  -->
+                                
+
+                                
+
+                                
+                                <!-- INICIO YOUTUBE  -->
+                                <li class="list-inline-item exibir">
+                                    <a href="https://www.youtube.com/user/justicasp"
+                                        target="_blank" title="">
+                                        <i
+                                            class='fab fa-youtube fa-3x'></i>
+                                    </a>
+                                </li>
+                                <!-- FIM YOUTUBE  -->
+                                
+
+
+                                
+
+                                
+                                <!--INICIO Flickr -->
+                                <li class="list-inline-item exibir">
+                                    <a href="https://www.flickr.com/photos/justicaecidadaniasp/albums/"
+                                        target="_blank" title="">
+                                        <i class='fa-brands fa-flickr fa-3x'></i>
+                                    </a>
+                                </li>
+                                <!--FIM Flickr -->
+                                
+                                
+                                
+                                <!--FIM Threads-->
+
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        
+        
+    
+
+    
+        
+
+
+
+
+
+        
+
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div></div></div>
+<div class="wpthemeClear"></div>
+
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<!--end main content-->
+	<footer>
+		<div class="container">
+			<div class="row justify-content-between">
+				<style>
+    footer{
+       color: #FFF !important;
+    }
+    footer h4{
+       color: #FFF !important;
+    }
+
+@media (max-width: 767px) {
+  footer h4.semIcon::after{
+    color: black;
+  }
+}
+
+
+</style>
+
+<div class="col-lg-9">
+	<div class='row footerSecoes06bb724d-b7ba-43b0-a824-06760dceea1b'>
+	</div>
+</div>
+<script>
+function montarFooter(...itens){
+
+  itens.forEach((item) =>{
+     if(!(item === "" || item === "Nenhuma")){
+         let itensDoMenu = document.querySelectorAll(".navbar-nav .nav-item > a");
+         itensDoMenu.forEach((itemMenu) =>{
+             if(itemMenu.textContent.trim() === item){
+
+                  let proximoItem = itemMenu.nextSibling;
+
+                      let divCol4 = document.createElement("div");
+                      divCol4.classList.add("col-lg-4");
+
+                  if(proximoItem.nextSibling){
+
+       let textId = itemMenu.textContent.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
+  
+       let divDosTitulos = document.createElement("div");
+       divDosTitulos.setAttribute('id', `titulos${textId}`);
+
+       let tituloH4Desktop = document.createElement("h4");
+       tituloH4Desktop.setAttribute("class", 'd-none d-md-block');
+       tituloH4Desktop.textContent = itemMenu.textContent.trim();
+
+       let tituloH4Mobile = document.createElement("h4");
+       tituloH4Mobile .setAttribute("class", 'd-block d-md-none collapsed');
+       tituloH4Mobile .textContent = itemMenu.textContent.trim();
+       tituloH4Mobile .setAttribute("aria-controls", `collapse${textId}`);
+       tituloH4Mobile .setAttribute("aria-expanded", "true");
+       tituloH4Mobile .setAttribute("data-target", `#collapse${textId}`);
+       tituloH4Mobile .setAttribute("data-toggle", "collapse");
+       tituloH4Mobile .setAttribute("role", "button");
+
+       divDosTitulos.appendChild(tituloH4Desktop);
+       divDosTitulos.appendChild(tituloH4Mobile);
+       divCol4.appendChild(divDosTitulos);
+
+       let divDaLista = document.createElement("div");
+       divDaLista.setAttribute('aria-labelledby',`titulos${textId}`);
+       divDaLista.setAttribute('class',"collapse show");
+       divDaLista.setAttribute('id',`collapse${textId}`);
+
+       let ulDaLista = document.createElement("ul");
+       
+         for(let i = 0; i < proximoItem.nextSibling.children.length; i++){
+           if(!(proximoItem.nextSibling.children[i].classList.contains("dropdown"))){
+     
+                let liDaLista = document.createElement("li");
+  
+                let aDaLista = document.createElement("a");
+
+                let urlAtual = window.location.hostname;
+                if(!(proximoItem.nextSibling.children[i].firstElementChild.href.includes(urlAtual))){
+                   aDaLista.setAttribute("target", "_blank");
+                }
+                aDaLista.setAttribute("href", proximoItem.nextSibling.children[i].firstElementChild.href);
+                aDaLista.textContent = proximoItem.nextSibling.children[i].firstElementChild.textContent.trim();
+             
+                liDaLista.appendChild(aDaLista);
+                ulDaLista.appendChild(liDaLista);
+             }
+       }
+       divDaLista.appendChild(ulDaLista);
+       divCol4.appendChild(divDaLista);
+
+                 }else{
+   
+                      let tagH4 = document.createElement("h4");
+                      tagH4.setAttribute("class", "semIcon");
+                      
+                      let tagA = document.createElement("a");
+                      tagA.textContent = itemMenu.textContent.trim();
+                      tagA.setAttribute("href", itemMenu.href);
+
+                      tagH4.appendChild(tagA);
+                      divCol4.appendChild(tagH4);
+             
+                      if(itemMenu.attributes["target"]){
+                        tagA.setAttribute("target", "_blank");
+                      }
+                 }
+
+                      document.querySelector(".footerSecoes06bb724d-b7ba-43b0-a824-06760dceea1b").appendChild(divCol4);
+              }
+         });
+     }
+     
+  });
+  
+}
+
+montarFooter('Institucional', 
+             'Canais de Comunicação',
+             '',
+             '',
+             '',
+             '',
+             '');
+</script>
+
+<div class="col-lg-3">
+					<div class="row">
+						<div class="col-12 footer-menu">
+							<h4>
+								<a href="https://fala.sp.gov.br" target="_blank">Fala SP</a> 
+							</h4>
+						</div>
+						<div class="col-12 footer-menu">
+							<h4>
+								<a href="http://www.transparencia.sp.gov.br/" target="_blank">Transpar&ecirc;ncia</a>
+							</h4>
+						</div>
+						<div class="col-12 footer-menu">
+							<h4>
+								<a href="https://www.cms.sp.gov.br/cms/termo-uso" target="_blank"
+									style="text-decoration: none;">Termo de Uso</a>
+							</h4>
+						</div>
+						<div class="col-12 footer-menu">
+							<h4>
+								<a href="https://www.cms.sp.gov.br/cms/politica-privacidade" target="_blank"
+									style="text-decoration: none;">Política de Privacidade</a>
+							</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row align-items-center mt-5 text-center text-md-left">
+				<div class="col-12 col-md">
+					<a href="https://www.sp.gov.br/">
+						<img src="/statics/img/logo-footer.png" alt="Logo São Paulo - Governo do Estado"
+							target="_blank">
+					</a>
+				</div>
+				<div class="col-12 col-md-auto">
+					<ul class="list-inline redes">
+						<li class="list-inline-item text-mob">
+							<p class="small">Acompanhe as novidades do Governo do Estado de São Paulo</p>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.facebook.com/governosp/" target="_blank">
+								<i class="fab fa-facebook-f fa-xl"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.twitter.com/governosp/" target="_blank">
+								<i class="fa-brands fa-x-twitter fa-xl"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.instagram.com/governosp/" target="_blank">
+								<i class="fab fa-instagram fa-xl"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.linkedin.com/company/governosp/" target="_blank">
+								<i class="fab fa-linkedin-in fa-xl"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.youtube.com/governosp/" target="_blank">
+								<i class="fab fa-youtube fa-xl"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.tiktok.com/@governosp" target="_blank">
+								<i class="fab fa-tiktok fa-xl"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://whatsapp.com/channel/0029Va4tIbCFHWq7sOctpz23" target="_blank">
+								<i class="fa-brands fa-whatsapp fa-xl"></i>
+							</a>
+						</li>
+						<li class="list-inline-item">
+							<a href="https://www.flickr.com/photos/governosp" target="_blank">
+								<i class="fa-brands fa-flickr fa-xl"></i>
+							</a>
+						</li>
+						<!-- Adicionar Rede Social Threads -->
+						<li class="list-inline-item">
+							<a href="https://www.threads.com/@governosp" target="_blank">
+								<i class="fa-brands fa-threads fa-xl"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="text-center copyright mt-5">
+				<p>
+					<strong>© 2026 CMS.SP.GOV.BR. Todos os direitos reservados.</strong>
+				</p>
+				<!-- footer-->
+				<p class="direitos">
+					Este site e todo o seu conteúdo, incluindo textos, imagens e design, são protegidos por direitos
+					autorais e não podem ser reproduzidos, distribuídos ou modificados sem permissão expressa. Para mais
+					informações ou para solicitações de uso, acesse nosso site <a href="https://cms.sp.gov.br/cms">
+						cms.sp.gov.br </a> - sistema de gerenciamento de conteúdo do Estado de São Paulo.
+				</p>
+			</div>
+		</div>
+
+		<div id="barraAcessibilidade">
+			<div class="collapse" id="menuAcessibilidade">
+				<a href="#" class="d-flex align-items-center" id="aumentaFonte" accesskey="1">
+					<i class="fas fa-plus mr-2"></i>
+					<span class="mr-2">Aumentar fonte</span>
+				</a>
+				<a href="#" class="d-flex align-items-center" id="reduzFonte" accesskey="2">
+					<i class="fas fa-minus mr-2"></i>
+					<span class="mr-2">Diminuir fonte</span>
+				</a>
+				<a href="#" class="d-flex align-items-center" id="altocontraste" accesskey="3">
+					<i class="fas fa-palette mr-2"></i>
+					<span class="mr-2">Preto e branco</span>
+				</a>
+				<a href="#" class="d-flex align-items-center" id="invertColors" accesskey="4">
+					<i class="fas fa-palette mr-2" style="opacity: 0.5;"></i>
+					<span class="mr-2">Inverter cores</span>
+				</a>
+				<a href="#" class="d-flex align-items-center" id="highlightLinks" accesskey="4">
+					<i class="fas fa-magnet mr-2"></i>
+					<span class="mr-2">Destacar links</span>
+				</a>
+			</div>
+			<a href="#menuAcessibilidade" id="btnAcessibilidade"
+				style="padding: 0px 9px 0px 0px; background-image: none;" onclick="toggleAcessibilidadeMenu(event)">
+				<img class="" src="/statics/img/acessibilidade.png"></a>
+		</div>
+
+		
+
+  	<!-- Acessibilidade -->
+  	<script src="/statics/js/script-acessibilidade.js"></script>
+  	
+  		<!--   VLibras -->
+	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+	
+	 <script>
+	   new window.VLibras.Widget('https://vlibras.gov.br/app');
+	 </script>
+ 
+ </footer>
+	<!-- end frame -->
+
+	<!-- This is responsible for bootstrapping the configuration for the javascript framework. 
+        This is located here instead of the head section to improve client performance. -->
+	<div class="wpthemeComplementaryContent" id="wpthemeComplementaryContent" role="region" tabindex="-1"
+		aria-labelledby="wpthemeComplementaryContentText">
+		<span class="wpthemeAltText" id="wpthemeComplementaryContentText">Complementary Content</span>
+		<script type="text/javascript" src="/contenthandler/!ut/p/digest!Dal1CObNXebH8jDfutHTCA/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777427345778&amp;entry=wp_portal__0.0%3Aconfig_config_static&amp;entry=wcm_config__0.0%3Aconfig_config_static&amp;entry=wcm_inplaceEdit__0.0%3Aconfig_config_static"></script><script type="text/javascript">i$.merge({"ibmCfg":{"themeConfig":{"themeUniqueName":"SPTheme","themeRootURI":"/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/war/SPTheme/themes/html/SPTheme","themeWebAppBaseURI":"/SPTheme/themes/html/dynamicSpots","themeWebDAVBaseURI":"war:SPTheme/themes/html/SPTheme/","modulesWebAppBaseURI":"/themeModules","commonResourcesRootURI":"/contenthandler/!ut/p/digest!Dal1CObNXebH8jDfutHTCA/dav/fs-type1/common-resources","isRTL":false,"isPageRenderModeCSA":false,"portletOverridePageTitle":"SEC. JUSTIÇA","currentContentNodeOID":"Z6_086423G03HEOD06U7G8HUVUIC5","loadingImage":"css/images/loading.gif","dndSourceDefinitions":[],"categorySources":["system/WebContentCategory.json,label:shelf_socialCategory"],"styleSources":[],"layoutSources":["war:SPTheme/themes/html/SPTheme/system/layouts.json"]},"portalConfig":{"locale":"pt-br","portalURI":"","contentHandlerURI":"/contenthandler/!ut/p/digest!XxchXHvecs1E6AMXjFintQ/","pocURI":"/!ut/p/z0/0wcA1NLTeQ!!/","isVirtualPortal":false,"canImpersonate":false,"themeRootURI":"/SPTheme/themes/html/dynamicSpots","parentPageID":"Z6_000000000000000000000000A0","currentPageOID":"Z6_086423G03HEOD06U7G8HUVUIC5","canAnonymousUserViewCurrentPage":true,"bootstrapState":"&lt;?xml version=&#034;1.0&#034; encoding=&#034;UTF-8&#034;?&gt;&lt;root xmlns=&#034;http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/portal-state&#034;&gt;&lt;state type=&#034;navigational&#034;&gt;&lt;selection selection-node=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034;&gt;&lt;mapping src=&#034;Z6_000000000000000000000000A0&#034; dst=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034;/&gt;&lt;mapping src=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034; dst=&#034;Z6_000000000000000000000000A0&#034;/&gt;&lt;/selection&gt;&lt;expansions&gt;&lt;node id=&#034;Z6_000000000000000000000000A0&#034;/&gt;&lt;/expansions&gt;&lt;/state&gt;&lt;/root&gt;","isUserLoggedIn":false,"currentUser":"anonymous portal user","currentUserOID":"","aggregatedStyle":null,"isCurrentPageEditable":true,"wcmPageMetadata":{"contentRoot":null,"sharingScope":null},"projectUUID":null},"userName":""},"com_ibm_theme_capabilities":{"wp_dynamicContentSpots_85":"0.0","wp_dialog_draggable":"0.0","getting_started_module":"0.0","wp_hiddenpages":"0.0","wp_simple_contextmenu_ext":"0.0","wp_simple_contextmenu_js":"0.0","wp_toolbar_sitepreview_menuactions":"0.0","wp_portlet_css":"0.0","wp_theme_utils":"0.0","SPTheme":"0.0","wp_toolbar_menuactions":"0.0","wp_toolbar_host_view":"0.0","wp_hiddencontent":"0.0","wp_theme_skin_region":"0.0","wp_portal":"0.0","photon.dom":"1.0","wp_photon_dom":"0.0","wp_toolbar_sitepreview":"0.0","highContrast":"1.0","wp_status_bar":"0.0","wp_client_tracing":"0.0","modules":"0.1","hasBaseURL":"true","wp_state_page_modes":"0.0","wp_toolbar_common_actionbar":"0.0","wp_gridlayout":"0.0","wp_client_main":"0.0","wp_toolbar_viewframe_validator":"0.0","wp_high_contrast":"0.0","wp_toolbar_actionbar":"0.0","simple-contextmenu":"1.1","wp_dialog_css":"0.0","wp_theme_menus":"0.0","wp_client_logging":"0.0","wp_state_page":"0.0","wp_toolbar_common":"0.0","wp_theme_portal_edit_85":"0.0","wp_toolbar_projectmenu":"0.0","wp_dialog_main":"0.0","wp_ic4_wai_resources":"0.0","wp_simple_contextmenu_main":"0.0","wp_layout_windowstates":"0.0","wp_toolbar_moremenu":"0.0","wp_custom_page_style":"0.0","wp_toolbar_contextmenu":"0.0","wp_searchbar":"0.0","wp_toolbar_informationmode":"0.0","wp_client_ext":"0.0","wp_simple_contextmenu_css":"0.0","wp_toolbar85":"0.0","wp_modules":"0.0","wp_analytics_aggregator":"0.0","toolbar":"8.5","wp_dialog_util":"0.0","wp_oob_sample_styles":"0.0","wp_toolbar_utils":"0.0","a11y":"1.0","wp_a11y":"0.0","analytics_aggregator":"8.0","wp_theme_portal_85":"0.0","wp_simple_contextmenu_templates":"0.0","wp_toolbar_logo":"0.0"},"com_ibm_device_class":[]});ibmCfg.portalConfig.bootstrapState=(ibmCfg.portalConfig.bootstrapState||"").replace(/&lt;/gm, '<').replace(/&gt;/gm, '>').replace(/&amp;/gm, '&').replace(/&#039;/gm, "'").replace(/&#034;/gm, '"');i$.merge({"ibmCfg":{"portalConfig":{"asaConfig":{"canViewAsaReports":"false","canViewAsaSitePromotions":"false","canCreateAsaSitePromotions":"false","canDeleteAsaSitePromotions":"false","reportConfig":{"scopes":[]}}}}});i$.merge({"ibmCfg":{"portalConfig":{"isShowHiddenPages":false}}});</script><script type="text/javascript" src="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777435300000&amp;entry=wp_dialog_main__0.0%3Aconfig_js&amp;entry=wp_high_contrast__0.0%3Aconfig_js&amp;entry=wp_toolbar_utils__0.0%3Aconfig_js&amp;entry=wp_state_page_modes__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_ext__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_js__0.0%3Aconfig_js&amp;entry=wp_toolbar_actionbar__0.0%3Aconfig_js&amp;entry=wp_toolbar_menuactions__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview_menuactions__0.0%3Aconfig_js&amp;entry=wp_ic4_wai_resources__0.0%3Aconfig_js&amp;entry=wp_theme_skin_region__0.0%3Aconfig_js&amp;entry=wp_status_bar__0.0%3Aconfig_js&amp;entry=wp_toolbar_projectmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_contextmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview__0.0%3Aconfig_js"></script><a rel="alternate" id="config_js_deferred" href="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777427346000&amp;entry=wp_liveobject_framework_core__0.0%3Aconfig_js&amp;entry=wp_portal_ui_utils__0.0%3Aconfig_js&amp;entry=wp_contextmenu_js__0.0%3Aconfig_js&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Aconfig_js&amp;entry=wp_skin_cam__0.0%3Aconfig_js&amp;entry=wp_contextmenu_config_lof__0.0%3Aconfig_js&amp;entry=wp_federated_documents_picker__0.0%3Aconfig_js&amp;entry=wp_dnd_main__0.0%3Aconfig_js&amp;entry=wp_movecontrols__0.0%3Aconfig_js&amp;entry=wp_toolbar_controlactions__0.0%3Aconfig_js&amp;entry=wp_content_targeting_cam__0.0%3Aconfig_js&amp;entry=wp_analytics_tags__0.0%3Aconfig_js&amp;deferred=true" style="display:none"> Deferred Modules </a><span id="simpleMenuTemplate" class="wpthemeMenuLeft">
+    <div class="wpthemeMenuBorder">
+        <div class="wpthemeMenuNotchBorder"></div>
+        <!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+        <ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+            <li class="${css-class}" role="menuitem" tabindex="-1" aria-label="${title}"><span class="wpthemeMenuText">${title}</span>${badge}</li>
+        </ul>
+    </div>
+    <!-- Template for loading -->
+    <div class="wpthemeMenuLoading wpthemeMenuLoadingText wpthemeTemplateLoading">${loading}</div>
+    <!-- Template for submenu -->
+    <div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+        <div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+            <ul id="${submenu-id}" class="wpthemeMenuDropDown" role="menu"><li role="menuitem" tabindex="-1"></li></ul>
+        </div>
+    </div>
+</span><a rel="alternate" id="config_markup_deferred" href="/contenthandler/!ut/p/digest!f2tmtn4L-51xsk17QzGE-A/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fplain&amp;entry=wp_contextmenu_templates__0.0%3Aconfig_markup&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Aconfig_markup&amp;entry=wp_skin_cam__0.0%3Aconfig_markup&amp;entry=wp_dnd_main__0.0%3Aconfig_markup&amp;deferred=true" style="display:none"> Deferred Modules </a></div>
+	<!-- Modal Aviso Timeout -->
+	<div id="modal-screen-alt">
+		<div id="overlay" class="overlay"></div>
+		<div class="body-login">
+			<div class="container custom-modal modal-login">
+				<div id="meuModal" class="modalConexao">
+					<div class="modal-conteudo">
+						<h2>Sua sessão está prestes a expirar. Deseja continuar conectado?</h2>
+						<button id="continuarSessao"
+							class="btn btn-outline-custom rounded-pill btn-manterConexao col-lg-5 m-2"
+							onclick="renewSession()">Manter Conexão</button>
+						<button id="sairSessao" class="btn btn-outline-custom rounded-pill col-lg-5 m-2"
+							onclick="logout()">Sair</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal LGPD -->
+	<div id="lgpdModal" aria-labelledby="modalLgpd" class="lgpd-modal" role="dialog" aria-modal="true">
+		<p>
+			Este site utiliza apenas cookies essenciais para garantir seu funcionamento e melhorar sua experiência
+			de navegação. Ao continuar, você declara aceitar e estar de acordo com nossos
+			<a href="https://www.cms.sp.gov.br/cms/termo-uso" target="_blank">Termo de Uso</a> e
+			<a href="https://www.cms.sp.gov.br/cms/politica-privacidade" target="_blank">Política de Privacidade</a>.
+		</p>
+		<button type="submit" id="cadastrar" class="lgpd-btn">Aceitar</button>
+	</div>
+		<script>
+		const modalWarningCms = document.getElementById("modalCustomWarning");
+		const btnCloseWarningCms = document.querySelector(".btn-close-modal-warning-cms");
+
+		function abrirModalWarningCms() {
+			modalWarningCms.style.display = "block";
+		}
+
+		btnCloseWarningCms.onclick = function () {
+			modalWarningCms.style.display = "none";
+		}
+
+		window.onclick = function (event) {
+			if (event.target === modalWarningCms) {
+				modalWarningCms.style.display = "none";
+			}
+		}
+	</script>
+<a href="/decpti0n.html" style='display:none'>login</a></body>
+
+</html>

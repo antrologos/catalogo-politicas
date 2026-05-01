@@ -1,0 +1,30 @@
+# Bloqueia bots indesejados (ajuste conforme necessário)
+User-agent: *
+Disallow: /secupress-08603ddf/
+Disallow: /wp-admin/
+Disallow: /wp-login.php
+Disallow: /wp-register.php
+Disallow: /wp-includes/
+Disallow: /wp-content/plugins/
+Disallow: /wp-content/themes/
+Disallow: /wp-json/
+
+# Permite acesso ao conteúdo público
+Allow: /wp-content/uploads/
+Allow: /wp-content/cache/
+
+# Bloqueia o acesso a arquivos específicos
+Disallow: /xmlrpc.php
+Disallow: /trackback/
+Disallow: /comments/
+Disallow: /wp-comments-post.php
+
+# Impede que a busca interna seja indexada
+Disallow: /?s=
+
+# Paginações
+Disallow: /*/page/*
+Disallow: /*?page_id_all=
+
+# Sitemap
+Sitemap: https://portalgerais.com/sitemap_index.xml

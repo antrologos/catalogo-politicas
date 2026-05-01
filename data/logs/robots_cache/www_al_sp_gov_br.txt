@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /web
+Disallow: /StaticFile
+Disallow: /repositorio/contratos
+Sitemap: https://www.al.sp.gov.br/sitemap.xml

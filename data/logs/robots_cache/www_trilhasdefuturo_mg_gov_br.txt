@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+User-agent: *
+Disallow: /app/verificacao/
+
+Sitemap: https://trilhasdefuturo.mg.gov.br/sitemap.xml

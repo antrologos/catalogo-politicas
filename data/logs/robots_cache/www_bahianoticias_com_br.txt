@@ -1,0 +1,15 @@
+# *
+User-agent: *
+Disallow: /mais-lidas-embed
+Disallow: /adm
+Disallow: /pesquisa?
+Allow: /
+
+# Google Ad Manager
+User-agent: Mediapartners-Google
+Allow: /
+
+
+# Sitemaps
+Sitemap: https://www.bahianoticias.com.br/gcma_includes/sitemap.php?update
+Sitemap: https://www.bahianoticias.com.br/api/v1/news-sitemap.php
