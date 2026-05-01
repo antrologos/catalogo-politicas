@@ -9,8 +9,8 @@ layout: layouts/base.njk
 {% include "components/breadcrumb.njk" %}
 
 <article data-pagefind-body
-         data-pagefind-meta="uf:{{ p.uf }}"
-         data-pagefind-filter="uf:{{ p.uf }}, situacao:{{ p.situacao_atual }}, tipo:{{ p.tipo_politica }}"
+         data-pagefind-meta="uf:{{ p.uf }}, ano:{{ p.ano_criacao or '—' }}"
+         data-pagefind-filter="uf:{{ p.uf }}, situacao:{{ p.situacao_atual }}, tipo:{{ p.tipo_politica }}{% if p.modalidade_oferta %}, modalidade:{{ p.modalidade_oferta }}{% endif %}{% if p.fonte_arquivo_path %}, snapshot:Disponível{% else %}, snapshot:Indisponível{% endif %}"
          class="prose prose-neutral max-w-none">
 
   <header class="border-b border-neutral-200 pb-lg mb-xl">
