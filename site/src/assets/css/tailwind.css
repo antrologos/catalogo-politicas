@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Foco amarelo gov.uk em todos os elementos focáveis */
+  :focus-visible {
+    outline: 3px solid theme('colors.focus');
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px theme('colors.focus / 30%');
+  }
+
+  body {
+    @apply bg-white text-neutral-900 font-sans;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 { @apply text-3xl font-bold tracking-tight mb-md; }
+  h2 { @apply text-2xl font-semibold mt-xl mb-md; }
+  h3 { @apply text-xl font-semibold mt-lg mb-sm; }
+  p  { @apply leading-relaxed; }
+
+  a {
+    @apply text-primary underline underline-offset-2 hover:text-primary-dark;
+  }
+}
+
+@layer components {
+  .container-prose {
+    @apply max-w-container mx-auto px-md;
+  }
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-focus focus:text-neutral-900 focus:p-sm focus:font-bold;
+  }
+  .tag {
+    @apply inline-flex items-center gap-1 px-sm py-2xs rounded text-sm font-medium;
+  }
+  .tag--ativa     { @apply bg-success/15 text-success-dark; }
+  .tag--encerrada { @apply bg-danger/15  text-danger-dark; }
+  .tag--suspensa  { @apply bg-warning/15 text-warning-dark; }
+  .tag--planejamento { @apply bg-info/15 text-info-dark; }
+}

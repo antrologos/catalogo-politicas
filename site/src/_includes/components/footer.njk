@@ -1,0 +1,37 @@
+<footer class="bg-neutral-100 border-t border-neutral-200 mt-3xl" role="contentinfo">
+  <div class="container-prose py-xl grid gap-lg sm:grid-cols-3 text-sm">
+
+    <div>
+      <h2 class="text-base font-semibold mb-sm">Sobre</h2>
+      <ul class="space-y-2xs">
+        <li><a href="{{ '/sobre/' | url }}">Sobre o catálogo</a></li>
+        <li><a href="{{ '/sobre/privacidade/' | url }}">Política de privacidade</a></li>
+        <li><a href="{{ site.github }}" rel="external">Código no GitHub</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-base font-semibold mb-sm">Dados</h2>
+      <p>
+        {{ site.description }}
+      </p>
+      <p class="mt-sm text-xs text-neutral-700">
+        Catálogo elaborado por <strong>{{ site.author }}</strong>.<br>
+        Última atualização: <time datetime="2026-05-01">01/05/2026</time>
+      </p>
+    </div>
+
+    <div>
+      <h2 class="text-base font-semibold mb-sm">Licença</h2>
+      <p>
+        Licenciado sob
+        <a href="{{ site.licenca.url }}" rel="external license">
+          {{ site.licenca.nome }}
+        </a>
+      </p>
+      <p class="mt-sm text-xs">
+        Você pode compartilhar e adaptar mediante atribuição.
+      </p>
+    </div>
+  </div>
+</footer>

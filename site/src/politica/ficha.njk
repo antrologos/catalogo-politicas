@@ -1,0 +1,11 @@
+---
+layout: layouts/ficha.njk
+pagination:
+  data: policies
+  alias: p
+  size: 1
+permalink: "/politica/{{ p.slug }}/"
+eleventyComputed:
+  title: "{{ p.nome_programa }}"
+  description: "{{ p.resumo | safe }}"
+---

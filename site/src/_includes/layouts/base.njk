@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — {% endif %}{{ site.shortTitle }}</title>
+  <meta name="description" content="{{ description or site.description }}">
+  <meta name="author" content="{{ site.author }}">
+  <link rel="canonical" href="{{ site.baseUrl }}{{ page.url | replace(site.pathPrefix, '') }}">
+
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if title %}{{ title }} — {% endif %}{{ site.shortTitle }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.baseUrl }}{{ page.url | replace(site.pathPrefix, '') }}">
+  <meta property="og:locale" content="pt_BR">
+  <meta name="twitter:card" content="summary">
+
+  <!-- Tailwind CSS gerado -->
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+
+  <!-- GoatCounter (LGPD-friendly, sem cookies) -->
+  <script data-goatcounter="https://catalogo-politicas.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"></script>
+</head>
+<body class="min-h-screen flex flex-col">
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo principal</a>
+
+  {% include "components/header.njk" %}
+
+  <main id="conteudo" class="flex-1 container-prose py-xl" role="main">
+    {{ content | safe }}
+  </main>
+
+  {% include "components/footer.njk" %}
+</body>
+</html>

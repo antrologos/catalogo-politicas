@@ -1,0 +1,20 @@
+<header class="bg-primary text-white shadow-md sticky top-0 z-50" role="banner">
+  <div class="container-prose py-md flex flex-col sm:flex-row sm:items-center sm:justify-between gap-md">
+    <a href="{{ '/' | url }}" class="text-white no-underline hover:text-focus flex items-center gap-sm">
+      <span class="text-xl sm:text-2xl font-bold">{{ site.shortTitle }}</span>
+      <span class="text-xs bg-white/20 px-sm py-2xs rounded">{{ site.versao }}</span>
+    </a>
+    <nav aria-label="Principal">
+      <ul class="flex flex-wrap gap-md text-sm sm:text-base">
+        {% for item in site.navegacao %}
+        <li>
+          <a href="{{ item.href | url }}"
+             class="text-white no-underline hover:text-focus underline-offset-4 {% if page.url == item.href %}underline font-semibold{% endif %}">
+            {{ item.texto }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

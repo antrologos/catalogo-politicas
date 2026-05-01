@@ -1,0 +1,11 @@
+<span class="tag tag--{{ p.statusKey }}" aria-label="Situação atual: {{ p.situacao_atual }}">
+  <span aria-hidden="true">
+    {%- if p.statusKey == "ativa" -%}●
+    {%- elif p.statusKey == "encerrada" -%}■
+    {%- elif p.statusKey == "suspensa" -%}▲
+    {%- elif p.statusKey == "planejamento" -%}◆
+    {%- else -%}○
+    {%- endif -%}
+  </span>
+  {{ p.situacao_atual }}
+</span>

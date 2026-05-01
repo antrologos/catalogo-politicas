@@ -1,0 +1,71 @@
+---
+layout: layouts/base.njk
+title: "Início"
+description: "Catálogo interativo de políticas públicas brasileiras sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação."
+---
+<section aria-labelledby="hero-h" class="text-center py-2xl">
+  <h1 id="hero-h" class="text-4xl sm:text-5xl">{{ site.title }}</h1>
+  <p class="text-lg text-neutral-700 mt-md max-w-2xl mx-auto">
+    {{ site.description }}
+  </p>
+  <div class="mt-xl flex flex-wrap gap-md justify-center">
+    <a href="{{ '/buscar/' | url }}"
+       class="bg-primary text-white px-lg py-md rounded font-semibold no-underline hover:bg-primary-dark inline-flex items-center gap-2xs">
+      🔍 Buscar políticas
+    </a>
+    <a href="{{ '/sobre/' | url }}"
+       class="border-2 border-primary text-primary px-lg py-md rounded font-semibold no-underline hover:bg-primary hover:text-white">
+      Sobre o catálogo
+    </a>
+  </div>
+</section>
+
+<section aria-labelledby="kpi-h" class="grid grid-cols-1 sm:grid-cols-3 gap-lg my-2xl">
+  <h2 id="kpi-h" class="sr-only">Estatísticas do catálogo</h2>
+
+  <div class="bg-primary text-white p-lg rounded text-center">
+    <p class="text-4xl font-bold">439</p>
+    <p class="text-sm mt-2xs">políticas catalogadas</p>
+    <p class="text-xs mt-2xs opacity-80">No PoC, mostrando 10</p>
+  </div>
+
+  <div class="bg-success text-white p-lg rounded text-center">
+    <p class="text-4xl font-bold">9 + Federal</p>
+    <p class="text-sm mt-2xs">UFs cobertas (1ª onda)</p>
+  </div>
+
+  <div class="bg-info text-white p-lg rounded text-center">
+    <p class="text-4xl font-bold">148</p>
+    <p class="text-sm mt-2xs">snapshots normativos</p>
+  </div>
+</section>
+
+<section aria-labelledby="amostra-h">
+  <h2 id="amostra-h">Amostra do catálogo (PoC: 1 política por UF)</h2>
+  <p class="text-sm text-neutral-700">Esta é uma demonstração de 10 fichas selecionadas para validar a stack. A versão completa terá 439 fichas.</p>
+
+  <ul class="grid gap-md mt-lg sm:grid-cols-2 list-none p-0">
+    {% for p in policies %}
+    <li class="border border-neutral-200 rounded p-lg hover:shadow-md transition-shadow">
+      <h3 class="text-lg mt-0">
+        <a href="{{ ('/politica/' + p.slug + '/') | url }}">{{ p.nome_programa }}</a>
+      </h3>
+      <p class="text-sm text-neutral-700 my-sm">
+        <strong>UF:</strong> {{ p.uf }} ·
+        <strong>Tipo:</strong> {{ p.tipo_politica }}
+      </p>
+      <p class="text-sm">{{ p.resumo | truncate(180) }}</p>
+      <p class="mt-sm">{% include "components/tag-status.njk" %}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section aria-labelledby="cobertura-h" class="mt-2xl bg-neutral-100 p-lg rounded">
+  <h2 id="cobertura-h">Cobertura geográfica (1ª onda)</h2>
+  <p>O catálogo cobre <strong>9 unidades da federação + Federal</strong>: SP, RJ, MG, PR, RS, BA, PA, PE, CE.</p>
+  <p class="text-sm text-neutral-700 mt-sm">
+    Outras UFs não estão cobertas nesta primeira onda. Planejamos expansão em ondas futuras —
+    veja <a href="{{ '/sobre/cobertura/' | url }}">cronograma de cobertura</a>.
+  </p>
+</section>

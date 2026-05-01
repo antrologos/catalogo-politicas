@@ -1,0 +1,35 @@
+---
+layout: layouts/base.njk
+title: "Página não encontrada (404)"
+permalink: /404.html
+---
+<section aria-labelledby="erro-h" class="text-center py-2xl">
+  <p class="text-6xl font-bold text-primary">404</p>
+  <h1 id="erro-h" class="mt-md">Página não encontrada</h1>
+  <p class="text-lg mt-md">
+    A página que você procura não existe ou foi movida.
+  </p>
+
+  <div class="mt-xl flex flex-wrap gap-md justify-center">
+    <a href="{{ '/' | url }}"
+       class="bg-primary text-white px-lg py-md rounded font-semibold no-underline hover:bg-primary-dark">
+      Voltar à página inicial
+    </a>
+    <a href="{{ '/buscar/' | url }}"
+       class="border-2 border-primary text-primary px-lg py-md rounded font-semibold no-underline hover:bg-primary hover:text-white">
+      Buscar políticas
+    </a>
+  </div>
+</section>
+
+<section aria-labelledby="exemplos-h" class="mt-2xl bg-neutral-100 p-lg rounded">
+  <h2 id="exemplos-h">Talvez você queira ver:</h2>
+  <ul class="mt-md grid gap-sm sm:grid-cols-2 list-none p-0">
+    {% for p in policies %}
+    <li>
+      <a href="{{ ('/politica/' + p.slug + '/') | url }}">{{ p.nome_programa }}</a>
+      <span class="text-xs text-neutral-700"> · {{ p.uf }}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

@@ -1,0 +1,102 @@
+---
+layout: layouts/base.njk
+title: "Buscar políticas"
+description: "Busca textual e filtros facetados no catálogo de políticas públicas."
+permalink: /buscar/
+---
+<section aria-labelledby="busca-h">
+  <h1 id="busca-h">Buscar políticas</h1>
+  <p>Busque por nome, órgão, base legal ou termos do resumo. Use filtros para restringir por UF, situação ou tipo.</p>
+
+  <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-lg mt-xl">
+
+    <!-- Painel de filtros -->
+    <aside aria-labelledby="filtros-h" class="bg-neutral-100 p-md rounded">
+      <h2 id="filtros-h" class="text-base mt-0">Filtros</h2>
+
+      <fieldset class="mt-md">
+        <legend class="font-semibold text-sm mb-sm">UF</legend>
+        <div class="space-y-2xs text-sm">
+          {% set ufs = policies | groupByUf %}
+          {% for uf, list in ufs %}
+          <label class="flex items-center gap-2xs">
+            <input type="checkbox" name="uf" value="{{ uf }}" class="filter-input">
+            <span>{{ uf }}</span>
+            <span class="text-neutral-700 ml-auto">({{ list | length }})</span>
+          </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+
+      <fieldset class="mt-md">
+        <legend class="font-semibold text-sm mb-sm">Situação</legend>
+        <div class="space-y-2xs text-sm">
+          {% set situacoes = policies | countByKey("situacao_atual") %}
+          {% for sit, n in situacoes %}
+          <label class="flex items-center gap-2xs">
+            <input type="checkbox" name="situacao" value="{{ sit }}" class="filter-input">
+            <span>{{ sit }}</span>
+            <span class="text-neutral-700 ml-auto">({{ n }})</span>
+          </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+
+      <fieldset class="mt-md">
+        <legend class="font-semibold text-sm mb-sm">Tipo de política</legend>
+        <div class="space-y-2xs text-sm">
+          {% set tipos = policies | countByKey("tipo_politica") %}
+          {% for tipo, n in tipos %}
+          <label class="flex items-center gap-2xs">
+            <input type="checkbox" name="tipo" value="{{ tipo }}" class="filter-input">
+            <span>{{ tipo }}</span>
+            <span class="text-neutral-700 ml-auto">({{ n }})</span>
+          </label>
+          {% endfor %}
+        </div>
+      </fieldset>
+    </aside>
+
+    <!-- Resultados -->
+    <main aria-labelledby="resultados-h">
+      <label class="block">
+        <span class="font-semibold text-sm">Buscar texto</span>
+        <input type="search" id="busca-input" placeholder="Digite nome, sigla, órgão..."
+               class="w-full mt-2xs p-md border border-neutral-500 rounded focus:border-primary"
+               autocomplete="off">
+      </label>
+
+      <p id="resultados-h" class="mt-md text-sm text-neutral-700"
+         aria-live="polite">
+        <span id="contador">{{ policies | length }}</span> políticas encontradas
+      </p>
+
+      <ul id="lista-resultados" class="mt-md space-y-md list-none p-0">
+        {% for p in policies %}
+        <li class="resultado border border-neutral-200 rounded p-md"
+            data-uf="{{ p.uf }}"
+            data-situacao="{{ p.situacao_atual }}"
+            data-tipo="{{ p.tipo_politica }}"
+            data-nome="{{ p.nome_programa | lower }}"
+            data-resumo="{{ p.resumo | lower }}">
+          <h3 class="text-base mt-0">
+            <a href="{{ ('/politica/' + p.slug + '/') | url }}">{{ p.nome_programa }}</a>
+          </h3>
+          <p class="text-sm my-sm">
+            <strong>{{ p.uf }}</strong> · {{ p.tipo_politica }}
+          </p>
+          <p class="text-sm">{{ p.resumo | truncate(180) }}</p>
+          <p class="mt-sm">{% include "components/tag-status.njk" %}</p>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <p id="vazio" class="hidden mt-md p-md bg-neutral-100 rounded text-center">
+        Nenhuma política encontrada. Limpe filtros ou tente outro termo.
+      </p>
+    </main>
+
+  </div>
+</section>
+
+<script src="{{ '/assets/js/busca.js' | url }}" defer></script>
