@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Status: Bloco A concluído (2026-05-01).** Estrutura `.claude/` consolidada. Antes de qualquer trabalho, leia `.claude/README.md` para o mapa da meta-estrutura e as convenções vigentes.
+> **Status: Blocos A, B, C, D e E concluídos (2026-05-01).** Site PoC no ar em https://antrologos.github.io/catalogo-politicas/. Próximo: Bloco F (construção site MVP completo). Antes de qualquer trabalho, leia `.claude/README.md` para o mapa da meta-estrutura e o plano formal `.claude/plans/2026-05-01_bloco-f-construcao-site.md`.
 
 ## Propósito do projeto
 
@@ -30,19 +30,39 @@ Plano detalhado: `C:\Users\antro\.claude\plans\meu-intuito-criar-composed-pixel.
 
 ## Onde estamos agora
 
-**Blocos A, B, C e D concluídos** (2026-05-01). Próximo: Bloco E (pesquisa UI/UX + benchmark + decisão de stack). Estado atual:
+**Blocos A, B, C, D e E concluídos** (2026-05-01). Próximo: **Bloco F (construção do site MVP)**. Plano formal: `.claude/plans/2026-05-01_bloco-f-construcao-site.md`.
 
+### Estado dos dados (Blocos C+D)
 - **439 fichas** validadas (schema v0.2, completude média 94.5%) em `data/derived/policies-onda-1-2026-05-01.json` + `latest.json`
-- **242 fichas com snapshot capturado** (federais replicadas em UFs compartilham mesma URL); restante sem snapshot por placeholder/falha persistente
-- **148 snapshots únicos** (124 HTML + 12 PDF + 12 dedup) em `data/external_snapshots/<sha[:2]>/<sha>.<ext>` com `index.json`
+- **242 fichas com snapshot capturado**; **148 snapshots únicos** (124 HTML + 12 PDF + 12 dedup) em `data/external_snapshots/<sha[:2]>/<sha>.<ext>` com `index.json`
 - **Vocabulário canônico v1.0** + drift normalizado em 99%+ dos valores
-- **136 URLs OK** (75% dos 182 únicos); 71 URLs com falha persistente (gov.br WAF, planalto timeout, DNS/SSL erro)
-- **Skill `capturar-norma` v2.0**: GET fallback 403, retry planalto, OCR PDF (Tesseract pt), DOC (LibreOffice), ODT, dedup SHA-256, atualização automática `index.json`
-- **Pipeline de revalidação** funcional (`just revalidar` / `just revalidar-todas`) — comparação SHA, marcação `superseded_by_sha256`
-- **57/57 testes passam** (toy + integração + 14 unit do capturar_norma com mock httpx)
-- **0 erros** na validação JSON Schema v0.2
+- **136 URLs OK** (75% dos 182 únicos); 71 com falha persistente (gov.br WAF, planalto timeout)
+- **Skill `capturar-norma` v2.0**: GET fallback 403, retry planalto, OCR PDF, DOC/ODT, dedup SHA-256
+- **Pipeline de revalidação** funcional (`just revalidar` / `just revalidar-todas`)
+- **57/57 testes passam**; 0 erros JSON Schema v0.2
 - **Tesseract OCR + LibreOffice** instalados (paths em `scripts/captura/_external_tools.py`)
-- Relatórios: `data/derived/quality-report-bloco-c-*.md`, `quality-report-bloco-d-*.md`
+
+### Bloco E — UX/Stack/Wireframes/Design (concluído 2026-05-01)
+- **PoC Eleventy validado em ~1.5h** (vs 16h alvo). Site no ar em **https://antrologos.github.io/catalogo-politicas/**
+- **Repositório público**: https://github.com/antrologos/catalogo-politicas (CC-BY 4.0)
+- **Stack confirmada**: Eleventy 3 + Tailwind 3 + Pagefind 1 + Vanilla JS / Alpine + D3 + Cytoscape (ADR-007)
+- **55 Must consolidados** (E.2.D + ADR-010); 8 wireframes ambiciosos: W1 Home, W2 Busca, W3 Ficha, W4 UF, W5 Comparação, W6 Mapa, W7 Grafo, W8 Sobre + W7' 404
+- **Sistema de design enxuto** documentado em `.claude/working/E5-design-system.md` (12 componentes mínimos, paleta gov.uk-inspired #0066cc + foco amarelo #ffdd00, política B prevalece em conflitos a11y)
+- **Persona primária**: Técnico/Coordenador estadual; **secundária**: Pesquisador acadêmico (citação ABNT/APA/BibTeX/RIS + DOI Zenodo)
+- Outputs em `.claude/working/`: 6 de E.1 + 4 de E.2 + 4 de E.3 + 3 de E.4 + 1 de E.5 = **18 documentos**
+- **4 ADRs** publicados em `.claude/decisions/`: ADR-007 (stack Eleventy), ADR-008 (fallback Pagefind→Lunr), ADR-009 (cláusula reabertura mantenedor — limite 2026-07-01), ADR-010 (escopo MVP 55 Must)
+- **Mantenedor solo** até 2026-07-01 (cláusula reabertura). Estimativa Bloco F: 480-1070h (~2.5-5.5 anos solo / 4-9.5 meses com bolsista 28h/sem)
+
+### Próximos passos imediatos (Bloco F.1 — esqueleto operacional)
+1. **Sprint 0** (preparatório): gaps de tokens + componentes mínimos
+2. **Sprint 1** (W3 Ficha): Tabs ARIA W3C completo + Citation Box + 439 rotas
+3. **Sprint 2** (W2 Busca): Pagefind + facetas + URL state
+4. **Sprint 3** (W1 Home): KPIs + lista UFs textual
+5. **Sprint 4** (W7' 404 + W8 Sobre): fuzzy match + Privacidade LGPD
+6. **Sprint 5** (header/footer polish): aria-current + hambúrguer + VLibras
+
+**Marco M1**: 439 fichas + busca + Sobre no ar com beta privado para 2-3 gestores reais.
+**Limite 2026-07-01**: confirmação institucional FRM/IESP sobre bolsista (cláusula ADR-009).
 
 ## Estrutura `.claude/` (meta-infraestrutura do projeto)
 
