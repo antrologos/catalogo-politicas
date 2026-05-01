@@ -24,37 +24,36 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
   <h2 id="kpi-h" class="sr-only">Estatísticas do catálogo</h2>
 
   <div class="bg-primary text-white p-lg rounded text-center">
-    <p class="text-4xl font-bold">439</p>
+    <p class="text-4xl font-bold">{{ policies | length }}</p>
     <p class="text-sm mt-2xs">políticas catalogadas</p>
-    <p class="text-xs mt-2xs opacity-80">No PoC, mostrando 10</p>
   </div>
 
-  <div class="bg-success text-white p-lg rounded text-center">
+  <div class="bg-success-dark text-white p-lg rounded text-center">
     <p class="text-4xl font-bold">9 + Federal</p>
     <p class="text-sm mt-2xs">UFs cobertas (1ª onda)</p>
   </div>
 
-  <div class="bg-info text-white p-lg rounded text-center">
+  <div class="bg-info-dark text-white p-lg rounded text-center">
     <p class="text-4xl font-bold">148</p>
     <p class="text-sm mt-2xs">snapshots normativos</p>
   </div>
 </section>
 
 <section aria-labelledby="amostra-h">
-  <h2 id="amostra-h">Amostra do catálogo (PoC: 1 política por UF)</h2>
-  <p class="text-sm text-neutral-700">Esta é uma demonstração de 10 fichas selecionadas para validar a stack. A versão completa terá 439 fichas.</p>
+  <h2 id="amostra-h">Políticas em destaque</h2>
+  <p class="text-sm text-neutral-700">Mostrando 12 fichas selecionadas. <a href="/buscar/">Ver todas as {{ policies | length }} políticas →</a></p>
 
   <ul class="grid gap-md mt-lg sm:grid-cols-2 list-none p-0">
-    {% for p in policies %}
+    {% for p in policies | slice(12) | first %}
     <li class="border border-neutral-200 rounded p-lg hover:shadow-md transition-shadow">
       <h3 class="text-lg mt-0">
-        <a href="{{ ('/politica/' + p.slug + '/') }}">{{ p.nome_programa }}</a>
+        <a href="{{ '/politica/' + p.slug + '/' }}">{{ p.nome_programa }}</a>
       </h3>
       <p class="text-sm text-neutral-700 my-sm">
         <strong>UF:</strong> {{ p.uf }} ·
         <strong>Tipo:</strong> {{ p.tipo_politica }}
       </p>
-      <p class="text-sm">{{ p.resumo | truncate(180) }}</p>
+      <p class="text-sm">{{ (p.resumo or p.descricao_tecnica or '') | truncate(180) }}</p>
       <p class="mt-sm">{% include "components/tag-status.njk" %}</p>
     </li>
     {% endfor %}
