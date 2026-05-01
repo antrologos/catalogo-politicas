@@ -1,18 +1,51 @@
+{# Header sticky com nav responsivo (Sprint 5).
+   - aria-current="page" indica página ativa (calculado por comparação de URL).
+   - Mobile (<768px): nav colapsada num menu hambúrguer com aria-expanded.
+   - Desktop (≥768px): nav horizontal sempre visível.
+   - Sem JS: nav permanece visível (degradação graciosa via CSS-only). #}
+
+{% set urlAtual = page.url or "/" %}
+
 <header class="bg-primary text-white shadow-md sticky top-0 z-50" role="banner">
-  <div class="container-prose py-md flex flex-col sm:flex-row sm:items-center sm:justify-between gap-md">
-    <a href="{{ '/' }}" class="text-white no-underline hover:text-focus flex items-center gap-sm">
+  <div class="container-prose py-md flex items-center justify-between gap-md relative">
+
+    <a href="/" class="text-white no-underline hover:text-focus flex items-center gap-sm flex-1 sm:flex-initial">
       <span class="text-xl sm:text-2xl font-bold">{{ site.shortTitle }}</span>
-      <span class="text-xs bg-white/20 px-sm py-2xs rounded">{{ site.versao }}</span>
+      <span class="text-xs bg-white/20 px-sm py-2xs rounded hidden sm:inline">{{ site.versao }}</span>
     </a>
-    <nav aria-label="Principal">
-      <ul class="flex flex-wrap gap-md text-sm sm:text-base">
+
+    {# Botão hambúrguer (visível só em mobile) #}
+    <button type="button"
+            id="nav-toggle"
+            class="md:hidden bg-transparent border-2 border-white text-white px-md rounded font-semibold"
+            style="min-height: 44px;"
+            aria-expanded="false"
+            aria-controls="nav-principal"
+            aria-label="Abrir menu de navegação">
+      <span aria-hidden="true">☰</span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    {# Nav: visível em desktop, colapsada em mobile (controlada por hambúrguer + JS).
+       Sem JS: classe md:flex força visibilidade em ≥768px. #}
+    <nav id="nav-principal"
+         class="hidden md:flex"
+         aria-label="Principal"
+         data-nav-mobile-state="closed">
+      <ul class="flex flex-col md:flex-row gap-sm md:gap-md text-base
+                 absolute md:static top-full left-0 right-0 md:top-auto
+                 bg-primary md:bg-transparent
+                 p-md md:p-0 shadow-md md:shadow-none
+                 border-t md:border-0 border-primary-dark list-none">
         {% for item in site.navegacao %}
-        <li>
-          <a href="{{ item.href }}"
-             class="text-white no-underline hover:text-focus underline-offset-4 {% if page.url == item.href %}underline font-semibold{% endif %}">
-            {{ item.texto }}
-          </a>
-        </li>
+          {% set ativo = (item.href == "/" and urlAtual == "/") or (item.href != "/" and (urlAtual | startsWith(item.href))) %}
+          <li>
+            <a href="{{ item.href }}"
+               class="block py-sm md:py-2xs text-white no-underline hover:text-focus underline-offset-4 {{ 'underline font-semibold' if ativo else '' }}"
+               {% if ativo %}aria-current="page"{% endif %}>
+              {{ item.texto }}
+            </a>
+          </li>
         {% endfor %}
       </ul>
     </nav>

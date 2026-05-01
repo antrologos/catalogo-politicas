@@ -59,6 +59,13 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("statusLabel", (situacao) => situacao || "Não informado");
 
+  // Filtro startsWith para Nunjucks (não tem nativo). Útil para detectar
+  // página ativa na nav: {% if urlAtual | startsWith(item.href) %}
+  eleventyConfig.addFilter("startsWith", (str, prefix) => {
+    if (typeof str !== "string" || typeof prefix !== "string") return false;
+    return str.startsWith(prefix);
+  });
+
   // Atribuição institucional fixa para todas as citações.
   // Coordenadores como autores nominais; Rede EJA e Inclusão Produtiva como
   // organização editora; Catálogo de Políticas como obra; subtítulo como série.
