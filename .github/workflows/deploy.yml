@@ -1,4 +1,4 @@
-name: Build & Deploy site (PoC Eleventy)
+name: Build & Deploy site
 
 on:
   push:
@@ -6,7 +6,13 @@ on:
     paths:
       - 'site/**'
       - 'data/derived/latest.json'
+      - '.claude/context/policies-schema.json'
       - '.github/workflows/deploy.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'site/**'
+      - 'data/derived/latest.json'
   workflow_dispatch:
 
 permissions:
@@ -19,14 +25,37 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  validate:
+    name: Validate JSON Schema
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: site/.nvmrc
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install ajv-cli
+        run: npm install --no-save ajv-cli ajv-formats
+      - name: Validate latest.json against schema v0.2
+        run: |
+          npx ajv-cli validate \
+            -s .claude/context/policies-schema.json \
+            -d data/derived/latest.json \
+            -c ajv-formats \
+            --strict=false \
+            --all-errors
+
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    needs: validate
     defaults:
       run:
         working-directory: site
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -38,11 +67,11 @@ jobs:
       - name: Install dependencies
         run: npm ci --no-audit --no-fund
 
-      - name: Audit (high+critical only)
+      - name: Audit (high+critical)
         run: npm audit --audit-level=high
         continue-on-error: true
 
-      - name: Build site (Eleventy + Tailwind + Pagefind)
+      - name: Build (Eleventy + Tailwind + Pagefind)
         run: npm run build
         env:
           NODE_ENV: production
@@ -52,13 +81,76 @@ jobs:
         with:
           path: site/_site
 
-  deploy:
+      - name: Upload _site/ for downstream jobs
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: site/_site
+          retention-days: 1
+
+  a11y:
+    name: A11y axe-core (bloqueante)
+    runs-on: ubuntu-latest
     needs: build
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: site/.nvmrc
+      - name: Download _site
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: _site
+      - name: Install axe-core CLI + http-server
+        run: npm install --no-save @axe-core/cli http-server
+      - name: Serve _site/
+        run: npx http-server _site -p 8080 -s &
+      - name: Wait for server
+        run: until curl -fs http://localhost:8080/ > /dev/null; do sleep 1; done
+      - name: Run axe-core (Home + Ficha exemplo + Sobre)
+        run: |
+          npx axe http://localhost:8080/ \
+            http://localhost:8080/buscar/ \
+            http://localhost:8080/sobre/ \
+            http://localhost:8080/sobre/privacidade/ \
+            --exit \
+            --tags wcag2a,wcag2aa,wcag21a,wcag21aa,best-practice
+
+  lighthouse:
+    name: Lighthouse-CI (bloqueante)
+    runs-on: ubuntu-latest
+    needs: build
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: site/.nvmrc
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+      - name: Install dependencies
+        run: npm ci --no-audit --no-fund
+      - name: Build (regenerate _site for LHCI)
+        run: npm run build
+      - name: Run Lighthouse-CI
+        run: npx lhci autorun
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: [a11y, lighthouse]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

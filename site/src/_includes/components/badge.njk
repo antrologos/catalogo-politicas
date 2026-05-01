@@ -1,0 +1,29 @@
+{# Componente: badge (chip pequeno não-clicável; E.5 §2.7).
+   Uso completude: {% include "components/badge.njk" with {
+                     valor: 92, sufixo: "%", label: "Completude dos metadados"
+                   } %}
+   Uso info: {% include "components/badge.njk" with {
+               valor: "Federal", variant: "info", label: "Esfera"
+             } %}
+   Variantes: alta (≥90) | media (70-89) | baixa (<70) | info (default)
+   Auto-deriva variante de % quando `valor` é número e `sufixo` = "%". #}
+
+{% set classes = "badge" %}
+{% if variant %}
+  {% set classes = classes + " badge--" + variant %}
+{% elif sufixo == "%" and valor is number %}
+  {% if valor >= 90 %}
+    {% set classes = classes + " badge--alta" %}
+  {% elif valor >= 70 %}
+    {% set classes = classes + " badge--media" %}
+  {% else %}
+    {% set classes = classes + " badge--baixa" %}
+  {% endif %}
+{% else %}
+  {% set classes = classes + " badge--info" %}
+{% endif %}
+
+<span class="{{ classes }}"
+      {% if label %}aria-label="{{ label }}: {{ valor }}{{ sufixo or '' }}"{% endif %}>
+  {{ valor }}{{ sufixo or '' }}
+</span>

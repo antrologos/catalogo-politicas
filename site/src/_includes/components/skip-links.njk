@@ -1,0 +1,15 @@
+{# Componente: skip-links (E.5 §3.1).
+   Uso (no topo do <body>, primeiro elemento):
+     {% include "components/skip-links.njk" %}
+   Padrão: 2 alvos comuns (#conteudo, #busca-principal).
+   Para customizar, passe `links: [{href, texto}, ...]`. #}
+
+{% set defaultLinks = [
+  { href: "#conteudo", texto: "Pular para o conteúdo principal" },
+  { href: "#busca-principal", texto: "Pular para a busca" }
+] %}
+{% set actualLinks = links or defaultLinks %}
+
+{% for link in actualLinks %}
+<a href="{{ link.href }}" class="skip-link">{{ link.texto }}</a>
+{% endfor %}

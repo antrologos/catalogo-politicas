@@ -40,7 +40,8 @@ export default {
         focus: '#ffdd00', // foco amarelo gov.uk
       },
       fontFamily: {
-        sans: ['Open Sans', 'Inter', 'system-ui', 'sans-serif'],
+        sans: ['"Open Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
       },
       maxWidth: {
         container: '1020px', // gov.uk default

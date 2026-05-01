@@ -1,0 +1,31 @@
+{# Componente: botão padronizado (E.5 §2.1).
+   Uso (link): {% include "components/button.njk" with {
+                 href: "/buscar/", texto: "Buscar políticas", variant: "primary", icon: "🔍"
+               } %}
+   Uso (botão): {% include "components/button.njk" with {
+                  type: "button", texto: "Copiar", variant: "secondary",
+                  attrs: 'data-copy-target="#cit-abnt"'
+                } %}
+   Variantes: primary | secondary | ghost (default = primary)
+   Tamanho mínimo touch: 44×44 (NF-M-27) — aplicado pela classe .btn no CSS. #}
+
+{% set v = variant or "primary" %}
+{% set classes = "btn btn--" + v %}
+
+{% if href %}
+  <a href="{{ href | url }}"
+     class="{{ classes }}"
+     {% if rel %}rel="{{ rel }}"{% endif %}
+     {% if attrs %}{{ attrs | safe }}{% endif %}>
+    {% if icon %}<span aria-hidden="true">{{ icon }}</span>{% endif %}
+    {{ texto }}
+  </a>
+{% else %}
+  <button type="{{ type or 'button' }}"
+          class="{{ classes }}"
+          {% if disabled %}disabled aria-disabled="true"{% endif %}
+          {% if attrs %}{{ attrs | safe }}{% endif %}>
+    {% if icon %}<span aria-hidden="true">{{ icon }}</span>{% endif %}
+    {{ texto }}
+  </button>
+{% endif %}

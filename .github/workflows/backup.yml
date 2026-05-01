@@ -1,0 +1,52 @@
+name: Backup mensal off-Drive (CONS-M-01)
+
+# Cria release com tarball completo de data/derived/ + index.json dos snapshots.
+# Snapshots binários NÃO são versionados (.gitignore), mas seu index é —
+# basta isso para reconstrução parcial em caso de catástrofe.
+# Retenção: 5 anos via GitHub Releases.
+
+on:
+  schedule:
+    # 00:00 UTC do primeiro dia de cada mês
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Empacotar dados críticos
+        run: |
+          DATA=$(date +%Y-%m-%d)
+          mkdir -p artifacts
+          tar -czf "artifacts/backup-${DATA}.tar.gz" \
+            --exclude='*.html' \
+            --exclude='*.pdf' \
+            --exclude='*.docx' \
+            --exclude='*.doc' \
+            --exclude='*.odt' \
+            --exclude='*.rtf' \
+            data/derived/ \
+            data/external_snapshots/index.json \
+            data/external_snapshots/**/*.metadata.json \
+            data/extracted_text/**/*.metadata.json \
+            .claude/context/policies-schema.json \
+            .claude/context/vocabulario-canonico.json \
+            CLAUDE.md README.md LICENSE 2>/dev/null || true
+          ls -lh artifacts/
+
+      - name: Criar release com backup
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATA=$(date +%Y-%m-%d)
+          gh release create "backup-${DATA}" \
+            "artifacts/backup-${DATA}.tar.gz" \
+            --title "Backup ${DATA}" \
+            --notes "Backup mensal automático: data/derived/ + index.json + metadata + schema + vocabulário. Snapshots binários excluídos por tamanho." \
+            --latest=false

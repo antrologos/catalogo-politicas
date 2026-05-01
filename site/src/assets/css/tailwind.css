@@ -1,13 +1,33 @@
+/* Self-host Open Sans (latin-ext, 400/600/700) via @fontsource — sem Google CDN */
+@import "@fontsource/open-sans/400.css";
+@import "@fontsource/open-sans/600.css";
+@import "@fontsource/open-sans/700.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /* Foco amarelo gov.uk em todos os elementos focáveis */
+  /* Foco amarelo gov.uk em todos os elementos focáveis (E.5 §1.7).
+     Combinação testada: outline 3px + offset 2px + box-shadow inset preto
+     garante contraste em qualquer fundo (inclusive amarelo). */
   :focus-visible {
     outline: 3px solid theme('colors.focus');
     outline-offset: 2px;
-    box-shadow: 0 0 0 6px theme('colors.focus / 30%');
+    box-shadow: inset 0 0 0 2px theme('colors.neutral.900');
+  }
+
+  /* Respeita prefers-reduced-motion (NF-S transversal a11y).
+     Desliga animações para usuários com sensibilidade vestibular. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   body {
@@ -24,20 +44,80 @@
   a {
     @apply text-primary underline underline-offset-2 hover:text-primary-dark;
   }
+
+  /* Código inline e blocos usam mono font dedicada (E.5 §1.2). */
+  code, pre, kbd, samp {
+    @apply font-mono text-sm;
+  }
 }
 
 @layer components {
   .container-prose {
     @apply max-w-container mx-auto px-md;
   }
+
+  /* Skip-link visível ao receber foco (NF-S transversal a11y). */
   .skip-link {
-    @apply sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-focus focus:text-neutral-900 focus:p-sm focus:font-bold;
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:bg-focus focus:text-neutral-900 focus:p-sm focus:font-bold focus:z-50 focus:no-underline;
   }
+
+  /* Tags semânticas (status, eixo, etc).
+     Sempre incluir ícone + texto + cor (NF-M-11: cor não é único indicador). */
   .tag {
     @apply inline-flex items-center gap-1 px-sm py-2xs rounded text-sm font-medium;
   }
-  .tag--ativa     { @apply bg-success/15 text-success-dark; }
-  .tag--encerrada { @apply bg-danger/15  text-danger-dark; }
-  .tag--suspensa  { @apply bg-warning/15 text-warning-dark; }
-  .tag--planejamento { @apply bg-info/15 text-info-dark; }
+  .tag--ativa         { @apply bg-success/15 text-success-dark; }
+  .tag--encerrada     { @apply bg-danger/15  text-danger-dark; }
+  .tag--suspensa      { @apply bg-warning/15 text-warning-dark; }
+  .tag--planejamento  { @apply bg-info/15    text-info-dark; }
+  .tag--descontinuada { @apply bg-neutral-200 text-neutral-700; }
+  .tag--federal       { @apply bg-primary/15  text-primary-dark; }
+  .tag--estadual      { @apply bg-info/15     text-info-dark; }
+
+  /* Botões padronizados (button.njk usa estas classes via componente). */
+  .btn {
+    @apply inline-flex items-center gap-2 px-lg py-md rounded font-semibold no-underline transition-colors;
+    min-height: 44px; /* NF-M-27: touch ≥ 44×44 */
+  }
+  .btn--primary   { @apply bg-primary text-white hover:bg-primary-dark; }
+  .btn--secondary { @apply border-2 border-primary text-primary hover:bg-primary hover:text-white; }
+  .btn--ghost     { @apply text-primary hover:bg-primary/10; }
+  .btn:disabled, .btn[aria-disabled="true"] {
+    @apply opacity-50 cursor-not-allowed;
+  }
+
+  /* Badges (chip pequeno, não-clicável; ex.: completude_pct). */
+  .badge {
+    @apply inline-flex items-center gap-1 px-sm py-2xs rounded-full text-xs font-semibold;
+    min-height: 24px;
+  }
+  .badge--alta  { @apply bg-success/20 text-success-dark; }
+  .badge--media { @apply bg-warning/20 text-warning-dark; }
+  .badge--baixa { @apply bg-danger/20  text-danger-dark; }
+  .badge--info  { @apply bg-info/15    text-info-dark; }
+
+  /* Breadcrumb (componente breadcrumb.njk). */
+  .breadcrumb {
+    @apply flex flex-wrap items-center gap-2xs text-sm text-neutral-700 mb-md;
+  }
+  .breadcrumb li:not(:last-child)::after {
+    content: "›";
+    @apply ml-2xs text-neutral-500;
+  }
+  .breadcrumb [aria-current="page"] {
+    @apply text-neutral-900 font-medium;
+  }
+}
+
+@layer utilities {
+  /* Esconde visualmente mas mantém disponível para screen readers. */
+  .visually-hidden {
+    @apply sr-only;
+  }
+
+  /* Texto tabular para números em tabelas (E.5 §4.4). */
+  .num {
+    @apply text-right;
+    font-variant-numeric: tabular-nums;
+  }
 }
