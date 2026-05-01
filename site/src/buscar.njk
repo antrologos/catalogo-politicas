@@ -45,13 +45,15 @@ permalink: /buscar/
     "use strict";
     if (typeof window === "undefined") return;
 
+    let pagefindUI = null;
+
     function init() {
       if (typeof PagefindUI === "undefined") {
         // Pagefind UI ainda não carregou; tenta de novo em 100ms
         setTimeout(init, 100);
         return;
       }
-      new PagefindUI({
+      pagefindUI = new PagefindUI({
         element: "#search",
         bundlePath: "/catalogo-politicas/pagefind/",
         baseUrl: "/catalogo-politicas/",
@@ -74,6 +76,33 @@ permalink: /buscar/
           searching: "Buscando [SEARCH_TERM]..."
         }
       });
+
+      // Lê ?q= da URL e dispara busca automaticamente.
+      // Pagefind UI default não faz isso sozinho — precisa de glue manual.
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get("q");
+      if (initialQuery) {
+        // Pagefind UI v1.x: triggerSearch(query) preenche input + executa
+        if (typeof pagefindUI.triggerSearch === "function") {
+          pagefindUI.triggerSearch(initialQuery);
+        } else {
+          // Fallback: setar valor no input + disparar evento input
+          waitForInput(initialQuery);
+        }
+      }
+    }
+
+    function waitForInput(value, attempts) {
+      attempts = attempts || 0;
+      if (attempts > 30) return; // timeout 3s
+      const input = document.querySelector("#search input[type='text']");
+      if (!input) {
+        setTimeout(() => waitForInput(value, attempts + 1), 100);
+        return;
+      }
+      input.value = value;
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.focus();
     }
 
     if (document.readyState === "loading") {
