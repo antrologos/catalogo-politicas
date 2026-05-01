@@ -77,32 +77,40 @@ permalink: /buscar/
         }
       });
 
-      // Lê ?q= da URL e dispara busca automaticamente.
-      // Pagefind UI default não faz isso sozinho — precisa de glue manual.
+      // Lê ?q= da URL e popula o input + dispara busca.
+      // Approach robusto: simula digitação no input (mais confiável que
+      // triggerSearch, que tem timing inconsistente em algumas queries).
       const params = new URLSearchParams(window.location.search);
       const initialQuery = params.get("q");
       if (initialQuery) {
-        // Pagefind UI v1.x: triggerSearch(query) preenche input + executa
-        if (typeof pagefindUI.triggerSearch === "function") {
-          pagefindUI.triggerSearch(initialQuery);
-        } else {
-          // Fallback: setar valor no input + disparar evento input
-          waitForInput(initialQuery);
-        }
+        waitForInputAndSearch(initialQuery);
       }
     }
 
-    function waitForInput(value, attempts) {
+    function waitForInputAndSearch(value, attempts) {
       attempts = attempts || 0;
-      if (attempts > 30) return; // timeout 3s
+      if (attempts > 50) return; // timeout 5s
       const input = document.querySelector("#search input[type='text']");
       if (!input) {
-        setTimeout(() => waitForInput(value, attempts + 1), 100);
+        setTimeout(() => waitForInputAndSearch(value, attempts + 1), 100);
         return;
       }
-      input.value = value;
+      // Popula input + dispara evento input nativo (browser/Pagefind escutam).
+      // Usar nativeInputValueSetter para garantir que React/Preact-style
+      // controlled inputs também recebam o valor.
+      const nativeSetter = Object.getOwnPropertyDescriptor(
+        window.HTMLInputElement.prototype, "value"
+      ).set;
+      nativeSetter.call(input, value);
       input.dispatchEvent(new Event("input", { bubbles: true }));
       input.focus();
+
+      // Backup: tentar triggerSearch se existir, depois de pequeno delay
+      setTimeout(() => {
+        if (pagefindUI && typeof pagefindUI.triggerSearch === "function") {
+          try { pagefindUI.triggerSearch(value); } catch (e) { /* ignorar */ }
+        }
+      }, 200);
     }
 
     if (document.readyState === "loading") {
