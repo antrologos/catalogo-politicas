@@ -3,10 +3,10 @@
     "collect": {
       "staticDistDir": "./_site",
       "url": [
-        "http://localhost/catalogo-politicas/",
-        "http://localhost/catalogo-politicas/buscar/",
-        "http://localhost/catalogo-politicas/sobre/",
-        "http://localhost/catalogo-politicas/sobre/privacidade/"
+        "http://localhost/",
+        "http://localhost/buscar/",
+        "http://localhost/sobre/",
+        "http://localhost/sobre/privacidade/"
       ],
       "settings": {
         "preset": "desktop",

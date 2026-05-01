@@ -1,0 +1,18 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 30000,
+    "wait": 500,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-dev-shm-usage"]
+    },
+    "ignore": []
+  },
+  "urls": [
+    "http://localhost:8080/catalogo-politicas/",
+    "http://localhost:8080/catalogo-politicas/buscar/",
+    "http://localhost:8080/catalogo-politicas/sobre/",
+    "http://localhost:8080/catalogo-politicas/sobre/privacidade/",
+    "http://localhost:8080/catalogo-politicas/sobre/cobertura/"
+  ]
+}

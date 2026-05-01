@@ -103,9 +103,12 @@ jobs:
           retention-days: 1
 
   a11y:
-    name: A11y axe-core (bloqueante)
+    name: A11y pa11y-ci (bloqueante WCAG2AA)
     runs-on: ubuntu-latest
     needs: build
+    defaults:
+      run:
+        working-directory: site
     steps:
       - uses: actions/checkout@v4
       - name: Setup Node
@@ -116,21 +119,24 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: site-build
-          path: _site
-      - name: Install axe-core CLI + http-server
-        run: npm install --no-save @axe-core/cli http-server
-      - name: Serve _site/
-        run: npx http-server _site -p 8080 -s &
-      - name: Wait for server
-        run: until curl -fs http://localhost:8080/ > /dev/null; do sleep 1; done
-      - name: Run axe-core (Home + Ficha exemplo + Sobre)
+          path: site/_site
+      - name: Install pa11y-ci + http-server
+        run: npm install --no-save pa11y-ci http-server
+      - name: Serve _site/ em /catalogo-politicas/
         run: |
-          npx axe http://localhost:8080/ \
-            http://localhost:8080/buscar/ \
-            http://localhost:8080/sobre/ \
-            http://localhost:8080/sobre/privacidade/ \
-            --exit \
-            --tags wcag2a,wcag2aa,wcag21a,wcag21aa,best-practice
+          mkdir -p _serve/catalogo-politicas
+          cp -r _site/* _serve/catalogo-politicas/
+          npx http-server _serve -p 8080 -s &
+      - name: Wait for server
+        run: |
+          for i in {1..20}; do
+            if curl -fs http://localhost:8080/catalogo-politicas/ > /dev/null; then
+              echo "server ready"; break
+            fi
+            sleep 1
+          done
+      - name: Run pa11y-ci
+        run: npx pa11y-ci --config .pa11yci.json
 
   lighthouse:
     name: Lighthouse-CI (bloqueante)
