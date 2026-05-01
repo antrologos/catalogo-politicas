@@ -10,6 +10,14 @@ O **Catálogo de Políticas** é uma das frentes do **Projeto Juventudes Fora da
 
 Reúne **439 políticas públicas** federais e estaduais sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação. Para cada política, o catálogo registra metadados estruturados (vocabulário canônico controlado), referência à norma instituidora e — quando possível — **snapshot integral do texto da norma** (proteção contra link rot).
 
+<figure class="my-xl bg-white p-md rounded border border-neutral-200">
+  <img src="/assets/img/logos/barra-logos.png"
+       alt="Logotipos das instituições envolvidas, organizadas por categoria. Iniciativa: Rede EJA e Inclusão Produtiva. Realização: Fundação Roberto Marinho e Fundação Bradesco. Parceiros: Fundação Itaú Educação e Trabalho e Fundação Arymax. Cooperação: UNESCO. Parceria Técnica: Ceres, MAPE e IESP-UERJ."
+       class="w-full h-auto"
+       loading="lazy">
+  <figcaption class="visually-hidden">Barra institucional do projeto.</figcaption>
+</figure>
+
 ## Iniciativa
 
 **Rede EJA e Inclusão Produtiva** — articulação interinstitucional dedicada à integração entre EJA, qualificação profissional e inclusão produtiva como caminho para superar a desigualdade educacional brasileira.
