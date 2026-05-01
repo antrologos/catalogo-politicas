@@ -59,36 +59,52 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addFilter("statusLabel", (situacao) => situacao || "Não informado");
 
+  // Atribuição institucional fixa para todas as citações.
+  // Coordenadores como autores nominais; Rede EJA e Inclusão Produtiva como
+  // organização editora; Catálogo de Políticas como obra; subtítulo como série.
+  const AUTORES_ABNT = "BARBOSA, R. J.; GAMA, M. C. da; GUICHENEY, H.; SCHAEFER, B. (Coords.)";
+  const AUTORES_APA = "Barbosa, R. J., Gama, M. C. da, Guicheney, H., & Schaefer, B.";
+  const AUTORES_BIB = "{Barbosa, Rog{\\'e}rio Jer{\\^o}nimo and Gama, Maria Clara da and Guicheney, Hellen and Schaefer, Bruno}";
+  const EDITORA = "Rede EJA e Inclus\\~ao Produtiva (FRM, Funda\\c{c}\\~ao Bradesco, IESP-UERJ)";
+  const EDITORA_PLAIN = "Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ)";
+  const SERIE = "Cat\\'alogo de Pol\\'iticas — Projeto Juventudes Fora da Escola sem Educa\\c{c}\\~ao B\\'asica";
+  const SERIE_PLAIN = "Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica";
+
   eleventyConfig.addFilter("citacaoAbnt", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
     const acesso = new Date().toLocaleDateString("pt-BR");
-    return `FRM/IESP-UERJ. ${p.nome_programa}. Catálogo de Políticas Públicas Brasileiras (1ª onda), ${ano}. Disponível em: <https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/>. Acesso em: ${acesso}.`;
-  });
-
-  eleventyConfig.addFilter("citacaoBibtex", (p) => {
-    const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
-    return `@misc{${p.id_universal || p.slug},
-  author       = {{FRM/IESP-UERJ}},
-  title        = {${p.nome_programa}},
-  year         = {${ano}},
-  howpublished = {Cat\\'alogo de Pol\\'iticas P\\'ublicas Brasileiras},
-  url          = {https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/}
-}`;
+    return `${AUTORES_ABNT}. ${p.nome_programa}. In: ${SERIE_PLAIN}. ${EDITORA_PLAIN}, ${ano}. Disponível em: <https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/>. Acesso em: ${acesso}.`;
   });
 
   eleventyConfig.addFilter("citacaoApa", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
     const acesso = new Date().toLocaleDateString("pt-BR");
-    return `FRM/IESP-UERJ. (${ano}). ${p.nome_programa}. Catálogo de Políticas Públicas Brasileiras (1ª onda). Recuperado em ${acesso}, de https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/`;
+    return `${AUTORES_APA} (${ano}). ${p.nome_programa}. In ${SERIE_PLAIN}. ${EDITORA_PLAIN}. Recuperado em ${acesso}, de https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/`;
+  });
+
+  eleventyConfig.addFilter("citacaoBibtex", (p) => {
+    const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
+    return `@incollection{${p.id_universal || p.slug},
+  author       = ${AUTORES_BIB},
+  title        = {${p.nome_programa}},
+  booktitle    = {${SERIE}},
+  publisher    = {${EDITORA}},
+  year         = {${ano}},
+  url          = {https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/}
+}`;
   });
 
   eleventyConfig.addFilter("citacaoRis", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
-    return `TY  - GEN
-AU  - FRM/IESP-UERJ
+    return `TY  - CHAP
+AU  - Barbosa, Rogério Jerônimo
+AU  - Gama, Maria Clara da
+AU  - Guicheney, Hellen
+AU  - Schaefer, Bruno
 TI  - ${p.nome_programa}
+T2  - ${SERIE_PLAIN}
+PB  - ${EDITORA_PLAIN}
 PY  - ${ano}
-T2  - Catálogo de Políticas Públicas Brasileiras (1ª onda)
 UR  - https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/
 LA  - pt-BR
 ER  - `;

@@ -1,37 +1,70 @@
 <footer class="bg-neutral-100 border-t border-neutral-200 mt-3xl" role="contentinfo">
-  <div class="container-prose py-xl grid gap-lg sm:grid-cols-3 text-sm">
+  <div class="container-prose py-xl">
 
-    <div>
-      <h2 class="text-base font-semibold mb-sm">Sobre</h2>
-      <ul class="space-y-2xs">
-        <li><a href="{{ '/sobre/' }}">Sobre o catálogo</a></li>
-        <li><a href="{{ '/sobre/privacidade/' }}">Política de privacidade</a></li>
-        <li><a href="{{ site.github }}" rel="external">Código no GitHub</a></li>
-      </ul>
-    </div>
+    {# Linha 1: créditos institucionais resumidos com link para Sobre completo #}
+    <section aria-labelledby="footer-creditos-h" class="border-b border-neutral-200 pb-lg mb-lg">
+      <h2 id="footer-creditos-h" class="text-base font-semibold mb-sm">Realização</h2>
+      <p class="text-sm">
+        Iniciativa <strong>Rede EJA e Inclusão Produtiva</strong> —
+        <a href="https://www.frm.org.br/" rel="external">Fundação Roberto Marinho</a> ·
+        <a href="https://www.fundacaobradesco.org.br/" rel="external">Fundação Bradesco</a>.
+      </p>
+      <p class="text-sm mt-2xs">
+        Parceiros: <a href="https://www.fundacaoitau.org.br/educacao-e-trabalho" rel="external">Fundação Itaú Educação e Trabalho</a> ·
+        <a href="https://arymax.org.br/" rel="external">Fundação Arymax</a>.
+        Cooperação: <a href="https://www.unesco.org/pt" rel="external">UNESCO</a>.
+      </p>
+      <p class="text-sm mt-2xs">
+        Parceria técnica: <strong>Ceres/IESP-UERJ</strong> · <strong>MAPE/IESP-UERJ</strong> ·
+        <a href="http://www.iesp.uerj.br/" rel="external">IESP-UERJ</a>.
+      </p>
+      <p class="text-sm mt-sm">
+        <a href="/sobre/" class="font-semibold">Equipe completa, créditos e como citar →</a>
+      </p>
+    </section>
 
-    <div>
-      <h2 class="text-base font-semibold mb-sm">Dados</h2>
-      <p>
-        {{ site.description }}
-      </p>
-      <p class="mt-sm text-xs text-neutral-700">
-        Catálogo elaborado por <strong>{{ site.author }}</strong>.<br>
-        Última atualização: <time datetime="2026-05-01">01/05/2026</time>
-      </p>
-    </div>
+    {# Linha 2: navegação institucional + dados + licença em 3 colunas #}
+    <div class="grid gap-lg sm:grid-cols-3 text-sm">
 
-    <div>
-      <h2 class="text-base font-semibold mb-sm">Licença</h2>
-      <p>
-        Licenciado sob
-        <a href="{{ site.licenca.url }}" rel="external license">
-          {{ site.licenca.nome }}
-        </a>
-      </p>
-      <p class="mt-sm text-xs">
-        Você pode compartilhar e adaptar mediante atribuição.
-      </p>
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Documentos institucionais</h2>
+        <ul class="space-y-2xs">
+          <li><a href="/sobre/">Sobre o catálogo</a></li>
+          <li><a href="/sobre/transparencia/">Acesso à informação (LAI)</a></li>
+          <li><a href="/sobre/privacidade/">Política de privacidade (LGPD)</a></li>
+          <li><a href="/sobre/termos/">Termos de uso</a></li>
+          <li><a href="/sobre/acessibilidade/">Acessibilidade</a></li>
+          <li><a href="/sobre/cobertura/">Cobertura e limites</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Dados</h2>
+        <p>{{ site.description }}</p>
+        <p class="mt-sm text-xs text-neutral-700">
+          <strong>{{ agregados.total or 439 }}</strong> políticas · 1ª onda<br>
+          Última atualização:
+          <time datetime="2026-05-01">01/05/2026</time><br>
+          Versão: <code>{{ site.versao }}</code>
+        </p>
+        <p class="mt-sm">
+          <a href="{{ site.github }}" rel="external">📦 Código + dados no GitHub ↗</a>
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Licença</h2>
+        <p>
+          Licenciado sob
+          <a href="{{ site.licenca.url }}" rel="external license">
+            {{ site.licenca.nome }}
+          </a>
+        </p>
+        <p class="mt-sm text-xs">
+          Você pode compartilhar e adaptar mediante atribuição. Veja
+          <a href="/sobre/termos/">termos de uso</a> para texto completo de citação.
+        </p>
+      </div>
     </div>
   </div>
 </footer>
