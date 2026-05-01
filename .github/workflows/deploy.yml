@@ -30,22 +30,36 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
-          node-version-file: site/.nvmrc
-          cache: npm
-          cache-dependency-path: site/package-lock.json
-      - name: Install ajv-cli
-        run: npm install --no-save ajv-cli ajv-formats
-      - name: Validate latest.json against schema v0.2
+          python-version: '3.11'
+      - name: Install jsonschema
+        run: pip install jsonschema
+      - name: Validate each ficha in latest.json against schema v0.2
         run: |
-          npx ajv-cli validate \
-            -s .claude/context/policies-schema.json \
-            -d data/derived/latest.json \
-            -c ajv-formats \
-            --strict=false \
-            --all-errors
+          python <<'PYEOF'
+          import json, sys
+          from jsonschema import Draft7Validator
+          schema = json.load(open('.claude/context/policies-schema.json', encoding='utf-8'))
+          data = json.load(open('data/derived/latest.json', encoding='utf-8'))
+          if not isinstance(data, list):
+              print(f"ERRO: latest.json deve ser array; obtido {type(data).__name__}")
+              sys.exit(1)
+          validator = Draft7Validator(schema)
+          errors = []
+          for i, item in enumerate(data):
+              for err in validator.iter_errors(item):
+                  errors.append(f"#{i} ({item.get('slug', '?')}): {err.message} [path={list(err.absolute_path)}]")
+          if errors:
+              for e in errors[:20]:
+                  print(e)
+              if len(errors) > 20:
+                  print(f"... +{len(errors)-20} more")
+              print(f"\n{len(errors)} erros de schema em {len(data)} fichas")
+              sys.exit(1)
+          print(f"OK: {len(data)} fichas validam contra schema v0.2")
+          PYEOF
 
   build:
     name: Build site
