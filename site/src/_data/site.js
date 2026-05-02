@@ -19,6 +19,7 @@ export default {
   navegacao: [
     { texto: "Início", href: "/" },
     { texto: "Buscar", href: "/buscar/" },
+    { texto: "Comparar UFs", href: "/comparacao/" },
     { texto: "Sobre", href: "/sobre/" },
   ],
 };

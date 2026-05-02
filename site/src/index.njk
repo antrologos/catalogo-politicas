@@ -146,8 +146,8 @@ description: "Catálogo interativo de 439 políticas públicas brasileiras sobre
           <td class="p-sm text-neutral-700">{{ info.regiao if info else "—" }}</td>
           <td class="p-sm num font-semibold">{{ agregados.countByUf[uf] }}</td>
           <td class="p-sm">
-            <a href="/buscar/?q=&filter[uf]={{ uf }}" class="text-primary">
-              Ver políticas →
+            <a href="/uf/{{ uf | lower }}/" class="text-primary">
+              Página da UF →
             </a>
           </td>
         </tr>
@@ -166,6 +166,12 @@ description: "Catálogo interativo de 439 políticas públicas brasileiras sobre
       </a>
     </li>
     <li>
+      <a href="/comparacao/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
+        <strong class="text-primary">📊 Comparar UFs</strong>
+        <p class="text-sm text-neutral-700 mt-2xs">Selecione 2 a 9 estados, veja indicadores lado a lado.</p>
+      </a>
+    </li>
+    <li>
       <a href="/sobre/cobertura/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
         <strong class="text-primary">🗺️ Cobertura e próximas UFs</strong>
         <p class="text-sm text-neutral-700 mt-2xs">Por que 9 UFs? O que falta? Cronograma.</p>
@@ -175,13 +181,6 @@ description: "Catálogo interativo de 439 políticas públicas brasileiras sobre
       <a href="/sobre/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
         <strong class="text-primary">📖 Metodologia + Como citar</strong>
         <p class="text-sm text-neutral-700 mt-2xs">Equipe, vocabulário, licença CC-BY 4.0.</p>
-      </a>
-    </li>
-    <li>
-      <a href="https://github.com/antrologos/catalogo-politicas" rel="external noopener" target="_blank"
-         class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
-        <strong class="text-primary">📦 Repositório (GitHub) ↗</strong>
-        <p class="text-sm text-neutral-700 mt-2xs">Código, dados em JSON, issues, contribuição.</p>
       </a>
     </li>
   </ul>

@@ -35,6 +35,40 @@ export default function () {
     return a.localeCompare(b);
   });
 
+  // Agregados por UF (usado pela página /uf/<sigla>/)
+  const porUf = {};
+  for (const uf of ufsCobertas) {
+    const fichas = raw.filter((p) => p.uf === uf);
+    const totalUf = fichas.length;
+    const ativas = fichas.filter((p) =>
+      (p.situacao_atual || "").toLowerCase().includes("ativa") ||
+      (p.situacao_atual || "").toLowerCase().includes("execução")
+    ).length;
+    const comSnapshot = fichas.filter((p) => p.fonte_arquivo_path).length;
+    const tipos = countBy(fichas, "tipo_politica");
+    const situacoes = countBy(fichas, "situacao_atual");
+    const modalidades = countBy(fichas, "modalidade_oferta");
+    const federaisReplicadas = fichas.filter((p) => p.is_federal_replica).length;
+    const estaduaisUnicas = totalUf - federaisReplicadas;
+    porUf[uf] = {
+      total: totalUf,
+      ativas,
+      comSnapshot,
+      federaisReplicadas,
+      estaduaisUnicas,
+      eixosCobertos: Object.keys(tipos).length,
+      distribuicaoTipo: Object.entries(tipos)
+        .map(([tipo, n]) => ({ tipo, n, pct: Math.round((n / totalUf) * 100) }))
+        .sort((a, b) => b.n - a.n),
+      distribuicaoSituacao: Object.entries(situacoes)
+        .map(([situacao, n]) => ({ situacao, n, pct: Math.round((n / totalUf) * 100), classe: situacaoClasse(situacao) }))
+        .sort((a, b) => b.n - a.n),
+      distribuicaoModalidade: Object.entries(modalidades)
+        .map(([modalidade, n]) => ({ modalidade, n, pct: Math.round((n / totalUf) * 100) }))
+        .sort((a, b) => b.n - a.n),
+    };
+  }
+
   // Distribuição por tipo com percentual
   const distribuicaoTipo = Object.entries(countByTipo)
     .map(([tipo, n]) => ({
@@ -72,6 +106,7 @@ export default function () {
     ufsCobertas,
     distribuicaoTipo,
     distribuicaoSituacao,
+    porUf,
     dataUltima,
     dataUltimaBR: formatDateBR(dataUltima),
   };
