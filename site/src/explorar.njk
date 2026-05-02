@@ -30,7 +30,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide opacity-80">3 categorias</p>
         <h3 class="text-2xl mt-2xs text-white">
-          <span aria-hidden="true">📚</span> Por tipo de política
+          {% icon "books" %} Por tipo de política
         </h3>
         <p class="text-sm mt-sm opacity-90">
           Categoria estrutural — Educacional direta, Trabalho/qualificação, ou Proteção social com impacto educacional.
@@ -52,7 +52,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide text-neutral-700">{{ agregados.distribuicaoSituacao | length }} valores</p>
         <h3 class="text-2xl mt-2xs">
-          <span aria-hidden="true">●</span> Por situação atual
+          {% icon "circle-fill" %} Por situação atual
         </h3>
         <p class="text-sm mt-sm text-neutral-700">
           Estado vigente de cada política — Ativa, Encerrada, Suspensa ou Descontinuada.
@@ -75,7 +75,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide opacity-80">{{ agregados.distribuicaoModalidade | length }} modalidades</p>
         <h3 class="text-2xl mt-2xs text-white">
-          <span aria-hidden="true">🏫</span> Por modalidade
+          {% icon "buildings" %} Por modalidade
         </h3>
         <p class="text-sm mt-sm opacity-90">
           Como a política é executada — Presencial, EAD, Mista, Semipresencial, etc.
@@ -97,7 +97,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide">{{ agregados.distribuicaoAbrangencia | length }} níveis</p>
         <h3 class="text-2xl mt-2xs">
-          <span aria-hidden="true">🌎</span> Por abrangência
+          {% icon "globe" %} Por abrangência
         </h3>
         <p class="text-sm mt-sm">
           Escala territorial de execução — Nacional, Estadual, Municipal ou difusa.
@@ -119,7 +119,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide text-primary">{{ agregados.ufsCobertas | length }} entes federativos</p>
         <h3 class="text-2xl mt-2xs">
-          <span aria-hidden="true">🗺️</span> Por unidade federativa
+          {% icon "map-trifold" %} Por unidade federativa
         </h3>
         <p class="text-sm mt-sm text-neutral-700">
           Página executiva por UF (ou Federal) com KPIs, distribuições e tabela completa.
@@ -142,7 +142,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide text-warning-dark">2 origens</p>
         <h3 class="text-2xl mt-2xs">
-          <span aria-hidden="true">⚖️</span> Por origem
+          {% icon "scales" %} Por origem
         </h3>
         <p class="text-sm mt-sm text-neutral-700">
           Federal replicada em estados versus política exclusivamente estadual.
@@ -164,7 +164,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide text-neutral-700">Disponibilidade</p>
         <h3 class="text-2xl mt-2xs">
-          <span aria-hidden="true">📄</span> Por snapshot integral da norma
+          {% icon "file-text" %} Por snapshot integral da norma
         </h3>
         <p class="text-sm mt-sm text-neutral-700">
           Filtre apenas políticas cujo texto integral da norma instituidora foi
@@ -276,15 +276,15 @@ permalink: /explorar/
   <h2 id="ajuda-h" class="text-base">Não encontrou o que queria?</h2>
   <ul class="mt-md grid sm:grid-cols-3 gap-md text-sm list-none p-0">
     <li>
-      <a href="/buscar/" class="font-semibold text-primary">🔍 Busca textual</a>
+      <a href="/buscar/" class="font-semibold text-primary">{% icon "magnifying-glass" %} Busca textual</a>
       <p class="text-neutral-700 text-xs mt-2xs">Pesquise por nome, sigla ou base legal.</p>
     </li>
     <li>
-      <a href="/comparacao/" class="font-semibold text-primary">📊 Comparar UFs</a>
+      <a href="/comparacao/" class="font-semibold text-primary">{% icon "chart-bar" %} Comparar UFs</a>
       <p class="text-neutral-700 text-xs mt-2xs">Selecione 2 a 9 estados e veja indicadores lado a lado.</p>
     </li>
     <li>
-      <a href="/sobre/cobertura/" class="font-semibold text-primary">🗺️ Cobertura e limites</a>
+      <a href="/sobre/cobertura/" class="font-semibold text-primary">{% icon "map-trifold" %} Cobertura e limites</a>
       <p class="text-neutral-700 text-xs mt-2xs">Entenda quais UFs estão cobertas e por quê.</p>
     </li>
   </ul>

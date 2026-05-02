@@ -28,7 +28,7 @@ layout: layouts/base.njk
 
 <header class="border-b border-neutral-200 pb-lg mb-xl">
   <p class="text-sm text-neutral-700 uppercase tracking-wide">
-    <span aria-hidden="true">{{ dimensaoIcone }}</span> {{ dimensaoNome }}
+    {% icon dimensaoIcone, "size-lg" %} {{ dimensaoNome }}
   </p>
   <h1 class="mt-2xs">{{ grupo.valor }}</h1>
   <p class="text-neutral-700 mt-md">

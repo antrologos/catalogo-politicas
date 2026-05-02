@@ -1,5 +1,15 @@
 import navigationPlugin from "@11ty/eleventy-navigation";
 import rssPlugin from "@11ty/eleventy-plugin-rss";
+import { readFileSync } from "node:fs";
+import { resolve, dirname } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const PHOSPHOR_REGULAR_DIR = resolve(
+  __dirname,
+  "node_modules/@phosphor-icons/core/assets/regular"
+);
+const iconCache = new Map();
 
 export default function (eleventyConfig) {
   // ---- Plugins
@@ -73,6 +83,32 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("startsWith", (str, prefix) => {
     if (typeof str !== "string" || typeof prefix !== "string") return false;
     return str.startsWith(prefix);
+  });
+
+  // Shortcode `icon` — renderiza SVG inline da família Phosphor regular.
+  // Uso: {% icon "magnifying-glass" %} ou {% icon "compass", "size-2xl" %}.
+  // O SVG vem com fill="currentColor", então herda text-color do parent.
+  // Cache em memória evita re-leitura disco para mesmo ícone (ADR-012).
+  eleventyConfig.addShortcode("icon", function (name, classes = "") {
+    if (!iconCache.has(name)) {
+      try {
+        const svg = readFileSync(
+          resolve(PHOSPHOR_REGULAR_DIR, `${name}.svg`),
+          "utf-8"
+        );
+        iconCache.set(name, svg);
+      } catch (e) {
+        console.warn(`[icon] Phosphor não encontrado: '${name}.svg' — render vazio`);
+        iconCache.set(name, "");
+      }
+    }
+    const svg = iconCache.get(name);
+    if (!svg) return "";
+    const cls = classes ? `icon ${classes}` : "icon";
+    return svg.replace(
+      "<svg ",
+      `<svg class="${cls}" aria-hidden="true" focusable="false" `
+    );
   });
 
   // Filtro slug — converte texto categórico em URL-safe deterministicamente.

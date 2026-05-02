@@ -143,6 +143,23 @@
   }
 }
 
+@layer components {
+  /* Ícones Phosphor inline SVG (Sprint V3 do MVP-UX, ADR-012).
+     Default: 1em quadrado, alinhado verticalmente com texto. Pode ser
+     escalado via classes utilitárias (size-md, size-lg, size-2xl, etc.) ou
+     via font-size do parent (já que .icon usa 1em). */
+  .icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+  }
+  .icon.size-2xl  { width: 2.5em;  height: 2.5em;  }
+  .icon.size-xl   { width: 2em;    height: 2em;    }
+  .icon.size-lg   { width: 1.5em;  height: 1.5em;  }
+}
+
 @layer utilities {
   /* Esconde visualmente mas mantém disponível para screen readers. */
   .visually-hidden {

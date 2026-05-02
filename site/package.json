@@ -23,6 +23,7 @@
     "@fontsource/ibm-plex-mono": "^5.2.7",
     "@fontsource/ibm-plex-serif": "^5.2.7",
     "@lhci/cli": "^0.15.1",
+    "@phosphor-icons/core": "^2.1.1",
     "@tailwindcss/typography": "^0.5.15",
     "ajv-cli": "^5.0.0",
     "ajv-formats": "^3.0.1",
