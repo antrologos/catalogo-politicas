@@ -39,7 +39,7 @@ permalink: /explorar/
       <ul class="mt-md space-y-2xs list-none p-0 text-sm">
         {% for d in agregados.distribuicaoTipo %}
           <li>
-            <a href="/buscar/?q={{ d.tipo | urlencode }}" class="text-white underline hover:text-focus">
+            <a href="/tipo/{{ d.tipo | slug }}/" class="text-white underline hover:text-focus">
               {{ d.tipo }} <span class="opacity-80">({{ d.n }})</span>
             </a>
           </li>
@@ -61,7 +61,7 @@ permalink: /explorar/
       <ul class="mt-md space-y-2xs list-none p-0 text-sm">
         {% for d in agregados.distribuicaoSituacao %}
           <li>
-            <a href="/buscar/?q={{ d.situacao | urlencode }}" class="text-primary underline">
+            <a href="/situacao/{{ d.situacao | slug }}/" class="text-primary underline">
               <span class="tag tag--{{ d.classe }} text-xs mr-2xs">{{ d.situacao }}</span>
               <span class="text-neutral-700">({{ d.n }})</span>
             </a>
@@ -84,7 +84,7 @@ permalink: /explorar/
       <ul class="mt-md space-y-2xs list-none p-0 text-sm">
         {% for d in agregados.distribuicaoModalidade | slice(6) | first %}
           <li>
-            <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-white underline hover:text-focus">
+            <a href="/modalidade/{{ d.valor | slug }}/" class="text-white underline hover:text-focus">
               {{ d.valor }} <span class="opacity-80">({{ d.n }})</span>
             </a>
           </li>
@@ -106,7 +106,7 @@ permalink: /explorar/
       <ul class="mt-md space-y-2xs list-none p-0 text-sm">
         {% for d in agregados.distribuicaoAbrangencia %}
           <li>
-            <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-neutral-900 underline">
+            <a href="/abrangencia/{{ d.valor | slug }}/" class="text-neutral-900 underline">
               {{ d.valor }} <span class="opacity-80">({{ d.n }})</span>
             </a>
           </li>
@@ -201,7 +201,7 @@ permalink: /explorar/
         <h3>Tipo de política</h3>
         <ul>
           {% for d in agregados.distribuicaoTipo %}
-            <li><a href="/buscar/?q={{ d.tipo | urlencode }}">{{ d.tipo }}</a> — {{ d.n }} políticas ({{ d.pct }}%)</li>
+            <li><a href="/tipo/{{ d.tipo | slug }}/">{{ d.tipo }}</a> — {{ d.n }} políticas ({{ d.pct }}%)</li>
           {% endfor %}
         </ul>
       </div>
@@ -210,7 +210,7 @@ permalink: /explorar/
         <h3>Situação atual</h3>
         <ul>
           {% for d in agregados.distribuicaoSituacao %}
-            <li><a href="/buscar/?q={{ d.situacao | urlencode }}">{{ d.situacao }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+            <li><a href="/situacao/{{ d.situacao | slug }}/">{{ d.situacao }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
           {% endfor %}
         </ul>
       </div>
@@ -219,7 +219,7 @@ permalink: /explorar/
         <h3>Modalidade da oferta</h3>
         <ul>
           {% for d in agregados.distribuicaoModalidade %}
-            <li><a href="/buscar/?q={{ d.valor | urlencode }}">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+            <li><a href="/modalidade/{{ d.valor | slug }}/">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
           {% endfor %}
         </ul>
       </div>
@@ -228,7 +228,7 @@ permalink: /explorar/
         <h3>Abrangência territorial</h3>
         <ul>
           {% for d in agregados.distribuicaoAbrangencia %}
-            <li><a href="/buscar/?q={{ d.valor | urlencode }}">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+            <li><a href="/abrangencia/{{ d.valor | slug }}/">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
           {% endfor %}
         </ul>
       </div>

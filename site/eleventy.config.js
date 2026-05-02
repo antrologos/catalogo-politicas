@@ -66,6 +66,22 @@ export default function (eleventyConfig) {
     return str.startsWith(prefix);
   });
 
+  // Filtro slug — converte texto categórico em URL-safe deterministicamente.
+  // "Educacional direta" → "educacional-direta"
+  // "Trabalho/qualificação direta" → "trabalho-qualificacao-direta"
+  // "Ativa / em execução" → "ativa-em-execucao"
+  // Usado para gerar permalinks de páginas índice por dimensão (EX.2).
+  eleventyConfig.addFilter("slug", (str) => {
+    if (typeof str !== "string") return "";
+    return str
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "") // remove diacríticos
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "")
+      .replace(/-{2,}/g, "-");
+  });
+
   // Atribuição institucional fixa para todas as citações.
   // Coordenadores como autores nominais; Rede EJA e Inclusão Produtiva como
   // organização editora; Catálogo de Políticas como obra; subtítulo como série.
