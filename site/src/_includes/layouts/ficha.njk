@@ -27,11 +27,31 @@ layout: layouts/base.njk
   <header class="border-b border-neutral-200 pb-lg mb-xl">
     <h1>{{ p.nome_programa }}</h1>
     <p class="text-sm text-neutral-700 mt-sm flex flex-wrap gap-md items-center">
-      {% include "components/tag-status.njk" %}
+      {# Tags clicáveis: cada uma vira link para browse. Em EX.1 usamos
+         /buscar/?q=<termo> como placeholder; EX.2 troca por páginas índice
+         dedicadas (/tipo/<slug>/, /situacao/<slug>/). UF já tem destino real. #}
+      <a href="/buscar/?q={{ p.situacao_atual | urlencode }}"
+         class="no-underline"
+         aria-label="Ver outras políticas com situação {{ p.situacao_atual }}">
+        {% include "components/tag-status.njk" %}
+      </a>
       {% if p.isFederal %}
-        <span class="tag tag--federal">Federal</span>
+        <a href="/uf/br/" class="no-underline" aria-label="Ver todas as políticas federais">
+          <span class="tag tag--federal">Federal</span>
+        </a>
       {% else %}
-        <span class="tag tag--estadual">{{ p.uf }}</span>
+        <a href="/uf/{{ p.uf | lower }}/" class="no-underline" aria-label="Ver todas as políticas de {{ p.uf }}">
+          <span class="tag tag--estadual">{{ p.uf }}</span>
+        </a>
+      {% endif %}
+      {% if p.tipo_politica %}
+        <a href="/buscar/?q={{ p.tipo_politica | urlencode }}"
+           class="no-underline"
+           aria-label="Ver outras políticas do tipo {{ p.tipo_politica }}">
+          <span class="tag bg-primary/10 text-primary-dark px-sm py-2xs rounded text-sm font-medium">
+            {{ p.tipo_politica }}
+          </span>
+        </a>
       {% endif %}
       <span aria-label="Identificador universal">ID: <code>{{ p.id_universal }}</code></span>
       {% if p.revisado_em_br %}

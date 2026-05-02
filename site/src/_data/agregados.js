@@ -19,6 +19,11 @@ export default function () {
   const countByUf = countBy(raw, "uf");
   const countByTipo = countBy(raw, "tipo_politica");
   const countBySituacao = countBy(raw, "situacao_atual");
+  const countByModalidade = countBy(raw, "modalidade_oferta");
+  const countByAbrangencia = countBy(raw, "abrangencia_territorial");
+  const countByTipoOferta = countBy(raw, "tipo_oferta");
+  const countByArranjo = countBy(raw, "arranjo_logistico");
+  const countByEsferaForm = countBy(raw, "esfera_formulacao");
   const snapshotsDisponiveis = raw.filter((p) => p.fonte_arquivo_path).length;
   const snapshotsAusentes = total - snapshotsDisponiveis;
 
@@ -88,6 +93,25 @@ export default function () {
     }))
     .sort((a, b) => b.n - a.n);
 
+  const distribuicaoModalidade = mapDist(countByModalidade, total);
+  const distribuicaoAbrangencia = mapDist(countByAbrangencia, total);
+  const distribuicaoTipoOferta = mapDist(countByTipoOferta, total);
+  const distribuicaoArranjo = mapDist(countByArranjo, total);
+  const distribuicaoEsferaForm = mapDist(countByEsferaForm, total);
+
+  // Distribuição por origem (federal replicada vs estadual única)
+  const replicas = raw.filter((p) => p.is_federal_replica).length;
+  const distribuicaoOrigem = [
+    { valor: "Federal replicada", n: replicas, pct: Math.round((replicas / total) * 100) },
+    { valor: "Estadual única", n: total - replicas, pct: Math.round(((total - replicas) / total) * 100) },
+  ];
+
+  // Distribuição por disponibilidade de snapshot
+  const distribuicaoSnapshot = [
+    { valor: "Disponível", n: snapshotsDisponiveis, pct: Math.round((snapshotsDisponiveis / total) * 100) },
+    { valor: "Indisponível", n: snapshotsAusentes, pct: Math.round((snapshotsAusentes / total) * 100) },
+  ];
+
   // Última atualização (mais recente entre todas as fichas)
   const dataUltima = raw
     .map((p) => p.atualizado_em || p.data_versao_catalogo)
@@ -106,10 +130,23 @@ export default function () {
     ufsCobertas,
     distribuicaoTipo,
     distribuicaoSituacao,
+    distribuicaoModalidade,
+    distribuicaoAbrangencia,
+    distribuicaoTipoOferta,
+    distribuicaoArranjo,
+    distribuicaoEsferaForm,
+    distribuicaoOrigem,
+    distribuicaoSnapshot,
     porUf,
     dataUltima,
     dataUltimaBR: formatDateBR(dataUltima),
   };
+}
+
+function mapDist(counts, total) {
+  return Object.entries(counts)
+    .map(([valor, n]) => ({ valor, n, pct: Math.round((n / total) * 100) }))
+    .sort((a, b) => b.n - a.n);
 }
 
 function countBy(arr, key) {

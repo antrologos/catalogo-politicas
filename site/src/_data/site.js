@@ -18,6 +18,7 @@ export default {
   github: "https://github.com/antrologos/catalogo-politicas",
   navegacao: [
     { texto: "Início", href: "/" },
+    { texto: "Explorar", href: "/explorar/" },
     { texto: "Buscar", href: "/buscar/" },
     { texto: "Comparar UFs", href: "/comparacao/" },
     { texto: "Sobre", href: "/sobre/" },

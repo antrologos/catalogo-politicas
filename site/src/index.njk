@@ -3,39 +3,98 @@ layout: layouts/base.njk
 title: "Início"
 description: "Catálogo interativo de 439 políticas públicas brasileiras sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação."
 ---
-<section aria-labelledby="hero-h" class="text-center py-2xl">
+<section aria-labelledby="hero-h" class="text-center py-xl">
   <p class="text-sm text-neutral-700 uppercase tracking-wide">
     {{ site.subtitle }}
   </p>
-  <h1 id="hero-h" class="text-4xl sm:text-5xl mt-sm">{{ site.title }}</h1>
-  <p class="text-lg text-neutral-700 mt-md max-w-2xl mx-auto">
-    Mapeamento de políticas públicas federais e estaduais sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação.
+  <h1 id="hero-h" class="text-3xl sm:text-4xl mt-sm">{{ site.title }}</h1>
+  <p class="text-base text-neutral-700 mt-md max-w-2xl mx-auto">
+    Mapeamento de {{ agregados.total }} políticas públicas federais e estaduais sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação.
   </p>
   <p class="text-sm text-neutral-700 mt-sm">
     Iniciativa <strong>Rede EJA e Inclusão Produtiva</strong> ·
     <a href="/sobre/" class="text-primary">ver realizadores e parceiros</a>
   </p>
+</section>
 
-  {# Caixa de busca proeminente — leva para /buscar/ com query #}
-  <form action="/buscar/" method="get" role="search" class="mt-xl max-w-xl mx-auto">
+{# === 4 caminhos de entrada (browse + search + comparar + UF) === #}
+<section aria-labelledby="caminhos-h" class="my-2xl">
+  <h2 id="caminhos-h" class="text-center text-lg font-semibold mb-lg">
+    Por onde você quer começar?
+  </h2>
+
+  <div class="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
+
+    {# CAMINHO 1: Sei o que procuro (Busca) #}
+    <a href="/buscar/" class="block p-lg bg-primary text-white rounded shadow-md hover:bg-primary-dark no-underline transition-colors">
+      <p class="text-3xl" aria-hidden="true">🔍</p>
+      <h3 class="text-white text-lg mt-sm">Sei o que procuro</h3>
+      <p class="text-sm mt-2xs opacity-90">
+        Busque por nome, sigla, base legal ou órgão responsável.
+      </p>
+      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
+        Buscar →
+      </p>
+    </a>
+
+    {# CAMINHO 2: Quero explorar (Hub) #}
+    <a href="/explorar/" class="block p-lg bg-info-dark text-white rounded shadow-md hover:bg-info no-underline transition-colors">
+      <p class="text-3xl" aria-hidden="true">🧭</p>
+      <h3 class="text-white text-lg mt-sm">Quero explorar</h3>
+      <p class="text-sm mt-2xs opacity-90">
+        Navegue por tipo, situação, modalidade, abrangência ou origem.
+      </p>
+      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
+        Explorar →
+      </p>
+    </a>
+
+    {# CAMINHO 3: Quero comparar UFs #}
+    <a href="/comparacao/" class="block p-lg bg-success text-neutral-900 rounded shadow-md hover:bg-success-dark hover:text-white no-underline transition-colors">
+      <p class="text-3xl" aria-hidden="true">📊</p>
+      <h3 class="text-lg mt-sm">Comparar UFs</h3>
+      <p class="text-sm mt-2xs">
+        Selecione 2 a 9 estados e veja indicadores lado a lado.
+      </p>
+      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
+        Comparar →
+      </p>
+    </a>
+
+    {# CAMINHO 4: Minha UF (âncora para tabela abaixo) #}
+    <a href="#cobertura-uf-h" class="block p-lg bg-white border-2 border-primary text-primary rounded shadow-sm hover:bg-primary hover:text-white no-underline transition-colors">
+      <p class="text-3xl" aria-hidden="true">🗺️</p>
+      <h3 class="text-current text-lg mt-sm">Minha UF</h3>
+      <p class="text-sm mt-2xs opacity-90">
+        Veja a página executiva do seu estado (10 UFs cobertas na 1ª onda).
+      </p>
+      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
+        Escolher UF ↓
+      </p>
+    </a>
+
+  </div>
+
+  {# Caixa de busca compacta como atalho rápido #}
+  <form action="/buscar/" method="get" role="search" class="mt-lg max-w-xl mx-auto">
     <label for="busca-hero" class="visually-hidden">Buscar políticas no catálogo</label>
     <div class="flex flex-col sm:flex-row gap-sm">
       <input
         type="search"
         id="busca-hero"
         name="q"
-        placeholder="Digite nome, sigla, base legal..."
+        placeholder="Atalho de busca: digite nome, sigla, base legal..."
         autocomplete="off"
-        class="flex-1 px-md py-md border-2 border-neutral-500 rounded text-base"
+        class="flex-1 px-md py-sm border-2 border-neutral-500 rounded text-sm"
       >
-      <button type="submit" class="btn btn--primary">
+      <button type="submit" class="btn btn--secondary text-sm">
         <span aria-hidden="true">🔍</span> Buscar
       </button>
     </div>
-    <p class="text-sm text-neutral-700 mt-sm">
+    <p class="text-xs text-neutral-700 mt-2xs text-center">
       Exemplos:
-      <a href="/buscar/?q=PRONATEC" class="text-primary">PRONATEC</a>,
-      <a href="/buscar/?q=EJA" class="text-primary">EJA</a>,
+      <a href="/buscar/?q=PRONATEC" class="text-primary">PRONATEC</a> ·
+      <a href="/buscar/?q=EJA" class="text-primary">EJA</a> ·
       <a href="/buscar/?q=Bolsa" class="text-primary">Bolsa</a>
     </p>
   </form>

@@ -1,0 +1,291 @@
+---
+layout: layouts/base.njk
+title: "Explorar o catálogo"
+description: "Pontos de entrada visuais para navegar pelas 439 políticas do catálogo: por tipo, situação, modalidade, UF, abrangência, origem federal/estadual e disponibilidade de snapshot."
+permalink: /explorar/
+---
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: "Explorar" }
+] %}
+{% include "components/breadcrumb.njk" %}
+
+<section aria-labelledby="explorar-h">
+  <h1 id="explorar-h">Explorar o catálogo</h1>
+  <p class="text-neutral-700 max-w-2xl">
+    Não sabe o que procurar? Explore as <strong>{{ agregados.total }} políticas</strong>
+    do catálogo por uma das dimensões abaixo. Cada categoria leva à lista das políticas
+    que correspondem.
+  </p>
+</section>
+
+{# === Mosaico de cards visuais (uma seção por dimensão) === #}
+<section aria-labelledby="dimensoes-h" class="my-2xl">
+  <h2 id="dimensoes-h" class="sr-only">Dimensões de exploração</h2>
+
+  <div class="grid gap-lg sm:grid-cols-2">
+
+    {# CARD: Tipo de política #}
+    <article class="bg-primary text-white p-lg rounded shadow-md">
+      <header>
+        <p class="text-xs uppercase tracking-wide opacity-80">3 categorias</p>
+        <h3 class="text-2xl mt-2xs text-white">
+          <span aria-hidden="true">📚</span> Por tipo de política
+        </h3>
+        <p class="text-sm mt-sm opacity-90">
+          Categoria estrutural — Educacional direta, Trabalho/qualificação, ou Proteção social com impacto educacional.
+        </p>
+      </header>
+      <ul class="mt-md space-y-2xs list-none p-0 text-sm">
+        {% for d in agregados.distribuicaoTipo %}
+          <li>
+            <a href="/buscar/?q={{ d.tipo | urlencode }}" class="text-white underline hover:text-focus">
+              {{ d.tipo }} <span class="opacity-80">({{ d.n }})</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    {# CARD: Situação atual #}
+    <article class="bg-neutral-100 border-2 border-neutral-200 p-lg rounded shadow-sm">
+      <header>
+        <p class="text-xs uppercase tracking-wide text-neutral-700">{{ agregados.distribuicaoSituacao | length }} valores</p>
+        <h3 class="text-2xl mt-2xs">
+          <span aria-hidden="true">●</span> Por situação atual
+        </h3>
+        <p class="text-sm mt-sm text-neutral-700">
+          Estado vigente de cada política — Ativa, Encerrada, Suspensa ou Descontinuada.
+        </p>
+      </header>
+      <ul class="mt-md space-y-2xs list-none p-0 text-sm">
+        {% for d in agregados.distribuicaoSituacao %}
+          <li>
+            <a href="/buscar/?q={{ d.situacao | urlencode }}" class="text-primary underline">
+              <span class="tag tag--{{ d.classe }} text-xs mr-2xs">{{ d.situacao }}</span>
+              <span class="text-neutral-700">({{ d.n }})</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    {# CARD: Modalidade da oferta #}
+    <article class="bg-info-dark text-white p-lg rounded shadow-md">
+      <header>
+        <p class="text-xs uppercase tracking-wide opacity-80">{{ agregados.distribuicaoModalidade | length }} modalidades</p>
+        <h3 class="text-2xl mt-2xs text-white">
+          <span aria-hidden="true">🏫</span> Por modalidade
+        </h3>
+        <p class="text-sm mt-sm opacity-90">
+          Como a política é executada — Presencial, EAD, Mista, Semipresencial, etc.
+        </p>
+      </header>
+      <ul class="mt-md space-y-2xs list-none p-0 text-sm">
+        {% for d in agregados.distribuicaoModalidade | slice(6) | first %}
+          <li>
+            <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-white underline hover:text-focus">
+              {{ d.valor }} <span class="opacity-80">({{ d.n }})</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    {# CARD: Abrangência territorial #}
+    <article class="bg-success text-neutral-900 p-lg rounded shadow-md">
+      <header>
+        <p class="text-xs uppercase tracking-wide">{{ agregados.distribuicaoAbrangencia | length }} níveis</p>
+        <h3 class="text-2xl mt-2xs">
+          <span aria-hidden="true">🌎</span> Por abrangência
+        </h3>
+        <p class="text-sm mt-sm">
+          Escala territorial de execução — Nacional, Estadual, Municipal ou difusa.
+        </p>
+      </header>
+      <ul class="mt-md space-y-2xs list-none p-0 text-sm">
+        {% for d in agregados.distribuicaoAbrangencia %}
+          <li>
+            <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-neutral-900 underline">
+              {{ d.valor }} <span class="opacity-80">({{ d.n }})</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    {# CARD: UF (geografia) #}
+    <article class="bg-white border-2 border-primary p-lg rounded shadow-sm">
+      <header>
+        <p class="text-xs uppercase tracking-wide text-primary">{{ agregados.ufsCobertas | length }} entes federativos</p>
+        <h3 class="text-2xl mt-2xs">
+          <span aria-hidden="true">🗺️</span> Por unidade federativa
+        </h3>
+        <p class="text-sm mt-sm text-neutral-700">
+          Página executiva por UF (ou Federal) com KPIs, distribuições e tabela completa.
+        </p>
+      </header>
+      <ul class="mt-md flex flex-wrap gap-2xs list-none p-0 text-sm">
+        {% for sigla in agregados.ufsCobertas %}
+          <li>
+            <a href="/uf/{{ sigla | lower }}/" class="inline-block px-sm py-2xs bg-primary/10 text-primary-dark rounded hover:bg-primary hover:text-white">
+              {% if sigla == "BR" %}Federal{% else %}{{ sigla }}{% endif %}
+              <span class="text-xs opacity-80">({{ agregados.countByUf[sigla] }})</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    {# CARD: Origem (federal vs estadual) #}
+    <article class="bg-warning/15 border-2 border-warning p-lg rounded shadow-sm">
+      <header>
+        <p class="text-xs uppercase tracking-wide text-warning-dark">2 origens</p>
+        <h3 class="text-2xl mt-2xs">
+          <span aria-hidden="true">⚖️</span> Por origem
+        </h3>
+        <p class="text-sm mt-sm text-neutral-700">
+          Federal replicada em estados versus política exclusivamente estadual.
+        </p>
+      </header>
+      <ul class="mt-md space-y-2xs list-none p-0 text-sm">
+        {% for d in agregados.distribuicaoOrigem %}
+          <li>
+            <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-primary underline">
+              {{ d.valor }} <span class="text-neutral-700">({{ d.n }} políticas, {{ d.pct }}%)</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+    {# CARD: Snapshot disponível #}
+    <article class="bg-neutral-100 border-2 border-neutral-200 p-lg rounded shadow-sm sm:col-span-2">
+      <header>
+        <p class="text-xs uppercase tracking-wide text-neutral-700">Disponibilidade</p>
+        <h3 class="text-2xl mt-2xs">
+          <span aria-hidden="true">📄</span> Por snapshot integral da norma
+        </h3>
+        <p class="text-sm mt-sm text-neutral-700">
+          Filtre apenas políticas cujo texto integral da norma instituidora foi
+          preservado localmente (proteção contra link rot).
+        </p>
+      </header>
+      <ul class="mt-md space-y-2xs list-none p-0 text-sm">
+        {% for d in agregados.distribuicaoSnapshot %}
+          <li>
+            <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-primary underline">
+              {% if d.valor == "Disponível" %}<span class="text-success-dark">✓</span>
+              {% else %}<span class="text-neutral-700">—</span>{% endif %}
+              {{ d.valor }}
+              <span class="text-neutral-700">({{ d.n }} políticas, {{ d.pct }}%)</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+{# === Lista textual paralela (fonte canônica para screen reader) === #}
+<section aria-labelledby="lista-textual-h" class="my-2xl">
+  <details class="bg-neutral-100 p-lg rounded">
+    <summary class="cursor-pointer font-semibold">
+      Lista textual completa de todas as dimensões e valores
+    </summary>
+    <div class="mt-md space-y-lg text-sm">
+      <h2 id="lista-textual-h" class="sr-only">Lista textual completa</h2>
+
+      <div>
+        <h3>Tipo de política</h3>
+        <ul>
+          {% for d in agregados.distribuicaoTipo %}
+            <li><a href="/buscar/?q={{ d.tipo | urlencode }}">{{ d.tipo }}</a> — {{ d.n }} políticas ({{ d.pct }}%)</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Situação atual</h3>
+        <ul>
+          {% for d in agregados.distribuicaoSituacao %}
+            <li><a href="/buscar/?q={{ d.situacao | urlencode }}">{{ d.situacao }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Modalidade da oferta</h3>
+        <ul>
+          {% for d in agregados.distribuicaoModalidade %}
+            <li><a href="/buscar/?q={{ d.valor | urlencode }}">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Abrangência territorial</h3>
+        <ul>
+          {% for d in agregados.distribuicaoAbrangencia %}
+            <li><a href="/buscar/?q={{ d.valor | urlencode }}">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Tipo de oferta</h3>
+        <ul>
+          {% for d in agregados.distribuicaoTipoOferta %}
+            <li><a href="/buscar/?q={{ d.valor | urlencode }}">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Arranjo logístico</h3>
+        <ul>
+          {% for d in agregados.distribuicaoArranjo %}
+            <li><a href="/buscar/?q={{ d.valor | urlencode }}">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Esfera de formulação</h3>
+        <ul>
+          {% for d in agregados.distribuicaoEsferaForm %}
+            <li><a href="/buscar/?q={{ d.valor | urlencode }}">{{ d.valor }}</a> — {{ d.n }} ({{ d.pct }}%)</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Unidade federativa</h3>
+        <ul>
+          {% for sigla in agregados.ufsCobertas %}
+            <li><a href="/uf/{{ sigla | lower }}/">{{ ufs[sigla].nome or sigla }}</a> — {{ agregados.countByUf[sigla] }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </details>
+</section>
+
+<section aria-labelledby="ajuda-h" class="my-2xl bg-info/10 p-lg rounded">
+  <h2 id="ajuda-h" class="text-base">Não encontrou o que queria?</h2>
+  <ul class="mt-md grid sm:grid-cols-3 gap-md text-sm list-none p-0">
+    <li>
+      <a href="/buscar/" class="font-semibold text-primary">🔍 Busca textual</a>
+      <p class="text-neutral-700 text-xs mt-2xs">Pesquise por nome, sigla ou base legal.</p>
+    </li>
+    <li>
+      <a href="/comparacao/" class="font-semibold text-primary">📊 Comparar UFs</a>
+      <p class="text-neutral-700 text-xs mt-2xs">Selecione 2 a 9 estados e veja indicadores lado a lado.</p>
+    </li>
+    <li>
+      <a href="/sobre/cobertura/" class="font-semibold text-primary">🗺️ Cobertura e limites</a>
+      <p class="text-neutral-700 text-xs mt-2xs">Entenda quais UFs estão cobertas e por quê.</p>
+    </li>
+  </ul>
+</section>

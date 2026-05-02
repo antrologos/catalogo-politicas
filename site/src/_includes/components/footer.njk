@@ -32,8 +32,27 @@
       </p>
     </section>
 
-    {# Linha 2: navegação institucional + dados + licença em 3 colunas #}
-    <div class="grid gap-lg sm:grid-cols-3 text-sm">
+    {# Linha 2: explorar + documentos + dados + licença em 4 colunas #}
+    <div class="grid gap-lg sm:grid-cols-2 lg:grid-cols-4 text-sm">
+
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Explorar por</h2>
+        <ul class="space-y-2xs">
+          <li><a href="/explorar/">🧭 Hub de exploração</a></li>
+          <li><a href="/buscar/">🔍 Busca facetada</a></li>
+          <li><a href="/comparacao/">📊 Comparar UFs</a></li>
+        </ul>
+        <h3 class="text-sm font-semibold mt-md mb-2xs">UFs cobertas</h3>
+        <ul class="flex flex-wrap gap-2xs">
+          {% for sigla in agregados.ufsCobertas %}
+            <li>
+              <a href="/uf/{{ sigla | lower }}/" class="inline-block px-2xs text-xs">
+                {% if sigla == "BR" %}Federal{% else %}{{ sigla }}{% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
 
       <div>
         <h2 class="text-base font-semibold mb-sm">Documentos institucionais</h2>
