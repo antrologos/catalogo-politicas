@@ -80,6 +80,33 @@ layout: layouts/base.njk
     </p>
   </header>
 
+  {# === EX.3: bloco "Esta política aparece em" (apenas canônica federal com réplicas) === #}
+  {% set rel = relacionadas[p.slug] %}
+  {% if rel and rel.apareceEm and rel.apareceEm.length > 0 %}
+    <aside class="my-lg p-md bg-info/5 border-l-4 border-info-dark rounded"
+           aria-labelledby="aparece-em-h">
+      <h2 id="aparece-em-h" class="text-base mt-0 mb-sm">
+        Esta política federal é executada em {{ rel.apareceEm.length }} UFs do catálogo
+      </h2>
+      <p class="text-sm text-neutral-700 mt-0 mb-sm">
+        Cada UF tem ficha própria com órgão executor local e situação atual:
+      </p>
+      <ul class="flex flex-wrap gap-2xs list-none p-0 m-0">
+        {% for r in rel.apareceEm %}
+          <li>
+            <a href="/politica/{{ r.slug }}/"
+               class="inline-flex items-center gap-2xs px-sm py-2xs bg-white border border-info-dark rounded text-sm hover:bg-info/10 no-underline"
+               aria-label="Ficha de {{ r.nome }} em {{ r.uf }}, situação {{ r.situacao or 'sem informação' }}">
+              <span class="font-semibold">{{ r.uf }}</span>
+              <span class="text-xs text-neutral-700" aria-hidden="true">·</span>
+              <span class="text-xs">{{ r.situacao or 'Sem informação' }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </aside>
+  {% endif %}
+
   {# === Conteúdo das abas (capturado via {% set %}) === #}
   {% set abaResumo %}
     {% if p.descricao_simples %}
@@ -262,4 +289,98 @@ layout: layouts/base.njk
       </a>
     </p>
   </footer>
+
+  {# === EX.3: seção "Continue explorando" === #}
+  {% if rel and (rel.mesmaFamilia.length > 0 or rel.mesmoTipoUf.length > 0 or rel.mesmaModalidadeUf.length > 0) %}
+    <section class="mt-2xl pt-lg border-t-2 border-neutral-200" aria-labelledby="continue-explorando-h">
+      <h2 id="continue-explorando-h" class="mt-0">Continue explorando</h2>
+
+      {% if rel.mesmaFamilia.length > 0 %}
+        <h3 class="mt-lg">
+          {% if p.isFederal %}
+            Esta família federal nas UFs ({{ rel.mesmaFamilia.length }})
+          {% else %}
+            Mesma família federal — outras UFs ({{ rel.mesmaFamilia.length }})
+          {% endif %}
+        </h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
+          {% for r in rel.mesmaFamilia %}
+            <li>
+              <a href="/politica/{{ r.slug }}/"
+                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors"
+                 aria-label="Abrir ficha de {{ r.nome }} em {% if r.uf == 'BR' %}âmbito federal{% else %}{{ r.uf }}{% endif %}">
+                <span class="text-xs font-semibold text-neutral-700">
+                  {% if r.uf == 'BR' %}Federal{% else %}{{ r.uf }}{% endif %}
+                </span>
+                <p class="m-0 mt-2xs text-sm font-medium text-neutral-900">{{ r.nome }}</p>
+                {% if r.situacao %}
+                  <span class="inline-block mt-2xs px-2xs py-0 text-xs bg-neutral-100 text-neutral-700 rounded">
+                    {{ r.situacao }}
+                  </span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if rel.mesmoTipoUf.length > 0 %}
+        <h3 class="mt-lg">
+          Mesmo tipo em {{ p.uf }}
+          <span class="text-sm font-normal text-neutral-700">
+            ({{ p.tipo_politica }})
+          </span>
+        </h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
+          {% for r in rel.mesmoTipoUf %}
+            <li>
+              <a href="/politica/{{ r.slug }}/"
+                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
+                <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
+                {% if r.situacao %}
+                  <span class="inline-block mt-2xs px-2xs py-0 text-xs bg-neutral-100 text-neutral-700 rounded">
+                    {{ r.situacao }}
+                  </span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="text-sm mt-sm">
+          <a href="/tipo/{{ p.tipo_politica | slug }}/">
+            Ver todas as políticas do tipo "{{ p.tipo_politica }}" →
+          </a>
+        </p>
+      {% endif %}
+
+      {% if rel.mesmaModalidadeUf.length > 0 %}
+        <h3 class="mt-lg">
+          Mesma modalidade em {{ p.uf }}
+          <span class="text-sm font-normal text-neutral-700">
+            ({{ p.modalidade_oferta }})
+          </span>
+        </h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
+          {% for r in rel.mesmaModalidadeUf %}
+            <li>
+              <a href="/politica/{{ r.slug }}/"
+                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
+                <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
+                {% if r.situacao %}
+                  <span class="inline-block mt-2xs px-2xs py-0 text-xs bg-neutral-100 text-neutral-700 rounded">
+                    {{ r.situacao }}
+                  </span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="text-sm mt-sm">
+          <a href="/modalidade/{{ p.modalidade_oferta | slug }}/">
+            Ver todas as políticas com modalidade "{{ p.modalidade_oferta }}" →
+          </a>
+        </p>
+      {% endif %}
+    </section>
+  {% endif %}
 </article>
