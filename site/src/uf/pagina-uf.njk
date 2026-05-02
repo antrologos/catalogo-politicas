@@ -117,11 +117,20 @@ eleventyComputed:
 </section>
 
 <section aria-labelledby="lista-uf-h" class="my-2xl">
-  <h2 id="lista-uf-h">Todas as políticas em {{ info.nome }} ({{ agg.total }})</h2>
+  <h2 id="lista-uf-h">Todas as políticas em {{ info.nome }}
+    (<span id="contador-fichas">{{ agg.total }}</span>)
+  </h2>
   <p class="text-sm text-neutral-700">
-    Para filtrar por situação, tipo ou modalidade, use a
-    <a href="/buscar/?q=" class="text-primary">busca facetada</a>.
+    Para filtrar por situação, tipo ou modalidade, use os botões abaixo
+    ou a <a href="/buscar/?q=" class="text-primary">busca facetada</a>.
   </p>
+
+  {# Chips de filtro ativo (controlado por JS via querystring) #}
+  <div id="filtros-ativos" class="mt-md flex flex-wrap gap-sm" hidden>
+    <span class="text-sm font-semibold">Filtros ativos:</span>
+    <span id="filtros-chips"></span>
+    <a href="/uf/{{ ufSigla | lower }}/" class="text-sm text-primary underline">Limpar todos</a>
+  </div>
 
   <table class="w-full mt-md border-collapse">
     <caption class="sr-only">
@@ -134,11 +143,16 @@ eleventyComputed:
         <th scope="col" class="p-sm font-semibold">Tipo</th>
         <th scope="col" class="p-sm font-semibold">Situação</th>
         <th scope="col" class="p-sm font-semibold">Origem</th>
+        <th scope="col" class="p-sm font-semibold">Snapshot</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody id="tbody-fichas">
       {% for p in fichasUf %}
-        <tr class="border-b border-neutral-200 hover:bg-neutral-100">
+        <tr class="ficha-row border-b border-neutral-200 hover:bg-neutral-100"
+            data-tipo="{{ p.tipo_politica or '' }}"
+            data-situacao="{{ p.situacao_atual or '' }}"
+            data-origem="{% if p.is_federal_replica %}federal{% else %}estadual{% endif %}"
+            data-snapshot="{% if p.fonte_arquivo_path %}disponivel{% else %}indisponivel{% endif %}">
           <th scope="row" class="p-sm font-medium">
             <a href="/politica/{{ p.slug }}/" class="text-primary">{{ p.nome_programa }}</a>
           </th>
@@ -155,11 +169,25 @@ eleventyComputed:
               <span class="text-neutral-700">Estadual</span>
             {% endif %}
           </td>
+          <td class="p-sm text-sm">
+            {% if p.fonte_arquivo_path %}
+              <span class="text-success-dark">✓ Disponível</span>
+            {% else %}
+              <span class="text-neutral-700">—</span>
+            {% endif %}
+          </td>
         </tr>
       {% endfor %}
     </tbody>
   </table>
+
+  <p id="vazio-ficha" class="hidden mt-md p-md bg-neutral-100 rounded text-center">
+    Nenhuma política corresponde aos filtros aplicados.
+    <a href="/uf/{{ ufSigla | lower }}/" class="text-primary">Limpar filtros</a>
+  </p>
 </section>
+
+<script src="/assets/js/uf-filtros.js" defer></script>
 
 <section aria-labelledby="comparar-h" class="my-2xl bg-neutral-100 p-lg rounded">
   <h2 id="comparar-h">Comparar {{ ufSigla }} com outras UFs</h2>

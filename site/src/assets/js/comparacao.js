@@ -75,13 +75,39 @@
     vazio.setAttribute("hidden", "");
     resultados.removeAttribute("hidden");
 
+    // Cada indicador define como gerar URL de drill-down para a página da UF.
+    // filtroUrl(sigla) retorna a querystring (sem o ?) ou "" para sem filtro.
     const indicadores = [
-      { chave: "total", rotulo: "Total de políticas catalogadas" },
-      { chave: "ativas", rotulo: "Políticas ativas / em execução" },
-      { chave: "comSnapshot", rotulo: "Com snapshot integral" },
-      { chave: "federaisReplicadas", rotulo: "Federais replicadas" },
-      { chave: "estaduaisUnicas", rotulo: "Estaduais únicas" },
-      { chave: "eixosCobertos", rotulo: "Eixos temáticos cobertos (de 3)" },
+      {
+        chave: "total",
+        rotulo: "Total de políticas catalogadas",
+        filtroUrl: () => "",
+      },
+      {
+        chave: "ativas",
+        rotulo: "Políticas ativas / em execução",
+        filtroUrl: () => "situacao=" + encodeURIComponent("Ativa / em execução"),
+      },
+      {
+        chave: "comSnapshot",
+        rotulo: "Com snapshot integral",
+        filtroUrl: () => "snapshot=disponivel",
+      },
+      {
+        chave: "federaisReplicadas",
+        rotulo: "Federais replicadas",
+        filtroUrl: () => "origem=federal",
+      },
+      {
+        chave: "estaduaisUnicas",
+        rotulo: "Estaduais únicas",
+        filtroUrl: () => "origem=estadual",
+      },
+      {
+        chave: "eixosCobertos",
+        rotulo: "Eixos temáticos cobertos (de 3)",
+        filtroUrl: null, // não vira link (é meta-informação)
+      },
     ];
 
     // Cabeçalho
@@ -102,7 +128,6 @@
       tbodyHtml += '<tr class="border-b border-neutral-200">';
       tbodyHtml += `<th scope="row" class="p-sm font-medium">${ind.rotulo}</th>`;
 
-      // Calcula valores e maior valor para destacar
       const valores = siglas.map((s) => {
         const agg = window.AGREGADOS_UF[s];
         return agg ? (agg[ind.chave] || 0) : 0;
@@ -111,10 +136,10 @@
 
       for (let i = 0; i < siglas.length; i++) {
         const v = valores[i];
-        const destaque = v === maxValor && maxValor > 0
-          ? "font-bold text-primary"
-          : "";
-        tbodyHtml += `<td class="p-sm num ${destaque}">${v}</td>`;
+        const sigla = siglas[i];
+        const destaque = v === maxValor && maxValor > 0 ? "font-bold" : "";
+        const cell = celulaNumero(v, sigla, ind.filtroUrl, destaque);
+        tbodyHtml += `<td class="p-sm num">${cell}</td>`;
       }
       tbodyHtml += "</tr>";
     }
@@ -135,10 +160,14 @@
         return found ? found.n : 0;
       });
       const maxValor = Math.max(...valores);
+      const filtroTipo = () => "tipo=" + encodeURIComponent(tipo);
+
       for (let i = 0; i < siglas.length; i++) {
         const v = valores[i];
-        const destaque = v === maxValor && maxValor > 0 ? "font-bold text-primary" : "";
-        tbodyHtml += `<td class="p-sm num ${destaque}">${v}</td>`;
+        const sigla = siglas[i];
+        const destaque = v === maxValor && maxValor > 0 ? "font-bold" : "";
+        const cell = celulaNumero(v, sigla, filtroTipo, destaque);
+        tbodyHtml += `<td class="p-sm num">${cell}</td>`;
       }
       tbodyHtml += "</tr>";
     }
@@ -146,7 +175,22 @@
     tbody.innerHTML = tbodyHtml;
 
     // Status anunciado em live region
-    status.textContent = `Comparando ${siglas.length} UFs: ${siglas.join(", ")}. ${indicadores.length + tiposCanonicos.length} indicadores na tabela.`;
+    status.textContent = `Comparando ${siglas.length} UFs: ${siglas.join(", ")}. ${indicadores.length + tiposCanonicos.length} indicadores na tabela. Clique em um número para ver as políticas correspondentes na página da UF.`;
+  }
+
+  /**
+   * Renderiza uma célula de número:
+   * - Se valor > 0 e há filtroUrl: link clicável para /uf/<sigla>/?filtro
+   * - Se valor === 0 ou sem filtroUrl: texto puro (sem link inútil)
+   * - Aplica classe de destaque se for o maior da linha
+   */
+  function celulaNumero(valor, sigla, filtroUrlFn, destaqueClasse) {
+    if (valor === 0 || !filtroUrlFn) {
+      return `<span class="${destaqueClasse}">${valor}</span>`;
+    }
+    const filtroQs = filtroUrlFn();
+    const url = `/catalogo-politicas/uf/${sigla.toLowerCase()}/${filtroQs ? "?" + filtroQs : ""}`;
+    return `<a href="${url}" class="${destaqueClasse} text-primary underline" title="Ver as ${valor} políticas na página de ${sigla}">${valor}</a>`;
   }
 
   function atualizarUrl(siglas) {
