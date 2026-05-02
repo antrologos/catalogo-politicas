@@ -16,6 +16,14 @@
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary">
 
+  <!-- Preload das fontes Plex mais usadas (Sprint V1 do MVP-UX 2026-05-02).
+       Latin-ext cobre PT-BR; subset latin é o primeiro carregado pelo browser
+       conforme unicode-range. Fontes self-hosted via @fontsource (passthrough). -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="{{ '/assets/css/files/ibm-plex-sans-latin-wght-normal.woff2' }}">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="{{ '/assets/css/files/ibm-plex-serif-latin-700-normal.woff2' }}">
+
   <!-- Tailwind CSS gerado -->
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' }}">
 

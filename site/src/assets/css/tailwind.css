@@ -1,7 +1,11 @@
-/* Self-host Open Sans (latin-ext, 400/600/700) via @fontsource — sem Google CDN */
-@import "@fontsource/open-sans/400.css";
-@import "@fontsource/open-sans/600.css";
-@import "@fontsource/open-sans/700.css";
+/* Self-host IBM Plex (Sans Variable + Serif 700 + Mono 400) via @fontsource —
+   sem Google CDN. Substitui Open Sans no Sprint V1 do MVP-UX (2026-05-02).
+   Plex Sans Variable cobre todos os pesos via único woff2 (font-weight: 100..700).
+   Plex Serif 700 é para H1 e hero (display tipográfico).
+   Plex Mono 400 é para IDs, SHA-256, código inline. */
+@import "@fontsource-variable/ibm-plex-sans/wght.css";
+@import "@fontsource/ibm-plex-serif/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
 
 @tailwind base;
 @tailwind components;
@@ -36,8 +40,15 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* H1 e H2 usam Plex Serif 700 para peso editorial (gov.br + Fiocruz pattern).
+     H3+ continuam sans para hierarquia visual mais sutil.
+     Aplicamos font-family diretamente porque @apply font-serif em @layer base
+     não compila o token de fonte (Tailwind 3 quirk). */
+  h1, h2 {
+    font-family: theme('fontFamily.serif');
+  }
   h1 { @apply text-3xl font-bold tracking-tight mb-md; }
-  h2 { @apply text-2xl font-semibold mt-xl mb-md; }
+  h2 { @apply text-2xl font-bold mt-xl mb-md; }
   h3 { @apply text-xl font-semibold mt-lg mb-sm; }
   p  { @apply leading-relaxed; }
 

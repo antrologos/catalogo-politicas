@@ -10,6 +10,15 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img": "assets/img" });
   // CSS é gerado pelo Tailwind CLI direto em _site/assets/css/
+  // Fontes self-hosted via @fontsource: o CSS importado referencia
+  // url(files/...) relativo a _site/assets/css/, então copiamos os .woff2
+  // dos pacotes @fontsource* para esse mesmo diretório. Browser baixa
+  // apenas os subsets unicode-range que precisa (latin para PT-BR).
+  eleventyConfig.addPassthroughCopy({
+    "node_modules/@fontsource-variable/ibm-plex-sans/files": "assets/css/files",
+    "node_modules/@fontsource/ibm-plex-serif/files": "assets/css/files",
+    "node_modules/@fontsource/ibm-plex-mono/files": "assets/css/files",
+  });
 
   // ---- Watch targets (dev server reage a mudanças no JSON canônico)
   eleventyConfig.addWatchTarget("../data/derived/latest.json");

@@ -9,6 +9,7 @@ export default {
   // ou criadas em JS (uf-filtros.js, dimensao-filtros.js). Sem esta lista,
   // o JIT purga as classes não-encontradas no scan de `content`.
   safelist: [
+    // Classes dinâmicas de chips (geradas via {{ situacao_classe }} ou JS)
     'tag--ativa',
     'tag--encerrada',
     'tag--suspensa',
@@ -16,6 +17,10 @@ export default {
     'tag--descontinuada',
     'tag--filter',
     { pattern: /^tag--filter\[aria-pressed/ },
+    // font-serif e font-mono aplicados via @apply em @layer base/components,
+    // mas raramente como classe direta em templates — precisam ser geradas.
+    'font-serif',
+    'font-mono',
   ],
   theme: {
     extend: {
@@ -52,8 +57,11 @@ export default {
         focus: '#ffdd00', // foco amarelo gov.uk
       },
       fontFamily: {
-        sans: ['"Open Sans"', 'Inter', 'system-ui', 'sans-serif'],
-        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+        // Plex Sans Variable: family name é "IBM Plex Sans Variable" (não "IBM Plex Sans").
+        // Fallback Inter cobre transição se variável falhar; system-ui cobre worst case.
+        sans: ['"IBM Plex Sans Variable"', '"IBM Plex Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        serif: ['"IBM Plex Serif"', 'Georgia', 'Cambria', 'serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
       },
       maxWidth: {
         container: '1020px', // gov.uk default
