@@ -62,7 +62,12 @@
   }
 
   /* Tags semânticas (status, eixo, etc).
-     Sempre incluir ícone + texto + cor (NF-M-11: cor não é único indicador). */
+     Sempre incluir ícone + texto + cor (NF-M-11: cor não é único indicador).
+     4 famílias canônicas (Sprint V0 do MVP-UX, 2026-05-02):
+       - .tag--<status>: cor semântica suave por situação
+       - .tag--federal/--estadual: variantes de origem
+       - .tag--neutral: metadado sem semântica (UF, ano, modalidade); ganha hover quando em <a>
+       - .tag--filter: filtro com aria-pressed; inclui ✕ removível */
   .tag {
     @apply inline-flex items-center gap-1 px-sm py-2xs rounded text-sm font-medium;
   }
@@ -73,6 +78,24 @@
   .tag--descontinuada { @apply bg-neutral-200 text-neutral-700; }
   .tag--federal       { @apply bg-primary/15  text-primary-dark; }
   .tag--estadual      { @apply bg-info/15     text-info-dark; }
+
+  /* Tag neutra: metadado descritivo sem cor semântica (UF, ano, modalidade,
+     tipo de política). Quando renderizada em <a>, ganha hover automático. */
+  .tag--neutral {
+    @apply bg-neutral-100 text-neutral-900 border border-neutral-200;
+  }
+  a.tag--neutral {
+    @apply no-underline transition-colors hover:bg-primary/10 hover:text-primary-dark hover:border-primary;
+  }
+
+  /* Tag filtro: chip clicável de filtro ativo. Inclui aria-pressed para
+     comunicar estado a screen readers; o ✕ é parte do conteúdo. */
+  .tag--filter {
+    @apply bg-primary/10 text-primary-dark border border-primary/30 cursor-pointer no-underline transition-colors hover:bg-primary/20;
+  }
+  .tag--filter[aria-pressed="true"] {
+    @apply bg-primary text-white border-primary-dark;
+  }
 
   /* Botões padronizados (button.njk usa estas classes via componente). */
   .btn {

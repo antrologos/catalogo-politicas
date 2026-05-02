@@ -79,8 +79,8 @@
     for (const [k, v] of ativos) {
       const valorMostrar = (valoresAmigaveis[k] && valoresAmigaveis[k][v]) || v;
       const chip = document.createElement("span");
-      chip.className =
-        "inline-flex items-center gap-2xs px-sm py-2xs bg-primary/10 text-primary-dark rounded text-sm mx-2xs";
+      chip.className = "tag tag--filter mx-2xs";
+      chip.setAttribute("aria-pressed", "true");
       chip.textContent = `${labels[k]}: ${valorMostrar}`;
 
       const removeUrl = new URL(window.location.href);
@@ -88,7 +88,7 @@
       const remove = document.createElement("a");
       remove.href = removeUrl.toString();
       remove.setAttribute("aria-label", `Remover filtro ${labels[k]}`);
-      remove.className = "text-primary-dark hover:text-danger ml-2xs font-bold";
+      remove.className = "ml-2xs font-bold no-underline hover:text-danger";
       remove.textContent = "✕";
       chip.appendChild(remove);
 

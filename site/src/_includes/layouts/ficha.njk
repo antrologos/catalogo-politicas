@@ -50,20 +50,16 @@ layout: layouts/base.njk
       {% endif %}
       {% if p.tipo_politica %}
         <a href="/tipo/{{ p.tipo_politica | slug }}/"
-           class="no-underline"
+           class="tag tag--neutral"
            aria-label="Ver outras políticas do tipo {{ p.tipo_politica }}">
-          <span class="tag bg-primary/10 text-primary-dark px-sm py-2xs rounded text-sm font-medium">
-            {{ p.tipo_politica }}
-          </span>
+          {{ p.tipo_politica }}
         </a>
       {% endif %}
       {% if p.modalidade_oferta %}
         <a href="/modalidade/{{ p.modalidade_oferta | slug }}/"
-           class="no-underline"
+           class="tag tag--neutral"
            aria-label="Ver outras políticas com modalidade {{ p.modalidade_oferta }}">
-          <span class="tag bg-info/15 text-info-dark px-sm py-2xs rounded text-sm font-medium">
-            {{ p.modalidade_oferta }}
-          </span>
+          {{ p.modalidade_oferta }}
         </a>
       {% endif %}
       <span aria-label="Identificador universal">ID: <code>{{ p.id_universal }}</code></span>
@@ -95,7 +91,7 @@ layout: layouts/base.njk
         {% for r in rel.apareceEm %}
           <li>
             <a href="/politica/{{ r.slug }}/"
-               class="inline-flex items-center gap-2xs px-sm py-2xs bg-white border border-info-dark rounded text-sm hover:bg-info/10 no-underline"
+               class="tag tag--neutral"
                aria-label="Ficha de {{ r.nome }} em {{ r.uf }}, situação {{ r.situacao or 'sem informação' }}">
               <span class="font-semibold">{{ r.uf }}</span>
               <span class="text-xs text-neutral-700" aria-hidden="true">·</span>
@@ -314,7 +310,7 @@ layout: layouts/base.njk
                 </span>
                 <p class="m-0 mt-2xs text-sm font-medium text-neutral-900">{{ r.nome }}</p>
                 {% if r.situacao %}
-                  <span class="inline-block mt-2xs px-2xs py-0 text-xs bg-neutral-100 text-neutral-700 rounded">
+                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
                     {{ r.situacao }}
                   </span>
                 {% endif %}
@@ -338,7 +334,7 @@ layout: layouts/base.njk
                  class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
                 <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
                 {% if r.situacao %}
-                  <span class="inline-block mt-2xs px-2xs py-0 text-xs bg-neutral-100 text-neutral-700 rounded">
+                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
                     {{ r.situacao }}
                   </span>
                 {% endif %}
@@ -367,7 +363,7 @@ layout: layouts/base.njk
                  class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
                 <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
                 {% if r.situacao %}
-                  <span class="inline-block mt-2xs px-2xs py-0 text-xs bg-neutral-100 text-neutral-700 rounded">
+                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
                     {{ r.situacao }}
                   </span>
                 {% endif %}

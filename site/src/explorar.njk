@@ -128,9 +128,9 @@ permalink: /explorar/
       <ul class="mt-md flex flex-wrap gap-2xs list-none p-0 text-sm">
         {% for sigla in agregados.ufsCobertas %}
           <li>
-            <a href="/uf/{{ sigla | lower }}/" class="inline-block px-sm py-2xs bg-primary/10 text-primary-dark rounded hover:bg-primary hover:text-white">
+            <a href="/uf/{{ sigla | lower }}/" class="tag tag--neutral">
               {% if sigla == "BR" %}Federal{% else %}{{ sigla }}{% endif %}
-              <span class="text-xs opacity-80">({{ agregados.countByUf[sigla] }})</span>
+              <span class="text-xs text-neutral-700">({{ agregados.countByUf[sigla] }})</span>
             </a>
           </li>
         {% endfor %}

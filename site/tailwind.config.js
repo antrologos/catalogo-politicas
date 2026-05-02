@@ -5,6 +5,18 @@ export default {
   content: [
     './src/**/*.{njk,md,html,11ty.js}',
   ],
+  // Safelist: classes geradas dinamicamente em templates (`tag tag--{{ classe }}`)
+  // ou criadas em JS (uf-filtros.js, dimensao-filtros.js). Sem esta lista,
+  // o JIT purga as classes não-encontradas no scan de `content`.
+  safelist: [
+    'tag--ativa',
+    'tag--encerrada',
+    'tag--suspensa',
+    'tag--planejamento',
+    'tag--descontinuada',
+    'tag--filter',
+    { pattern: /^tag--filter\[aria-pressed/ },
+  ],
   theme: {
     extend: {
       colors: {
