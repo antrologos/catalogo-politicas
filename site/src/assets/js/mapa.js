@@ -1,20 +1,19 @@
 /**
- * Mapa coroplético D3 do Brasil (Sprint 8.1 do Bloco F.3, 2026-05-03).
+ * Mapa coroplético D3 do Brasil (Sprint 8.1 + 8.2 do Bloco F.3, 2026-05-03).
  *
  * Renderiza GeoJSON simplificado das 27 UFs em #mapa-svg, colore proporcionalmente
- * à contagem de políticas catalogadas (gradiente azul-IBGE), aplica handlers de
- * tooltip + click navega para /uf/<sigla>/.
+ * à métrica selecionada (total/ativas/snapshot), gradiente azul-IBGE.
+ * UFs cobertas (1ª onda) recebem 5 stops; não cobertas ficam cinza com label
+ * "em planejamento" no tooltip.
  *
- * UFs cobertas (1ª onda) recebem 5 stops de cor; não cobertas ficam cinza
- * neutro com label "em planejamento" no tooltip.
+ * Sprint 8.2 adiciona:
+ *   - Toolbar com 3 modos de coloração (total/ativas/snapshot)
+ *   - Download SVG (XMLSerializer) e PNG (canvas 1200×1200)
  *
- * D3 v7 carregado via CDN jsdelivr — pesa ~95KB minified+gz mas só nesta página.
+ * Sprint 8.3 vai adicionar mobile collapse + polish a11y.
  *
- * Sprint 8.2 vai estender com 3 modos de coloração (total/ativas/snapshot) +
- * download SVG/PNG via canvas.
- * Sprint 8.3 adiciona mobile collapse + polish a11y.
+ * D3 v7 carregado via CDN jsdelivr — ~95KB minified+gz só nesta página.
  *
- * Dados embarcados como JSON em <script id="mapa-data"> (lido aqui).
  * Lista textual paralela em <table> abaixo do mapa é fonte de verdade
  * canônica para leitores de tela (NF-M-10).
  */
@@ -41,7 +40,6 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
   }
   const { porUf, pathPrefix } = data;
 
-  // Buscar GeoJSON simplificado (121 KB)
   let geo;
   try {
     const res = await fetch(`${pathPrefix}assets/geo/br-ufs.geojson`);
@@ -54,61 +52,59 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
     return;
   }
 
-  // Limpa loading state
   svg.innerHTML = "";
 
-  // Projection ajustada para o Brasil (mercator é OK pra esta escala)
   const width = 600;
   const height = 600;
-  const projection = d3.geoMercator()
-    .center([-54, -15])  // Centro aproximado do Brasil
-    .scale(700)
-    .translate([width / 2, height / 2]);
+  // fitSize ajusta projection automaticamente ao bbox do GeoJSON.
+  // Mais robusto que scale/center fixos (que dependem do GeoJSON exato).
+  const projection = d3.geoMercator().fitSize([width, height], geo);
   const pathGen = d3.geoPath().projection(projection);
 
-  // Color scale: azul-IBGE 5 stops para UFs cobertas (paleta autoral V2)
-  // Domínio = [min, max] das contagens das UFs cobertas (excluindo zero)
-  const cobertas = Object.entries(porUf).filter(([sigla]) => sigla !== "BR");
-  const totals = cobertas.map(([, agg]) => agg.total).filter((n) => n > 0);
-  const maxTotal = totals.length ? Math.max(...totals) : 1;
-  const minTotal = totals.length ? Math.min(...totals) : 0;
+  // === Estado global do mapa: métrica de coloração ativa ===
+  const METRICAS = {
+    total: { label: "Total de políticas", chave: "total" },
+    ativas: { label: "Apenas ativas", chave: "ativas" },
+    snapshot: { label: "Com snapshot capturado", chave: "snapshot" },
+  };
+  let metricaAtual = "total";
 
-  const colorScale = d3.scaleSequential()
-    .domain([Math.max(0, minTotal - 5), maxTotal])
-    .interpolator(d3.interpolateRgb("#D6E4F2", "#1A4F8B"));  // azul-IBGE light → dark
+  // Color scale dinâmica conforme métrica
+  function getColorScale(metrica) {
+    const valores = Object.entries(porUf)
+      .filter(([sigla]) => sigla !== "BR")
+      .map(([, agg]) => agg[metrica])
+      .filter((n) => n > 0);
+    const max = valores.length ? Math.max(...valores) : 1;
+    const min = valores.length ? Math.min(...valores) : 0;
+    return {
+      scale: d3.scaleSequential()
+        .domain([Math.max(0, min - 1), max])
+        .interpolator(d3.interpolateRgb("#D6E4F2", "#1A4F8B")),
+      max,
+      min,
+    };
+  }
 
-  // Cor para UFs não cobertas
-  const COR_NAO_COBERTA = "#E5DFD3";  // neutral-200 morno (paleta V2)
+  const COR_NAO_COBERTA = "#E5DFD3";
 
-  // Criar grupo SVG para os paths
-  const g = d3.select("#mapa-svg")
-    .attr("viewBox", `0 0 ${width} ${height}`)
-    .append("g");
+  const svgD3 = d3.select("#mapa-svg")
+    .attr("viewBox", `0 0 ${width} ${height}`);
 
-  // Render dos 27 estados
-  g.selectAll("path")
+  const g = svgD3.append("g");
+
+  // === Render dos 27 estados (paths + interação) ===
+  const paths = g.selectAll("path")
     .data(geo.features)
     .enter()
     .append("path")
     .attr("d", pathGen)
-    .attr("fill", (d) => {
-      const sigla = d.properties.sigla;
-      const agg = porUf[sigla];
-      if (!agg || agg.total === 0) return COR_NAO_COBERTA;
-      return colorScale(agg.total);
-    })
     .attr("stroke", "#FAF7F2")
     .attr("stroke-width", 0.6)
     .attr("vector-effect", "non-scaling-stroke")
     .attr("data-sigla", (d) => d.properties.sigla)
-    .attr("aria-label", (d) => {
-      const sigla = d.properties.sigla;
-      const agg = porUf[sigla];
-      if (!agg) return `${d.properties.name} — em planejamento (não catalogada na 1ª onda)`;
-      return `${d.properties.name} — ${agg.total} políticas catalogadas`;
-    })
     .style("cursor", (d) => porUf[d.properties.sigla] ? "pointer" : "default")
-    .style("transition", "fill 0.2s, stroke-width 0.2s")
+    .style("transition", "fill 0.3s, stroke-width 0.2s")
     .on("mouseenter", function (event, d) {
       const sigla = d.properties.sigla;
       const agg = porUf[sigla];
@@ -123,7 +119,7 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
         html = `
           <div class="font-semibold">${nome} (${sigla})</div>
           <div class="mt-2xs">${agg.total} políticas · ${agg.ativas} ativas · ${agg.snapshot} com snapshot</div>
-          <div class="mt-2xs text-papel/70">Clique para ver página da UF</div>
+          <div class="mt-2xs opacity-70">Clique para ver página da UF</div>
         `;
       } else {
         html = `
@@ -150,11 +146,10 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
     })
     .on("click", function (event, d) {
       const sigla = d.properties.sigla;
-      if (!porUf[sigla]) return;  // UFs não-cobertas não são clicáveis
+      if (!porUf[sigla]) return;
       window.location.href = `${pathPrefix}uf/${sigla.toLowerCase()}/`;
     })
     .on("keydown", function (event, d) {
-      // Permite ativação por Enter/Space (foco via Tab)
       if (event.key === "Enter" || event.key === " ") {
         const sigla = d.properties.sigla;
         if (porUf[sigla]) {
@@ -164,8 +159,8 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
       }
     });
 
-  // Adicionar labels com sigla nas UFs cobertas (legibilidade rápida)
-  g.selectAll("text")
+  // Labels com siglas (recolorem dinamicamente)
+  const labels = g.selectAll("text")
     .data(geo.features.filter((d) => porUf[d.properties.sigla]))
     .enter()
     .append("text")
@@ -175,22 +170,11 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
     .attr("dominant-baseline", "middle")
     .attr("font-size", "11")
     .attr("font-weight", "600")
-    .attr("fill", (d) => {
-      const agg = porUf[d.properties.sigla];
-      // Texto branco em UFs com cor mais escura, tinta nas mais claras
-      return agg && agg.total > maxTotal * 0.5 ? "#FAF7F2" : "#3C342A";
-    })
     .attr("pointer-events", "none")
     .text((d) => d.properties.sigla);
 
-  // Legenda: barra de cores horizontal abaixo do mapa
-  const legendWidth = 200;
-  const legendHeight = 12;
-  const legendX = width - legendWidth - 20;
-  const legendY = height - 30;
-
-  // Defs para gradiente
-  const defs = d3.select("#mapa-svg").append("defs");
+  // === Legenda dinâmica (gradiente + ticks) ===
+  const defs = svgD3.append("defs");
   const gradient = defs.append("linearGradient")
     .attr("id", "mapa-gradient")
     .attr("x1", "0%").attr("x2", "100%")
@@ -198,23 +182,136 @@ import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
   gradient.append("stop").attr("offset", "0%").attr("stop-color", "#D6E4F2");
   gradient.append("stop").attr("offset", "100%").attr("stop-color", "#1A4F8B");
 
-  d3.select("#mapa-svg").append("rect")
+  const legendWidth = 200;
+  const legendHeight = 12;
+  const legendX = width - legendWidth - 20;
+  const legendY = height - 35;
+
+  svgD3.append("rect")
     .attr("x", legendX).attr("y", legendY)
     .attr("width", legendWidth).attr("height", legendHeight)
     .attr("fill", "url(#mapa-gradient)")
     .attr("stroke", "#3C342A").attr("stroke-width", 0.5);
 
-  d3.select("#mapa-svg").append("text")
-    .attr("x", legendX).attr("y", legendY - 4)
+  const legendaTitulo = svgD3.append("text")
+    .attr("x", legendX).attr("y", legendY - 18)
     .attr("font-size", "10")
-    .attr("fill", "#3C342A")
-    .text(`${minTotal} políticas`);
-  d3.select("#mapa-svg").append("text")
-    .attr("x", legendX + legendWidth).attr("y", legendY - 4)
-    .attr("font-size", "10")
-    .attr("text-anchor", "end")
-    .attr("fill", "#3C342A")
-    .text(`${maxTotal} políticas`);
+    .attr("font-weight", "600")
+    .attr("fill", "#3C342A");
 
-  console.info(`[mapa] renderizado: ${geo.features.length} UFs, ${cobertas.length} cobertas`);
+  const legendaMin = svgD3.append("text")
+    .attr("x", legendX).attr("y", legendY - 4)
+    .attr("font-size", "9")
+    .attr("fill", "#3C342A");
+
+  const legendaMax = svgD3.append("text")
+    .attr("x", legendX + legendWidth).attr("y", legendY - 4)
+    .attr("font-size", "9")
+    .attr("text-anchor", "end")
+    .attr("fill", "#3C342A");
+
+  // === Função de re-coloração (chamada inicial e ao trocar métrica) ===
+  function recolorize(metrica) {
+    const { scale, max, min } = getColorScale(metrica);
+    metricaAtual = metrica;
+
+    paths
+      .attr("fill", (d) => {
+        const agg = porUf[d.properties.sigla];
+        if (!agg || agg[metrica] === 0) return COR_NAO_COBERTA;
+        return scale(agg[metrica]);
+      })
+      .attr("aria-label", (d) => {
+        const sigla = d.properties.sigla;
+        const agg = porUf[sigla];
+        if (!agg) return `${d.properties.name} — em planejamento`;
+        return `${d.properties.name} — ${agg[metrica]} ${METRICAS[metrica].label.toLowerCase()}`;
+      });
+
+    labels
+      .attr("fill", (d) => {
+        const agg = porUf[d.properties.sigla];
+        return agg && agg[metrica] > max * 0.5 ? "#FAF7F2" : "#3C342A";
+      });
+
+    legendaTitulo.text(METRICAS[metrica].label);
+    legendaMin.text(`${min} pol.`);
+    legendaMax.text(`${max} pol.`);
+  }
+
+  recolorize("total");
+
+  // === Toolbar: handlers dos botões de coloração ===
+  document.querySelectorAll("[data-color-by]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const metrica = btn.dataset.colorBy;
+      if (!METRICAS[metrica]) return;
+      recolorize(metrica);
+      // Atualiza estado visual dos botões (aria-pressed)
+      document.querySelectorAll("[data-color-by]").forEach((b) => {
+        b.setAttribute("aria-pressed", b === btn ? "true" : "false");
+      });
+    });
+  });
+
+  // === Download SVG: serializa SVG inline e força download ===
+  document.getElementById("download-svg")?.addEventListener("click", () => {
+    const serializer = new XMLSerializer();
+    // Clone para adicionar xmlns explicito (browser remove ao injetar inline)
+    const clone = svg.cloneNode(true);
+    clone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    clone.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
+    const svgString = serializer.serializeToString(clone);
+    const blob = new Blob(['<?xml version="1.0" encoding="UTF-8"?>\n', svgString],
+      { type: "image/svg+xml;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `catalogo-politicas-mapa-${metricaAtual}.svg`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+
+  // === Download PNG: render SVG em canvas 1200×1200 e exportar ===
+  document.getElementById("download-png")?.addEventListener("click", () => {
+    const serializer = new XMLSerializer();
+    const clone = svg.cloneNode(true);
+    clone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    const svgString = serializer.serializeToString(clone);
+    const svgBlob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+    const svgUrl = URL.createObjectURL(svgBlob);
+
+    const img = new Image();
+    img.onload = () => {
+      const canvas = document.createElement("canvas");
+      canvas.width = 1200;
+      canvas.height = 1200;
+      const ctx = canvas.getContext("2d");
+      // Fundo papel (a paleta V2)
+      ctx.fillStyle = "#FAF7F2";
+      ctx.fillRect(0, 0, 1200, 1200);
+      ctx.drawImage(img, 0, 0, 1200, 1200);
+      URL.revokeObjectURL(svgUrl);
+
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `catalogo-politicas-mapa-${metricaAtual}.png`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      }, "image/png");
+    };
+    img.onerror = (e) => {
+      console.error("[mapa] erro ao gerar PNG:", e);
+      alert("Erro ao gerar PNG. Use o download SVG.");
+    };
+    img.src = svgUrl;
+  });
+
+  console.info(`[mapa] sprint 8.2 ready: ${geo.features.length} UFs, métricas total/ativas/snapshot`);
 })();
