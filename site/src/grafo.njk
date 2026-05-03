@@ -20,13 +20,22 @@ permalink: /grafo/
   <h1>Grafo de relações federal ↔ estadual</h1>
   <p class="text-neutral-700 max-w-3xl">
     Visualização das <strong>{{ grafo.stats.totalNodes }}</strong> políticas
-    como rede: <strong>{{ grafo.stats.federais }}</strong> federais canônicas
-    (nós grandes azul-IBGE), <strong>{{ grafo.stats.replicas }}</strong>
-    réplicas estaduais (nós pequenos coloridos por UF) e
+    catalogadas como rede.
+    <strong>{{ grafo.stats.federais }}</strong> federais canônicas (nós grandes
+    azul-IBGE rotulados por sigla, ex.: PRONATEC, EJA),
+    <strong>{{ grafo.stats.replicas }}</strong> réplicas estaduais (nós
+    azuis menores rotulados como sigla-UF, ex.: PRONATEC-BA, EJA-SP) e
     <strong>{{ grafo.stats.estaduais }}</strong> políticas exclusivamente
-    estaduais (nós isolados). Edges federal→réplica conectam {{ grafo.stats.totalEdges }}
-    pares. Cada nó é clicável e leva à ficha da política.
+    estaduais (nós verdes). Cada nó é uma POLÍTICA específica clicável.
   </p>
+  <ul class="mt-md text-sm text-neutral-700 max-w-3xl list-disc pl-md space-y-2xs">
+    <li><strong>{{ grafo.stats.edgesFamilia }}</strong> edges <strong>família</strong>
+      (linha contínua cinza): replica → federal canônica. Genealogia institucional.</li>
+    <li><strong>{{ grafo.stats.edgesArticulacao }}</strong> edges <strong>articulação</strong>
+      (linha sienna tracejada com seta): relações substantivas declaradas
+      (certificação, condicionalidade, intermediação, complementaridade).
+      <em>Lista curada provisória — em revisão pela equipe FRM/IESP.</em></li>
+  </ul>
   <p class="text-sm text-neutral-700 mt-sm md:hidden">
     {% icon "info" %} Em telas menores, role para baixo para ver a
     <a href="#lista-familias" class="text-primary">lista textual completa</a>

@@ -32,6 +32,7 @@
 import { readFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import curadasValidas from "./articulacoesCuradas.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = resolve(__dirname, "../../../data/derived/latest.json");
@@ -59,7 +60,7 @@ export default function () {
       data: {
         id: p.id_interno,
         slug: p.slug,
-        label: shortLabel(p.nome, type),
+        label: shortLabel(p.nome, type, p.uf),
         nomeCompleto: p.nome,
         type,
         uf: p.uf,
@@ -82,6 +83,25 @@ export default function () {
     }
   }
 
+  // Sprint 9.3 (versão revisada): edges 'articulacao' apenas a partir da
+  // CURADORIA HUMANA em _data/articulacoesCuradas.js. Substring matching
+  // automático foi descartado por gerar ruído (ver decisão da usuária 2026-05-03).
+  // Cada articulação aqui representa uma relação institucional substantiva
+  // documentada (certificação, condicionalidade, intermediação, etc.).
+  const articuladas = curadasValidas(policies);
+  for (const a of articuladas) {
+    edges.push({
+      data: {
+        id: `e-art-${a.source}-${a.target}`,
+        source: a.source,
+        target: a.target,
+        type: "articulacao",
+        tipoArticulacao: a.tipo,
+        descricao: a.descricao,
+      },
+    });
+  }
+
   // Estatísticas para o template
   const stats = {
     totalNodes: nodes.length,
@@ -89,25 +109,48 @@ export default function () {
     replicas: nodes.filter((n) => n.data.type === "replica").length,
     estaduais: nodes.filter((n) => n.data.type === "estadual").length,
     totalEdges: edges.length,
+    edgesFamilia: edges.filter((e) => e.data.type === "familia").length,
+    edgesArticulacao: edges.filter((e) => e.data.type === "articulacao").length,
   };
 
   return { nodes, edges, stats };
 }
 
 /**
- * Label curto: para federal, sigla extraída entre parênteses se existir;
- * para replica, sigla da UF; para estadual, primeiras 30 chars do nome.
+ * Label curto identificando a POLÍTICA (não a UF) em cada nó.
+ * Cada nó é uma política específica:
+ *   - Federal canônica: "PRONATEC", "EJA", "ENCCEJA" (sigla entre parênteses)
+ *   - Réplica estadual: "PRONATEC-BA", "EJA-SP" (sigla federal + UF)
+ *   - Estadual única: sigla própria entre parênteses + UF, ou primeiras palavras
+ *
+ * (Sprint 9.3 fix: antes mostrava só "BA"/"SP" em réplicas, dando impressão
+ * de que o nó era a UF — confusão semântica reportada pela usuária.)
  */
-function shortLabel(nome, type) {
+function shortLabel(nome, type, uf) {
   if (!nome) return "?";
-  if (type === "replica") {
-    return nome.length > 25 ? nome.substring(0, 22) + "…" : nome;
-  }
-  // Tenta extrair sigla entre parênteses (PRONATEC, EJA, ENCCEJA, etc.)
+  // Sigla entre parênteses no próprio nome
   const m = nome.match(/\(([A-Z][A-Z0-9-]{1,15})\)/);
-  if (m) return m[1];
-  // Fallback: primeiras palavras
-  return nome.length > 30 ? nome.substring(0, 27) + "…" : nome;
+  const sigla = m ? m[1] : null;
+
+  if (type === "federal") {
+    return sigla || (nome.length > 22 ? nome.substring(0, 19) + "…" : nome);
+  }
+  if (type === "replica") {
+    // Sigla da política + UF (ex.: "PRONATEC-BA"). Identifica a política
+    // específica, não confunde com nome da UF.
+    return sigla ? `${sigla}-${uf}` : `${shortenName(nome, 14)}-${uf}`;
+  }
+  // Estadual única: sigla se existir + UF, senão primeiras palavras + UF
+  if (sigla) return `${sigla}-${uf}`;
+  return `${shortenName(nome, 14)}-${uf}`;
+}
+
+function shortenName(nome, maxLen) {
+  if (nome.length <= maxLen) return nome;
+  // Pega só palavras significativas (>3 chars), join, trunca
+  const words = nome.split(/\s+/).filter((w) => w.length > 3 && !/^(de|da|do|para|com|em|na|no|os|as|à|à)$/i.test(w));
+  const compact = words.join(" ");
+  return compact.length > maxLen ? compact.substring(0, maxLen - 1) + "…" : compact;
 }
 
 function situacaoClasse(s) {

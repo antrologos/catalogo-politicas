@@ -156,7 +156,7 @@ waitForCytoscape(function init() {
           opacity: 0.5,
         },
       },
-      // Edge familia: linha sólida fina
+      // Edge familia: linha sólida fina (federal → réplica estadual)
       {
         selector: 'edge[type="familia"]',
         style: {
@@ -165,6 +165,22 @@ waitForCytoscape(function init() {
           "curve-style": "bezier",
           opacity: 0.55,
           "target-arrow-shape": "none",
+        },
+      },
+      // Edge articulação curada: tracejado sienna, com seta direcional
+      // (relação substantiva: certificação, condicionalidade, intermediação...)
+      {
+        selector: 'edge[type="articulacao"]',
+        style: {
+          width: 2,
+          "line-color": "#C7521C",          // sienna (paleta autoral V2)
+          "line-style": "dashed",
+          "curve-style": "bezier",
+          "control-point-step-size": 60,
+          opacity: 0.85,
+          "target-arrow-color": "#C7521C",
+          "target-arrow-shape": "triangle",
+          "arrow-scale": 1.2,
         },
       },
       // Hover state
@@ -345,9 +361,11 @@ waitForCytoscape(function init() {
     announce("Filtros limpos. Grafo reajustado para visualização inicial.");
   });
 
-  // Anuncia quando layout terminar
+  // Anuncia quando layout terminar (separa família vs articulação)
   cy.one("layoutstop", () => {
-    announce(`Grafo carregado: ${nodes.length} políticas e ${edges.length} relações federal-réplica.`);
+    const eFam = edges.filter((e) => e.data.type === "familia").length;
+    const eArt = edges.filter((e) => e.data.type === "articulacao").length;
+    announce(`Grafo carregado: ${nodes.length} políticas, ${eFam} edges família e ${eArt} edges de articulação curada.`);
   });
 
   console.info(`[grafo] Cytoscape v${cytoscape.version}: ${nodes.length} nodes, ${edges.length} edges`);
