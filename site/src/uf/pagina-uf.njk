@@ -40,6 +40,16 @@ eleventyComputed:
     {% endif %}
   </p>
 
+  {# Sprint 8.4: link de descoberta para o mapa coroplético.
+     Conecta página /uf/ ao /mapa/ — ver UF em contexto geográfico. #}
+  <p class="mt-md text-sm">
+    <a href="/mapa/" class="text-primary">
+      {% icon "map-trifold" %} Ver
+      {% if ufSigla == "BR" %}cobertura nacional{% else %}{{ ufSigla }}{% endif %}
+      no mapa do Brasil →
+    </a>
+  </p>
+
   {# Sprint F4: nota de transparência sobre duplicatas conhecidas em BA.
      R2.1-B-Crítico-3 e R2.3 Lente 4 (credibilidade institucional vaza
      com erros não declarados). Solução: declarar abertamente. ETL fica
