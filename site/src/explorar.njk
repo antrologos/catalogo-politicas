@@ -168,6 +168,38 @@ permalink: /explorar/
       </p>
     </article>
 
+    {# CARD: Grafo de relações (Sprint 9.5: integra /grafo/ ao hub).
+       Rede Cytoscape de 439 políticas com edges família + articulação curada. #}
+    <article class="bg-warning/15 border-2 border-warning-dark p-lg rounded shadow-sm">
+      <header>
+        <p class="text-xs uppercase tracking-wide text-warning-dark">Visualização em rede</p>
+        <h3 class="text-2xl mt-2xs">
+          {% icon "graph" %} Grafo de relações
+        </h3>
+        <p class="text-sm mt-sm text-neutral-700">
+          Rede de 439 políticas com 33 famílias federais (canônica + réplicas
+          estaduais) e ligações de articulação curada (certificação,
+          condicionalidade, intermediação, complementaridade).
+        </p>
+      </header>
+      <ul class="mt-md flex flex-wrap gap-2xs list-none p-0 text-sm">
+        <li>
+          <a href="/grafo/" class="tag tag--filter" aria-pressed="true">
+            {% icon "graph" %} Abrir grafo interativo
+          </a>
+        </li>
+        <li>
+          <a href="/grafo/#lista-familias" class="tag tag--neutral">
+            Lista textual de famílias
+          </a>
+        </li>
+      </ul>
+      <p class="mt-md text-xs text-neutral-700">
+        Filtros por tipo + situação · Highlight de família ao hover ·
+        Navegação por teclado (setas + Enter).
+      </p>
+    </article>
+
     {# CARD: Origem (federal vs estadual) #}
     <article class="bg-warning/15 border-2 border-warning p-lg rounded shadow-sm">
       <header>
