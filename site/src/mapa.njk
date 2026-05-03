@@ -1,0 +1,144 @@
+---
+layout: layouts/base.njk
+title: "Mapa do Brasil"
+description: "Mapa coroplético interativo das 27 UFs brasileiras com contagem de políticas catalogadas (1ª onda: 9 UFs cobertas em azul, 17 em planejamento em cinza). Lista textual paralela acessível para leitores de tela."
+permalink: /mapa/
+---
+
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: "Mapa" }
+] %}
+{% include "components/breadcrumb.njk" %}
+
+<header class="border-b border-neutral-200 pb-lg mb-xl">
+  <h1>Mapa do Brasil — cobertura por UF</h1>
+  <p class="text-neutral-700 max-w-3xl">
+    {{ agregados.total }} políticas catalogadas em {{ agregados.ufsCobertas | length - 1 }}
+    estados brasileiros + esfera federal (1ª onda). Outras 17 UFs em planejamento
+    aparecem em cinza. Cor das UFs cobertas reflete contagem de políticas
+    (gradiente azul-IBGE: claro = poucas, escuro = muitas).
+  </p>
+</header>
+
+{# === Mapa SVG renderizado por D3 ===
+   Sprint 8.1 entrega o MVP: render + click + tooltip + lista paralela.
+   Sprint 8.2 adiciona: toolbar com 3 modos de coloração + download SVG/PNG.
+   Sprint 8.3 adiciona: mobile responsive + polish a11y. #}
+<div class="relative my-xl">
+  <div id="mapa-container"
+       class="bg-papel border border-neutral-200 rounded overflow-hidden"
+       role="img"
+       aria-labelledby="mapa-h"
+       aria-describedby="mapa-desc">
+    <h2 id="mapa-h" class="sr-only">Mapa coroplético do Brasil por UF</h2>
+    <p id="mapa-desc" class="sr-only">
+      Mapa visual das 27 UFs brasileiras coloridas por número de políticas catalogadas.
+      Cada UF é clicável e leva à página executiva correspondente.
+      A lista textual paralela abaixo contém a mesma informação para leitores de tela.
+    </p>
+    <svg id="mapa-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet"
+         class="w-full h-auto" style="max-height: 75vh;">
+      <text x="300" y="300" text-anchor="middle" fill="#5C5347" font-size="16">
+        Carregando mapa...
+      </text>
+    </svg>
+  </div>
+
+  {# Tooltip absoluto que segue o mouse, populado por JS #}
+  <div id="mapa-tooltip"
+       role="tooltip"
+       class="hidden absolute pointer-events-none bg-tinta text-white text-xs px-sm py-2xs rounded shadow-md z-10"
+       style="max-width: 220px;">
+  </div>
+</div>
+
+<noscript>
+  <div role="alert" class="my-xl bg-warning/15 text-warning-dark p-md rounded">
+    <p>O mapa requer JavaScript. A <a href="#lista-ufs">lista textual abaixo</a>
+    contém a mesma informação em formato acessível, com link para cada página de UF.</p>
+  </div>
+</noscript>
+
+{# === Lista textual paralela canônica (NF-M-10 a11y) ===
+   Não escondida — é fonte de verdade igualmente válida. Abaixo do mapa para
+   complementar visão geográfica com leitura linear acessível. #}
+<section aria-labelledby="lista-ufs-h" id="lista-ufs" class="my-2xl">
+  <h2 id="lista-ufs-h">Lista das UFs com cobertura</h2>
+  <p class="text-sm text-neutral-700">
+    Equivalente textual do mapa: ordenada por contagem decrescente. Cada UF é
+    clicável e leva à página executiva.
+  </p>
+
+  <table class="w-full mt-md border-collapse text-sm">
+    <caption class="sr-only">
+      Lista das {{ agregados.ufsCobertas | length }} UFs catalogadas na 1ª onda,
+      ordenadas por número de políticas (decrescente).
+    </caption>
+    <thead>
+      <tr class="border-b-2 border-neutral-500 text-left">
+        <th scope="col" class="p-sm">UF</th>
+        <th scope="col" class="p-sm">Região</th>
+        <th scope="col" class="p-sm num">Total</th>
+        <th scope="col" class="p-sm num">Ativas</th>
+        <th scope="col" class="p-sm num">Com snapshot</th>
+        <th scope="col" class="p-sm">Página</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for sigla in agregados.ufsCobertas %}
+        {% set info = ufs[sigla] %}
+        {% set agg = agregados.porUf[sigla] %}
+        <tr class="border-b border-neutral-200 hover:bg-neutral-100">
+          <th scope="row" class="p-sm font-medium">
+            {% if sigla == "BR" %}
+              <span class="tag tag--federal">Federal</span>
+            {% else %}
+              <span class="tag tag--estadual">{{ sigla }}</span>
+              {{ info.nome if info else sigla }}
+            {% endif %}
+          </th>
+          <td class="p-sm">{{ info.regiao if info else "—" }}</td>
+          <td class="p-sm num font-semibold">{{ agg.total }}</td>
+          <td class="p-sm num">{{ agg.ativas }}</td>
+          <td class="p-sm num">{{ agg.comSnapshot }}</td>
+          <td class="p-sm">
+            <a href="/uf/{{ sigla | lower }}/" class="text-primary">
+              Ver →
+            </a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p class="text-sm text-neutral-700 mt-md">
+    UFs em cinza no mapa não têm políticas catalogadas na 1ª onda — veja
+    <a href="/sobre/cobertura/" class="text-primary">cobertura e cronograma</a>
+    para entender critérios de inclusão.
+  </p>
+</section>
+
+{# === Dados embarcados como JSON para o JS ler === #}
+<script id="mapa-data" type="application/json">
+{
+  "porUf": {
+    {%- set comma = "" -%}
+    {%- for sigla in agregados.ufsCobertas -%}
+      {%- set agg = agregados.porUf[sigla] -%}
+      {%- set info = ufs[sigla] -%}
+      {{ comma }}"{{ sigla }}": {
+        "nome": {{ (info.nome if info else sigla) | dump | safe }},
+        "regiao": {{ (info.regiao if info else "Federal") | dump | safe }},
+        "total": {{ agg.total }},
+        "ativas": {{ agg.ativas }},
+        "snapshot": {{ agg.comSnapshot }}
+      }
+      {%- set comma = "," -%}
+    {%- endfor %}
+  },
+  "pathPrefix": {{ site.pathPrefix | dump | safe }}
+}
+</script>
+
+<script src="{{ '/assets/js/mapa.js' }}" type="module"></script>

@@ -19,6 +19,7 @@ export default function (eleventyConfig) {
   // ---- Passthrough copy (assets)
   eleventyConfig.addPassthroughCopy({ "src/assets/js": "assets/js" });
   eleventyConfig.addPassthroughCopy({ "src/assets/img": "assets/img" });
+  eleventyConfig.addPassthroughCopy({ "src/assets/geo": "assets/geo" });
   // CSS é gerado pelo Tailwind CLI direto em _site/assets/css/
   // Fontes self-hosted via @fontsource: o CSS importado referencia
   // url(files/...) relativo a _site/assets/css/, então copiamos os .woff2
