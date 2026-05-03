@@ -1,0 +1,74 @@
+{# Meta tags para descoberta acadêmica (Sprint F2 do MVP-UX, 2026-05-03).
+   Inclui:
+   - Highwire Press citation_* tags (Zotero/Mendeley auto-detect)
+   - Schema.org Dataset JSON-LD (Google Scholar / dataset search)
+
+   Renderizada em base.njk dentro de <head>, condicional a {% if p %}
+   (apenas em páginas de ficha individual, não em listings). #}
+
+{# === Highwire Press meta tags (R2.2 padrão crítico) ===
+   Zotero browser connector reconhece estes tags automaticamente.
+   Sem botão custom no site, ficha vira citável em 1 clique. #}
+<meta name="citation_title" content="{{ p.nome_programa }}">
+<meta name="citation_author" content="Barbosa, Rogério Jerônimo">
+<meta name="citation_author" content="Gama, Maria Clara da">
+<meta name="citation_author" content="Guicheney, Hellen">
+<meta name="citation_author" content="Schaefer, Bruno">
+<meta name="citation_publication_date" content="{{ p.data_revisao or '2026-05-01' }}">
+<meta name="citation_journal_title" content="Catálogo de Políticas Públicas Brasileiras — Projeto Juventudes Fora da Escola sem Educação Básica">
+<meta name="citation_publisher" content="Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ)">
+<meta name="citation_language" content="pt-BR">
+<meta name="citation_public_url" content="{{ site.baseUrl }}/politica/{{ p.slug }}/">
+{% if p.resumo %}
+<meta name="citation_abstract" content="{{ p.resumo | striptags | truncate(500) }}">
+{% endif %}
+{% if p.fonte_url %}
+<meta name="citation_pdf_url" content="{{ p.fonte_url }}">
+{% endif %}
+{% if p.id_universal %}
+<meta name="citation_doi" content="{{ p.id_universal }}">
+{% endif %}
+
+{# === Schema.org Dataset (R2.2 padrão complementar) ===
+   Google Scholar Dataset Search e crawlers usam JSON-LD.
+   Catálogo é tecnicamente um Dataset (coleção curada de itens documentados);
+   cada ficha pode também ser GovernmentService quando aplicável. #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": {{ p.nome_programa | dump | safe }},
+  "description": {{ (p.resumo or p.apresentacao or p.nome_programa) | striptags | truncate(500) | dump | safe }},
+  "url": "{{ site.baseUrl }}/politica/{{ p.slug }}/",
+  "identifier": "{{ p.id_universal }}",
+  "inLanguage": "pt-BR",
+  "license": "{{ site.licenca.url }}",
+  "isPartOf": {
+    "@type": "Dataset",
+    "name": "Catálogo de Políticas Públicas Brasileiras — Projeto Juventudes Fora da Escola sem Educação Básica",
+    "url": "{{ site.baseUrl }}/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rede EJA e Inclusão Produtiva",
+    "url": "{{ site.baseUrl }}/sobre/"
+  },
+  "creator": [
+    { "@type": "Person", "name": "Rogério Jerônimo Barbosa" },
+    { "@type": "Person", "name": "Maria Clara da Gama" },
+    { "@type": "Person", "name": "Hellen Guicheney" },
+    { "@type": "Person", "name": "Bruno Schaefer" }
+  ],
+  "dateModified": "{{ p.data_revisao or '2026-05-01' }}",
+  {% if p.ano_criacao %}"datePublished": "{{ p.ano_criacao }}",{% endif %}
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "{% if p.uf == 'BR' %}Brasil{% else %}{{ p.uf }}, Brasil{% endif %}"
+  },
+  "keywords": [
+    {{ (p.tipo_politica or 'Política pública') | dump | safe }},
+    {{ (p.modalidade_oferta or '') | dump | safe }},
+    "EJA", "qualificação profissional", "inclusão produtiva", "educação"
+  ]
+}
+</script>

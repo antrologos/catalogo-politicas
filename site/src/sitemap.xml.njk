@@ -1,0 +1,76 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemap.org/schemas/sitemap/0.9">
+  {# Páginas estáticas principais #}
+  {%- set staticPages = [
+    { url: '/', priority: '1.0', changefreq: 'weekly' },
+    { url: '/buscar/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/explorar/', priority: '0.9', changefreq: 'weekly' },
+    { url: '/comparacao/', priority: '0.8', changefreq: 'weekly' },
+    { url: '/sobre/', priority: '0.7', changefreq: 'monthly' },
+    { url: '/sobre/cobertura/', priority: '0.6', changefreq: 'monthly' },
+    { url: '/sobre/privacidade/', priority: '0.3', changefreq: 'yearly' },
+    { url: '/sobre/termos/', priority: '0.3', changefreq: 'yearly' },
+    { url: '/sobre/transparencia/', priority: '0.3', changefreq: 'yearly' },
+    { url: '/sobre/acessibilidade/', priority: '0.3', changefreq: 'yearly' }
+  ] -%}
+  {%- for p in staticPages %}
+  <url>
+    <loc>{{ site.baseUrl }}{{ p.url }}</loc>
+    <changefreq>{{ p.changefreq }}</changefreq>
+    <priority>{{ p.priority }}</priority>
+  </url>
+  {%- endfor %}
+
+  {# 439 fichas de políticas #}
+  {%- for ficha in policies %}
+  <url>
+    <loc>{{ site.baseUrl }}/politica/{{ ficha.slug }}/</loc>
+    <lastmod>{{ ficha.data_revisao or '2026-05-01' }}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {%- endfor %}
+
+  {# Páginas de UF #}
+  {%- for sigla in agregados.ufsCobertas %}
+  <url>
+    <loc>{{ site.baseUrl }}/uf/{{ sigla | lower }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  {%- endfor %}
+
+  {# Páginas de dimensão #}
+  {%- for grupo in dimensoes.tipo %}
+  <url>
+    <loc>{{ site.baseUrl }}/tipo/{{ grupo.slug }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+  {%- for grupo in dimensoes.situacao %}
+  <url>
+    <loc>{{ site.baseUrl }}/situacao/{{ grupo.slug }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+  {%- for grupo in dimensoes.modalidade %}
+  <url>
+    <loc>{{ site.baseUrl }}/modalidade/{{ grupo.slug }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+  {%- for grupo in dimensoes.abrangencia %}
+  <url>
+    <loc>{{ site.baseUrl }}/abrangencia/{{ grupo.slug }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor %}
+</urlset>

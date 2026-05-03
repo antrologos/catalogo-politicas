@@ -24,6 +24,13 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
         href="{{ '/assets/css/files/ibm-plex-serif-latin-700-normal.woff2' }}">
 
+  {# Meta tags acadêmicas — apenas em páginas de ficha individual (Sprint F2).
+     Inclui Highwire Press citation_* (Zotero auto-detect) + Schema.org Dataset
+     JSON-LD (Google Scholar Dataset Search). #}
+  {% if p and p.slug %}
+    {% include "components/ficha-meta.njk" %}
+  {% endif %}
+
   <!-- Tailwind CSS gerado -->
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' }}">
 
