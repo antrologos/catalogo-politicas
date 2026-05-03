@@ -23,6 +23,15 @@ layout: layouts/base.njk
   {% endif %}
   <span data-pagefind-filter="Snapshot" class="visually-hidden">{% if p.fonte_arquivo_path %}Disponível{% else %}Indisponível{% endif %}</span>
 
+  {# Sinônimos curados (Sprint F1, _data/sinonimos.js): aliases injetados como
+     conteúdo indexável para Pagefind capturar buscas por sigla, vocabulário
+     coloquial e variações ortográficas. Visualmente escondido. #}
+  {% if sinonimos.aliasesPorSlug[p.slug] %}
+    <span data-pagefind-meta="aliases" class="visually-hidden">
+      {{ sinonimos.aliasesPorSlug[p.slug] | join(' · ') }}
+    </span>
+  {% endif %}
+
 
   <header class="border-b border-neutral-200 pb-lg mb-xl">
     <h1>{{ p.nome_programa }}</h1>

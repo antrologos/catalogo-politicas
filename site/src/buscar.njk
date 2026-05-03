@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Buscar políticas"
-description: "Busca textual e filtros facetados nas 439 políticas catalogadas."
+description: "Busca textual e filtros facetados nas 439 políticas catalogadas, com sinônimos curados (EJA, PRONATEC, ENCCEJA, etc.) e sugestões para iniciantes."
 permalink: /buscar/
 ---
 {% set crumbs = [
@@ -13,8 +13,8 @@ permalink: /buscar/
 <section aria-labelledby="busca-h">
   <h1 id="busca-h">Buscar políticas</h1>
   <p class="text-neutral-700">
-    Busque por nome do programa, base legal, órgão responsável ou termos
-    do resumo. Use os filtros para restringir por UF, situação, tipo,
+    Busque por nome do programa, sigla, base legal, órgão responsável ou
+    termos do resumo. Use os filtros para restringir por UF, situação, tipo,
     modalidade ou disponibilidade de snapshot integral.
   </p>
 
@@ -23,16 +23,52 @@ permalink: /buscar/
     (1ª onda — 9 UFs + Federal).
     <kbd class="bg-neutral-100 border border-neutral-200 px-2xs rounded text-xs">/</kbd>
     foca a caixa de busca.
+    Buscas por sigla são reconhecidas — ex.:
+    <a href="/buscar/?q=EJA" class="text-primary">EJA</a> encontra
+    "Educação de Jovens e Adultos".
   </p>
 </section>
 
 {# Pagefind UI será montada em #search; estilizada via CSS próprio + tokens nossos #}
 <div id="search" class="mt-xl"></div>
 
+{# Bloco "Buscas comuns" sempre visível — atende zero-state E zero-result.
+   Resolve R2.1-B-J3/J5/J8: persona sem ideia clara ou sem jargão tem caminho. #}
+<section aria-labelledby="buscas-comuns-h" class="mt-2xl border-t border-neutral-200 pt-lg">
+  <h2 id="buscas-comuns-h" class="text-lg">
+    {% icon "compass" %} Buscas comuns
+  </h2>
+  <p class="text-sm text-neutral-700">
+    Não sabe por onde começar? Estes termos cobrem as políticas mais buscadas.
+    Cada chip dispara a busca; siglas (EJA, PRONATEC) reconhecem nomes completos.
+  </p>
+
+  <ul class="mt-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-sm list-none p-0">
+    {% for b in sinonimos.buscasComuns %}
+      <li>
+        <a href="/buscar/?q={{ b.q | urlencode }}"
+           class="block p-sm border border-neutral-200 rounded hover:border-primary hover:bg-primary/5 no-underline transition-colors">
+          <span class="font-semibold text-primary">{{ b.label }}</span>
+          <span class="block text-xs text-neutral-700 mt-2xs">{{ b.contexto }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="text-sm text-neutral-700 mt-md">
+    Ainda não achou? Veja
+    <a href="/explorar/" class="text-primary">todas as dimensões em /explorar/</a>
+    ou consulte o
+    <a href="/sobre/cobertura/" class="text-primary">mapa de cobertura</a>.
+  </p>
+</section>
+
 <noscript>
   <div role="alert" class="mt-xl bg-warning/15 text-warning-dark p-md rounded">
     <p>A busca facetada requer JavaScript. Você pode navegar pela
-    <a href="/">página inicial</a> ou consultar o
+    <a href="/">página inicial</a>, usar o
+    <a href="/explorar/">hub de exploração</a>
+    (totalmente estático) ou consultar o
     <a href="https://github.com/antrologos/catalogo-politicas">repositório no GitHub</a>
     para baixar os dados em JSON.</p>
   </div>
@@ -63,12 +99,12 @@ permalink: /buscar/
         resetStyles: true,
         autofocus: false,
         translations: {
-          placeholder: "Digite nome, sigla, base legal, órgão...",
+          placeholder: "Digite nome, sigla (EJA, PRONATEC), base legal, órgão...",
           clear_search: "Limpar busca",
           load_more: "Mostrar mais resultados",
           search_label: "Buscar políticas no catálogo",
           filters_label: "Filtros",
-          zero_results: "Nenhuma política encontrada para [SEARCH_TERM]. Limpe a busca ou tente outros termos.",
+          zero_results: "Nenhuma política encontrada para [SEARCH_TERM]. Veja a seção 'Buscas comuns' abaixo ou use o hub /explorar/.",
           many_results: "[COUNT] políticas correspondem a [SEARCH_TERM]",
           one_result: "1 política corresponde a [SEARCH_TERM]",
           alt_search: "Nenhum resultado para [SEARCH_TERM]. Mostrando resultados para [DIFFERENT_TERM] em vez disso.",
@@ -78,8 +114,6 @@ permalink: /buscar/
       });
 
       // Lê ?q= da URL e popula o input + dispara busca.
-      // Approach robusto: simula digitação no input (mais confiável que
-      // triggerSearch, que tem timing inconsistente em algumas queries).
       const params = new URLSearchParams(window.location.search);
       const initialQuery = params.get("q");
       if (initialQuery) {
@@ -95,9 +129,6 @@ permalink: /buscar/
         setTimeout(() => waitForInputAndSearch(value, attempts + 1), 100);
         return;
       }
-      // Popula input + dispara evento input nativo (browser/Pagefind escutam).
-      // Usar nativeInputValueSetter para garantir que React/Preact-style
-      // controlled inputs também recebam o valor.
       const nativeSetter = Object.getOwnPropertyDescriptor(
         window.HTMLInputElement.prototype, "value"
       ).set;
@@ -105,7 +136,6 @@ permalink: /buscar/
       input.dispatchEvent(new Event("input", { bubbles: true }));
       input.focus();
 
-      // Backup: tentar triggerSearch se existir, depois de pequeno delay
       setTimeout(() => {
         if (pagefindUI && typeof pagefindUI.triggerSearch === "function") {
           try { pagefindUI.triggerSearch(value); } catch (e) { /* ignorar */ }
@@ -133,70 +163,70 @@ permalink: /buscar/
 </script>
 
 <style>
-  /* Customização visual do Pagefind UI para combinar com paleta gov.uk-inspired.
+  /* Customização visual do Pagefind UI alinhada à paleta autoral V2 (ADR-011).
      resetStyles: true no init faz Pagefind aplicar apenas estilos básicos. */
   #search {
-    --pagefind-ui-primary: #0066cc;
-    --pagefind-ui-text: #0b0c0c;
-    --pagefind-ui-background: #ffffff;
-    --pagefind-ui-border: #e2e8f0;
-    --pagefind-ui-tag: #f5f5f5;
+    --pagefind-ui-primary: #1A4F8B;          /* azul-IBGE */
+    --pagefind-ui-text: #3C342A;             /* tinta morna */
+    --pagefind-ui-background: #FAF7F2;       /* papel */
+    --pagefind-ui-border: #E5DFD3;           /* neutral-200 morno */
+    --pagefind-ui-tag: #F2EDE2;              /* neutral-100 morno */
     --pagefind-ui-border-width: 2px;
     --pagefind-ui-border-radius: 4px;
-    --pagefind-ui-font: "Open Sans", system-ui, sans-serif;
+    --pagefind-ui-font: "IBM Plex Sans Variable", "IBM Plex Sans", system-ui, sans-serif;
   }
   #search .pagefind-ui__form {
     margin-bottom: 1.5rem;
   }
   #search .pagefind-ui__search-input {
-    border: 2px solid #757575;
+    border: 2px solid #8A7E70;               /* neutral-500 morno */
     padding: 0.75rem;
     border-radius: 4px;
     width: 100%;
   }
   #search .pagefind-ui__search-input:focus-visible {
-    outline: 3px solid #ffdd00;
+    outline: 3px solid #FFB81C;              /* foco âmbar editorial */
     outline-offset: 2px;
-    box-shadow: inset 0 0 0 2px #0b0c0c;
+    box-shadow: inset 0 0 0 2px #3C342A;
   }
   #search .pagefind-ui__filter-panel {
-    background: #f5f5f5;
+    background: #F2EDE2;
     padding: 1rem;
     border-radius: 4px;
     margin-bottom: 1rem;
   }
   #search .pagefind-ui__filter-name {
     font-weight: 600;
-    color: #0b0c0c;
+    color: #3C342A;
   }
   #search .pagefind-ui__filter-checkbox:focus-visible {
-    outline: 3px solid #ffdd00;
+    outline: 3px solid #FFB81C;
     outline-offset: 2px;
   }
   #search .pagefind-ui__result {
-    border-bottom: 1px solid #e2e8f0;
+    border-bottom: 1px solid #E5DFD3;
     padding-block: 1rem;
   }
   #search .pagefind-ui__result-link {
-    color: #0066cc;
+    color: #1A4F8B;
     text-decoration: underline;
     font-weight: 600;
   }
   #search .pagefind-ui__result-link:focus-visible {
-    outline: 3px solid #ffdd00;
+    outline: 3px solid #FFB81C;
     outline-offset: 2px;
   }
   #search .pagefind-ui__result-tags .pagefind-ui__result-tag {
-    background: #f5f5f5;
+    background: #F2EDE2;
     padding: 0.125rem 0.5rem;
     border-radius: 4px;
     font-size: 0.75rem;
-    color: #475569;
+    color: #5C5347;
   }
   #search .pagefind-ui__button {
     min-height: 44px;
     padding-inline: 1rem;
-    background: #0066cc;
+    background: #1A4F8B;
     color: #ffffff;
     border: none;
     border-radius: 4px;
@@ -204,10 +234,10 @@ permalink: /buscar/
     cursor: pointer;
   }
   #search .pagefind-ui__button:hover {
-    background: #004c99;
+    background: #11385F;
   }
   #search button:focus-visible {
-    outline: 3px solid #ffdd00;
+    outline: 3px solid #FFB81C;
     outline-offset: 2px;
   }
 </style>
