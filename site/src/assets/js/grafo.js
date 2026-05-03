@@ -225,6 +225,24 @@ waitForCytoscape(function init() {
           "z-index": 50,
         },
       },
+      // Sprint 9.6: revelação de labels em família destacada — sobrescreve LOD
+      {
+        selector: 'node.family-highlight[type="replica"], node.family-highlight[type="estadual"]',
+        style: {
+          "min-zoomed-font-size": 0,    // bypass LOD: força label aparecer
+          "opacity": 1,                  // remove atenuação
+          "text-opacity": 1,
+        },
+      },
+      // Sprint 9.6: kb-focus também revela label do nó focado
+      {
+        selector: "node.kb-focus",
+        style: {
+          "min-zoomed-font-size": 0,
+          "text-opacity": 1,
+          "opacity": 1,
+        },
+      },
       // Sprint 9.2: nó/edge filtrado fica escondido
       {
         selector: ".filtered-out",
@@ -399,11 +417,17 @@ waitForCytoscape(function init() {
   );
 
   function focusFederal(idx) {
-    cy.nodes().removeClass("kb-focus");
+    // Sprint 9.6: limpar tanto kb-focus quanto family-highlight do estado anterior
+    cy.elements().removeClass("kb-focus family-highlight dimmed");
     if (federais.length === 0) return;
     kbIdx = ((idx % federais.length) + federais.length) % federais.length;
     const node = federais[kbIdx];
     node.addClass("kb-focus");
+    // Sprint 9.6: navegação por teclado destaca família igual hover de mouse —
+    // réplicas conectadas revelam labels (sobrescreve LOD), demais atenuam.
+    const familia = node.union(node.connectedEdges()).union(node.outgoers());
+    familia.addClass("family-highlight");
+    cy.elements().not(familia).addClass("dimmed");
     cy.center(node);
     const d = node.data();
     announce(`Foco em ${d.nomeCompleto}. ${cy.nodes(`edge[source="${d.id}"], edge[target="${d.id}"]`).length || node.connectedEdges().length} relações. Pressione Enter para abrir ficha, setas para navegar.`);
