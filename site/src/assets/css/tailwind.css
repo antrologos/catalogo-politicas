@@ -166,6 +166,15 @@
     stroke-width: 2;
   }
 
+  /* Foco visível no container Cytoscape (Sprint 9.4 do F.3).
+     Container é canvas — recebe foco via tabindex=0; outline padrão
+     do Tailwind/CSS é suficiente, mas garantimos visibilidade dupla. */
+  #grafo-container:focus-visible {
+    outline: 3px solid theme('colors.focus');
+    outline-offset: 2px;
+    box-shadow: inset 0 0 0 2px theme('colors.tinta');
+  }
+
   /* Ícones Phosphor inline SVG (Sprint V3 do MVP-UX, ADR-012).
      Default: 1em quadrado, alinhado verticalmente com texto. Pode ser
      escalado via classes utilitárias (size-md, size-lg, size-2xl, etc.) ou

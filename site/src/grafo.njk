@@ -18,6 +18,12 @@ permalink: /grafo/
 
 <header class="border-b border-neutral-200 pb-lg mb-xl">
   <h1>Grafo de relações federal ↔ estadual</h1>
+  <p class="text-sm text-neutral-700 mt-sm md:hidden">
+    {% icon "info" %} Em telas menores, o grafo Cytoscape pode ser difícil
+    de navegar. Use o botão "Ver lista" abaixo, ou role para a
+    <a href="#lista-familias" class="text-primary">lista textual completa</a>
+    com famílias agrupadas em formato acessível.
+  </p>
   <p class="text-neutral-700 max-w-3xl">
     Visualização das <strong>{{ grafo.stats.totalNodes }}</strong> políticas
     catalogadas como rede.
@@ -108,20 +114,34 @@ permalink: /grafo/
   </div>
 </section>
 
-{# === Container Cytoscape === #}
+{# === Container Cytoscape ===
+   Sprint 9.4 melhorias a11y/mobile:
+   - Height responsiva: 400px mobile, 600px md+, 700px lg+
+   - role='application' (Cytoscape é interativo, não imagem)
+   - tabindex no container permite foco via Tab
+   - Keyboard nav listeners no JS (setas + Enter)
+   - aria-live region para anúncios
+   - Botão visível 'Ver lista textual' como atalho mobile #}
 <div class="relative my-xl">
+  <p class="text-sm md:hidden mb-sm">
+    <a href="#lista-familias" class="btn btn--secondary text-sm w-full justify-center">
+      {% icon "list" %} Ir para lista textual de famílias
+    </a>
+  </p>
+
   <div id="grafo-container"
-       class="bg-papel border border-neutral-200 rounded overflow-hidden"
-       role="img"
+       class="bg-papel border border-neutral-200 rounded overflow-hidden h-[400px] md:h-[600px] lg:h-[700px]"
+       role="application"
+       tabindex="0"
        aria-labelledby="grafo-h"
        aria-describedby="grafo-desc"
-       style="width: 100%; height: 600px;">
-    <h2 id="grafo-h" class="sr-only">Grafo Cytoscape de relações entre políticas</h2>
+       aria-keyshortcuts="Tab Enter ArrowUp ArrowDown ArrowLeft ArrowRight">
+    <h2 id="grafo-h" class="sr-only">Grafo interativo de relações entre políticas</h2>
     <p id="grafo-desc" class="sr-only">
-      Grafo visual das {{ grafo.stats.totalNodes }} políticas brasileiras catalogadas.
-      Famílias federais aparecem como clusters; cada nó é uma política clicável.
-      A lista textual paralela abaixo agrupa as políticas por família federal e UF
-      em formato acessível.
+      Grafo visual interativo das {{ grafo.stats.totalNodes }} políticas brasileiras
+      catalogadas. Use Tab para focar o grafo, depois setas para navegar entre nós
+      federais, Enter para abrir ficha. A lista textual paralela abaixo agrupa as
+      políticas por família federal e UF em formato totalmente acessível.
     </p>
   </div>
 

@@ -222,6 +222,16 @@ waitForCytoscape(function init() {
           display: "none",
         },
       },
+      // Sprint 9.4: foco via teclado (anel âmbar largo, igual focus-visible CSS)
+      {
+        selector: "node.kb-focus",
+        style: {
+          "border-width": 5,
+          "border-color": "#FFB81C",      // foco âmbar editorial (paleta V2)
+          "border-opacity": 1,
+          "z-index": 999,
+        },
+      },
     ],
   });
 
@@ -366,6 +376,71 @@ waitForCytoscape(function init() {
     const eFam = edges.filter((e) => e.data.type === "familia").length;
     const eArt = edges.filter((e) => e.data.type === "articulacao").length;
     announce(`Grafo carregado: ${nodes.length} políticas, ${eFam} edges família e ${eArt} edges de articulação curada.`);
+  });
+
+  // === Sprint 9.4: navegação por teclado ===
+  // Cytoscape usa canvas, não SVG — nodes não recebem foco DOM nativo. Solução:
+  // foco no #grafo-container + setas navegam entre nós federais (33), Enter abre
+  // ficha do nó "selecionado" (highlight visual). Mantém grafo navegável para
+  // quem usa teclado, complementa lista textual canônica abaixo.
+  let kbIdx = -1;
+  const federais = cy.nodes('node[type="federal"]:visible').sort((a, b) =>
+    a.data("label").localeCompare(b.data("label"))
+  );
+
+  function focusFederal(idx) {
+    cy.nodes().removeClass("kb-focus");
+    if (federais.length === 0) return;
+    kbIdx = ((idx % federais.length) + federais.length) % federais.length;
+    const node = federais[kbIdx];
+    node.addClass("kb-focus");
+    cy.center(node);
+    const d = node.data();
+    announce(`Foco em ${d.nomeCompleto}. ${cy.nodes(`edge[source="${d.id}"], edge[target="${d.id}"]`).length || node.connectedEdges().length} relações. Pressione Enter para abrir ficha, setas para navegar.`);
+  }
+
+  cyContainer.addEventListener("keydown", (e) => {
+    switch (e.key) {
+      case "ArrowRight":
+      case "ArrowDown":
+        e.preventDefault();
+        focusFederal(kbIdx + 1);
+        break;
+      case "ArrowLeft":
+      case "ArrowUp":
+        e.preventDefault();
+        focusFederal(kbIdx - 1);
+        break;
+      case "Enter":
+      case " ":
+        if (kbIdx >= 0 && federais.length > 0) {
+          e.preventDefault();
+          const slug = federais[kbIdx].data("slug");
+          if (slug) window.location.href = `${pathPrefix}politica/${slug}/`;
+        }
+        break;
+      case "Home":
+        e.preventDefault();
+        focusFederal(0);
+        break;
+      case "End":
+        e.preventDefault();
+        focusFederal(federais.length - 1);
+        break;
+      case "Escape":
+        e.preventDefault();
+        cy.nodes().removeClass("kb-focus");
+        kbIdx = -1;
+        cy.fit(undefined, 30);
+        announce("Foco do teclado limpo. Visualização reajustada.");
+        break;
+    }
+  });
+
+  cyContainer.addEventListener("focus", () => {
+    if (kbIdx === -1) {
+      announce("Grafo focado. Use setas para navegar entre as 33 políticas federais canônicas, Enter para abrir ficha, Esc para sair, Home/End para ir ao primeiro/último.");
+    }
   });
 
   console.info(`[grafo] Cytoscape v${cytoscape.version}: ${nodes.length} nodes, ${edges.length} edges`);
