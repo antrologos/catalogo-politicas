@@ -63,12 +63,11 @@ waitForD3(async function init() {
   const width = 600;
   const height = 600;
 
-  // Calcula bbox do GeoJSON manualmente e força projection fitExtent com padding.
-  // (fitSize sozinho falhava em browser apesar de funcionar em Node — diferenças
-  // possíveis em UMD vs npm. Esta abordagem com fitExtent + padding é mais
-  // explícita e robusta.)
-  const projection = d3.geoMercator()
-    .fitExtent([[20, 20], [width - 20, height - 20]], geo);
+  // GeoJSON foi pré-processado: rings revertidos para CCW (RFC 7946 + D3 spec).
+  // Sintoma sem essa correção: D3 tratava rings com winding "errado" como
+  // "buraco no mundo todo", adicionando moldura mercator infinita ao path
+  // (terminava com L0,0 L600,0 Z gigante). Agora paths são limpos.
+  const projection = d3.geoMercator().fitSize([width, height], geo);
   const pathGen = d3.geoPath().projection(projection);
 
   // Diagnóstico inline (visível em DevTools > Console)
