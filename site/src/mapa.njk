@@ -183,4 +183,9 @@ permalink: /mapa/
 }
 </script>
 
-<script src="{{ '/assets/js/mapa.js' }}" type="module"></script>
+{# D3 v7 UMD via CDN (~95KB minified+gz). UMD é mais compatível que +esm em
+   browsers/ad-blockers. Atribui window.d3 global usado pelo mapa.js abaixo. #}
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"
+        crossorigin="anonymous"
+        defer></script>
+<script src="{{ '/assets/js/mapa.js' }}" defer></script>

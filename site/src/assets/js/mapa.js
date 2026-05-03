@@ -18,10 +18,16 @@
  * canônica para leitores de tela (NF-M-10).
  */
 
-import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7/+esm";
+/* D3 v7 carregado via UMD em mapa.njk (window.d3 global).
+   Wait pelo D3 estar disponível antes de iniciar (defer carrega assíncrono). */
+function waitForD3(cb) {
+  if (typeof window !== "undefined" && window.d3) return cb();
+  setTimeout(() => waitForD3(cb), 30);
+}
 
-(async function init() {
+waitForD3(async function init() {
   "use strict";
+  const d3 = window.d3;
 
   const svg = document.getElementById("mapa-svg");
   const tooltip = document.getElementById("mapa-tooltip");
