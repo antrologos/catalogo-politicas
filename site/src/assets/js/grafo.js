@@ -110,6 +110,8 @@ waitForCytoscape(function init() {
           "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
           "text-outline-color": COLOR_FEDERAL,
           "text-outline-width": 1,
+          // Sprint 9.6: prevenir overflow de labels longos (ENCCEJA, PROEJA)
+          "text-max-width": 60,
         },
       },
       // Réplica: nó pequeno azul-info
@@ -128,6 +130,10 @@ waitForCytoscape(function init() {
           "font-size": 7,
           "font-weight": 600,
           "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
+          // Sprint 9.6 LOD: label oculto em zoom panorâmico (~zoom < 1.15)
+          "min-zoomed-font-size": 8,
+          "text-max-width": 40,
+          "opacity": 0.75,
         },
       },
       // Estadual única: nó médio verde-floresta
@@ -146,6 +152,10 @@ waitForCytoscape(function init() {
           "font-size": 6,
           "font-weight": 600,
           "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
+          // Sprint 9.6 LOD: label oculto em zoom panorâmico
+          "min-zoomed-font-size": 7,
+          "text-max-width": 40,
+          "opacity": 0.75,
         },
       },
       // Override descontinuada (cinza, semitransparente)
