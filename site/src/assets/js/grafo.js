@@ -185,17 +185,54 @@ waitForCytoscape(function init() {
           opacity: 1,
         },
       },
+      // Sprint 9.2: highlight de família + atenuação dos demais
+      {
+        selector: ".dimmed",
+        style: {
+          opacity: 0.15,
+          "text-opacity": 0.15,
+        },
+      },
+      {
+        selector: ".family-highlight",
+        style: {
+          "z-index": 50,
+        },
+      },
+      // Sprint 9.2: nó/edge filtrado fica escondido
+      {
+        selector: ".filtered-out",
+        style: {
+          display: "none",
+        },
+      },
     ],
   });
 
-  // === Tooltip on hover ===
+  // === Tooltip + Highlight família on hover ===
   cy.on("mouseover", "node", (evt) => {
     const node = evt.target;
+    const d = node.data();
     node.addClass("hover");
-    // Edge connected highlight
     node.connectedEdges().addClass("hover-edge");
 
-    const d = node.data();
+    // Sprint 9.2: highlight família ao hover de federal canônica.
+    // Atenua todos os outros nodes/edges para destacar a família visualmente.
+    if (d.type === "federal") {
+      const familia = node.union(node.connectedEdges()).union(node.outgoers());
+      cy.elements().not(familia).addClass("dimmed");
+      familia.addClass("family-highlight");
+    } else if (d.type === "replica") {
+      // Hover em réplica destaca a federal canônica + outras réplicas da mesma família
+      const edge = node.connectedEdges().first();
+      if (edge && edge.length > 0) {
+        const federal = edge.target();
+        const familia = federal.union(federal.connectedEdges()).union(federal.outgoers());
+        cy.elements().not(familia).addClass("dimmed");
+        familia.addClass("family-highlight");
+      }
+    }
+
     let html = `
       <div class="font-semibold">${d.nomeCompleto || d.label}</div>
       <div class="mt-2xs">${d.tipo}</div>
@@ -224,6 +261,7 @@ waitForCytoscape(function init() {
     const node = evt.target;
     node.removeClass("hover");
     node.connectedEdges().removeClass("hover-edge");
+    cy.elements().removeClass("dimmed family-highlight");
     tooltip.classList.add("hidden");
   });
 
@@ -235,14 +273,76 @@ waitForCytoscape(function init() {
     }
   });
 
+  // === Estado dos filtros (Sprint 9.2) ===
+  let filterTipo = "all";
+  let filterSitu = "all";
+
+  function applyFilters() {
+    let visibleCount = 0;
+    cy.batch(() => {
+      cy.nodes().forEach((n) => {
+        const d = n.data();
+        const matchTipo = filterTipo === "all" || d.tipo === filterTipo;
+        const matchSitu = filterSitu === "all" || d.situacao_classe === filterSitu;
+        if (matchTipo && matchSitu) {
+          n.removeClass("filtered-out");
+          visibleCount++;
+        } else {
+          n.addClass("filtered-out");
+        }
+      });
+      // Edges: visíveis só quando ambos endpoints visíveis
+      cy.edges().forEach((e) => {
+        const sourceVisible = !e.source().hasClass("filtered-out");
+        const targetVisible = !e.target().hasClass("filtered-out");
+        if (sourceVisible && targetVisible) {
+          e.removeClass("filtered-out");
+        } else {
+          e.addClass("filtered-out");
+        }
+      });
+    });
+    announce(`Filtros aplicados: ${visibleCount} de ${nodes.length} políticas visíveis.`);
+  }
+
+  function setFilterButton(group, value) {
+    document.querySelectorAll(`[data-filter-${group}]`).forEach((b) => {
+      b.setAttribute("aria-pressed", b.dataset[`filter${group.charAt(0).toUpperCase() + group.slice(1)}`] === value ? "true" : "false");
+    });
+  }
+
+  document.querySelectorAll("[data-filter-tipo]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterTipo = btn.dataset.filterTipo;
+      setFilterButton("tipo", filterTipo);
+      applyFilters();
+    });
+  });
+  document.querySelectorAll("[data-filter-situ]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      filterSitu = btn.dataset.filterSitu;
+      setFilterButton("situ", filterSitu);
+      applyFilters();
+    });
+  });
+
   // === Toolbar handlers ===
   document.getElementById("grafo-fit")?.addEventListener("click", () => {
-    cy.fit(undefined, 30);
-    announce("Grafo reajustado para enquadrar todos os nós.");
+    cy.fit(cy.elements().not(".filtered-out"), 30);
+    announce("Grafo reajustado para enquadrar nós visíveis.");
   });
   document.getElementById("grafo-center")?.addEventListener("click", () => {
     cy.center();
     announce("Grafo centralizado.");
+  });
+  document.getElementById("grafo-reset")?.addEventListener("click", () => {
+    filterTipo = "all";
+    filterSitu = "all";
+    setFilterButton("tipo", "all");
+    setFilterButton("situ", "all");
+    applyFilters();
+    cy.fit(undefined, 30);
+    announce("Filtros limpos. Grafo reajustado para visualização inicial.");
   });
 
   // Anuncia quando layout terminar
