@@ -155,6 +155,17 @@
 }
 
 @layer components {
+  /* Foco visível em paths SVG do mapa coroplético (Sprint 8.3 do F.3).
+     SVG path não recebe outline padrão — precisa filter ou stroke override.
+     Usamos filter drop-shadow âmbar para contornar o estado focado, sem
+     mexer no stroke (que tem semântica de borda da UF). */
+  #mapa-svg path:focus-visible {
+    outline: none;  /* outline padrão fica fora do path em SVG */
+    filter: drop-shadow(0 0 4px theme('colors.focus'))
+            drop-shadow(0 0 4px theme('colors.focus'));
+    stroke-width: 2;
+  }
+
   /* Ícones Phosphor inline SVG (Sprint V3 do MVP-UX, ADR-012).
      Default: 1em quadrado, alinhado verticalmente com texto. Pode ser
      escalado via classes utilitárias (size-md, size-lg, size-2xl, etc.) ou

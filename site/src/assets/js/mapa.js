@@ -113,7 +113,19 @@ waitForD3(async function init() {
 
   const g = svgD3.append("g");
 
+  // Sprint 8.3: respeitar prefers-reduced-motion para transições do mapa
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const transitionStyle = prefersReducedMotion ? "none" : "fill 0.3s, stroke-width 0.2s";
+
+  // Sprint 8.3: aria-live region para anunciar mudanças de estado
+  const statusEl = document.getElementById("mapa-status");
+  function announce(msg) {
+    if (statusEl) statusEl.textContent = msg;
+  }
+
   // === Render dos 27 estados (paths + interação) ===
+  // Sprint 8.3: usa Pointer Events (cobre mouse + touch + pen).
+  // tabindex=0 apenas em paths clicáveis (evita 17 stops vazios em UFs não-cobertas).
   const paths = g.selectAll("path")
     .data(geo.features)
     .enter()
@@ -123,9 +135,11 @@ waitForD3(async function init() {
     .attr("stroke-width", 0.8)
     .attr("vector-effect", "non-scaling-stroke")
     .attr("data-sigla", (d) => d.properties.sigla)
+    .attr("tabindex", (d) => porUf[d.properties.sigla] ? 0 : null)
+    .attr("role", (d) => porUf[d.properties.sigla] ? "link" : null)
     .style("cursor", (d) => porUf[d.properties.sigla] ? "pointer" : "default")
-    .style("transition", "fill 0.3s, stroke-width 0.2s")
-    .on("mouseenter", function (event, d) {
+    .style("transition", transitionStyle)
+    .on("pointerenter", function (event, d) {
       const sigla = d.properties.sigla;
       const agg = porUf[sigla];
       const nome = d.properties.name;
@@ -150,7 +164,7 @@ waitForD3(async function init() {
       tooltip.innerHTML = html;
       tooltip.classList.remove("hidden");
     })
-    .on("mousemove", function (event) {
+    .on("pointermove", function (event) {
       const container = document.getElementById("mapa-container");
       const rect = container.getBoundingClientRect();
       const x = event.clientX - rect.left;
@@ -158,11 +172,19 @@ waitForD3(async function init() {
       tooltip.style.left = `${x + 12}px`;
       tooltip.style.top = `${y + 12}px`;
     })
-    .on("mouseleave", function () {
+    .on("pointerleave", function () {
       d3.select(this)
         .attr("stroke", "#3C342A")
         .attr("stroke-width", 0.8);
       tooltip.classList.add("hidden");
+    })
+    .on("focus", function (event, d) {
+      // Anunciar para leitores de tela ao receber foco via Tab
+      const sigla = d.properties.sigla;
+      const agg = porUf[sigla];
+      if (agg) {
+        announce(`${d.properties.name}, ${agg.total} políticas catalogadas. Pressione Enter para abrir página.`);
+      }
     })
     .on("click", function (event, d) {
       const sigla = d.properties.sigla;
@@ -271,6 +293,9 @@ waitForD3(async function init() {
       document.querySelectorAll("[data-color-by]").forEach((b) => {
         b.setAttribute("aria-pressed", b === btn ? "true" : "false");
       });
+      // Sprint 8.3: anuncia mudança para leitores de tela
+      const { max, min } = getColorScale(metrica);
+      announce(`Mapa recolorido por ${METRICAS[metrica].label}. Variação de ${min} a ${max} políticas entre as UFs cobertas.`);
     });
   });
 
