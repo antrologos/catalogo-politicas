@@ -62,10 +62,23 @@ waitForD3(async function init() {
 
   const width = 600;
   const height = 600;
-  // fitSize ajusta projection automaticamente ao bbox do GeoJSON.
-  // Mais robusto que scale/center fixos (que dependem do GeoJSON exato).
-  const projection = d3.geoMercator().fitSize([width, height], geo);
+
+  // Calcula bbox do GeoJSON manualmente e força projection fitExtent com padding.
+  // (fitSize sozinho falhava em browser apesar de funcionar em Node — diferenças
+  // possíveis em UMD vs npm. Esta abordagem com fitExtent + padding é mais
+  // explícita e robusta.)
+  const projection = d3.geoMercator()
+    .fitExtent([[20, 20], [width - 20, height - 20]], geo);
   const pathGen = d3.geoPath().projection(projection);
+
+  // Diagnóstico inline (visível em DevTools > Console)
+  console.info("[mapa] D3 version:", d3.version);
+  console.info("[mapa] projection scale:", projection.scale().toFixed(0),
+               "translate:", projection.translate().map((n) => n.toFixed(0)));
+  // Sanity-check primeiro path
+  const firstPath = pathGen(geo.features[0]);
+  console.info("[mapa] AC path length:", firstPath ? firstPath.length : "NULL",
+               "first 80 chars:", firstPath ? firstPath.substring(0, 80) : "NULL");
 
   // === Estado global do mapa: métrica de coloração ativa ===
   const METRICAS = {
