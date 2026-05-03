@@ -1,0 +1,181 @@
+---
+layout: layouts/base.njk
+title: "Grafo de relações"
+description: "Grafo Cytoscape de 439 políticas: 33 famílias federais (canônica + réplicas estaduais) + 151 estaduais únicas. Lista textual paralela acessível para leitores de tela."
+permalink: /grafo/
+---
+
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: "Grafo de relações" }
+] %}
+{% include "components/breadcrumb.njk" %}
+
+{# Skip-link específico (Sprint 8.3 pattern aplicado ao grafo) #}
+<a href="#lista-familias" class="skip-link">
+  Pular grafo visual e ir direto para a lista textual de famílias
+</a>
+
+<header class="border-b border-neutral-200 pb-lg mb-xl">
+  <h1>Grafo de relações federal ↔ estadual</h1>
+  <p class="text-neutral-700 max-w-3xl">
+    Visualização das <strong>{{ grafo.stats.totalNodes }}</strong> políticas
+    como rede: <strong>{{ grafo.stats.federais }}</strong> federais canônicas
+    (nós grandes azul-IBGE), <strong>{{ grafo.stats.replicas }}</strong>
+    réplicas estaduais (nós pequenos coloridos por UF) e
+    <strong>{{ grafo.stats.estaduais }}</strong> políticas exclusivamente
+    estaduais (nós isolados). Edges federal→réplica conectam {{ grafo.stats.totalEdges }}
+    pares. Cada nó é clicável e leva à ficha da política.
+  </p>
+  <p class="text-sm text-neutral-700 mt-sm md:hidden">
+    {% icon "info" %} Em telas menores, role para baixo para ver a
+    <a href="#lista-familias" class="text-primary">lista textual completa</a>
+    com famílias agrupadas.
+  </p>
+</header>
+
+{# === Toolbar (Sprint 9.2 vai expandir com filtros tipo/situação + zoom) === #}
+<section aria-labelledby="grafo-controls-h" class="my-md p-md bg-papel border border-neutral-200 rounded">
+  <h2 id="grafo-controls-h" class="sr-only">Controles do grafo</h2>
+  <div class="flex flex-wrap gap-sm items-center text-sm">
+    <button type="button" id="grafo-fit" class="tag tag--neutral"
+            aria-label="Reajustar visualização para enquadrar todo o grafo">
+      {% icon "arrows-out" %} Reajustar
+    </button>
+    <button type="button" id="grafo-center" class="tag tag--neutral"
+            aria-label="Centralizar grafo">
+      {% icon "crosshair" %} Centralizar
+    </button>
+    <span class="ml-md text-xs text-neutral-700">
+      Click em nó: abrir ficha · Hover: detalhes · Drag: reorganizar
+    </span>
+  </div>
+</section>
+
+{# === Container Cytoscape === #}
+<div class="relative my-xl">
+  <div id="grafo-container"
+       class="bg-papel border border-neutral-200 rounded overflow-hidden"
+       role="img"
+       aria-labelledby="grafo-h"
+       aria-describedby="grafo-desc"
+       style="width: 100%; height: 600px;">
+    <h2 id="grafo-h" class="sr-only">Grafo Cytoscape de relações entre políticas</h2>
+    <p id="grafo-desc" class="sr-only">
+      Grafo visual das {{ grafo.stats.totalNodes }} políticas brasileiras catalogadas.
+      Famílias federais aparecem como clusters; cada nó é uma política clicável.
+      A lista textual paralela abaixo agrupa as políticas por família federal e UF
+      em formato acessível.
+    </p>
+  </div>
+
+  {# Tooltip absoluto, populado por JS #}
+  <div id="grafo-tooltip"
+       role="tooltip"
+       class="hidden absolute pointer-events-none bg-tinta text-white text-xs px-sm py-2xs rounded shadow-md z-10"
+       style="max-width: 240px;">
+  </div>
+
+  {# aria-live para anunciar mudanças de estado #}
+  <div id="grafo-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+</div>
+
+<noscript>
+  <div role="alert" class="my-xl bg-warning/15 text-warning-dark p-md rounded">
+    <p>O grafo requer JavaScript. A <a href="#lista-familias">lista textual abaixo</a>
+    contém a mesma informação em formato hierárquico acessível.</p>
+  </div>
+</noscript>
+
+{# === Lista textual paralela canônica (NF-M-10 a11y) ===
+   Agrupa por família federal: cada canônica tem sua lista de réplicas.
+   Estaduais únicas aparecem em seção separada. Esta lista é fonte de
+   verdade igualmente válida; nunca escondida. #}
+<section aria-labelledby="lista-familias-h" id="lista-familias" class="my-2xl">
+  <h2 id="lista-familias-h">Lista textual: famílias federais e políticas estaduais</h2>
+  <p class="text-sm text-neutral-700">
+    Equivalente textual do grafo. Cada família federal lista sua política
+    canônica (federal) seguida das réplicas estaduais. Após as famílias,
+    seção com políticas exclusivamente estaduais agrupadas por UF.
+  </p>
+
+  <h3 class="mt-xl">Famílias federais ({{ grafo.stats.federais }})</h3>
+  <ul class="mt-md space-y-md list-none p-0">
+    {% for n in grafo.nodes %}
+      {% if n.data.type == "federal" %}
+        <li class="border border-neutral-200 rounded p-md">
+          <a href="/politica/{{ n.data.slug }}/"
+             class="font-semibold text-primary text-base">
+            {% icon "graph" %} {{ n.data.nomeCompleto }}
+          </a>
+          <span class="ml-sm tag tag--{{ n.data.situacao_classe }} text-xs">
+            {{ n.data.situacao }}
+          </span>
+          <p class="text-xs text-neutral-700 mt-2xs">
+            <span class="tag tag--federal text-xs">Federal</span>
+            {{ n.data.tipo }}
+          </p>
+          <ul class="mt-sm flex flex-wrap gap-2xs list-none p-0">
+            {% for e in grafo.edges %}
+              {% if e.data.target == n.data.id %}
+                {% for r in grafo.nodes %}
+                  {% if r.data.id == e.data.source %}
+                    <li>
+                      <a href="/politica/{{ r.data.slug }}/" class="tag tag--neutral text-xs"
+                         aria-label="Réplica em {{ r.data.uf }}">
+                        {{ r.data.uf }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <h3 class="mt-2xl">Políticas exclusivamente estaduais ({{ grafo.stats.estaduais }})</h3>
+  <p class="text-sm text-neutral-700">
+    Sem família federal correspondente. Agrupadas por UF.
+  </p>
+  {% set estaduaisPorUf = {} %}
+  <details class="mt-md">
+    <summary class="cursor-pointer text-primary font-semibold">
+      Mostrar lista completa das {{ grafo.stats.estaduais }} estaduais únicas
+    </summary>
+    <ul class="mt-md grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0">
+      {% for n in grafo.nodes %}
+        {% if n.data.type == "estadual" %}
+          <li class="border border-neutral-200 rounded p-sm">
+            <a href="/politica/{{ n.data.slug }}/" class="text-primary font-medium text-sm">
+              {{ n.data.nomeCompleto }}
+            </a>
+            <p class="text-xs text-neutral-700 mt-2xs">
+              <span class="tag tag--estadual text-xs">{{ n.data.uf }}</span>
+              <span class="tag tag--{{ n.data.situacao_classe }} text-xs">{{ n.data.situacao }}</span>
+            </p>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </details>
+</section>
+
+{# === Dados embarcados como JSON para Cytoscape ler === #}
+<script id="grafo-data" type="application/json">
+{
+  "nodes": {{ grafo.nodes | dump | safe }},
+  "edges": {{ grafo.edges | dump | safe }},
+  "pathPrefix": {{ site.pathPrefix | dump | safe }}
+}
+</script>
+
+{# Cytoscape v3 + cose-bilkent layout via CDN UMD (~150KB total minified+gz).
+   ADR-013 lição: UMD > ESM por compatibilidade. defer carrega assíncrono. #}
+<script src="https://cdn.jsdelivr.net/npm/cytoscape@3.30.4/dist/cytoscape.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/layout-base@2.0.1/layout-base.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/cose-base@2.2.0/cose-base.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.js" defer></script>
+<script src="{{ '/assets/js/grafo.js' }}" defer></script>
