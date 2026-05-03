@@ -15,7 +15,7 @@ eleventyComputed:
 
 {% set crumbs = [
   { texto: "Início", href: "/" },
-  { texto: "UFs", href: "/buscar/" },
+  { texto: "Por UF", href: "/explorar/#cobertura-aside-h" },
   { texto: info.nome or ufSigla }
 ] %}
 {% include "components/breadcrumb.njk" %}
@@ -32,9 +32,33 @@ eleventyComputed:
     {% endif %}
   </h1>
   <p class="text-neutral-700 mt-md">
-    Esta página apresenta um panorama executivo das <strong>{{ agg.total }}</strong>
-    políticas catalogadas em {{ info.nome }} (1ª onda do catálogo).
+    Panorama executivo das <strong>{{ agg.total }}</strong> políticas
+    catalogadas em {{ info.nome }} (1ª onda).
+    {% if agg.total > 0 %}
+      Filtros via URL são bookmarkáveis — ex.:
+      <code class="text-xs">?situacao=ativa-em-execucao</code> filtra apenas as ativas.
+    {% endif %}
   </p>
+
+  {# Sprint F4: nota de transparência sobre duplicatas conhecidas em BA.
+     R2.1-B-Crítico-3 e R2.3 Lente 4 (credibilidade institucional vaza
+     com erros não declarados). Solução: declarar abertamente. ETL fica
+     intocado nesta janela do MVP-UX (paths protegidos, exigem plano). #}
+  {% if ufSigla == "BA" %}
+    <aside class="mt-md p-md bg-warning/10 border-l-4 border-warning rounded text-sm" role="note">
+      <p class="font-semibold">
+        {% icon "warning-circle" %} Nota de transparência
+      </p>
+      <p class="mt-2xs">
+        A planilha-fonte original tem <strong>2 entradas duplicadas</strong> nesta UF
+        (PRONATEC e Programa Juros por Educação). Ambas seguem visíveis aqui
+        com IDs distintos (sufixos <code>-2</code>) preservando rastreabilidade.
+        Consolidação registrada no
+        <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=BA:+consolidar+duplicatas+conhecidas"
+           rel="external">backlog do repositório</a>.
+      </p>
+    </aside>
+  {% endif %}
 </header>
 
 <section aria-labelledby="kpi-uf-h" class="grid grid-cols-2 sm:grid-cols-4 gap-md my-2xl">
