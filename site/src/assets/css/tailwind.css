@@ -60,6 +60,17 @@
   code, pre, kbd, samp {
     @apply font-mono text-sm;
   }
+
+  /* <abbr> com title gera tooltip nativo + underline pontilhada (Tailwind
+     preflight); adicionamos cursor:help para affordance visual e prevenimos
+     quebra com break-word. Sprint F3: glossário inline via {% abbr %}. */
+  abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: theme('colors.primary.DEFAULT');
+  }
 }
 
 @layer components {

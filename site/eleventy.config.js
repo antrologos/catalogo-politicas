@@ -135,6 +135,25 @@ export default function (eleventyConfig) {
     );
   });
 
+  // Shortcode `abbr` — wrap texto em <abbr title="..."> usando _data/glossario.
+  // Uso: {% abbr "EJA" %}, {% abbr "PRONATEC" %}. Tailwind preflight � estiliza
+  // <abbr[title]> com underline pontilhada. Adicionamos cursor:help via base.
+  // Cache lookup em memória via Map (lazy build na primeira chamada).
+  let _glossarioMap = null;
+  async function loadGlossario() {
+    if (_glossarioMap) return _glossarioMap;
+    const mod = await import("./src/_data/glossario.js");
+    _glossarioMap = new Map(mod.default.termos.map((g) => [g.sigla, g]));
+    return _glossarioMap;
+  }
+  eleventyConfig.addAsyncShortcode("abbr", async function (sigla) {
+    const map = await loadGlossario();
+    const entry = map.get(sigla);
+    if (!entry) return sigla;
+    const titleAttr = entry.expansao.replace(/"/g, "&quot;");
+    return `<abbr title="${titleAttr}">${sigla}</abbr>`;
+  });
+
   // Filtro slug — converte texto categórico em URL-safe deterministicamente.
   // "Educacional direta" → "educacional-direta"
   // "Trabalho/qualificação direta" → "trabalho-qualificacao-direta"

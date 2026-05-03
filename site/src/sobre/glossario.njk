@@ -1,0 +1,58 @@
+---
+layout: layouts/base.njk
+title: "Glossário"
+description: "Glossário curado de 32 siglas e termos técnicos do catálogo: EJA, PRONATEC, BPC, CRAS, FNDE, MEC, ENCCEJA e mais — agrupados por área."
+permalink: /sobre/glossario/
+---
+
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: "Sobre", href: "/sobre/" },
+  { texto: "Glossário" }
+] %}
+{% include "components/breadcrumb.njk" %}
+
+<h1>Glossário</h1>
+
+<p class="text-neutral-700 max-w-3xl">
+  {{ glossario.termos | length }} siglas e termos técnicos que aparecem nas fichas do catálogo.
+  Em qualquer ficha, a primeira menção de cada sigla também tem sublinhado pontilhado
+  com a expansão ao passar o mouse — esta página é a referência completa.
+</p>
+
+<nav aria-label="Índice por categoria" class="my-xl border-y border-neutral-200 py-md">
+  <p class="text-sm font-semibold mb-sm">Pular para:</p>
+  <ul class="flex flex-wrap gap-2xs list-none p-0">
+    {% for cat in glossario.categorias %}
+      <li>
+        <a href="#cat-{{ cat | slug }}" class="tag tag--neutral text-xs">{{ cat }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+{% for cat in glossario.categorias %}
+  <section aria-labelledby="cat-{{ cat | slug }}" class="my-2xl">
+    <h2 id="cat-{{ cat | slug }}">{{ cat }}</h2>
+    <dl class="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-x-md gap-y-md mt-md">
+      {% for termo in glossario.termos %}
+        {% if termo.categoria == cat %}
+          <dt class="font-semibold font-mono text-primary">{{ termo.sigla }}</dt>
+          <dd>
+            <p class="font-semibold">{{ termo.expansao }}</p>
+            <p class="text-sm text-neutral-700 mt-2xs">{{ termo.descricao }}</p>
+          </dd>
+        {% endif %}
+      {% endfor %}
+    </dl>
+  </section>
+{% endfor %}
+
+<section class="my-2xl bg-neutral-100 p-lg rounded">
+  <h2>Sugerir um termo</h2>
+  <p>
+    Encontrou uma sigla nas fichas que deveria estar aqui? Abra uma issue no
+    <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=Glossário:+adicionar+sigla+XXX" rel="external">repositório GitHub</a>
+    com o termo e contexto onde apareceu.
+  </p>
+</section>
