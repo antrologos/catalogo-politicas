@@ -3,123 +3,108 @@ layout: layouts/base.njk
 title: "Início"
 description: "Catálogo interativo de 439 políticas públicas brasileiras sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação."
 ---
-<section aria-labelledby="hero-h" class="text-center py-xl">
-  <p class="text-sm text-neutral-700 uppercase tracking-wide">
-    {{ site.subtitle }}
-  </p>
-  <h1 id="hero-h" class="text-3xl sm:text-4xl mt-sm">{{ site.title }}</h1>
-  <p class="text-base text-neutral-700 mt-md max-w-2xl mx-auto">
-    Mapeamento de {{ agregados.total }} políticas públicas federais e estaduais sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação.
-  </p>
-  <p class="text-sm text-neutral-700 mt-sm">
-    Iniciativa <strong>Rede EJA e Inclusão Produtiva</strong> ·
-    <a href="/sobre/" class="text-primary">ver realizadores e parceiros</a>
-  </p>
-</section>
-
-{# === 4 caminhos de entrada (browse + search + comparar + UF) === #}
-<section aria-labelledby="caminhos-h" class="my-2xl">
-  <h2 id="caminhos-h" class="text-center text-lg font-semibold mb-lg">
-    Por onde você quer começar?
-  </h2>
-
-  <div class="grid gap-md sm:grid-cols-2 lg:grid-cols-4">
-
-    {# CAMINHO 1: Sei o que procuro (Busca) #}
-    <a href="/buscar/" class="block p-lg bg-primary text-white rounded shadow-md hover:bg-primary-dark no-underline transition-colors">
-      <p class="text-3xl">{% icon "magnifying-glass" %}</p>
-      <h3 class="text-white text-lg mt-sm">Sei o que procuro</h3>
-      <p class="text-sm mt-2xs opacity-90">
-        Busque por nome, sigla, base legal ou órgão responsável.
+<section aria-labelledby="hero-h" class="py-xl">
+  <div class="grid lg:grid-cols-[2fr_1fr] gap-xl items-start">
+    <div>
+      <p class="text-sm text-neutral-700 uppercase tracking-wide font-semibold">
+        {{ site.subtitle }}
       </p>
-      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
-        Buscar →
+      <h1 id="hero-h" class="mt-sm text-4xl sm:text-5xl leading-tight">
+        {{ site.title }}
+      </h1>
+      <p class="mt-md text-lg text-neutral-700 leading-relaxed max-w-2xl">
+        Mapeamento aberto de <strong>{{ agregados.total }} políticas federais e estaduais</strong>
+        sobre educação de jovens e adultos, qualificação profissional, inclusão produtiva e
+        transferência de renda condicionada à educação — com texto integral preservado e
+        citação acadêmica em 4 formatos.
       </p>
-    </a>
 
-    {# CAMINHO 2: Quero explorar (Hub) #}
-    <a href="/explorar/" class="block p-lg bg-info-dark text-white rounded shadow-md hover:bg-info no-underline transition-colors">
-      <p class="text-3xl">{% icon "compass" %}</p>
-      <h3 class="text-white text-lg mt-sm">Quero explorar</h3>
-      <p class="text-sm mt-2xs opacity-90">
-        Navegue por tipo, situação, modalidade, abrangência ou origem.
+      {# 3 chips de exemplo clicáveis: ataca o problema "não sei o que procurar" #}
+      <p class="mt-lg text-sm text-neutral-700">
+        Veja exemplo:
+        <a href="/politica/programa-nacional-de-acesso-ao-ensino-tecnico-e-emprego-pronatec-br/" class="tag tag--neutral ml-2xs">PRONATEC</a>
+        <a href="/politica/bolsa-familia-br/" class="tag tag--neutral ml-2xs">Bolsa Família</a>
+        <a href="/politica/educacao-de-jovens-e-adultos-eja-br/" class="tag tag--neutral ml-2xs">EJA Federal</a>
       </p>
-      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
-        Explorar →
-      </p>
-    </a>
 
-    {# CAMINHO 3: Quero comparar UFs #}
-    <a href="/comparacao/" class="block p-lg bg-success text-white rounded shadow-md hover:bg-success-dark no-underline transition-colors">
-      <p class="text-3xl">{% icon "chart-bar" %}</p>
-      <h3 class="text-lg mt-sm">Comparar UFs</h3>
-      <p class="text-sm mt-2xs">
-        Selecione 2 a 9 estados e veja indicadores lado a lado.
-      </p>
-      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
-        Comparar →
-      </p>
-    </a>
-
-    {# CAMINHO 4: Minha UF (âncora para tabela abaixo) #}
-    <a href="#cobertura-uf-h" class="block p-lg bg-white border-2 border-primary text-primary rounded shadow-sm hover:bg-primary hover:text-white no-underline transition-colors">
-      <p class="text-3xl">{% icon "map-trifold" %}</p>
-      <h3 class="text-current text-lg mt-sm">Minha UF</h3>
-      <p class="text-sm mt-2xs opacity-90">
-        Veja a página executiva do seu estado (10 UFs cobertas na 1ª onda).
-      </p>
-      <p class="text-xs mt-md uppercase tracking-wide opacity-80">
-        Escolher UF ↓
-      </p>
-    </a>
-
-  </div>
-
-  {# Caixa de busca compacta como atalho rápido #}
-  <form action="/buscar/" method="get" role="search" class="mt-lg max-w-xl mx-auto">
-    <label for="busca-hero" class="visually-hidden">Buscar políticas no catálogo</label>
-    <div class="flex flex-col sm:flex-row gap-sm">
-      <input
-        type="search"
-        id="busca-hero"
-        name="q"
-        placeholder="Atalho de busca: digite nome, sigla, base legal..."
-        autocomplete="off"
-        class="flex-1 px-md py-sm border-2 border-neutral-500 rounded text-sm"
-      >
-      <button type="submit" class="btn btn--secondary text-sm">
-        {% icon "magnifying-glass" %} Buscar
-      </button>
+      {# Caixa de busca como ação primária #}
+      <form action="/buscar/" method="get" role="search" class="mt-xl max-w-xl">
+        <label for="busca-hero" class="visually-hidden">Buscar políticas no catálogo</label>
+        <div class="flex flex-col sm:flex-row gap-sm">
+          <input
+            type="search"
+            id="busca-hero"
+            name="q"
+            placeholder="Digite nome, sigla, base legal ou órgão..."
+            autocomplete="off"
+            class="flex-1 px-md py-sm border-2 border-neutral-500 rounded text-base"
+          >
+          <button type="submit" class="btn btn--primary text-sm">
+            {% icon "magnifying-glass" %} Buscar
+          </button>
+        </div>
+        <p class="text-xs text-neutral-700 mt-sm">
+          Ou
+          <a href="/explorar/" class="text-primary">explore por dimensão</a> ·
+          <a href="/comparacao/" class="text-primary">compare UFs</a> ·
+          <a href="/sobre/" class="text-primary">leia a metodologia</a>
+        </p>
+      </form>
     </div>
-    <p class="text-xs text-neutral-700 mt-2xs text-center">
-      Exemplos:
-      <a href="/buscar/?q=PRONATEC" class="text-primary">PRONATEC</a> ·
-      <a href="/buscar/?q=EJA" class="text-primary">EJA</a> ·
-      <a href="/buscar/?q=Bolsa" class="text-primary">Bolsa</a>
-    </p>
-  </form>
+
+    {# Bloco lateral de cobertura: 9 UFs + Federal agrupadas por região,
+       todas clicáveis levando à página executiva da UF. Mais informativo
+       que mapa SVG abstrato (R2.3 Lente 1, conflito B). #}
+    <aside aria-labelledby="cobertura-aside-h" class="bg-papel border border-neutral-200 rounded p-md text-sm">
+      <h2 id="cobertura-aside-h" class="text-base mt-0">
+        Cobertura · 1ª onda
+      </h2>
+      <p class="text-neutral-700 mt-2xs text-xs">
+        {{ agregados.total }} políticas em 1 esfera federal + {{ agregados.ufsCobertas | length - 1 }} estados
+      </p>
+
+      <div class="mt-md space-y-sm">
+        <div>
+          <p class="text-xs uppercase tracking-wide text-neutral-700 mb-2xs">Federal</p>
+          <a href="/uf/br/" class="tag tag--federal">BR</a>
+          <span class="text-xs text-neutral-700">({{ agregados.countByUf.BR or 0 }} políticas)</span>
+        </div>
+
+        {% for regiao, siglas in (agregados.ufsCobertas | groupByRegiao(ufs)) %}
+          <div>
+            <p class="text-xs uppercase tracking-wide text-neutral-700 mb-2xs">{{ regiao }}</p>
+            <div class="flex flex-wrap gap-2xs">
+              {% for sigla in siglas %}
+                <a href="/uf/{{ sigla | lower }}/" class="tag tag--neutral text-xs"
+                   aria-label="Página de {{ sigla }} ({{ agregados.countByUf[sigla] }} políticas)">
+                  {{ sigla }}
+                  <span class="text-neutral-700">({{ agregados.countByUf[sigla] }})</span>
+                </a>
+              {% endfor %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      <p class="mt-md text-xs">
+        <a href="/sobre/cobertura/" class="text-primary">Por que essas UFs? Próximas ondas →</a>
+      </p>
+    </aside>
+  </div>
 </section>
 
-<section aria-labelledby="kpi-h" class="grid grid-cols-1 sm:grid-cols-3 gap-lg my-2xl">
+
+<section aria-labelledby="kpi-h" class="my-2xl border-y border-neutral-200 py-lg">
   <h2 id="kpi-h" class="sr-only">Estatísticas do catálogo</h2>
-
-  <div class="bg-primary text-white p-lg rounded text-center">
-    <p class="text-4xl font-bold">{{ agregados.total }}</p>
-    <p class="text-sm mt-2xs">políticas catalogadas</p>
-  </div>
-
-  <div class="bg-success text-white p-lg rounded text-center">
-    <p class="text-4xl font-bold">{{ agregados.ufsCobertas | length }}</p>
-    <p class="text-sm mt-2xs">UFs cobertas (1ª onda)</p>
-  </div>
-
-  <div class="bg-info-dark text-white p-lg rounded text-center">
-    <p class="text-4xl font-bold">{{ agregados.urlsUnicasComSnapshot }}</p>
-    <p class="text-sm mt-2xs">snapshots integrais únicos</p>
-    <p class="text-xs mt-2xs opacity-80">
-      ({{ agregados.snapshotsDisponiveis }} fichas com fonte preservada)
-    </p>
-  </div>
+  <p class="text-center text-base sm:text-lg text-neutral-700 leading-relaxed">
+    <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.total }}</strong>
+    políticas catalogadas em
+    <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.ufsCobertas | length }}</strong>
+    entes federativos (1 federal + {{ agregados.ufsCobertas | length - 1 }} estados),
+    com
+    <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.urlsUnicasComSnapshot }}</strong>
+    snapshots integrais únicos preservados ({{ agregados.snapshotsDisponiveis }} fichas com fonte oficial capturada).
+  </p>
 </section>
 
 <section aria-labelledby="dist-tipo-h" class="my-2xl">

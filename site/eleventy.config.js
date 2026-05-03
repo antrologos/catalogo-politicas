@@ -56,6 +56,30 @@ export default function (eleventyConfig) {
     return groups;
   });
 
+  // Agrupa siglas de UFs por região via lookup em `ufs` (data/ufs.js).
+  // Saída: { Norte: ["PA"], Nordeste: ["BA","CE","PE"], Sudeste: ["MG","RJ","SP"], Sul: ["PR","RS"] }
+  // Federal "BR" é tratado separadamente no template (não vai em região).
+  eleventyConfig.addFilter("groupByRegiao", (siglas, ufs) => {
+    if (!Array.isArray(siglas) || !ufs) return {};
+    const ORDEM = ["Norte", "Nordeste", "Centro-Oeste", "Sudeste", "Sul"];
+    const groups = {};
+    for (const sigla of siglas) {
+      if (sigla === "BR") continue;
+      const info = ufs[sigla];
+      const regiao = (info && info.regiao) || "Outras";
+      if (!groups[regiao]) groups[regiao] = [];
+      groups[regiao].push(sigla);
+    }
+    const ordered = {};
+    for (const r of ORDEM) {
+      if (groups[r]) ordered[r] = groups[r].sort();
+    }
+    for (const r of Object.keys(groups)) {
+      if (!ordered[r]) ordered[r] = groups[r].sort();
+    }
+    return ordered;
+  });
+
   eleventyConfig.addFilter("countByKey", (policies, key) => {
     if (!Array.isArray(policies)) return {};
     const counts = {};
