@@ -105,7 +105,9 @@ waitForD3(async function init() {
     };
   }
 
-  const COR_NAO_COBERTA = "#E5DFD3";
+  // Cinza mais perceptível em UFs não cobertas (antes #E5DFD3 era quase
+  // indistinguível do background bg-papel #FAF7F2 — fix visibilidade).
+  const COR_NAO_COBERTA = "#C7BFAE";
 
   const svgD3 = d3.select("#mapa-svg")
     .attr("viewBox", `0 0 ${width} ${height}`);
@@ -118,8 +120,8 @@ waitForD3(async function init() {
     .enter()
     .append("path")
     .attr("d", pathGen)
-    .attr("stroke", "#FAF7F2")
-    .attr("stroke-width", 0.6)
+    .attr("stroke", "#3C342A")
+    .attr("stroke-width", 0.8)
     .attr("vector-effect", "non-scaling-stroke")
     .attr("data-sigla", (d) => d.properties.sigla)
     .style("cursor", (d) => porUf[d.properties.sigla] ? "pointer" : "default")
@@ -159,8 +161,8 @@ waitForD3(async function init() {
     })
     .on("mouseleave", function () {
       d3.select(this)
-        .attr("stroke", "#FAF7F2")
-        .attr("stroke-width", 0.6);
+        .attr("stroke", "#3C342A")
+        .attr("stroke-width", 0.8);
       tooltip.classList.add("hidden");
     })
     .on("click", function (event, d) {
