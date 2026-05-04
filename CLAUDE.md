@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Status: Blocos A, B, C, D e E concluídos (2026-05-01).** Site PoC no ar em https://antrologos.github.io/catalogo-politicas/. Próximo: Bloco F (construção site MVP completo). Antes de qualquer trabalho, leia `.claude/README.md` para o mapa da meta-estrutura e o plano formal `.claude/plans/2026-05-01_bloco-f-construcao-site.md`.
+> **Status: Blocos A-E concluídos. Bloco F.3 quase completo: mapa D3 (Sprint 8.1+8.2) + grafo Cytoscape com compound nodes/drill-down/438 articulações curadas (Sprint 9.7+, 2026-05-04) entregues em produção.** Site no ar em https://antrologos.github.io/catalogo-politicas/. Tag mais recente: `v0.2.0-mvp-ux` (próxima tag aguarda polish do grafo + ficha). Em curso: **Sprint 9.8 — polish da ficha de política e da página /sobre/** (remover Proveniência/snapshot/datas técnicas da UI, refatorar "Como citar" com autoria correta, linkar CERES/MAPE). Adiado por decisão da usuária: polish visual do grafo (layout cose-bilkent ainda não distribui bem) + Sprint 10 (DOI Zenodo + a11y NVDA + divulgação). Antes de qualquer trabalho, leia `.claude/README.md` + plano formal `.claude/plans/2026-05-01_bloco-f-construcao-site.md` + memórias `project_grafo_estado_2026_05_04.md` (estado atual do grafo) e `project_decisoes_f3.md`.
 
 ## Propósito do projeto
 
@@ -30,7 +30,43 @@ Plano detalhado: `C:\Users\antro\.claude\plans\meu-intuito-criar-composed-pixel.
 
 ## Onde estamos agora
 
-**Blocos A, B, C, D e E concluídos** (2026-05-01). Próximo: **Bloco F (construção do site MVP)**. Plano formal: `.claude/plans/2026-05-01_bloco-f-construcao-site.md`.
+**Blocos A-E concluídos + Bloco F em execução. MVP-UX entregue 2026-05-03 (tag `v0.2.0-mvp-ux`). F.3 Sprint 8.1+8.2 (mapa coroplético D3) + Sprint 9.7+ (grafo Cytoscape com compound nodes/drill-down/438 articulações curadas) entregues em produção 2026-05-04.**
+
+### Bloco F — entregue até agora (2026-05-03)
+
+**F.1 (esqueleto operacional)** + **F.2 (UF/comparação)**: 5 sprints originais entregues no PoC; site cobre 439 fichas + 9 UFs + Federal + busca Pagefind + comparação + 8 páginas /sobre/.
+
+**Inserção EX.1+EX.2+EX.3** (descoberta + browse): hub `/explorar/` mosaico, 18 páginas índice por dimensão (`/tipo/X/`, `/situacao/X/`, etc.), descoberta lateral nas fichas (família federal + relacionadas).
+
+**MVP-UX (Onda V + Onda F)** após 6 rodadas de auditoria/pesquisa/adversarial — usuária declarou em 2026-05-01 que site "não estava bonito nem fácil":
+- **Onda V (estética)**: chips canônicos (V0) + IBM Plex Sans/Serif/Mono (V1) + paleta autoral azul-IBGE/verde-floresta/sienna/papel/tinta (V2, ADR-011) + 26 emojis → Phosphor inline SVG (V3, ADR-012) + hero refactor (V4) + footer institucional + print stylesheet (V5)
+- **Onda F (facilidade)**: Pagefind sinônimos + zero-state rico (F1) + Highwire meta + Schema.org Dataset + sitemap.xml (F2) + glossário 32 termos + `<abbr>` shortcode + /sobre/comece-por-aqui/ (F3) + dedup BA + microcopy + URL state (F4)
+- **Tag M1**: `v0.2.0-mvp-ux`
+
+**F.3 Sprint 8.1+8.2 (mapa coroplético)**: D3 v7 UMD + GeoJSON 27 UFs simplificado (mapshaper -dp 10%) + fitSize + 3 modos coloração + download SVG/PNG + tabela paralela canônica em /mapa/. Bug raiz dos primeiros pushes (rings CW vs D3 espera CCW) documentado em ADR-013.
+
+**F.3 Sprint 9.7+ (grafo Cytoscape com compound nodes + drill-down + 438 articulações)** — entregue em 2026-05-04:
+- Re-arquitetura: 33 famílias federais (compound-federal) + 9 clusters UF (compound-uf), todas colapsadas no estado inicial
+- Drill-down via plugin `cytoscape-expand-collapse@4.1.1`; click em compound expande/colapsa
+- 438 articulações curadas humanamente: 8 estruturais federais + 430 das 9 UFs (BA: 62, SP: 37, RJ: 50, PE: 55, MG: 43, CE: 54, PR: 41, RS: 46, PA: 42); origem em `.claude/working/articulacoes-investigacao/curadas-{UF}.md`
+- Edges de articulação ocultas no estado totalmente colapsado (eliminam "novelo" de 353 meta-edges); reaparecem ao expandir uma família
+- 37 estaduais isoladas filtradas do grafo (preservadas integralmente na lista textual canônica `#lista-familias`)
+- LOD, family-highlight, kb-focus, filtros tipo/situação preservados
+- **Polish visual adiado por decisão da usuária** — layout cose-bilkent ainda agrupa compounds num cluster denso na metade inferior; iteração futura documentada em `memory/project_grafo_estado_2026_05_04.md`
+
+### Próximos passos imediatos
+1. **F.3 Sprint 9.8 — polish ficha + Sobre** (em curso, 2026-05-04, ~6-7h):
+   - Remover seção "Proveniência" pública da ficha (técnica, não interessa a gestores)
+   - Remover snapshot/SHA-256 e datas de revisão da UI da ficha
+   - Tooltips explicando "tipo de oferta", "modalidade", "arranjo logístico" + significado de "Misto"
+   - Refatorar "Como citar": autoria do verbete = equipe da pesquisa (Maria Clara Gama, Maria Julieta Ramalho Garcia, Cintia Frazão, Jaqueline Sant'ana); site = Rogério Barbosa, publicado por Ceres/IESP-UERJ; remover parêntese `(FRM, Fundação Bradesco, IESP-UERJ)` após "Rede EJA e Inclusão Produtiva"
+   - Linkar CERES e MAPE em /sobre/ + footer (hoje só texto)
+   - Melhorar legibilidade das referências (texto-base size, borda mais firme)
+2. **Adiado** — polish visual do grafo (Sprint 9.9, quando usuária retomar)
+3. **F.3 Sprint 8.3+8.4**: mobile + a11y do mapa (~10h, ainda na fila)
+4. **Sprint 10 (adiado)**: DOI Zenodo + auditoria a11y NVDA/JAWS/VoiceOver + plano divulgação institucional. Reativar quando usuária pedir.
+
+**Marco M3** (release público): após Sprint 9.8 (ficha) + Sprint 9.9 (grafo polish) + Sprint 10 = anúncio FRM/IESP, ANPED, ANPOCS, redes acadêmicas. Estimativa total restante F.3: ~30-40h solo até 2026-07-01.
 
 ### Estado dos dados (Blocos C+D)
 - **439 fichas** validadas (schema v0.2, completude média 94.5%) em `data/derived/policies-onda-1-2026-05-01.json` + `latest.json`

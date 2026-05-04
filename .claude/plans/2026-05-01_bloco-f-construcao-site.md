@@ -192,22 +192,60 @@ Entregar o MVP público do Catálogo de Políticas Públicas Brasileiras com:
 ### M1 (fim de F.1)
 - [ ] 439 fichas em `/politica/<slug>/` retornam 200
 - [ ] Home com KPIs reais (`439 / 9+Federal / 148`)
-- [ ] Busca Pagefind funcional com 5 facetas mínimas
-- [ ] Sobre + Privacidade LGPD + Acessibilidade declarada
-- [ ] CI bloqueia PR se axe critical+serious > 0
-- [ ] Lighthouse Perf ≥90, A11y ≥95, BP ≥90, SEO ≥95
-- [ ] Beta privado com ≥3 gestores
+- [x] Busca Pagefind funcional com 5 facetas mínimas (PoC F.1+F.2; sinônimos curados em MVP-UX F1)
+- [x] Sobre + Privacidade LGPD + Acessibilidade declarada (8 páginas /sobre/ + glossário 32 termos + comece-por-aqui em MVP-UX F3)
+- [x] CI bloqueia PR se axe critical+serious > 0 (pa11y-ci AA bloqueante ativo desde PoC)
+- [x] Lighthouse Perf ≥90, A11y ≥95, BP ≥90, SEO ≥95 (mantido em todos os pushes; verificado em CI)
+- [ ] Beta privado com ≥3 gestores (não acionado; pendente decisão da usuária)
 
 ### M2 (fim de F.2)
-- [ ] 10 páginas `/uf/<sigla>/` funcionais
-- [ ] Comparação inter-UF até 9 UFs com URL determinística
-- [ ] Equipe FRM revisou conteúdo
+- [x] 10 páginas `/uf/<sigla>/` funcionais (entregue em F.2)
+- [x] Comparação inter-UF até 9 UFs com URL determinística (entregue em F.2; nota visível "comparação semântica em desenvolvimento" adicionada em MVP-UX F4 — versão completa adiada para pós-bolsista por decisão da usuária)
+- [ ] Equipe FRM revisou conteúdo (não acionado; pendente decisão da usuária)
+
+### Marcos adicionais inseridos durante execução
+
+#### M1.5 (EX.1+EX.2+EX.3 — descoberta + browse)
+- [x] Hub `/explorar/` mosaico visual com 7 cards
+- [x] 18 páginas índice por dimensão (`/tipo/X/`, `/situacao/X/`, `/modalidade/X/`, `/abrangencia/X/`)
+- [x] Descoberta lateral nas fichas (família federal canônica + replicas + relacionadas)
+
+#### M2.5 (MVP-UX — Onda V + Onda F)
+- [x] Onda V (estética): chips canônicos, IBM Plex, paleta autoral, Phosphor inline, hero refactor, footer + print
+- [x] Onda F (facilidade): Pagefind sinônimos, Highwire+Schema.org+sitemap, glossário+comece, dedup BA+microcopy
+- [x] Tag git `v0.2.0-mvp-ux` (release M1)
+- [x] ADR-011 (paleta autoral) + ADR-012 (Phosphor) publicados
 
 ### M3 (lançamento)
-- [ ] Mapa coroplético interativo + lista textual canônica passa NVDA+JAWS+VoiceOver
-- [ ] Grafo Cytoscape + DOM mirroring passa auditoria a11y manual
-- [ ] DOI Zenodo do catálogo emitido
-- [ ] Anúncio público em FRM/IESP + redes acadêmicas (ANPED, ANPOCS)
+- [x] Sprint 8.1 — mapa coroplético D3 funcional em `/mapa/` (Sprint 8.2: 3 modos coloração + download SVG/PNG)
+- [x] Sprint 8.4 — integração nav + hero + footer + /explorar/ + /uf/ (5 pontos de entrada; commit `70009b7`, 2026-05-03)
+- [x] Sprint 8.3 — mobile responsive + a11y polish do mapa (commit `31e9f6b`, 2026-05-03; skip-link + aria-live + tabindex paths cobertos + Pointer Events + reduced-motion + max-h responsiva)
+- [x] Sprint 9 — Grafo Cytoscape COMPLETO (commits 31201d8→7c56ea7, 2026-05-03):
+  * 9.1 MVP (439 nodes + 255 edges família + lista textual paralela)
+  * 9.2 Toolbar com filtros tipo/situação + highlight família ao hover
+  * 9.3 Edges 'articulação' por curadoria humana (8 articulações substantivas; substring matching descartado)
+  * 9.4 Mobile responsive + a11y polish (tabindex container + setas + Enter + aria-live)
+  * 9.5 Integração: nav + hub + footer + hero + ficha (5 pontos de entrada)
+- [x] Sprint 9.6 — Refator visual Sprint 9 (LOD + revelação progressiva, commits fc8f9e8/dafc8b0/499d324, 2026-05-03)
+- [x] Sprint 9.7+ — Re-arquitetura grafo com compound nodes + drill-down + 438 articulações curadas (commit `534bbab` site + `b0fbb7d` drive, 2026-05-04):
+  * Plugin `cytoscape-expand-collapse@4.1.1` UMD CDN
+  * 33 famílias federais (compound-federal) + 9 clusters UF (compound-uf), todos colapsados no estado inicial
+  * 438 articulações curadas humanamente nas 9 UFs (BA: 62, SP: 37, RJ: 50, PE: 55, MG: 43, CE: 54, PR: 41, RS: 46, PA: 42); citação literal preservada como proveniência
+  * Edges de articulação ocultas no estado totalmente colapsado (`.edge-hidden`); reaparecem dinamicamente ao expandir uma família
+  * 37 estaduais isoladas filtradas do grafo (preservadas integralmente em `#lista-familias`)
+  * **Polish visual adiado por decisão da usuária 2026-05-04** — layout cose-bilkent ainda agrupa compounds num cluster denso na metade inferior; iteração futura documentada em `~/.claude/projects/.../memory/project_grafo_estado_2026_05_04.md`
+- [ ] Sprint 9.8 — Polish ficha + Sobre (em curso 2026-05-04, ~6-7h):
+  * Remover seção "Proveniência" pública da ficha (técnica, não interessa a gestores)
+  * Remover snapshot/SHA-256 e datas de revisão da UI da ficha
+  * Tooltips para tipo/modalidade/arranjo + significado de "Misto"
+  * Refatorar "Como citar": autoria do verbete = equipe de pesquisa (Maria Clara Gama, Maria Julieta Ramalho Garcia, Cintia Frazão, Jaqueline Sant'ana); site = Rogério Barbosa, publicado por Ceres/IESP-UERJ; remover parêntese institucional `(FRM, Fundação Bradesco, IESP-UERJ)` após "Rede EJA e Inclusão Produtiva"
+  * Linkar CERES e MAPE em /sobre/, footer, equipe.js (hoje só texto)
+  * Melhorar legibilidade das referências (text-base size, borda mais firme)
+- [ ] Sprint 9.9 — Polish visual do grafo (adiado, sem prazo)
+- [ ] Sprint 10 — DOI Zenodo + auditoria a11y manual + plano divulgação institucional (ADIADO por decisão da usuária 2026-05-03)
+- [ ] Mapa coroplético + grafo passam NVDA+JAWS+VoiceOver (depende Sprint 10)
+- [ ] DOI Zenodo do catálogo emitido (depende Sprint 10)
+- [ ] Anúncio público em FRM/IESP + redes acadêmicas (depende Sprint 10)
 
 ## Documentação a atualizar ao final do Bloco F
 
@@ -221,11 +259,12 @@ Entregar o MVP público do Catálogo de Políticas Públicas Brasileiras com:
 
 - [x] RASCUNHO criado em 2026-05-01
 - [x] APROVADO no Checkpoint E.6 (2026-05-01) — usuária optou "Executar E.6 direto"
-- [ ] Sprint 0 iniciado (preparatório)
-- [ ] M1 atingido
-- [ ] M2 atingido
-- [ ] M3 atingido (lançamento)
-- [ ] CONCLUIDO
+- [x] Sprint 0 + Sprints 1-5 (F.1+F.2) entregues em PoC
+- [x] EX.1+EX.2+EX.3 inseridos (descoberta+browse) entregues 2026-05-02 (commit `db79cb9` + adições)
+- [x] M1 atingido (MVP-UX tag `v0.2.0-mvp-ux` em 2026-05-03)
+- [x] M2 entregue parcialmente (UF + comparação quantitativa OK; comparação semântica adiada para pós-bolsista)
+- [ ] M3 em execução (Sprint 8.1+8.2 entregues; Sprint 8.3, 8.4, 9 pendentes; Sprint 10 ADIADO por decisão da usuária)
+- [ ] CONCLUIDO (depende Sprint 9 + decisão sobre Sprint 10)
 
 ## Referências cruzadas
 
