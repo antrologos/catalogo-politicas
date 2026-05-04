@@ -38,9 +38,9 @@ Reúne **439 políticas públicas** federais e estaduais sobre Educação de Jov
 
 ## Parceria Técnica
 
-- **Centro para o Estudo da Riqueza e da Estratificação Social (Ceres/IESP-UERJ)**
-- **Laboratório de Monitoramento e Avaliação de Políticas e Eleições (MAPE/IESP-UERJ)**
-- **Instituto de Estudos Sociais e Políticos ([IESP-UERJ](http://www.iesp.uerj.br/))**
+- **[Centro para o Estudo da Riqueza e da Estratificação Social (Ceres/IESP-UERJ)](https://ceres-iesp.uerj.br/)**
+- **[Laboratório de Monitoramento e Avaliação de Políticas e Eleições (MAPE)](https://mape.org.br/)**
+- **[Instituto de Estudos Sociais e Políticos (IESP-UERJ)](http://www.iesp.uerj.br/)**
 
 ## Equipe
 
@@ -73,13 +73,13 @@ Reúne **439 políticas públicas** federais e estaduais sobre Educação de Jov
 ## Como citar o catálogo
 
 ```
-BARBOSA, R. J.; GAMA, M. C. da; GUICHENEY, H.; SCHAEFER, B. (Coords.).
-Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica.
-Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ).
-2026. Disponível em: https://antrologos.github.io/catalogo-politicas/.
+BARBOSA, R. J. (org.). Catálogo de Políticas — Projeto Juventudes Fora
+da Escola sem Educação Básica. Rede EJA e Inclusão Produtiva.
+Rio de Janeiro: Ceres/IESP-UERJ, 2026. Disponível em:
+https://antrologos.github.io/catalogo-politicas/.
 ```
 
-Para citar uma ficha individual, cada página de política tem botões "Como citar" com formatos ABNT, APA, BibTeX e RIS prontos para copiar.
+**Como citar um verbete específico:** cada ficha de política tem aba "Como citar" com formatos ABNT, APA, BibTeX e RIS prontos para copiar. A autoria dos verbetes é da equipe de pesquisa (Maria Clara da Gama, Maria Julieta Ramalho Garcia, Cintia Maria Frazão, Jaqueline Sant'ana), com Rogério Barbosa como organizador da obra e publicação pelo Ceres/IESP-UERJ.
 
 ## Repositório
 

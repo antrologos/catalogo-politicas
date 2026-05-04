@@ -137,7 +137,7 @@ export default function (eleventyConfig) {
   });
 
   // Shortcode `abbr` — wrap texto em <abbr title="..."> usando _data/glossario.
-  // Uso: {% abbr "EJA" %}, {% abbr "PRONATEC" %}. Tailwind preflight � estiliza
+  // Uso: {% abbr "EJA" %}, {% abbr "PRONATEC" %}. Tailwind preflight � estiliza
   // <abbr[title]> com underline pontilhada. Adicionamos cursor:help via base.
   // Cache lookup em memória via Map (lazy build na primeira chamada).
   let _glossarioMap = null;
@@ -171,36 +171,55 @@ export default function (eleventyConfig) {
       .replace(/-{2,}/g, "-");
   });
 
-  // Atribuição institucional fixa para todas as citações.
-  // Coordenadores como autores nominais; Rede EJA e Inclusão Produtiva como
-  // organização editora; Catálogo de Políticas como obra; subtítulo como série.
-  const AUTORES_ABNT = "BARBOSA, R. J.; GAMA, M. C. da; GUICHENEY, H.; SCHAEFER, B. (Coords.)";
-  const AUTORES_APA = "Barbosa, R. J., Gama, M. C. da, Guicheney, H., & Schaefer, B.";
-  const AUTORES_BIB = "{Barbosa, Rog{\\'e}rio Jer{\\^o}nimo and Gama, Maria Clara da and Guicheney, Hellen and Schaefer, Bruno}";
-  const EDITORA = "Rede EJA e Inclus\\~ao Produtiva (FRM, Funda\\c{c}\\~ao Bradesco, IESP-UERJ)";
-  const EDITORA_PLAIN = "Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ)";
-  const SERIE = "Cat\\'alogo de Pol\\'iticas — Projeto Juventudes Fora da Escola sem Educa\\c{c}\\~ao B\\'asica";
-  const SERIE_PLAIN = "Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica";
+  // Sprint 9.8: atribuição corrigida para distinguir três autorias diferentes:
+  //   1. AUTORES DO VERBETE (a ficha sobre a política): equipe de pesquisa
+  //      Maria Clara da Gama, Maria Julieta Ramalho Garcia, Cintia Maria Frazão,
+  //      Jaqueline Sant'ana — quem leu a fonte, sintetizou e escreveu o conteúdo.
+  //   2. ORGANIZAÇÃO/SITE: Rogério Jerônimo Barbosa (autor do site/aplicação)
+  //      como organizador, com publicação pelo Ceres/IESP-UERJ.
+  //   3. PROGRAMA descrito (a política em si): autoria das instituições
+  //      governamentais que a executam — fora do escopo da citação acadêmica.
+  //
+  // Modelo ABNT: GAMA, M. C. da; GARCIA, M. J. R.; FRAZÃO, C. M.; SANT'ANA, J.
+  //   Verbete: {Nome do Programa}. In: BARBOSA, R. J. (org.). Catálogo de
+  //   Políticas. Rio de Janeiro: Ceres/IESP-UERJ, 2026. Disponível em: ...
+  //
+  // Sem parêntese institucional "(FRM, Fundação Bradesco, IESP-UERJ)" —
+  // realizadores aparecem na seção /sobre/ e no footer, não embutidos em
+  // texto corrido (decisão da usuária 2026-05-04).
+  const AUTORES_VERBETE_ABNT = "GAMA, M. C. da; GARCIA, M. J. R.; FRAZÃO, C. M.; SANT'ANA, J";
+  const AUTORES_VERBETE_APA = "Gama, M. C. da, Garcia, M. J. R., Frazão, C. M., & Sant'ana, J.";
+  const AUTORES_VERBETE_BIB = "{Gama, Maria Clara da and Garcia, Maria Julieta Ramalho and Fraz{\\~a}o, Cintia Maria and Sant'ana, Jaqueline}";
+  const ORGANIZADOR_ABNT = "BARBOSA, R. J.";
+  const ORGANIZADOR_APA = "Barbosa, R. J.";
+  const ORGANIZADOR_BIB = "{Barbosa, Rog{\\'e}rio Jer{\\^o}nimo}";
+  const EDITORA_PLAIN = "Ceres/IESP-UERJ";
+  const EDITORA_BIB = "Ceres/IESP-UERJ";
+  const LOCAL_PUBLICACAO = "Rio de Janeiro";
+  const OBRA_PLAIN = "Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica. Rede EJA e Inclusão Produtiva";
+  const OBRA_BIB = "Cat{\\'a}logo de Pol{\\'i}ticas --- Projeto Juventudes Fora da Escola sem Educa{\\c{c}}{\\~a}o B{\\'a}sica. Rede EJA e Inclus{\\~a}o Produtiva";
 
   eleventyConfig.addFilter("citacaoAbnt", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
     const acesso = new Date().toLocaleDateString("pt-BR");
-    return `${AUTORES_ABNT}. ${p.nome_programa}. In: ${SERIE_PLAIN}. ${EDITORA_PLAIN}, ${ano}. Disponível em: <https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/>. Acesso em: ${acesso}.`;
+    return `${AUTORES_VERBETE_ABNT}. Verbete: ${p.nome_programa}. In: ${ORGANIZADOR_ABNT} (org.). ${OBRA_PLAIN}. ${LOCAL_PUBLICACAO}: ${EDITORA_PLAIN}, ${ano}. Disponível em: <https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/>. Acesso em: ${acesso}.`;
   });
 
   eleventyConfig.addFilter("citacaoApa", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
     const acesso = new Date().toLocaleDateString("pt-BR");
-    return `${AUTORES_APA} (${ano}). ${p.nome_programa}. In ${SERIE_PLAIN}. ${EDITORA_PLAIN}. Recuperado em ${acesso}, de https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/`;
+    return `${AUTORES_VERBETE_APA} (${ano}). Verbete: ${p.nome_programa}. In ${ORGANIZADOR_APA} (Org.), ${OBRA_PLAIN}. ${EDITORA_PLAIN}. Recuperado em ${acesso}, de https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/`;
   });
 
   eleventyConfig.addFilter("citacaoBibtex", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
     return `@incollection{${p.id_universal || p.slug},
-  author       = ${AUTORES_BIB},
-  title        = {${p.nome_programa}},
-  booktitle    = {${SERIE}},
-  publisher    = {${EDITORA}},
+  author       = ${AUTORES_VERBETE_BIB},
+  editor       = ${ORGANIZADOR_BIB},
+  title        = {Verbete: ${p.nome_programa}},
+  booktitle    = {${OBRA_BIB}},
+  publisher    = {${EDITORA_BIB}},
+  address      = {${LOCAL_PUBLICACAO}},
   year         = {${ano}},
   url          = {https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/}
 }`;
@@ -209,13 +228,15 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter("citacaoRis", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);
     return `TY  - CHAP
-AU  - Barbosa, Rogério Jerônimo
 AU  - Gama, Maria Clara da
-AU  - Guicheney, Hellen
-AU  - Schaefer, Bruno
-TI  - ${p.nome_programa}
-T2  - ${SERIE_PLAIN}
+AU  - Garcia, Maria Julieta Ramalho
+AU  - Frazão, Cintia Maria
+AU  - Sant'ana, Jaqueline
+ED  - Barbosa, Rogério Jerônimo
+TI  - Verbete: ${p.nome_programa}
+T2  - ${OBRA_PLAIN}
 PB  - ${EDITORA_PLAIN}
+CY  - ${LOCAL_PUBLICACAO}
 PY  - ${ano}
 UR  - https://antrologos.github.io/catalogo-politicas/politica/${p.slug}/
 LA  - pt-BR

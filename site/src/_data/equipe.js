@@ -28,12 +28,12 @@ export default {
     {
       nome: "Centro para o Estudo da Riqueza e da Estratificação Social",
       sigla: "Ceres/IESP-UERJ",
-      url: "http://www.iesp.uerj.br/",
+      url: "https://ceres-iesp.uerj.br/",
     },
     {
       nome: "Laboratório de Monitoramento e Avaliação de Políticas e Eleições",
       sigla: "MAPE/IESP-UERJ",
-      url: "http://www.iesp.uerj.br/",
+      url: "https://mape.org.br/",
     },
     {
       nome: "Instituto de Estudos Sociais e Políticos",
@@ -61,7 +61,12 @@ export default {
   ],
 
   // Atribuição curta para citação acadêmica e meta tags.
-  // Padrão: organizações realizadoras + iniciativa.
-  atribuicaoCurta: "Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ e parceiros)",
-  atribuicaoCitacao: "BARBOSA, R. J.; GAMA, M. C. da; GUICHENEY, H.; SCHAEFER, B. (Coords.). Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica. Iniciativa Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ, Fundação Itaú Educação e Trabalho, Fundação Arymax, UNESCO).",
+  // Sprint 9.8: removido parêntese institucional `(FRM, Fundação Bradesco, ...)`
+  // por decisão da usuária — instituições aparecem na seção /sobre/, não
+  // embutidas em texto corrido.
+  atribuicaoCurta: "Catálogo de Políticas — Rede EJA e Inclusão Produtiva",
+  // Citação do CATÁLOGO INTEIRO (não do verbete individual). Para citar uma
+  // ficha, usar os filtros `citacaoAbnt`/`citacaoApa`/`citacaoBibtex`/`citacaoRis`
+  // em eleventy.config.js, que usam a equipe de pesquisa como autores.
+  atribuicaoCitacao: "BARBOSA, R. J. (org.). Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica. Rede EJA e Inclusão Produtiva. Rio de Janeiro: Ceres/IESP-UERJ, 2026.",
 };

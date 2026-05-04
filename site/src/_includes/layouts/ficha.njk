@@ -72,9 +72,6 @@ layout: layouts/base.njk
         </a>
       {% endif %}
       <span aria-label="Identificador universal">ID: <code>{{ p.id_universal }}</code></span>
-      {% if p.revisado_em_br %}
-      <span>Revisado em <time datetime="{{ p.data_revisao }}">{{ p.revisado_em_br }}</time></span>
-      {% endif %}
       {% if p.completude_pct %}
         {% set badgeValor = p.completude_pct %}
         {% set badgeSufixo = "%" %}
@@ -157,16 +154,40 @@ layout: layouts/base.njk
         <dd>{{ p.abrangencia_territorial }}</dd>
       {% endif %}
       {% if p.tipo_oferta %}
-        <dt class="font-semibold text-neutral-700">Tipo de oferta</dt>
-        <dd>{{ p.tipo_oferta }}</dd>
+        <dt class="font-semibold text-neutral-700">
+          <abbr title="Categoria do que a política entrega ao público (curso, bolsa, vaga em rede escolar, atendimento, certificação, apoio produtivo).">Tipo de oferta</abbr>
+        </dt>
+        <dd>
+          {% if 'Misto' in p.tipo_oferta %}
+            <abbr title="Combina múltiplos tipos de oferta sem predominância clara.">{{ p.tipo_oferta }}</abbr>
+          {% else %}
+            {{ p.tipo_oferta }}
+          {% endif %}
+        </dd>
       {% endif %}
       {% if p.modalidade_oferta %}
-        <dt class="font-semibold text-neutral-700">Modalidade da oferta</dt>
-        <dd>{{ p.modalidade_oferta }}</dd>
+        <dt class="font-semibold text-neutral-700">
+          <abbr title="Forma como a oferta chega ao público: presencial, EaD (educação a distância), semipresencial/híbrida, ou mista.">Modalidade da oferta</abbr>
+        </dt>
+        <dd>
+          {% if 'Mist' in p.modalidade_oferta %}
+            <abbr title="Combina múltiplas modalidades (ex.: presencial + EaD) sem predominância clara.">{{ p.modalidade_oferta }}</abbr>
+          {% else %}
+            {{ p.modalidade_oferta }}
+          {% endif %}
+        </dd>
       {% endif %}
       {% if p.arranjo_logistico %}
-        <dt class="font-semibold text-neutral-700">Arranjo logístico</dt>
-        <dd>{{ p.arranjo_logistico }}</dd>
+        <dt class="font-semibold text-neutral-700">
+          <abbr title="Estrutura física da oferta: unidade fixa (escola, posto), itinerante (equipes/unidades móveis), ou misto.">Arranjo logístico</abbr>
+        </dt>
+        <dd>
+          {% if 'Misto' in p.arranjo_logistico or 'Mist' in p.arranjo_logistico %}
+            <abbr title="Combina unidade fixa e itinerante.">{{ p.arranjo_logistico }}</abbr>
+          {% else %}
+            {{ p.arranjo_logistico }}
+          {% endif %}
+        </dd>
       {% endif %}
       {% if p.carga_horaria %}
         <dt class="font-semibold text-neutral-700">Carga horária</dt>
@@ -205,6 +226,40 @@ layout: layouts/base.njk
         </dd>
       {% endif %}
     </dl>
+
+    {# Sprint 9.8: glossário das três categorias mais técnicas, baseado no
+       vocabulario-canonico.json. Acessível via <details> nativo (teclado-friendly). #}
+    <details class="mt-lg text-sm">
+      <summary class="cursor-pointer font-medium text-neutral-800 py-xs">
+        Como interpretar tipo de oferta, modalidade e arranjo logístico?
+      </summary>
+      <div class="mt-sm pl-md border-l-2 border-neutral-300 space-y-sm text-neutral-800">
+        <p>
+          <strong>Tipo de oferta</strong> — categoria do <em>que</em> a política entrega
+          ao público. Valores: <em>Curso/Formação</em> (qualificação profissional,
+          capacitação), <em>Benefício/Auxílio financeiro</em> (bolsa, subsídio,
+          vale-transporte), <em>Oferta educacional</em> (vaga, matrícula, turma),
+          <em>Serviço/Atendimento</em> (orientação, tutoria, busca ativa),
+          <em>Apoio produtivo/financeiro</em> (crédito, fomento, incubação),
+          <em>Certificação de escolaridade/competências</em>, <em>Misto</em>
+          (combina múltiplos tipos sem predominância clara) ou <em>Não aplicável</em>.
+        </p>
+        <p>
+          <strong>Modalidade da oferta</strong> — <em>forma</em> como a oferta
+          chega ao público. Valores: <em>Presencial</em>, <em>Educação à
+          distância (EaD)</em>, <em>Semipresencial/híbrida</em>, <em>Mista</em>
+          (combina múltiplas modalidades sem predominância clara),
+          <em>Sem informação</em> ou <em>Não aplicável</em>.
+        </p>
+        <p>
+          <strong>Arranjo logístico</strong> — estrutura <em>física</em> da
+          oferta. Valores: <em>Unidade fixa</em> (local permanente como escola
+          ou posto), <em>Itinerante</em> (equipes/unidades móveis, ações em
+          comunidades), <em>Misto (fixa + itinerante)</em>, <em>Sem informação</em>
+          ou <em>Não aplicável</em>.
+        </p>
+      </div>
+    </details>
   {% endset %}
 
   {% set abaBaseLegal %}
@@ -228,28 +283,11 @@ layout: layouts/base.njk
       </p>
     {% endif %}
 
-    {% if p.fonte_arquivo_path %}
-      <p class="mt-md">
-        <strong>Snapshot capturado:</strong>
-        {% if p.fonte_data_acesso_br %}
-          em <time datetime="{{ p.fonte_data_acesso }}">{{ p.fonte_data_acesso_br }}</time>
-        {% endif %}
-        {% if p.fonte_extensao %}
-          (formato: {{ p.fonte_extensao | upper }})
-        {% endif %}
-      </p>
-      {% if p.fonte_sha256 %}
-        <p class="text-xs text-neutral-700 mt-2xs">
-          SHA-256: <code>{{ p.fonte_sha256 | truncate(16, true, '…') }}</code>
-        </p>
-      {% endif %}
-    {% else %}
-      <p class="mt-md text-neutral-700">
-        Snapshot integral ainda não capturado. Veja
-        <a href="/sobre/cobertura/">cobertura e limites</a>
-        para detalhes sobre URLs com falha persistente (gov.br WAF, planalto timeout).
-      </p>
-    {% endif %}
+    {# Sprint 9.8: bloco "Snapshot capturado" + SHA-256 removido da UI pública
+       (informação técnica que não interessa a gestores). Os snapshots seguem
+       em disco (`data/external_snapshots/`) e podem ser auditados internamente
+       contra link rot. Para usuários, o link da fonte oficial acima já oferece
+       acesso ao texto integral. #}
 
     {% if p.atribuicao %}
       <p class="mt-md text-sm text-neutral-700">
@@ -279,28 +317,18 @@ layout: layouts/base.njk
   {% set tabsId = "tabs-" + p.slug %}
   {% include "components/tabs.njk" %}
 
-  <footer class="mt-2xl pt-md border-t border-neutral-200 text-sm text-neutral-700">
-    <h2 class="text-base mt-0">Proveniência</h2>
-    <dl class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-x-md gap-y-2xs mt-sm">
-      {% if p.revisado_por %}
-        <dt class="font-semibold">Revisado por</dt><dd>{{ p.revisado_por }}</dd>
-      {% endif %}
-      {% if p.proxima_revisao_br %}
-        <dt class="font-semibold">Próxima revisão prevista</dt>
-        <dd><time datetime="{{ p.proxima_revisao_prevista }}">{{ p.proxima_revisao_br }}</time></dd>
-      {% endif %}
-      <dt class="font-semibold">Versão do catálogo</dt><dd>{{ p.data_versao_catalogo }}</dd>
-      <dt class="font-semibold">ID interno</dt><dd><code>{{ p.id_interno }}</code></dd>
-    </dl>
-
-    <p class="mt-md">
-      Encontrou erro ou tem sugestão?
-      <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=Correção:+{{ p.nome_programa | urlencode }}"
-         rel="noopener" target="_blank">
-        Abrir issue no GitHub ↗
-      </a>
-    </p>
-  </footer>
+  {# Sprint 9.8: seção "Proveniência" removida da UI pública (informação técnica
+     que não interessa a gestores). Dados de versão/ID/revisão seguem
+     disponíveis em meta tags HTML, JSON-LD Schema.org e na citação acadêmica
+     gerada na aba "Como citar". O link para abrir issue fica como rodapé
+     discreto, sem header. #}
+  <p class="mt-2xl pt-md border-t border-neutral-200 text-xs text-neutral-700">
+    Encontrou erro ou tem sugestão sobre este verbete?
+    <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=Correção:+{{ p.nome_programa | urlencode }}"
+       rel="noopener" target="_blank">
+      Abra uma issue no GitHub ↗
+    </a>
+  </p>
 
   {# === EX.3: seção "Continue explorando" === #}
   {% if rel and (rel.mesmaFamilia.length > 0 or rel.mesmoTipoUf.length > 0 or rel.mesmaModalidadeUf.length > 0) %}

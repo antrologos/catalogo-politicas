@@ -25,12 +25,10 @@ Sob a seguinte condição:
 Ao reutilizar dados ou conteúdo do catálogo, **inclua a atribuição completa** abaixo:
 
 ```
-BARBOSA, R. J.; GAMA, M. C. da; GUICHENEY, H.; SCHAEFER, B. (Coords.).
-Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica.
-Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ,
-Fundação Itaú Educação e Trabalho, Fundação Arymax, UNESCO).
-2026. Disponível em: https://antrologos.github.io/catalogo-politicas/.
-Licenciado sob CC BY 4.0.
+BARBOSA, R. J. (org.). Catálogo de Políticas — Projeto Juventudes Fora
+da Escola sem Educação Básica. Rede EJA e Inclusão Produtiva.
+Rio de Janeiro: Ceres/IESP-UERJ, 2026. Disponível em:
+https://antrologos.github.io/catalogo-politicas/. Licenciado sob CC BY 4.0.
 ```
 
 Para citar fichas individuais, cada página de política oferece **4 formatos prontos** (ABNT, APA, BibTeX, RIS) na aba "Como citar".

@@ -8,7 +8,7 @@ permalink: /sobre/privacidade/
 
 **Atualizada em:** 1 de maio de 2026
 
-O **Catálogo de Políticas** (iniciativa Rede EJA e Inclusão Produtiva — FRM, Fundação Bradesco, IESP-UERJ e parceiros) **não coleta dados pessoais identificáveis** dos visitantes.
+O **Catálogo de Políticas** (iniciativa Rede EJA e Inclusão Produtiva) **não coleta dados pessoais identificáveis** dos visitantes.
 
 ## Dados que coletamos
 

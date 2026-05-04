@@ -8,15 +8,17 @@
 
 {# === Highwire Press meta tags (R2.2 padrão crítico) ===
    Zotero browser connector reconhece estes tags automaticamente.
-   Sem botão custom no site, ficha vira citável em 1 clique. #}
-<meta name="citation_title" content="{{ p.nome_programa }}">
-<meta name="citation_author" content="Barbosa, Rogério Jerônimo">
+   Sprint 9.8: autoria do verbete = equipe de pesquisa; Rogério é editor;
+   publicação por Ceres/IESP-UERJ. Sem parêntese institucional. #}
+<meta name="citation_title" content="Verbete: {{ p.nome_programa }}">
 <meta name="citation_author" content="Gama, Maria Clara da">
-<meta name="citation_author" content="Guicheney, Hellen">
-<meta name="citation_author" content="Schaefer, Bruno">
+<meta name="citation_author" content="Garcia, Maria Julieta Ramalho">
+<meta name="citation_author" content="Frazão, Cintia Maria">
+<meta name="citation_author" content="Sant'ana, Jaqueline">
+<meta name="citation_editor" content="Barbosa, Rogério Jerônimo">
 <meta name="citation_publication_date" content="{{ p.data_revisao or '2026-05-01' }}">
-<meta name="citation_journal_title" content="Catálogo de Políticas Públicas Brasileiras — Projeto Juventudes Fora da Escola sem Educação Básica">
-<meta name="citation_publisher" content="Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ)">
+<meta name="citation_journal_title" content="Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica. Rede EJA e Inclusão Produtiva">
+<meta name="citation_publisher" content="Ceres/IESP-UERJ">
 <meta name="citation_language" content="pt-BR">
 <meta name="citation_public_url" content="{{ site.baseUrl }}/politica/{{ p.slug }}/">
 {% if p.resumo %}
@@ -50,15 +52,16 @@
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Rede EJA e Inclusão Produtiva",
+    "name": "Ceres/IESP-UERJ",
     "url": "{{ site.baseUrl }}/sobre/"
   },
   "creator": [
-    { "@type": "Person", "name": "Rogério Jerônimo Barbosa" },
     { "@type": "Person", "name": "Maria Clara da Gama" },
-    { "@type": "Person", "name": "Hellen Guicheney" },
-    { "@type": "Person", "name": "Bruno Schaefer" }
+    { "@type": "Person", "name": "Maria Julieta Ramalho Garcia" },
+    { "@type": "Person", "name": "Cintia Maria Frazão" },
+    { "@type": "Person", "name": "Jaqueline Sant'ana" }
   ],
+  "editor": { "@type": "Person", "name": "Rogério Jerônimo Barbosa" },
   "dateModified": "{{ p.data_revisao or '2026-05-01' }}",
   {% if p.ano_criacao %}"datePublished": "{{ p.ano_criacao }}",{% endif %}
   "spatialCoverage": {
