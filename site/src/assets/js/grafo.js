@@ -1,18 +1,25 @@
 /**
- * Grafo Cytoscape de relações federal ↔ estadual (Sprint 9.1 do F.3, 2026-05-03).
+ * Grafo Cytoscape com COMPOUND NODES + drill-down (Sprint 9.7+, 2026-05-04).
  *
- * Renderiza grafo em #grafo-container com 439 nodes (33 federais + 255 réplicas
- * + 151 estaduais únicas) e 255 edges (federal→réplica). Layout cose-bilkent
- * agrupa famílias federais como clusters naturais.
+ * Re-arquitetura: o grafo abre COLAPSADO. Cada quadrado azul é uma família
+ * federal (compound parent agregando federal canônica + réplicas). Cada
+ * quadrado verde tracejado é um cluster UF (compound parent agregando
+ * estaduais únicas da UF que tenham articulação curada). Click expande/colapsa.
  *
- * Sprint 9.2 vai adicionar: filtros tipo/situação + highlight família ao hover.
- * Sprint 9.3 vai adicionar: edges secundárias por integra_outras_politicas.
- * Sprint 9.4 vai adicionar: mobile polish + keyboard navigation a11y.
+ * Bibliotecas (UMD via CDN): Cytoscape v3 + cose-bilkent + expand-collapse 4.1.1.
  *
- * Cytoscape v3 + cose-bilkent carregados via UMD em grafo.njk (~150KB total).
- * Aguarda window.cytoscape disponível antes de iniciar (defer carrega assíncrono).
+ * Funcionalidades preservadas da Sprint 9.6:
+ *   - LOD via min-zoomed-font-size (réplica/estadual labels só em zoom alto)
+ *   - family-highlight ao hover em federal canônica
+ *   - kb-focus + setas para navegar entre famílias (Home/End/Esc)
+ *   - filtros tipo + situação
+ *   - tooltip + click navega para ficha
+ *   - aria-live announce
  *
- * Aplica ADR-013 lições: UMD > ESM, validação local com puppeteer antes de push.
+ * Mudanças:
+ *   - Click em compound parent expande/colapsa (não navega para ficha)
+ *   - kb-focus navega entre compound-federal (33 deles)
+ *   - applyFilters considera compounds: parent visível se ANY filho passa filtro
  */
 
 function waitForCytoscape(cb) {
@@ -42,14 +49,18 @@ waitForCytoscape(function init() {
   }
   const { nodes, edges, pathPrefix } = data;
 
-  // Registrar layout cose-bilkent se disponível
+  // Registrar layouts e plugins
   if (window.cytoscapeCoseBilkent) {
     cytoscape.use(window.cytoscapeCoseBilkent);
   } else {
     console.warn("[grafo] cose-bilkent não disponível, usando layout cose default");
   }
+  if (window.cytoscapeExpandCollapse) {
+    cytoscape.use(window.cytoscapeExpandCollapse);
+  } else {
+    console.warn("[grafo] expand-collapse plugin não disponível, drill-down desabilitado");
+  }
 
-  // Respeitar prefers-reduced-motion
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   function announce(msg) {
@@ -57,14 +68,15 @@ waitForCytoscape(function init() {
   }
 
   // === Cores semânticas alinhadas à paleta autoral V2 (ADR-011) ===
-  // Tons sólidos para nós; usar opacity em edges para visual leve.
-  const COLOR_FEDERAL = "#1A4F8B";       // azul-IBGE (federais canônicas)
+  const COLOR_FEDERAL = "#1A4F8B";       // azul-IBGE (federais canônicas + compound-federal border)
   const COLOR_REPLICA = "#357AB7";       // info (réplicas estaduais)
-  const COLOR_ESTADUAL = "#0E7B4A";      // verde-floresta (estaduais únicas)
+  const COLOR_ESTADUAL = "#0E7B4A";      // verde-floresta (estaduais únicas + compound-uf border)
   const COLOR_DESCONTINUADA = "#8A7E70"; // cinza para descontinuadas
   const COLOR_BORDER = "#3C342A";        // tinta morna
   const COLOR_PAPEL = "#FAF7F2";         // papel (label fill)
+  const COLOR_PAPEL_ESCURO = "#F0EBE2";  // papel mais escuro (compound bg)
   const COLOR_EDGE = "#5C5347";          // neutral-700
+  const COLOR_FOCO = "#FFB81C";          // âmbar editorial (focus visible)
 
   const cy = cytoscape({
     container: cyContainer,
@@ -75,24 +87,72 @@ waitForCytoscape(function init() {
 
     layout: window.cytoscapeCoseBilkent
       ? {
+          // Sprint 9.7+: como as 438 edges de articulação ficam ocultas no
+          // estado inicial colapsado (.edge-hidden), o layout só precisa lidar
+          // com 255 edges família + 42 compound parents. Parâmetros voltam a
+          // valores moderados, similares à Sprint 9.6.
           name: "cose-bilkent",
           animate: prefersReducedMotion ? false : "end",
           animationDuration: 600,
           randomize: true,
-          nodeRepulsion: 4500,
-          idealEdgeLength: 80,
-          edgeElasticity: 0.45,
+          nodeRepulsion: 8000,
+          idealEdgeLength: 120,
+          edgeElasticity: 0.3,
           nestingFactor: 0.1,
-          gravity: 0.25,
+          gravity: 0.15,
           numIter: 2500,
-          tile: true,                 // empilha estaduais isoladas em grade
-          tilingPaddingVertical: 10,
-          tilingPaddingHorizontal: 10,
+          tile: true,
+          tilingPaddingVertical: 15,
+          tilingPaddingHorizontal: 15,
+          nodeDimensionsIncludeLabels: true,
         }
       : { name: "cose", animate: !prefersReducedMotion },
 
     style: [
-      // Federal: nó grande azul-IBGE
+      // Compound parent: família federal (azul-IBGE com fundo papel translúcido)
+      {
+        selector: 'node[type="compound-federal"]',
+        style: {
+          "background-color": COLOR_PAPEL,
+          "background-opacity": 0.5,
+          "border-color": COLOR_FEDERAL,
+          "border-width": 1.5,
+          "border-style": "solid",
+          shape: "round-rectangle",
+          label: "data(label)",
+          color: COLOR_FEDERAL,
+          "text-valign": "top",
+          "text-halign": "center",
+          "text-margin-y": -4,
+          "font-size": 11,
+          "font-weight": 700,
+          "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
+          "text-max-width": 100,
+          padding: 10,
+        },
+      },
+      // Compound parent: cluster por UF (verde-floresta tracejado)
+      {
+        selector: 'node[type="compound-uf"]',
+        style: {
+          "background-color": COLOR_PAPEL_ESCURO,
+          "background-opacity": 0.55,
+          "border-color": COLOR_ESTADUAL,
+          "border-width": 1.5,
+          "border-style": "dashed",
+          shape: "round-rectangle",
+          label: "data(label)",
+          color: COLOR_ESTADUAL,
+          "text-valign": "top",
+          "text-halign": "center",
+          "text-margin-y": -4,
+          "font-size": 12,
+          "font-weight": 700,
+          "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
+          padding: 10,
+        },
+      },
+      // Federal canônica (nó-folha dentro do compound-federal)
       {
         selector: 'node[type="federal"]',
         style: {
@@ -110,11 +170,10 @@ waitForCytoscape(function init() {
           "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
           "text-outline-color": COLOR_FEDERAL,
           "text-outline-width": 1,
-          // Sprint 9.6: prevenir overflow de labels longos (ENCCEJA, PROEJA)
           "text-max-width": 60,
         },
       },
-      // Réplica: nó pequeno azul-info
+      // Réplica estadual
       {
         selector: 'node[type="replica"]',
         style: {
@@ -130,13 +189,12 @@ waitForCytoscape(function init() {
           "font-size": 7,
           "font-weight": 600,
           "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
-          // Sprint 9.6 LOD: label oculto em zoom panorâmico (~zoom < 1.15)
           "min-zoomed-font-size": 8,
           "text-max-width": 40,
           "opacity": 0.75,
         },
       },
-      // Estadual única: nó médio verde-floresta
+      // Estadual única
       {
         selector: 'node[type="estadual"]',
         style: {
@@ -152,13 +210,12 @@ waitForCytoscape(function init() {
           "font-size": 6,
           "font-weight": 600,
           "font-family": '"IBM Plex Sans Variable", system-ui, sans-serif',
-          // Sprint 9.6 LOD: label oculto em zoom panorâmico
           "min-zoomed-font-size": 7,
           "text-max-width": 40,
           "opacity": 0.75,
         },
       },
-      // Override descontinuada (cinza, semitransparente)
+      // Override descontinuada (apenas em nós-folha; não aplicar em compound)
       {
         selector: 'node[situacao_classe="descontinuada"]',
         style: {
@@ -166,7 +223,7 @@ waitForCytoscape(function init() {
           opacity: 0.5,
         },
       },
-      // Edge familia: linha sólida fina (federal → réplica estadual)
+      // Edge familia
       {
         selector: 'edge[type="familia"]',
         style: {
@@ -177,13 +234,12 @@ waitForCytoscape(function init() {
           "target-arrow-shape": "none",
         },
       },
-      // Edge articulação curada: tracejado sienna, com seta direcional
-      // (relação substantiva: certificação, condicionalidade, intermediação...)
+      // Edge articulação curada
       {
         selector: 'edge[type="articulacao"]',
         style: {
           width: 2,
-          "line-color": "#C7521C",          // sienna (paleta autoral V2)
+          "line-color": "#C7521C",
           "line-style": "dashed",
           "curve-style": "bezier",
           "control-point-step-size": 60,
@@ -193,16 +249,33 @@ waitForCytoscape(function init() {
           "arrow-scale": 1.2,
         },
       },
-      // Hover state
+      // Sprint 9.7+: edges de articulação ocultas por padrão quando ambos os
+      // endpoints estão dentro de compounds colapsados. Reduz o "novelo" visual
+      // de 438 edges sienna no estado inicial. As edges são reveladas
+      // dinamicamente quando uma família/cluster é expandido (handler abaixo).
       {
-        selector: "node:active, node.hover",
+        selector: 'edge[type="articulacao"].edge-hidden',
+        style: {
+          display: "none",
+        },
+      },
+      // Hover state — apenas em nós-folha (compounds têm cue do plugin)
+      {
+        selector: 'node[type="federal"]:active, node[type="federal"].hover, node[type="replica"]:active, node[type="replica"].hover, node[type="estadual"]:active, node[type="estadual"].hover',
         style: {
           "border-width": 3,
-          "border-color": "#FFB81C", // foco âmbar (paleta V2)
+          "border-color": COLOR_FOCO,
           "z-index": 99,
         },
       },
-      // Edge conectada quando node em hover
+      // Hover em compound parent — apenas reforça borda
+      {
+        selector: 'node[type="compound-federal"].hover, node[type="compound-uf"].hover',
+        style: {
+          "border-width": 2.5,
+          "border-color": COLOR_FOCO,
+        },
+      },
       {
         selector: "edge.hover-edge",
         style: {
@@ -211,7 +284,7 @@ waitForCytoscape(function init() {
           opacity: 1,
         },
       },
-      // Sprint 9.2: highlight de família + atenuação dos demais
+      // Atenuação dos não-destacados
       {
         selector: ".dimmed",
         style: {
@@ -219,66 +292,108 @@ waitForCytoscape(function init() {
           "text-opacity": 0.15,
         },
       },
+      // Família destacada — z-index alto
       {
         selector: ".family-highlight",
         style: {
           "z-index": 50,
         },
       },
-      // Sprint 9.6: revelação de labels em família destacada — sobrescreve LOD
+      // Revelação de labels em família destacada — sobrescreve LOD
       {
         selector: 'node.family-highlight[type="replica"], node.family-highlight[type="estadual"]',
         style: {
-          "min-zoomed-font-size": 0,    // bypass LOD: força label aparecer
-          "opacity": 1,                  // remove atenuação
-          "text-opacity": 1,
-        },
-      },
-      // Sprint 9.6: kb-focus também revela label do nó focado
-      {
-        selector: "node.kb-focus",
-        style: {
           "min-zoomed-font-size": 0,
-          "text-opacity": 1,
           "opacity": 1,
+          "text-opacity": 1,
         },
       },
-      // Sprint 9.2: nó/edge filtrado fica escondido
+      // Filtro: ocultar nó (display:none cobre nó-folha; compound parent oculta separadamente)
       {
         selector: ".filtered-out",
         style: {
           display: "none",
         },
       },
-      // Sprint 9.4: foco via teclado (anel âmbar largo, igual focus-visible CSS)
+      // Foco via teclado em compound-federal: anel âmbar largo
       {
         selector: "node.kb-focus",
         style: {
           "border-width": 5,
-          "border-color": "#FFB81C",      // foco âmbar editorial (paleta V2)
+          "border-color": COLOR_FOCO,
           "border-opacity": 1,
+          "min-zoomed-font-size": 0,
+          "text-opacity": 1,
           "z-index": 999,
         },
       },
     ],
   });
 
+  // === Inicializar expand-collapse ===
+  // Plugin precisa estar inicializado antes de qualquer chamada à API,
+  // mas collapseAll() só pode ser chamado depois que o layout inicial terminar
+  // (caso contrário todos os compounds colapsam sobrepostos num único ponto).
+  let api = null;
+  if (window.cytoscapeExpandCollapse) {
+    api = cy.expandCollapse({
+      // layoutBy aplica este layout após cada expand/collapse para reposicionar
+      // os elementos visíveis. Mantém os mesmos parâmetros do layout inicial.
+      layoutBy: {
+        name: window.cytoscapeCoseBilkent ? "cose-bilkent" : "cose",
+        animate: prefersReducedMotion ? false : "end",
+        randomize: false,
+        animationDuration: 400,
+        nodeRepulsion: 8000,
+        idealEdgeLength: 120,
+        edgeElasticity: 0.3,
+        nestingFactor: 0.1,
+        gravity: 0.15,
+        numIter: 1500,
+        tile: true,
+        nodeDimensionsIncludeLabels: true,
+      },
+      fisheye: true,
+      animate: !prefersReducedMotion,
+      animationDuration: 400,
+      undoable: false,
+      cueEnabled: true,
+      expandCollapseCuePosition: "top-left",
+      expandCollapseCueSize: 14,
+      expandCollapseCueLineSize: 10,
+      groupEdgesOfSameTypeOnCollapse: true,
+    });
+  }
+
   // === Tooltip + Highlight família on hover ===
   cy.on("mouseover", "node", (evt) => {
     const node = evt.target;
     const d = node.data();
     node.addClass("hover");
+
+    // Compound parents: tooltip simples + highlight + dim
+    if (d.type === "compound-federal" || d.type === "compound-uf") {
+      const escopo = node.union(node.descendants()).union(node.connectedEdges()).union(node.descendants().connectedEdges());
+      cy.elements().not(escopo).addClass("dimmed");
+      escopo.addClass("family-highlight");
+      tooltip.innerHTML = `
+        <div class="font-semibold">${d.nomeCompleto || d.label}</div>
+        <div class="mt-2xs">${d.type === "compound-federal" ? "Família federal" : "Cluster UF"}</div>
+        <div class="mt-2xs opacity-70">Click para ${api && api.isCollapsible(node) ? "expandir" : "recolher"}</div>
+      `;
+      tooltip.classList.remove("hidden");
+      return;
+    }
+
     node.connectedEdges().addClass("hover-edge");
 
-    // Sprint 9.2: highlight família ao hover de federal canônica.
-    // Atenua todos os outros nodes/edges para destacar a família visualmente.
+    // Hover em federal canônica destaca família inteira (federal + réplicas + edges)
     if (d.type === "federal") {
       const familia = node.union(node.connectedEdges()).union(node.outgoers());
       cy.elements().not(familia).addClass("dimmed");
       familia.addClass("family-highlight");
     } else if (d.type === "replica") {
-      // Hover em réplica destaca a federal canônica + outras réplicas da mesma família
-      const edge = node.connectedEdges().first();
+      const edge = node.connectedEdges().filter('[type="familia"]').first();
       if (edge && edge.length > 0) {
         const federal = edge.target();
         const familia = federal.union(federal.connectedEdges()).union(federal.outgoers());
@@ -287,22 +402,23 @@ waitForCytoscape(function init() {
       }
     }
 
-    let html = `
+    const ufTexto = d.type === "federal"
+      ? "Federal canônica"
+      : d.type === "replica"
+        ? "Réplica em " + d.uf
+        : "Estadual única (" + d.uf + ")";
+    tooltip.innerHTML = `
       <div class="font-semibold">${d.nomeCompleto || d.label}</div>
       <div class="mt-2xs">${d.tipo}</div>
-      <div class="mt-2xs">
-        ${d.type === "federal" ? "Federal canônica" : d.type === "replica" ? "Réplica em " + d.uf : "Estadual única (" + d.uf + ")"}
-      </div>
+      <div class="mt-2xs">${ufTexto}</div>
       <div class="mt-2xs opacity-70">Click para abrir ficha</div>
     `;
-    tooltip.innerHTML = html;
     tooltip.classList.remove("hidden");
   });
 
   cy.on("mousemove", (evt) => {
     if (!tooltip.classList.contains("hidden")) {
       const rect = cyContainer.getBoundingClientRect();
-      // evt.originalEvent existe quando vem de mouse real
       const oe = evt.originalEvent;
       if (oe) {
         tooltip.style.left = `${oe.clientX - rect.left + 12}px`;
@@ -319,11 +435,19 @@ waitForCytoscape(function init() {
     tooltip.classList.add("hidden");
   });
 
-  // === Click navega para ficha ===
+  // === Click: compound expande/colapsa; nó-folha navega para ficha ===
   cy.on("tap", "node", (evt) => {
-    const slug = evt.target.data("slug");
-    if (slug) {
-      window.location.href = `${pathPrefix}politica/${slug}/`;
+    const node = evt.target;
+    const d = node.data();
+    if (d.type === "compound-federal" || d.type === "compound-uf") {
+      if (api) {
+        if (api.isCollapsible(node)) api.collapse(node);
+        else if (api.isExpandable(node)) api.expand(node);
+      }
+      return;
+    }
+    if (d.slug) {
+      window.location.href = `${pathPrefix}politica/${d.slug}/`;
     }
   });
 
@@ -334,8 +458,10 @@ waitForCytoscape(function init() {
   function applyFilters() {
     let visibleCount = 0;
     cy.batch(() => {
+      // Folhas: aplicar filtro tipo+situação
       cy.nodes().forEach((n) => {
         const d = n.data();
+        if (d.type === "compound-federal" || d.type === "compound-uf") return;
         const matchTipo = filterTipo === "all" || d.tipo === filterTipo;
         const matchSitu = filterSitu === "all" || d.situacao_classe === filterSitu;
         if (matchTipo && matchSitu) {
@@ -345,18 +471,21 @@ waitForCytoscape(function init() {
           n.addClass("filtered-out");
         }
       });
+      // Compound parents: visíveis se pelo menos 1 filho passa filtro
+      cy.nodes('[type="compound-federal"], [type="compound-uf"]').forEach((parent) => {
+        const algumVisivel = parent.descendants().some((c) => !c.hasClass("filtered-out"));
+        if (algumVisivel) parent.removeClass("filtered-out");
+        else parent.addClass("filtered-out");
+      });
       // Edges: visíveis só quando ambos endpoints visíveis
       cy.edges().forEach((e) => {
-        const sourceVisible = !e.source().hasClass("filtered-out");
-        const targetVisible = !e.target().hasClass("filtered-out");
-        if (sourceVisible && targetVisible) {
-          e.removeClass("filtered-out");
-        } else {
-          e.addClass("filtered-out");
-        }
+        const sv = !e.source().hasClass("filtered-out");
+        const tv = !e.target().hasClass("filtered-out");
+        if (sv && tv) e.removeClass("filtered-out");
+        else e.addClass("filtered-out");
       });
     });
-    announce(`Filtros aplicados: ${visibleCount} de ${nodes.length} políticas visíveis.`);
+    announce(`Filtros aplicados: ${visibleCount} de ${nodes.filter(n => n.data.type !== "compound-federal" && n.data.type !== "compound-uf").length} políticas visíveis.`);
   }
 
   function setFilterButton(group, value) {
@@ -395,42 +524,86 @@ waitForCytoscape(function init() {
     setFilterButton("tipo", "all");
     setFilterButton("situ", "all");
     applyFilters();
+    if (api) api.collapseAll();
     cy.fit(undefined, 30);
-    announce("Filtros limpos. Grafo reajustado para visualização inicial.");
+    announce("Filtros limpos e grafo recolhido para visualização inicial.");
   });
 
-  // Anuncia quando layout terminar (separa família vs articulação)
+  // Helper: o plugin expand-collapse, quando colapsa um compound, agrupa as
+  // edges entre filhos do compound em meta-edges entre os COMPOUND PARENTS.
+  // Para esconder o "novelo" no estado totalmente colapsado, ocultamos as
+  // edges em que ambos os endpoints são compounds colapsados (estado inicial).
+  // Quando o usuário expande um compound, o plugin re-roteia automaticamente
+  // os edges para os filhos visíveis e nossa função reavalia os endpoints.
+  function ehCompoundColapsado(node) {
+    if (!api) return false;
+    const t = node.data("type");
+    if (t !== "compound-federal" && t !== "compound-uf") return false;
+    return api.isExpandable(node); // expand-collapse: isExpandable = colapsado
+  }
+  function reavaliarVisibilidadeArticulacoes() {
+    cy.batch(() => {
+      cy.edges('[type="articulacao"]').forEach((e) => {
+        const ambosColapsados =
+          ehCompoundColapsado(e.source()) && ehCompoundColapsado(e.target());
+        if (ambosColapsados) e.addClass("edge-hidden");
+        else e.removeClass("edge-hidden");
+      });
+    });
+  }
+
+  // Após cada layout (inicial + re-layouts do plugin expand-collapse), reenquadra
+  // o viewport. cose-bilkent posiciona nós em coordenadas longe de (0,0); sem
+  // fit() o canvas mostra área vazia. Usar .on() (não .one()) garante que
+  // expansões/colapsos subsequentes também reenquadram.
+  let initialCollapseDone = false;
+  cy.on("layoutstop", () => {
+    if (!initialCollapseDone && api) {
+      initialCollapseDone = true;
+      api.collapseAll();
+      // collapseAll dispara seu próprio layout — não fit aqui, deixa o próximo
+      // layoutstop cuidar do fit no estado colapsado.
+      return;
+    }
+    reavaliarVisibilidadeArticulacoes();
+    cy.fit(undefined, 40);
+  });
+
+  // Eventos do plugin: re-aplica visibilidade após expand/collapse
+  cy.on("expandcollapse.beforecollapse expandcollapse.afterexpand", () => {
+    reavaliarVisibilidadeArticulacoes();
+  });
+
+  // Anuncia uma única vez quando layout inicial terminar
   cy.one("layoutstop", () => {
-    const eFam = edges.filter((e) => e.data.type === "familia").length;
+    const cf = nodes.filter((n) => n.data.type === "compound-federal").length;
+    const cu = nodes.filter((n) => n.data.type === "compound-uf").length;
     const eArt = edges.filter((e) => e.data.type === "articulacao").length;
-    announce(`Grafo carregado: ${nodes.length} políticas, ${eFam} edges família e ${eArt} edges de articulação curada.`);
+    announce(`Grafo carregado: ${cf} famílias federais e ${cu} clusters UF colapsados, ${eArt} articulações curadas. Click em uma família para expandir suas réplicas; click em um cluster UF para ver políticas estaduais únicas. Use setas para navegar entre famílias.`);
   });
 
-  // === Sprint 9.4: navegação por teclado ===
-  // Cytoscape usa canvas, não SVG — nodes não recebem foco DOM nativo. Solução:
-  // foco no #grafo-container + setas navegam entre nós federais (33), Enter abre
-  // ficha do nó "selecionado" (highlight visual). Mantém grafo navegável para
-  // quem usa teclado, complementa lista textual canônica abaixo.
+  // === Navegação por teclado entre compound-federal nodes ===
+  // Cytoscape usa canvas: nodes não recebem foco DOM. Setas circulam entre os
+  // 33 compound-federal (ordenados por label). Enter abre ficha da canônica.
   let kbIdx = -1;
-  const federais = cy.nodes('node[type="federal"]:visible').sort((a, b) =>
+  const compoundsFed = cy.nodes('node[type="compound-federal"]').sort((a, b) =>
     a.data("label").localeCompare(b.data("label"))
   );
 
-  function focusFederal(idx) {
-    // Sprint 9.6: limpar tanto kb-focus quanto family-highlight do estado anterior
+  function focusCompoundFederal(idx) {
     cy.elements().removeClass("kb-focus family-highlight dimmed");
-    if (federais.length === 0) return;
-    kbIdx = ((idx % federais.length) + federais.length) % federais.length;
-    const node = federais[kbIdx];
-    node.addClass("kb-focus");
-    // Sprint 9.6: navegação por teclado destaca família igual hover de mouse —
-    // réplicas conectadas revelam labels (sobrescreve LOD), demais atenuam.
-    const familia = node.union(node.connectedEdges()).union(node.outgoers());
-    familia.addClass("family-highlight");
-    cy.elements().not(familia).addClass("dimmed");
-    cy.center(node);
-    const d = node.data();
-    announce(`Foco em ${d.nomeCompleto}. ${cy.nodes(`edge[source="${d.id}"], edge[target="${d.id}"]`).length || node.connectedEdges().length} relações. Pressione Enter para abrir ficha, setas para navegar.`);
+    if (compoundsFed.length === 0) return;
+    kbIdx = ((idx % compoundsFed.length) + compoundsFed.length) % compoundsFed.length;
+    const compound = compoundsFed[kbIdx];
+    compound.addClass("kb-focus");
+    // Highlight = compound + descendants + edges relacionadas
+    const escopo = compound.union(compound.descendants()).union(compound.connectedEdges()).union(compound.descendants().connectedEdges());
+    escopo.addClass("family-highlight");
+    cy.elements().not(escopo).addClass("dimmed");
+    cy.center(compound);
+    const d = compound.data();
+    const filhos = compound.descendants().length;
+    announce(`Foco em ${d.nomeCompleto}. ${filhos} políticas na família. Pressione Enter para abrir ficha da canônica, setas para navegar, Esc para sair.`);
   }
 
   cyContainer.addEventListener("keydown", (e) => {
@@ -438,32 +611,34 @@ waitForCytoscape(function init() {
       case "ArrowRight":
       case "ArrowDown":
         e.preventDefault();
-        focusFederal(kbIdx + 1);
+        focusCompoundFederal(kbIdx + 1);
         break;
       case "ArrowLeft":
       case "ArrowUp":
         e.preventDefault();
-        focusFederal(kbIdx - 1);
+        focusCompoundFederal(kbIdx - 1);
         break;
       case "Enter":
       case " ":
-        if (kbIdx >= 0 && federais.length > 0) {
+        if (kbIdx >= 0 && compoundsFed.length > 0) {
           e.preventDefault();
-          const slug = federais[kbIdx].data("slug");
+          // Abrir ficha do nó federal canônico (filho do compound focado)
+          const canonica = compoundsFed[kbIdx].descendants().filter('[type="federal"]').first();
+          const slug = canonica && canonica.length > 0 ? canonica.data("slug") : null;
           if (slug) window.location.href = `${pathPrefix}politica/${slug}/`;
         }
         break;
       case "Home":
         e.preventDefault();
-        focusFederal(0);
+        focusCompoundFederal(0);
         break;
       case "End":
         e.preventDefault();
-        focusFederal(federais.length - 1);
+        focusCompoundFederal(compoundsFed.length - 1);
         break;
       case "Escape":
         e.preventDefault();
-        cy.nodes().removeClass("kb-focus");
+        cy.elements().removeClass("kb-focus family-highlight dimmed");
         kbIdx = -1;
         cy.fit(undefined, 30);
         announce("Foco do teclado limpo. Visualização reajustada.");
@@ -473,9 +648,9 @@ waitForCytoscape(function init() {
 
   cyContainer.addEventListener("focus", () => {
     if (kbIdx === -1) {
-      announce("Grafo focado. Use setas para navegar entre as 33 políticas federais canônicas, Enter para abrir ficha, Esc para sair, Home/End para ir ao primeiro/último.");
+      announce(`Grafo focado. ${compoundsFed.length} famílias federais navegáveis. Use setas para navegar, Enter para abrir ficha da canônica focada, Esc para sair, Home/End para ir ao primeiro/último.`);
     }
   });
 
-  console.info(`[grafo] Cytoscape v${cytoscape.version}: ${nodes.length} nodes, ${edges.length} edges`);
+  console.info(`[grafo] Cytoscape v${cytoscape.version}: ${nodes.length} nodes (${compoundsFed.length} compound-federal + clusters UF), ${edges.length} edges`);
 });

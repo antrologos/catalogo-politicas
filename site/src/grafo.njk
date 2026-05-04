@@ -25,32 +25,43 @@ permalink: /grafo/
     com famílias agrupadas em formato acessível.
   </p>
   <p class="text-neutral-700 max-w-3xl">
-    Visualização das <strong>{{ grafo.stats.totalNodes }}</strong> políticas
-    catalogadas como rede.
-    <strong>{{ grafo.stats.federais }}</strong> federais canônicas (nós grandes
-    azul-IBGE rotulados por sigla, ex.: PRONATEC, EJA),
-    <strong>{{ grafo.stats.replicas }}</strong> réplicas estaduais (nós
-    azuis menores rotulados como sigla-UF, ex.: PRONATEC-BA, EJA-SP) e
-    <strong>{{ grafo.stats.estaduais }}</strong> políticas exclusivamente
-    estaduais (nós verdes). Cada nó é uma POLÍTICA específica clicável.
+    O grafo abre <strong>colapsado</strong>: cada quadrado azul é uma
+    <strong>família federal</strong> (federal canônica + suas réplicas estaduais)
+    e cada quadrado verde tracejado é um <strong>cluster por UF</strong> agregando
+    políticas exclusivamente estaduais.
+    <strong>Clique uma vez</strong> para expandir e ver os componentes;
+    clique no quadrado novamente para recolher. Cada nó interno é uma POLÍTICA
+    específica clicável (que abre a ficha).
+  </p>
+  <p class="mt-sm text-sm text-neutral-700 max-w-3xl">
+    Resumo: <strong>{{ grafo.stats.compoundsFederal }}</strong> famílias
+    federais · <strong>{{ grafo.stats.compoundsUf }}</strong> clusters UF
+    visíveis · <strong>{{ grafo.stats.federais }}</strong> federais canônicas +
+    <strong>{{ grafo.stats.replicas }}</strong> réplicas estaduais +
+    <strong>{{ grafo.stats.estaduais }}</strong> políticas exclusivamente estaduais
+    (com articulação curada). <strong>{{ grafo.stats.nodesFiltrados }}</strong>
+    políticas estaduais isoladas (sem família federal e sem articulação curada com
+    outras fichas) <strong>não aparecem no grafo</strong> — elas seguem listadas
+    integralmente na <a href="#lista-familias" class="text-primary">lista textual
+    abaixo</a>, que continua sendo a fonte canônica.
   </p>
   <ul class="mt-md text-sm text-neutral-700 max-w-3xl list-disc pl-md space-y-2xs">
     <li><strong>{{ grafo.stats.edgesFamilia }}</strong> edges <strong>família</strong>
       (linha contínua cinza): replica → federal canônica. Genealogia institucional.</li>
     <li><strong>{{ grafo.stats.edgesArticulacao }}</strong> edges <strong>articulação</strong>
       (linha sienna tracejada com seta): relações substantivas declaradas
-      (certificação, condicionalidade, intermediação, complementaridade).
-      <em>Lista curada provisória — em revisão pela equipe FRM/IESP.</em></li>
+      (certificação, condicionalidade, intermediação, complementaridade) curadas
+      a partir das 9 UFs cobertas. <em>Lista provisória — em revisão pela equipe
+      FRM/IESP.</em></li>
   </ul>
   <p class="mt-md text-xs text-neutral-700 max-w-3xl">
     {% icon "info" %}
-    <strong>Dica de leitura:</strong> labels das réplicas (ex.: <em>EJA-SP</em>,
-    <em>PRONATEC-BA</em>) aparecem ao <strong>aproximar o zoom</strong> ou ao
-    <strong>destacar uma família</strong> (hover/foco em uma federal canônica).
-    Em vista panorâmica, réplicas aparecem como satélites coloridos atenuados
-    ao redor da federal — mantém o grafo respirável mesmo com 27 UFs futuras.
-    A <a href="#lista-familias" class="text-primary">lista textual abaixo</a>
-    sempre traz os nomes completos.
+    <strong>Como navegar:</strong> hover sobre uma família federal expandida destaca
+    suas réplicas. Use as setas do teclado para percorrer as
+    <strong>{{ grafo.stats.compoundsFederal }}</strong> famílias federais; Enter abre
+    a ficha da canônica focada; Esc reseta o foco. A
+    <a href="#lista-familias" class="text-primary">lista textual abaixo</a>
+    sempre traz nomes completos de todas as políticas, inclusive as isoladas.
   </p>
   <p class="text-sm text-neutral-700 mt-sm md:hidden">
     {% icon "info" %} Em telas menores, role para baixo para ver a
@@ -264,4 +275,5 @@ permalink: /grafo/
 <script src="https://cdn.jsdelivr.net/npm/layout-base@2.0.1/layout-base.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/cose-base@2.2.0/cose-base.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/cytoscape-cose-bilkent@4.1.0/cytoscape-cose-bilkent.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/cytoscape-expand-collapse@4.1.1/cytoscape-expand-collapse.min.js" defer></script>
 <script src="{{ '/assets/js/grafo.js' }}" defer></script>
