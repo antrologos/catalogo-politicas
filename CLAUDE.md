@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Status: Blocos A-E concluídos. Bloco F.3 quase completo: mapa D3 (Sprint 8.1+8.2) + grafo Cytoscape com compound nodes/drill-down/438 articulações curadas (Sprint 9.7+, 2026-05-04) entregues em produção.** Site no ar em https://antrologos.github.io/catalogo-politicas/. Tag mais recente: `v0.2.0-mvp-ux` (próxima tag aguarda polish do grafo + ficha). Em curso: **Sprint 9.8 — polish da ficha de política e da página /sobre/** (remover Proveniência/snapshot/datas técnicas da UI, refatorar "Como citar" com autoria correta, linkar CERES/MAPE). Adiado por decisão da usuária: polish visual do grafo (layout cose-bilkent ainda não distribui bem) + Sprint 10 (DOI Zenodo + a11y NVDA + divulgação). Antes de qualquer trabalho, leia `.claude/README.md` + plano formal `.claude/plans/2026-05-01_bloco-f-construcao-site.md` + memórias `project_grafo_estado_2026_05_04.md` (estado atual do grafo) e `project_decisoes_f3.md`.
+> **Status: Blocos A-E concluídos. Bloco F.3 quase completo. Em produção (2026-05-04):** mapa D3 (Sprint 8.1+8.2), grafo Cytoscape com compound nodes/drill-down/438 articulações curadas (Sprint 9.7+), **polish da ficha + Sobre (Sprint 9.8: Proveniência/snapshot/datas removidos da UI; "Como citar" refatorado com autoria da equipe de pesquisa; CERES e MAPE linkados com URLs reais)**. Site no ar em https://antrologos.github.io/catalogo-politicas/. Tag mais recente: `v0.2.0-mvp-ux` (próxima tag aguarda polish visual do grafo). **Adiados por decisão da usuária**: Sprint 9.9 polish visual do grafo (layout cose-bilkent ainda não distribui bem) + Sprint 10 (DOI Zenodo + a11y NVDA + divulgação institucional). Antes de qualquer trabalho, leia `.claude/README.md` + plano formal `.claude/plans/2026-05-01_bloco-f-construcao-site.md` + memórias `project_decisoes_f3.md`, `project_grafo_estado_2026_05_04.md` e `project_sprint_9_8_ficha_polish_2026_05_04.md`.
 
 ## Propósito do projeto
 
@@ -30,7 +30,7 @@ Plano detalhado: `C:\Users\antro\.claude\plans\meu-intuito-criar-composed-pixel.
 
 ## Onde estamos agora
 
-**Blocos A-E concluídos + Bloco F em execução. MVP-UX entregue 2026-05-03 (tag `v0.2.0-mvp-ux`). F.3 Sprint 8.1+8.2 (mapa coroplético D3) + Sprint 9.7+ (grafo Cytoscape com compound nodes/drill-down/438 articulações curadas) entregues em produção 2026-05-04.**
+**Blocos A-E concluídos + Bloco F em execução. MVP-UX entregue 2026-05-03 (tag `v0.2.0-mvp-ux`). F.3 Sprint 8.1+8.2 (mapa coroplético D3) + Sprint 9.7+ (grafo Cytoscape com compound nodes/drill-down/438 articulações curadas) + Sprint 9.8 (polish da ficha + Sobre) entregues em produção 2026-05-04.**
 
 ### Bloco F — entregue até agora (2026-05-03)
 
@@ -54,19 +54,21 @@ Plano detalhado: `C:\Users\antro\.claude\plans\meu-intuito-criar-composed-pixel.
 - LOD, family-highlight, kb-focus, filtros tipo/situação preservados
 - **Polish visual adiado por decisão da usuária** — layout cose-bilkent ainda agrupa compounds num cluster denso na metade inferior; iteração futura documentada em `memory/project_grafo_estado_2026_05_04.md`
 
-### Próximos passos imediatos
-1. **F.3 Sprint 9.8 — polish ficha + Sobre** (em curso, 2026-05-04, ~6-7h):
-   - Remover seção "Proveniência" pública da ficha (técnica, não interessa a gestores)
-   - Remover snapshot/SHA-256 e datas de revisão da UI da ficha
-   - Tooltips explicando "tipo de oferta", "modalidade", "arranjo logístico" + significado de "Misto"
-   - Refatorar "Como citar": autoria do verbete = equipe da pesquisa (Maria Clara Gama, Maria Julieta Ramalho Garcia, Cintia Frazão, Jaqueline Sant'ana); site = Rogério Barbosa, publicado por Ceres/IESP-UERJ; remover parêntese `(FRM, Fundação Bradesco, IESP-UERJ)` após "Rede EJA e Inclusão Produtiva"
-   - Linkar CERES e MAPE em /sobre/ + footer (hoje só texto)
-   - Melhorar legibilidade das referências (texto-base size, borda mais firme)
-2. **Adiado** — polish visual do grafo (Sprint 9.9, quando usuária retomar)
-3. **F.3 Sprint 8.3+8.4**: mobile + a11y do mapa (~10h, ainda na fila)
-4. **Sprint 10 (adiado)**: DOI Zenodo + auditoria a11y NVDA/JAWS/VoiceOver + plano divulgação institucional. Reativar quando usuária pedir.
+**F.3 Sprint 9.8 (polish ficha + Sobre)** — entregue em 2026-05-04 (commit `dba2467` site + `37302e4` drive):
+- Removida seção "Proveniência" pública (revisado_por, próxima revisão, versão, ID interno) — informação técnica que não interessa a gestores; segue em meta tags HTML, JSON-LD e citações acadêmicas
+- Removidas data "Revisado em" do header + bloco "Snapshot capturado" + SHA-256
+- Adicionados tooltips `<abbr>` em "Tipo de oferta", "Modalidade", "Arranjo logístico" + valores "Misto" + glossário `<details>` ao final da aba Detalhes
+- Refatorada aba "Como citar este verbete": autoria = equipe de pesquisa (Maria Clara da Gama, Maria Julieta Ramalho Garcia, Cintia Maria Frazão, Jaqueline Sant'ana); organização = Rogério Jerônimo Barbosa; publicação = Ceres/IESP-UERJ. Filtros `citacaoAbnt/Apa/Bibtex/Ris` reescritos; meta tags Highwire e JSON-LD atualizadas
+- Removido parêntese `(FRM, Fundação Bradesco, IESP-UERJ)` de todos os textos corridos (citation-box, equipe.js, sobre/index.md, sobre/privacidade.md, sobre/termos.md, ficha-meta.njk)
+- Legibilidade das referências melhorada (text-base, border-neutral-300, font-medium)
+- CERES e MAPE linkados com URLs oficiais fornecidas pela usuária: https://ceres-iesp.uerj.br/ e https://mape.org.br/ (MAPE tem domínio próprio)
 
-**Marco M3** (release público): após Sprint 9.8 (ficha) + Sprint 9.9 (grafo polish) + Sprint 10 = anúncio FRM/IESP, ANPED, ANPOCS, redes acadêmicas. Estimativa total restante F.3: ~30-40h solo até 2026-07-01.
+### Próximos passos imediatos
+1. **Aguardando feedback** da usuária sobre Sprint 9.8 em produção antes de definir próxima prioridade
+2. **F.3 Sprint 9.9 — polish visual do grafo (ADIADO)**: layout cose-bilkent ainda agrupa compounds num cluster denso. Direções de iteração em `memory/project_grafo_estado_2026_05_04.md` (testar layout `concentric`, posicionamento manual em grade radial, ajuste de nodeRepulsion)
+3. **Sprint 10 (ADIADO)**: DOI Zenodo + auditoria a11y NVDA/JAWS/VoiceOver + plano divulgação institucional. Reativar quando usuária pedir.
+
+**Marco M3** (release público): após Sprint 9.9 (grafo polish) + Sprint 10 = anúncio FRM/IESP, ANPED, ANPOCS, redes acadêmicas. Estimativa total restante F.3: ~24-38h solo até 2026-07-01.
 
 ### Estado dos dados (Blocos C+D)
 - **439 fichas** validadas (schema v0.2, completude média 94.5%) em `data/derived/policies-onda-1-2026-05-01.json` + `latest.json`

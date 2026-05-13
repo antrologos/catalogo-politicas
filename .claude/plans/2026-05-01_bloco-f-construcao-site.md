@@ -234,13 +234,15 @@ Entregar o MVP público do Catálogo de Políticas Públicas Brasileiras com:
   * Edges de articulação ocultas no estado totalmente colapsado (`.edge-hidden`); reaparecem dinamicamente ao expandir uma família
   * 37 estaduais isoladas filtradas do grafo (preservadas integralmente em `#lista-familias`)
   * **Polish visual adiado por decisão da usuária 2026-05-04** — layout cose-bilkent ainda agrupa compounds num cluster denso na metade inferior; iteração futura documentada em `~/.claude/projects/.../memory/project_grafo_estado_2026_05_04.md`
-- [ ] Sprint 9.8 — Polish ficha + Sobre (em curso 2026-05-04, ~6-7h):
-  * Remover seção "Proveniência" pública da ficha (técnica, não interessa a gestores)
-  * Remover snapshot/SHA-256 e datas de revisão da UI da ficha
-  * Tooltips para tipo/modalidade/arranjo + significado de "Misto"
-  * Refatorar "Como citar": autoria do verbete = equipe de pesquisa (Maria Clara Gama, Maria Julieta Ramalho Garcia, Cintia Frazão, Jaqueline Sant'ana); site = Rogério Barbosa, publicado por Ceres/IESP-UERJ; remover parêntese institucional `(FRM, Fundação Bradesco, IESP-UERJ)` após "Rede EJA e Inclusão Produtiva"
-  * Linkar CERES e MAPE em /sobre/, footer, equipe.js (hoje só texto)
-  * Melhorar legibilidade das referências (text-base size, borda mais firme)
+- [x] Sprint 9.8 — Polish ficha + Sobre (entregue 2026-05-04, commit `dba2467` site + `37302e4` drive):
+  * Removida seção "Proveniência" pública da ficha (revisado_por, próxima revisão, versão, ID interno); dados continuam em meta tags HTML, JSON-LD Schema.org e citações acadêmicas
+  * Removida data "Revisado em" do header + bloco "Snapshot capturado" + SHA-256
+  * Tooltips `<abbr>` em "Tipo de oferta", "Modalidade", "Arranjo logístico" + valores "Misto" + glossário `<details>` ao final da aba Detalhes
+  * Refatorada aba "Como citar este verbete": autoria do verbete = equipe de pesquisa (Maria Clara da Gama, Maria Julieta Ramalho Garcia, Cintia Maria Frazão, Jaqueline Sant'ana); organização = Rogério Jerônimo Barbosa; publicação = Ceres/IESP-UERJ. Filtros `citacaoAbnt/Apa/Bibtex/Ris` reescritos + meta tags Highwire + JSON-LD Dataset atualizadas
+  * Removido parêntese `(FRM, Fundação Bradesco, IESP-UERJ)` de todos os textos corridos (citation-box, equipe.js, sobre/index.md, sobre/privacidade.md, sobre/termos.md, ficha-meta.njk)
+  * CERES e MAPE linkados com URLs oficiais fornecidas pela usuária: `https://ceres-iesp.uerj.br/` e `https://mape.org.br/` (MAPE tem domínio próprio)
+  * Legibilidade das referências: `text-sm` → `text-base`, `border-neutral-200` → `border-neutral-300`, `font-medium`
+  * Detalhes em `memory/project_sprint_9_8_ficha_polish_2026_05_04.md`
 - [ ] Sprint 9.9 — Polish visual do grafo (adiado, sem prazo)
 - [ ] Sprint 10 — DOI Zenodo + auditoria a11y manual + plano divulgação institucional (ADIADO por decisão da usuária 2026-05-03)
 - [ ] Mapa coroplético + grafo passam NVDA+JAWS+VoiceOver (depende Sprint 10)
