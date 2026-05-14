@@ -30,6 +30,7 @@ permalink: /mapa/
     <a href="#lista-ufs" class="text-primary">lista textual completa</a>
     com os mesmos dados em formato tabela.
   </p>
+  {% include "components/caveat-metodologia.njk" %}
 </header>
 
 {# === Toolbar de controles (Sprint 8.2): 3 modos de coloração + download SVG/PNG === #}
@@ -49,12 +50,6 @@ permalink: /mapa/
               aria-pressed="false"
               data-color-by="ativas">
         Apenas ativas
-      </button>
-      <button type="button"
-              class="tag tag--filter"
-              aria-pressed="false"
-              data-color-by="snapshot">
-        Com snapshot capturado
       </button>
     </div>
 
@@ -143,7 +138,6 @@ permalink: /mapa/
         <th scope="col" class="p-sm">Região</th>
         <th scope="col" class="p-sm num">Total</th>
         <th scope="col" class="p-sm num">Ativas</th>
-        <th scope="col" class="p-sm num">Com snapshot</th>
         <th scope="col" class="p-sm">Página</th>
       </tr>
     </thead>
@@ -163,7 +157,6 @@ permalink: /mapa/
           <td class="p-sm">{{ info.regiao if info else "—" }}</td>
           <td class="p-sm num font-semibold">{{ agg.total }}</td>
           <td class="p-sm num">{{ agg.ativas }}</td>
-          <td class="p-sm num">{{ agg.comSnapshot }}</td>
           <td class="p-sm">
             <a href="/uf/{{ sigla | lower }}/" class="text-primary">
               Ver →
@@ -193,8 +186,7 @@ permalink: /mapa/
         "nome": {{ (info.nome if info else sigla) | dump | safe }},
         "regiao": {{ (info.regiao if info else "Federal") | dump | safe }},
         "total": {{ agg.total }},
-        "ativas": {{ agg.ativas }},
-        "snapshot": {{ agg.comSnapshot }}
+        "ativas": {{ agg.ativas }}
       }
       {%- set comma = "," -%}
     {%- endfor %}

@@ -25,7 +25,7 @@ eleventyExcludeFromCollections: true
   </url>
   {%- endfor %}
 
-  {# 439 fichas de políticas #}
+  {# Fichas de políticas únicas (federais canônicas + estaduais únicas) #}
   {%- for ficha in policies %}
   <url>
     <loc>{{ site.baseUrl }}/politica/{{ ficha.slug }}/</loc>

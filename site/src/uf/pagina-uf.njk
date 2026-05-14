@@ -84,26 +84,55 @@ eleventyComputed:
     <p class="text-xs mt-2xs">ativas / em execução</p>
   </div>
 
-  <div class="bg-info-dark text-white p-md rounded text-center">
-    <p class="text-3xl font-bold">{{ agg.comSnapshot }}</p>
-    <p class="text-xs mt-2xs">com snapshot integral</p>
-  </div>
-
   <div class="bg-neutral-100 text-neutral-900 p-md rounded text-center border border-neutral-200">
     <p class="text-3xl font-bold">{{ agg.eixosCobertos }}/3</p>
     <p class="text-xs mt-2xs">eixos cobertos</p>
   </div>
 </section>
 
+{% include "components/caveat-metodologia.njk" %}
+
 {% if ufSigla != "BR" %}
 <section aria-labelledby="origem-h" class="my-xl">
-  <h2 id="origem-h" class="text-base font-semibold mb-sm">Origem das políticas</h2>
+  <h2 id="origem-h" class="text-base font-semibold mb-sm">Composição do catálogo em {{ ufSigla }}</h2>
   <p class="text-sm text-neutral-700">
-    Das {{ agg.total }} políticas catalogadas, <strong>{{ agg.federaisReplicadas }}</strong>
-    são federais com execução em {{ ufSigla }} e <strong>{{ agg.estaduaisUnicas }}</strong>
-    são exclusivamente estaduais.
+    <strong>{{ agg.total }}</strong> políticas exclusivamente estaduais catalogadas + <strong>{{ agg.federaisAplicadas }}</strong>
+    políticas federais com execução identificada em {{ ufSigla }}. Cada política federal é cadastrada uma única vez (na ficha canônica) — abaixo aparecem listas separadas para essas duas origens.
   </p>
 </section>
+
+{% if executacoes.porUf[ufSigla] and executacoes.porUf[ufSigla].length > 0 %}
+<section aria-labelledby="federais-aplicadas-h" class="my-2xl">
+  <h2 id="federais-aplicadas-h">
+    Políticas federais aplicadas em {{ ufSigla }}
+    <span class="text-sm font-normal text-neutral-700">
+      ({{ executacoes.porUf[ufSigla].length }})
+    </span>
+  </h2>
+  <p class="text-sm text-neutral-700">
+    Cada item leva à ficha federal canônica, onde a aba "Execução por estado"
+    detalha o órgão executor local em {{ ufSigla }} quando disponível.
+  </p>
+  <ul class="mt-md grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0">
+    {% for exec in executacoes.porUf[ufSigla] %}
+      <li>
+        <a href="/politica/{{ exec.slugFederal }}/"
+           class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline">
+          <span class="font-semibold text-primary">{{ exec.nomeFederal }}</span>
+          {% if exec.situacao %}
+            <span class="tag tag--{{ exec.situacao_classe }} text-xs ml-2xs">{{ exec.situacao }}</span>
+          {% endif %}
+          {% if exec.orgaos_especificados or exec.orgaos.length > 0 %}
+            <p class="text-xs text-neutral-700 mt-2xs m-0">
+              Órgão local: {{ exec.orgaos_especificados or (exec.orgaos | join(', ')) }}
+            </p>
+          {% endif %}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
 {% endif %}
 
 <section aria-labelledby="dist-tipo-uf-h" class="my-2xl">
@@ -177,7 +206,6 @@ eleventyComputed:
         <th scope="col" class="p-sm font-semibold">Tipo</th>
         <th scope="col" class="p-sm font-semibold">Situação</th>
         <th scope="col" class="p-sm font-semibold">Origem</th>
-        <th scope="col" class="p-sm font-semibold">Snapshot</th>
       </tr>
     </thead>
     <tbody id="tbody-fichas">
@@ -185,8 +213,7 @@ eleventyComputed:
         <tr class="ficha-row border-b border-neutral-200 hover:bg-neutral-100"
             data-tipo="{{ p.tipo_politica or '' }}"
             data-situacao="{{ p.situacao_atual or '' }}"
-            data-origem="{% if p.is_federal_replica %}federal{% else %}estadual{% endif %}"
-            data-snapshot="{% if p.fonte_arquivo_path %}disponivel{% else %}indisponivel{% endif %}">
+            data-origem="{% if p.is_federal_replica %}federal{% else %}estadual{% endif %}">
           <th scope="row" class="p-sm font-medium">
             <a href="/politica/{{ p.slug }}/" class="text-primary">{{ p.nome_programa }}</a>
           </th>
@@ -201,13 +228,6 @@ eleventyComputed:
               <span class="tag tag--federal text-xs">Federal</span>
             {% else %}
               <span class="text-neutral-700">Estadual</span>
-            {% endif %}
-          </td>
-          <td class="p-sm text-sm">
-            {% if p.fonte_arquivo_path %}
-              <span class="text-success-dark">✓ Disponível</span>
-            {% else %}
-              <span class="text-neutral-700">—</span>
             {% endif %}
           </td>
         </tr>

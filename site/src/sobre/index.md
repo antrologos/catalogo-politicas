@@ -8,7 +8,7 @@ permalink: /sobre/
 
 O **Catálogo de Políticas** é uma das frentes do **Projeto Juventudes Fora da Escola sem Educação Básica**, da iniciativa **Rede EJA e Inclusão Produtiva**.
 
-Reúne **439 políticas públicas** federais e estaduais sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação. Para cada política, o catálogo registra metadados estruturados (vocabulário canônico controlado), referência à norma instituidora e — quando possível — **snapshot integral do texto da norma** (proteção contra link rot).
+Reúne **{{ agregados.total }} políticas públicas únicas** federais e estaduais sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação — sendo {{ agregados.federaisCount }} políticas federais e {{ agregados.estaduaisUnicasCount }} políticas exclusivamente estaduais (cada uma cadastrada uma única vez, mesmo quando a federal é executada em vários estados). Para cada política, o catálogo registra metadados estruturados (vocabulário canônico controlado), referência à norma instituidora e, quando possível, **preservação do texto integral da norma**.
 
 <figure class="my-xl bg-white p-md rounded border border-neutral-200">
   <img src="/assets/img/logos/barra-logos.png"
@@ -21,6 +21,18 @@ Reúne **439 políticas públicas** federais e estaduais sobre Educação de Jov
 ## Iniciativa
 
 **Rede EJA e Inclusão Produtiva** — articulação interinstitucional dedicada à integração entre EJA, qualificação profissional e inclusão produtiva como caminho para superar a desigualdade educacional brasileira.
+
+## <a id="rede-eja"></a>Instituições que compõem a Rede EJA e Inclusão Produtiva
+
+A Rede EJA e Inclusão Produtiva é uma articulação de organizações da sociedade civil, fundações, agências da ONU e do setor empresarial dedicadas à educação de jovens e adultos e à inclusão produtiva no Brasil. **Compor a Rede não significa realizar diretamente esta pesquisa nem ter cooperação técnica específica neste catálogo** — trata-se do espaço de articulação onde o estudo se inscreve. Os papéis institucionais específicos deste catálogo aparecem mais abaixo (Realizadores, Parceiros, Cooperação, Parceria Técnica).
+
+<div class="grid sm:grid-cols-2 gap-2xs my-md not-prose">
+{% for inst in equipe.redeEja %}
+  <p class="m-0 py-2xs">
+    {% if inst.url %}<a href="{{ inst.url }}" rel="external">{{ inst.nome }}</a>{% else %}{{ inst.nome }}{% endif %}
+  </p>
+{% endfor %}
+</div>
 
 ## Realizadores
 
@@ -64,6 +76,7 @@ Reúne **439 políticas públicas** federais e estaduais sobre Educação de Jov
 
 ## Documentos institucionais
 
+- [Metodologia e alcance](metodologia/) — **levantamento, não censo**; como ler as contagens corretamente.
 - [Acesso à informação (LAI)](transparencia/) — política de revisão, histórico, canal de relato.
 - [Política de privacidade (LGPD)](privacidade/) — coleta, finalidade, retenção, transferência internacional.
 - [Termos de uso](termos/) — licença CC BY 4.0, atribuição, redistribuição.

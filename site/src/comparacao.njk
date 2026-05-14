@@ -17,6 +17,7 @@ permalink: /comparacao/
     A URL atualiza com sua seleção, então você pode compartilhar o link
     da comparação por e-mail.
   </p>
+  {% include "components/caveat-metodologia.njk" %}
 </section>
 
 <form action="/comparacao/" method="get" class="my-xl bg-neutral-100 p-lg rounded">
@@ -89,7 +90,7 @@ permalink: /comparacao/
   <ol class="mt-md list-decimal pl-md space-y-sm">
     <li>Marque pelo menos <strong>2 UFs</strong> nos checkboxes acima (máximo 9).</li>
     <li>Clique em <strong>Comparar</strong>. A URL muda incluindo sua seleção.</li>
-    <li>Veja a tabela com indicadores lado a lado: total de políticas, ativas, distribuição por tipo, snapshots disponíveis.</li>
+    <li>Veja a tabela com indicadores lado a lado: total de políticas, ativas, distribuição por tipo.</li>
     <li>Use <strong>Copiar link</strong> para compartilhar a comparação por e-mail (a URL contém os parâmetros).</li>
     <li>Use <strong>Imprimir</strong> para gerar PDF (Ctrl+P / Cmd+P).</li>
   </ol>

@@ -89,19 +89,14 @@
         filtroUrl: () => "situacao=" + encodeURIComponent("Ativa / em execução"),
       },
       {
-        chave: "comSnapshot",
-        rotulo: "Com snapshot integral",
-        filtroUrl: () => "snapshot=disponivel",
-      },
-      {
-        chave: "federaisReplicadas",
-        rotulo: "Federais replicadas",
-        filtroUrl: () => "origem=federal",
+        chave: "federaisAplicadas",
+        rotulo: "Federais aplicadas em UF",
+        filtroUrl: null,
       },
       {
         chave: "estaduaisUnicas",
-        rotulo: "Estaduais únicas",
-        filtroUrl: () => "origem=estadual",
+        rotulo: "Exclusivamente estaduais",
+        filtroUrl: null,
       },
       {
         chave: "eixosCobertos",

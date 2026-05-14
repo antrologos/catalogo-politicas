@@ -2,12 +2,12 @@
  * Mapa coroplético D3 do Brasil (Sprint 8.1 + 8.2 do Bloco F.3, 2026-05-03).
  *
  * Renderiza GeoJSON simplificado das 27 UFs em #mapa-svg, colore proporcionalmente
- * à métrica selecionada (total/ativas/snapshot), gradiente azul-IBGE.
+ * à métrica selecionada (total/ativas), gradiente azul-IBGE.
  * UFs cobertas (1ª onda) recebem 5 stops; não cobertas ficam cinza com label
  * "em planejamento" no tooltip.
  *
  * Sprint 8.2 adiciona:
- *   - Toolbar com 3 modos de coloração (total/ativas/snapshot)
+ *   - Toolbar com 2 modos de coloração (total/ativas)
  *   - Download SVG (XMLSerializer) e PNG (canvas 1200×1200)
  *
  * Sprint 8.3 vai adicionar mobile collapse + polish a11y.
@@ -83,7 +83,6 @@ waitForD3(async function init() {
   const METRICAS = {
     total: { label: "Total de políticas", chave: "total" },
     ativas: { label: "Apenas ativas", chave: "ativas" },
-    snapshot: { label: "Com snapshot capturado", chave: "snapshot" },
   };
   let metricaAtual = "total";
 
@@ -152,7 +151,7 @@ waitForD3(async function init() {
       if (agg) {
         html = `
           <div class="font-semibold">${nome} (${sigla})</div>
-          <div class="mt-2xs">${agg.total} políticas · ${agg.ativas} ativas · ${agg.snapshot} com snapshot</div>
+          <div class="mt-2xs">${agg.total} políticas · ${agg.ativas} ativas</div>
           <div class="mt-2xs opacity-70">Clique para ver página da UF</div>
         `;
       } else {
@@ -358,5 +357,5 @@ waitForD3(async function init() {
     img.src = svgUrl;
   });
 
-  console.info(`[mapa] sprint 8.2 ready: ${geo.features.length} UFs, métricas total/ativas/snapshot`);
+  console.info(`[mapa] sprint 8.2 ready: ${geo.features.length} UFs, métricas total/ativas`);
 })();

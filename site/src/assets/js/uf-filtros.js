@@ -1,7 +1,7 @@
 /**
  * Filtros locais na página /uf/<sigla>/ (Sprint 6b).
  *
- * Lê querystring (?tipo=... &situacao=... &origem=... &snapshot=...) e:
+ * Lê querystring (?tipo=... &situacao=... &origem=...) e:
  * - Esconde linhas (.ficha-row) que não casam
  * - Atualiza contador
  * - Mostra chips de filtros ativos com botão "remover"
@@ -11,7 +11,6 @@
  * - tipo:        nome exato do tipo (ex.: "Educacional direta")
  * - situacao:    nome exato da situação (ex.: "Ativa / em execução")
  * - origem:      "federal" | "estadual"
- * - snapshot:    "disponivel" | "indisponivel"
  *
  * Sem JS: tabela permanece com todas as fichas (degradação aceita).
  */
@@ -23,7 +22,6 @@
     tipo: params.get("tipo"),
     situacao: params.get("situacao"),
     origem: params.get("origem"),
-    snapshot: params.get("snapshot"),
   };
 
   // Sem nenhum filtro? Não faz nada.
@@ -46,11 +44,9 @@
       !filtros.situacao || row.dataset.situacao === filtros.situacao;
     const matchOrigem =
       !filtros.origem || row.dataset.origem === filtros.origem;
-    const matchSnapshot =
-      !filtros.snapshot || row.dataset.snapshot === filtros.snapshot;
 
     const visivel =
-      matchTipo && matchSituacao && matchOrigem && matchSnapshot;
+      matchTipo && matchSituacao && matchOrigem;
     row.hidden = !visivel;
     if (visivel) visiveis++;
   }
@@ -72,11 +68,9 @@
       tipo: "Tipo",
       situacao: "Situação",
       origem: "Origem",
-      snapshot: "Snapshot",
     };
     const valoresAmigaveis = {
       origem: { federal: "Federal replicada", estadual: "Estadual única" },
-      snapshot: { disponivel: "Disponível", indisponivel: "Indisponível" },
     };
     chipsContainer.innerHTML = "";
     for (const [k, v] of ativos) {

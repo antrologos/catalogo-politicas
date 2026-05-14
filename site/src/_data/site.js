@@ -20,7 +20,6 @@ export default {
     { texto: "Início", href: "/" },
     { texto: "Explorar", href: "/explorar/" },
     { texto: "Mapa", href: "/mapa/" },
-    { texto: "Grafo", href: "/grafo/" },
     { texto: "Buscar", href: "/buscar/" },
     { texto: "Comparar UFs", href: "/comparacao/" },
     { texto: "Sobre", href: "/sobre/" },

@@ -33,17 +33,17 @@ https://antrologos.github.io/catalogo-politicas/. Licenciado sob CC BY 4.0.
 
 Para citar fichas individuais, cada página de política oferece **4 formatos prontos** (ABNT, APA, BibTeX, RIS) na aba "Como citar".
 
-## Snapshots de normas oficiais
+## Reprodução de normas oficiais
 
-Os **snapshots de leis, decretos, portarias e resoluções** preservados em `data/external_snapshots/` são reproduções de **atos normativos**. No Brasil:
+Quando uma ficha do catálogo preserva localmente o **texto de uma lei, decreto, portaria ou resolução**, trata-se de reprodução de **ato normativo**. No Brasil:
 
 - A **Lei 9.610/1998 (art. 8º, IV)** declara que **não são objeto de proteção como direitos autorais** os textos de tratados ou convenções, leis, decretos, regulamentos, decisões judiciais e demais atos oficiais.
 - A reprodução desses textos é, portanto, **livre por imperativo legal**.
-- A atribuição preservada nas fichas (campo `atribuicao`) refere-se à **fonte original**, não a direitos autorais.
+- A atribuição preservada nas fichas refere-se à **fonte original**, não a direitos autorais.
 
 ## Sites e dados de terceiros
 
-Quando o catálogo referencia **sites de programas governamentais** (campo `fonte_url`), o conteúdo dessas páginas é de propriedade dos respectivos órgãos e segue suas próprias políticas de uso. O catálogo apenas linka e — quando juridicamente possível — preserva snapshot do estado da página em uma data específica.
+Quando o catálogo referencia **sites de programas governamentais** (campo `fonte_url`), o conteúdo dessas páginas é de propriedade dos respectivos órgãos e segue suas próprias políticas de uso. O catálogo apenas referencia e, quando juridicamente possível, preserva uma cópia do conteúdo consultado em uma data específica.
 
 ## Marcas e logotipos
 
@@ -55,7 +55,7 @@ O catálogo é fornecido **"como está"**, sem garantia de qualquer tipo, expres
 
 - Decisões tomadas com base nos dados aqui apresentados;
 - Eventuais erros, omissões ou desatualizações nos metadados;
-- Indisponibilidade temporária do site ou snapshots externos.
+- Indisponibilidade temporária do site ou de fontes externas.
 
 Para uso em decisões formais (concursos, ações judiciais, políticas públicas), sempre consulte a **fonte oficial** indicada em cada ficha.
 

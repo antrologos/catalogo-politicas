@@ -8,32 +8,30 @@ permalink: /sobre/cobertura/
 
 ## 1ª onda (concluída em maio de 2026)
 
-| Esfera | UFs cobertas | Nº de fichas |
-|---|---|---:|
-| Federal | Brasil (Federal) | 33 |
-| Estadual | SP, RJ, MG, PR, RS, BA, PA, PE, CE | 406 |
-| **Total** | **9 UFs + Federal** | **439** |
+| Esfera | UFs cobertas |
+|---|---|
+| Federal | Brasil (políticas federais canônicas) |
+| Estadual — 1ª onda | SP, RJ, MG, PR, RS, BA, PA, PE, CE |
+| Estadual — 2ª onda | GO, ES, SC, MA, AM, MT, RN, PB, AL |
 
-> **Importante:** este catálogo cobre **9 unidades da federação na 1ª onda**. Ele NÃO é exaustivo do território brasileiro. Outras 18 UFs ainda não foram catalogadas.
+## 2ª onda (incorporada em maio de 2026)
 
-## Critério de seleção das 9 UFs
+Em **{{ agregados.estaduaisUnicasCount }} políticas estaduais únicas** + **{{ agregados.federaisCount }} políticas federais canônicas** = **{{ agregados.total }} verbetes únicos** no catálogo, distribuídos por **{{ agregados.ufsCobertas | length - 1 }} unidades da federação** (mais Federal).
 
-A 1ª onda foi planejada conforme três critérios:
+> **Importante:** o catálogo cobre majoritariamente a Norte, Nordeste e Centro-Oeste a partir desta 2ª onda. Ainda **não inclui** Distrito Federal, Acre, Amapá, Roraima, Rondônia, Tocantins, Sergipe, Piauí e Mato Grosso do Sul.
+> Veja a [metodologia](/sobre/metodologia/) sobre como ler as contagens — o catálogo é **levantamento, não censo**.
 
-1. **Diversidade regional**: pelo menos 1 UF de cada região do país (Norte: PA; Nordeste: BA, PE, CE; Centro-Oeste: ainda não coberto; Sudeste: SP, MG, RJ; Sul: PR, RS).
-2. **Densidade de políticas**: estados com maior número de políticas estruturadas em EJA, qualificação e inclusão.
-3. **Capacidade de pesquisa**: equipe de revisão com acesso a documentos oficiais dessas UFs.
+## Critério de seleção das UFs
 
-## Cronograma de expansão (a confirmar)
+A seleção foi planejada conforme três critérios:
 
-A FRM/IESP-UERJ está avaliando expansão para próximas ondas. O cronograma planejado (não confirmado) é:
+1. **Diversidade regional**: pelo menos 1 UF de cada região do país.
+2. **Densidade de políticas**: estados com políticas estruturadas em EJA, qualificação e inclusão.
+3. **Capacidade de pesquisa**: equipe com acesso aos documentos oficiais dessas UFs.
 
-| Onda | Período | UFs alvo |
-|---|---|---|
-| 2ª | 2027 | AC, AL, AM, AP, DF, ES, GO, MA, MS, MT |
-| 3ª | 2028 | PB, PI, RN, RO, RR, SC, SE, TO |
+## Próximas ondas (a confirmar)
 
-A continuidade depende de financiamento e disponibilidade de equipe. Acompanhe o [GitHub do projeto](https://github.com/antrologos/catalogo-politicas) para atualizações.
+A continuidade do levantamento para as UFs ainda não cobertas (DF, AC, AP, RR, RO, TO, SE, PI, MS) depende de financiamento e disponibilidade de equipe. Acompanhe o [GitHub do projeto](https://github.com/antrologos/catalogo-politicas) para atualizações.
 
 ## Reportar política não catalogada
 

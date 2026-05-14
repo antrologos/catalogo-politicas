@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Início"
-description: "Catálogo interativo de 439 políticas públicas brasileiras sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação."
+description: "Catálogo interativo de políticas públicas brasileiras sobre EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação."
 ---
 <section aria-labelledby="hero-h" class="py-xl">
   <div class="grid lg:grid-cols-[2fr_1fr] gap-xl items-start">
@@ -91,11 +91,6 @@ description: "Catálogo interativo de 439 políticas públicas brasileiras sobre
           {% icon "map-trifold" %} Ver no mapa interativo
         </a>
       </p>
-      <p class="mt-sm">
-        <a href="/grafo/" class="btn btn--secondary text-sm w-full justify-center">
-          {% icon "graph" %} Ver grafo de relações
-        </a>
-      </p>
       <p class="mt-sm text-xs">
         <a href="/sobre/cobertura/" class="text-primary">Por que essas UFs? Próximas ondas →</a>
       </p>
@@ -110,11 +105,9 @@ description: "Catálogo interativo de 439 políticas públicas brasileiras sobre
     <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.total }}</strong>
     políticas catalogadas em
     <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.ufsCobertas | length }}</strong>
-    entes federativos (1 federal + {{ agregados.ufsCobertas | length - 1 }} estados),
-    com
-    <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.urlsUnicasComSnapshot }}</strong>
-    snapshots integrais únicos preservados ({{ agregados.snapshotsDisponiveis }} fichas com fonte oficial capturada).
+    entes federativos (1 federal + {{ agregados.ufsCobertas | length - 1 }} estados).
   </p>
+  {% include "components/caveat-metodologia.njk" %}
 </section>
 
 <section aria-labelledby="dist-tipo-h" class="my-2xl">
@@ -216,7 +209,7 @@ description: "Catálogo interativo de 439 políticas públicas brasileiras sobre
     <li>
       <a href="/buscar/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
         <strong class="text-primary">{% icon "magnifying-glass" %} Buscar com filtros</strong>
-        <p class="text-sm text-neutral-700 mt-2xs">5 facetas: UF, Situação, Tipo, Modalidade, Snapshot.</p>
+        <p class="text-sm text-neutral-700 mt-2xs">4 facetas: UF, Situação, Tipo, Modalidade.</p>
       </a>
     </li>
     <li>

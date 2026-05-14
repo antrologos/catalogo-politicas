@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Explorar o catálogo"
-description: "Pontos de entrada visuais para navegar pelas 439 políticas do catálogo: por tipo, situação, modalidade, UF, abrangência, origem federal/estadual e disponibilidade de snapshot."
+description: "Pontos de entrada visuais para navegar pelas 439 políticas do catálogo: por tipo, situação, modalidade, UF, abrangência, e origem federal/estadual."
 permalink: /explorar/
 ---
 {% set crumbs = [
@@ -164,39 +164,7 @@ permalink: /explorar/
         </li>
       </ul>
       <p class="mt-md text-xs text-neutral-700">
-        3 modos de coloração: total · ativas · com snapshot. Download SVG/PNG disponível.
-      </p>
-    </article>
-
-    {# CARD: Grafo de relações (Sprint 9.5: integra /grafo/ ao hub).
-       Rede Cytoscape de 439 políticas com edges família + articulação curada. #}
-    <article class="bg-warning/15 border-2 border-warning-dark p-lg rounded shadow-sm">
-      <header>
-        <p class="text-xs uppercase tracking-wide text-warning-dark">Visualização em rede</p>
-        <h3 class="text-2xl mt-2xs">
-          {% icon "graph" %} Grafo de relações
-        </h3>
-        <p class="text-sm mt-sm text-neutral-700">
-          Rede de 439 políticas com 33 famílias federais (canônica + réplicas
-          estaduais) e ligações de articulação curada (certificação,
-          condicionalidade, intermediação, complementaridade).
-        </p>
-      </header>
-      <ul class="mt-md flex flex-wrap gap-2xs list-none p-0 text-sm">
-        <li>
-          <a href="/grafo/" class="tag tag--filter" aria-pressed="true">
-            {% icon "graph" %} Abrir grafo interativo
-          </a>
-        </li>
-        <li>
-          <a href="/grafo/#lista-familias" class="tag tag--neutral">
-            Lista textual de famílias
-          </a>
-        </li>
-      </ul>
-      <p class="mt-md text-xs text-neutral-700">
-        Filtros por tipo + situação · Highlight de família ao hover ·
-        Navegação por teclado (setas + Enter).
+        2 modos de coloração: total · ativas. Download SVG/PNG disponível.
       </p>
     </article>
 
@@ -216,32 +184,6 @@ permalink: /explorar/
           <li>
             <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-primary underline">
               {{ d.valor }} <span class="text-neutral-700">({{ d.n }} políticas, {{ d.pct }}%)</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </article>
-
-    {# CARD: Snapshot disponível #}
-    <article class="bg-neutral-100 border-2 border-neutral-200 p-lg rounded shadow-sm sm:col-span-2">
-      <header>
-        <p class="text-xs uppercase tracking-wide text-neutral-700">Disponibilidade</p>
-        <h3 class="text-2xl mt-2xs">
-          {% icon "file-text" %} Por snapshot integral da norma
-        </h3>
-        <p class="text-sm mt-sm text-neutral-700">
-          Filtre apenas políticas cujo texto integral da norma instituidora foi
-          preservado localmente (proteção contra link rot).
-        </p>
-      </header>
-      <ul class="mt-md space-y-2xs list-none p-0 text-sm">
-        {% for d in agregados.distribuicaoSnapshot %}
-          <li>
-            <a href="/buscar/?q={{ d.valor | urlencode }}" class="text-primary underline">
-              {% if d.valor == "Disponível" %}<span class="text-success-dark">✓</span>
-              {% else %}<span class="text-neutral-700">—</span>{% endif %}
-              {{ d.valor }}
-              <span class="text-neutral-700">({{ d.n }} políticas, {{ d.pct }}%)</span>
             </a>
           </li>
         {% endfor %}
