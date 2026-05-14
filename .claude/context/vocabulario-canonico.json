@@ -19,18 +19,20 @@
   "campos": {
     "tipo_politica": {
       "canonical_values": [
-        "Educacional direta",
-        "Trabalho/qualificação direta",
+        "Educacional",
+        "Trabalho e qualificação",
         "Proteção social com impacto educacional"
       ],
       "variants": {
+        "educacional direta": "Educacional",
+        "trabalho/qualificação direta": "Trabalho e qualificação",
         "proteção social com impacto educacional e laboral": "Proteção social com impacto educacional",
-        "educacional indireta / infraestrutura": "Educacional direta"
+        "educacional indireta / infraestrutura": "Educacional"
       },
       "_outliers_observados": [
         "'Educacional indireta / infraestrutura' (1 ocorrência em MA, 2ª onda — Programa Escola Digna) — mapeamento ad-hoc para 'Educacional direta' porque infraestrutura escolar serve à oferta educacional. REVISAR com equipe de pesquisa: pode justificar 4ª categoria canônica ou pertencer a 'Proteção social com impacto educacional'."
       ],
-      "descricao": "Tipo canônico de política pública (3 categorias fechadas). Drift mínimo: 2 variantes da 2ª onda mapeadas (1 estendendo 'laboral' à proteção social; 1 ad-hoc para 'infraestrutura' → 'Educacional direta')."
+      "descricao": "Tipo canônico de política pública (3 categorias fechadas). Renomeado em 2026-05-14: 'Educacional direta' → 'Educacional'; 'Trabalho/qualificação direta' → 'Trabalho e qualificação' (decisão de UX da usuária — termos mais curtos e claros). Variants mapeiam os nomes antigos para os novos automaticamente via normalize.py."
     },
     "esfera_formulacao": {
       "canonical_values": [

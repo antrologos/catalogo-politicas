@@ -49,11 +49,11 @@
 
     "tipo_politica": {
       "enum": [
-        "Educacional direta",
-        "Trabalho/qualificação direta",
+        "Educacional",
+        "Trabalho e qualificação",
         "Proteção social com impacto educacional"
       ],
-      "description": "Tipo canônico (3 categorias fechadas, conforme aba Modelo categorias da planilha-fonte)."
+      "description": "Tipo canônico (3 categorias fechadas). Renomeado em 2026-05-14 para termos mais curtos; mapeamento dos nomes antigos vive em vocabulario-canonico.json variants."
     },
 
     "esfera_formulacao": {
