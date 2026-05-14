@@ -211,6 +211,15 @@ def load_aba(xlsx: Path, aba_nome: str, uf: str) -> tuple[pd.DataFrame, list[str
     # Remove linhas onde TODOS os campos canônicos estão vazios
     out = out.dropna(how="all").reset_index(drop=True)
 
+    # Drop linhas sem nome — política sem nome não é catalogável (16+ linhas-
+    # fantasma detectadas no Maranhão da 2ª onda, com apenas situacao_atual
+    # preenchido). Sem nome, todos os campos required do schema viram NaN e
+    # quebram o validate do CI.
+    if "nome" in out.columns:
+        nome_str = out["nome"].astype(str).str.strip().str.lower()
+        mask = out["nome"].notna() & (nome_str != "nan") & (nome_str != "")
+        out = out[mask].reset_index(drop=True)
+
     out.insert(0, "uf", uf)
     out.insert(0, "aba_origem", aba_nome)
     return out, unmapped

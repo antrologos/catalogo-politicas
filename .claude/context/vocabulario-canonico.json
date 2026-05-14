@@ -16,19 +16,22 @@
     "Outliers únicos descritivos (ex.: 'Incentivo financeiro-educacional federal...' em origem_proposta) são logados para revisão manual; não entram em variants.",
     "Aspas tipográficas «» e en-dash – em arranjo_logistico/esfera_execucao são normalizadas antes do lookup."
   ],
-
   "campos": {
-
     "tipo_politica": {
       "canonical_values": [
         "Educacional direta",
         "Trabalho/qualificação direta",
         "Proteção social com impacto educacional"
       ],
-      "variants": {},
-      "descricao": "Tipo canônico de política pública (3 categorias fechadas). Sem drift detectado (188+160+91=439 fichas, 100% canônico)."
+      "variants": {
+        "proteção social com impacto educacional e laboral": "Proteção social com impacto educacional",
+        "educacional indireta / infraestrutura": "Educacional direta"
+      },
+      "_outliers_observados": [
+        "'Educacional indireta / infraestrutura' (1 ocorrência em MA, 2ª onda — Programa Escola Digna) — mapeamento ad-hoc para 'Educacional direta' porque infraestrutura escolar serve à oferta educacional. REVISAR com equipe de pesquisa: pode justificar 4ª categoria canônica ou pertencer a 'Proteção social com impacto educacional'."
+      ],
+      "descricao": "Tipo canônico de política pública (3 categorias fechadas). Drift mínimo: 2 variantes da 2ª onda mapeadas (1 estendendo 'laboral' à proteção social; 1 ad-hoc para 'infraestrutura' → 'Educacional direta')."
     },
-
     "esfera_formulacao": {
       "canonical_values": [
         "União",
@@ -47,7 +50,6 @@
       ],
       "descricao": "6 valores canônicos em uso (de ~12 oficiais na aba Modelo categorias). Drift principal: en-dash → hífen."
     },
-
     "origem_proposta": {
       "canonical_values": [
         "Governamental",
@@ -62,7 +64,6 @@
       ],
       "descricao": "5 valores canônicos. Não está na aba Modelo categorias mas é coluna padrão das fichas."
     },
-
     "esfera_execucao": {
       "canonical_values": [
         "União",
@@ -107,7 +108,6 @@
       ],
       "descricao": "8 valores canônicos no tronco principal. Drift sério (31 variantes detectadas). Sufixos descritivos '+ rede X', '+ Sistema S' devem migrar para esfera_execucao_apoios_parcerias na normalização. Variants mapeadas cobrem ~80% dos casos com sufixo simples."
     },
-
     "abrangencia_territorial": {
       "canonical_values": [
         "Nacional",
@@ -121,7 +121,6 @@
       },
       "descricao": "4 valores canônicos. Drift: descrição entre parênteses incorporada ao valor; espaçamento variável."
     },
-
     "situacao_atual": {
       "canonical_values": [
         "Ativa / em execução",
@@ -134,11 +133,11 @@
         "ativa / em execução (está funcionando e ofertando algo no momento. mesmo que com ajustes)": "Ativa / em execução",
         "encerrada (terminou oficialmente - fim de vigência, término do ciclo, último edital encerrado)": "Encerrada",
         "suspensa / pausada (teve interrupção declarada -por contingenciamento, transição, crise), com possibilidade de retorno)": "Suspensa / pausada",
-        "descontinuada (foi encerrada sem continuidade, ou perdeu institucionalidade)": "Descontinuada"
+        "descontinuada (foi encerrada sem continuidade, ou perdeu institucionalidade)": "Descontinuada",
+        "descontinuada / sem oferta recente identificada": "Descontinuada"
       },
-      "descricao": "5 valores canônicos. Drift: a planilha tem versões longas com definição entre parênteses; canônico é a versão curta."
+      "descricao": "5 valores canônicos. Drift: a planilha tem versões longas com definição entre parênteses; canônico é a versão curta. 2ª onda trouxe variante 'Descontinuada / sem oferta recente identificada' mapeada para 'Descontinuada'."
     },
-
     "tipo_oferta": {
       "canonical_values": [
         "Misto",
@@ -165,7 +164,6 @@
       ],
       "descricao": "8 valores canônicos. Drift: descrições explicativas entre parênteses; aspas escapadas. Outlier: 'Presencial' é valor de Modalidade colado errado."
     },
-
     "modalidade_oferta": {
       "canonical_values": [
         "Mista",
@@ -187,7 +185,6 @@
       ],
       "descricao": "6 valores canônicos. Drift: parêntese desfechado em 'Mista', hífen em 'Semipresencial', barra+espaço em 'Sem informação'. Outlier: 'Unidade fixa' é valor de Arranjo colado errado."
     },
-
     "arranjo_logistico": {
       "canonical_values": [
         "Unidade fixa",
@@ -207,7 +204,6 @@
       "descricao": "5 valores canônicos. Drift: aspas tipográficas «» em ~ metade das ocorrências; variantes 'Unidade fixa/ oferta fixa' (sem espaço). Variants cobrem ~99% dos casos."
     }
   },
-
   "_revisao_de_humanos": [
     "Outliers individuais (1 ocorrência) listados em _outliers_observados foram preservados na fonte (planilha) e devem ser corrigidos manualmente em onda futura. Pipeline mantém o valor original e loga em data/logs/normalize_unmapped_2026-05-01.csv.",
     "Sufixos '+ rede X', '+ Sistema S' em esfera_execucao são candidatos para migração automática para esfera_execucao_apoios_parcerias — implementar lógica em normalize.py."
