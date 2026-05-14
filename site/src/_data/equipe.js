@@ -42,6 +42,30 @@ export default {
     },
   ],
 
+  // Instituições que compõem a Rede EJA e Inclusão Produtiva — distinta de
+  // "realizadores", "parceiros" e "cooperação" deste catálogo: compor a Rede
+  // não significa cooperação técnica direta nesta pesquisa.
+  // Ordem definida pela coordenação (mantida idêntica ao enunciado de origem).
+  // URLs deixadas em branco para revisão humana antes do preenchimento.
+  redeEja: [
+    { nome: "Ashoka", url: null },
+    { nome: "Associação Redes de Desenvolvimento da Maré", url: null },
+    { nome: "Conhecimento Social", url: null },
+    { nome: "Conselho Nacional do SESI", url: null },
+    { nome: "Fundação Arymax", url: "https://arymax.org.br/" },
+    { nome: "Fundação Bradesco", url: "https://www.fundacaobradesco.org.br/" },
+    { nome: "Fundação Roberto Marinho", url: "https://www.frm.org.br/" },
+    { nome: "GIFE", url: null },
+    { nome: "Instituto Rodrigo Mendes", url: null },
+    { nome: "Pacto Global da ONU", url: null },
+    { nome: "Todos pela Educação", url: null },
+    { nome: "United Way Brasil — Juventudes Potentes", url: null },
+    { nome: "Fundação Itaú — Itaú Educação e Trabalho", url: "https://www.fundacaoitau.org.br/educacao-e-trabalho" },
+    { nome: "UNICEF", url: null },
+    { nome: "Ação Educativa", url: null },
+    { nome: "UNESCO", url: "https://www.unesco.org/pt" },
+  ],
+
   coordenacao: [
     { nome: "Rogério Jerônimo Barbosa", papel: "Coordenação Geral" },
     { nome: "Hellen Guicheney", papel: "Gerência Técnica e Integração das Equipes" },

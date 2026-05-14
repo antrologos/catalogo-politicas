@@ -8,7 +8,6 @@
  *   - uf:        sigla (ex.: "PE", "SP", "BR")
  *   - situacao:  nome exato da situação
  *   - origem:    "federal" | "estadual"
- *   - snapshot:  "disponivel" | "indisponivel"
  */
 (function () {
   "use strict";
@@ -18,7 +17,6 @@
     uf: params.get("uf"),
     situacao: params.get("situacao"),
     origem: params.get("origem"),
-    snapshot: params.get("snapshot"),
   };
 
   const ativos = Object.entries(filtros).filter(([_, v]) => v != null && v !== "");
@@ -43,10 +41,8 @@
       !filtros.situacao || row.dataset.situacao === filtros.situacao;
     const matchOrigem =
       !filtros.origem || row.dataset.origem === filtros.origem;
-    const matchSnapshot =
-      !filtros.snapshot || row.dataset.snapshot === filtros.snapshot;
 
-    const visivel = matchUf && matchSituacao && matchOrigem && matchSnapshot;
+    const visivel = matchUf && matchSituacao && matchOrigem;
     row.hidden = !visivel;
     if (visivel) visiveis++;
   }
@@ -69,11 +65,9 @@
       uf: "UF",
       situacao: "Situação",
       origem: "Origem",
-      snapshot: "Snapshot",
     };
     const valoresAmigaveis = {
       origem: { federal: "Federal replicada", estadual: "Estadual única" },
-      snapshot: { disponivel: "Disponível", indisponivel: "Indisponível" },
     };
     chipsContainer.innerHTML = "";
     for (const [k, v] of ativos) {

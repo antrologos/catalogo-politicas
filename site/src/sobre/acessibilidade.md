@@ -48,11 +48,11 @@ O **Catálogo de Políticas** busca conformidade com:
 
 Esta declaração é honesta sobre o que ainda **não está validado**:
 
-- **Auditoria automatizada** (pa11y-ci) roda a cada deploy nas páginas Home, Buscar, Sobre e Política de Privacidade. **Não cobre todas as 439 fichas individuais** (assumimos que o template é uniforme).
+- **Auditoria automatizada** (pa11y-ci) roda a cada deploy nas páginas Home, Buscar, Sobre e Política de Privacidade. **Não cobre todas as fichas individuais** (assumimos que o template é uniforme).
 - **Auditoria manual com leitor de tela** (NVDA + Firefox, JAWS + Edge, VoiceOver + Safari) ainda não foi realizada formalmente. Está prevista para o lançamento público (pós-MVP).
 - **VLibras** (tradução automática para Libras) ainda não foi integrado. Está previsto para sprint posterior.
 - **Versão alto-contraste** ainda não está disponível como toggle, mas o site respeita `prefers-color-scheme: dark` parcialmente.
-- **Mapa coroplético** e **grafo de relacionamentos** (planejados para próximas fases) terão **lista textual paralela canônica** como fonte acessível por padrão.
+- **Mapa coroplético** (já em produção) e visualizações de rede (em estudo) sempre terão **lista textual paralela canônica** como fonte acessível por padrão.
 
 ## Tecnologias compatíveis
 
@@ -89,7 +89,7 @@ A acessibilidade é uma prática contínua, não um estado final. Cada nova vers
 
 - **Auditoria automática WCAG 2 AA** em CI (bloqueia deploy se falhar);
 - **Auditoria de Lighthouse** para acessibilidade (alvo: pontuação ≥ 95);
-- **Revisão manual** de novos componentes complexos (Tabs, mapa, grafo) com leitor de tela.
+- **Revisão manual** de novos componentes complexos (Tabs, mapa) com leitor de tela.
 
 ## Revisão desta declaração
 

@@ -6,13 +6,15 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = resolve(__dirname, "../../../data/derived/latest.json");
 
 /**
- * Carrega TODAS as 439 fichas do JSON canônico (Bloco F.1 Sprint 1).
+ * Carrega o JSON canônico e expõe APENAS as políticas únicas para templates.
  *
- * Fonte: data/derived/latest.json — validado contra policies-schema.json v0.2
- * (CI bloqueia se schema falhar antes do build).
+ * Réplicas federais (`is_federal_replica === true`) são filtradas aqui antes
+ * de qualquer iteração: não geram URL própria (pagination em /politica/),
+ * não aparecem em listagens, busca, sitemap ou contagens. Continuam no
+ * dataset bruto e podem ser inspecionadas por templates que precisem do
+ * detalhe local de execução via `executacoes.js` (mapa federal → UFs).
  *
- * Cada ficha recebe campos derivados (aliases, datas BR, statusKey) para
- * facilitar uso em templates Nunjucks sem lógica complexa.
+ * Fonte: data/derived/latest.json — validado contra policies-schema.json v0.2.
  */
 export default function () {
   const raw = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
@@ -20,9 +22,10 @@ export default function () {
     throw new Error(`latest.json não é array. Path: ${DATA_PATH}`);
   }
 
-  const policies = raw.map(normalize);
+  const policies = raw
+    .filter((p) => !p.is_federal_replica)
+    .map(normalize);
 
-  // Ordenar: Federal primeiro, depois UFs em ordem alfabética por nome
   policies.sort((a, b) => {
     if (a.uf === "BR" && b.uf !== "BR") return -1;
     if (b.uf === "BR" && a.uf !== "BR") return 1;
@@ -51,9 +54,6 @@ function normalize(p) {
     revisado_em_br: formatDateBR(p.data_versao_catalogo),
     proxima_revisao_br: formatDateBR(p.proxima_revisao_prevista),
     fonte_data_acesso_br: formatDateBR(p.fonte_data_acesso),
-    snapshot_relativo: p.fonte_arquivo_path
-      ? p.fonte_arquivo_path.replace(/^data\/external_snapshots\//, "")
-      : null,
     completude_classe:
       p.completude_pct >= 90 ? "alta"
         : p.completude_pct >= 70 ? "media"

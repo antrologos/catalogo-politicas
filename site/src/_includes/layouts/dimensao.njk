@@ -6,13 +6,13 @@ layout: layouts/base.njk
      dimensaoNome     — string ("Tipo de política", "Situação atual", etc.)
      dimensaoSlug     — string ("tipo", "situacao") — usado em rotas
      dimensaoIcone    — emoji para o header (📚, ●, 🏫, 🌎)
-     grupo            — objeto { valor, slug, count, ativas, comSnapshot,
+     grupo            — objeto { valor, slug, count, ativas,
                                   porUf, porSituacao, fichas[] }
 
    Renderiza:
      - Breadcrumb 3 níveis (Início › Explorar › <dimensão> › <valor>)
      - Header com tag colorida + título + subtítulo
-     - 3 KPI cards (total / ativas / com snapshot)
+     - 2 KPI cards (total / ativas)
      - Distribuição por UF (barras horizontais)
      - Tabela completa das fichas com filtros locais via querystring (reutiliza
        uf-filtros.js — data-* attrs em cada <tr>)
@@ -36,7 +36,7 @@ layout: layouts/base.njk
   </p>
 </header>
 
-<section aria-labelledby="kpi-dim-h" class="grid grid-cols-2 sm:grid-cols-3 gap-md my-xl">
+<section aria-labelledby="kpi-dim-h" class="grid grid-cols-2 gap-md my-xl">
   <h2 id="kpi-dim-h" class="sr-only">Estatísticas desta categoria</h2>
 
   <div class="bg-primary text-white p-md rounded text-center">
@@ -47,11 +47,6 @@ layout: layouts/base.njk
   <div class="bg-success text-white p-md rounded text-center">
     <p class="text-3xl font-bold">{{ grupo.ativas }}</p>
     <p class="text-xs mt-2xs">ativas / em execução</p>
-  </div>
-
-  <div class="bg-info-dark text-white p-md rounded text-center">
-    <p class="text-3xl font-bold">{{ grupo.comSnapshot }}</p>
-    <p class="text-xs mt-2xs">com snapshot integral</p>
   </div>
 </section>
 
@@ -116,7 +111,6 @@ layout: layouts/base.njk
         <th scope="col" class="p-sm font-semibold">UF</th>
         <th scope="col" class="p-sm font-semibold">Situação</th>
         <th scope="col" class="p-sm font-semibold">Origem</th>
-        <th scope="col" class="p-sm font-semibold">Snapshot</th>
       </tr>
     </thead>
     <tbody id="tbody-fichas">
@@ -124,8 +118,7 @@ layout: layouts/base.njk
         <tr class="ficha-row border-b border-neutral-200 hover:bg-neutral-100"
             data-uf="{{ f.uf }}"
             data-situacao="{{ f.situacao or '' }}"
-            data-origem="{% if f.isFederalReplica %}federal{% else %}estadual{% endif %}"
-            data-snapshot="{% if f.temSnapshot %}disponivel{% else %}indisponivel{% endif %}">
+            data-origem="{% if f.isFederalReplica %}federal{% else %}estadual{% endif %}">
           <th scope="row" class="p-sm font-medium">
             <a href="/politica/{{ f.slug }}/" class="text-primary">{{ f.nome }}</a>
           </th>
@@ -144,13 +137,6 @@ layout: layouts/base.njk
               <span class="tag tag--federal text-xs">Federal</span>
             {% else %}
               <span class="text-neutral-700">Estadual</span>
-            {% endif %}
-          </td>
-          <td class="p-sm text-sm">
-            {% if f.temSnapshot %}
-              <span class="text-success-dark">✓ Disponível</span>
-            {% else %}
-              <span class="text-neutral-700">—</span>
             {% endif %}
           </td>
         </tr>

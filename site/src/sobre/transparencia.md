@@ -12,15 +12,15 @@ Compromissos de transparência do **Catálogo de Políticas** conforme princípi
 ## Política de revisão dos dados
 
 - **Versão atual**: PoC 2026-05-01 (1ª onda).
-- **Próxima revisão geral**: prevista para **outubro de 2026** (revisão dos 197 snapshots ainda não capturados + atualização de status de políticas).
+- **Próxima revisão geral**: prevista para **outubro de 2026** (atualização do status das políticas e do conjunto de fontes oficiais preservadas).
 - **Frequência futura**: **semestral** após o lançamento público (ver [cobertura e cronograma](../cobertura/)).
-- **Política de captura de snapshots**: conforme regra `captura-responsavel` do projeto — robots.txt respeitado, rate-limit 0,5 req/s por domínio, atribuição preservada.
+- **Captura de fontes oficiais**: quando o catálogo preserva localmente um documento normativo, segue a regra interna `captura-responsavel` — robots.txt respeitado, rate-limit 0,5 req/s por domínio, atribuição preservada.
 
 ## Qualidade dos dados
 
 - **Validação automática**: cada ficha valida contra **JSON Schema v0.2** (32 campos canônicos) em CI a cada commit.
 - **Vocabulário canônico**: 8 dimensões categóricas com lista fechada (tipo de política, situação atual, esfera de execução, modalidade, etc).
-- **Cobertura de snapshots**: 242 das 439 fichas (55%) com texto integral preservado; 197 ainda sem snapshot por:
+- **Cobertura de fontes integrais**: parte das fichas tem texto da norma preservado localmente; o restante segue pendente por:
   - **WAF gov.br**: 71 URLs bloqueiam scraping (em revisão).
   - **Timeout planalto.gov.br**: 23 URLs com instabilidade persistente.
   - **Outras causas**: 13 URLs com erro de DNS/SSL ou conteúdo dinâmico.
@@ -29,8 +29,8 @@ Compromissos de transparência do **Catálogo de Políticas** conforme princípi
 
 | Versão | Data | Mudanças principais |
 |---|---|---|
-| PoC 2026-05-01 | 2026-05-01 | 1ª publicação — 439 fichas em 9 UFs + Federal |
-| (próximas) | (a vir) | Aumento de cobertura de snapshots; novas UFs |
+| PoC 2026-05-01 | 2026-05-01 | 1ª publicação — 9 UFs + Federal |
+| (próximas) | (a vir) | Aumento da cobertura de fontes integrais; novas UFs |
 
 Acompanhe o [histórico completo de commits no GitHub](https://github.com/antrologos/catalogo-politicas/commits/main).
 

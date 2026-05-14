@@ -25,11 +25,15 @@ export default function () {
   const raw = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
   if (!Array.isArray(raw)) return defaults();
 
+  // Réplicas federais não aparecem em listagens por dimensão — quem aparece
+  // é a federal canônica (registrada uma única vez).
+  const unicas = raw.filter((p) => !p.is_federal_replica);
+
   return {
-    tipo: agrupar(raw, "tipo_politica"),
-    situacao: agrupar(raw, "situacao_atual"),
-    modalidade: agrupar(raw, "modalidade_oferta"),
-    abrangencia: agrupar(raw, "abrangencia_territorial"),
+    tipo: agrupar(unicas, "tipo_politica"),
+    situacao: agrupar(unicas, "situacao_atual"),
+    modalidade: agrupar(unicas, "modalidade_oferta"),
+    abrangencia: agrupar(unicas, "abrangencia_territorial"),
   };
 }
 
@@ -52,14 +56,11 @@ function agrupar(raw, campo) {
         (p.situacao_atual || "").toLowerCase().includes("ativa") ||
         (p.situacao_atual || "").toLowerCase().includes("execução")
     ).length;
-    const comSnapshot = fichas.filter((p) => p.fonte_arquivo_path).length;
-
     result.push({
       valor,
       slug: slugify(valor),
       count: fichas.length,
       ativas,
-      comSnapshot,
       porUf,
       porSituacao,
       fichas: fichas
@@ -72,8 +73,7 @@ function agrupar(raw, campo) {
           situacao_classe: situacaoClasse(p.situacao_atual),
           modalidade: p.modalidade_oferta,
           abrangencia: p.abrangencia_territorial,
-          isFederalReplica: !!p.is_federal_replica,
-          temSnapshot: !!p.fonte_arquivo_path,
+          isFederalReplica: false,
         }))
         .sort((a, b) => (a.nome || "").localeCompare(b.nome || "", "pt-BR")),
     });

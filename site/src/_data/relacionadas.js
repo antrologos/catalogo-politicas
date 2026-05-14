@@ -6,42 +6,38 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = resolve(__dirname, "../../../data/derived/latest.json");
 
 /**
- * Calcula, para cada ficha, conjuntos de fichas relacionadas que abrem
- * caminhos de descoberta lateral (Sprint EX.3).
+ * Calcula, para cada ficha **única** (não-réplica), conjuntos de fichas
+ * relacionadas que abrem caminhos de descoberta lateral.
  *
  * Saída: objeto indexado por slug, cada valor com 4 chaves:
  *
  *   {
  *     [slug]: {
- *       mesmaFamilia: [{slug, nome, uf, situacao_classe, situacao}],
+ *       mesmaFamilia: [], // sempre vazio: réplicas estaduais não geram página
  *       mesmoTipoUf:  [{slug, nome, uf, situacao_classe, situacao, tipo}],
  *       mesmaModalidadeUf: [{slug, nome, uf, situacao_classe, situacao, modalidade}],
- *       apareceEm:    [{slug, nome, uf, situacao_classe, situacao}]
+ *       apareceEm:    [{uf, situacao, situacao_classe, orgao_local}]
  *     }
  *   }
  *
  * Regras:
- *   - mesmaFamilia: para uma réplica (is_federal_replica), todas as outras
- *     réplicas + a canônica federal. Para a canônica (uf=BR), suas réplicas
- *     em UFs estaduais. Vazio para estaduais únicas.
- *   - mesmoTipoUf: top 5 fichas com mesmo tipo_politica + mesma uf, excluindo
- *     a própria; ordenadas alfabeticamente.
- *   - mesmaModalidadeUf: top 3 fichas com mesma modalidade_oferta + mesma uf,
- *     excluindo a própria e excluindo as que já apareceriam em mesmoTipoUf
- *     (evita repetição visual).
- *   - apareceEm: para canônica federal apenas, lista das réplicas (apenas
- *     UF + slug + nome), para chips no topo da ficha. Vazio em qualquer
- *     outra situação.
+ *   - apareceEm: apenas para canônica federal — lista das UFs onde a política
+ *     é aplicada, com órgão executor local. Link aponta para /uf/<sigla>/
+ *     (réplicas não têm página própria desde a dedup de 2026-05-13).
+ *   - mesmoTipoUf: top 5 fichas únicas com mesmo tipo_politica + mesma uf,
+ *     excluindo a própria; ordenadas alfabeticamente.
+ *   - mesmaModalidadeUf: top 3 fichas únicas com mesma modalidade_oferta +
+ *     mesma uf, excluindo as que já estão em mesmoTipoUf.
+ *   - mesmaFamilia: vazio. A informação foi absorvida por apareceEm (federal)
+ *     e por "Execução por estado" (via executacoes.js) na própria ficha federal.
  *
  * NB: integra_outras_politicas é texto livre (817 itens, 0 batem com
- * id_interno, apenas 24 com nome) — não dereferenciamos. O texto integral
- * permanece visível na aba "Detalhes" da própria ficha.
+ * id_interno) — não dereferenciamos.
  */
 export default function () {
   const raw = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
   if (!Array.isArray(raw)) return {};
 
-  // Index por id_interno → ficha (para resolver federal_source_id)
   const porId = new Map();
   for (const p of raw) {
     if (p.id_interno) porId.set(p.id_interno, p);
@@ -58,49 +54,25 @@ export default function () {
     }
   }
 
+  // Conjunto único usado para "mesmo tipo/modalidade na UF" — réplicas saem.
+  const unicas = raw.filter((p) => !p.is_federal_replica);
+
   const result = {};
-  for (const ficha of raw) {
+  for (const ficha of unicas) {
     if (!ficha.slug) continue;
-    result[ficha.slug] = computar(ficha, raw, porId, familias);
+    result[ficha.slug] = {
+      mesmaFamilia: [],
+      mesmoTipoUf: mesmoTipoUfDe(ficha, unicas),
+      mesmaModalidadeUf: mesmaModalidadeUfDe(ficha, unicas),
+      apareceEm: apareceEmDe(ficha, familias),
+    };
   }
   return result;
 }
 
-function computar(ficha, raw, porId, familias) {
-  return {
-    mesmaFamilia: mesmaFamiliaDe(ficha, porId, familias),
-    mesmoTipoUf: mesmoTipoUfDe(ficha, raw),
-    mesmaModalidadeUf: mesmaModalidadeUfDe(ficha, raw),
-    apareceEm: apareceEmDe(ficha, familias),
-  };
-}
-
-function mesmaFamiliaDe(ficha, porId, familias) {
-  // Caso 1: ficha é réplica → família = canônica + outras réplicas
-  if (ficha.is_federal_replica && ficha.federal_source_id) {
-    const fam = [];
-    const canonica = porId.get(ficha.federal_source_id);
-    if (canonica) fam.push(canonica);
-    const replicas = familias.get(ficha.federal_source_id) || [];
-    for (const r of replicas) {
-      if (r.slug !== ficha.slug) fam.push(r);
-    }
-    return fam.map(simplificar).sort(ordenarUf);
-  }
-
-  // Caso 2: ficha é canônica federal (uf=BR, !is_federal_replica) → réplicas
-  if (ficha.uf === "BR" && !ficha.is_federal_replica && ficha.id_interno) {
-    const replicas = familias.get(ficha.id_interno) || [];
-    return replicas.map(simplificar).sort(ordenarUf);
-  }
-
-  // Caso 3: estadual única → sem família
-  return [];
-}
-
-function mesmoTipoUfDe(ficha, raw) {
+function mesmoTipoUfDe(ficha, pool) {
   if (!ficha.tipo_politica || !ficha.uf) return [];
-  return raw
+  return pool
     .filter(
       (p) =>
         p.slug !== ficha.slug &&
@@ -112,13 +84,12 @@ function mesmoTipoUfDe(ficha, raw) {
     .slice(0, 5);
 }
 
-function mesmaModalidadeUfDe(ficha, raw) {
+function mesmaModalidadeUfDe(ficha, pool) {
   if (!ficha.modalidade_oferta || !ficha.uf) return [];
-  // Excluir as que já apareceriam em mesmoTipoUf (evita repetição visual)
   const jaListadas = new Set(
-    mesmoTipoUfDe(ficha, raw).map((p) => p.slug)
+    mesmoTipoUfDe(ficha, pool).map((p) => p.slug)
   );
-  return raw
+  return pool
     .filter(
       (p) =>
         p.slug !== ficha.slug &&
@@ -132,7 +103,6 @@ function mesmaModalidadeUfDe(ficha, raw) {
 }
 
 function apareceEmDe(ficha, familias) {
-  // Apenas para canônica federal: chips de "executada em" cada UF
   if (
     ficha.uf !== "BR" ||
     ficha.is_federal_replica ||
@@ -143,13 +113,25 @@ function apareceEmDe(ficha, familias) {
   const replicas = familias.get(ficha.id_interno) || [];
   return replicas
     .map((r) => ({
-      slug: r.slug,
-      nome: r.nome,
       uf: r.uf,
       situacao: r.situacao_atual,
       situacao_classe: situacaoClasse(r.situacao_atual),
+      orgao_local: orgaoLocalDe(r),
     }))
-    .sort(ordenarUf);
+    .sort((a, b) => (a.uf || "").localeCompare(b.uf || ""));
+}
+
+function orgaoLocalDe(r) {
+  if (r.orgaos_responsaveis_com_especificacoes) {
+    return r.orgaos_responsaveis_com_especificacoes;
+  }
+  if (Array.isArray(r.orgaos_responsaveis) && r.orgaos_responsaveis.length) {
+    return r.orgaos_responsaveis.join(", ");
+  }
+  if (typeof r.orgaos_responsaveis === "string") {
+    return r.orgaos_responsaveis;
+  }
+  return null;
 }
 
 function simplificar(p) {
@@ -162,13 +144,6 @@ function simplificar(p) {
     tipo: p.tipo_politica,
     modalidade: p.modalidade_oferta,
   };
-}
-
-function ordenarUf(a, b) {
-  // BR primeiro (canônica), depois UFs em ordem alfabética
-  if (a.uf === "BR") return -1;
-  if (b.uf === "BR") return 1;
-  return (a.uf || "").localeCompare(b.uf || "");
 }
 
 function situacaoClasse(s) {

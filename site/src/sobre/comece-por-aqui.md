@@ -54,7 +54,7 @@ Você quer entender **o que existe, o que está ativo, o que mudou** — sem pre
 
 **Caminho recomendado**:
 
-1. Vá ao [hub /explorar/](/explorar/) — verá 7 cards visuais por dimensão (tipo, situação, modalidade, abrangência, UF, origem, snapshot).
+1. Vá ao [hub /explorar/](/explorar/) — verá cards visuais por dimensão (tipo, situação, modalidade, abrangência, UF, origem).
 2. Comece pela situação **"Ativa em execução"** ou pelo tipo **"Educacional direta"** para ver as políticas ainda vigentes.
 3. Cada card de dimensão leva a uma página índice com KPIs e tabela completa.
 4. Tags coloridas no header de cada ficha são clicáveis — encontrou "Modalidade EAD"? Clique e veja outras políticas na mesma modalidade.
@@ -70,7 +70,7 @@ Toda ficha do catálogo segue a mesma estrutura — uma vez que você se familia
 
 - **Header**: nome do programa + chips clicáveis (Situação, UF/Federal, Tipo, Modalidade) + ID universal + completude dos metadados
 - **Bloco "Aparece em N UFs"** (apenas em fichas federais canônicas): chips das UFs onde a política tem execução estadual
-- **5 abas**: Resumo · Detalhes · Base legal · Documentos (com snapshot integral capturado quando disponível) · **Como citar** (4 formatos)
+- **5 abas**: Resumo · Detalhes · Base legal · Documentos (com texto integral preservado quando disponível) · **Como citar** (4 formatos)
 - **Continue explorando** (rodapé): outras fichas relacionadas (mesma família federal, mesmo tipo na UF, mesma modalidade na UF)
 - **Proveniência** (fim): revisor, próxima revisão, versão do catálogo, ID interno
 
