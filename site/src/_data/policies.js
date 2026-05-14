@@ -6,10 +6,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_PATH = resolve(__dirname, "../../../data/derived/latest.json");
 
 /**
- * Carrega 10 fichas representativas (1 por UF + Federal) do JSON canônico.
- * No PoC, usamos subset; em produção, carrega todas as 439.
+ * Carrega TODAS as 439 fichas do JSON canônico (Bloco F.1 Sprint 1).
  *
- * Fonte: data/derived/latest.json (validado contra policies-schema.json v0.2)
+ * Fonte: data/derived/latest.json — validado contra policies-schema.json v0.2
+ * (CI bloqueia se schema falhar antes do build).
+ *
+ * Cada ficha recebe campos derivados (aliases, datas BR, statusKey) para
+ * facilitar uso em templates Nunjucks sem lógica complexa.
  */
 export default function () {
   const raw = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
@@ -17,33 +20,29 @@ export default function () {
     throw new Error(`latest.json não é array. Path: ${DATA_PATH}`);
   }
 
-  // Selecionar 1 por UF (BR + 9 estaduais)
-  const ufsAlvo = ["BR", "SP", "RJ", "MG", "PR", "RS", "BA", "PA", "PE", "CE"];
-  const seenUfs = new Set();
-  const subset = [];
+  const policies = raw.map(normalize);
 
-  for (const p of raw) {
-    if (ufsAlvo.includes(p.uf) && !seenUfs.has(p.uf)) {
-      seenUfs.add(p.uf);
-      subset.push(normalize(p));
-    }
-    if (subset.length === ufsAlvo.length) break;
-  }
-
-  // Ordenar: Federal primeiro, depois UFs em ordem alfabética
-  subset.sort((a, b) => {
-    if (a.uf === "BR") return -1;
-    if (b.uf === "BR") return 1;
-    return a.uf.localeCompare(b.uf);
+  // Ordenar: Federal primeiro, depois UFs em ordem alfabética por nome
+  policies.sort((a, b) => {
+    if (a.uf === "BR" && b.uf !== "BR") return -1;
+    if (b.uf === "BR" && a.uf !== "BR") return 1;
+    if (a.uf !== b.uf) return a.uf.localeCompare(b.uf);
+    return (a.nome || "").localeCompare(b.nome || "", "pt-BR");
   });
 
-  return subset;
+  return policies;
 }
 
 function normalize(p) {
+  const orgaosArr = Array.isArray(p.orgaos_responsaveis)
+    ? p.orgaos_responsaveis
+    : (p.orgaos_responsaveis ? [p.orgaos_responsaveis] : []);
+  const integraArr = Array.isArray(p.integra_outras_politicas)
+    ? p.integra_outras_politicas
+    : (p.integra_outras_politicas ? [p.integra_outras_politicas] : []);
+
   return {
     ...p,
-    // Aliases para legibilidade nos templates
     nome_programa: p.nome,
     id_universal: p.id_interno,
     data_revisao: p.data_versao_catalogo,
@@ -51,15 +50,16 @@ function normalize(p) {
     isFederal: p.uf === "BR",
     revisado_em_br: formatDateBR(p.data_versao_catalogo),
     proxima_revisao_br: formatDateBR(p.proxima_revisao_prevista),
+    fonte_data_acesso_br: formatDateBR(p.fonte_data_acesso),
     snapshot_relativo: p.fonte_arquivo_path
       ? p.fonte_arquivo_path.replace(/^data\/external_snapshots\//, "")
       : null,
     completude_classe:
-      p.completude_pct >= 90
-        ? "alta"
-        : p.completude_pct >= 70
-        ? "media"
+      p.completude_pct >= 90 ? "alta"
+        : p.completude_pct >= 70 ? "media"
         : "baixa",
+    orgaos_lista: orgaosArr,
+    integra_lista: integraArr,
   };
 }
 
@@ -67,7 +67,8 @@ function deriveStatusKey(s) {
   if (!s) return "outras";
   const lower = s.toLowerCase();
   if (lower.includes("ativa") || lower.includes("execução")) return "ativa";
-  if (lower.includes("encerrada") || lower.includes("descontinuada")) return "encerrada";
+  if (lower.includes("descontinuada")) return "descontinuada";
+  if (lower.includes("encerrada")) return "encerrada";
   if (lower.includes("suspensa") || lower.includes("pausada")) return "suspensa";
   if (lower.includes("planejamento")) return "planejamento";
   return "outras";

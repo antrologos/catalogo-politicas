@@ -2,34 +2,71 @@
 layout: layouts/base.njk
 title: "Página não encontrada (404)"
 permalink: /404.html
+description: "A página solicitada não foi encontrada. Sugestões de URLs parecidas e busca disponíveis."
 ---
 <section aria-labelledby="erro-h" class="text-center py-2xl">
-  <p class="text-6xl font-bold text-primary">404</p>
+  <p class="text-6xl font-bold text-primary" aria-hidden="true">404</p>
   <h1 id="erro-h" class="mt-md">Página não encontrada</h1>
-  <p class="text-lg mt-md">
-    A página que você procura não existe ou foi movida.
+  <p class="text-lg mt-md max-w-2xl mx-auto">
+    A URL <code class="bg-neutral-100 px-sm py-2xs rounded">{{ page.url }}</code>
+    não corresponde a nenhuma política, UF ou página deste catálogo.
   </p>
 
   <div class="mt-xl flex flex-wrap gap-md justify-center">
-    <a href="{{ '/' | url }}"
-       class="bg-primary text-white px-lg py-md rounded font-semibold no-underline hover:bg-primary-dark">
-      Voltar à página inicial
+    <a href="/" class="btn btn--primary">
+      <span aria-hidden="true">🏠</span> Voltar à página inicial
     </a>
-    <a href="{{ '/buscar/' | url }}"
-       class="border-2 border-primary text-primary px-lg py-md rounded font-semibold no-underline hover:bg-primary hover:text-white">
-      Buscar políticas
+    <a href="/buscar/" class="btn btn--secondary">
+      {% icon "magnifying-glass" %} Buscar políticas
     </a>
   </div>
 </section>
 
-<section aria-labelledby="exemplos-h" class="mt-2xl bg-neutral-100 p-lg rounded">
-  <h2 id="exemplos-h">Talvez você queira ver:</h2>
+{# Seção de sugestões fuzzy: hidden até JS detectar matches #}
+<section id="secao-fuzzy" aria-labelledby="similar-h" class="mt-2xl bg-info/10 p-lg rounded" hidden>
+  <h2 id="similar-h">URLs parecidas com a sua</h2>
+  <p class="text-sm text-neutral-700">Talvez você quis acessar uma destas páginas:</p>
+  <ul id="lista-fuzzy" class="mt-md space-y-sm list-disc pl-md"></ul>
+  <p id="fuzzy-status" role="status" aria-live="polite" class="visually-hidden"></p>
+</section>
+
+<section aria-labelledby="popular-h" class="mt-2xl">
+  <h2 id="popular-h">Políticas em destaque</h2>
+  <p class="text-sm text-neutral-700">Algumas das fichas mais consultadas:</p>
   <ul class="mt-md grid gap-sm sm:grid-cols-2 list-none p-0">
-    {% for p in policies %}
-    <li>
-      <a href="{{ ('/politica/' + p.slug + '/') | url }}">{{ p.nome_programa }}</a>
-      <span class="text-xs text-neutral-700"> · {{ p.uf }}</span>
-    </li>
+    {% set destaques = [
+      "programa-nacional-de-acesso-ao-ensino-tecnico-e-emprego-pronatec-br",
+      "bolsa-familia-br",
+      "educacao-de-jovens-e-adultos-eja-br",
+      "novos-caminhos-mec-br",
+      "exame-nacional-para-certificacao-de-competencias-de-jovens-e-adultos-encceja-br",
+      "programa-brasil-alfabetizado-br"
+    ] %}
+    {% for d in destaques %}
+      {% set p = policies | selectattr("slug", "equalto", d) | first %}
+      {% if p %}
+      <li class="border border-neutral-200 rounded p-md">
+        <a href="/politica/{{ p.slug }}/" class="font-semibold">{{ p.nome_programa }}</a>
+        <p class="text-xs text-neutral-700 mt-2xs">{{ p.uf }} · {{ p.tipo_politica }}</p>
+      </li>
+      {% endif %}
     {% endfor %}
   </ul>
 </section>
+
+<section aria-labelledby="reportar-h" class="mt-2xl text-sm text-neutral-700">
+  <h2 id="reportar-h" class="text-base">Acha que isso é um erro?</h2>
+  <p>
+    Se você chegou aqui por um link de outra página do catálogo,
+    <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=404+em+{{ page.url | urlencode }}" rel="noopener" target="_blank">
+      abra uma issue no GitHub ↗
+    </a>
+    indicando a URL.
+  </p>
+</section>
+
+{# Embed slugs inline para fuzzy match client-side #}
+<script>
+  window.SLUGS = {{ slugs | dump | safe }};
+</script>
+<script src="/assets/js/fuzzy-404.js" defer></script>

@@ -1,7 +1,11 @@
-/* Self-host Open Sans (latin-ext, 400/600/700) via @fontsource — sem Google CDN */
-@import "@fontsource/open-sans/400.css";
-@import "@fontsource/open-sans/600.css";
-@import "@fontsource/open-sans/700.css";
+/* Self-host IBM Plex (Sans Variable + Serif 700 + Mono 400) via @fontsource —
+   sem Google CDN. Substitui Open Sans no Sprint V1 do MVP-UX (2026-05-02).
+   Plex Sans Variable cobre todos os pesos via único woff2 (font-weight: 100..700).
+   Plex Serif 700 é para H1 e hero (display tipográfico).
+   Plex Mono 400 é para IDs, SHA-256, código inline. */
+@import "@fontsource-variable/ibm-plex-sans/wght.css";
+@import "@fontsource/ibm-plex-serif/700.css";
+@import "@fontsource/ibm-plex-mono/400.css";
 
 @tailwind base;
 @tailwind components;
@@ -31,13 +35,20 @@
   }
 
   body {
-    @apply bg-white text-neutral-900 font-sans;
+    @apply bg-papel text-neutral-900 font-sans;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
 
+  /* H1 e H2 usam Plex Serif 700 para peso editorial (gov.br + Fiocruz pattern).
+     H3+ continuam sans para hierarquia visual mais sutil.
+     Aplicamos font-family diretamente porque @apply font-serif em @layer base
+     não compila o token de fonte (Tailwind 3 quirk). */
+  h1, h2 {
+    font-family: theme('fontFamily.serif');
+  }
   h1 { @apply text-3xl font-bold tracking-tight mb-md; }
-  h2 { @apply text-2xl font-semibold mt-xl mb-md; }
+  h2 { @apply text-2xl font-bold mt-xl mb-md; }
   h3 { @apply text-xl font-semibold mt-lg mb-sm; }
   p  { @apply leading-relaxed; }
 
@@ -48,6 +59,17 @@
   /* Código inline e blocos usam mono font dedicada (E.5 §1.2). */
   code, pre, kbd, samp {
     @apply font-mono text-sm;
+  }
+
+  /* <abbr> com title gera tooltip nativo + underline pontilhada (Tailwind
+     preflight); adicionamos cursor:help para affordance visual e prevenimos
+     quebra com break-word. Sprint F3: glossário inline via {% abbr %}. */
+  abbr[title] {
+    cursor: help;
+    text-decoration: underline dotted;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+    text-decoration-color: theme('colors.primary.DEFAULT');
   }
 }
 
@@ -62,7 +84,12 @@
   }
 
   /* Tags semânticas (status, eixo, etc).
-     Sempre incluir ícone + texto + cor (NF-M-11: cor não é único indicador). */
+     Sempre incluir ícone + texto + cor (NF-M-11: cor não é único indicador).
+     4 famílias canônicas (Sprint V0 do MVP-UX, 2026-05-02):
+       - .tag--<status>: cor semântica suave por situação
+       - .tag--federal/--estadual: variantes de origem
+       - .tag--neutral: metadado sem semântica (UF, ano, modalidade); ganha hover quando em <a>
+       - .tag--filter: filtro com aria-pressed; inclui ✕ removível */
   .tag {
     @apply inline-flex items-center gap-1 px-sm py-2xs rounded text-sm font-medium;
   }
@@ -73,6 +100,24 @@
   .tag--descontinuada { @apply bg-neutral-200 text-neutral-700; }
   .tag--federal       { @apply bg-primary/15  text-primary-dark; }
   .tag--estadual      { @apply bg-info/15     text-info-dark; }
+
+  /* Tag neutra: metadado descritivo sem cor semântica (UF, ano, modalidade,
+     tipo de política). Quando renderizada em <a>, ganha hover automático. */
+  .tag--neutral {
+    @apply bg-neutral-100 text-neutral-900 border border-neutral-200;
+  }
+  a.tag--neutral {
+    @apply no-underline transition-colors hover:bg-primary/10 hover:text-primary-dark hover:border-primary;
+  }
+
+  /* Tag filtro: chip clicável de filtro ativo. Inclui aria-pressed para
+     comunicar estado a screen readers; o ✕ é parte do conteúdo. */
+  .tag--filter {
+    @apply bg-primary/10 text-primary-dark border border-primary/30 cursor-pointer no-underline transition-colors hover:bg-primary/20;
+  }
+  .tag--filter[aria-pressed="true"] {
+    @apply bg-primary text-white border-primary-dark;
+  }
 
   /* Botões padronizados (button.njk usa estas classes via componente). */
   .btn {
@@ -109,6 +154,43 @@
   }
 }
 
+@layer components {
+  /* Foco visível em paths SVG do mapa coroplético (Sprint 8.3 do F.3).
+     SVG path não recebe outline padrão — precisa filter ou stroke override.
+     Usamos filter drop-shadow âmbar para contornar o estado focado, sem
+     mexer no stroke (que tem semântica de borda da UF). */
+  #mapa-svg path:focus-visible {
+    outline: none;  /* outline padrão fica fora do path em SVG */
+    filter: drop-shadow(0 0 4px theme('colors.focus'))
+            drop-shadow(0 0 4px theme('colors.focus'));
+    stroke-width: 2;
+  }
+
+  /* Foco visível no container Cytoscape (Sprint 9.4 do F.3).
+     Container é canvas — recebe foco via tabindex=0; outline padrão
+     do Tailwind/CSS é suficiente, mas garantimos visibilidade dupla. */
+  #grafo-container:focus-visible {
+    outline: 3px solid theme('colors.focus');
+    outline-offset: 2px;
+    box-shadow: inset 0 0 0 2px theme('colors.tinta');
+  }
+
+  /* Ícones Phosphor inline SVG (Sprint V3 do MVP-UX, ADR-012).
+     Default: 1em quadrado, alinhado verticalmente com texto. Pode ser
+     escalado via classes utilitárias (size-md, size-lg, size-2xl, etc.) ou
+     via font-size do parent (já que .icon usa 1em). */
+  .icon {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: -0.125em;
+    flex-shrink: 0;
+  }
+  .icon.size-2xl  { width: 2.5em;  height: 2.5em;  }
+  .icon.size-xl   { width: 2em;    height: 2em;    }
+  .icon.size-lg   { width: 1.5em;  height: 1.5em;  }
+}
+
 @layer utilities {
   /* Esconde visualmente mas mantém disponível para screen readers. */
   .visually-hidden {
@@ -119,5 +201,91 @@
   .num {
     @apply text-right;
     font-variant-numeric: tabular-nums;
+  }
+}
+
+/* ==========================================================================
+   Print stylesheet (Sprint V5 do MVP-UX, 2026-05-03).
+   Otimiza fichas para impressão / salvar como PDF: papel A4, tipografia
+   serif para densidade, esconde elementos interativos/navegacionais.
+   Pesquisador acadêmico imprime ficha para reuniões — agora cabe em 1-2 A4
+   sem nav, busca, decorativos. Resolve R1.3 ponto cego #4 (0 @media print).
+   ========================================================================== */
+@media print {
+  /* Esconder navegação, footer rico, breadcrumbs, blocos decorativos */
+  header[role="banner"],
+  nav,
+  footer[role="contentinfo"],
+  .breadcrumb,
+  .skip-link,
+  [data-pagefind-body] aside,            /* aparece-em federal */
+  section[aria-labelledby="continue-explorando-h"],   /* relacionadas */
+  [vw],                                  /* VLibras widget */
+  [vw-access-button],
+  form[role="search"],
+  .btn,
+  .tag--filter,
+  button {
+    display: none !important;
+  }
+
+  /* Reset visual: papel branco, tinta preta, sans-serif neutro */
+  body {
+    background: white !important;
+    color: black !important;
+    font-family: theme('fontFamily.serif') !important;
+    font-size: 11pt;
+    line-height: 1.45;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Headings: peso editorial mantido, mas comprimidos para A4 */
+  h1 { font-size: 18pt; margin: 0 0 8pt; page-break-after: avoid; }
+  h2 { font-size: 13pt; margin: 12pt 0 6pt; page-break-after: avoid; }
+  h3 { font-size: 11pt; margin: 8pt 0 4pt; page-break-after: avoid; font-weight: bold; }
+
+  /* Mostrar URL ao lado de links externos para preservar referência */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555;
+    word-break: break-all;
+  }
+  /* Não mostrar URL para links internos (ruído) */
+  a[href^="/"]::after,
+  a[href^="#"]::after { content: none; }
+
+  /* Tags ainda visíveis mas sem cor de fundo (economia de tinta) */
+  .tag {
+    background: transparent !important;
+    border: 1px solid #999 !important;
+    color: black !important;
+    padding: 0 4pt;
+    font-weight: normal;
+  }
+
+  /* Tabelas: borda visível, evitar quebra interna */
+  table { page-break-inside: avoid; border-collapse: collapse; }
+  th, td { border: 1px solid #999; padding: 3pt 6pt; }
+
+  /* Evitar quebra de página no meio de elementos importantes */
+  article, dl, ul, ol { page-break-inside: avoid; }
+
+  /* Snapshot URL e ID interno em mono (referência permanente) */
+  code { font-family: theme('fontFamily.mono') !important; font-size: 9pt; }
+
+  /* Cabeçalho de impressão: aparece só no print, mostra fonte do PDF */
+  body::before {
+    content: "Catálogo de Políticas Públicas Brasileiras — Rede EJA e Inclusão Produtiva";
+    display: block;
+    font-size: 8pt;
+    color: #666;
+    border-bottom: 1pt solid #ccc;
+    padding-bottom: 4pt;
+    margin-bottom: 8pt;
   }
 }

@@ -1,0 +1,64 @@
+{# Componente: Citation Box (E.5 §2.8).
+   Mostra 4 formatos de citação acadêmica (ABNT/APA/BibTeX/RIS) com botão Copiar.
+   Live region anuncia "Citação X copiada" após cópia.
+
+   Uso: {% include "components/citation-box.njk" with { p: ficha } %}
+   `p` deve ser uma ficha do array policies (com nome_programa, slug, data_revisao etc).
+
+   A11y: cada formato em <details>/<summary> nativo (acessível por padrão).
+   Botão usa data-copy-target apontando para <pre id="..."> + live region. #}
+
+{% set base = "cit-" + p.slug %}
+
+<div class="citation-box bg-neutral-100 p-lg rounded">
+  <h2 class="text-xl mt-0 mb-md">Como citar este verbete</h2>
+  <p class="text-sm text-neutral-800 mb-md">
+    A citação refere-se ao <strong>verbete</strong> (a ficha que você está lendo)
+    e não à política em si. Autoria do verbete: <strong>equipe de pesquisa do
+    Catálogo</strong>. Organização da obra: <strong>Rogério Barbosa</strong>.
+    Publicação: <strong>Ceres/IESP-UERJ</strong>. ID desta ficha:
+    <code>{{ p.id_universal or p.slug }}</code>.
+  </p>
+
+  <details class="mb-sm" open>
+    <summary class="cursor-pointer font-semibold py-xs">ABNT (norma brasileira)</summary>
+    <pre id="{{ base }}-abnt" class="mt-sm whitespace-pre-wrap text-base bg-white p-md rounded border border-neutral-300 text-neutral-900 font-medium"><code>{{ p | citacaoAbnt }}</code></pre>
+    <button type="button" class="btn btn--secondary mt-sm js-copy"
+            data-copy-target="#{{ base }}-abnt"
+            aria-describedby="{{ base }}-feedback">
+      Copiar ABNT
+    </button>
+  </details>
+
+  <details class="mb-sm">
+    <summary class="cursor-pointer font-semibold py-xs">APA (American Psychological Association)</summary>
+    <pre id="{{ base }}-apa" class="mt-sm whitespace-pre-wrap text-base bg-white p-md rounded border border-neutral-300 text-neutral-900 font-medium"><code>{{ p | citacaoApa }}</code></pre>
+    <button type="button" class="btn btn--secondary mt-sm js-copy"
+            data-copy-target="#{{ base }}-apa"
+            aria-describedby="{{ base }}-feedback">
+      Copiar APA
+    </button>
+  </details>
+
+  <details class="mb-sm">
+    <summary class="cursor-pointer font-semibold py-xs">BibTeX (LaTeX)</summary>
+    <pre id="{{ base }}-bibtex" class="mt-sm whitespace-pre-wrap text-base bg-white p-md rounded border border-neutral-300 text-neutral-900 font-medium"><code>{{ p | citacaoBibtex }}</code></pre>
+    <button type="button" class="btn btn--secondary mt-sm js-copy"
+            data-copy-target="#{{ base }}-bibtex"
+            aria-describedby="{{ base }}-feedback">
+      Copiar BibTeX
+    </button>
+  </details>
+
+  <details class="mb-sm">
+    <summary class="cursor-pointer font-semibold py-xs">RIS (Mendeley/Zotero/EndNote)</summary>
+    <pre id="{{ base }}-ris" class="mt-sm whitespace-pre-wrap text-base bg-white p-md rounded border border-neutral-300 text-neutral-900 font-medium"><code>{{ p | citacaoRis }}</code></pre>
+    <button type="button" class="btn btn--secondary mt-sm js-copy"
+            data-copy-target="#{{ base }}-ris"
+            aria-describedby="{{ base }}-feedback">
+      Copiar RIS
+    </button>
+  </details>
+
+  <p id="{{ base }}-feedback" role="status" aria-live="polite" class="visually-hidden"></p>
+</div>

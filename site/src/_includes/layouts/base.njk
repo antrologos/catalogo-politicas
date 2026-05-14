@@ -16,8 +16,23 @@
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary">
 
+  <!-- Preload das fontes Plex mais usadas (Sprint V1 do MVP-UX 2026-05-02).
+       Latin-ext cobre PT-BR; subset latin é o primeiro carregado pelo browser
+       conforme unicode-range. Fontes self-hosted via @fontsource (passthrough). -->
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="{{ '/assets/css/files/ibm-plex-sans-latin-wght-normal.woff2' }}">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+        href="{{ '/assets/css/files/ibm-plex-serif-latin-700-normal.woff2' }}">
+
+  {# Meta tags acadêmicas — apenas em páginas de ficha individual (Sprint F2).
+     Inclui Highwire Press citation_* (Zotero auto-detect) + Schema.org Dataset
+     JSON-LD (Google Scholar Dataset Search). #}
+  {% if p and p.slug %}
+    {% include "components/ficha-meta.njk" %}
+  {% endif %}
+
   <!-- Tailwind CSS gerado -->
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' }}">
 
   <!-- GoatCounter (LGPD-friendly, sem cookies) -->
   <script data-goatcounter="https://catalogo-politicas.goatcounter.com/count"
@@ -34,5 +49,29 @@
   </main>
 
   {% include "components/footer.njk" %}
+
+  {# VLibras — widget oficial gov.br para tradução automática para Libras
+     (NF-S-06 do design system). Carrega lazy via 'defer' para não impactar LCP.
+     Aparece como botão flutuante; usuário clica para ativar tradução. #}
+  <div vw class="enabled" aria-hidden="true">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+  <script>
+    window.addEventListener("load", function () {
+      if (typeof VLibras !== "undefined") {
+        new VLibras.Widget("https://vlibras.gov.br/app");
+      }
+    });
+  </script>
+
+  {# JS global: ativa nav (hambúrguer mobile + aria-current), tabs e copy
+     em qualquer página onde aparecerem. Defer: não bloqueia render. #}
+  <script src="{{ '/assets/js/nav.js' }}" defer></script>
+  <script src="{{ '/assets/js/tabs.js' }}" defer></script>
+  <script src="{{ '/assets/js/copy.js' }}" defer></script>
 </body>
 </html>

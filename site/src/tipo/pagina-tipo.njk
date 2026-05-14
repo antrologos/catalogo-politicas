@@ -1,0 +1,14 @@
+---
+layout: layouts/dimensao.njk
+pagination:
+  data: dimensoes.tipo
+  alias: grupo
+  size: 1
+permalink: "/tipo/{{ grupo.slug }}/"
+eleventyComputed:
+  title: "{{ grupo.valor }}"
+  description: "Lista das {{ grupo.count }} políticas catalogadas como {{ grupo.valor }}, com distribuição por UF e tabela completa."
+  dimensaoNome: "Tipo de política"
+  dimensaoSlug: "tipo"
+  dimensaoIcone: "books"
+---

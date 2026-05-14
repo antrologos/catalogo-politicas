@@ -1,18 +1,24 @@
-{# Componente: breadcrumb (E.5 §2.x).
-   Uso: {% include "components/breadcrumb.njk" with { items: [
-           { texto: "Início", href: "/" },
-           { texto: "Buscar", href: "/buscar/" },
-           { texto: "Resultado atual" }  # último item sem href = aria-current=page
-         ] } %}
-   A11y: <nav aria-label> + <ol> com sequência semântica. #}
+{# Componente: breadcrumb (E.5).
+   Espera variável global `crumbs` (array de { texto, href? }).
+   Último item sem href = aria-current="page".
 
-{% set crumbs = items or [] %}
+   Uso:
+     {% set crumbs = [
+       { texto: "Início", href: "/" },
+       { texto: "Buscar", href: "/buscar/" },
+       { texto: "Resultado atual" }
+     ] %}
+     {% include "components/breadcrumb.njk" %}
+
+   A11y: <nav aria-label> + <ol>. #}
+
+{% if crumbs and crumbs | length %}
 <nav aria-label="Caminho da navegação">
   <ol class="breadcrumb list-none p-0">
     {% for item in crumbs %}
       <li>
         {% if item.href and not loop.last %}
-          <a href="{{ item.href | url }}">{{ item.texto }}</a>
+          <a href="{{ item.href }}">{{ item.texto }}</a>
         {% else %}
           <span aria-current="page">{{ item.texto }}</span>
         {% endif %}
@@ -20,3 +26,4 @@
     {% endfor %}
   </ol>
 </nav>
+{% endif %}

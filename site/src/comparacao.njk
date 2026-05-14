@@ -1,0 +1,103 @@
+---
+layout: layouts/base.njk
+title: "Comparar UFs"
+description: "Compare 2 a 9 UFs do catálogo lado a lado em uma tabela com indicadores agregados."
+permalink: /comparacao/
+---
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: "Comparar UFs" }
+] %}
+{% include "components/breadcrumb.njk" %}
+
+<section aria-labelledby="comp-h">
+  <h1 id="comp-h">Comparar UFs do catálogo</h1>
+  <p class="text-neutral-700">
+    Selecione 2 a 9 unidades federativas para ver indicadores lado a lado.
+    A URL atualiza com sua seleção, então você pode compartilhar o link
+    da comparação por e-mail.
+  </p>
+</section>
+
+<form action="/comparacao/" method="get" class="my-xl bg-neutral-100 p-lg rounded">
+  <fieldset>
+    <legend class="font-semibold mb-sm">Selecione UFs (mínimo 2, máximo 9)</legend>
+    <ul class="grid grid-cols-2 sm:grid-cols-5 gap-sm list-none p-0">
+      {% for sigla in agregados.ufsCobertas %}
+        {% set info = ufs[sigla] %}
+        <li>
+          <label class="flex items-center gap-2xs cursor-pointer">
+            <input type="checkbox" name="ufs" value="{{ sigla | lower }}"
+                   class="comp-ufs-input">
+            <span class="text-sm">
+              {% if sigla == "BR" %}<strong>{{ info.nome }}</strong>
+              {% else %}<strong>{{ sigla }}</strong> {{ info.nome }}{% endif %}
+            </span>
+          </label>
+        </li>
+      {% endfor %}
+    </ul>
+  </fieldset>
+
+  <div class="mt-md flex flex-wrap gap-sm">
+    <button type="submit" class="btn btn--primary">Comparar</button>
+    <button type="reset" class="btn btn--secondary">Limpar seleção</button>
+  </div>
+
+  <p class="text-xs text-neutral-700 mt-sm">
+    Atalhos rápidos:
+    <a href="?ufs=sp,rj,mg" class="text-primary">SP+RJ+MG</a> ·
+    <a href="?ufs=pe,ce,ba" class="text-primary">PE+CE+BA</a> ·
+    <a href="?ufs=br,sp,rj,mg,pr,rs,ba,pa,pe,ce" class="text-primary">Todas</a>
+  </p>
+</form>
+
+<section id="resultados" aria-labelledby="resultados-h" aria-live="polite" hidden>
+  <h2 id="resultados-h">Comparação</h2>
+  <p id="resultados-status" class="text-sm text-neutral-700"></p>
+
+  <div class="mt-md overflow-x-auto" tabindex="0" role="region" aria-label="Tabela de comparação inter-UF">
+    <table id="comp-tabela" class="w-full mt-md border-collapse min-w-[600px]">
+      <caption class="sr-only">
+        Comparação de indicadores entre as UFs selecionadas. Linhas: indicadores. Colunas: UFs.
+      </caption>
+      <thead id="comp-thead">
+        <!-- Preenchido por JS -->
+      </thead>
+      <tbody id="comp-tbody">
+        <!-- Preenchido por JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="mt-lg flex flex-wrap gap-sm">
+    <button type="button" id="copiar-link-comp" class="btn btn--secondary js-copy"
+            data-copy-target="#link-atual"
+            aria-describedby="copy-feedback-comp">
+      📋 Copiar link desta comparação
+    </button>
+    <span id="link-atual" class="visually-hidden"></span>
+    <p id="copy-feedback-comp" role="status" aria-live="polite" class="visually-hidden"></p>
+    <button type="button" onclick="window.print()" class="btn btn--ghost">
+      {% icon "printer" %} Imprimir / salvar PDF
+    </button>
+  </div>
+</section>
+
+<section id="vazio" aria-labelledby="vazio-h" class="my-2xl bg-info/10 p-lg rounded">
+  <h2 id="vazio-h" class="text-base">Como usar esta página</h2>
+  <ol class="mt-md list-decimal pl-md space-y-sm">
+    <li>Marque pelo menos <strong>2 UFs</strong> nos checkboxes acima (máximo 9).</li>
+    <li>Clique em <strong>Comparar</strong>. A URL muda incluindo sua seleção.</li>
+    <li>Veja a tabela com indicadores lado a lado: total de políticas, ativas, distribuição por tipo, snapshots disponíveis.</li>
+    <li>Use <strong>Copiar link</strong> para compartilhar a comparação por e-mail (a URL contém os parâmetros).</li>
+    <li>Use <strong>Imprimir</strong> para gerar PDF (Ctrl+P / Cmd+P).</li>
+  </ol>
+</section>
+
+{# Dados embedados para JS calcular comparação client-side #}
+<script>
+  window.AGREGADOS_UF = {{ agregados.porUf | dump | safe }};
+  window.UFS_INFO = {{ ufs | dump | safe }};
+</script>
+<script src="/assets/js/comparacao.js" defer></script>

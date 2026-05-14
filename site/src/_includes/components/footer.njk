@@ -1,37 +1,137 @@
 <footer class="bg-neutral-100 border-t border-neutral-200 mt-3xl" role="contentinfo">
-  <div class="container-prose py-xl grid gap-lg sm:grid-cols-3 text-sm">
+  <div class="container-prose py-xl">
 
-    <div>
-      <h2 class="text-base font-semibold mb-sm">Sobre</h2>
-      <ul class="space-y-2xs">
-        <li><a href="{{ '/sobre/' | url }}">Sobre o catálogo</a></li>
-        <li><a href="{{ '/sobre/privacidade/' | url }}">Política de privacidade</a></li>
-        <li><a href="{{ site.github }}" rel="external">Código no GitHub</a></li>
-      </ul>
-    </div>
+    {# Linha 1: barra institucional + créditos resumidos + link para Sobre completo #}
+    <section aria-labelledby="footer-creditos-h" class="border-b border-neutral-200 pb-lg mb-lg">
+      <h2 id="footer-creditos-h" class="text-base font-semibold mb-sm">Realização</h2>
 
-    <div>
-      <h2 class="text-base font-semibold mb-sm">Dados</h2>
-      <p>
-        {{ site.description }}
-      </p>
-      <p class="mt-sm text-xs text-neutral-700">
-        Catálogo elaborado por <strong>{{ site.author }}</strong>.<br>
-        Última atualização: <time datetime="2026-05-01">01/05/2026</time>
-      </p>
-    </div>
+      {# Bloco institucional textual (Sprint V5 do MVP-UX, 2026-05-03):
+         logos vetoriais ainda não disponíveis — usar Plex Serif estilizado
+         como fallback Q1 do plano. Substituir por <figure> com SVGs quando
+         logos forem fornecidos. #}
+      <div class="bg-white p-md rounded border border-neutral-200 my-md font-serif">
+        <p class="text-xs uppercase tracking-wider text-neutral-700 not-italic font-sans">
+          Iniciativa
+        </p>
+        <p class="text-base mt-2xs">
+          <strong>Rede EJA e Inclusão Produtiva</strong>
+        </p>
+        <p class="text-xs uppercase tracking-wider text-neutral-700 mt-md not-italic font-sans">
+          Realização
+        </p>
+        <p class="text-sm mt-2xs">
+          Fundação Roberto Marinho · Fundação Bradesco
+        </p>
+        <p class="text-xs uppercase tracking-wider text-neutral-700 mt-md not-italic font-sans">
+          Parceiros
+        </p>
+        <p class="text-sm mt-2xs">
+          Fundação Itaú Educação e Trabalho · Fundação Arymax
+        </p>
+        <p class="text-xs uppercase tracking-wider text-neutral-700 mt-md not-italic font-sans">
+          Cooperação
+        </p>
+        <p class="text-sm mt-2xs">UNESCO</p>
+        <p class="text-xs uppercase tracking-wider text-neutral-700 mt-md not-italic font-sans">
+          Parceria técnica
+        </p>
+        <p class="text-sm mt-2xs">
+          <a href="https://ceres-iesp.uerj.br/" rel="external">Ceres/IESP-UERJ</a> ·
+          <a href="https://mape.org.br/" rel="external">MAPE</a> ·
+          <a href="http://www.iesp.uerj.br/" rel="external">IESP-UERJ</a>
+        </p>
+      </div>
 
-    <div>
-      <h2 class="text-base font-semibold mb-sm">Licença</h2>
-      <p>
-        Licenciado sob
-        <a href="{{ site.licenca.url }}" rel="external license">
-          {{ site.licenca.nome }}
-        </a>
+      <p class="text-sm">
+        Iniciativa <strong>Rede EJA e Inclusão Produtiva</strong> —
+        <a href="https://www.frm.org.br/" rel="external">Fundação Roberto Marinho</a> ·
+        <a href="https://www.fundacaobradesco.org.br/" rel="external">Fundação Bradesco</a>.
       </p>
-      <p class="mt-sm text-xs">
-        Você pode compartilhar e adaptar mediante atribuição.
+      <p class="text-sm mt-2xs">
+        Parceiros: <a href="https://www.fundacaoitau.org.br/educacao-e-trabalho" rel="external">Fundação Itaú Educação e Trabalho</a> ·
+        <a href="https://arymax.org.br/" rel="external">Fundação Arymax</a>.
+        Cooperação: <a href="https://www.unesco.org/pt" rel="external">UNESCO</a>.
       </p>
+      <p class="text-sm mt-2xs">
+        Parceria técnica:
+        <a href="https://ceres-iesp.uerj.br/" rel="external"><strong>Ceres/IESP-UERJ</strong></a> ·
+        <a href="https://mape.org.br/" rel="external"><strong>MAPE</strong></a> ·
+        <a href="http://www.iesp.uerj.br/" rel="external">IESP-UERJ</a>.
+      </p>
+      <p class="text-sm mt-sm">
+        <a href="/sobre/" class="font-semibold">Equipe completa, créditos e como citar →</a>
+      </p>
+    </section>
+
+    {# Linha 2: explorar + documentos + dados + licença em 4 colunas #}
+    <div class="grid gap-lg sm:grid-cols-2 lg:grid-cols-4 text-sm">
+
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Explorar por</h2>
+        <ul class="space-y-2xs">
+          <li><a href="/explorar/">{% icon "compass" %} Hub de exploração</a></li>
+          <li><a href="/mapa/">{% icon "map-trifold" %} Mapa do Brasil</a></li>
+          <li><a href="/grafo/">{% icon "graph" %} Grafo de relações</a></li>
+          <li><a href="/buscar/">{% icon "magnifying-glass" %} Busca facetada</a></li>
+          <li><a href="/comparacao/">{% icon "chart-bar" %} Comparar UFs</a></li>
+        </ul>
+        <h3 class="text-sm font-semibold mt-md mb-2xs">UFs cobertas</h3>
+        <ul class="flex flex-wrap gap-2xs">
+          {% for sigla in agregados.ufsCobertas %}
+            <li>
+              <a href="/uf/{{ sigla | lower }}/" class="inline-block px-2xs text-xs">
+                {% if sigla == "BR" %}Federal{% else %}{{ sigla }}{% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Documentos institucionais</h2>
+        <ul class="space-y-2xs">
+          <li><a href="/sobre/">Sobre o catálogo</a></li>
+          <li><a href="/sobre/comece-por-aqui/">Comece por aqui</a></li>
+          <li><a href="/sobre/glossario/">Glossário (32 termos)</a></li>
+          <li><a href="/sobre/cobertura/">Cobertura e limites</a></li>
+          <li><a href="/sobre/transparencia/">Acesso à informação (LAI)</a></li>
+          <li><a href="/sobre/privacidade/">Política de privacidade (LGPD)</a></li>
+          <li><a href="/sobre/termos/">Termos de uso</a></li>
+          <li><a href="/sobre/acessibilidade/">Acessibilidade</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Para pesquisador</h2>
+        <ul class="space-y-2xs">
+          <li><a href="/sobre/#como-citar">Como citar (ABNT, APA, BibTeX, RIS)</a></li>
+          <li><a href="/sobre/cobertura/">Metodologia + cobertura</a></li>
+          <li>
+            <span class="text-neutral-700">DOI Zenodo:</span>
+            <span class="text-xs italic text-neutral-700">em preparação</span>
+          </li>
+          <li><a href="{{ site.github }}" rel="external">{% icon "package" %} Código + dados no GitHub ↗</a></li>
+        </ul>
+        <p class="mt-md text-xs text-neutral-700">
+          <strong>{{ agregados.total or 439 }}</strong> políticas · 1ª onda<br>
+          Última atualização: <time datetime="2026-05-01">01/05/2026</time><br>
+          Versão: <code>{{ site.versao }}</code>
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-base font-semibold mb-sm">Licença</h2>
+        <p>
+          Licenciado sob
+          <a href="{{ site.licenca.url }}" rel="external license">
+            {{ site.licenca.nome }}
+          </a>
+        </p>
+        <p class="mt-sm text-xs">
+          Você pode compartilhar e adaptar mediante atribuição. Veja
+          <a href="/sobre/termos/">termos de uso</a> para texto completo de citação.
+        </p>
+      </div>
     </div>
   </div>
 </footer>

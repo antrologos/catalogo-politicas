@@ -1,120 +1,426 @@
 ---
 layout: layouts/base.njk
 ---
-<article data-pagefind-body
-         data-pagefind-meta="uf:{{ p.uf }}"
-         data-pagefind-filter="uf:{{ p.uf }}, situacao:{{ p.situacao_atual }}, tipo:{{ p.tipo_politica }}"
-         class="prose prose-neutral max-w-none">
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: ("Políticas " + p.uf), href: ("/buscar/?uf=" + p.uf) },
+  { texto: p.nome_programa }
+] %}
+{% include "components/breadcrumb.njk" %}
 
-  <nav aria-label="Navegação contextual" class="text-sm mb-md">
-    <a href="{{ '/' | url }}">Início</a> ›
-    <a href="{{ '/buscar/?uf=' + p.uf | url }}">Políticas {{ p.uf }}</a> ›
-    <span aria-current="page">{{ p.nome_programa }}</span>
-  </nav>
+<article data-pagefind-body
+         data-pagefind-meta="uf:{{ p.uf }}, ano:{{ p.ano_criacao or '—' }}"
+         class="prose prose-neutral max-w-3xl mx-auto">
+
+  {# Filtros Pagefind: cada um deve ser um elemento separado com data-pagefind-filter
+     como CHAVE (não chave:valor numa única string — isso quebra a UI).
+     Escondidos visualmente; Pagefind lê apenas o atributo + textContent. #}
+  <span data-pagefind-filter="UF" class="visually-hidden">{{ p.uf }}</span>
+  <span data-pagefind-filter="Situação" class="visually-hidden">{{ p.situacao_atual or 'Sem informação' }}</span>
+  <span data-pagefind-filter="Tipo" class="visually-hidden">{{ p.tipo_politica or 'Sem classificação' }}</span>
+  {% if p.modalidade_oferta %}
+    <span data-pagefind-filter="Modalidade" class="visually-hidden">{{ p.modalidade_oferta }}</span>
+  {% endif %}
+  <span data-pagefind-filter="Snapshot" class="visually-hidden">{% if p.fonte_arquivo_path %}Disponível{% else %}Indisponível{% endif %}</span>
+
+  {# Sinônimos curados (Sprint F1, _data/sinonimos.js): aliases injetados como
+     conteúdo indexável para Pagefind capturar buscas por sigla, vocabulário
+     coloquial e variações ortográficas. Visualmente escondido. #}
+  {% if sinonimos.aliasesPorSlug[p.slug] %}
+    <span data-pagefind-meta="aliases" class="visually-hidden">
+      {{ sinonimos.aliasesPorSlug[p.slug] | join(' · ') }}
+    </span>
+  {% endif %}
+
 
   <header class="border-b border-neutral-200 pb-lg mb-xl">
     <h1>{{ p.nome_programa }}</h1>
     <p class="text-sm text-neutral-700 mt-sm flex flex-wrap gap-md items-center">
-      {% include "components/tag-status.njk" %}
-      <span aria-label="Identificador universal">ID: <code>{{ p.id_universal }}</code></span>
-      <span>UF: <strong>{{ p.uf }}</strong></span>
-      {% if p.revisado_em_br %}
-      <span>Revisado em <time datetime="{{ p.data_revisao }}">{{ p.revisado_em_br }}</time></span>
+      {# Tags clicáveis: cada uma vira link para página índice da dimensão.
+         EX.2 conecta a páginas reais: /tipo/<slug>/, /situacao/<slug>/,
+         /uf/<sigla>/, /modalidade/<slug>/. #}
+      {% if p.situacao_atual %}
+        <a href="/situacao/{{ p.situacao_atual | slug }}/"
+           class="no-underline"
+           aria-label="Ver outras políticas com situação {{ p.situacao_atual }}">
+          {% include "components/tag-status.njk" %}
+        </a>
+      {% else %}
+        {% include "components/tag-status.njk" %}
       {% endif %}
-      <span class="bg-info/10 text-info-dark px-sm py-2xs rounded text-xs"
-            title="Completude dos metadados">
-        Completude: {{ p.completude_pct }}%
-      </span>
+      {% if p.isFederal %}
+        <a href="/uf/br/" class="no-underline" aria-label="Ver todas as políticas federais">
+          <span class="tag tag--federal">Federal</span>
+        </a>
+      {% else %}
+        <a href="/uf/{{ p.uf | lower }}/" class="no-underline" aria-label="Ver todas as políticas de {{ p.uf }}">
+          <span class="tag tag--estadual">{{ p.uf }}</span>
+        </a>
+      {% endif %}
+      {% if p.tipo_politica %}
+        <a href="/tipo/{{ p.tipo_politica | slug }}/"
+           class="tag tag--neutral"
+           aria-label="Ver outras políticas do tipo {{ p.tipo_politica }}">
+          {{ p.tipo_politica }}
+        </a>
+      {% endif %}
+      {% if p.modalidade_oferta %}
+        <a href="/modalidade/{{ p.modalidade_oferta | slug }}/"
+           class="tag tag--neutral"
+           aria-label="Ver outras políticas com modalidade {{ p.modalidade_oferta }}">
+          {{ p.modalidade_oferta }}
+        </a>
+      {% endif %}
+      <span aria-label="Identificador universal">ID: <code>{{ p.id_universal }}</code></span>
+      {% if p.completude_pct %}
+        {% set badgeValor = p.completude_pct %}
+        {% set badgeSufixo = "%" %}
+        {% set badgeLabel = "Completude dos metadados" %}
+        {% set badgeVariant = "" %}
+        {% include "components/badge.njk" %}
+      {% endif %}
+    </p>
+
+    {# Sprint 9.5: link de descoberta para o grafo (mostra ficha em contexto da rede) #}
+    <p class="mt-md text-sm">
+      <a href="/grafo/" class="text-primary">
+        {% icon "graph" %} Ver esta política no grafo de relações →
+      </a>
     </p>
   </header>
 
-  {% if p.resumo %}
-  <section aria-labelledby="resumo-h">
-    <h2 id="resumo-h">Resumo</h2>
-    <p>{{ p.resumo }}</p>
-  </section>
+  {# === EX.3: bloco "Esta política aparece em" (apenas canônica federal com réplicas) === #}
+  {% set rel = relacionadas[p.slug] %}
+  {% if rel and rel.apareceEm and rel.apareceEm.length > 0 %}
+    <aside class="my-lg p-md bg-info/5 border-l-4 border-info-dark rounded"
+           aria-labelledby="aparece-em-h">
+      <h2 id="aparece-em-h" class="text-base mt-0 mb-sm">
+        Esta política federal é executada em {{ rel.apareceEm.length }} UFs do catálogo
+      </h2>
+      <p class="text-sm text-neutral-700 mt-0 mb-sm">
+        Cada UF tem ficha própria com órgão executor local e situação atual:
+      </p>
+      <ul class="flex flex-wrap gap-2xs list-none p-0 m-0">
+        {% for r in rel.apareceEm %}
+          <li>
+            <a href="/politica/{{ r.slug }}/"
+               class="tag tag--neutral"
+               aria-label="Ficha de {{ r.nome }} em {{ r.uf }}, situação {{ r.situacao or 'sem informação' }}">
+              <span class="font-semibold">{{ r.uf }}</span>
+              <span class="text-xs text-neutral-700" aria-hidden="true">·</span>
+              <span class="text-xs">{{ r.situacao or 'Sem informação' }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </aside>
   {% endif %}
 
-  <section aria-labelledby="ident-h">
-    <h2 id="ident-h">Identificação</h2>
+  {# === Conteúdo das abas (capturado via {% set %}) === #}
+  {% set abaResumo %}
+    {% if p.descricao_simples %}
+      <h3>Em linguagem simples</h3>
+      <p>{{ p.descricao_simples }}</p>
+    {% endif %}
+    {% if p.resumo %}
+      <h3>Resumo</h3>
+      <p>{{ p.resumo }}</p>
+    {% endif %}
+    {% if p.apresentacao and p.apresentacao != p.descricao_tecnica %}
+      <h3>Apresentação</h3>
+      <p>{{ p.apresentacao }}</p>
+    {% endif %}
+    {% if not p.descricao_simples and not p.resumo and not p.apresentacao %}
+      <p class="text-neutral-700">Sem descrição cadastrada nesta versão da ficha.</p>
+    {% endif %}
+  {% endset %}
+
+  {% set abaDetalhes %}
+    <h3 class="sr-only">Detalhes institucionais</h3>
     <dl class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-x-md gap-y-sm">
       <dt class="font-semibold text-neutral-700">Tipo de política</dt>
-      <dd>{{ p.tipo_politica }}</dd>
+      <dd>{{ p.tipo_politica or '—' }}</dd>
 
       {% if p.esfera_formulacao %}
-      <dt class="font-semibold text-neutral-700">Esfera de formulação</dt>
-      <dd>{{ p.esfera_formulacao }}</dd>
+        <dt class="font-semibold text-neutral-700">Esfera de formulação</dt>
+        <dd>{{ p.esfera_formulacao }}</dd>
       {% endif %}
-
       {% if p.esfera_execucao %}
-      <dt class="font-semibold text-neutral-700">Esfera de execução</dt>
-      <dd>{{ p.esfera_execucao }}</dd>
+        <dt class="font-semibold text-neutral-700">Esfera de execução</dt>
+        <dd>{{ p.esfera_execucao }}</dd>
       {% endif %}
-
       {% if p.abrangencia_territorial %}
-      <dt class="font-semibold text-neutral-700">Abrangência territorial</dt>
-      <dd>{{ p.abrangencia_territorial }}</dd>
+        <dt class="font-semibold text-neutral-700">Abrangência territorial</dt>
+        <dd>{{ p.abrangencia_territorial }}</dd>
       {% endif %}
-
+      {% if p.tipo_oferta %}
+        <dt class="font-semibold text-neutral-700">
+          <abbr title="Categoria do que a política entrega ao público (curso, bolsa, vaga em rede escolar, atendimento, certificação, apoio produtivo).">Tipo de oferta</abbr>
+        </dt>
+        <dd>
+          {% if 'Misto' in p.tipo_oferta %}
+            <abbr title="Combina múltiplos tipos de oferta sem predominância clara.">{{ p.tipo_oferta }}</abbr>
+          {% else %}
+            {{ p.tipo_oferta }}
+          {% endif %}
+        </dd>
+      {% endif %}
       {% if p.modalidade_oferta %}
-      <dt class="font-semibold text-neutral-700">Modalidade de oferta</dt>
-      <dd>{{ p.modalidade_oferta }}</dd>
+        <dt class="font-semibold text-neutral-700">
+          <abbr title="Forma como a oferta chega ao público: presencial, EaD (educação a distância), semipresencial/híbrida, ou mista.">Modalidade da oferta</abbr>
+        </dt>
+        <dd>
+          {% if 'Mist' in p.modalidade_oferta %}
+            <abbr title="Combina múltiplas modalidades (ex.: presencial + EaD) sem predominância clara.">{{ p.modalidade_oferta }}</abbr>
+          {% else %}
+            {{ p.modalidade_oferta }}
+          {% endif %}
+        </dd>
       {% endif %}
-
+      {% if p.arranjo_logistico %}
+        <dt class="font-semibold text-neutral-700">
+          <abbr title="Estrutura física da oferta: unidade fixa (escola, posto), itinerante (equipes/unidades móveis), ou misto.">Arranjo logístico</abbr>
+        </dt>
+        <dd>
+          {% if 'Misto' in p.arranjo_logistico or 'Mist' in p.arranjo_logistico %}
+            <abbr title="Combina unidade fixa e itinerante.">{{ p.arranjo_logistico }}</abbr>
+          {% else %}
+            {{ p.arranjo_logistico }}
+          {% endif %}
+        </dd>
+      {% endif %}
+      {% if p.carga_horaria %}
+        <dt class="font-semibold text-neutral-700">Carga horária</dt>
+        <dd>{{ p.carga_horaria }}</dd>
+      {% endif %}
       {% if p.ano_criacao %}
-      <dt class="font-semibold text-neutral-700">Ano de criação</dt>
-      <dd>{{ p.ano_criacao }}</dd>
+        <dt class="font-semibold text-neutral-700">Ano de criação</dt>
+        <dd>{{ p.ano_criacao }}</dd>
+      {% endif %}
+      {% if p.fonte_financiamento %}
+        <dt class="font-semibold text-neutral-700">Fonte de financiamento</dt>
+        <dd>{{ p.fonte_financiamento }}</dd>
+      {% endif %}
+      {% if p.transferencia_recursos %}
+        <dt class="font-semibold text-neutral-700">Transferência de recursos</dt>
+        <dd>{{ p.transferencia_recursos }}</dd>
+      {% endif %}
+      {% if p.continuidade_governos %}
+        <dt class="font-semibold text-neutral-700">Continuidade entre governos</dt>
+        <dd>{{ p.continuidade_governos }}</dd>
+      {% endif %}
+      {% if p.orgaos_lista and p.orgaos_lista | length %}
+        <dt class="font-semibold text-neutral-700">Órgãos responsáveis</dt>
+        <dd>
+          <ul class="list-disc pl-md">
+            {% for o in p.orgaos_lista %}<li>{{ o }}</li>{% endfor %}
+          </ul>
+        </dd>
+      {% endif %}
+      {% if p.integra_lista and p.integra_lista | length %}
+        <dt class="font-semibold text-neutral-700">Integra com</dt>
+        <dd>
+          <ul class="list-disc pl-md">
+            {% for i in p.integra_lista %}<li>{{ i }}</li>{% endfor %}
+          </ul>
+        </dd>
       {% endif %}
     </dl>
-  </section>
 
-  {% if p.base_legal %}
-  <section aria-labelledby="legal-h">
-    <h2 id="legal-h">Base legal</h2>
-    <p>{{ p.base_legal }}</p>
-  </section>
-  {% endif %}
+    {# Sprint 9.8: glossário das três categorias mais técnicas, baseado no
+       vocabulario-canonico.json. Acessível via <details> nativo (teclado-friendly). #}
+    <details class="mt-lg text-sm">
+      <summary class="cursor-pointer font-medium text-neutral-800 py-xs">
+        Como interpretar tipo de oferta, modalidade e arranjo logístico?
+      </summary>
+      <div class="mt-sm pl-md border-l-2 border-neutral-300 space-y-sm text-neutral-800">
+        <p>
+          <strong>Tipo de oferta</strong> — categoria do <em>que</em> a política entrega
+          ao público. Valores: <em>Curso/Formação</em> (qualificação profissional,
+          capacitação), <em>Benefício/Auxílio financeiro</em> (bolsa, subsídio,
+          vale-transporte), <em>Oferta educacional</em> (vaga, matrícula, turma),
+          <em>Serviço/Atendimento</em> (orientação, tutoria, busca ativa),
+          <em>Apoio produtivo/financeiro</em> (crédito, fomento, incubação),
+          <em>Certificação de escolaridade/competências</em>, <em>Misto</em>
+          (combina múltiplos tipos sem predominância clara) ou <em>Não aplicável</em>.
+        </p>
+        <p>
+          <strong>Modalidade da oferta</strong> — <em>forma</em> como a oferta
+          chega ao público. Valores: <em>Presencial</em>, <em>Educação à
+          distância (EaD)</em>, <em>Semipresencial/híbrida</em>, <em>Mista</em>
+          (combina múltiplas modalidades sem predominância clara),
+          <em>Sem informação</em> ou <em>Não aplicável</em>.
+        </p>
+        <p>
+          <strong>Arranjo logístico</strong> — estrutura <em>física</em> da
+          oferta. Valores: <em>Unidade fixa</em> (local permanente como escola
+          ou posto), <em>Itinerante</em> (equipes/unidades móveis, ações em
+          comunidades), <em>Misto (fixa + itinerante)</em>, <em>Sem informação</em>
+          ou <em>Não aplicável</em>.
+        </p>
+      </div>
+    </details>
+  {% endset %}
 
-  {% if p.apresentacao %}
-  <section aria-labelledby="apres-h">
-    <h2 id="apres-h">Apresentação detalhada</h2>
-    <p>{{ p.apresentacao }}</p>
-  </section>
-  {% endif %}
+  {% set abaBaseLegal %}
+    <h3 class="sr-only">Base legal</h3>
+    {% if p.base_legal %}
+      <p class="whitespace-pre-line">{{ p.base_legal }}</p>
+    {% else %}
+      <p class="text-neutral-700">Base legal não cadastrada nesta versão da ficha.</p>
+    {% endif %}
+  {% endset %}
 
-  {% if p.fonte_url %}
-  <section aria-labelledby="fonte-h">
-    <h2 id="fonte-h">Documento oficial</h2>
-    <ul class="space-y-sm">
-      <li>
-        <a href="{{ p.fonte_url }}" rel="external nofollow"
-           class="inline-flex items-center gap-2xs">
-          🔗 Ver no portal oficial
+  {% set abaDocumentos %}
+    <h3 class="sr-only">Documentos e fonte oficial</h3>
+    {% if p.fonte_url %}
+      <p>
+        <strong>Fonte oficial:</strong>
+        <a href="{{ p.fonte_url }}" rel="external nofollow noopener" target="_blank">
+          Acessar no portal oficial ↗
         </a>
-      </li>
-      {% if p.fonte_arquivo_path %}
-      <li>
-        <span class="text-neutral-700 text-sm">
-          Snapshot capturado em
-          {% if p.fonte_data_acesso %}<time datetime="{{ p.fonte_data_acesso }}">{{ p.fonte_data_acesso | dataBR }}</time>{% endif %}
-          (SHA-256: <code class="text-xs">{{ p.fonte_sha256 | truncate(12, true, '…') }}</code>)
-        </span>
-      </li>
+        <span class="text-xs text-neutral-700">(abre em nova aba)</span>
+      </p>
+    {% endif %}
+
+    {# Sprint 9.8: bloco "Snapshot capturado" + SHA-256 removido da UI pública
+       (informação técnica que não interessa a gestores). Os snapshots seguem
+       em disco (`data/external_snapshots/`) e podem ser auditados internamente
+       contra link rot. Para usuários, o link da fonte oficial acima já oferece
+       acesso ao texto integral. #}
+
+    {% if p.atribuicao %}
+      <p class="mt-md text-sm text-neutral-700">
+        <strong>Atribuição:</strong> {{ p.atribuicao }}
+      </p>
+    {% endif %}
+    {% if p.licenca_inferida %}
+      <p class="text-sm text-neutral-700">
+        <strong>Licença da fonte:</strong> {{ p.licenca_inferida }}
+      </p>
+    {% endif %}
+  {% endset %}
+
+  {% set abaCitacao %}
+    {% include "components/citation-box.njk" %}
+  {% endset %}
+
+  {% set tabsList = [
+    { id: "resumo", label: "Resumo", panel: abaResumo },
+    { id: "detalhes", label: "Detalhes", panel: abaDetalhes },
+    { id: "base-legal", label: "Base legal", panel: abaBaseLegal },
+    { id: "documentos", label: "Documentos", panel: abaDocumentos },
+    { id: "citacao", label: "Como citar", panel: abaCitacao }
+  ] %}
+
+  {% set tabsLabel = "Seções da ficha" %}
+  {% set tabsId = "tabs-" + p.slug %}
+  {% include "components/tabs.njk" %}
+
+  {# Sprint 9.8: seção "Proveniência" removida da UI pública (informação técnica
+     que não interessa a gestores). Dados de versão/ID/revisão seguem
+     disponíveis em meta tags HTML, JSON-LD Schema.org e na citação acadêmica
+     gerada na aba "Como citar". O link para abrir issue fica como rodapé
+     discreto, sem header. #}
+  <p class="mt-2xl pt-md border-t border-neutral-200 text-xs text-neutral-700">
+    Encontrou erro ou tem sugestão sobre este verbete?
+    <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=Correção:+{{ p.nome_programa | urlencode }}"
+       rel="noopener" target="_blank">
+      Abra uma issue no GitHub ↗
+    </a>
+  </p>
+
+  {# === EX.3: seção "Continue explorando" === #}
+  {% if rel and (rel.mesmaFamilia.length > 0 or rel.mesmoTipoUf.length > 0 or rel.mesmaModalidadeUf.length > 0) %}
+    <section class="mt-2xl pt-lg border-t-2 border-neutral-200" aria-labelledby="continue-explorando-h">
+      <h2 id="continue-explorando-h" class="mt-0">Continue explorando</h2>
+
+      {% if rel.mesmaFamilia.length > 0 %}
+        <h3 class="mt-lg">
+          {% if p.isFederal %}
+            Esta família federal nas UFs ({{ rel.mesmaFamilia.length }})
+          {% else %}
+            Mesma família federal — outras UFs ({{ rel.mesmaFamilia.length }})
+          {% endif %}
+        </h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
+          {% for r in rel.mesmaFamilia %}
+            <li>
+              <a href="/politica/{{ r.slug }}/"
+                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors"
+                 aria-label="Abrir ficha de {{ r.nome }} em {% if r.uf == 'BR' %}âmbito federal{% else %}{{ r.uf }}{% endif %}">
+                <span class="text-xs font-semibold text-neutral-700">
+                  {% if r.uf == 'BR' %}Federal{% else %}{{ r.uf }}{% endif %}
+                </span>
+                <p class="m-0 mt-2xs text-sm font-medium text-neutral-900">{{ r.nome }}</p>
+                {% if r.situacao %}
+                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
+                    {{ r.situacao }}
+                  </span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
       {% endif %}
-    </ul>
-  </section>
+
+      {% if rel.mesmoTipoUf.length > 0 %}
+        <h3 class="mt-lg">
+          Mesmo tipo em {{ p.uf }}
+          <span class="text-sm font-normal text-neutral-700">
+            ({{ p.tipo_politica }})
+          </span>
+        </h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
+          {% for r in rel.mesmoTipoUf %}
+            <li>
+              <a href="/politica/{{ r.slug }}/"
+                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
+                <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
+                {% if r.situacao %}
+                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
+                    {{ r.situacao }}
+                  </span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="text-sm mt-sm">
+          <a href="/tipo/{{ p.tipo_politica | slug }}/">
+            Ver todas as políticas do tipo "{{ p.tipo_politica }}" →
+          </a>
+        </p>
+      {% endif %}
+
+      {% if rel.mesmaModalidadeUf.length > 0 %}
+        <h3 class="mt-lg">
+          Mesma modalidade em {{ p.uf }}
+          <span class="text-sm font-normal text-neutral-700">
+            ({{ p.modalidade_oferta }})
+          </span>
+        </h3>
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
+          {% for r in rel.mesmaModalidadeUf %}
+            <li>
+              <a href="/politica/{{ r.slug }}/"
+                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
+                <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
+                {% if r.situacao %}
+                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
+                    {{ r.situacao }}
+                  </span>
+                {% endif %}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <p class="text-sm mt-sm">
+          <a href="/modalidade/{{ p.modalidade_oferta | slug }}/">
+            Ver todas as políticas com modalidade "{{ p.modalidade_oferta }}" →
+          </a>
+        </p>
+      {% endif %}
+    </section>
   {% endif %}
-
-  <section aria-labelledby="cita-h" class="mt-2xl bg-neutral-100 p-lg rounded">
-    <h2 id="cita-h">Como citar</h2>
-    <details class="mt-sm">
-      <summary class="cursor-pointer font-semibold">ABNT</summary>
-      <pre class="mt-sm whitespace-pre-wrap text-sm bg-white p-md rounded border border-neutral-200"><code>{{ p | citacaoAbnt }}</code></pre>
-    </details>
-    <details class="mt-sm">
-      <summary class="cursor-pointer font-semibold">BibTeX</summary>
-      <pre class="mt-sm whitespace-pre-wrap text-sm bg-white p-md rounded border border-neutral-200"><code>{{ p | citacaoBibtex }}</code></pre>
-    </details>
-  </section>
-
 </article>

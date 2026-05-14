@@ -1,102 +1,243 @@
 ---
 layout: layouts/base.njk
 title: "Buscar políticas"
-description: "Busca textual e filtros facetados no catálogo de políticas públicas."
+description: "Busca textual e filtros facetados nas 439 políticas catalogadas, com sinônimos curados (EJA, PRONATEC, ENCCEJA, etc.) e sugestões para iniciantes."
 permalink: /buscar/
 ---
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: "Buscar" }
+] %}
+{% include "components/breadcrumb.njk" %}
+
 <section aria-labelledby="busca-h">
   <h1 id="busca-h">Buscar políticas</h1>
-  <p>Busque por nome, órgão, base legal ou termos do resumo. Use filtros para restringir por UF, situação ou tipo.</p>
+  <p class="text-neutral-700">
+    Busque por nome do programa, sigla, base legal, órgão responsável ou
+    termos do resumo. Use os filtros para restringir por UF, situação, tipo,
+    modalidade ou disponibilidade de snapshot integral.
+  </p>
 
-  <div class="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-lg mt-xl">
-
-    <!-- Painel de filtros -->
-    <aside aria-labelledby="filtros-h" class="bg-neutral-100 p-md rounded">
-      <h2 id="filtros-h" class="text-base mt-0">Filtros</h2>
-
-      <fieldset class="mt-md">
-        <legend class="font-semibold text-sm mb-sm">UF</legend>
-        <div class="space-y-2xs text-sm">
-          {% set ufs = policies | groupByUf %}
-          {% for uf, list in ufs %}
-          <label class="flex items-center gap-2xs">
-            <input type="checkbox" name="uf" value="{{ uf }}" class="filter-input">
-            <span>{{ uf }}</span>
-            <span class="text-neutral-700 ml-auto">({{ list | length }})</span>
-          </label>
-          {% endfor %}
-        </div>
-      </fieldset>
-
-      <fieldset class="mt-md">
-        <legend class="font-semibold text-sm mb-sm">Situação</legend>
-        <div class="space-y-2xs text-sm">
-          {% set situacoes = policies | countByKey("situacao_atual") %}
-          {% for sit, n in situacoes %}
-          <label class="flex items-center gap-2xs">
-            <input type="checkbox" name="situacao" value="{{ sit }}" class="filter-input">
-            <span>{{ sit }}</span>
-            <span class="text-neutral-700 ml-auto">({{ n }})</span>
-          </label>
-          {% endfor %}
-        </div>
-      </fieldset>
-
-      <fieldset class="mt-md">
-        <legend class="font-semibold text-sm mb-sm">Tipo de política</legend>
-        <div class="space-y-2xs text-sm">
-          {% set tipos = policies | countByKey("tipo_politica") %}
-          {% for tipo, n in tipos %}
-          <label class="flex items-center gap-2xs">
-            <input type="checkbox" name="tipo" value="{{ tipo }}" class="filter-input">
-            <span>{{ tipo }}</span>
-            <span class="text-neutral-700 ml-auto">({{ n }})</span>
-          </label>
-          {% endfor %}
-        </div>
-      </fieldset>
-    </aside>
-
-    <!-- Resultados -->
-    <main aria-labelledby="resultados-h">
-      <label class="block">
-        <span class="font-semibold text-sm">Buscar texto</span>
-        <input type="search" id="busca-input" placeholder="Digite nome, sigla, órgão..."
-               class="w-full mt-2xs p-md border border-neutral-500 rounded focus:border-primary"
-               autocomplete="off">
-      </label>
-
-      <p id="resultados-h" class="mt-md text-sm text-neutral-700"
-         aria-live="polite">
-        <span id="contador">{{ policies | length }}</span> políticas encontradas
-      </p>
-
-      <ul id="lista-resultados" class="mt-md space-y-md list-none p-0">
-        {% for p in policies %}
-        <li class="resultado border border-neutral-200 rounded p-md"
-            data-uf="{{ p.uf }}"
-            data-situacao="{{ p.situacao_atual }}"
-            data-tipo="{{ p.tipo_politica }}"
-            data-nome="{{ p.nome_programa | lower }}"
-            data-resumo="{{ p.resumo | lower }}">
-          <h3 class="text-base mt-0">
-            <a href="{{ ('/politica/' + p.slug + '/') | url }}">{{ p.nome_programa }}</a>
-          </h3>
-          <p class="text-sm my-sm">
-            <strong>{{ p.uf }}</strong> · {{ p.tipo_politica }}
-          </p>
-          <p class="text-sm">{{ p.resumo | truncate(180) }}</p>
-          <p class="mt-sm">{% include "components/tag-status.njk" %}</p>
-        </li>
-        {% endfor %}
-      </ul>
-
-      <p id="vazio" class="hidden mt-md p-md bg-neutral-100 rounded text-center">
-        Nenhuma política encontrada. Limpe filtros ou tente outro termo.
-      </p>
-    </main>
-
-  </div>
+  <p class="text-sm text-neutral-700 mt-sm">
+    <strong>{{ policies | length }}</strong> políticas no catálogo
+    (1ª onda — 9 UFs + Federal).
+    <kbd class="bg-neutral-100 border border-neutral-200 px-2xs rounded text-xs">/</kbd>
+    foca a caixa de busca.
+    Buscas por sigla são reconhecidas — ex.:
+    <a href="/buscar/?q=EJA" class="text-primary">EJA</a> encontra
+    "Educação de Jovens e Adultos".
+  </p>
 </section>
 
-<script src="{{ '/assets/js/busca.js' | url }}" defer></script>
+{# Pagefind UI será montada em #search; estilizada via CSS próprio + tokens nossos #}
+<div id="search" class="mt-xl"></div>
+
+{# Bloco "Buscas comuns" sempre visível — atende zero-state E zero-result.
+   Resolve R2.1-B-J3/J5/J8: persona sem ideia clara ou sem jargão tem caminho. #}
+<section aria-labelledby="buscas-comuns-h" class="mt-2xl border-t border-neutral-200 pt-lg">
+  <h2 id="buscas-comuns-h" class="text-lg">
+    {% icon "compass" %} Buscas comuns
+  </h2>
+  <p class="text-sm text-neutral-700">
+    Não sabe por onde começar? Estes termos cobrem as políticas mais buscadas.
+    Cada chip dispara a busca; siglas (EJA, PRONATEC) reconhecem nomes completos.
+  </p>
+
+  <ul class="mt-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-sm list-none p-0">
+    {% for b in sinonimos.buscasComuns %}
+      <li>
+        <a href="/buscar/?q={{ b.q | urlencode }}"
+           class="block p-sm border border-neutral-200 rounded hover:border-primary hover:bg-primary/5 no-underline transition-colors">
+          <span class="font-semibold text-primary">{{ b.label }}</span>
+          <span class="block text-xs text-neutral-700 mt-2xs">{{ b.contexto }}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="text-sm text-neutral-700 mt-md">
+    Ainda não achou? Veja
+    <a href="/explorar/" class="text-primary">todas as dimensões em /explorar/</a>
+    ou consulte o
+    <a href="/sobre/cobertura/" class="text-primary">mapa de cobertura</a>.
+  </p>
+</section>
+
+<noscript>
+  <div role="alert" class="mt-xl bg-warning/15 text-warning-dark p-md rounded">
+    <p>A busca facetada requer JavaScript. Você pode navegar pela
+    <a href="/">página inicial</a>, usar o
+    <a href="/explorar/">hub de exploração</a>
+    (totalmente estático) ou consultar o
+    <a href="https://github.com/antrologos/catalogo-politicas">repositório no GitHub</a>
+    para baixar os dados em JSON.</p>
+  </div>
+</noscript>
+
+<link rel="stylesheet" href="/pagefind/pagefind-ui.css">
+<script src="/pagefind/pagefind-ui.js" defer></script>
+<script>
+  (function () {
+    "use strict";
+    if (typeof window === "undefined") return;
+
+    let pagefindUI = null;
+
+    function init() {
+      if (typeof PagefindUI === "undefined") {
+        // Pagefind UI ainda não carregou; tenta de novo em 100ms
+        setTimeout(init, 100);
+        return;
+      }
+      pagefindUI = new PagefindUI({
+        element: "#search",
+        bundlePath: "/catalogo-politicas/pagefind/",
+        baseUrl: "/catalogo-politicas/",
+        showSubResults: true,
+        showImages: false,
+        pageSize: 10,
+        resetStyles: true,
+        autofocus: false,
+        translations: {
+          placeholder: "Digite nome, sigla (EJA, PRONATEC), base legal, órgão...",
+          clear_search: "Limpar busca",
+          load_more: "Mostrar mais resultados",
+          search_label: "Buscar políticas no catálogo",
+          filters_label: "Filtros",
+          zero_results: "Nenhuma política encontrada para [SEARCH_TERM]. Veja a seção 'Buscas comuns' abaixo ou use o hub /explorar/.",
+          many_results: "[COUNT] políticas correspondem a [SEARCH_TERM]",
+          one_result: "1 política corresponde a [SEARCH_TERM]",
+          alt_search: "Nenhum resultado para [SEARCH_TERM]. Mostrando resultados para [DIFFERENT_TERM] em vez disso.",
+          search_suggestion: "Nenhum resultado para [SEARCH_TERM]. Tente uma destas buscas:",
+          searching: "Buscando [SEARCH_TERM]..."
+        }
+      });
+
+      // Lê ?q= da URL e popula o input + dispara busca.
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get("q");
+      if (initialQuery) {
+        waitForInputAndSearch(initialQuery);
+      }
+    }
+
+    function waitForInputAndSearch(value, attempts) {
+      attempts = attempts || 0;
+      if (attempts > 50) return; // timeout 5s
+      const input = document.querySelector("#search input[type='text']");
+      if (!input) {
+        setTimeout(() => waitForInputAndSearch(value, attempts + 1), 100);
+        return;
+      }
+      const nativeSetter = Object.getOwnPropertyDescriptor(
+        window.HTMLInputElement.prototype, "value"
+      ).set;
+      nativeSetter.call(input, value);
+      input.dispatchEvent(new Event("input", { bubbles: true }));
+      input.focus();
+
+      setTimeout(() => {
+        if (pagefindUI && typeof pagefindUI.triggerSearch === "function") {
+          try { pagefindUI.triggerSearch(value); } catch (e) { /* ignorar */ }
+        }
+      }, 200);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", init);
+    } else {
+      init();
+    }
+
+    // Atalho de teclado: tecla "/" foca caixa de busca
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "/" && document.activeElement && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName)) {
+        const input = document.querySelector("#search input[type='text']");
+        if (input) {
+          e.preventDefault();
+          input.focus();
+        }
+      }
+    });
+  })();
+</script>
+
+<style>
+  /* Customização visual do Pagefind UI alinhada à paleta autoral V2 (ADR-011).
+     resetStyles: true no init faz Pagefind aplicar apenas estilos básicos. */
+  #search {
+    --pagefind-ui-primary: #1A4F8B;          /* azul-IBGE */
+    --pagefind-ui-text: #3C342A;             /* tinta morna */
+    --pagefind-ui-background: #FAF7F2;       /* papel */
+    --pagefind-ui-border: #E5DFD3;           /* neutral-200 morno */
+    --pagefind-ui-tag: #F2EDE2;              /* neutral-100 morno */
+    --pagefind-ui-border-width: 2px;
+    --pagefind-ui-border-radius: 4px;
+    --pagefind-ui-font: "IBM Plex Sans Variable", "IBM Plex Sans", system-ui, sans-serif;
+  }
+  #search .pagefind-ui__form {
+    margin-bottom: 1.5rem;
+  }
+  #search .pagefind-ui__search-input {
+    border: 2px solid #8A7E70;               /* neutral-500 morno */
+    padding: 0.75rem;
+    border-radius: 4px;
+    width: 100%;
+  }
+  #search .pagefind-ui__search-input:focus-visible {
+    outline: 3px solid #FFB81C;              /* foco âmbar editorial */
+    outline-offset: 2px;
+    box-shadow: inset 0 0 0 2px #3C342A;
+  }
+  #search .pagefind-ui__filter-panel {
+    background: #F2EDE2;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  #search .pagefind-ui__filter-name {
+    font-weight: 600;
+    color: #3C342A;
+  }
+  #search .pagefind-ui__filter-checkbox:focus-visible {
+    outline: 3px solid #FFB81C;
+    outline-offset: 2px;
+  }
+  #search .pagefind-ui__result {
+    border-bottom: 1px solid #E5DFD3;
+    padding-block: 1rem;
+  }
+  #search .pagefind-ui__result-link {
+    color: #1A4F8B;
+    text-decoration: underline;
+    font-weight: 600;
+  }
+  #search .pagefind-ui__result-link:focus-visible {
+    outline: 3px solid #FFB81C;
+    outline-offset: 2px;
+  }
+  #search .pagefind-ui__result-tags .pagefind-ui__result-tag {
+    background: #F2EDE2;
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    color: #5C5347;
+  }
+  #search .pagefind-ui__button {
+    min-height: 44px;
+    padding-inline: 1rem;
+    background: #1A4F8B;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  #search .pagefind-ui__button:hover {
+    background: #11385F;
+  }
+  #search button:focus-visible {
+    outline: 3px solid #FFB81C;
+    outline-offset: 2px;
+  }
+</style>

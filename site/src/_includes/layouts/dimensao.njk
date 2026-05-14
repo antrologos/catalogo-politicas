@@ -1,0 +1,186 @@
+---
+layout: layouts/base.njk
+---
+{# Layout reutilizável para páginas índice por dimensão (EX.2).
+   Espera as variáveis vindas do template via eleventyComputed:
+     dimensaoNome     — string ("Tipo de política", "Situação atual", etc.)
+     dimensaoSlug     — string ("tipo", "situacao") — usado em rotas
+     dimensaoIcone    — emoji para o header (📚, ●, 🏫, 🌎)
+     grupo            — objeto { valor, slug, count, ativas, comSnapshot,
+                                  porUf, porSituacao, fichas[] }
+
+   Renderiza:
+     - Breadcrumb 3 níveis (Início › Explorar › <dimensão> › <valor>)
+     - Header com tag colorida + título + subtítulo
+     - 3 KPI cards (total / ativas / com snapshot)
+     - Distribuição por UF (barras horizontais)
+     - Tabela completa das fichas com filtros locais via querystring (reutiliza
+       uf-filtros.js — data-* attrs em cada <tr>)
+     - CTA "Comparar UFs" #}
+
+{% set crumbs = [
+  { texto: "Início", href: "/" },
+  { texto: "Explorar", href: "/explorar/" },
+  { texto: dimensaoNome, href: "/explorar/" },
+  { texto: grupo.valor }
+] %}
+{% include "components/breadcrumb.njk" %}
+
+<header class="border-b border-neutral-200 pb-lg mb-xl">
+  <p class="text-sm text-neutral-700 uppercase tracking-wide">
+    {% icon dimensaoIcone, "size-lg" %} {{ dimensaoNome }}
+  </p>
+  <h1 class="mt-2xs">{{ grupo.valor }}</h1>
+  <p class="text-neutral-700 mt-md">
+    <strong>{{ grupo.count }}</strong> políticas no catálogo correspondem a esta categoria.
+  </p>
+</header>
+
+<section aria-labelledby="kpi-dim-h" class="grid grid-cols-2 sm:grid-cols-3 gap-md my-xl">
+  <h2 id="kpi-dim-h" class="sr-only">Estatísticas desta categoria</h2>
+
+  <div class="bg-primary text-white p-md rounded text-center">
+    <p class="text-3xl font-bold">{{ grupo.count }}</p>
+    <p class="text-xs mt-2xs">políticas total</p>
+  </div>
+
+  <div class="bg-success text-white p-md rounded text-center">
+    <p class="text-3xl font-bold">{{ grupo.ativas }}</p>
+    <p class="text-xs mt-2xs">ativas / em execução</p>
+  </div>
+
+  <div class="bg-info-dark text-white p-md rounded text-center">
+    <p class="text-3xl font-bold">{{ grupo.comSnapshot }}</p>
+    <p class="text-xs mt-2xs">com snapshot integral</p>
+  </div>
+</section>
+
+{# Distribuição por UF: barras horizontais — só mostra se tiver mais de 1 UF #}
+{% if (grupo.porUf | length) > 1 %}
+<section aria-labelledby="dist-uf-h" class="my-xl">
+  <h2 id="dist-uf-h">Distribuição por UF</h2>
+  <p class="text-sm text-neutral-700">
+    Quantas das {{ grupo.count }} políticas desta categoria existem em cada unidade federativa.
+  </p>
+
+  <ul class="mt-md space-y-sm list-none p-0">
+    {% set ufsOrdenadas = [] %}
+    {% for sigla in agregados.ufsCobertas %}
+      {% if grupo.porUf[sigla] %}
+        {% set ufsOrdenadas = (ufsOrdenadas.push({ sigla: sigla, n: grupo.porUf[sigla] }), ufsOrdenadas) %}
+      {% endif %}
+    {% endfor %}
+    {% for u in ufsOrdenadas %}
+      {% set pct = ((u.n / grupo.count) * 100) | round %}
+      <li>
+        <div class="flex justify-between text-sm mb-2xs">
+          <a href="/uf/{{ u.sigla | lower }}/" class="font-semibold text-primary">
+            {% if u.sigla == "BR" %}Federal{% else %}{{ ufs[u.sigla].nome or u.sigla }}{% endif %}
+          </a>
+          <span class="text-neutral-700">{{ u.n }} ({{ pct }}%)</span>
+        </div>
+        <div class="bg-neutral-100 rounded-full h-sm overflow-hidden" role="img"
+             aria-label="{{ u.sigla }}: {{ u.n }} políticas, {{ pct }} por cento desta categoria">
+          <div class="bg-primary h-full rounded-full" style="width: {{ pct }}%"></div>
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section aria-labelledby="lista-dim-h" class="my-2xl">
+  <h2 id="lista-dim-h">
+    Todas as políticas em "{{ grupo.valor }}"
+    (<span id="contador-fichas">{{ grupo.count }}</span>)
+  </h2>
+  <p class="text-sm text-neutral-700">
+    Ordenadas alfabeticamente. Para refinar a lista por UF ou outra dimensão,
+    use os filtros via querystring (ex.: <code>?uf=PE</code>).
+  </p>
+
+  {# Chips de filtro ativo (via querystring + dimensao-filtros.js) #}
+  <div id="filtros-ativos" class="mt-md flex flex-wrap gap-sm" hidden>
+    <span class="text-sm font-semibold">Filtros ativos:</span>
+    <span id="filtros-chips"></span>
+    <a href="" id="limpar-filtros" class="text-sm text-primary underline">Limpar todos</a>
+  </div>
+
+  <table class="w-full mt-md border-collapse">
+    <caption class="sr-only">
+      Lista completa das {{ grupo.count }} políticas da categoria "{{ grupo.valor }}".
+    </caption>
+    <thead>
+      <tr class="border-b-2 border-neutral-500 text-left">
+        <th scope="col" class="p-sm font-semibold">Nome</th>
+        <th scope="col" class="p-sm font-semibold">UF</th>
+        <th scope="col" class="p-sm font-semibold">Situação</th>
+        <th scope="col" class="p-sm font-semibold">Origem</th>
+        <th scope="col" class="p-sm font-semibold">Snapshot</th>
+      </tr>
+    </thead>
+    <tbody id="tbody-fichas">
+      {% for f in grupo.fichas %}
+        <tr class="ficha-row border-b border-neutral-200 hover:bg-neutral-100"
+            data-uf="{{ f.uf }}"
+            data-situacao="{{ f.situacao or '' }}"
+            data-origem="{% if f.isFederalReplica %}federal{% else %}estadual{% endif %}"
+            data-snapshot="{% if f.temSnapshot %}disponivel{% else %}indisponivel{% endif %}">
+          <th scope="row" class="p-sm font-medium">
+            <a href="/politica/{{ f.slug }}/" class="text-primary">{{ f.nome }}</a>
+          </th>
+          <td class="p-sm">
+            <a href="/uf/{{ f.uf | lower }}/" class="text-primary text-sm">
+              {% if f.uf == "BR" %}Federal{% else %}{{ f.uf }}{% endif %}
+            </a>
+          </td>
+          <td class="p-sm">
+            <span class="tag tag--{{ f.situacao_classe }} text-xs">
+              {{ f.situacao or "—" }}
+            </span>
+          </td>
+          <td class="p-sm text-sm">
+            {% if f.isFederalReplica %}
+              <span class="tag tag--federal text-xs">Federal</span>
+            {% else %}
+              <span class="text-neutral-700">Estadual</span>
+            {% endif %}
+          </td>
+          <td class="p-sm text-sm">
+            {% if f.temSnapshot %}
+              <span class="text-success-dark">✓ Disponível</span>
+            {% else %}
+              <span class="text-neutral-700">—</span>
+            {% endif %}
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <p id="vazio-ficha" class="hidden mt-md p-md bg-neutral-100 rounded text-center">
+    Nenhuma política corresponde aos filtros aplicados.
+    <a href="" id="limpar-filtros-vazio" class="text-primary">Limpar filtros</a>
+  </p>
+</section>
+
+<section aria-labelledby="outros-h" class="my-2xl bg-neutral-100 p-lg rounded">
+  <h2 id="outros-h">Outras categorias de "{{ dimensaoNome }}"</h2>
+  <ul class="mt-md flex flex-wrap gap-2xs list-none p-0 text-sm">
+    {% for outro in dimensoes[dimensaoSlug] %}
+      {% if outro.slug != grupo.slug %}
+        <li>
+          <a href="/{{ dimensaoSlug }}/{{ outro.slug }}/"
+             class="inline-block px-md py-2xs bg-white border border-neutral-200 rounded text-primary hover:border-primary">
+            {{ outro.valor }} <span class="text-neutral-700">({{ outro.count }})</span>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <p class="mt-md text-sm">
+    <a href="/explorar/" class="text-primary">← Voltar ao hub Explorar</a>
+  </p>
+</section>
+
+<script src="/assets/js/dimensao-filtros.js" defer></script>

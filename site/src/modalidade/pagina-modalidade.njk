@@ -1,0 +1,14 @@
+---
+layout: layouts/dimensao.njk
+pagination:
+  data: dimensoes.modalidade
+  alias: grupo
+  size: 1
+permalink: "/modalidade/{{ grupo.slug }}/"
+eleventyComputed:
+  title: "Modalidade {{ grupo.valor }}"
+  description: "Lista das {{ grupo.count }} políticas com modalidade {{ grupo.valor }}, com distribuição por UF e tabela completa."
+  dimensaoNome: "Modalidade da oferta"
+  dimensaoSlug: "modalidade"
+  dimensaoIcone: "buildings"
+---

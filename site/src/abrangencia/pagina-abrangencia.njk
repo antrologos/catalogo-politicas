@@ -1,0 +1,14 @@
+---
+layout: layouts/dimensao.njk
+pagination:
+  data: dimensoes.abrangencia
+  alias: grupo
+  size: 1
+permalink: "/abrangencia/{{ grupo.slug }}/"
+eleventyComputed:
+  title: "Abrangência {{ grupo.valor }}"
+  description: "Lista das {{ grupo.count }} políticas com abrangência {{ grupo.valor }}, com distribuição por UF e tabela completa."
+  dimensaoNome: "Abrangência territorial"
+  dimensaoSlug: "abrangencia"
+  dimensaoIcone: "globe"
+---

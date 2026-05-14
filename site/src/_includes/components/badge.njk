@@ -1,29 +1,34 @@
-{# Componente: badge (chip pequeno não-clicável; E.5 §2.7).
-   Uso completude: {% include "components/badge.njk" with {
-                     valor: 92, sufixo: "%", label: "Completude dos metadados"
-                   } %}
-   Uso info: {% include "components/badge.njk" with {
-               valor: "Federal", variant: "info", label: "Esfera"
-             } %}
-   Variantes: alta (≥90) | media (70-89) | baixa (<70) | info (default)
-   Auto-deriva variante de % quando `valor` é número e `sufixo` = "%". #}
+{# Componente: badge (E.5 §2.7).
+   Espera variáveis globais:
+     badgeValor (string ou number, obrigatório)
+     badgeSufixo (string, opcional — ex.: "%")
+     badgeLabel (string, opcional — para aria-label)
+     badgeVariant (string, opcional — alta|media|baixa|info; auto-deriva se valor é %)
 
-{% set classes = "badge" %}
-{% if variant %}
-  {% set classes = classes + " badge--" + variant %}
-{% elif sufixo == "%" and valor is number %}
-  {% if valor >= 90 %}
-    {% set classes = classes + " badge--alta" %}
-  {% elif valor >= 70 %}
-    {% set classes = classes + " badge--media" %}
+   Uso:
+     {% set badgeValor = 92 %}
+     {% set badgeSufixo = "%" %}
+     {% set badgeLabel = "Completude dos metadados" %}
+     {% include "components/badge.njk" %}
+
+   Auto-deriva variante de % numérico: ≥90 alta, 70-89 media, <70 baixa. #}
+
+{% set _bClasses = "badge" %}
+{% if badgeVariant %}
+  {% set _bClasses = _bClasses + " badge--" + badgeVariant %}
+{% elif badgeSufixo == "%" and badgeValor is number %}
+  {% if badgeValor >= 90 %}
+    {% set _bClasses = _bClasses + " badge--alta" %}
+  {% elif badgeValor >= 70 %}
+    {% set _bClasses = _bClasses + " badge--media" %}
   {% else %}
-    {% set classes = classes + " badge--baixa" %}
+    {% set _bClasses = _bClasses + " badge--baixa" %}
   {% endif %}
 {% else %}
-  {% set classes = classes + " badge--info" %}
+  {% set _bClasses = _bClasses + " badge--info" %}
 {% endif %}
 
-<span class="{{ classes }}"
-      {% if label %}aria-label="{{ label }}: {{ valor }}{{ sufixo or '' }}"{% endif %}>
-  {{ valor }}{{ sufixo or '' }}
+<span class="{{ _bClasses }}"
+      {% if badgeLabel %}aria-label="{{ badgeLabel }}: {{ badgeValor }}{{ badgeSufixo or '' }}"{% endif %}>
+  {{ badgeValor }}{{ badgeSufixo or '' }}
 </span>

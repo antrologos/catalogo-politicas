@@ -1,0 +1,14 @@
+---
+layout: layouts/dimensao.njk
+pagination:
+  data: dimensoes.situacao
+  alias: grupo
+  size: 1
+permalink: "/situacao/{{ grupo.slug }}/"
+eleventyComputed:
+  title: "Políticas {{ grupo.valor }}"
+  description: "Lista das {{ grupo.count }} políticas catalogadas com situação {{ grupo.valor }}, com distribuição por UF e tabela completa."
+  dimensaoNome: "Situação atual"
+  dimensaoSlug: "situacao"
+  dimensaoIcone: "circle-fill"
+---
