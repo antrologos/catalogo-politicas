@@ -1,0 +1,40 @@
+campo,valor_original,valor_normalizado_cosmetico,uf,nome,linha
+tipo_politica,Proteção social com impacto educacional e laboral,Proteção social com impacto educacional e laboral,ES,Estado Presente – eixo de inclusão social de jovens,516
+tipo_politica,Educacional indireta / infraestrutura,Educacional indireta / infraestrutura,MA,Programa Escola Digna,590
+esfera_formulacao,"interfederativa/interinstitucional: União-Estado-Município+Sistema S+entidades formadoras+empresasis, além do Sistema S, sistema de justiça, entidades formadoras e empresas","interfederativa/interinstitucional: União-Estado-Município+Sistema S+entidades formadoras+empresasis, além do Sistema S, sistema de justiça, entidades formadoras e empresas",MG,Programa de Incentivo à Aprendizagem de Minas Gerais – Descubra,153
+esfera_formulacao,Interfederativa: União - Estado,Interfederativa: União - Estado,PB,Sistema Nacional de Emprego (SINE) - PB,749
+origem_proposta,Incentivo financeiro-educacional federal para apoiar permanência e conclusão do ensino médio.,Incentivo financeiro-educacional federal para apoiar permanência e conclusão do ensino médio.,PE,Pé-de-Meia,375
+esfera_execucao,Estado + rede de execução + instituições de ensino públicas/privadas,Estado + rede de execução + instituições de ensino públicas/privadas,RJ,Programa Geração Futuro (RJ),109
+esfera_execucao,Compartilhada interfederativamente: Estado + União,Compartilhada interfederativamente: Estado + União,RS,Pronatec Aprendiz na Micro e Pequena Empresa,246
+esfera_execucao,Estado + rede de execução + instituições de ensino públicas/privadas,Estado + rede de execução + instituições de ensino públicas/privadas,SC,Plano Estadual de Educação em Prisões (2025-2028),537
+esfera_execucao,Compartilhada Interfederativa: União–Município,Compartilhada Interfederativa: União-Município,SC,Programa Brasil Alfabetizado,540
+esfera_execucao,Compartilhada Interfederativa: União–Município,Compartilhada Interfederativa: União-Município,PB,Centros de Artes e Esportes Unificados (CEUs das Artes),742
+esfera_execucao,Compartilha da Interfederativa: União - Município,Compartilha da Interfederativa: União - Município,PB,Consórcio Social da Juventude,752
+esfera_execucao,Compartilhada Interfederativa: União–Município,Compartilhada Interfederativa: União-Município,AL,Centros de Artes e Esportes Unificados (CEUs das Artes),788
+esfera_execucao,Compartilha da Interfederativa: União - Município,Compartilha da Interfederativa: União - Município,AL,Consórcio Social da Juventude,794
+situacao_atual,Descontinuada / sem oferta recente identificada,Descontinuada / sem oferta recente identificada,GO,Bolsa Futuro,471
+tipo_oferta,Presencial,Presencial,PE,Exame Supletivo Anual – Pernambuco,354
+tipo_oferta,Infraestrutura educacional (construção/reforma/ampliação de unidades/polos),Infraestrutura educacional (construção/reforma/ampliação de unidades/polos),MA,Programa Escola Digna,590
+tipo_oferta,. ,.,RN,Plano Estadual de Educação em Ambientes Prisionais RN (2015-2024),817
+modalidade_oferta,Unidade fixa / oferta fixa,Unidade fixa / oferta fixa,PE,Exame Supletivo Anual – Pernambuco,354
+arranjo_logistico,Misto (fixa + polos/ofertas semipresenciais),Misto (fixa + polos/ofertas semipresenciais),GO,Educação de Jovens e Adultos (EJA) – Goiás,439
+arranjo_logistico,Misto (polos fixos + ambiente virtual),Misto (polos fixos + ambiente virtual),GO,EJATec,440
+arranjo_logistico,Misto (unidade fixa + mediação tecnológica),Misto (unidade fixa + mediação tecnológica),GO,Goiás Tec – Ensino Médio ao Alcance de Todos,442
+arranjo_logistico,Unidade fixa/oferta fixa,Unidade fixa/oferta fixa,GO,Busca Ativa: Acolher para Permanecer,443
+arranjo_logistico,Misto (fixa + polos/ofertas descentralizadas),Misto (fixa + polos/ofertas descentralizadas),GO,Bolsa Futuro,471
+arranjo_logistico,"Misto (unidades fixas + ofertas presenciais e a distância, conforme curso)","Misto (unidades fixas + ofertas presenciais e a distância, conforme curso)",GO,Escolas do Futuro do Estado de Goiás (EFG),472
+arranjo_logistico,"Misto (unidades fixas + ofertas descentralizadas/polos, conforme curso)","Misto (unidades fixas + ofertas descentralizadas/polos, conforme curso)",GO,Colégios Tecnológicos do Estado de Goiás (COTEC),473
+arranjo_logistico,Misto (unidades fixas + arranjos flexíveis de oferta),Misto (unidades fixas + arranjos flexíveis de oferta),ES,Educação de Jovens e Adultos (EJA) – Espírito Santo,488
+arranjo_logistico,Misto (centros fixos + apoio tecnológico/material impresso),Misto (centros fixos + apoio tecnológico/material impresso),ES,Centros Estaduais de Educação de Jovens e Adultos (CEEJAs),489
+arranjo_logistico,Misto (escola-sede + apoio tecnológico/material impresso),Misto (escola-sede + apoio tecnológico/material impresso),ES,Núcleos Estaduais de Educação de Jovens e Adultos (NEEJAs),490
+arranjo_logistico,Unidade fixa/oferta fixa,Unidade fixa/oferta fixa,ES,Projeto Integrador de Pesquisa e Articulação com o Território (PIPAT),491
+arranjo_logistico,Misto (CEEJAs + superintendências regionais + atendimento administrativo),Misto (CEEJAs + superintendências regionais + atendimento administrativo),ES,Certificação e regularização escolar da EJA (serviços estaduais),492
+arranjo_logistico,Territorializada (priorização de áreas vulneráveis),Territorializada (priorização de áreas vulneráveis),ES,Estado Presente – eixo de inclusão social de jovens,516
+arranjo_logistico,Unidade fixa/oferta fixa,Unidade fixa/oferta fixa,ES,EJA Profissional (Ensino Médio integrado à Qualificação Profissional),517
+arranjo_logistico,Misto (ofertas on-line + turmas presenciais descentralizadas),Misto (ofertas on-line + turmas presenciais descentralizadas),ES,Qualificar ES,518
+arranjo_logistico,Misto (execução municipal cofinanciada + articulação intersetorial),Misto (execução municipal cofinanciada + articulação intersetorial),ES,Programa Incluir – eixo Mundo do Trabalho / inclusão produtiva,519
+arranjo_logistico,Misto (rede territorial de agentes + atendimento local),Misto (rede territorial de agentes + atendimento local),ES,Nossocrédito,520
+arranjo_logistico,Misto,Misto,PB,Empreender PB,730
+arranjo_logistico,Misto,Misto,AL,Emprega Mais Alagoas,790
+arranjo_logistico,Misto,Misto,RN,EJA em arranjos não escolares e públicos específicos no RN,802
+arranjo_logistico,Misto,Misto,RN,Política de Superação do Analfabetismo do RN,803

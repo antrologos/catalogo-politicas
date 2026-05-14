@@ -2,7 +2,20 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Status: Blocos A-E concluídos. Bloco F.3 quase completo. Em produção (2026-05-04):** mapa D3 (Sprint 8.1+8.2), grafo Cytoscape com compound nodes/drill-down/438 articulações curadas (Sprint 9.7+), **polish da ficha + Sobre (Sprint 9.8: Proveniência/snapshot/datas removidos da UI; "Como citar" refatorado com autoria da equipe de pesquisa; CERES e MAPE linkados com URLs reais)**. Site no ar em https://antrologos.github.io/catalogo-politicas/. Tag mais recente: `v0.2.0-mvp-ux` (próxima tag aguarda polish visual do grafo). **Adiados por decisão da usuária**: Sprint 9.9 polish visual do grafo (layout cose-bilkent ainda não distribui bem) + Sprint 10 (DOI Zenodo + a11y NVDA + divulgação institucional). Antes de qualquer trabalho, leia `.claude/README.md` + plano formal `.claude/plans/2026-05-01_bloco-f-construcao-site.md` + memórias `project_decisoes_f3.md`, `project_grafo_estado_2026_05_04.md` e `project_sprint_9_8_ficha_polish_2026_05_04.md`.
+> **Status: rodada pré-Encontro entregue em 2026-05-13** (plano `precisamos-fazer-alguns-ajustes-mossy-codd.md`). Site no ar em https://antrologos.github.io/catalogo-politicas/.
+>
+> **Pacote da rodada (7 ajustes + 2ª onda):**
+> 1. **Banner permanente** do "Encontro de Formação da Rede EJA e Inclusão Produtiva" (14/mai/2026, SP) — catálogo serve de material de apoio
+> 2. **Dedup réplicas federais na UI** (não no dataset): JSON canônico preserva 843 fichas com `is_federal_replica` marcado; site filtra via `_data/policies.js` e expõe **308 verbetes únicos**; ficha federal ganhou tabela "Execução por estado"; `/uf/<sigla>/` ganhou seção "Políticas federais aplicadas em <UF>"; réplicas perdem URL própria (`/politica/bolsa-familia-sp/` → 404)
+> 3. **Termo "snapshot" removido de toda a UI pública** (mantido backend e captura) — substituído por "fonte oficial preservada"
+> 4. **Grafo Cytoscape ocultado** sem deletar código: `grafo.njk` com `permalink: false`; menus, links e cards removidos; reativação futura possível
+> 5. **Rede EJA — 16 instituições** listadas em `/sobre/#rede-eja` com distinção explícita "compor a rede ≠ realizar a pesquisa ≠ cooperação"
+> 6. **Ressalva metodológica** "Levantamento, não censo": página nova `/sobre/metodologia/` + componente reutilizável `caveat-metodologia.njk` na home, `/uf/*`, `/mapa/`, `/comparacao/`
+> 7. **2ª onda incorporada**: 9 UFs novas (GO, ES, SC, MA, AM, MT, PB, AL, RN) — agora 18 UFs + Federal
+>
+> **Pendência de qualidade da 2ª onda**: 26 fichas com problemas menores (3 valores categóricos fora do vocabulário; 1 ficha vazia em MA) — não bloqueiam build mas precisam revisão da equipe de pesquisa. Detalhes em `data/derived/_intermediate/validation_report.json`.
+>
+> **Antes de qualquer trabalho**, leia `.claude/README.md` + `scripts/etl/README.md` (procedimento para novas ondas) + memória `project_ajustes_pre_encontro_2026_05_13.md`.
 
 ## Propósito do projeto
 

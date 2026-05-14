@@ -1,6 +1,6 @@
-"""C.1.a — Loader resiliente da planilha-fonte.
+"""C.1.a — Loader resiliente das planilhas-fonte.
 
-Lê todas as 11 abas de `data/raw/Fichas das Políticas - 1ª onda.xlsx`,
+Lê todas as abas de cada planilha listada em SOURCES (1ª e 2ª ondas),
 normaliza cabeçalhos (Id/ID/Coluna 1 → id_planilha; Link/Link oficial → link;
 Dúvidas/Dúvida → duvidas_revisor; remove instrução
 '(Verificar planilha Categorias)' embutida em headers de RS/BA/PE/CE),
@@ -8,6 +8,13 @@ remove colunas-fantasma vazias (RS: 3, PA: 4), adiciona coluna `uf` e
 `aba_origem` por linha, e salva CSV bruto unificado em
 `data/derived/_intermediate/raw_planilha.csv` para o próximo passo
 (normalize.py).
+
+A aba "Políticas Federais" é carregada APENAS da 1ª onda; na 2ª onda ela
+é duplicada (32 das 33 entries são idênticas) e fica marcada como None
+no mapa de abas. Réplicas federais nas abas estaduais da 2ª onda são
+tratadas como na 1ª onda — `dedupe.py` marca `is_federal_replica=true`
+quando o `duvidas_revisor` contém "EM TODOS OS ESTADOS" ou o nome casa
+com uma federal canônica.
 
 Convenções: ver @.claude/rules/pipeline-python-etl.md
 Schema canônico de saída: nomes internos snake_case ASCII (não os nomes
@@ -27,11 +34,12 @@ warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
-RAW_XLSX = ROOT / "data" / "raw" / "Fichas das Políticas - 1ª onda.xlsx"
+RAW_XLSX_ONDA1 = ROOT / "data" / "raw" / "Fichas das Políticas - 1ª onda.xlsx"
+RAW_XLSX_ONDA2 = ROOT / "data" / "raw" / "Fichas das Políticas - 2ª onda.xlsx"
 OUT_CSV = ROOT / "data" / "derived" / "_intermediate" / "raw_planilha.csv"
 
-# ─── Mapeamento aba → UF ────────────────────────────────────────────────
-ABA_UF: dict[str, str | None] = {
+# ─── Mapeamento aba → UF por planilha ────────────────────────────────────
+ABA_UF_ONDA1: dict[str, str | None] = {
     "Modelo categorias": None,                       # dicionário humano; pular
     "Políticas federais (comuns a to": "BR",          # nome truncado pelo Excel
     " Planilha SP": "SP",                             # espaço inicial!
@@ -45,6 +53,27 @@ ABA_UF: dict[str, str | None] = {
     "Planilha Ceará": "CE",
 }
 
+ABA_UF_ONDA2: dict[str, str | None] = {
+    "Modelo de Categorias": None,                     # dicionário humano; pular
+    "Políticas Federais (Comuns a to": None,          # duplicada da 1ª onda; pular
+    "Goiás": "GO",
+    "Espírito Santo": "ES",
+    "Santa Catarina": "SC",
+    "Maranhão": "MA",
+    "Amazonas": "AM",
+    "Mato Grosso": "MT",
+    "Paraíba": "PB",                                  # vazia em 2026-05-13; loader pula
+    "Alagoas": "AL",                                  # vazia em 2026-05-13; loader pula
+    "Rio Grande do Norte": "RN",
+}
+
+# Lista das fontes a carregar, em ordem (federal da 1ª onda primeiro garante
+# que `dedupe.py` ache a canônica antes das réplicas da 2ª onda)
+SOURCES: list[tuple[Path, dict[str, str | None]]] = [
+    (RAW_XLSX_ONDA1, ABA_UF_ONDA1),
+    (RAW_XLSX_ONDA2, ABA_UF_ONDA2),
+]
+
 # ─── Mapeamento cabeçalho normalizado → nome canônico interno ────────────
 # Chave: cabeçalho lowercased + ASCII (sem acentos) + sem instruções de revisor
 HEADER_MAP: dict[str, str] = {
@@ -52,6 +81,7 @@ HEADER_MAP: dict[str, str] = {
     "coluna 1": "id_planilha",                        # BA, PE têm col 1 quebrada
     "nome do programa": "nome",
     "nome do programa/politica": "nome",              # variante RJ
+    "f": "nome",                                       # typo no header da aba Mato Grosso (2ª onda)
     "tipo de politica": "tipo_politica",
     "esfera de formulacao da politica": "esfera_formulacao",
     "origem da proposta/ diretriz": "origem_proposta",
@@ -87,8 +117,14 @@ HEADER_MAP: dict[str, str] = {
     "duvida": "duvidas_revisor",
 }
 
-# Cabeçalhos de coluna fantasma a descartar
-GHOST_HEADERS = {"coluna 2", "coluna 3", "coluna 4"}
+# Cabeçalhos de coluna fantasma a descartar.
+# A 2ª onda traz colunas fantasma 28-31 em várias abas (Excel adiciona
+# placeholders quando o usuário rola além do conteúdo real).
+GHOST_HEADERS = {
+    "coluna 2", "coluna 3", "coluna 4",
+    "coluna 28", "coluna 29", "coluna 30", "coluna 31",
+    "column 31",                                       # variante EN em algumas abas da 2ª onda
+}
 
 
 def normalize_header(raw: object) -> str:
@@ -181,42 +217,44 @@ def load_aba(xlsx: Path, aba_nome: str, uf: str) -> tuple[pd.DataFrame, list[str
 
 
 def main() -> int:
-    if not RAW_XLSX.exists():
-        print(f"ERRO: planilha não encontrada: {RAW_XLSX}", file=sys.stderr)
-        return 1
-
-    print(f"Carregando: {RAW_XLSX}")
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
 
     dfs = []
     unmapped_global: dict[str, list[str]] = {}
-    for aba_nome, uf in ABA_UF.items():
-        if uf is None:
-            print(f"  [pula] {aba_nome!r}")
+
+    for src_xlsx, aba_uf_map in SOURCES:
+        if not src_xlsx.exists():
+            print(f"  [pula fonte] {src_xlsx} não existe", file=sys.stderr)
             continue
-        try:
-            df, unmapped = load_aba(RAW_XLSX, aba_nome, uf)
-        except ValueError as e:
-            print(f"  [WARN] {aba_nome!r}: {e}", file=sys.stderr)
-            continue
-        if df.empty:
-            print(f"  [WARN] {aba_nome!r}: vazia após normalização", file=sys.stderr)
-            continue
-        print(
-            f"  [{uf}] {aba_nome!r:48s}  fichas={len(df):3d}  "
-            f"cols_canon={len(df.columns)-2:2d}  "
-            f"unmapped={len(unmapped)}"
-        )
-        if unmapped:
-            unmapped_global[aba_nome] = unmapped
-        dfs.append(df)
+        print(f"\nCarregando: {src_xlsx.name}")
+
+        for aba_nome, uf in aba_uf_map.items():
+            if uf is None:
+                print(f"  [pula] {aba_nome!r}")
+                continue
+            try:
+                df, unmapped = load_aba(src_xlsx, aba_nome, uf)
+            except ValueError as e:
+                print(f"  [WARN] {aba_nome!r}: {e}", file=sys.stderr)
+                continue
+            if df.empty:
+                print(f"  [WARN] {aba_nome!r}: vazia (sem fichas catalogadas)")
+                continue
+            print(
+                f"  [{uf}] {aba_nome!r:48s}  fichas={len(df):3d}  "
+                f"cols_canon={len(df.columns)-2:2d}  "
+                f"unmapped={len(unmapped)}"
+            )
+            if unmapped:
+                unmapped_global[f"{src_xlsx.name}:{aba_nome}"] = unmapped
+            dfs.append(df)
 
     if not dfs:
         print("ERRO: nenhuma aba carregada.", file=sys.stderr)
         return 1
 
     total = pd.concat(dfs, ignore_index=True)
-    print(f"\nTotal: {len(total)} fichas em {len(dfs)} abas.")
+    print(f"\nTotal: {len(total)} fichas em {len(dfs)} abas (somando todas as fontes).")
     print(f"Colunas finais ({len(total.columns)}): {sorted(total.columns)}")
 
     if unmapped_global:

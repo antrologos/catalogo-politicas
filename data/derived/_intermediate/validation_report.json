@@ -1,8 +1,413 @@
 {
   "arquivo": "G:\\Drives compartilhados\\FRM_CatalogoPoliticas\\data\\derived\\latest.json",
-  "total_fichas": 439,
-  "fichas_invalidas": 0,
-  "total_erros": 0,
-  "erros_por_campo": {},
-  "erros_amostra": []
+  "total_fichas": 843,
+  "fichas_invalidas": 26,
+  "total_erros": 68,
+  "erros_por_campo": {
+    "situacao_atual": 1,
+    "tipo_politica": 2,
+    "(raiz)": 65
+  },
+  "erros_amostra": [
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0161",
+      "slug": "bolsa-futuro-go",
+      "uf": "GO",
+      "campo": "situacao_atual",
+      "mensagem": "'Descontinuada / sem oferta recente identificada' is not one of ['Ativa / em execução', 'Encerrada', 'Suspensa / pausada', 'Descontinuada', 'Sem informação']",
+      "valor": "Descontinuada / sem oferta recente identificada"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0001",
+      "slug": "estado-presente-eixo-de-inclusao-social-de-jovens-es",
+      "uf": "ES",
+      "campo": "tipo_politica",
+      "mensagem": "'Proteção social com impacto educacional e laboral' is not one of ['Educacional direta', 'Trabalho/qualificação direta', 'Proteção social com impacto educacional']",
+      "valor": "Proteção social com impacto educacional e laboral"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0002",
+      "slug": "programa-escola-digna-ma",
+      "uf": "MA",
+      "campo": "tipo_politica",
+      "mensagem": "'Educacional indireta / infraestrutura' is not one of ['Educacional direta', 'Trabalho/qualificação direta', 'Proteção social com impacto educacional']",
+      "valor": "Educacional indireta / infraestrutura"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0003",
+      "slug": "sem-nome-ma",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0003', 'slug': 'sem-nome-ma', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://plac"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0003",
+      "slug": "sem-nome-ma",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0003', 'slug': 'sem-nome-ma', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://plac"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0003",
+      "slug": "sem-nome-ma",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0003', 'slug': 'sem-nome-ma', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://plac"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0004",
+      "slug": "sem-nome-ma-2",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0004', 'slug': 'sem-nome-ma-2', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0004",
+      "slug": "sem-nome-ma-2",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0004', 'slug': 'sem-nome-ma-2', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0004",
+      "slug": "sem-nome-ma-2",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0004', 'slug': 'sem-nome-ma-2', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0005",
+      "slug": "sem-nome-ma-3",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0005', 'slug': 'sem-nome-ma-3', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0005",
+      "slug": "sem-nome-ma-3",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0005', 'slug': 'sem-nome-ma-3', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0005",
+      "slug": "sem-nome-ma-3",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0005', 'slug': 'sem-nome-ma-3', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0006",
+      "slug": "sem-nome-ma-4",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0006', 'slug': 'sem-nome-ma-4', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0006",
+      "slug": "sem-nome-ma-4",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0006', 'slug': 'sem-nome-ma-4', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0006",
+      "slug": "sem-nome-ma-4",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0006', 'slug': 'sem-nome-ma-4', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0007",
+      "slug": "sem-nome-ma-5",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0007', 'slug': 'sem-nome-ma-5', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0007",
+      "slug": "sem-nome-ma-5",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0007', 'slug': 'sem-nome-ma-5', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0007",
+      "slug": "sem-nome-ma-5",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0007', 'slug': 'sem-nome-ma-5', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0008",
+      "slug": "sem-nome-ma-6",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0008', 'slug': 'sem-nome-ma-6', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0008",
+      "slug": "sem-nome-ma-6",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0008', 'slug': 'sem-nome-ma-6', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0008",
+      "slug": "sem-nome-ma-6",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0008', 'slug': 'sem-nome-ma-6', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0009",
+      "slug": "sem-nome-ma-7",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0009', 'slug': 'sem-nome-ma-7', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0009",
+      "slug": "sem-nome-ma-7",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0009', 'slug': 'sem-nome-ma-7', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0009",
+      "slug": "sem-nome-ma-7",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0009', 'slug': 'sem-nome-ma-7', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0010",
+      "slug": "sem-nome-ma-8",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0010', 'slug': 'sem-nome-ma-8', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0010",
+      "slug": "sem-nome-ma-8",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0010', 'slug': 'sem-nome-ma-8', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0010",
+      "slug": "sem-nome-ma-8",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0010', 'slug': 'sem-nome-ma-8', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0011",
+      "slug": "sem-nome-ma-9",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0011', 'slug': 'sem-nome-ma-9', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0011",
+      "slug": "sem-nome-ma-9",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0011', 'slug': 'sem-nome-ma-9', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0011",
+      "slug": "sem-nome-ma-9",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0011', 'slug': 'sem-nome-ma-9', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://pl"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0012",
+      "slug": "sem-nome-ma-10",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0012', 'slug': 'sem-nome-ma-10', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0012",
+      "slug": "sem-nome-ma-10",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0012', 'slug': 'sem-nome-ma-10', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0012",
+      "slug": "sem-nome-ma-10",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0012', 'slug': 'sem-nome-ma-10', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0013",
+      "slug": "sem-nome-ma-11",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0013', 'slug': 'sem-nome-ma-11', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0013",
+      "slug": "sem-nome-ma-11",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0013', 'slug': 'sem-nome-ma-11', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0013",
+      "slug": "sem-nome-ma-11",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0013', 'slug': 'sem-nome-ma-11', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0014",
+      "slug": "sem-nome-ma-12",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0014', 'slug': 'sem-nome-ma-12', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0014",
+      "slug": "sem-nome-ma-12",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0014', 'slug': 'sem-nome-ma-12', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0014",
+      "slug": "sem-nome-ma-12",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0014', 'slug': 'sem-nome-ma-12', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0015",
+      "slug": "sem-nome-ma-13",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0015', 'slug': 'sem-nome-ma-13', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0015",
+      "slug": "sem-nome-ma-13",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0015', 'slug': 'sem-nome-ma-13', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0015",
+      "slug": "sem-nome-ma-13",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0015', 'slug': 'sem-nome-ma-13', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0016",
+      "slug": "sem-nome-ma-14",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0016', 'slug': 'sem-nome-ma-14', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0016",
+      "slug": "sem-nome-ma-14",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0016', 'slug': 'sem-nome-ma-14', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0016",
+      "slug": "sem-nome-ma-14",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0016', 'slug': 'sem-nome-ma-14', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0017",
+      "slug": "sem-nome-ma-15",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0017', 'slug': 'sem-nome-ma-15', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0017",
+      "slug": "sem-nome-ma-15",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0017', 'slug': 'sem-nome-ma-15', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0017",
+      "slug": "sem-nome-ma-15",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'tipo_politica' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0017', 'slug': 'sem-nome-ma-15', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0018",
+      "slug": "sem-nome-ma-16",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_formulacao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0018', 'slug': 'sem-nome-ma-16', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    },
+    {
+      "id_interno": "FRM-CP-2026-OUTR-0018",
+      "slug": "sem-nome-ma-16",
+      "uf": "MA",
+      "campo": "(raiz)",
+      "mensagem": "'esfera_execucao' is a required property",
+      "valor": "{'id_interno': 'FRM-CP-2026-OUTR-0018', 'slug': 'sem-nome-ma-16', 'nome': 'nan', 'situacao_atual': 'Sem informação', 'fonte_url': 'https://p"
+    }
+  ]
 }
