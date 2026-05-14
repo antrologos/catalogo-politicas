@@ -55,7 +55,7 @@ Você quer entender **o que existe, o que está ativo, o que mudou** — sem pre
 **Caminho recomendado**:
 
 1. Vá ao [hub /explorar/](/explorar/) — verá cards visuais por dimensão (tipo, situação, modalidade, abrangência, UF, origem).
-2. Comece pela situação **"Ativa em execução"** ou pelo tipo **"Educacional direta"** para ver as políticas ainda vigentes.
+2. Comece pela situação **"Ativa em execução"** ou pelo tipo **"Educacional"** para ver as políticas ainda vigentes.
 3. Cada card de dimensão leva a uma página índice com KPIs e tabela completa.
 4. Tags coloridas no header de cada ficha são clicáveis — encontrou "Modalidade EAD"? Clique e veja outras políticas na mesma modalidade.
 5. Não sabe sigla? A [busca](/buscar/) reconhece termos coloquiais — *"curso pra adulto"*, *"voltar a estudar"*, *"transferência de renda"*.

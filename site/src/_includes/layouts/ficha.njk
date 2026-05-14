@@ -81,74 +81,7 @@ layout: layouts/base.njk
 
   </header>
 
-  {# === Bloco "Política executada em" (apenas canônica federal) === #}
   {% set rel = relacionadas[p.slug] %}
-  {% if rel and rel.apareceEm and rel.apareceEm.length > 0 %}
-    <aside class="my-lg p-md bg-info/5 border-l-4 border-info-dark rounded"
-           aria-labelledby="aparece-em-h">
-      <h2 id="aparece-em-h" class="text-base mt-0 mb-sm">
-        Política federal aplicada em {{ rel.apareceEm.length }} UFs do catálogo
-      </h2>
-      <p class="text-sm text-neutral-700 mt-0 mb-sm">
-        Clique em uma UF para ver o conjunto de políticas catalogadas naquele estado:
-      </p>
-      <ul class="flex flex-wrap gap-2xs list-none p-0 m-0">
-        {% for r in rel.apareceEm %}
-          <li>
-            <a href="/uf/{{ r.uf | lower }}/"
-               class="tag tag--neutral"
-               aria-label="Página de {{ r.uf }}, situação local {{ r.situacao or 'sem informação' }}">
-              <span class="font-semibold">{{ r.uf }}</span>
-              <span class="text-xs text-neutral-700" aria-hidden="true">·</span>
-              <span class="text-xs">{{ r.situacao or 'Sem informação' }}</span>
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </aside>
-
-    {# Tabela "Execução por estado" — preserva o detalhe local que vinha
-       das fichas réplicas (órgão executor + situação local) agora absorvido
-       diretamente na ficha federal canônica (decisão 2026-05-13). #}
-    {% if executacoes.porFederal[p.id_interno] %}
-      <section class="my-lg" aria-labelledby="execucao-uf-h">
-        <h2 id="execucao-uf-h" class="text-base mt-0 mb-sm">Execução por estado</h2>
-        <p class="text-sm text-neutral-700 mb-sm">
-          Detalhe local do órgão executor e situação em cada UF onde o
-          catálogo identificou execução desta política federal.
-        </p>
-        <table class="w-full border-collapse text-sm">
-          <caption class="sr-only">
-            Execução local de {{ p.nome_programa }} por unidade federativa.
-          </caption>
-          <thead>
-            <tr class="border-b-2 border-neutral-500 text-left">
-              <th scope="col" class="p-sm font-semibold">UF</th>
-              <th scope="col" class="p-sm font-semibold">Órgão executor</th>
-              <th scope="col" class="p-sm font-semibold">Situação local</th>
-            </tr>
-          </thead>
-          <tbody>
-            {% for exec in executacoes.porFederal[p.id_interno] %}
-              <tr class="border-b border-neutral-200">
-                <th scope="row" class="p-sm font-medium">
-                  <a href="/uf/{{ exec.uf | lower }}/" class="text-primary">{{ exec.uf }}</a>
-                </th>
-                <td class="p-sm">
-                  {{ exec.orgaos_especificados or (exec.orgaos | join(', ')) or '—' }}
-                </td>
-                <td class="p-sm">
-                  {% if exec.situacao %}
-                    <span class="tag tag--{{ exec.situacao_classe }} text-xs">{{ exec.situacao }}</span>
-                  {% else %}—{% endif %}
-                </td>
-              </tr>
-            {% endfor %}
-          </tbody>
-        </table>
-      </section>
-    {% endif %}
-  {% endif %}
 
   {# === Conteúdo das abas (capturado via {% set %}) === #}
   {% set abaResumo %}

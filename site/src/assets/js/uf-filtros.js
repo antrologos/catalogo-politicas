@@ -8,7 +8,7 @@
  * - Esconde tabela e mostra mensagem se 0 resultados
  *
  * Querystring esperada (chave: valor):
- * - tipo:        nome exato do tipo (ex.: "Educacional direta")
+ * - tipo:        nome exato do tipo (ex.: "Educacional")
  * - situacao:    nome exato da situação (ex.: "Ativa / em execução")
  * - origem:      "federal" | "estadual"
  *

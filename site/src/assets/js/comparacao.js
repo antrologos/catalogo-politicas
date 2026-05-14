@@ -141,8 +141,8 @@
 
     // Linha de distribuição por tipo (3 valores oficiais)
     const tiposCanonicos = [
-      "Educacional direta",
-      "Trabalho/qualificação direta",
+      "Educacional",
+      "Trabalho e qualificação",
       "Proteção social com impacto educacional",
     ];
     for (const tipo of tiposCanonicos) {
