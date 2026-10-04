@@ -237,6 +237,21 @@ GitHub Pages faz deploy automático em ~2 min.
 A sequência é **global** entre ondas: a 2ª onda começa onde a 1ª parou.
 IDs **nunca** são reaproveitados — política revogada mantém seu ID.
 
+### Registro persistente (desde 2026-10-04)
+
+`data/derived/registro_fichas.csv` guarda, para cada ficha, a chave
+`uf|nome normalizado|ocorrência`, o `id_interno`, o `slug`, a onda, as datas
+`criado_em`/`atualizado_em` e o hash do conteúdo. Com ele:
+
+- reordenar linhas na planilha **não** muda IDs nem slugs;
+- fichas novas recebem o próximo número do eixo e a data do processamento;
+- ficha que some da planilha fica `ativo=False` (ID e slug não voltam a ser usados);
+- renomear uma política na planilha cria uma chave nova (novo ID) — se for
+  só correção de grafia, ajuste o registro à mão antes de rodar o ETL;
+- `atualizado_em` só muda quando o hash do conteúdo muda (build_json.py).
+
+**Commitar o registro** junto com o `latest.json`.
+
 ## Histórico
 
 | Data | Ação | Resultado |

@@ -252,7 +252,9 @@ def main() -> int:
     dfs = []
     unmapped_global: dict[str, list[str]] = {}
 
-    for src_xlsx, aba_uf_map in SOURCES:
+    # A posição em SOURCES é o número da onda (1ª, 2ª, 3ª...); vai para a
+    # coluna `onda`, usada por build_ids.py para datar a entrada da ficha.
+    for onda, (src_xlsx, aba_uf_map) in enumerate(SOURCES, start=1):
         if not src_xlsx.exists():
             print(f"  [pula fonte] {src_xlsx} não existe", file=sys.stderr)
             continue
@@ -277,6 +279,7 @@ def main() -> int:
             )
             if unmapped:
                 unmapped_global[f"{src_xlsx.name}:{aba_nome}"] = unmapped
+            df.insert(0, "onda", str(onda))
             dfs.append(df)
 
     if not dfs:

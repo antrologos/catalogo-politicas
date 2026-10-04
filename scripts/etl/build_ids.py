@@ -12,16 +12,25 @@
   sufixo `-2`, `-3` em colisão. Mesma política federal e suas réplicas estaduais
   têm slugs distintos por UF (ex.: `pronatec-br`, `pronatec-sp`, `pronatec-rj`).
 
+- Registro persistente (data/derived/registro_fichas.csv, desde 2026-10-04):
+  cada ficha é identificada por `uf|nome normalizado|ocorrência`. Fichas já
+  registradas mantêm id_interno e slug mesmo se a ordem das linhas mudar; as
+  novas recebem o próximo número do eixo e a data do processamento como
+  criado_em. IDs e slugs nunca são reaproveitados: ficha que some da planilha
+  fica com `ativo=False`. Sem registro (primeira execução), a numeração segue a
+  ordem de entrada — o mesmo resultado de antes — e criado_em é a data da onda.
+
 - Substitui `federal_source_nome` por `federal_source_id` (id da federal de
   origem) — pré-requisito para consumir em build_json.
 
-Saída: data/derived/_intermediate/with_ids.csv
+Saída: data/derived/_intermediate/with_ids.csv + data/derived/registro_fichas.csv
 """
 from __future__ import annotations
 
 import re
 import sys
 import unicodedata
+from datetime import datetime
 from pathlib import Path
 
 import pandas as pd
@@ -30,6 +39,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 IN_CSV = ROOT / "data" / "derived" / "_intermediate" / "deduped.csv"
 OUT_CSV = ROOT / "data" / "derived" / "_intermediate" / "with_ids.csv"
+REGISTRO_CSV = ROOT / "data" / "derived" / "registro_fichas.csv"
 
 ANO_CATALOGO = "2026"
 
@@ -42,6 +52,16 @@ TIPO_TO_EIXO: dict[str, str] = {
 
 # Default eixo se tipo_politica não casar (não deveria acontecer; estatística mostra 100%)
 EIXO_DEFAULT = "OUTR"
+
+# Data de entrada de cada onda no catálogo (criado_em das fichas pré-registro)
+DATAS_ONDA: dict[str, str] = {"1": "2026-05-01", "2": "2026-05-13", "3": "2026-10-04"}
+
+COLUNAS_REGISTRO = [
+    "chave", "id_interno", "slug", "uf", "nome", "onda",
+    "criado_em", "atualizado_em", "hash_conteudo", "ativo",
+]
+
+SLUG_MAX = 120
 
 
 def slugify(s: object) -> str:
@@ -60,6 +80,114 @@ def slugify(s: object) -> str:
     return s[:120]  # limite do schema
 
 
+def nome_norm(s: object) -> str:
+    """Nome normalizado para a chave do registro (mesma regra do dedupe)."""
+    if s is None or (isinstance(s, float) and pd.isna(s)):
+        return ""
+    s = unicodedata.normalize("NFKD", str(s).strip())
+    s = s.encode("ascii", "ignore").decode("ascii").lower()
+    s = re.sub(r"[^a-z0-9 ]+", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
+
+
+def chaves(df: pd.DataFrame) -> list[str]:
+    """Chave estável por linha: uf|nome normalizado|n-ésima ocorrência."""
+    contagem: dict[str, int] = {}
+    out: list[str] = []
+    for uf, nome in zip(df["uf"], df["nome"]):
+        base = f"{str(uf).strip()}|{nome_norm(nome)}"
+        contagem[base] = contagem.get(base, 0) + 1
+        out.append(f"{base}|{contagem[base]}")
+    return out
+
+
+def gerar_slug(nome: object, uf: object, usados: set[str]) -> str:
+    """slugify(nome)-uf, com sufixo -2, -3... se já usado; respeita 120 chars."""
+    base_full = slugify(nome) or "sem-nome"
+    uf = str(uf or "").lower().strip() or "xx"
+    max_base = SLUG_MAX - len(uf) - 1 - 3  # -3 reserva para "-99" em colisão
+    base = base_full[:max_base].rstrip("-")
+    slug = f"{base}-{uf}"
+    n = 1
+    while slug in usados:
+        n += 1
+        slug = f"{base}-{uf}-{n}"
+    if len(slug) > SLUG_MAX:
+        extra = len(slug) - SLUG_MAX
+        base = base[: -extra - 1].rstrip("-")
+        slug = f"{base}-{uf}-{n}" if n > 1 else f"{base}-{uf}"
+    usados.add(slug)
+    return slug
+
+
+def _eixo(tipo: object) -> str:
+    return TIPO_TO_EIXO.get(str(tipo or "").strip(), EIXO_DEFAULT)
+
+
+def atribuir_ids(
+    df: pd.DataFrame, registro: pd.DataFrame | None, hoje: str
+) -> tuple[pd.DataFrame, pd.DataFrame]:
+    """Atribui id_interno e slug a cada linha, usando e atualizando o registro.
+
+    Retorna (df com id_interno/slug, registro atualizado).
+    """
+    df = df.copy()
+    df["_chave"] = chaves(df)
+    onda = df["onda"] if "onda" in df.columns else pd.Series([""] * len(df))
+
+    if registro is None or registro.empty:
+        reg = pd.DataFrame(columns=COLUNAS_REGISTRO)
+    else:
+        reg = registro.copy()
+        for col in COLUNAS_REGISTRO:
+            if col not in reg.columns:
+                reg[col] = ""
+    reg = reg.fillna("")
+    por_chave = {r.chave: i for i, r in enumerate(reg.itertuples())}
+
+    usados = set(reg["slug"])
+    max_seq: dict[str, int] = {}
+    for id_ in reg["id_interno"]:
+        m = re.match(rf"FRM-CP-{ANO_CATALOGO}-([A-Z]+)-(\d{{4}})$", str(id_))
+        if m:
+            max_seq[m.group(1)] = max(max_seq.get(m.group(1), 0), int(m.group(2)))
+
+    primeira_execucao = reg.empty
+    ids: list[str] = []
+    slugs: list[str] = []
+    novas: list[dict] = []
+    for i, row in enumerate(df.itertuples(index=False)):
+        chave = df["_chave"].iat[i]
+        if chave in por_chave:
+            r = reg.iloc[por_chave[chave]]
+            ids.append(r["id_interno"])
+            slugs.append(r["slug"])
+            continue
+        eixo = _eixo(getattr(row, "tipo_politica", ""))
+        max_seq[eixo] = max_seq.get(eixo, 0) + 1
+        id_ = f"FRM-CP-{ANO_CATALOGO}-{eixo}-{max_seq[eixo]:04d}"
+        slug = gerar_slug(getattr(row, "nome", ""), getattr(row, "uf", ""), usados)
+        o = str(onda.iat[i] or "")
+        criado = DATAS_ONDA.get(o, hoje) if primeira_execucao else hoje
+        ids.append(id_)
+        slugs.append(slug)
+        novas.append({
+            "chave": chave, "id_interno": id_, "slug": slug,
+            "uf": getattr(row, "uf", ""), "nome": getattr(row, "nome", ""), "onda": o,
+            "criado_em": criado, "atualizado_em": criado, "hash_conteudo": "", "ativo": "True",
+        })
+
+    if novas:
+        reg = pd.concat([reg, pd.DataFrame(novas, columns=COLUNAS_REGISTRO)], ignore_index=True)
+    presentes = set(df["_chave"])
+    reg["ativo"] = reg["chave"].map(lambda c: "True" if c in presentes else "False")
+
+    df["id_interno"] = ids
+    df["slug"] = slugs
+    df = df.drop(columns=["_chave"])
+    return df, reg[COLUNAS_REGISTRO]
+
+
 def main() -> int:
     if not IN_CSV.exists():
         print(f"ERRO: rodar dedupe.py primeiro (ausente: {IN_CSV})", file=sys.stderr)
@@ -69,26 +197,26 @@ def main() -> int:
     df = pd.read_csv(IN_CSV, encoding="utf-8", dtype=str, keep_default_na=False, na_values=[""])
     print(f"  {len(df)} fichas")
 
-    # ─── Atribuir id_interno ────────────────────────────────────────────
-    # Sequencial por eixo, ordem da planilha (estável)
-    counters: dict[str, int] = {}
-    ids: list[str] = []
-    eixos_usados: dict[str, int] = {}
-    for _, row in df.iterrows():
-        tipo = str(row.get("tipo_politica", "")).strip()
-        eixo = TIPO_TO_EIXO.get(tipo, EIXO_DEFAULT)
-        eixos_usados[eixo] = eixos_usados.get(eixo, 0) + 1
-        counters[eixo] = counters.get(eixo, 0) + 1
-        seq = counters[eixo]
-        ids.append(f"FRM-CP-{ANO_CATALOGO}-{eixo}-{seq:04d}")
-    df["id_interno"] = ids
+    registro = None
+    if REGISTRO_CSV.exists():
+        registro = pd.read_csv(REGISTRO_CSV, encoding="utf-8", dtype=str, keep_default_na=False)
+        print(f"  registro: {len(registro)} fichas conhecidas ({REGISTRO_CSV.name})")
+    else:
+        print("  registro ausente: primeira execução, numeração pela ordem de entrada")
 
+    hoje = datetime.now().strftime("%Y-%m-%d")
+    n_antes = 0 if registro is None else len(registro)
+    df, registro = atribuir_ids(df, registro, hoje)
+
+    eixos = df["id_interno"].str.extract(r"FRM-CP-\d{4}-([A-Z]+)-")[0].value_counts().sort_index()
     print("\n  IDs por eixo:")
-    for eixo, n in sorted(eixos_usados.items()):
+    for eixo, n in eixos.items():
         print(f"    {eixo}  {n:3d} fichas")
+    print(f"  {len(registro) - n_antes} fichas novas no registro; "
+          f"{(registro['ativo'] == 'False').sum()} inativas")
 
     # ─── Resolver federal_source_id ────────────────────────────────────
-    # Mapa nome_normalizado → id_interno (das federais)
+    # Mapa nome → id_interno (das federais)
     federais = df[df["uf"] == "BR"]
     nome_to_id: dict[str, str] = {}
     for _, row in federais.iterrows():
@@ -103,42 +231,19 @@ def main() -> int:
     n_resolvidos = (df["federal_source_id"] != "").sum()
     print(f"  {n_resolvidos} fichas com federal_source_id resolvido")
 
-    # ─── Gerar slug único ──────────────────────────────────────────────
-    # Slug = slugify(nome) + '-' + uf.lower(); limite 120 chars conforme schema.
-    # Em colisão, sufixo -2, -3... Em nomes muito longos, truncar base preservando sufixo.
-    SLUG_MAX = 120
-    seen_slugs: dict[str, int] = {}
-    slugs: list[str] = []
-    for _, row in df.iterrows():
-        base_full = slugify(row.get("nome", "")) or "sem-nome"
-        uf = str(row.get("uf", "")).lower().strip() or "xx"
-        # Reserva pra sufixo -uf e possível -N
-        max_base = SLUG_MAX - len(uf) - 1 - 3  # -3 reserva para "-99" em colisão
-        base = base_full[:max_base].rstrip("-")
-        slug = f"{base}-{uf}"
-        n = 1
-        while slug in seen_slugs:
-            n += 1
-            slug = f"{base}-{uf}-{n}"
-        if len(slug) > SLUG_MAX:
-            # Caso extremo: encurtar mais
-            extra = len(slug) - SLUG_MAX
-            base = base[: -extra - 1].rstrip("-")
-            slug = f"{base}-{uf}-{n}" if n > 1 else f"{base}-{uf}"
-        seen_slugs[slug] = 1
-        slugs.append(slug)
-    df["slug"] = slugs
-
     # Verificação: nenhum duplicado?
     assert df["slug"].is_unique, "Slug duplicado após geração!"
-    print(f"\n  {df['slug'].nunique()} slugs únicos gerados")
+    assert df["id_interno"].is_unique, "id_interno duplicado após geração!"
+    print(f"\n  {df['slug'].nunique()} slugs únicos")
 
     # Limpa coluna auxiliar federal_source_nome (substituída por federal_source_id)
     df = df.drop(columns=["federal_source_nome"])
 
     OUT_CSV.parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(OUT_CSV, index=False, encoding="utf-8")
+    registro.to_csv(REGISTRO_CSV, index=False, encoding="utf-8")
     print(f"\nSalvo: {OUT_CSV}  ({OUT_CSV.stat().st_size:,} bytes)")
+    print(f"Salvo: {REGISTRO_CSV}  ({len(registro)} fichas)")
     return 0
 
 

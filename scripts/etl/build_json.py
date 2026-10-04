@@ -2,7 +2,15 @@
 
 Mapeia colunas internas (snake_case) para os nomes do schema
 (.claude/context/policies-schema.json), calcula completude_pct, gera citações
-APA/BibTeX simples, adiciona timestamps. Salva:
+APA/BibTeX simples e as datas da ficha. Desde 2026-10-04 as datas são reais e
+o build é determinístico (regra pipeline-reproducible):
+  - criado_em / atualizado_em vêm do registro (data/derived/registro_fichas.csv,
+    criado por build_ids.py); atualizado_em só muda quando o hash do conteúdo
+    da ficha muda;
+  - fonte_data_acesso é a data da captura/validação da fonte no índice de
+    snapshots (ausente quando a fonte nunca foi capturada), e
+    proxima_revisao_prevista é calculada a partir dela.
+Salva:
 
   data/derived/policies-onda-1-<YYYY-MM-DD>.json
 
@@ -11,6 +19,7 @@ de symlink — Drive sync não lida bem com links).
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import shutil
@@ -33,6 +42,18 @@ DATA_VERSAO_CATALOGO = DATA_HOJE
 
 OUT_JSON = ROOT / "data" / "derived" / f"policies-onda-1-{DATA_HOJE}.json"
 LATEST = ROOT / "data" / "derived" / "latest.json"
+REGISTRO_CSV = ROOT / "data" / "derived" / "registro_fichas.csv"
+
+OBRA_CATALOGO = "Catálogo de Políticas da Rede EJA e Inclusão Produtiva"
+
+# Campos que NÃO entram no hash de conteúdo: datas, derivados e proveniência
+# do snapshot (mudam sem que o conteúdo levantado da política mude).
+CAMPOS_FORA_DO_HASH = {
+    "criado_em", "atualizado_em", "fonte_data_acesso", "proxima_revisao_prevista",
+    "data_versao_catalogo", "citacao_apa", "citacao_bibtex", "completude_pct",
+    "fonte_arquivo_path", "fonte_sha256", "fonte_extensao", "fonte_ocr_aplicado",
+    "atribuicao", "licenca_inferida", "revisado_por",
+}
 
 # Defaults de revisão por padrão
 REVISOR_DEFAULT = "Maria Clara Gama"
@@ -170,38 +191,85 @@ def calc_completude(ficha: dict) -> int:
 
 
 def gerar_citacoes(ficha: dict) -> tuple[str, str]:
-    """Gera citacao_apa e citacao_bibtex a partir de campos canônicos."""
+    """Gera citacao_apa e citacao_bibtex a partir de campos canônicos.
+
+    Cita a política (autoria = órgão atribuído à fonte) dentro do catálogo da
+    Rede EJA. Placeholders de fonte (domínio .local) não entram como URL, e a
+    data de acesso só aparece quando a fonte foi de fato acessada.
+    """
     nome = ficha.get("nome", "")
     ano = ficha.get("ano_criacao", "")
     url = ficha.get("fonte_url", "")
-    atrib = ficha.get("atribuicao", "Catálogo FRM de Políticas Públicas")
-    data_acesso = ficha.get("fonte_data_acesso", DATA_HOJE)
+    if ".local/" in url:
+        url = ""
+    atrib = ficha.get("atribuicao") or "Brasil"
+    data_acesso = ficha.get("fonte_data_acesso")
     versao = ficha.get("data_versao_catalogo", DATA_VERSAO_CATALOGO)
 
     # APA-like simples
-    apa_partes = []
-    apa_partes.append(atrib if atrib else "Brasil")
+    apa_partes = [atrib]
     if ano:
         apa_partes.append(f"({ano})")
     apa_partes.append(f"{nome}.")
-    apa_partes.append(f"Catálogo FRM de Políticas Públicas (versão {versao}).")
-    if url:
+    apa_partes.append(f"{OBRA_CATALOGO} (versão {versao}).")
+    if url and data_acesso:
         apa_partes.append(f"Recuperado em {data_acesso} de {url}")
+    elif url:
+        apa_partes.append(url)
     citacao_apa = " ".join(apa_partes)
 
     # BibTeX
     chave = ficha.get("slug", "ficha").replace("-", "_")
-    citacao_bibtex = (
-        f"@misc{{{chave},\n"
-        f"  author       = {{{atrib if atrib else 'Brasil'}}},\n"
-        f"  title        = {{{nome}}},\n"
-        f"  year         = {{{ano if ano else 'n.d.'}}},\n"
-        f"  howpublished = {{Catálogo FRM de Políticas Públicas, versão {versao}}},\n"
-        f"  url          = {{{url}}},\n"
-        f"  urldate      = {{{data_acesso}}}\n"
-        f"}}"
-    )
+    linhas = [
+        f"@misc{{{chave},",
+        f"  author       = {{{atrib}}},",
+        f"  title        = {{{nome}}},",
+        f"  year         = {{{ano if ano else 'n.d.'}}},",
+        f"  howpublished = {{{OBRA_CATALOGO}, versão {versao}}},",
+    ]
+    if url:
+        linhas.append(f"  url          = {{{url}}},")
+    if url and data_acesso:
+        linhas.append(f"  urldate      = {{{data_acesso}}},")
+    linhas[-1] = linhas[-1].rstrip(",")
+    citacao_bibtex = "\n".join(linhas) + "\n}"
     return citacao_apa, citacao_bibtex
+
+
+def hash_conteudo(ficha: dict) -> str:
+    """SHA-256 (16 hex) do conteúdo da ficha, ignorando campos voláteis."""
+    conteudo = {k: v for k, v in ficha.items() if k not in CAMPOS_FORA_DO_HASH}
+    bruto = json.dumps(conteudo, ensure_ascii=False, sort_keys=True)
+    return hashlib.sha256(bruto.encode("utf-8")).hexdigest()[:16]
+
+
+def datas_da_ficha(ficha: dict, reg: dict, hoje: str) -> tuple[str, str, str]:
+    """(criado_em, atualizado_em, hash) a partir do registro da ficha.
+
+    atualizado_em muda para `hoje` só quando o hash do conteúdo muda. Na
+    primeira execução com registro (hash vazio), atualizado_em = criado_em.
+    """
+    novo = hash_conteudo(ficha)
+    criado = reg.get("criado_em") or hoje
+    anterior = reg.get("hash_conteudo") or ""
+    if not anterior:
+        atualizado = reg.get("atualizado_em") or criado
+    elif anterior != novo:
+        atualizado = hoje
+    else:
+        atualizado = reg.get("atualizado_em") or criado
+    return criado, atualizado, novo
+
+
+def data_acesso_snapshot(snap: dict) -> str | None:
+    """Data (YYYY-MM-DD) do último acesso real à fonte: validação ou captura."""
+    datas = [str(snap.get(k))[:10] for k in ("ultima_validacao", "data_captura") if snap.get(k)]
+    return max(datas) if datas else None
+
+
+def iso_meia_noite(d: str) -> str:
+    """'2026-05-01' → '2026-05-01T00:00:00-03:00' (formato date-time do schema)."""
+    return f"{d}T00:00:00-03:00"
 
 
 def main() -> int:
@@ -232,6 +300,16 @@ def main() -> int:
             print(f"  [WARN] index.json corrompido: {e}", file=sys.stderr)
     else:
         print("  [INFO] index.json não existe; campos fonte_sha256/fonte_extensao ficam null")
+
+    # Registro de fichas (criado por build_ids.py): id_interno → linha
+    registro: dict[str, dict] = {}
+    reg_df = None
+    if REGISTRO_CSV.exists():
+        reg_df = pd.read_csv(REGISTRO_CSV, encoding="utf-8", dtype=str, keep_default_na=False)
+        registro = {r["id_interno"]: r for r in reg_df.to_dict("records")}
+        print(f"  registro: {len(registro)} fichas")
+    else:
+        print("  [WARN] registro_fichas.csv ausente; criado_em/atualizado_em = hoje", file=sys.stderr)
 
     fichas: list[dict] = []
     sem_fonte_url = 0
@@ -278,7 +356,7 @@ def main() -> int:
             "continuidade_governos": clean(row.get("continuidade_governos")),
             "fonte_url": fonte_url,
             "fonte_tipo": fonte_tipo,
-            "fonte_data_acesso": DATA_HOJE,
+            "fonte_data_acesso": None,  # data real de acesso, se houver snapshot
             "fonte_arquivo_path": None,  # preenchido abaixo se snapshot existe
             "fonte_sha256": None,
             "fonte_extensao": None,
@@ -301,16 +379,12 @@ def main() -> int:
             "apresentacao": clean(row.get("apresentacao")),
             "informacoes_complementares": clean(row.get("informacoes_complementares")),
             "duvidas_revisor": clean(row.get("duvidas_revisor")),
-            "criado_em": TIMESTAMP_AGORA,
-            "atualizado_em": TIMESTAMP_AGORA,
+            "criado_em": None,       # preenchidos abaixo a partir do registro
+            "atualizado_em": None,
             "revisado_por": REVISOR_DEFAULT,
             "data_versao_catalogo": DATA_VERSAO_CATALOGO,
+            "proxima_revisao_prevista": None,
         }
-
-        # Próxima revisão prevista a partir do TTL
-        ttl = TTL_DIAS.get(fonte_tipo, 90)
-        proxima = (datetime.now(TZ_BR) + timedelta(days=ttl)).strftime("%Y-%m-%d")
-        ficha["proxima_revisao_prevista"] = proxima
 
         # D.4: popular info de snapshot a partir do index.json
         if fonte_url in snapshot_by_url:
@@ -326,7 +400,24 @@ def main() -> int:
                 ficha["atribuicao"] = snap["atribuicao"]
             if snap.get("licenca_inferida"):
                 ficha["licenca_inferida"] = snap["licenca_inferida"]
+            ficha["fonte_data_acesso"] = data_acesso_snapshot(snap)
             com_snapshot += 1
+
+        # Próxima revisão prevista: último acesso real à fonte + TTL do tipo.
+        # Sem acesso registrado, fica nula (não se inventa prazo).
+        if ficha["fonte_data_acesso"]:
+            ttl = TTL_DIAS.get(fonte_tipo, 90)
+            base = datetime.strptime(ficha["fonte_data_acesso"], "%Y-%m-%d")
+            ficha["proxima_revisao_prevista"] = (base + timedelta(days=ttl)).strftime("%Y-%m-%d")
+
+        # Datas da ficha a partir do registro (build_ids.py): atualizado_em só
+        # muda quando o conteúdo muda.
+        reg = registro.get(ficha["id_interno"], {})
+        criado, atualizado, novo_hash = datas_da_ficha(ficha, reg, DATA_HOJE)
+        ficha["criado_em"] = iso_meia_noite(criado)
+        ficha["atualizado_em"] = iso_meia_noite(atualizado)
+        if reg:
+            reg.update({"criado_em": criado, "atualizado_em": atualizado, "hash_conteudo": novo_hash})
 
         # Completude calculada por último
         ficha["completude_pct"] = calc_completude(ficha)
@@ -349,6 +440,14 @@ def main() -> int:
 
     print(f"  {sem_fonte_url} fichas sem fonte_url (placeholder gerado)")
     print(f"  {com_snapshot} fichas com snapshot capturado em data/external_snapshots/")
+
+    # Grava de volta o registro com hash e atualizado_em
+    if reg_df is not None:
+        cols = list(reg_df.columns)
+        pd.DataFrame(list(registro.values()), columns=cols).to_csv(
+            REGISTRO_CSV, index=False, encoding="utf-8"
+        )
+        print(f"  registro atualizado: {REGISTRO_CSV.name}")
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(
