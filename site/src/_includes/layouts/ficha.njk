@@ -108,13 +108,14 @@ layout: layouts/base.njk
       <dt class="font-semibold text-neutral-700">Tipo de política</dt>
       <dd>{{ p.tipo_politica or '—' }}</dd>
 
+      {# DF: "Distrito Federal" equivale a Estado nos dados e nas listas; só o rótulo muda #}
       {% if p.esfera_formulacao %}
         <dt class="font-semibold text-neutral-700">Esfera de formulação</dt>
-        <dd>{{ p.esfera_formulacao }}</dd>
+        <dd>{{ "Distrito Federal" if (p.uf == "DF" and p.esfera_formulacao == "Estado") else p.esfera_formulacao }}</dd>
       {% endif %}
       {% if p.esfera_execucao %}
         <dt class="font-semibold text-neutral-700">Esfera de execução</dt>
-        <dd>{{ p.esfera_execucao }}</dd>
+        <dd>{{ "Distrito Federal" if (p.uf == "DF" and p.esfera_execucao == "Estado") else p.esfera_execucao }}</dd>
       {% endif %}
       {% if p.abrangencia_territorial %}
         <dt class="font-semibold text-neutral-700">Abrangência territorial</dt>
