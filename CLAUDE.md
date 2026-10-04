@@ -2,7 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-> **Status: rodada pré-Encontro entregue em 2026-05-13** (plano `precisamos-fazer-alguns-ajustes-mossy-codd.md`). Site no ar em https://antrologos.github.io/catalogo-politicas/.
+> **Status 2026-10-04: 3ª onda incorporada** (plano `.claude/plans/2026-10-04_incorporar-3a-onda.md`). Catálogo cobre agora **as 27 UFs + Federal**: 1158 fichas no JSON canônico, **366 verbetes únicos** na UI (eram 287). UFs novas: MS, RR, DF, RO, PI, AC, SE, TO, AP. 2ª onda passou a ser lida da versão revisada `data/raw/Fichas das Políticas - 2ª onda (rev. 2026-10).xlsx` (original preservado). Corrigido bug de 14/mai que dava ID `OUTR-xxxx` a 637 fichas (IDs voltaram a `EDU`/`TRAB`, idênticos ao deploy de 13/mai). "Distrital" (DF) = Estadual nos dados; site exibe o rótulo "Distrital" nas fichas do DF. Os números "308 verbetes" e "26 fichas pendentes" abaixo estão superados (validação: 0 erros).
+>
+> **Status anterior: rodada pré-Encontro entregue em 2026-05-13** (plano `precisamos-fazer-alguns-ajustes-mossy-codd.md`). Site no ar em https://antrologos.github.io/catalogo-politicas/.
 >
 > **Pacote da rodada (7 ajustes + 2ª onda):**
 > 1. **Banner permanente** do "Encontro de Formação da Rede EJA e Inclusão Produtiva" (14/mai/2026, SP) — catálogo serve de material de apoio

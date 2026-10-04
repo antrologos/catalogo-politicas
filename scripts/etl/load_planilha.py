@@ -1,6 +1,6 @@
 """C.1.a — Loader resiliente das planilhas-fonte.
 
-Lê todas as abas de cada planilha listada em SOURCES (1ª e 2ª ondas),
+Lê todas as abas de cada planilha listada em SOURCES (1ª, 2ª e 3ª ondas),
 normaliza cabeçalhos (Id/ID/Coluna 1 → id_planilha; Link/Link oficial → link;
 Dúvidas/Dúvida → duvidas_revisor; remove instrução
 '(Verificar planilha Categorias)' embutida em headers de RS/BA/PE/CE),
@@ -9,9 +9,9 @@ remove colunas-fantasma vazias (RS: 3, PA: 4), adiciona coluna `uf` e
 `data/derived/_intermediate/raw_planilha.csv` para o próximo passo
 (normalize.py).
 
-A aba "Políticas Federais" é carregada APENAS da 1ª onda; na 2ª onda ela
-é duplicada (32 das 33 entries são idênticas) e fica marcada como None
-no mapa de abas. Réplicas federais nas abas estaduais da 2ª onda são
+A aba "Políticas Federais" é carregada APENAS da 1ª onda; na 2ª e na 3ª
+ondas ela é duplicada (32 das 33 entries são idênticas) e fica marcada como
+None no mapa de abas. Réplicas federais nas abas estaduais da 2ª onda são
 tratadas como na 1ª onda — `dedupe.py` marca `is_federal_replica=true`
 quando o `duvidas_revisor` contém "EM TODOS OS ESTADOS" ou o nome casa
 com uma federal canônica.
@@ -35,7 +35,10 @@ warnings.filterwarnings("ignore", category=UserWarning, module="openpyxl")
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 RAW_XLSX_ONDA1 = ROOT / "data" / "raw" / "Fichas das Políticas - 1ª onda.xlsx"
-RAW_XLSX_ONDA2 = ROOT / "data" / "raw" / "Fichas das Políticas - 2ª onda.xlsx"
+# 2ª onda: versão revisada em 2026-10 (3 correções de texto em MA/AM); o
+# arquivo original "Fichas das Políticas - 2ª onda.xlsx" fica preservado
+RAW_XLSX_ONDA2 = ROOT / "data" / "raw" / "Fichas das Políticas - 2ª onda (rev. 2026-10).xlsx"
+RAW_XLSX_ONDA3 = ROOT / "data" / "raw" / "Fichas das Políticas - 3ª onda.xlsx"
 OUT_CSV = ROOT / "data" / "derived" / "_intermediate" / "raw_planilha.csv"
 
 # ─── Mapeamento aba → UF por planilha ────────────────────────────────────
@@ -67,11 +70,26 @@ ABA_UF_ONDA2: dict[str, str | None] = {
     "Rio Grande do Norte": "RN",
 }
 
+ABA_UF_ONDA3: dict[str, str | None] = {
+    "Modelos de Categorias": None,                    # dicionário humano; pular
+    "Políticas Federais (Comuns a to": None,          # duplicada da 1ª onda; pular
+    "Mato Grosso do Sul": "MS",
+    "Roraima": "RR",
+    "Distrito Federal": "DF",
+    "Rondônia": "RO",
+    "Piauí": "PI",
+    "Acre": "AC",
+    "Sergipe": "SE",
+    "Tocantins": "TO",
+    "Amapá": "AP",
+}
+
 # Lista das fontes a carregar, em ordem (federal da 1ª onda primeiro garante
-# que `dedupe.py` ache a canônica antes das réplicas da 2ª onda)
+# que `dedupe.py` ache a canônica antes das réplicas das ondas seguintes)
 SOURCES: list[tuple[Path, dict[str, str | None]]] = [
     (RAW_XLSX_ONDA1, ABA_UF_ONDA1),
     (RAW_XLSX_ONDA2, ABA_UF_ONDA2),
+    (RAW_XLSX_ONDA3, ABA_UF_ONDA3),
 ]
 
 # ─── Mapeamento cabeçalho normalizado → nome canônico interno ────────────
@@ -97,6 +115,7 @@ HEADER_MAP: dict[str, str] = {
     "orgao(s) responsavel(s) com especificacoes": "orgaos_responsaveis_detalhe",
     "orgao(s) responsavel(is) com especificacoes": "orgaos_responsaveis_detalhe",
     "orgao (s) responsavel (s) com especificacoes": "orgaos_responsaveis_detalhe",
+    "orgao(s) responsavel(eis) com especificacoes": "orgaos_responsaveis_detalhe",  # RR/AC/SE/TO/AP (3ª onda)
     "ano de criacao do programa": "ano_criacao",
     "situacao atual": "situacao_atual",
     "base legal": "base_legal",
@@ -124,6 +143,8 @@ GHOST_HEADERS = {
     "coluna 2", "coluna 3", "coluna 4",
     "coluna 28", "coluna 29", "coluna 30", "coluna 31",
     "column 31",                                       # variante EN em algumas abas da 2ª onda
+    "coluna 5", "coluna 6", "coluna 7", "coluna 8",    # 3ª onda (vazias)
+    "column 36",                                       # 3ª onda (RR, TO; vazia)
 }
 
 

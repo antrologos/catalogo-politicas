@@ -57,9 +57,9 @@ def politicas(pipeline_executado) -> list[dict]:
 
 # ─── Estrutura geral ───────────────────────────────────────────────
 
-def test_total_439_fichas(politicas):
-    """Onda 1 tem exatamente 439 fichas (33 federais + 9 UFs)."""
-    assert len(politicas) == 439
+def test_total_1158_fichas(politicas):
+    """Ondas 1-3 somam 1158 fichas (33 federais + 26 UFs, réplicas incluídas)."""
+    assert len(politicas) == 1158
 
 
 def test_todas_validam_contra_schema(politicas):
@@ -96,8 +96,13 @@ def test_uf_br_tem_33_federais(politicas):
     assert len(federais) == 33
 
 
-def test_todas_9_ufs_estao_presentes(politicas):
-    ufs_esperadas = {"BR", "SP", "RJ", "MG", "PR", "RS", "BA", "PA", "PE", "CE"}
+def test_todas_27_ufs_estao_presentes(politicas):
+    ufs_esperadas = {
+        "BR",
+        "SP", "RJ", "MG", "PR", "RS", "BA", "PA", "PE", "CE",   # 1ª onda
+        "GO", "ES", "SC", "MA", "AM", "MT", "PB", "AL", "RN",   # 2ª onda
+        "MS", "RR", "DF", "RO", "PI", "AC", "SE", "TO", "AP",   # 3ª onda
+    }
     ufs_no_json = {f["uf"] for f in politicas if f.get("uf")}
     assert ufs_no_json == ufs_esperadas
 
@@ -106,8 +111,8 @@ def test_todas_9_ufs_estao_presentes(politicas):
 
 def test_tipo_politica_apenas_3_canonicos(politicas):
     canonicos = {
-        "Educacional direta",
-        "Trabalho/qualificação direta",
+        "Educacional",
+        "Trabalho e qualificação",
         "Proteção social com impacto educacional",
     }
     valores = {f["tipo_politica"] for f in politicas}

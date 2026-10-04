@@ -206,9 +206,21 @@ GitHub Pages faz deploy automático em ~2 min.
 - **Typo no header**: a aba "Mato Grosso" da 2ª onda tem coluna B com header
   literal `'F'` em vez de `'Nome do Programa'`. Resolvido via mapping
   específico em `HEADER_MAP`.
-- **Aba duplicada**: a aba "Políticas Federais (Comuns a to" da 2ª onda
-  é **quase** idêntica à da 1ª (32 de 33 fichas). Marcamos a da 2ª como
-  `None` em `ABA_UF_ONDA2` para evitar duplicar a canônica.
+- **Aba duplicada**: a aba "Políticas Federais (Comuns a to" da 2ª e da 3ª
+  ondas é **quase** idêntica à da 1ª (32 de 33 fichas). Marcamos ambas como
+  `None` em `ABA_UF_ONDA2`/`ABA_UF_ONDA3` para evitar duplicar a canônica.
+- **Variante de cabeçalho silenciosa** (3ª onda): `Órgão(s) responsável(eis)
+  com especificações` não casava com o `HEADER_MAP` e a coluna seria
+  descartada sem erro — só aparece na lista "Cabeçalhos NÃO mapeados" do
+  log do `load_planilha.py`. **Sempre conferir essa lista** ao incorporar onda.
+- **Valores fora do vocabulário** quebram o job `validate` do deploy
+  (`situacao_atual`, `tipo_politica`) ou criam páginas de faceta espúrias no
+  site (`abrangencia_territorial`, `modalidade_oferta`). Mapear em
+  `variants` do `vocabulario-canonico.json`. "Distrital" (DF) mapeia para
+  "Estadual"; o site exibe o rótulo "Distrital" nas fichas do DF.
+- **Renomear categoria de `tipo_politica`** exige atualizar `TIPO_TO_EIXO`
+  em `build_ids.py` — senão os IDs caem em `OUTR` (aconteceu entre
+  2026-05-14 e 2026-10-04; `tests/toy_onda3.py` agora pega isso).
 - **Réplicas federais**: o `dedupe.py` marca `is_federal_replica=true`
   quando (a) o campo `duvidas_revisor` contém `"EM TODOS OS ESTADOS"` ou
   (b) o `nome` normalizado de uma ficha estadual casa com uma federal
@@ -231,6 +243,8 @@ IDs **nunca** são reaproveitados — política revogada mantém seu ID.
 |---|---|---|
 | 2026-05-01 | 1ª onda incorporada | 439 fichas em 9 UFs + Federal |
 | 2026-05-13 | 2ª onda incorporada | 843 fichas em 18 UFs + Federal (308 únicas após dedup) |
+| 2026-05-13 | Filtro de linhas-fantasma (MA) | 822 fichas (287 únicas) |
+| 2026-10-04 | 3ª onda incorporada (MS, RR, DF, RO, PI, AC, SE, TO, AP) + 2ª onda revisada | 1158 fichas em 27 UFs + Federal (366 únicas após dedup) |
 
 ## Veja também
 

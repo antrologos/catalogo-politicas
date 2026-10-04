@@ -27,10 +27,12 @@
         "educacional direta": "Educacional",
         "trabalho/qualificação direta": "Trabalho e qualificação",
         "proteção social com impacto educacional e laboral": "Proteção social com impacto educacional",
-        "educacional indireta / infraestrutura": "Educacional"
+        "educacional indireta / infraestrutura": "Educacional",
+        "misto": "Proteção social com impacto educacional"
       },
       "_outliers_observados": [
-        "'Educacional indireta / infraestrutura' (1 ocorrência em MA, 2ª onda — Programa Escola Digna) — mapeamento ad-hoc para 'Educacional direta' porque infraestrutura escolar serve à oferta educacional. REVISAR com equipe de pesquisa: pode justificar 4ª categoria canônica ou pertencer a 'Proteção social com impacto educacional'."
+        "'Educacional indireta / infraestrutura' (1 ocorrência em MA, 2ª onda — Programa Escola Digna) — mapeamento ad-hoc para 'Educacional direta' porque infraestrutura escolar serve à oferta educacional. REVISAR com equipe de pesquisa: pode justificar 4ª categoria canônica ou pertencer a 'Proteção social com impacto educacional'.",
+        "'Misto' (1 ocorrência em DF, 3ª onda — ProJovem Urbano e Campo) — mapeado para 'Proteção social com impacto educacional', mesma classificação do ProJovem federal canônico (decisão 2026-10-04)."
       ],
       "descricao": "Tipo canônico de política pública (3 categorias fechadas). Renomeado em 2026-05-14: 'Educacional direta' → 'Educacional'; 'Trabalho/qualificação direta' → 'Trabalho e qualificação' (decisão de UX da usuária — termos mais curtos e claros). Variants mapeiam os nomes antigos para os novos automaticamente via normalize.py."
     },
@@ -119,9 +121,21 @@
       ],
       "variants": {
         "estadual (cobertura em uma uf)": "Estadual",
-        "sem recorte territorial específico/ difusa": "Sem recorte territorial específico/difusa"
+        "sem recorte territorial específico/ difusa": "Sem recorte territorial específico/difusa",
+        "distrital": "Estadual",
+        "estadual/distrital, com diretrizes nacionais": "Estadual",
+        "estadual, com execução em boa vista, alto alegre, amajari e outros municípios conforme turmas": "Estadual",
+        "estadual, via campi do ifrr": "Estadual",
+        "estadual, com ações em unidades prisionais e outros públicos conforme portfólio": "Estadual",
+        "estadual, com busca ativa nos 224 municípios": "Estadual",
+        "estadual, com interiorização por territórios de desenvolvimento": "Estadual",
+        "estadual, com acesso digital": "Estadual",
+        "estadual, com implementação nos 22 municípios": "Estadual",
+        "estadual, com cursos em municípios selecionados": "Estadual",
+        "nacional, com execução local quando aderido": "Nacional",
+        "nacional, com execução estadual": "Nacional"
       },
-      "descricao": "4 valores canônicos. Drift: descrição entre parênteses incorporada ao valor; espaçamento variável."
+      "descricao": "4 valores canônicos. Drift: descrição entre parênteses incorporada ao valor; espaçamento variável. 3ª onda (2026-10-04): 'Distrital' (DF) é equivalente a 'Estadual' e mapeia para ele — o site exibe o rótulo 'Distrital' nas fichas do DF, sem criar categoria separada; valores 'Estadual, com …' / 'Nacional, com …' perdem o detalhe descritivo (que costuma estar no Resumo/Apresentação)."
     },
     "situacao_atual": {
       "canonical_values": [
@@ -136,9 +150,14 @@
         "encerrada (terminou oficialmente - fim de vigência, término do ciclo, último edital encerrado)": "Encerrada",
         "suspensa / pausada (teve interrupção declarada -por contingenciamento, transição, crise), com possibilidade de retorno)": "Suspensa / pausada",
         "descontinuada (foi encerrada sem continuidade, ou perdeu institucionalidade)": "Descontinuada",
-        "descontinuada / sem oferta recente identificada": "Descontinuada"
+        "descontinuada / sem oferta recente identificada": "Descontinuada",
+        "ativa / em execução conforme uf": "Ativa / em execução",
+        "ativa / em desenvolvimento": "Ativa / em execução",
+        "ativa / em execução ou com implementação vinculada à rede": "Ativa / em execução",
+        "situação variável por modalidade": "Sem informação",
+        "sem informação / indeterminada (não dá para afirmar o status com as fontes disponíveis)": "Sem informação"
       },
-      "descricao": "5 valores canônicos. Drift: a planilha tem versões longas com definição entre parênteses; canônico é a versão curta. 2ª onda trouxe variante 'Descontinuada / sem oferta recente identificada' mapeada para 'Descontinuada'."
+      "descricao": "5 valores canônicos. Drift: a planilha tem versões longas com definição entre parênteses; canônico é a versão curta. 2ª onda trouxe variante 'Descontinuada / sem oferta recente identificada' mapeada para 'Descontinuada'. 3ª onda (2026-10-04): variantes 'Ativa / …' → 'Ativa / em execução'; 'Situação variável por modalidade' (DF ProJovem Urbano e Campo; ficha descreve experiência passada, sem evidência de situação atual) → 'Sem informação'."
     },
     "tipo_oferta": {
       "canonical_values": [
@@ -180,10 +199,13 @@
         "mista (múltiplas modalidades sem predominância clara)": "Mista",
         "educação à distância (ead)": "Educação à distância (EaD)",
         "semi-presencial/ híbrida": "Semipresencial/híbrida",
-        "sem informação/ não identificável": "Sem informação"
+        "sem informação/ não identificável": "Sem informação",
+        "misto (combina múltiplos tipos de oferta sem predominância clara)": "Mista",
+        "itinerante (equipes/unidades móveis; ações em comunidades)": "Presencial"
       },
       "_outliers_observados": [
-        "Unidade fixa / oferta fixa (1 ocorrência; valor de Arranjo logístico colado neste campo; corrigir manualmente na planilha)"
+        "Unidade fixa / oferta fixa (1 ocorrência; valor de Arranjo logístico colado neste campo; corrigir manualmente na planilha)",
+        "Itinerante (1 ocorrência em PI, 3ª onda — Qualifica Piauí; valor de Arranjo logístico colado neste campo) — mapeado para 'Presencial' porque a oferta é em carretas-escola e espaços municipais (decisão 2026-10-04)"
       ],
       "descricao": "6 valores canônicos. Drift: parêntese desfechado em 'Mista', hífen em 'Semipresencial', barra+espaço em 'Sem informação'. Outlier: 'Unidade fixa' é valor de Arranjo colado errado."
     },
