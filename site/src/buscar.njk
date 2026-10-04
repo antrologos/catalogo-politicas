@@ -20,7 +20,7 @@ permalink: /buscar/
 
   <p class="text-sm text-neutral-700 mt-sm">
     <strong>{{ policies | length }}</strong> políticas no catálogo
-    (1ª onda — 9 UFs + Federal).
+    ({{ agregados.ufsCobertas | length - 1 }} UFs + Federal).
     <kbd class="bg-neutral-100 border border-neutral-200 px-2xs rounded text-xs">/</kbd>
     foca a caixa de busca.
     Buscas por sigla são reconhecidas — ex.:

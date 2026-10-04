@@ -6,19 +6,20 @@ permalink: /sobre/cobertura/
 
 # Cobertura geográfica e cronograma
 
-## 1ª onda (concluída em maio de 2026)
+## Ondas do levantamento
 
-| Esfera | UFs cobertas |
-|---|---|
-| Federal | Brasil (políticas federais canônicas) |
-| Estadual — 1ª onda | SP, RJ, MG, PR, RS, BA, PA, PE, CE |
-| Estadual — 2ª onda | GO, ES, SC, MA, AM, MT, RN, PB, AL |
+| Esfera | UFs cobertas | Incorporação |
+|---|---|---|
+| Federal | Brasil (políticas federais canônicas) | maio de 2026 |
+| Estadual — 1ª onda | SP, RJ, MG, PR, RS, BA, PA, PE, CE | maio de 2026 |
+| Estadual — 2ª onda | GO, ES, SC, MA, AM, MT, RN, PB, AL | maio de 2026 |
+| Estadual — 3ª onda | MS, RR, DF, RO, PI, AC, SE, TO, AP | outubro de 2026 |
 
-## 2ª onda (incorporada em maio de 2026)
+Com a 3ª onda, o catálogo passa a cobrir **todas as {{ agregados.ufsCobertas | length - 1 }} unidades da federação** (26 estados + Distrito Federal) e a esfera federal: **{{ agregados.estaduaisUnicasCount }} políticas estaduais únicas** + **{{ agregados.federaisCount }} políticas federais canônicas** = **{{ agregados.total }} verbetes únicos**.
 
-Em **{{ agregados.estaduaisUnicasCount }} políticas estaduais únicas** + **{{ agregados.federaisCount }} políticas federais canônicas** = **{{ agregados.total }} verbetes únicos** no catálogo, distribuídos por **{{ agregados.ufsCobertas | length - 1 }} unidades da federação** (mais Federal).
+Nas fichas do Distrito Federal, a abrangência territorial aparece como **Distrital**; em buscas e listas ela é tratada como **Estadual**.
 
-> **Importante:** o catálogo cobre majoritariamente a Norte, Nordeste e Centro-Oeste a partir desta 2ª onda. Ainda **não inclui** Distrito Federal, Acre, Amapá, Roraima, Rondônia, Tocantins, Sergipe, Piauí e Mato Grosso do Sul.
+> **Importante:** cobrir todas as UFs não significa ter catalogado todas as políticas de cada uma.
 > Veja a [metodologia](/sobre/metodologia/) sobre como ler as contagens — o catálogo é **levantamento, não censo**.
 
 ## Critério de seleção das UFs
@@ -29,9 +30,9 @@ A seleção foi planejada conforme três critérios:
 2. **Densidade de políticas**: estados com políticas estruturadas em EJA, qualificação e inclusão.
 3. **Capacidade de pesquisa**: equipe com acesso aos documentos oficiais dessas UFs.
 
-## Próximas ondas (a confirmar)
+## Atualizações
 
-A continuidade do levantamento para as UFs ainda não cobertas (DF, AC, AP, RR, RO, TO, SE, PI, MS) depende de financiamento e disponibilidade de equipe. Acompanhe o [GitHub do projeto](https://github.com/antrologos/catalogo-politicas) para atualizações.
+O catálogo é atualizado em rodadas, com correções e novas fichas. Acompanhe o [GitHub do projeto](https://github.com/antrologos/catalogo-politicas) para atualizações.
 
 ## Reportar política não catalogada
 

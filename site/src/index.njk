@@ -57,10 +57,10 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
        que mapa SVG abstrato (R2.3 Lente 1, conflito B). #}
     <aside aria-labelledby="cobertura-aside-h" class="bg-papel border border-neutral-200 rounded p-md text-sm">
       <h2 id="cobertura-aside-h" class="text-base mt-0">
-        Cobertura · 1ª onda
+        Cobertura
       </h2>
       <p class="text-neutral-700 mt-2xs text-xs">
-        {{ agregados.total }} políticas em 1 esfera federal + {{ agregados.ufsCobertas | length - 1 }} estados
+        {{ agregados.total }} políticas em 1 esfera federal + {{ agregados.ufsCobertas | length - 1 }} UFs
       </p>
 
       <div class="mt-md space-y-sm">
@@ -92,7 +92,7 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
         </a>
       </p>
       <p class="mt-sm text-xs">
-        <a href="/sobre/cobertura/" class="text-primary">Por que essas UFs? Próximas ondas →</a>
+        <a href="/sobre/cobertura/" class="text-primary">Cobertura e ondas do levantamento →</a>
       </p>
     </aside>
   </div>
@@ -169,7 +169,7 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
   <table class="w-full mt-md border-collapse">
     <caption class="sr-only">
       Cobertura por unidade federativa: {{ agregados.ufsCobertas | length }} UFs
-      catalogadas na 1ª onda, ordenadas por número de políticas (decrescente).
+      catalogadas, ordenadas por número de políticas (decrescente).
     </caption>
     <thead>
       <tr class="border-b-2 border-neutral-500 text-left">
@@ -220,8 +220,8 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
     </li>
     <li>
       <a href="/sobre/cobertura/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
-        <strong class="text-primary">{% icon "map-trifold" %} Cobertura e próximas UFs</strong>
-        <p class="text-sm text-neutral-700 mt-2xs">Por que 9 UFs? O que falta? Cronograma.</p>
+        <strong class="text-primary">{% icon "map-trifold" %} Cobertura do levantamento</strong>
+        <p class="text-sm text-neutral-700 mt-2xs">Quais UFs entraram em cada onda.</p>
       </a>
     </li>
     <li>
@@ -234,14 +234,14 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
 </section>
 
 <section aria-labelledby="proximas-h" class="my-2xl">
-  <h2 id="proximas-h">Próximas UFs (transparência metodológica)</h2>
+  <h2 id="proximas-h">Cobertura (transparência metodológica)</h2>
   <p class="text-sm text-neutral-700">
-    A 1ª onda cobre <strong>{{ agregados.ufsCobertas | length }}</strong> entes federativos.
-    O Brasil tem 27 (26 estados + DF) — outras 17 UFs estão em planejamento.
+    O catálogo cobre <strong>{{ agregados.ufsCobertas | length - 1 }}</strong> unidades da federação
+    (26 estados + DF) e a esfera federal, levantadas em três ondas.
   </p>
   <p class="text-sm mt-sm">
     <a href="/sobre/cobertura/" class="text-primary">
-      Ver lista completa de UFs e cronograma →
+      Ver UFs por onda do levantamento →
     </a>
   </p>
 </section>

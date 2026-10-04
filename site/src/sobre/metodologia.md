@@ -20,7 +20,7 @@ O Catálogo de Políticas foi produzido a partir de **trabalho de levantamento e
 
 Cada política recebeu metadados estruturados e, quando possível, **referência à norma instituidora** com preservação local do texto da fonte oficial.
 
-A primeira onda do levantamento cobriu **políticas federais e nove unidades da federação**: Bahia, Ceará, Minas Gerais, Pará, Paraná, Pernambuco, Rio de Janeiro, Rio Grande do Sul e São Paulo. Outras unidades estão em planejamento para ondas futuras (ver [cobertura](/sobre/cobertura/)).
+O levantamento foi feito em três ondas. A primeira cobriu **políticas federais e nove unidades da federação**: Bahia, Ceará, Minas Gerais, Pará, Paraná, Pernambuco, Rio de Janeiro, Rio Grande do Sul e São Paulo. A segunda acrescentou Alagoas, Amazonas, Espírito Santo, Goiás, Maranhão, Mato Grosso, Paraíba, Rio Grande do Norte e Santa Catarina; a terceira, Acre, Amapá, Distrito Federal, Mato Grosso do Sul, Piauí, Rondônia, Roraima, Sergipe e Tocantins — completando as 27 unidades da federação (ver [cobertura](/sobre/cobertura/)).
 
 ## O que este catálogo **não é**
 
@@ -37,7 +37,7 @@ Ler as contagens como se fossem censitárias é o erro mais comum em catálogos 
 
 | Contagem mostrada | O que significa | O que **não** significa |
 |---|---|---|
-| "{{ agregados.total }} políticas catalogadas" | Número de verbetes únicos ativos na 1ª onda do catálogo (federais canônicas + estaduais exclusivas; cada política federal é contada uma única vez mesmo que executada em vários estados). | "Existem exatamente esse número de políticas no Brasil sobre estes temas." |
+| "{{ agregados.total }} políticas catalogadas" | Número de verbetes únicos ativos no catálogo (federais canônicas + estaduais exclusivas; cada política federal é contada uma única vez mesmo que executada em vários estados). | "Existem exatamente esse número de políticas no Brasil sobre estes temas." |
 | "BA: N políticas" | A equipe identificou e descreveu N políticas na Bahia segundo os critérios do estudo. | "A Bahia tem exatamente N políticas vigentes nesses eixos." |
 | "PR: M políticas" (M ≠ N) | Idem, para o Paraná, com universo possivelmente distinto. | A diferença para BA não significa "o Paraná tem menos política pública do que a Bahia." |
 | "{{ agregados.federaisCount }} políticas federais" | Verbetes de políticas com formulação na esfera federal, registradas uma única vez. | "Existem exatamente esse número de políticas federais em EJA, qualificação ou inclusão produtiva." |
@@ -57,6 +57,6 @@ A inclusão depende dos critérios de relevância para o estudo e é avaliada pe
 
 ## Para saber mais
 
-- [Cobertura e cronograma](/sobre/cobertura/) — UFs já cobertas e as previstas para ondas futuras.
+- [Cobertura e cronograma](/sobre/cobertura/) — UFs cobertas em cada onda do levantamento.
 - [Acesso à informação](/sobre/transparencia/) — política de revisão, histórico, canal de relato.
 - [Como citar](/sobre/#como-citar) — formatos ABNT, APA, BibTeX e RIS, no catálogo inteiro e por verbete individual.

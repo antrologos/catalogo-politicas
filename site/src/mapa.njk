@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Mapa do Brasil"
-description: "Mapa coroplético interativo das 27 UFs brasileiras com contagem de políticas catalogadas (1ª onda: 9 UFs cobertas em azul, 17 em planejamento em cinza). Lista textual paralela acessível para leitores de tela."
+description: "Mapa coroplético interativo das 27 UFs brasileiras com contagem de políticas catalogadas (todas cobertas, em azul conforme a contagem). Lista textual paralela acessível para leitores de tela."
 permalink: /mapa/
 ---
 
@@ -20,9 +20,8 @@ permalink: /mapa/
 <header class="border-b border-neutral-200 pb-lg mb-xl">
   <h1>Mapa do Brasil — cobertura por UF</h1>
   <p class="text-neutral-700 max-w-3xl">
-    {{ agregados.total }} políticas catalogadas em {{ agregados.ufsCobertas | length - 1 }}
-    estados brasileiros + esfera federal (1ª onda). Outras 17 UFs em planejamento
-    aparecem em cinza. Cor das UFs cobertas reflete contagem de políticas
+    {{ agregados.total }} políticas catalogadas nas {{ agregados.ufsCobertas | length - 1 }}
+    unidades da federação + esfera federal. A cor de cada UF reflete a contagem de políticas
     (gradiente azul-IBGE: claro = poucas, escuro = muitas).
   </p>
   <p class="text-sm text-neutral-700 mt-sm md:hidden">
@@ -129,7 +128,7 @@ permalink: /mapa/
 
   <table class="w-full mt-md border-collapse text-sm">
     <caption class="sr-only">
-      Lista das {{ agregados.ufsCobertas | length }} UFs catalogadas na 1ª onda,
+      Lista das {{ agregados.ufsCobertas | length }} UFs catalogadas,
       ordenadas por número de políticas (decrescente).
     </caption>
     <thead>
@@ -168,9 +167,9 @@ permalink: /mapa/
   </table>
 
   <p class="text-sm text-neutral-700 mt-md">
-    UFs em cinza no mapa não têm políticas catalogadas na 1ª onda — veja
+    Veja
     <a href="/sobre/cobertura/" class="text-primary">cobertura e cronograma</a>
-    para entender critérios de inclusão.
+    para saber em qual onda do levantamento cada UF entrou.
   </p>
 </section>
 

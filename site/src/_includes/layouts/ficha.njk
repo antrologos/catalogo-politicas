@@ -118,7 +118,8 @@ layout: layouts/base.njk
       {% endif %}
       {% if p.abrangencia_territorial %}
         <dt class="font-semibold text-neutral-700">Abrangência territorial</dt>
-        <dd>{{ p.abrangencia_territorial }}</dd>
+        {# DF: "Distrital" equivale a Estadual nos dados e nas listas; só o rótulo muda #}
+        <dd>{{ "Distrital" if (p.uf == "DF" and p.abrangencia_territorial == "Estadual") else p.abrangencia_territorial }}</dd>
       {% endif %}
       {% if p.tipo_oferta %}
         <dt class="font-semibold text-neutral-700">

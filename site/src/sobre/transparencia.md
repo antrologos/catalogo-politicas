@@ -30,7 +30,9 @@ Compromissos de transparência do **Catálogo de Políticas** conforme princípi
 | Versão | Data | Mudanças principais |
 |---|---|---|
 | PoC 2026-05-01 | 2026-05-01 | 1ª publicação — 9 UFs + Federal |
-| (próximas) | (a vir) | Aumento da cobertura de fontes integrais; novas UFs |
+| 2ª onda | 2026-05-13 | +9 UFs (GO, ES, SC, MA, AM, MT, PB, AL, RN) — 18 UFs + Federal |
+| 3ª onda | 2026-10-04 | +9 UFs (MS, RR, DF, RO, PI, AC, SE, TO, AP) — 27 UFs + Federal |
+| (próximas) | (a vir) | Aumento da cobertura de fontes integrais; atualização das fichas |
 
 Acompanhe o [histórico completo de commits no GitHub](https://github.com/antrologos/catalogo-politicas/commits/main).
 
@@ -49,7 +51,7 @@ Para ser explícito sobre limites:
 
 - **Não somos órgão público**. Não temos relação institucional com órgãos das UFs catalogadas. Não respondemos a pedidos via e-SIC.
 - **Não somos fonte primária**. Para a versão atual da norma, sempre consulte o portal oficial (link "Acessar no portal oficial" em cada ficha).
-- **Não garantimos cobertura completa**. A 1ª onda cobre 9 UFs intencionalmente; outras 17 UFs estão em planejamento (ver [cobertura](../cobertura/)).
+- **Não garantimos cobertura completa**. O catálogo cobre as 27 UFs, mas não todas as políticas de cada uma — é levantamento, não censo (ver [cobertura](../cobertura/) e [metodologia](../metodologia/)).
 
 ## Reuso e atribuição
 

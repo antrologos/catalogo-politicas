@@ -86,6 +86,6 @@ Em qualquer página do site, siglas como {% abbr "EJA" %}, {% abbr "PRONATEC" %}
 
 ## Ainda perdido?
 
-- **Cobertura e limites** — [/sobre/cobertura/](/sobre/cobertura/) explica quais 9 UFs estão na 1ª onda, por que essas e quais vêm a seguir.
+- **Cobertura e limites** — [/sobre/cobertura/](/sobre/cobertura/) mostra quais UFs entraram em cada onda do levantamento.
 - **Metodologia** — [/sobre/](/sobre/) traz equipe, vocabulário canônico, licença CC-BY 4.0 e cronograma.
 - **Erro encontrado?** Cada ficha tem link "Abrir issue no GitHub" no rodapé.

@@ -116,8 +116,8 @@
           <li><a href="{{ site.github }}" rel="external">{% icon "package" %} Código + dados no GitHub ↗</a></li>
         </ul>
         <p class="mt-md text-xs text-neutral-700">
-          <strong>{{ agregados.total }}</strong> políticas · 1ª onda<br>
-          Última atualização: <time datetime="2026-05-01">01/05/2026</time><br>
+          <strong>{{ agregados.total }}</strong> políticas · {{ agregados.ufsCobertas | length - 1 }} UFs + Federal<br>
+          Última atualização: <time datetime="2026-10-04">04/10/2026</time><br>
           Versão: <code>{{ site.versao }}</code>
         </p>
       </div>

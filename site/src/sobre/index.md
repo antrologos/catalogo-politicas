@@ -81,7 +81,7 @@ A Rede EJA e Inclusão Produtiva é uma articulação de organizações da socie
 - [Política de privacidade (LGPD)](privacidade/) — coleta, finalidade, retenção, transferência internacional.
 - [Termos de uso](termos/) — licença CC BY 4.0, atribuição, redistribuição.
 - [Acessibilidade](acessibilidade/) — declaração WCAG 2.2 AA + eMAG 3.1 + Lei 13.146/2015.
-- [Cobertura e limites](cobertura/) — por que 9 UFs? O que ainda falta?
+- [Cobertura e limites](cobertura/) — quais UFs entraram em cada onda do levantamento.
 
 ## Como citar o catálogo
 
