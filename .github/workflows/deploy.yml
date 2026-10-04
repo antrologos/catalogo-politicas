@@ -160,6 +160,12 @@ jobs:
         run: npm ci --no-audit --no-fund
       - name: Build (regenerate _site for LHCI)
         run: npm run build
+      # Servir em /catalogo-politicas/ (como no GitHub Pages): sem o prefixo,
+      # CSS e JS não carregam e o Lighthouse mede uma página sem estilo.
+      - name: Preparar _serve/catalogo-politicas/
+        run: |
+          mkdir -p _serve/catalogo-politicas
+          cp -r _site/* _serve/catalogo-politicas/
       - name: Run Lighthouse-CI
         run: npx lhci autorun
         env:

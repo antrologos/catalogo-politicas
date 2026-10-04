@@ -1,17 +1,16 @@
 {
   "ci": {
     "collect": {
-      "staticDistDir": "./_site",
       "url": [
-        "http://localhost/",
-        "http://localhost/buscar/",
-        "http://localhost/sobre/",
-        "http://localhost/sobre/privacidade/",
-        "http://localhost/explorar/",
-        "http://localhost/mapa/",
-        "http://localhost/comparacao/",
-        "http://localhost/uf/df/",
-        "http://localhost/politica/programa-nacional-de-acesso-ao-ensino-tecnico-e-emprego-pronatec-br/"
+        "http://localhost:8090/catalogo-politicas/",
+        "http://localhost:8090/catalogo-politicas/buscar/",
+        "http://localhost:8090/catalogo-politicas/sobre/",
+        "http://localhost:8090/catalogo-politicas/sobre/privacidade/",
+        "http://localhost:8090/catalogo-politicas/explorar/",
+        "http://localhost:8090/catalogo-politicas/mapa/",
+        "http://localhost:8090/catalogo-politicas/comparacao/",
+        "http://localhost:8090/catalogo-politicas/uf/df/",
+        "http://localhost:8090/catalogo-politicas/politica/programa-nacional-de-acesso-ao-ensino-tecnico-e-emprego-pronatec-br/"
       ],
       "numberOfRuns": 1,
       "settings": {
@@ -24,7 +23,9 @@
           "csp-xss",
           "errors-in-console"
         ]
-      }
+      },
+      "startServerCommand": "npx --yes http-server _serve -p 8090 -s",
+      "startServerReadyPattern": "Available on"
     },
     "assert": {
       "assertions": {

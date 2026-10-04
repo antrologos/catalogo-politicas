@@ -127,7 +127,9 @@
     form.addEventListener("submit", aoMudar);
     // O botão "Aplicar" só é necessário sem JavaScript
     const aplicarBtn = form.querySelector("[data-sem-js]");
-    if (aplicarBtn) aplicarBtn.remove(); // .btn define display e venceria o atributo hidden
+    // Com JS o filtro é imediato; o botão fica só para leitores de tela/teclado
+    // (formulário sem botão de envio é falha de acessibilidade)
+    if (aplicarBtn) aplicarBtn.classList.add("sr-only");
   }
 
   aplicar(lerUrl());
