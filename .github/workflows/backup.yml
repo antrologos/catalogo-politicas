@@ -1,9 +1,15 @@
 name: Backup mensal off-Drive (CONS-M-01)
 
-# Cria release com tarball completo de data/derived/ + index.json dos snapshots.
-# Snapshots binários NÃO são versionados (.gitignore), mas seu index é —
-# basta isso para reconstrução parcial em caso de catástrofe.
-# Retenção: 5 anos via GitHub Releases.
+# Cria release com tarball dos dados versionados: planilhas-fonte (data/raw),
+# derivados (data/derived), índice e metadados dos snapshots, schema,
+# vocabulário e documentos principais. Retenção: GitHub Releases.
+#
+# Limite conhecido: os snapshots binários (HTML/PDF/DOC/ODT das fontes
+# oficiais) NÃO estão no repositório (.gitignore) e portanto não entram aqui;
+# eles existem só na cópia do Google Drive. O índice permite saber quais são.
+#
+# O empacotamento falha se algum caminho esperado faltar, e o pacote é
+# verificado (extraído e validado) antes de virar release.
 
 on:
   schedule:
@@ -22,23 +28,43 @@ jobs:
 
       - name: Empacotar dados críticos
         run: |
+          set -euo pipefail
+          shopt -s globstar nullglob
           DATA=$(date +%Y-%m-%d)
           mkdir -p artifacts
+          ARQUIVOS=(
+            data/raw/*.xlsx
+            data/derived/
+            data/external_snapshots/index.json
+            data/external_snapshots/**/*.metadata.json
+            data/extracted_text/**/*.metadata.json
+            .claude/context/policies-schema.json
+            .claude/context/vocabulario-canonico.json
+            CLAUDE.md README.md LICENSE CITATION.cff
+          )
           tar -czf "artifacts/backup-${DATA}.tar.gz" \
-            --exclude='*.html' \
-            --exclude='*.pdf' \
-            --exclude='*.docx' \
-            --exclude='*.doc' \
-            --exclude='*.odt' \
-            --exclude='*.rtf' \
-            data/derived/ \
-            data/external_snapshots/index.json \
-            data/external_snapshots/**/*.metadata.json \
-            data/extracted_text/**/*.metadata.json \
-            .claude/context/policies-schema.json \
-            .claude/context/vocabulario-canonico.json \
-            CLAUDE.md README.md LICENSE 2>/dev/null || true
+            --exclude='*.html' --exclude='*.pdf' --exclude='*.docx' \
+            --exclude='*.doc' --exclude='*.odt' --exclude='*.rtf' \
+            "${ARQUIVOS[@]}"
           ls -lh artifacts/
+
+      - name: Verificar o pacote (restauração de teste)
+        run: |
+          set -euo pipefail
+          DATA=$(date +%Y-%m-%d)
+          mkdir -p /tmp/restauracao
+          tar -xzf "artifacts/backup-${DATA}.tar.gz" -C /tmp/restauracao
+          ls /tmp/restauracao/data/raw/*.xlsx
+          python3 - <<'PYEOF'
+          import json, pathlib
+          raiz = pathlib.Path("/tmp/restauracao")
+          dados = json.loads((raiz / "data/derived/latest.json").read_text(encoding="utf-8"))
+          idx = json.loads((raiz / "data/external_snapshots/index.json").read_text(encoding="utf-8"))
+          planilhas = sorted(p.name for p in (raiz / "data/raw").glob("*.xlsx"))
+          assert isinstance(dados, list) and len(dados) > 0, "latest.json vazio ou inválido"
+          assert len(planilhas) >= 3, f"planilhas faltando: {planilhas}"
+          print(f"OK: {len(dados)} fichas, {len(idx.get('by_sha', {}))} snapshots indexados, planilhas: {planilhas}")
+          PYEOF
 
       - name: Criar release com backup
         env:
@@ -48,5 +74,5 @@ jobs:
           gh release create "backup-${DATA}" \
             "artifacts/backup-${DATA}.tar.gz" \
             --title "Backup ${DATA}" \
-            --notes "Backup mensal automático: data/derived/ + index.json + metadata + schema + vocabulário. Snapshots binários excluídos por tamanho." \
+            --notes "Backup mensal automático (verificado por extração): planilhas-fonte (data/raw), data/derived/, índice e metadados dos snapshots, schema, vocabulário e documentos. Os arquivos binários das fontes oficiais ficam fora do repositório e não estão incluídos." \
             --latest=false

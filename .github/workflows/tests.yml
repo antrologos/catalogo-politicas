@@ -1,0 +1,40 @@
+name: Testes do pipeline (Python)
+
+# Roda a suíte pytest do ETL e da captura: testes toy (sintéticos), unit
+# (mocks de HTTP) e a integração, que executa o ETL completo sobre as
+# planilhas de data/raw/ e valida o JSON gerado contra o schema.
+# A integração reescreve data/derived/ só dentro do runner; nada é commitado.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - 'tests/**'
+      - 'data/raw/**'
+      - 'data/derived/latest.json'
+      - '.claude/context/**'
+      - 'requirements.txt'
+      - '.github/workflows/tests.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  pytest:
+    name: pytest (toy + unit + integração)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      PYTHONIOENCODING: "utf-8"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+      - name: Rodar testes
+        run: python -B -m pytest tests/ -q
