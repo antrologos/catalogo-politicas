@@ -37,11 +37,11 @@ A Rede EJA e Inclusão Produtiva é uma articulação de organizações da socie
 ## Realizadores
 
 - **[Fundação Roberto Marinho (FRM)](https://www.frm.org.br/)**
-- **[Fundação Bradesco](https://www.fundacaobradesco.org.br/)**
+- **[Fundação Bradesco](https://fundacao.bradesco/)**
 
 ## Parceiros
 
-- **[Fundação Itaú Educação e Trabalho](https://www.fundacaoitau.org.br/educacao-e-trabalho)**
+- **[Fundação Itaú Educação e Trabalho](https://www.itaueducacaoetrabalho.org.br/)**
 - **[Fundação Arymax](https://arymax.org.br/)**
 
 ## Cooperação
@@ -50,7 +50,7 @@ A Rede EJA e Inclusão Produtiva é uma articulação de organizações da socie
 
 ## Parceria Técnica
 
-- **[Centro para o Estudo da Riqueza e da Estratificação Social (Ceres/IESP-UERJ)](https://ceres-iesp.uerj.br/)**
+- **[Centro para o Estudo da Riqueza e da Estratificação Social (Ceres/IESP-UERJ)](https://iesp.uerj.br/nucleo/ceres/)**
 - **[Laboratório de Monitoramento e Avaliação de Políticas e Eleições (MAPE)](https://mape.org.br/)**
 - **[Instituto de Estudos Sociais e Políticos (IESP-UERJ)](http://www.iesp.uerj.br/)**
 

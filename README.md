@@ -12,10 +12,10 @@ Catálogo interativo de políticas públicas brasileiras (federais e estaduais) 
 
 ### Realizadores
 - [Fundação Roberto Marinho (FRM)](https://www.frm.org.br/)
-- [Fundação Bradesco](https://www.fundacaobradesco.org.br/)
+- [Fundação Bradesco](https://fundacao.bradesco/)
 
 ### Parceiros
-- [Fundação Itaú Educação e Trabalho](https://www.fundacaoitau.org.br/educacao-e-trabalho)
+- [Fundação Itaú Educação e Trabalho](https://www.itaueducacaoetrabalho.org.br/)
 - [Fundação Arymax](https://arymax.org.br/)
 
 ### Cooperação

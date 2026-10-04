@@ -12,11 +12,11 @@ export default {
 
   realizadores: [
     { nome: "Fundação Roberto Marinho", sigla: "FRM", url: "https://www.frm.org.br/" },
-    { nome: "Fundação Bradesco", sigla: "Fundação Bradesco", url: "https://www.fundacaobradesco.org.br/" },
+    { nome: "Fundação Bradesco", sigla: "Fundação Bradesco", url: "https://fundacao.bradesco/" },
   ],
 
   parceiros: [
-    { nome: "Fundação Itaú Educação e Trabalho", sigla: "Fundação Itaú", url: "https://www.fundacaoitau.org.br/educacao-e-trabalho" },
+    { nome: "Fundação Itaú Educação e Trabalho", sigla: "Fundação Itaú", url: "https://www.itaueducacaoetrabalho.org.br/" },
     { nome: "Fundação Arymax", sigla: "Arymax", url: "https://arymax.org.br/" },
   ],
 
@@ -28,7 +28,7 @@ export default {
     {
       nome: "Centro para o Estudo da Riqueza e da Estratificação Social",
       sigla: "Ceres/IESP-UERJ",
-      url: "https://ceres-iesp.uerj.br/",
+      url: "https://iesp.uerj.br/nucleo/ceres/",
     },
     {
       nome: "Laboratório de Monitoramento e Avaliação de Políticas e Eleições",
@@ -53,14 +53,14 @@ export default {
     { nome: "Conhecimento Social", url: null },
     { nome: "Conselho Nacional do SESI", url: null },
     { nome: "Fundação Arymax", url: "https://arymax.org.br/" },
-    { nome: "Fundação Bradesco", url: "https://www.fundacaobradesco.org.br/" },
+    { nome: "Fundação Bradesco", url: "https://fundacao.bradesco/" },
     { nome: "Fundação Roberto Marinho", url: "https://www.frm.org.br/" },
     { nome: "GIFE", url: null },
     { nome: "Instituto Rodrigo Mendes", url: null },
     { nome: "Pacto Global da ONU", url: null },
     { nome: "Todos pela Educação", url: null },
     { nome: "United Way Brasil — Juventudes Potentes", url: null },
-    { nome: "Fundação Itaú — Itaú Educação e Trabalho", url: "https://www.fundacaoitau.org.br/educacao-e-trabalho" },
+    { nome: "Fundação Itaú — Itaú Educação e Trabalho", url: "https://www.itaueducacaoetrabalho.org.br/" },
     { nome: "UNICEF", url: null },
     { nome: "Ação Educativa", url: null },
     { nome: "UNESCO", url: "https://www.unesco.org/pt" },

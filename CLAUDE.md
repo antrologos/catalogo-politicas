@@ -76,7 +76,7 @@ Plano detalhado: `C:\Users\antro\.claude\plans\meu-intuito-criar-composed-pixel.
 - Refatorada aba "Como citar este verbete": autoria = equipe de pesquisa (Maria Clara da Gama, Maria Julieta Ramalho Garcia, Cintia Maria Frazão, Jaqueline Sant'ana); organização = Rogério Jerônimo Barbosa; publicação = Ceres/IESP-UERJ. Filtros `citacaoAbnt/Apa/Bibtex/Ris` reescritos; meta tags Highwire e JSON-LD atualizadas
 - Removido parêntese `(FRM, Fundação Bradesco, IESP-UERJ)` de todos os textos corridos (citation-box, equipe.js, sobre/index.md, sobre/privacidade.md, sobre/termos.md, ficha-meta.njk)
 - Legibilidade das referências melhorada (text-base, border-neutral-300, font-medium)
-- CERES e MAPE linkados com URLs oficiais fornecidas pela usuária: https://ceres-iesp.uerj.br/ e https://mape.org.br/ (MAPE tem domínio próprio)
+- CERES e MAPE linkados com URLs oficiais fornecidas pela usuária: https://mape.org.br/ (MAPE tem domínio próprio); Ceres: a partir de 2026-10-04 o link é https://iesp.uerj.br/nucleo/ceres/ porque ceres-iesp.uerj.br foi comprometido (redireciona para spam)
 
 ### Próximos passos imediatos
 1. **Aguardando feedback** da usuária sobre Sprint 9.8 em produção antes de definir próxima prioridade
