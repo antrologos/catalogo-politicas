@@ -47,10 +47,16 @@
       ],
       "variants": {
         "interfederativa: união–estado": "Interfederativa: União-Estado",
-        "interfederativa: união–estado–município": "Interfederativa: União-Estado-Município"
+        "interfederativa: união–estado–município": "Interfederativa: União-Estado-Município",
+        "interfederativa/interinstitucional: união-estado-município+sistema s+entidades formadoras+empresasis, além do sistema s, sistema de justiça, entidades formadoras e empresas": "Interfederativa: União-Estado-Município",
+        "união-estado": "Interfederativa: União-Estado",
+        "interfederativa: união - estado": "Interfederativa: União-Estado",
+        "união-estado/distrito federal": "Interfederativa: União-Estado",
+        "distrito federal": "Estado"
       },
       "_outliers_observados": [
-        "interfederativa/interinstitucional: União-Estado-Município+Sistema S+entidades formadoras+empresasis, além do Sistema S, sistema de justiça (1 ocorrência; mover sufixo descritivo para descricao_tecnica)"
+        "interfederativa/interinstitucional: União-Estado-Município+Sistema S+entidades formadoras+empresasis, além do Sistema S, sistema de justiça (1 ocorrência; mover sufixo descritivo para descricao_tecnica) — mapeado para 'Interfederativa: União-Estado-Município' em 2026-10-04",
+        "'Distrito Federal' (DF, 3ª onda) é opção do dicionário oficial; equivale a 'Estado' e mapeia para ele — o site exibe o rótulo 'Distrito Federal' nas fichas do DF, mesma regra de 'Distrital' em abrangência (2026-10-04)"
       ],
       "descricao": "6 valores canônicos em uso (de ~12 oficiais na aba Modelo categorias). Drift principal: en-dash → hífen."
     },
@@ -62,9 +68,12 @@
         "Academia/centros de pesquisa",
         "Sociedade civil/OSC"
       ],
-      "variants": {},
+      "variants": {
+        "governamental / cooperação técnica": "Governamental",
+        "incentivo financeiro-educacional federal para apoiar permanência e conclusão do ensino médio.": "Governamental"
+      },
       "_outliers_observados": [
-        "Incentivo financeiro-educacional federal para apoiar permanência e conclusão do ensino médio. (1 ocorrência; descrição livre que entrou no campo errado)"
+        "Incentivo financeiro-educacional federal para apoiar permanência e conclusão do ensino médio. (1 ocorrência; descrição livre que entrou no campo errado) — trata-se do Pé-de-Meia, programa do governo federal: mapeado para 'Governamental' em 2026-10-04"
       ],
       "descricao": "5 valores canônicos. Não está na aba Modelo categorias mas é coluna padrão das fichas."
     },
@@ -94,7 +103,17 @@
         "interfederativa: união–estado–município": "Compartilhada interfederativa: União-Estado-Município",
         "compartilhada interfederativamente: estado + união + sociedade civil + setor privado": "Compartilhada interfederativa: União-Estado",
         "compartilhada interfederativa: estado -  municípios + parcerias": "Compartilhada interfederativa: Estado-Município",
-        "interinstitucional descentralizada, por meio de comitê gestor interinstitucional": "Interinstitucional: descentralizada via Comitê Gestor"
+        "interinstitucional descentralizada, por meio de comitê gestor interinstitucional": "Interinstitucional: descentralizada via Comitê Gestor",
+        "distrito federal": "Estado",
+        "estado-município": "Compartilhada interfederativa: Estado-Município",
+        "compartilhada interfederativa: união-município": "Compartilhada interfederativa: União-Município",
+        "compartilha da interfederativa: união - município": "Compartilhada interfederativa: União-Município",
+        "união-estado/distrito federal": "Compartilhada interfederativa: União-Estado",
+        "união-estado/município/distrito federal": "Compartilhada interfederativa: União-Estado-Município",
+        "estado + rede de execução + instituições de ensino públicas/privadas": "Estado",
+        "união-estado-município": "Compartilhada interfederativa: União-Estado-Município",
+        "união-estado": "Compartilhada interfederativa: União-Estado",
+        "compartilhada interfederativamente: estado + união": "Compartilhada interfederativa: União-Estado"
       },
       "_outliers_observados": [
         "União - Empresas empregadoras + Entidades qualificadoras (13 ocorrências) — sufixo '+...' move para esfera_execucao_apoios_parcerias; tronco vira 'União'",
@@ -108,7 +127,8 @@
         "Compartilhada Interfederativa: União - Estado - Município + rede ofertante (1) — idem",
         "União - Setor Privado - Rede ofertante (1) — sufixo livre; manter como variant",
         "União - Setor privado + Rede ofertante (1) — idem",
-        "Estado + rede de execução + instituições de ensino públicas/privadas (1) — sufixo livre"
+        "Estado + rede de execução + instituições de ensino públicas/privadas (1) — sufixo livre; mapeado para 'Estado' em 2026-10-04",
+        "'Distrito Federal' (DF, 3ª onda) é opção do dicionário oficial; equivale a 'Estado' e mapeia para ele — o site exibe o rótulo 'Distrito Federal' nas fichas do DF (2026-10-04)"
       ],
       "descricao": "8 valores canônicos no tronco principal. Drift sério (31 variantes detectadas). Sufixos descritivos '+ rede X', '+ Sistema S' devem migrar para esfera_execucao_apoios_parcerias na normalização. Variants mapeadas cobrem ~80% dos casos com sufixo simples."
     },
@@ -123,6 +143,7 @@
         "estadual (cobertura em uma uf)": "Estadual",
         "sem recorte territorial específico/ difusa": "Sem recorte territorial específico/difusa",
         "distrital": "Estadual",
+        "nacional, com incidência estadual": "Nacional",
         "estadual/distrital, com diretrizes nacionais": "Estadual",
         "estadual, com execução em boa vista, alto alegre, amajari e outros municípios conforme turmas": "Estadual",
         "estadual, via campi do ifrr": "Estadual",
@@ -168,9 +189,20 @@
         "Serviço/Atendimento",
         "Apoio produtivo/financeiro",
         "Não aplicável",
-        "Certificação de escolaridade/competências"
+        "Certificação de escolaridade/competências",
+        "Infraestrutura educacional",
+        "Insumo/Bem de apoio",
+        "Sem informação"
       ],
       "variants": {
+        "curso/formação (qualificação/capacitação)": "Curso/Formação",
+        "serviço/atendimento (orientação/tutoria/acompanhamento/busca ativa/encaminhamento/apoio à trajetória)": "Serviço/Atendimento",
+        "benefício/auxílio financeiro (bolsa/subsídio/vale-transporte/incentivo condicionado à frequência etc.)": "Benefício/Auxílio financeiro",
+        "infraestrutura educacional (construção/reforma/ampliação de unidades/polos)": "Infraestrutura educacional",
+        "insumo/bem de apoio (material didático, kits, conectividade, equipamentos)": "Insumo/Bem de apoio",
+        "sem informação / não identificável": "Sem informação",
+        ".": "Sem informação",
+        "presencial": "Sem informação",
         "misto (combina múltiplos tipos de oferta sem predominância clara)": "Misto",
         "curso/formação (qualificação profissional, capacitação)": "Curso/Formação",
         "benefício/auxílio financeiro (bolsa, subsídio, incentivo, vale-transporte)": "Benefício/Auxílio financeiro",
@@ -181,9 +213,10 @@
         "certificação de escolaridade/competências": "Certificação de escolaridade/competências"
       },
       "_outliers_observados": [
-        "Presencial (1 ocorrência; valor de Modalidade colado neste campo; corrigir manualmente na planilha futura)"
+        "Presencial (1 ocorrência; valor de Modalidade colado neste campo; corrigir manualmente na planilha futura) — mapeado para 'Sem informação' em 2026-10-04: valor de outro campo não permite inferir o tipo de oferta",
+        "'.' (1 ocorrência em RN, 2ª onda) — célula praticamente vazia; mapeado para 'Sem informação' (2026-10-04)"
       ],
-      "descricao": "8 valores canônicos. Drift: descrições explicativas entre parênteses; aspas escapadas. Outlier: 'Presencial' é valor de Modalidade colado errado."
+      "descricao": "11 valores canônicos. Drift: descrições explicativas entre parênteses; aspas escapadas. Em 2026-10-04 foram incluídas as categorias do dicionário oficial 'Modelos de Categorias' (3ª onda) que faltavam: 'Infraestrutura educacional', 'Insumo/Bem de apoio' e 'Sem informação'."
     },
     "modalidade_oferta": {
       "canonical_values": [
@@ -201,10 +234,11 @@
         "semi-presencial/ híbrida": "Semipresencial/híbrida",
         "sem informação/ não identificável": "Sem informação",
         "misto (combina múltiplos tipos de oferta sem predominância clara)": "Mista",
-        "itinerante (equipes/unidades móveis; ações em comunidades)": "Presencial"
+        "itinerante (equipes/unidades móveis; ações em comunidades)": "Presencial",
+        "unidade fixa / oferta fixa": "Sem informação"
       },
       "_outliers_observados": [
-        "Unidade fixa / oferta fixa (1 ocorrência; valor de Arranjo logístico colado neste campo; corrigir manualmente na planilha)",
+        "Unidade fixa / oferta fixa (1 ocorrência; valor de Arranjo logístico colado neste campo; corrigir manualmente na planilha) — mapeado para 'Sem informação' em 2026-10-04",
         "Itinerante (1 ocorrência em PI, 3ª onda — Qualifica Piauí; valor de Arranjo logístico colado neste campo) — mapeado para 'Presencial' porque a oferta é em carretas-escola e espaços municipais (decisão 2026-10-04)"
       ],
       "descricao": "6 valores canônicos. Drift: parêntese desfechado em 'Mista', hífen em 'Semipresencial', barra+espaço em 'Sem informação'. Outlier: 'Unidade fixa' é valor de Arranjo colado errado."
@@ -223,8 +257,30 @@
         "«misto (fixa + itinerante)»": "Misto (fixa + itinerante)",
         "«não aplicável»": "Não aplicável",
         "«itinerante» (equipes/unidades móveis, ações em comunidades)": "Itinerante",
-        "sem informação / não identificável": "Sem informação"
+        "sem informação / não identificável": "Sem informação",
+        "unidade fixa/oferta fixa": "Unidade fixa",
+        "itinerante (equipes/unidades móveis, ações em comunidades)": "Itinerante",
+        "misto": "Misto (fixa + itinerante)",
+        "misto (fixa + polos/ofertas semipresenciais)": "Misto (fixa + itinerante)",
+        "misto (polos fixos + ambiente virtual)": "Misto (fixa + itinerante)",
+        "misto (unidade fixa + mediação tecnológica)": "Misto (fixa + itinerante)",
+        "misto (fixa + polos/ofertas descentralizadas)": "Misto (fixa + itinerante)",
+        "misto (unidades fixas + ofertas presenciais e a distância, conforme curso)": "Misto (fixa + itinerante)",
+        "misto (unidades fixas + ofertas descentralizadas/polos, conforme curso)": "Misto (fixa + itinerante)",
+        "misto (unidades fixas + arranjos flexíveis de oferta)": "Misto (fixa + itinerante)",
+        "misto (centros fixos + apoio tecnológico/material impresso)": "Misto (fixa + itinerante)",
+        "misto (escola-sede + apoio tecnológico/material impresso)": "Misto (fixa + itinerante)",
+        "misto (ceejas + superintendências regionais + atendimento administrativo)": "Misto (fixa + itinerante)",
+        "misto (ofertas on-line + turmas presenciais descentralizadas)": "Misto (fixa + itinerante)",
+        "misto (execução municipal cofinanciada + articulação intersetorial)": "Misto (fixa + itinerante)",
+        "misto (rede territorial de agentes + atendimento local)": "Misto (fixa + itinerante)",
+        "territorializada (priorização de áreas vulneráveis)": "Sem informação",
+        "mista (múltiplas modalidades sem predominância clara": "Sem informação"
       },
+      "_outliers_observados": [
+        "'Misto' puro (35, 2ª/3ª ondas) e 13 'Misto (…)' com descrição livre (GO, ES) — o dicionário oficial só tem uma opção mista ('Misto (fixa + itinerante)'), então todos mapeiam para ela (2026-10-04)",
+        "'Territorializada (priorização de áreas vulneráveis)' (ES) e 'Mista (múltiplas modalidades…' (RR, valor de Modalidade colado) não descrevem o arranjo logístico — mapeados para 'Sem informação' (2026-10-04)"
+      ],
       "descricao": "5 valores canônicos. Drift: aspas tipográficas «» em ~ metade das ocorrências; variantes 'Unidade fixa/ oferta fixa' (sem espaço). Variants cobrem ~99% dos casos."
     }
   },

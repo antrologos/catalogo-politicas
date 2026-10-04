@@ -245,6 +245,7 @@ IDs **nunca** são reaproveitados — política revogada mantém seu ID.
 | 2026-05-13 | 2ª onda incorporada | 843 fichas em 18 UFs + Federal (308 únicas após dedup) |
 | 2026-05-13 | Filtro de linhas-fantasma (MA) | 822 fichas (287 únicas) |
 | 2026-10-04 | 3ª onda incorporada (MS, RR, DF, RO, PI, AC, SE, TO, AP) + 2ª onda revisada | 1158 fichas em 27 UFs + Federal (366 únicas após dedup) |
+| 2026-10-04 | Correções de vocabulário pelo dicionário oficial "Modelos de Categorias" da 3ª onda | 0 valores fora do vocabulário (eram 166) |
 
 ## Veja também
 
