@@ -1,6 +1,6 @@
 # Plano: Incorporar a 3ª onda (9 UFs) + revisão da 2ª onda
 
-**Status**: APROVADO (2026-10-04, com ajustes da usuária — ver "Decisões")
+**Status**: CONCLUIDO (2026-10-04) — commits bbbafed (fix IDs), dfc7716 (ETL 3ª onda), 208a866 (site); deploy run 37218482276 verde
 **Data**: 2026-10-04
 **Bloco/Rodada**: G · nova onda
 
@@ -42,35 +42,35 @@ Antes da simulação, a cópia reproduziu o `latest.json` de produção byte a b
 
 ### Repo Drive (ETL)
 
-- [ ] 0. Rodar `git pull` (fast-forward de `5b20014`). O `ficha.njk` está "modificado" só por timestamp, sem mudança de conteúdo.
-- [ ] 1. Atualizar `data/raw/`:
+- [x] 0. Rodar `git pull` (fast-forward de `5b20014`). O `ficha.njk` está "modificado" só por timestamp, sem mudança de conteúdo.
+- [x] 1. Atualizar `data/raw/`:
   - Copiar a 3ª onda como `Fichas das Políticas - 3ª onda.xlsx`.
   - Copiar a 2ª onda revisada como `Fichas das Políticas - 2ª onda (rev. 2026-10).xlsx`, mantendo o arquivo original (R7: sem sobrescrita).
-- [ ] 2. Escrever o teste `tests/toy_onda3.py` **antes** de editar o código. Ele verifica:
+- [x] 2. Escrever o teste `tests/toy_onda3.py` **antes** de editar o código. Ele verifica:
   - que a variante de cabeçalho é mapeada;
   - que `ABA_UF_ONDA3` casa com as abas reais;
   - que cada variante nova normaliza para um valor canônico;
   - que `TIPO_TO_EIXO` cobre todos os valores canônicos de `tipo_politica`, o que pega o bug do `OUTR`.
-- [ ] 3. Editar `scripts/etl/load_planilha.py`:
+- [x] 3. Editar `scripts/etl/load_planilha.py`:
   - apontar `RAW_XLSX_ONDA2` para a planilha revisada;
   - criar `RAW_XLSX_ONDA3` e `ABA_UF_ONDA3` e incluir a 3ª onda em `SOURCES`;
   - acrescentar 1 entrada ao `HEADER_MAP` e 5 ao `GHOST_HEADERS`;
   - atualizar a docstring.
-- [ ] 4. Acrescentar 20 variantes a `.claude/context/vocabulario-canonico.json` (tabela abaixo).
-- [ ] 5. Em `scripts/etl/build_ids.py`, trocar as chaves de `TIPO_TO_EIXO` pelos nomes novos. Vai num commit separado (D2).
-- [ ] 6. Atualizar 3 asserções desatualizadas em `tests/integration_etl_completo.py`: total, UFs e nomes de tipo.
-- [ ] 7. Rodar `just etl`, que gera `policies-onda-1-2026-10-04.json` e `latest.json`. Depois rodar o validate (precisa dar 0 erros) e o pytest.
-- [ ] 8. Atualizar o histórico em `scripts/etl/README.md` e o status no `CLAUDE.md`.
-- [ ] 9. Fazer os commits (dados+ETL; fix de IDs) e o push.
+- [x] 4. Acrescentar 20 variantes a `.claude/context/vocabulario-canonico.json` (tabela abaixo).
+- [x] 5. Em `scripts/etl/build_ids.py`, trocar as chaves de `TIPO_TO_EIXO` pelos nomes novos. Vai num commit separado (D2).
+- [x] 6. Atualizar 3 asserções desatualizadas em `tests/integration_etl_completo.py`: total, UFs e nomes de tipo.
+- [x] 7. Rodar `just etl`, que gera `policies-onda-1-2026-10-04.json` e `latest.json`. Depois rodar o validate (precisa dar 0 erros) e o pytest.
+- [x] 8. Atualizar o histórico em `scripts/etl/README.md` e o status no `CLAUDE.md`.
+- [x] 9. Fazer os commits (dados+ETL; fix de IDs) e o push.
 
 ### Repo do site (`C:/Users/antro/dev/catalogo-politicas`)
 
-- [ ] 10. Rodar `git pull` para receber o `latest.json`.
-- [ ] 11. Corrigir os textos de cobertura, que já estão errados e ficariam ainda mais:
+- [x] 10. Rodar `git pull` para receber o `latest.json`.
+- [x] 11. Corrigir os textos de cobertura, que já estão errados e ficariam ainda mais:
   - `sobre/cobertura.md` diz "ainda não inclui DF, AC, AP…";
   - dizem "9 UFs": `buscar.njk:23`, `index.njk:224`, `mapa.njk:4`, `sobre/comece-por-aqui.md:89`, `sobre/index.md:84` e `sobre/transparencia.md:52`.
-- [ ] 12. Fazer o build local e validar com puppeteer: home, `/uf/df/`, `/uf/ms/`, `/mapa/` (D3, 27 UFs coloridas), `/tipo/educacional/`, `/buscar/` e uma ficha nova.
-- [ ] 13. Fazer commit e push para disparar o deploy. Conferir o CI e o site no ar.
+- [x] 12. Fazer o build local e validar com puppeteer: home, `/uf/df/`, `/uf/ms/`, `/mapa/` (D3, 27 UFs coloridas), `/tipo/educacional/`, `/buscar/` e uma ficha nova.
+- [x] 13. Fazer commit e push para disparar o deploy. Conferir o CI e o site no ar.
 
 ## Variantes de vocabulário (passo 4)
 
@@ -125,8 +125,8 @@ Antes da simulação, a cópia reproduziu o `latest.json` de produção byte a b
 
 ## Verificação pós-implementação
 
-- [ ] `toy_onda3` e as suítes toy e integração passam
-- [ ] `validation_report.json` com 0 erros
-- [ ] Puppeteer local: console limpo, contagens novas, mapa com 27 UFs
-- [ ] CI de deploy verde e site no ar com 366 verbetes
-- [ ] MEMORY.md atualizado
+- [x] `toy_onda3` e as suítes toy e integração passam
+- [x] `validation_report.json` com 0 erros
+- [x] Puppeteer local: console limpo, contagens novas, mapa com 27 UFs
+- [x] CI de deploy verde e site no ar com 366 verbetes
+- [x] MEMORY.md atualizado
