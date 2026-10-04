@@ -358,4 +358,4 @@ waitForD3(async function init() {
   });
 
   console.info(`[mapa] sprint 8.2 ready: ${geo.features.length} UFs, métricas total/ativas`);
-})();
+});
