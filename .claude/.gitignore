@@ -25,6 +25,9 @@ logs/
 # Memory local opcional — escolha de cada colaborador
 memory/local/
 
+# Lock de tarefas agendadas do Claude Code (estado de runtime da sessão)
+scheduled_tasks.lock
+
 # Lixo do sistema (paranoia)
 .DS_Store
 Thumbs.db
