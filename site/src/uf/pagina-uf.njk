@@ -50,25 +50,6 @@ eleventyComputed:
     </a>
   </p>
 
-  {# Sprint F4: nota de transparência sobre duplicatas conhecidas em BA.
-     R2.1-B-Crítico-3 e R2.3 Lente 4 (credibilidade institucional vaza
-     com erros não declarados). Solução: declarar abertamente. ETL fica
-     intocado nesta janela do MVP-UX (paths protegidos, exigem plano). #}
-  {% if ufSigla == "BA" %}
-    <aside class="mt-md p-md bg-warning/10 border-l-4 border-warning rounded text-sm" role="note">
-      <p class="font-semibold">
-        {% icon "warning-circle" %} Nota de transparência
-      </p>
-      <p class="mt-2xs">
-        A planilha-fonte original tem <strong>2 entradas duplicadas</strong> nesta UF
-        (PRONATEC e Programa Juros por Educação). Ambas seguem visíveis aqui
-        com IDs distintos (sufixos <code>-2</code>) preservando rastreabilidade.
-        Consolidação registrada no
-        <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=BA:+consolidar+duplicatas+conhecidas"
-           rel="external">backlog do repositório</a>.
-      </p>
-    </aside>
-  {% endif %}
 </header>
 
 <section aria-labelledby="kpi-uf-h" class="grid grid-cols-2 gap-md my-2xl">
@@ -136,9 +117,44 @@ eleventyComputed:
     (<span id="contador-fichas">{{ agg.total }}</span>)
   </h2>
   <p class="text-sm text-neutral-700">
-    Para filtrar por situação, tipo ou modalidade, use os botões abaixo
-    ou a <a href="/buscar/?q=" class="text-primary">busca facetada</a>.
+    Filtre a lista por tipo, situação ou modalidade abaixo, ou use a
+    <a href="/buscar/?q=" class="text-primary">busca facetada</a> para cruzar UFs.
   </p>
+
+  {# Filtros: formulário GET (funciona sem JS); com JS, uf-filtros.js filtra
+     sem recarregar e mantém a URL compartilhável. Valores em slug. #}
+  <form id="filtros-uf" method="get" class="mt-md flex flex-wrap items-end gap-md bg-neutral-100 p-md rounded">
+    <label class="flex flex-col text-sm gap-2xs">
+      <span class="font-semibold">Tipo</span>
+      <select name="tipo" class="px-sm py-2xs border border-neutral-500 rounded bg-white">
+        <option value="">Todos</option>
+        {% for d in agg.distribuicaoTipo %}
+          <option value="{{ d.tipo | slug }}" data-rotulo="{{ d.tipo }}">{{ d.tipo }} ({{ d.n }})</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="flex flex-col text-sm gap-2xs">
+      <span class="font-semibold">Situação</span>
+      <select name="situacao" class="px-sm py-2xs border border-neutral-500 rounded bg-white">
+        <option value="">Todas</option>
+        {% for d in agg.distribuicaoSituacao %}
+          <option value="{{ d.situacao | slug }}" data-rotulo="{{ d.situacao }}">{{ d.situacao }} ({{ d.n }})</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label class="flex flex-col text-sm gap-2xs">
+      <span class="font-semibold">Modalidade</span>
+      <select name="modalidade" class="px-sm py-2xs border border-neutral-500 rounded bg-white">
+        <option value="">Todas</option>
+        {% for d in agg.distribuicaoModalidade %}
+          {% if d.modalidade %}
+            <option value="{{ d.modalidade | slug }}" data-rotulo="{{ d.modalidade }}">{{ d.modalidade }} ({{ d.n }})</option>
+          {% endif %}
+        {% endfor %}
+      </select>
+    </label>
+    <button type="submit" class="btn btn--secondary text-sm" data-sem-js>Aplicar filtros</button>
+  </form>
 
   {# Chips de filtro ativo (controlado por JS via querystring) #}
   <div id="filtros-ativos" class="mt-md flex flex-wrap gap-sm" hidden>
@@ -147,6 +163,7 @@ eleventyComputed:
     <a href="/uf/{{ ufSigla | lower }}/" class="text-sm text-primary underline">Limpar todos</a>
   </div>
 
+  <div class="overflow-x-auto" role="region" tabindex="0" aria-label="Tabela de políticas da UF (role para os lados se necessário)">
   <table class="w-full mt-md border-collapse">
     <caption class="sr-only">
       Lista completa das {{ agg.total }} políticas catalogadas em {{ info.nome }},
@@ -163,7 +180,8 @@ eleventyComputed:
       {% for p in fichasUf %}
         <tr class="ficha-row border-b border-neutral-200 hover:bg-neutral-100"
             data-tipo="{{ p.tipo_politica or '' }}"
-            data-situacao="{{ p.situacao_atual or '' }}">
+            data-situacao="{{ p.situacao_atual or '' }}"
+            data-modalidade="{{ p.modalidade_oferta or '' }}">
           <th scope="row" class="p-sm font-medium">
             <a href="/politica/{{ p.slug }}/" class="text-primary">{{ p.nome_programa }}</a>
           </th>
@@ -177,6 +195,7 @@ eleventyComputed:
       {% endfor %}
     </tbody>
   </table>
+  </div>
 
   <p id="vazio-ficha" class="hidden mt-md p-md bg-neutral-100 rounded text-center">
     Nenhuma política corresponde aos filtros aplicados.

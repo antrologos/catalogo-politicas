@@ -126,6 +126,7 @@ permalink: /mapa/
     clicável e leva à página executiva.
   </p>
 
+  <div class="overflow-x-auto" role="region" tabindex="0" aria-label="Tabela de políticas por UF (role para os lados se necessário)">
   <table class="w-full mt-md border-collapse text-sm">
     <caption class="sr-only">
       Lista das {{ agregados.ufsCobertas | length }} UFs catalogadas,
@@ -165,6 +166,7 @@ permalink: /mapa/
       {% endfor %}
     </tbody>
   </table>
+  </div>
 
   <p class="text-sm text-neutral-700 mt-md">
     Veja

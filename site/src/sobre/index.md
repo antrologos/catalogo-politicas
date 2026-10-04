@@ -8,7 +8,7 @@ permalink: /sobre/
 
 O **Catálogo de Políticas** é um produto permanente da **[Rede EJA e Inclusão Produtiva]({{ equipe.redeUrl }})**. Integra as *evidências* que a Rede reúne e disponibiliza para qualificar o debate e as decisões sobre Educação de Jovens e Adultos e inclusão produtiva no Brasil.
 
-Reúne **{{ agregados.total }} políticas públicas únicas** federais e estaduais sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação — sendo {{ agregados.federaisCount }} políticas federais e {{ agregados.estaduaisUnicasCount }} políticas exclusivamente estaduais (cada uma cadastrada uma única vez, mesmo quando a federal é executada em vários estados). Para cada política, o catálogo registra metadados estruturados (vocabulário canônico controlado), referência à norma instituidora e, quando possível, **preservação do texto integral da norma**.
+Reúne **{{ agregados.total }} políticas públicas únicas** federais e estaduais sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação — sendo {{ agregados.federaisCount }} políticas federais e {{ agregados.estaduaisUnicasCount }} políticas exclusivamente estaduais (cada uma cadastrada uma única vez, mesmo quando a federal é executada em vários estados). Para cada política, o catálogo registra metadados estruturados (vocabulário canônico controlado), referência à norma instituidora e o link para a fonte oficial. Para parte das políticas, a equipe também guarda uma cópia de arquivo do documento consultado, para auditoria e proteção contra links quebrados; essa cópia não é publicada no site.
 
 ## <a id="rede-eja"></a>A Rede EJA e Inclusão Produtiva
 

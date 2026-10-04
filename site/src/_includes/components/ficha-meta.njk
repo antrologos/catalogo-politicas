@@ -24,7 +24,7 @@
 {% if p.resumo %}
 <meta name="citation_abstract" content="{{ p.resumo | striptags | truncate(500) }}">
 {% endif %}
-{% if p.fonte_url %}
+{% if p.fonte_url and ('.local/' not in p.fonte_url) %}
 <meta name="citation_pdf_url" content="{{ p.fonte_url }}">
 {% endif %}
 {% if p.id_universal %}

@@ -46,10 +46,10 @@ permalink: /comparacao/
   </div>
 
   <p class="text-xs text-neutral-700 mt-sm">
-    Atalhos rápidos:
-    <a href="?ufs=sp,rj,mg" class="text-primary">SP+RJ+MG</a> ·
-    <a href="?ufs=pe,ce,ba" class="text-primary">PE+CE+BA</a> ·
-    <a href="?ufs=br,sp,rj,mg,pr,rs,ba,pa,pe,ce" class="text-primary">Todas</a>
+    Atalhos por região:
+    {% for regiao, siglas in (agregados.ufsCobertas | groupByRegiao(ufs)) %}
+      <a href="?ufs={{ siglas | join(',') | lower }}" class="text-primary">{{ regiao }}</a>{% if not loop.last %} ·{% endif %}
+    {% endfor %}
   </p>
 </form>
 
@@ -63,7 +63,8 @@ permalink: /comparacao/
         Comparação de indicadores entre as UFs selecionadas. Linhas: indicadores. Colunas: UFs.
       </caption>
       <thead id="comp-thead">
-        <!-- Preenchido por JS -->
+        {# Cabeçalho mínimo para a tabela ser lida como tabela de dados antes do JS preencher #}
+        <tr><th scope="col">Indicador</th></tr>
       </thead>
       <tbody id="comp-tbody">
         <!-- Preenchido por JS -->

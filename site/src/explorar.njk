@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Explorar o catálogo"
-description: "Pontos de entrada visuais para navegar pelas 439 políticas do catálogo: por tipo, situação, modalidade, UF, abrangência, e origem federal/estadual."
+description: "Pontos de entrada visuais para navegar pelas políticas do catálogo: por tipo, situação, modalidade, UF, abrangência e origem federal/estadual."
 permalink: /explorar/
 ---
 {% set crumbs = [
@@ -40,7 +40,7 @@ permalink: /explorar/
         {% for d in agregados.distribuicaoTipo %}
           <li>
             <a href="/tipo/{{ d.tipo | slug }}/" class="text-white underline hover:text-focus">
-              {{ d.tipo }} <span class="opacity-80">({{ d.n }})</span>
+              {{ d.tipo }} <span>({{ d.n }})</span>
             </a>
           </li>
         {% endfor %}
@@ -52,7 +52,7 @@ permalink: /explorar/
       <header>
         <p class="text-xs uppercase tracking-wide text-neutral-700">{{ agregados.distribuicaoSituacao | length }} valores</p>
         <h3 class="text-2xl mt-2xs">
-          {% icon "circle-fill" %} Por situação atual
+          {% icon "traffic-signal" %} Por situação atual
         </h3>
         <p class="text-sm mt-sm text-neutral-700">
           Estado vigente de cada política — Ativa, Encerrada, Suspensa ou Descontinuada.
@@ -85,7 +85,7 @@ permalink: /explorar/
         {% for d in agregados.distribuicaoModalidade | slice(6) | first %}
           <li>
             <a href="/modalidade/{{ d.valor | slug }}/" class="text-white underline hover:text-focus">
-              {{ d.valor }} <span class="opacity-80">({{ d.n }})</span>
+              {{ d.valor }} <span>({{ d.n }})</span>
             </a>
           </li>
         {% endfor %}
@@ -106,8 +106,8 @@ permalink: /explorar/
       <ul class="mt-md space-y-2xs list-none p-0 text-sm">
         {% for d in agregados.distribuicaoAbrangencia %}
           <li>
-            <a href="/abrangencia/{{ d.valor | slug }}/" class="text-neutral-900 underline">
-              {{ d.valor }} <span class="opacity-80">({{ d.n }})</span>
+            <a href="/abrangencia/{{ d.valor | slug }}/" class="text-white underline">
+              {{ d.valor }} <span>({{ d.n }})</span>
             </a>
           </li>
         {% endfor %}
@@ -153,7 +153,7 @@ permalink: /explorar/
       </header>
       <ul class="mt-md flex flex-wrap gap-2xs list-none p-0 text-sm">
         <li>
-          <a href="/mapa/" class="tag tag--filter" aria-pressed="true">
+          <a href="/mapa/" class="tag tag--filter tag--filter-ativo">
             {% icon "map-trifold" %} Abrir mapa interativo
           </a>
         </li>
@@ -176,7 +176,7 @@ permalink: /explorar/
           {% icon "scales" %} Por origem
         </h3>
         <p class="text-sm mt-sm text-neutral-700">
-          Federal replicada em estados versus política exclusivamente estadual.
+          Políticas federais (cada uma cadastrada uma única vez) e políticas estaduais e distritais.
         </p>
       </header>
       <ul class="mt-md space-y-2xs list-none p-0 text-sm">
@@ -286,7 +286,7 @@ permalink: /explorar/
     </li>
     <li>
       <a href="/comparacao/" class="font-semibold text-primary">{% icon "chart-bar" %} Comparar UFs</a>
-      <p class="text-neutral-700 text-xs mt-2xs">Selecione 2 a 9 estados e veja indicadores lado a lado.</p>
+      <p class="text-neutral-700 text-xs mt-2xs">Selecione de 2 a 9 UFs (ou a esfera federal) e veja indicadores lado a lado.</p>
     </li>
     <li>
       <a href="/sobre/cobertura/" class="font-semibold text-primary">{% icon "map-trifold" %} Cobertura e limites</a>

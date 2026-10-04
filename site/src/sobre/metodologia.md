@@ -18,7 +18,7 @@ description: "Como o Catálogo de Políticas foi montado, o que ele não é, e c
 
 O Catálogo de Políticas foi produzido a partir de **trabalho de levantamento e curadoria** conduzido pela equipe de pesquisa. Para cada unidade da federação coberta, a equipe consultou portais oficiais (Diário Oficial, sites de secretarias estaduais, repositórios legislativos), agregou referências cruzadas em estudos e relatórios prévios, e organizou os resultados segundo o vocabulário canônico do catálogo (8 dimensões: tipo de política, esfera de formulação, esfera de execução, situação atual, abrangência territorial, modalidade da oferta, arranjo logístico, transferência de recursos).
 
-Cada política recebeu metadados estruturados e, quando possível, **referência à norma instituidora** com preservação local do texto da fonte oficial.
+Cada política recebeu metadados estruturados e, quando possível, **referência à norma instituidora** com cópia de arquivo da fonte oficial guardada pela equipe quando possível (não publicada no site).
 
 O levantamento foi feito em três ondas. A primeira cobriu **políticas federais e nove unidades da federação**: Bahia, Ceará, Minas Gerais, Pará, Paraná, Pernambuco, Rio de Janeiro, Rio Grande do Sul e São Paulo. A segunda acrescentou Alagoas, Amazonas, Espírito Santo, Goiás, Maranhão, Mato Grosso, Paraíba, Rio Grande do Norte e Santa Catarina; a terceira, Acre, Amapá, Distrito Federal, Mato Grosso do Sul, Piauí, Rondônia, Roraima, Sergipe e Tocantins — completando as 27 unidades da federação (ver [cobertura](/sobre/cobertura/)).
 

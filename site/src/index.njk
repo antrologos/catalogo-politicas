@@ -15,8 +15,8 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
       <p class="mt-md text-lg text-neutral-700 leading-relaxed max-w-2xl">
         Mapeamento aberto de <strong>{{ agregados.total }} políticas federais e estaduais</strong>
         sobre educação de jovens e adultos, qualificação profissional, inclusão produtiva e
-        transferência de renda condicionada à educação — com texto integral preservado e
-        citação acadêmica em 4 formatos.
+        transferência de renda condicionada à educação — com link para a fonte oficial de
+        cada política e citação acadêmica em 4 formatos.
       </p>
 
       {# 3 chips de exemplo clicáveis: ataca o problema "não sei o que procurar" #}
@@ -105,7 +105,7 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
     <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.total }}</strong>
     políticas catalogadas em
     <strong class="font-serif text-2xl sm:text-3xl text-primary">{{ agregados.ufsCobertas | length }}</strong>
-    entes federativos (1 federal + {{ agregados.ufsCobertas | length - 1 }} estados).
+    entes federativos: a esfera federal e as {{ agregados.ufsCobertas | length - 1 }} unidades da federação.
   </p>
   {% include "components/caveat-metodologia.njk" %}
 </section>
@@ -163,9 +163,10 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
   <h2 id="cobertura-uf-h">Cobertura por UF</h2>
   <p class="text-sm text-neutral-700">
     Lista textual completa das UFs catalogadas — fonte canônica acessível.
-    Mapa coroplético interativo virá em fase posterior do projeto.
+    Veja também o <a href="/mapa/" class="text-primary">mapa interativo</a>.
   </p>
 
+  <div class="overflow-x-auto" role="region" tabindex="0" aria-label="Tabela de cobertura por UF (role para os lados se necessário)">
   <table class="w-full mt-md border-collapse">
     <caption class="sr-only">
       Cobertura por unidade federativa: {{ agregados.ufsCobertas | length }} UFs
@@ -201,6 +202,7 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
       {% endfor %}
     </tbody>
   </table>
+  </div>
 </section>
 
 <section aria-labelledby="rapido-h" class="my-2xl bg-neutral-100 p-lg rounded">
@@ -215,7 +217,7 @@ description: "Catálogo interativo de políticas públicas brasileiras sobre EJA
     <li>
       <a href="/comparacao/" class="block p-md bg-white border border-neutral-200 rounded hover:border-primary no-underline">
         <strong class="text-primary">{% icon "chart-bar" %} Comparar UFs</strong>
-        <p class="text-sm text-neutral-700 mt-2xs">Selecione 2 a 9 estados, veja indicadores lado a lado.</p>
+        <p class="text-sm text-neutral-700 mt-2xs">Selecione de 2 a 9 UFs (ou a esfera federal) e veja indicadores lado a lado.</p>
       </a>
     </li>
     <li>

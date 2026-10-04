@@ -7,6 +7,7 @@
   <meta name="description" content="{{ description or site.description }}">
   <meta name="author" content="{{ site.author }}">
   <link rel="canonical" href="{{ site.baseUrl }}{{ page.url | replace(site.pathPrefix, '') }}">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph / Twitter Card -->
   <meta property="og:type" content="website">
@@ -44,7 +45,7 @@
 
   {% include "components/header.njk" %}
 
-  <main id="conteudo" class="flex-1 container-prose py-xl" role="main">
+  <main id="conteudo" class="flex-1 w-full min-w-0 container-prose py-xl" role="main">
     {{ content | safe }}
   </main>
 

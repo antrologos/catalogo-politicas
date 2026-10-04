@@ -27,10 +27,20 @@
 
   if (!checkboxes.length || !thead || !tbody) return;
 
-  // Lê seleção da URL
+  const MAX_UFS = 9;
+  const form = checkboxes[0].form;
+  const validas = new Set(Array.from(checkboxes, (cb) => cb.value.toLowerCase()));
+
+  // Lê seleção da URL. Aceita os dois formatos: "?ufs=sp,rj" (links e
+  // atalhos) e "?ufs=sp&ufs=rj" (envio do formulário sem JavaScript).
+  // Descarta siglas desconhecidas e repetidas e respeita o limite de 9.
   const params = new URLSearchParams(window.location.search);
-  const ufsParam = (params.get("ufs") || "").toLowerCase();
-  const ufsSelecionadas = ufsParam ? ufsParam.split(",").filter(Boolean) : [];
+  const pedidas = params
+    .getAll("ufs")
+    .flatMap((v) => v.toLowerCase().split(","))
+    .map((s) => s.trim())
+    .filter((s, i, arr) => validas.has(s) && arr.indexOf(s) === i);
+  const ufsSelecionadas = pedidas.slice(0, MAX_UFS);
 
   // Marca checkboxes
   for (const cb of checkboxes) {
@@ -40,9 +50,27 @@
     cb.addEventListener("change", atualizar);
   }
 
-  // Renderiza ao carregar se houver pelo menos 2 UFs
+  // Com JavaScript, "Comparar" e "Limpar seleção" atualizam a página sem
+  // recarregar (o reset só limpa as caixas depois do evento, daí o setTimeout).
+  if (form) {
+    form.addEventListener("submit", (ev) => {
+      ev.preventDefault();
+      atualizar();
+    });
+    form.addEventListener("reset", () => setTimeout(atualizar, 0));
+  }
+
+  // Renderiza ao carregar se houver pelo menos 2 UFs; normaliza a URL e
+  // preenche o link de cópia.
   if (ufsSelecionadas.length >= 2) {
-    renderizar(ufsSelecionadas.map((s) => s.toUpperCase()));
+    const siglas = ufsSelecionadas.map((s) => s.toUpperCase());
+    renderizar(siglas);
+    atualizarUrl(siglas);
+    if (pedidas.length > MAX_UFS && status) {
+      status.textContent =
+        `O link pedia ${pedidas.length} UFs; a comparação mostra as ${MAX_UFS} primeiras. ` +
+        status.textContent;
+    }
   }
 
   function atualizar() {
@@ -50,13 +78,13 @@
       .filter((cb) => cb.checked)
       .map((cb) => cb.value.toUpperCase());
 
-    if (selecionadas.length > 9) {
+    if (selecionadas.length > MAX_UFS) {
       // Desfazer última seleção
       const ultima = Array.from(checkboxes).find(
         (cb) => cb.checked && cb === document.activeElement
       );
       if (ultima) ultima.checked = false;
-      alert("Máximo de 9 UFs por comparação. Remova alguma para adicionar nova.");
+      alert(`Máximo de ${MAX_UFS} UFs por comparação. Remova alguma para adicionar nova.`);
       return;
     }
 
@@ -90,12 +118,7 @@
       },
       {
         chave: "federaisAplicadas",
-        rotulo: "Federais aplicadas em UF",
-        filtroUrl: null,
-      },
-      {
-        chave: "estaduaisUnicas",
-        rotulo: "Exclusivamente estaduais",
+        rotulo: "Políticas federais registradas na UF",
         filtroUrl: null,
       },
       {
@@ -189,13 +212,10 @@
   }
 
   function atualizarUrl(siglas) {
-    const newParams = new URLSearchParams();
-    if (siglas.length > 0) {
-      newParams.set("ufs", siglas.map((s) => s.toLowerCase()).join(","));
-    }
+    // Siglas são só letras: vírgula literal deixa o link legível (?ufs=sp,rj)
     const newUrl =
       window.location.pathname +
-      (newParams.toString() ? "?" + newParams.toString() : "");
+      (siglas.length > 0 ? "?ufs=" + siglas.map((s) => s.toLowerCase()).join(",") : "");
     window.history.replaceState(null, "", newUrl);
 
     // Atualiza span do botão Copiar com URL completo

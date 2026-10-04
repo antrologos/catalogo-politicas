@@ -242,13 +242,20 @@ layout: layouts/base.njk
 
   {% set abaDocumentos %}
     <h3 class="sr-only">Documentos e fonte oficial</h3>
-    {% if p.fonte_url %}
+    {# fonte_url é obrigatório no schema; quando o levantamento não achou link,
+       o ETL grava um placeholder em domínio .local — não exibir como link. #}
+    {% if p.fonte_url and ('.local/' not in p.fonte_url) %}
       <p>
         <strong>Fonte oficial:</strong>
         <a href="{{ p.fonte_url }}" rel="external nofollow noopener" target="_blank">
           Acessar no portal oficial ↗
         </a>
         <span class="text-xs text-neutral-700">(abre em nova aba)</span>
+      </p>
+    {% else %}
+      <p>
+        <strong>Fonte oficial:</strong> não identificada no levantamento.
+        Consulte a aba <em>Base legal</em> e o órgão responsável pela política.
       </p>
     {% endif %}
 

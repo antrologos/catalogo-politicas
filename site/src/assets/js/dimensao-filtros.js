@@ -67,14 +67,13 @@
       origem: "Origem",
     };
     const valoresAmigaveis = {
-      origem: { federal: "Federal replicada", estadual: "Estadual única" },
+      origem: { federal: "Federal", estadual: "Estadual/distrital" },
     };
     chipsContainer.innerHTML = "";
     for (const [k, v] of ativos) {
       const valorMostrar = (valoresAmigaveis[k] && valoresAmigaveis[k][v]) || v;
       const chip = document.createElement("span");
-      chip.className = "tag tag--filter mx-2xs";
-      chip.setAttribute("aria-pressed", "true");
+      chip.className = "tag tag--filter tag--filter-ativo mx-2xs";
       chip.textContent = `${labels[k]}: ${valorMostrar}`;
 
       const removeUrl = new URL(window.location.href);

@@ -4,7 +4,10 @@
     "timeout": 30000,
     "wait": 500,
     "chromeLaunchConfig": {
-      "args": ["--no-sandbox", "--disable-dev-shm-usage"]
+      "args": [
+        "--no-sandbox",
+        "--disable-dev-shm-usage"
+      ]
     },
     "ignore": []
   },
@@ -13,6 +16,21 @@
     "http://localhost:8080/catalogo-politicas/buscar/",
     "http://localhost:8080/catalogo-politicas/sobre/",
     "http://localhost:8080/catalogo-politicas/sobre/privacidade/",
-    "http://localhost:8080/catalogo-politicas/sobre/cobertura/"
+    "http://localhost:8080/catalogo-politicas/sobre/cobertura/",
+    "http://localhost:8080/catalogo-politicas/sobre/metodologia/",
+    "http://localhost:8080/catalogo-politicas/sobre/transparencia/",
+    "http://localhost:8080/catalogo-politicas/sobre/termos/",
+    "http://localhost:8080/catalogo-politicas/explorar/",
+    "http://localhost:8080/catalogo-politicas/mapa/",
+    "http://localhost:8080/catalogo-politicas/comparacao/",
+    "http://localhost:8080/catalogo-politicas/comparacao/?ufs=sp,rj,mg",
+    "http://localhost:8080/catalogo-politicas/uf/br/",
+    "http://localhost:8080/catalogo-politicas/uf/df/",
+    "http://localhost:8080/catalogo-politicas/uf/rj/?situacao=ativa-em-execucao",
+    "http://localhost:8080/catalogo-politicas/politica/programa-nacional-de-acesso-ao-ensino-tecnico-e-emprego-pronatec-br/",
+    "http://localhost:8080/catalogo-politicas/politica/programa-df-alfabetizado-df/",
+    "http://localhost:8080/catalogo-politicas/situacao/ativa-em-execucao/",
+    "http://localhost:8080/catalogo-politicas/tipo/educacional/",
+    "http://localhost:8080/catalogo-politicas/abrangencia/estadual/"
   ]
 }

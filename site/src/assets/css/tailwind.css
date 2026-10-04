@@ -40,6 +40,14 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Blocos de citação (<pre>) quebram linha no celular em vez de alargar a
+     página; URLs longas quebram em qualquer ponto. */
+  main pre {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    max-width: 100%;
+  }
+
   /* H1 e H2 usam Plex Serif 700 para peso editorial (gov.br + Fiocruz pattern).
      H3+ continuam sans para hierarquia visual mais sutil.
      Aplicamos font-family diretamente porque @apply font-serif em @layer base
@@ -115,7 +123,8 @@
   .tag--filter {
     @apply bg-primary/10 text-primary-dark border border-primary/30 cursor-pointer no-underline transition-colors hover:bg-primary/20;
   }
-  .tag--filter[aria-pressed="true"] {
+  .tag--filter[aria-pressed="true"],
+  .tag--filter-ativo {
     @apply bg-primary text-white border-primary-dark;
   }
 
