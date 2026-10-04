@@ -1,6 +1,6 @@
 # Plano: Catálogo como produto permanente da Rede EJA (v1.0)
 
-**Status**: APROVADO (2026-10-04) — usuária delegou D1–D6; implementar todas as fases sem pausa
+**Status**: CONCLUIDO (2026-10-04) — commits 70d8758 (vocabulário), ff85cc0 (links), 0225c02 (banner), 9d654ca (mapa), 502d64f (rótulo DF), 60dac11 (v1.0), b5dc42f (logos HD), 6c7425e (docs); deploy run 37226231159 verde; tag/release v1.0.0
 **Data**: 2026-10-04
 **Bloco/Rodada**: G
 
@@ -62,51 +62,51 @@ Os 16 logos foram baixados separadamente dos sites oficiais e montados no mesmo 
 ## Abordagem (fases, um commit por fase, um único push no fim)
 
 ### Fase 0 — Links quebrados e comprometidos (URGENTE)
-- [ ] Ceres: tirar o link (o nome continua como texto) do rodapé, de /sobre/, da memória e de `equipe.js` até o site ser recuperado.
-- [ ] Bradesco: trocar o link por https://fundacao.bradesco/.
-- [ ] Itaú: trocar o link por https://www.itaueducacaoetrabalho.org.br/.
-- [ ] Avisar a TI do IESP/Ceres sobre o redirecionamento malicioso (fica a cargo da usuária).
+- [x] Ceres: tirar o link (o nome continua como texto) do rodapé, de /sobre/, da memória e de `equipe.js` até o site ser recuperado.
+- [x] Bradesco: trocar o link por https://fundacao.bradesco/.
+- [x] Itaú: trocar o link por https://www.itaueducacaoetrabalho.org.br/.
+- [x] Avisar a TI do IESP/Ceres sobre o redirecionamento malicioso (fica a cargo da usuária).
 
 ### Fase 1 — Remover o Encontro
-- [ ] Remover o include de `base.njk` e apagar `banner-evento.njk`.
+- [x] Remover o include de `base.njk` e apagar `banner-evento.njk`.
 
 ### Fase 2 — Identidade: produto permanente da Rede EJA
-- [ ] `site.js`: subtitle passa a ser "Rede EJA e Inclusão Produtiva"; ajustar a description.
-- [ ] `/sobre/`:
+- [x] `site.js`: subtitle passa a ser "Rede EJA e Inclusão Produtiva"; ajustar a description.
+- [x] `/sobre/`:
   - nova abertura (produto permanente da Rede, parte das "Evidências", link para a página da Rede);
   - **remover** o aviso "compor a Rede não significa…";
   - créditos conforme D1;
   - Projeto Juventudes conforme D2.
-- [ ] Painel de logos das 16 instituições (componente acima), substituindo a imagem quebrada. Onde mais exibir: D6.
-- [ ] Rodapé: Rede no topo, créditos de D1 e link "Conheça a Rede".
-- [ ] Citação conforme D3: `eleventy.config.js`, `equipe.js`, `ficha-meta.njk`, `sobre/index.md`, `termos.md`, `CITATION.cff` e `README.md`.
-- [ ] `termos.md:50` (marcas das 16 instituições) e descrição do repositório no GitHub.
+- [x] Painel de logos das 16 instituições (componente acima), substituindo a imagem quebrada. Onde mais exibir: D6.
+- [x] Rodapé: Rede no topo, créditos de D1 e link "Conheça a Rede".
+- [x] Citação conforme D3: `eleventy.config.js`, `equipe.js`, `ficha-meta.njk`, `sobre/index.md`, `termos.md`, `CITATION.cff` e `README.md`.
+- [x] `termos.md:50` (marcas das 16 instituições) e descrição do repositório no GitHub.
 
 ### Fase 3 — Versão 1.0
-- [ ] Versão nova: `site.js` "1.0", `site/package.json` 1.0.0 e `CITATION.cff` (1.0, data, 366 políticas, 27 UFs).
-- [ ] Selo do cabeçalho conforme D4; rodapé com "Versão 1.0 · outubro de 2026".
-- [ ] `transparencia.md`: versão atual e histórico. `README.md`: status atualizado.
-- [ ] Depois do deploy, criar a tag `v1.0.0` e uma GitHub Release (base para o DOI no Zenodo).
+- [x] Versão nova: `site.js` "1.0", `site/package.json` 1.0.0 e `CITATION.cff` (1.0, data, 366 políticas, 27 UFs).
+- [x] Selo do cabeçalho conforme D4; rodapé com "Versão 1.0 · outubro de 2026".
+- [x] `transparencia.md`: versão atual e histórico. `README.md`: status atualizado.
+- [x] Depois do deploy, criar a tag `v1.0.0` e uma GitHub Release (base para o DOI no Zenodo).
 
 ### Fase 4 — Erro do mapa
-- [ ] Em `mapa.js:361`, trocar `})();` por `});`.
-- [ ] Validar com puppeteer: zero erros, 27 UFs e downloads funcionando.
+- [x] Em `mapa.js:361`, trocar `})();` por `});`.
+- [x] Validar com puppeteer: zero erros, 27 UFs e downloads funcionando.
 
 ### Fase 5 — Vocabulário (D5)
-- [ ] Aplicar as variantes óbvias:
+- [x] Aplicar as variantes óbvias:
   - categoria igual com descrição, maiúscula, espaço ou erro de digitação: "Curso/Formação (…)", "Serviço/Atendimento (…)", "Unidade fixa/oferta fixa", "União-Estado", "Compartilha da…";
   - esfera "Distrito Federal" vira "Estado", com o rótulo "Distrito Federal" nas fichas do DF, mesma regra do "Distrital".
-- [ ] Rodar o ETL no clone do Drive, com toy test e 0 erros.
-- [ ] Gerar a lista dos casos ambíguos para a equipe de pesquisa: "Misto" de arranjo, "Territorializada", "Infraestrutura educacional", "." e os valores colados no campo errado.
+- [x] Rodar o ETL no clone do Drive, com toy test e 0 erros.
+- [x] Gerar a lista dos casos ambíguos para a equipe de pesquisa: "Misto" de arranjo, "Territorializada", "Infraestrutura educacional", "." e os valores colados no campo errado.
 
 ### Fase 6 — Validação e publicação
-- [ ] Build limpo e puppeteer em home, /sobre/, /mapa/, /explorar/, uma ficha e /uf/df/. Critérios:
+- [x] Build limpo e puppeteer em home, /sobre/, /mapa/, /explorar/, uma ficha e /uf/df/. Critérios:
   - zero "Encontro" e "PoC";
   - console limpo;
   - 16 logos carregando, todos linkados.
-- [ ] Rodar o link-check dos links institucionais.
-- [ ] Fazer um push e conferir o CI e o site no ar.
-- [ ] Atualizar CLAUDE.md e a memória (incluindo a URL do Ceres em `reference_urls_institucionais.md`).
+- [x] Rodar o link-check dos links institucionais.
+- [x] Fazer um push e conferir o CI e o site no ar.
+- [x] Atualizar CLAUDE.md e a memória (incluindo a URL do Ceres em `reference_urls_institucionais.md`).
 
 ## Decisões tomadas (delegadas pela usuária em 2026-10-04)
 - **D1**: Rede + 16 instituições no topo; "Pesquisa e desenvolvimento: Ceres/IESP-UERJ, MAPE, IESP-UERJ"; papéis originais (realização FRM+Bradesco, parceiros Itaú+Arymax, cooperação UNESCO) mantidos numa seção secundária "Apoio ao levantamento"
