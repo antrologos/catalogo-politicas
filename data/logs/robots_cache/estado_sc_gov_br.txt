@@ -1,0 +1,9 @@
+# START YOAST BLOCK
+# ---------------------------
+User-agent: *
+Disallow:
+
+Sitemap: https://estado.sc.gov.br/sitemap_index.xml
+Sitemap: https://estado.sc.gov.br/noticias/sitemap_index.xml
+# ---------------------------
+# END YOAST BLOCK

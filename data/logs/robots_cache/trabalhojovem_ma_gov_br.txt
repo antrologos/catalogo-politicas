@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Suspensão Temporária | Período Eleitoral 2026</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <style>
+        :root {
+            --azul: #1f2a78;
+            --vermelho: #d13226;
+            --preto: #111111;
+            --cinza: #5f6368;
+            --cinza-claro: #f4f6f8;
+            --branco: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%);
+            color: var(--preto);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px 18px;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 920px;
+            background: var(--branco);
+            border-radius: 22px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.10);
+            overflow: hidden;
+            border: 1px solid #e8eaed;
+        }
+
+        .top-bar {
+            height: 10px;
+            background: linear-gradient(90deg, var(--azul) 0 28%, var(--vermelho) 28% 52%, var(--branco) 52% 68%, var(--preto) 68% 84%, var(--vermelho) 84% 100%);
+        }
+
+        .content {
+            padding: 54px 44px 42px;
+            text-align: center;
+        }
+
+        .flag {
+            width: 210px;
+            max-width: 58vw;
+            margin: 0 auto 30px;
+            display: block;
+        }
+
+        .label {
+            display: inline-block;
+            background: var(--cinza-claro);
+            color: var(--azul);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .04em;
+            text-transform: uppercase;
+            padding: 9px 14px;
+            border-radius: 999px;
+            margin-bottom: 22px;
+        }
+
+        h1 {
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.12;
+            color: var(--azul);
+            margin-bottom: 18px;
+        }
+
+        .lead {
+            max-width: 760px;
+            margin: 0 auto;
+            font-size: clamp(17px, 2.3vw, 20px);
+            line-height: 1.65;
+            color: #2b2f33;
+        }
+
+        .notice {
+            margin: 34px auto 0;
+            max-width: 780px;
+            background: #fafafa;
+            border: 1px solid #e2e5e9;
+            border-left: 6px solid var(--vermelho);
+            border-radius: 14px;
+            padding: 22px 24px;
+            text-align: left;
+        }
+
+        .notice p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #3c4043;
+        }
+
+        .notice strong {
+            color: var(--preto);
+        }
+
+        .footer {
+            margin-top: 38px;
+            padding-top: 24px;
+            border-top: 1px solid #edf0f2;
+            color: var(--cinza);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer strong {
+            color: var(--azul);
+        }
+
+        @media (max-width: 600px) {
+            .content {
+                padding: 42px 24px 32px;
+            }
+
+            .flag {
+                width: 170px;
+            }
+
+            .notice {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="page" role="main">
+        <div class="top-bar" aria-hidden="true"></div>
+
+        <section class="content">
+            <img class="flag" src="assets/bandeira-maranhao.png" alt="Bandeira do Maranhão">
+
+            <span class="label">Comunicado oficial</span>
+
+            <h1>Suspensão Temporária de Conteúdo Institucional</h1>
+
+            <p class="lead">
+                Este portal encontra-se temporariamente suspenso em cumprimento às restrições previstas para o período que antecede o pleito eleitoral de 2026, em conformidade com a Lei Federal nº 9.504/1997.
+            </p>
+
+            <div class="notice">
+                <p>
+                    A medida tem caráter preventivo e temporário, visando assegurar a observância das normas eleitorais aplicáveis à comunicação institucional durante o período eleitoral.
+                </p>
+                <p style="margin-top: 12px;">
+                    <strong>Após o encerramento do período de restrição, o acesso regular ao portal será restabelecido.</strong>
+                </p>
+            </div>
+
+            <footer class="footer">
+                <p><strong>Período Eleitoral 2026</strong></p>
+                <p>Lei Federal nº 9.504/1997</p>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

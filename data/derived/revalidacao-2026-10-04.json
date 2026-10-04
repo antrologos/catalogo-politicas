@@ -1,0 +1,3425 @@
+[
+  {
+    "id_interno": "FRM-CP-2026-EDU-0001",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 5284
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0004",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 125
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0001",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3676
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0003",
+    "url": "https://www.gov.br/secretariageral/pt-br/juventude/estacaojuventude",
+    "sha_anterior": "17c77cd92408335f",
+    "outcome": "http_403",
+    "elapsed_ms": 55
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0004",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0005",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0006",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 48
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0007",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0008",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3545
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0001",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 134
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0004",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3900
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0005",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 92
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0008",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 126
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0010",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3472
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0009",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 46
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0015",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4227
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0016",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4194
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0017",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4200
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0022",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 126
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0023",
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2011/decreto-57238-17.08.2011.html",
+    "sha_anterior": "2df7fff3965dc4f1",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3579
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0028",
+    "url": "https://prefeitura.sp.gov.br/web/imigrantes_e_trabalho_decente/w/programas_e_projetos/portas_abertas/259304",
+    "sha_anterior": "873782c29281f79c",
+    "outcome": "http_403",
+    "elapsed_ms": 219
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0030",
+    "url": "https://teses.usp.br/teses/disponiveis/48/48134/tde-09102007-093437/publico/DissertacaoAlineAbbonizio.pdf",
+    "sha_anterior": "afcfa58020b3684f",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 214
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0034",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4280
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0010",
+    "url": "https://www.desenvolvimentosocial.sp.gov.br/sec_desenvolv_social/noticias/informacoes-sobre-o-programa-acao-jovem-430",
+    "sha_anterior": "e348e86491ff8bea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3579
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0011",
+    "url": "https://prefeitura.sp.gov.br/web/lgbti/w/menu/150965",
+    "sha_anterior": "7bab43fca519379c",
+    "outcome": "http_403",
+    "elapsed_ms": 210
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0012",
+    "url": "https://jau.sp.gov.br/noticia/10538/plano-mobilidade-jahu",
+    "sha_anterior": "ab21be772879a84d",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3633
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0013",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4294
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0015",
+    "url": "https://prefeitura.sp.gov.br/web/comunicacao/w/noticias/122295",
+    "sha_anterior": "6e62782f204b37de",
+    "outcome": "http_403",
+    "elapsed_ms": 199
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0016",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 130
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0017",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4348
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0018",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0019",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 57
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0020",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0021",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0022",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0023",
+    "url": "https://prefeitura.sp.gov.br/web/assistencia_social/w/rede_socioassistencial/criancas_e_adolescentes/331325",
+    "sha_anterior": "4d08ace6823a40bf",
+    "outcome": "http_403",
+    "elapsed_ms": 197
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0011",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4605
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0012",
+    "url": "https://www.trampolim.sp.gov.br/",
+    "sha_anterior": "2a559c0735e3e954",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4232
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0013",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 85
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0016",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 125
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0019",
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2025/decreto-69680-08.07.2025.html",
+    "sha_anterior": "13664c71a80d91bc",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3679
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0020",
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2025/decreto-69680-08.07.2025.html?utm_source",
+    "sha_anterior": "b4ce35400dbc1f80",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3431
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0021",
+    "url": "https://www.desenvolvimentoeconomico.sp.gov.br/DesenvolvimentoEconomico/institucional/Programas/pacto_pela_inclusao",
+    "sha_anterior": "55fe60dd09540e8d",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3911
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0022",
+    "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2023/decreto-67980-25.09.2023.html",
+    "sha_anterior": "86a031ffb0685e46",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3774
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0025",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 127
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0035",
+    "url": "https://www.seeduc.rj.gov.br/cidad%C3%A3o/matr%C3%ADcula",
+    "sha_anterior": "5c14d3592c42531a",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3745
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0037",
+    "url": "https://www.frm.org.br/institucional/a-fundacao/como-chegamos-ate-aqui/2009",
+    "sha_anterior": "a988b4934b7e2959",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3428
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0040",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 144
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0042",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4278
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0043",
+    "url": "https://doweb.rio.rj.gov.br/apifront/portal/edicoes/imprimir_materia/837253/5353",
+    "sha_anterior": "d0eba8587ccd2e9d",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 994
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0044",
+    "url": "https://www.folha1.com.br/geral/2023/08/1292858-mprj-assina-pacto-estadual-para-combater-a-evasao-escolar-na-rede-publica.html",
+    "sha_anterior": "9f5f4fb3063a99e9",
+    "outcome": "sha_igual_apos_get",
+    "elapsed_ms": 4176
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0024",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 131
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0025",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0026",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0027",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4361
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0030",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0034",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional?utm_source=chatgpt.com",
+    "sha_anterior": "3f90199828994b7d",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0037",
+    "url": "https://arquivo.proderj.rj.gov.br/emop_imagens/site/bs_visualiza.asp?id=736",
+    "sha_anterior": "56631fa101fedc0a",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3443
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0038",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/sistema-nacional-de-emprego-sine/casa-do-trabalhador",
+    "sha_anterior": "2861d8957000d5c9",
+    "outcome": "http_403",
+    "elapsed_ms": 148
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0039",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/mte/sine",
+    "sha_anterior": "e7e3100869113af8",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0040",
+    "url": "https://legislacao.fazenda.rj.gov.br/letra-r/rio-simples/",
+    "sha_anterior": "556a09b363c13df3",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3618
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0043",
+    "url": "https://www.rj.gov.br/trabalho/acoes_e_programas?utm_source=chatgpt.com",
+    "sha_anterior": "41d6cbd4d6840539",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3415
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0047",
+    "url": "https://www.faetec.rj.gov.br/historia/",
+    "sha_anterior": "82515fe3197f5624",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3395
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0049",
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao",
+    "sha_anterior": "8c64c005bb4edfb7",
+    "outcome": "http_403",
+    "elapsed_ms": 134
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0029",
+    "url": "https://www.gov.br/secretariageral/pt-br/juventude/estacaojuventude",
+    "sha_anterior": "17c77cd92408335f",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0030",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0044",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4621
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0052",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4378
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0031",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 122
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0053",
+    "url": "https://www.mg.gov.br/servico/concluir-o-ensino-medio-por-meio-de-cursos-oferecidos-pelos-cesec",
+    "sha_anterior": "83494843b2ed53a4",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3871
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0054",
+    "url": "https://www.educacao.mg.gov.br/servicos/exames-de-ensino-fundamental-e-medio/",
+    "sha_anterior": "9fec36eb2416d234",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3790
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0055",
+    "url": "https://www.educacao.mg.gov.br/servicos/exames-de-ensino-fundamental-e-medio/",
+    "sha_anterior": "9fec36eb2416d234",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4510
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0056",
+    "url": "https://plataforma.buscaativaescolar.org.br/",
+    "sha_anterior": "b39f68ec8db1b142",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4333
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0057",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4497
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0060",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 134
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0064",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4336
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0032",
+    "url": "https://agenciaminas.mg.gov.br/noticia/educacao-lanca-oficialmente-campanha-de-busca-ativa-escolar-2025-para-reintegrar-estudantes-infrequentes",
+    "sha_anterior": "86d23365d4fcc809",
+    "outcome": "http_503",
+    "elapsed_ms": 2327
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0034",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 125
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0035",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0036",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 48
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0037",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0038",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0046",
+    "url": "https://www.educacao.mg.gov.br/governo-de-minas-abre-pre-inscricao-para-o-trilhas-de-futuro-jovens-e-adultos/",
+    "sha_anterior": "b9058469133a792b",
+    "outcome": "http_404",
+    "elapsed_ms": 802
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0047",
+    "url": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-forma",
+    "sha_anterior": "afaadac7ec5869ba",
+    "outcome": "http_404",
+    "elapsed_ms": 614
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0049",
+    "url": "https://desenvolvimento.mg.gov.br/inicio/projetos/projeto/1143",
+    "sha_anterior": "23f983474e0cc534",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4411
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0050",
+    "url": "https://www.descubraaprendizagem.mg.gov.br/",
+    "sha_anterior": "5ab3d7476007d733",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4927
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0051",
+    "url": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-programando",
+    "sha_anterior": "7c31cd25abea66c2",
+    "outcome": "http_404",
+    "elapsed_ms": 709
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0039",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4431
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0052",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 166
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0055",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4495
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0056",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 105
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0059",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 49
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0040",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0062",
+    "url": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-forma",
+    "sha_anterior": "afaadac7ec5869ba",
+    "outcome": "http_404",
+    "elapsed_ms": 647
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0071",
+    "url": "https://professor.escoladigital.pr.gov.br/eja",
+    "sha_anterior": "727b7a6a842a575c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3795
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0072",
+    "url": "https://www.educacao.pr.gov.br/eja_exames_certificacao_legislacao",
+    "sha_anterior": "d93381d755ffc220",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3596
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0073",
+    "url": "https://professor.escoladigital.pr.gov.br/combate_abandono_escolar",
+    "sha_anterior": "8c4214634526a6e2",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3546
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0074",
+    "url": "https://feccompar.com.br/biblioteca/plano-estadual-de-educacao-no-sistema-prisional-do-parana/",
+    "sha_anterior": "0f246b2399d48afc",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4004
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0075",
+    "url": "https://professor.escoladigital.pr.gov.br/eja/proeduse/legislacao",
+    "sha_anterior": "29267841d74c9529",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3674
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0078",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4361
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0080",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 129
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0041",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4337
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0043",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0044",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 47
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0045",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0063",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0046",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0065",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0066",
+    "url": "https://www.trabalho.pr.gov.br/Pagina/Qualifica-Parana-2026",
+    "sha_anterior": "a90a803f941f0cbf",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 5947
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0067",
+    "url": "https://www.parana.pr.gov.br/aen/Noticia/Programa-Carretas-do-Conhecimento-tera-investimento-de-R-22-milhoes-em-2023",
+    "sha_anterior": "572d5f0488d01dcf",
+    "outcome": "http_404",
+    "elapsed_ms": 329
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0068",
+    "url": "https://www.parana.pr.gov.br/aen/Noticia/Qualificacao-profissional-gratuita-do-Estado-alcancara-os-399-municipios-do-Parana",
+    "sha_anterior": "1d8bc62a47d580f4",
+    "outcome": "http_404",
+    "elapsed_ms": 192
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0069",
+    "url": "https://www.fomento.pr.gov.br/Banco-da-Mulher-Paranaense",
+    "sha_anterior": "ce79507fe11bcd02",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 5856
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0070",
+    "url": "https://institutoligabadu.org.br/bora-circular/",
+    "sha_anterior": "0f8b61a844cae027",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 6322
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0072",
+    "url": "https://ole.uff.br/wp-content/uploads/sites/296/2017/12/projeto-escola-fabrica.pdf",
+    "sha_anterior": "de4e99da1cf468a3",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 103
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0075",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/aprendizagem-profissional?utm_source=chatgpt.com",
+    "sha_anterior": "3f90199828994b7d",
+    "outcome": "http_403",
+    "elapsed_ms": 131
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0078",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4596
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0047",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 47
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0087",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4295
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0048",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/migracoes/politica-nacional-de-migracoes-refugio-e-apatridia-1",
+    "sha_anterior": "c959b19e0658d55a",
+    "outcome": "http_403",
+    "elapsed_ms": 134
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0090",
+    "url": "https://educacao.rs.gov.br/carta-de-servicos/servicos?servico=2259",
+    "sha_anterior": "8db2d3853db9ce25",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 5172
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0091",
+    "url": "https://educacao.rs.gov.br/neejas-nucleos-estaduais-de-educacao-de-jovens-e-adultos",
+    "sha_anterior": "c9879b947f4ea843",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4789
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0092",
+    "url": "https://escola.rs.gov.br/matriculas",
+    "sha_anterior": "c77e76d0c8f43f40",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3738
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0093",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 122
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0096",
+    "url": "https://ssps.rs.gov.br/upload/arquivos/202301/24100513-19131940-plano-educacao-para-pessoas-presas.pdf",
+    "sha_anterior": "5dc6e55837ce8ebe",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 1287
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0098",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4403
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0049",
+    "url": "https://planoriogrande.rs.gov.br/plano-rio-grande",
+    "sha_anterior": "f7ecac391cb1e947",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4707
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0052",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 128
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0055",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0056",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4393
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0079",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 60
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0080",
+    "url": "https://fgtas.rs.gov.br/sistema-nacional-de-emprego",
+    "sha_anterior": "df2e08c5131baeaa",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 7306
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0081",
+    "url": "https://trabalho.rs.gov.br/rs-qualificacao",
+    "sha_anterior": "165a2839cab3d328",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 5157
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0082",
+    "url": "https://trabalho.rs.gov.br/rs-qualificacao-recomecar-2025",
+    "sha_anterior": "d2946be0c581c0fa",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4380
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0086",
+    "url": "https://www.jb.com.br/pais/noticias/2007/03/14/consorcio-da-juventude-inseriu-quase-60-no-mercado-formal-de-trabalho.html?utm_source=chatgpt.com",
+    "sha_anterior": "9da3ffb8a7f90fb6",
+    "outcome": "sha_igual_apos_get",
+    "elapsed_ms": 4138
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0087",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4670
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0088",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 74
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0090",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/sistema-nacional-de-emprego-sine/casa-do-trabalhador",
+    "sha_anterior": "2861d8957000d5c9",
+    "outcome": "http_403",
+    "elapsed_ms": 151
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0057",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0104",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4422
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0107",
+    "url": "https://www.estado.rs.gov.br/com-foco-no-combate-a-evasao-na-rede-estadual-governo-lanca-politica-de-protecao-a-trajetoria-escolar",
+    "sha_anterior": "f77365b732c9eb0e",
+    "outcome": "http_404",
+    "elapsed_ms": 917
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0108",
+    "url": "https://jornadapedagogica.educacao.ba.gov.br/eja",
+    "sha_anterior": "70e79aea73f265aa",
+    "outcome": "http_404",
+    "elapsed_ms": 1760
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0113",
+    "url": "https://www.ba.gov.br/educacao/bahia-alfabetizada",
+    "sha_anterior": "45444113e64e75c3",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4253
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0114",
+    "url": "https://plataforma.buscaativaescolar.org.br/",
+    "sha_anterior": "b39f68ec8db1b142",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4358
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0115",
+    "url": "https://www.ecoescolas.org.br/casas-familiares-rurais-da-bahia-inspiram-o-mundo-na-conferencia-internacional-do-programa-eco-escolas/",
+    "sha_anterior": "2c57182deaa614bc",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3769
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0117",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 168
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0120",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4338
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0058",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0059",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0092",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0060",
+    "url": "https://www.ba.gov.br/educacao/bolsa-presenca",
+    "sha_anterior": "d371d34774b07060",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3722
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0061",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0062",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0063",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0064",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4293
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0093",
+    "url": "https://servidores.rhbahia.ba.gov.br/noticias/2025-01-08/governo-do-estado-oferta-educacao-profissional-e-tecnologica-todos-os",
+    "sha_anterior": "b44053137715437e",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4549
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0095",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 94
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0098",
+    "url": "https://www.idacba.org.br/site/2022/08/02/programa-qualifica-bahia/",
+    "sha_anterior": "dff561a20d841ad3",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3615
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0099",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/setembro/mte-lanca-edital-para-qualificacao-profissional-de-600-pessoas-pelo-programa-manuel-querino",
+    "sha_anterior": "e0131879568dba7a",
+    "outcome": "http_403",
+    "elapsed_ms": 125
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0100",
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "sha_anterior": "9a8865a0ccd1aeea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3719
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0101",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4619
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0103",
+    "url": "https://www.ba.gov.br/trabalho/noticia/2024-08/5635/ministro-do-trabalho-diz-que-programa-manuel-querino-vai-abrir-portas-e",
+    "sha_anterior": "92357202ba8dd924",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4169
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0105",
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "sha_anterior": "9a8865a0ccd1aeea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4507
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0106",
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "sha_anterior": "9a8865a0ccd1aeea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4517
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0107",
+    "url": "https://www.bahianoticias.com.br/noticia/282876-programa-juventude-produtiva-oferece-vagas-para-capacitacao-no-senac-e-sinebahia",
+    "sha_anterior": "6782047e6e106d5c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4067
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0108",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/qualificacao-profissional/caminho-digital",
+    "sha_anterior": "083af229f5233f8e",
+    "outcome": "http_403",
+    "elapsed_ms": 141
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0109",
+    "url": "https://www.youtube.com/live/JKwTQgBHdlM",
+    "sha_anterior": "f85d486747764489",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4306
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0110",
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "sha_anterior": "9a8865a0ccd1aeea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4431
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0111",
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "sha_anterior": "9a8865a0ccd1aeea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4656
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0112",
+    "url": "https://www.ba.gov.br/trabalho/noticia/2024-02/4167/forca-jovem-da-largada-com-oficina-de-roteiro-para-audiovisual",
+    "sha_anterior": "f0cd3ca71f984e5d",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4095
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0113",
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "sha_anterior": "9a8865a0ccd1aeea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4446
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0114",
+    "url": "https://www.ba.gov.br/trabalho/296/programa-juventude-produtiva",
+    "sha_anterior": "9a8865a0ccd1aeea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4530
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0117",
+    "url": "https://www.bnews.com.br/noticias/economia-e-mercado/a-bahia-e-lider-na-geracao-de-empregos-no-nordeste-destaca-secretario-durante-inauguracao-de-nova-sede-do-sinebahia.html",
+    "sha_anterior": "5814bb0e940f5a40",
+    "outcome": "http_403",
+    "elapsed_ms": 87
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0128",
+    "url": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/RELATORIO%20DE%20GESTA%CC%83O%202022-393a2.pdf",
+    "sha_anterior": "4c52dab0cc31cc3e",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 211
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0129",
+    "url": "https://www.seduc.pa.gov.br/pagina/3986-ed--jovens-e-adultos-eja",
+    "sha_anterior": "151b31a1b89d8aba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 6736
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0130",
+    "url": "https://egpa.pa.gov.br/noticias/projeto-mundiar-desenvolve-aprendizado-multidisciplinar",
+    "sha_anterior": "8a3d927f72fe701a",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 12424
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0131",
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ce.pdf",
+    "sha_anterior": "0eec96ae25720829",
+    "outcome": "http_403",
+    "elapsed_ms": 144
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0118",
+    "url": "https://www.seaster.pa.gov.br/taxonomy/term/170",
+    "sha_anterior": "3bf7b2e68be34642",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3883
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0132",
+    "url": "https://www.agenciapara.com.br/noticia/67291/rede-estadual-intensifica-busca-ativa-escolar-para-garantir-direito-a-educacao",
+    "sha_anterior": "2dd095ac822c8c54",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3557
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0133",
+    "url": "https://www.seduc.pa.gov.br/pagina/3986-ed--jovens-e-adultos-eja",
+    "sha_anterior": "151b31a1b89d8aba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 10644
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0134",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 119
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0135",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 48
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0136",
+    "url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2024/resolucao-no-20-de-9-de-setembro-de-2024/view",
+    "sha_anterior": "11c9ed5096a0e570",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0068",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0069",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0072",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0119",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2025/janeiro/seguro-desemprego-2025-atualizacao-das-faixas-e-valores-do-beneficio",
+    "sha_anterior": "93a45cc501d7f1a9",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0123",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 94
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0126",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4699
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0128",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0074",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0130",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/sistema-nacional-de-emprego-sine/casa-do-trabalhador",
+    "sha_anterior": "2861d8957000d5c9",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0146",
+    "url": "https://agenciapara.com.br/noticia/34987/seduc-promove-formacao-continuada-sobre-programa-trilhas-no-para",
+    "sha_anterior": "12f47f36bdbe2e5c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3442
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0147",
+    "url": "https://transparencia.pe.gov.br/wp-content/uploads/2023/12/plano-estadual-de-educacao_versao-final-07-06-2015-1.pdf",
+    "sha_anterior": "78d66971da2f2bcc",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 414
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0148",
+    "url": "https://portal.educacao.pe.gov.br/see-oferta-18-908-vagas-para-a-educacao-de-jovens-e-adultos/",
+    "sha_anterior": "c914f039c6e424db",
+    "outcome": "http_404",
+    "elapsed_ms": 813
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0149",
+    "url": "https://g1.globo.com/pe/petrolina-regiao/noticia/2024/09/10/escolas-estaduais-de-petrolina-recebem-inscricoes-para-o-eja-campo-veja-lista.ghtml",
+    "sha_anterior": "0802b657cf1dd28b",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4229
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0150",
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2020-2024/pe.pdf",
+    "sha_anterior": "43399a054e8fff6b",
+    "outcome": "http_403",
+    "elapsed_ms": 129
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0151",
+    "url": "https://portal.educacao.pe.gov.br/supletivo-anual/",
+    "sha_anterior": "a08700a2aa8b6195",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3476
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0152",
+    "url": "https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/RELATORIO-ANUAL-DE-INDICADORES-2024.pdf",
+    "sha_anterior": "d51a7d804d67213b",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 150
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0153",
+    "url": "https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/RELATORIO-ANUAL-DE-INDICADORES-2024.pdf",
+    "sha_anterior": "d51a7d804d67213b",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 101
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0154",
+    "url": "https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/RELATORIO-ANUAL-DE-INDICADORES-2024.pdf",
+    "sha_anterior": "d51a7d804d67213b",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 99
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0155",
+    "url": "https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/RELATORIO-ANUAL-DE-INDICADORES-2024.pdf",
+    "sha_anterior": "d51a7d804d67213b",
+    "outcome": "tamanho_igual_provavel_inalterado",
+    "elapsed_ms": 115
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0159",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 131
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0161",
+    "url": "https://portal.educacao.pe.gov.br/projovem-urbano-oferta-1-500-vagas-em-pernambuco/",
+    "sha_anterior": "f3c2642c4d09939a",
+    "outcome": "http_404",
+    "elapsed_ms": 552
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0163",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4348
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0075",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 141
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0076",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0077",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0079",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0080",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 48
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0081",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0131",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0132",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0133",
+    "url": "https://www.sedepe.pe.gov.br/sedepe-inaugura-primeira-casa-do-trabalhador-do-pais/",
+    "sha_anterior": "e21343ce387001fc",
+    "outcome": "http_404",
+    "elapsed_ms": 411
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0134",
+    "url": "https://www.sedepe.pe.gov.br/qualifica-pe-e-lancado-como-maior-programa-de-cursos-profissionalizantes-em-todo-o-estado/",
+    "sha_anterior": "11f60c98cff7b0ec",
+    "outcome": "http_404",
+    "elapsed_ms": 154
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0135",
+    "url": "https://pronatec2026.com.br/pronatec-2026-pe/",
+    "sha_anterior": "c98da817aacc7edb",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3553
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0136",
+    "url": "https://portal.educacao.pe.gov.br/programa-trilhatec-abre-inscricoes-para-cursos-gratuitos-em-parceria-com-o-senac-em-todo-o-estado/",
+    "sha_anterior": "40b6a8f73126ff76",
+    "outcome": "http_404",
+    "elapsed_ms": 750
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0139",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4624
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0140",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 72
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0082",
+    "url": "https://www.sigas.pe.gov.br/pernambuco-sem-fome-e-com-acolhimento-mulheres/",
+    "sha_anterior": "0e334f7edb3590fd",
+    "outcome": "http_404",
+    "elapsed_ms": 340
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0170",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4491
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0172",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 197
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0173",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0174",
+    "url": "https://belt.al.ce.gov.br/index.php/legislacao-do-ceara/denominacao-de-equipamentos-publicos/item/download/2557_3186959b85710af0a5f386183eca33e8",
+    "sha_anterior": "ef305040cec421bf",
+    "outcome": "sha_igual_apos_get",
+    "elapsed_ms": 7484
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0179",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4263
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0187",
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ce.pdf",
+    "sha_anterior": "0eec96ae25720829",
+    "outcome": "http_403",
+    "elapsed_ms": 135
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0083",
+    "url": "https://www.gov.br/secretariageral/pt-br/juventude/estacaojuventude",
+    "sha_anterior": "17c77cd92408335f",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0084",
+    "url": "https://www.cearasemfome.ce.gov.br/ceara-sem-fome-e-seduc-dialogam-oferta-de-alfabetizacao-de-jovens-e-adultos-para-beneficiarios-do-programa/",
+    "sha_anterior": "80e376848e0a3336",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3961
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0085",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4552
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0087",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/seus-direitos/migracoes/politica-nacional-de-migracoes-refugio-e-apatridia-1",
+    "sha_anterior": "c959b19e0658d55a",
+    "outcome": "http_403",
+    "elapsed_ms": 151
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0089",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0091",
+    "url": "https://www.gov.br/secom/pt-br/assuntos/noticias-regionalizadas/novo-bolsa-familia/mar.26/bolsa-familia-chega-a-mais-de-1-3-milhao-de-beneficiarios-do-ceara-a-partir-desta-quarta-18",
+    "sha_anterior": "64724c5f158de2db",
+    "outcome": "http_403",
+    "elapsed_ms": 58
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0145",
+    "url": "https://www.sps.ce.gov.br/qualificacao-profissional/",
+    "sha_anterior": "47cf0edc96c71d42",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3982
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0146",
+    "url": "https://www.sps.ce.gov.br/qualificacao-profissional/",
+    "sha_anterior": "47cf0edc96c71d42",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4510
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0147",
+    "url": "https://belt.al.ce.gov.br/index.php/legislacao-do-ceara/organizacao-tematica/direitos-humanos-e-cidadania/item/7346-lei-n-18-037-22-04-22-d-o-22-04-22",
+    "sha_anterior": "6e2a9e757264e40c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4038
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0148",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 164
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0151",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0153",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3435
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0154",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4635
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0155",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 109
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0158",
+    "url": "https://www.centec.org.br/programas/qualificar-mais/",
+    "sha_anterior": "8d977d18da0f6a64",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3519
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0159",
+    "url": "https://www.cearasemfome.ce.gov.br/qualificacao-e-renda/",
+    "sha_anterior": "66cdf67bb7cffe2c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4210
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0160",
+    "url": "https://www.sps.ce.gov.br/tag/transformando-vidas/",
+    "sha_anterior": "d3410d5c4a25dcc7",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3948
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0198",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 128
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0097",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4295
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0099",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 48
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0100",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0101",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0102",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 72
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0103",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0104",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4607
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0105",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0168",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 54
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0171",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4631
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0172",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 86
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0175",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 47
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0215",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0222",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4270
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0107",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4261
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0108",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 140
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0109",
+    "url": "https://www.gov.br/secretariageral/pt-br/juventude/estacaojuventude",
+    "sha_anterior": "17c77cd92408335f",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0110",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0112",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4339
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0113",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0114",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 64
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0115",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0182",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 128
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0185",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4695
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0186",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 80
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0189",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 45
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0233",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4345
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0236",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0117",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4270
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0119",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 47
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0120",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0121",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0122",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0123",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0124",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4439
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0125",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 49
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0126",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0127",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0193",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0196",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4623
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0197",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 95
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0200",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 57
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0247",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0261",
+    "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao",
+    "sha_anterior": "8c64c005bb4edfb7",
+    "outcome": "http_403",
+    "elapsed_ms": 74
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0128",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0129",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0130",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 56
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0131",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4477
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0132",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos",
+    "sha_anterior": "a7e16be65b8c51ac",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4106
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0133",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 121
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0135",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0209",
+    "url": "https://fnp.org.br/noticias/item/531-governo-lanca-pronatec-aprendiz-para-as-micro-e-pequenas-empresas",
+    "sha_anterior": "0b271775d51554d3",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 3729
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0210",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0211",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0213",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4698
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0267",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4244
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0271",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 148
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0137",
+    "url": "https://www.gov.br/secretariageral/pt-br/juventude/estacaojuventude",
+    "sha_anterior": "17c77cd92408335f",
+    "outcome": "http_403",
+    "elapsed_ms": 45
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0138",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 70
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0139",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4324
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0140",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0141",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 55
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0142",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0143",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0144",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4263
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0216",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0218",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/servicos/trabalhador/qualificacao-profissional/caminho-digital",
+    "sha_anterior": "083af229f5233f8e",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0219",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0222",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4598
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0223",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 64
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0225",
+    "url": "https://fnp.org.br/noticias/item/531-governo-lanca-pronatec-aprendiz-para-as-micro-e-pequenas-empresas",
+    "sha_anterior": "0b271775d51554d3",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4436
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0228",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 159
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0291",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0294",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4184
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0297",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 61
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0147",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4285
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0149",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0150",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0151",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 50
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0152",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0153",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0154",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4468
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0155",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0231",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0234",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4620
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0235",
+    "url": "https://jovemaprendiz.sp.gov.br/",
+    "sha_anterior": "f3a133045e455525",
+    "outcome": "erro_rede:ConnectError",
+    "elapsed_ms": 87
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0238",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0302",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4246
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0305",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4569
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0156",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 158
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0307",
+    "url": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+    "sha_anterior": "c81246322ae51994",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4280
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0313",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 168
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0157",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4292
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0159",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0160",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0161",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0162",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0163",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0164",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4822
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0165",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0245",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0247",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 48
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0250",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4738
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0320",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4295
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0334",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4261
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0167",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 130
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0168",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0169",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0170",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4262
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0171",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4216
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0173",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 128
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0174",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 61
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0175",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0258",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 49
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0259",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0262",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4596
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0346",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 65
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0353",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4244
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0177",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4269
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0179",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 123
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0180",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 45
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0181",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0182",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0183",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0184",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4509
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0185",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0268",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 56
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0274",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0276",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4382
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0277",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4608
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0280",
+    "url": "https://fnp.org.br/noticias/item/531-governo-lanca-pronatec-aprendiz-para-as-micro-e-pequenas-empresas",
+    "sha_anterior": "0b271775d51554d3",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4426
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0365",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 145
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0186",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4279
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0188",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0189",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0190",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0191",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 45
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0192",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0193",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4786
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0194",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 65
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0287",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0288",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0290",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4241
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0291",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4615
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0378",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 150
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0195",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4251
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0297",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0304",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4696
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0196",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 46
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0197",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 45
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0198",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0201",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0202",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0203",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4327
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0204",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0207",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 34
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0208",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0209",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4488
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0210",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0312",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0313",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0315",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4188
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0316",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4656
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0405",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 127
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0323",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 58
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0324",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 44
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0327",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4621
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0211",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 48
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0212",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0213",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0214",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4160
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0215",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0216",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 51
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0217",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4403
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0219",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4340
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0220",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 130
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0221",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4432
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0331",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0430",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 50
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0222",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4322
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0224",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 95
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0225",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0226",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0227",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0228",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0229",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4431
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0230",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0333",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0335",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4181
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0336",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4641
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0339",
+    "url": "https://fnp.org.br/noticias/item/531-governo-lanca-pronatec-aprendiz-para-as-micro-e-pequenas-empresas",
+    "sha_anterior": "0b271775d51554d3",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4413
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0447",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 140
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0231",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4279
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0233",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0234",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0235",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0236",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0237",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0238",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4344
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0239",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0344",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0345",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0347",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4272
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0348",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4724
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0453",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4435
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0464",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 129
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0241",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4269
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0243",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 46
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0244",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 45
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0245",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0246",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0247",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0248",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4507
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0249",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0359",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0360",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 42
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0362",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4214
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0363",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4691
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0469",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4250
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0474",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 197
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0250",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4204
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0371",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4733
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0373",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4328
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0375",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 139
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0377",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 50
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0251",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4297
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0252",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 93
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0253",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0254",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0256",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 36
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0257",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0259",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 38
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0493",
+    "url": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja",
+    "sha_anterior": "7c291f99ddb81838",
+    "outcome": "http_403",
+    "elapsed_ms": 40
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0261",
+    "url": "https://www.cnj.jus.br/programas-e-acoes/infancia-e-juventude/programa-novos-caminhos/",
+    "sha_anterior": "431328d29aa69e47",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4211
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0263",
+    "url": "https://www.gov.br/secom/pt-br/acompanhe-a-secom/noticias/2025/06/novo-edital-do-estacao-juventude-vai-destinar-r-10-milhoes-para-ceus-das-artes-e-centros-de-referencia-de-todo-o-pais",
+    "sha_anterior": "648e6cee4392a4dc",
+    "outcome": "http_403",
+    "elapsed_ms": 41
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0264",
+    "url": "https://www.gov.br/cultura/pt-br/acesso-a-informacao/perguntas-frequentes/territorios-da-cultura/ceu-das-artes/o-que-e-o-ceu",
+    "sha_anterior": "3cd7c6a2e0a8f10b",
+    "outcome": "http_403",
+    "elapsed_ms": 37
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0265",
+    "url": "https://www.gov.br/mds/pt-br/acoes-e-programas/bolsa-familia",
+    "sha_anterior": "669907e9515eb13a",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0266",
+    "url": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+    "sha_anterior": "d7056e02db63fb44",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0267",
+    "url": "https://www.gov.br/sri/pt-br/backup-secretaria-de-governo/iniciativas/internacional/fsm/eixos/inclusao-social/brasil-sem-miseria",
+    "sha_anterior": "8920f8311190eb41",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0268",
+    "url": "https://www.caixa.gov.br/programas-sociais/pe-de-meia/Paginas/default.aspx",
+    "sha_anterior": "8df51b8b0b5884d8",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4454
+  },
+  {
+    "id_interno": "FRM-CP-2026-PSOC-0269",
+    "url": "https://www.gov.br/mj/pt-br/assuntos/noticias/entenda-o-papel-dos-ministerios-na-politica-nacional-de-migracoes-refugio-e-apatridia",
+    "sha_anterior": "33734957952ac006",
+    "outcome": "http_403",
+    "elapsed_ms": 35
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0380",
+    "url": "https://www.gov.br/pt-br/servicos/solicitar-o-seguro-desemprego",
+    "sha_anterior": "3908a81c35857f2f",
+    "outcome": "http_403",
+    "elapsed_ms": 43
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0381",
+    "url": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+    "sha_anterior": "0ca74c10d1b8d292",
+    "outcome": "http_403",
+    "elapsed_ms": 39
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0383",
+    "url": "https://www.ecosdofuturo.org.br/consorcio-social-da-juventude",
+    "sha_anterior": "d805e5ea3c37f7ba",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4231
+  },
+  {
+    "id_interno": "FRM-CP-2026-TRAB-0384",
+    "url": "https://abmes.org.br/legislacoes/detalhe/2928",
+    "sha_anterior": "7b439fe969e9192c",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4601
+  },
+  {
+    "id_interno": "FRM-CP-2026-EDU-0499",
+    "url": "https://buscaativaescolar.org.br/",
+    "sha_anterior": "057f6ae706e30eea",
+    "outcome": "atualizado_novo_sha",
+    "elapsed_ms": 4264
+  }
+]

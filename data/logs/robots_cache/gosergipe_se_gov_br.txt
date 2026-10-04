@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <link id="favicon" rel="icon" href="/favicon.ico" />
+
+      <!-- Favicon para WhatsApp e redes sociais -->
+      <meta property="og:image" content="/favicon.ico" />
+      <meta property="og:image:width" content="200" />
+      <meta property="og:image:height" content="200" />
+
+      <link rel="apple-touch-icon" id="apple-icon" href="/favicon.ico">
+
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;800&family=Work+Sans:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+      
+    <title id="title">GO</title>
+
+  <!-- Google Tag Manager -->
+  <!-- <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start': new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NMX235F');
+  </script> -->
+  <!-- End Google Tag Manager -->
+
+  <!-- Google tag (gtag.js) --> 
+   <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-0PCG1PLVCS"></script>  -->
+   <!-- <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-0PCG1PLVCS'); </script> -->
+
+  <!--SCRIPT DINAMICO-->
+  <script>
+    var hostname = window.location.hostname;
+  
+    if (hostname === "gorecife.recife.pe.gov.br" || "https://desenvolvimentogorecife.recife.pe.gov.br") {
+      
+      // Carrega o script para Recife
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({
+          'gtm.start': new Date().getTime(), event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s), dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=GTM-NMX235F' + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-NMX235F');
+    } else if (hostname === " gosergipe.se.gov.br") {
+
+      // Carrega o script para  Sergipe
+      var script = document.createElement("script");
+      script.async = true;
+      script.src = "https://www.googletagmanager.com/gtag/js?id=G-0PCG1PLVCS";
+      document.head.appendChild(script);
+  
+      script.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-0PCG1PLVCS');
+      };
+    }
+  </script>
+
+  <script type="module" crossorigin src="/assets/index-33b17d55.js"></script>
+  <link rel="stylesheet" href="/assets/index-03b360f8.css">
+</head>
+
+<body id="body">
+  <div id="app"></div>
+
+  
+
+  <!-- Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+
+  <!-- Script para mudar o favicon -->
+  <script>
+    // Detecta o domínio atual
+    const domain = window.location.hostname;
+
+    // Seleciona a tag <link> do favicon
+    const favicon = document.getElementById('favicon');
+
+    // Verifica se o domínio contém "recife" ou "sergipe"
+    if (domain.includes('recife')) {
+      favicon.href = '/favicon.ico';  // Favicon para domínios que incluem "recife"
+    } else if (domain.includes('sergipe')) {
+      favicon.href = '/favicon-se.ico';  // Favicon para domínios que incluem "sergipe"
+    } else {
+      favicon.href = '/favicon-padrao.ico';  // Favicon padrão para outros casos
+    }
+  </script>
+
+  
+</body>
+
+</html>

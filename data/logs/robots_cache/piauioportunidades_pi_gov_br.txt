@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /dashboard
+Disallow: /candidates/
+Disallow: /curriculum
+Disallow: /profile
+
+Sitemap: https://piauioportunidades.pi.gov.br/sitemap.xml

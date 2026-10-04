@@ -1,0 +1,14 @@
+# *
+User-agent: *
+Allow: /$
+Disallow: /_next/
+Disallow: /api/
+Disallow: /public/
+Disallow:  /admin/
+
+# Host
+Host: https://www.sef.sc.gov.br
+
+# Sitemaps
+Sitemap: https://www.sef.sc.gov.br/sitemap.xml
+Sitemap: https://www.sef.sc.gov.br/server-sitemap-index.xml

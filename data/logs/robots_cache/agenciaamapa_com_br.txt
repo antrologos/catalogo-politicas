@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Comunicado da Agência de Notícias do Amapá sobre a suspensão temporária do site no período eleitoral." />
+  <title>Comunicado - Agência de Notícias do Amapá</title>
+  <style>
+    :root {
+      --bg: #ececec;
+      --text: #111111;
+      --content-max: 860px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .top-strip,
+    .bottom-strip {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+      flex: 0 0 auto;
+    }
+
+    .top-strip {
+      height: 18px;
+    }
+
+    .bottom-strip {
+      height: 18px;
+      margin-top: auto;
+    }
+
+    .page {
+      width: min(var(--content-max), calc(100% - 72px));
+      margin: 0 auto;
+      padding: 86px 0 56px;
+    }
+
+    h1 {
+      margin: 0 0 34px;
+      font-size: 58px;
+      line-height: 0.98;
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    p {
+      margin: 0 0 34px;
+      font-size: 28px;
+      line-height: 1.34;
+      font-weight: 400;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    strong {
+      font-weight: 800;
+    }
+
+    .logo-wrap {
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .logo-wrap img {
+      width: min(380px, 58vw);
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    @media (max-width: 1100px) {
+      .page {
+        width: min(820px, calc(100% - 60px));
+        padding-top: 72px;
+      }
+
+      h1 {
+        font-size: 52px;
+      }
+
+      p {
+        font-size: 25px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .page {
+        width: min(700px, calc(100% - 42px));
+        padding-top: 52px;
+        padding-bottom: 34px;
+      }
+
+      h1 {
+        font-size: 38px;
+        margin-bottom: 24px;
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 1.42;
+        margin-bottom: 24px;
+        text-align: left;
+      }
+
+      .logo-wrap img {
+        width: min(300px, 72vw);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .top-strip,
+      .bottom-strip {
+        height: 12px;
+      }
+
+      .page {
+        width: calc(100% - 32px);
+        padding-top: 32px;
+        padding-bottom: 22px;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 18px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.48;
+        margin-bottom: 20px;
+      }
+
+      .logo-wrap {
+        margin-top: 8px;
+      }
+
+      .logo-wrap img {
+        width: min(250px, 78vw);
+      }
+    }
+  </style>
+</head>
+<body>
+  <img src="amapa_topo.png" alt="Faixa superior decorativa" class="top-strip" />
+
+  <main class="page">
+    <h1>COMUNICADO</h1>
+
+    <p>
+      Em cumprimento às determinações da legislação eleitoral,
+      <strong>a Agência de Notícias do Amapá suspenderá temporariamente a publicação de conteúdos em seu site no período eleitoral, a partir de 4 de julho de 2026.</strong>
+    </p>
+
+    <p>
+      A medida segue as normas que disciplinam a comunicação institucional dos órgãos públicos nesse período e
+      <strong>permanecerá em vigor até o término das eleições.</strong>
+    </p>
+
+    <p>
+      Mesmo com a suspensão das publicações jornalísticas, a população continuará tendo acesso aos serviços essenciais, aos Portais da Transparência e às informações cuja divulgação é autorizada pela legislação.
+      <strong>Os serviços de utilidade pública destinados à imprensa serão encaminhados por e-mail durante esse período.</strong>
+    </p>
+
+    <p>
+      Da mesma forma,
+      <strong>os perfis institucionais do Governo do Amapá e das secretarias estaduais terão suas atividades interrompidas temporariamente.</strong>
+    </p>
+
+    <p>
+      A medida reforça o compromisso do Governo do Estado com a transparência, o cumprimento da legislação e o respeito ao processo democrático.
+    </p>
+
+    <div class="logo-wrap">
+      <img src="amapa_logo.png" alt="Amapá Governo do Estado" />
+    </div>
+  </main>
+
+  <img src="amapa_rodape.png" alt="Faixa inferior decorativa" class="bottom-strip" />
+</body>
+</html>

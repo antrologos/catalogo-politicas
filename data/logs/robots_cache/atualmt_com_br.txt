@@ -1,33 +1,152 @@
-# Bloquear todos por padr�o
+# robots.txt � atualmt.com.br
+# Pol�tica: permitir apenas Google, Bing, Yahoo, Facebook/Meta e WhatsApp.
+# Bots de IA e demais crawlers s�o bloqueados.
+
+# ===== Google =====
+User-agent: Googlebot
+User-agent: Googlebot-Image
+User-agent: Googlebot-News
+User-agent: Googlebot-Video
+User-agent: Storebot-Google
+User-agent: AdsBot-Google
+User-agent: AdsBot-Google-Mobile
+User-agent: Mediapartners-Google
+Allow: /
+Allow: /wp-content/uploads/
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /?s=
+Disallow: /search/
+Disallow: /*?replytocom=
+Disallow: /*?*
+
+# ===== Bing =====
+User-agent: Bingbot
+User-agent: msnbot
+User-agent: msnbot-media
+User-agent: BingPreview
+Allow: /
+Allow: /wp-content/uploads/
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /?s=
+Disallow: /search/
+Disallow: /*?replytocom=
+Disallow: /*?*
+
+# ===== Yahoo =====
+User-agent: Slurp
+Allow: /
+Allow: /wp-content/uploads/
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+Disallow: /wp-login.php
+Disallow: /xmlrpc.php
+Disallow: /?s=
+Disallow: /search/
+Disallow: /*?replytocom=
+Disallow: /*?*
+
+# ===== Facebook / Meta (preview de imagens em links) =====
+User-agent: facebookexternalhit
+User-agent: Facebot
+User-agent: FacebookBot
+User-agent: meta-externalagent
+User-agent: meta-externalfetcher
+Allow: /
+Allow: /wp-content/uploads/
+
+# ===== WhatsApp (preview de imagens em links compartilhados) =====
+User-agent: WhatsApp
+Allow: /
+Allow: /wp-content/uploads/
+
+# ===== Bots de IA / scrapers � bloqueio expl�cito =====
+User-agent: GPTBot
+Disallow: /
+
+User-agent: OAI-SearchBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Perplexity-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: ImagesiftBot
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: DuckAssistBot
+Disallow: /
+
+User-agent: MistralAI-User
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ===== Bloqueio geral � todos os demais bots =====
 User-agent: *
 Disallow: /
 
-# Google
-User-agent: Googlebot
-Disallow:
-User-agent: Googlebot-Image
-Disallow:
-User-agent: Googlebot-Video
-Disallow:
-User-agent: Googlebot-News
-Disallow:
-User-agent: Googlebot-Mobile
-Disallow:
-User-agent: AdsBot-Google
-Disallow:
-User-agent: Mediapartners-Google
-Disallow:
-
-# Meta (Facebook, Instagram, WhatsApp)
-User-agent: facebookexternalhit
-Disallow:
-User-agent: Facebot
-Disallow:
-
-# Yahoo
-User-agent: Slurp
-Disallow:
-
-# Bing
-User-agent: Bingbot
-Disallow:
+# Sitemap
+Sitemap: https://atualmt.com.br/sitemap_index.xml

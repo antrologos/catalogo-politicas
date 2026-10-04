@@ -22,7 +22,7 @@ LOG = logging.getLogger(__name__)
 
 USER_AGENT = (
     "FRM-CatalogoPoliticas/0.1 "
-    "(+https://github.com/iesp-uerj/frm-catalogo-politicas; "
+    "(+https://github.com/antrologos/catalogo-politicas; "
     "mailto:rogerio.barbosa@iesp.uerj.br) "
     "python-httpx/0.28"
 )

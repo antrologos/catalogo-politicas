@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://transparencia.pe.gov.br/wp-content/uploads/2023/12/plano-estadual-de-educacao_versao-final-07-06-2015-1.pdf",
   "url_final": "https://transparencia.pe.gov.br/wp-content/uploads/2023/12/plano-estadual-de-educacao_versao-final-07-06-2015-1.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "78d66971da2f2bcc1db32b114bce591ffbe8878e7f068e16ce495ac0492b76cc",
   "extensao": "pdf",
   "tamanho_bytes": 1198171,
-  "tempo_ms": 1252,
+  "tempo_ms": 615,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/78/78d66971da2f2bcc1db32b114bce591ffbe8878e7f068e16ce495ac0492b76cc.pdf",
   "caminho_texto": "data/extracted_text/78d66971da2f2bcc1db32b114bce591ffbe8878e7f068e16ce495ac0492b76cc.txt",
@@ -21,6 +21,7 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:30:08-03:00",
-  "tipo_documento_declarado": null
+  "timestamp_iso": "2026-10-04T18:07:40-03:00",
+  "tipo_documento_declarado": null,
+  "ultima_validacao": "2026-10-04T18:23:58.220245"
 }

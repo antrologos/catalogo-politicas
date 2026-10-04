@@ -7,6 +7,7 @@ Disallow:
 
 User-agent: *
 Disallow: /api/
+Disallow: /channel_picker
 Disallow: /comment
 Disallow: /feeds/videos.xml
 Disallow: /file_download

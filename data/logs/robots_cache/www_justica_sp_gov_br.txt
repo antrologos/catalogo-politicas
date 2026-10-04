@@ -2,126 +2,129 @@
 <html lang="pt-br">
 
 <head>
+	<link rel="preconnect" href="https://www.googletagmanager.com">
+	<link rel="preconnect" href="https://www.google-analytics.com">	
+	<link rel="preconnect" href="https://scripts.clarity.ms">
 	<!-- Google Tag Manager -->
 	<script>
-		(function(w,d,s,l,i){
-			w[l]=w[l]||[];
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
 			w[l].push({
 				'gtm.start': new Date().getTime(),
-				event:'gtm.js'
+				event: 'gtm.js'
 			});
 			var f = d.getElementsByTagName(s)[0],
-			j=d.createElement(s),
-			dl=l!='dataLayer'?'&l='+l:'';
-			j.async=true;
-			j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-			f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-WNLJX84Q');
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-WNLJX84Q');
 	</script>
 	<!-- End Google Tag Manager -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<!-- rel=dynamic-content indicates an element that is replaced with the contents produced by the specified href. 
 	 dyn-cs:* URIs are resolved using the values within the 'wp_dynamicContentSpots_85' theme module. -->
-	<link rel="stylesheet" href="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/sp/mashup:ra:collection?soffset=0&amp;eoffset=18&amp;themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fcss&amp;lm=1777435300000&amp;entry=wp_toolbar_common__0.0%3Ahead_css&amp;entry=wp_dialog_css__0.0%3Ahead_css&amp;entry=wp_toolbar_logo__0.0%3Ahead_css&amp;entry=wp_theme_portal_edit_85__0.0%3Ahead_css&amp;entry=wp_theme_portal_85__0.0%3Ahead_css&amp;entry=wp_portlet_css__0.0%3Ahead_css&amp;entry=wp_toolbar_common_actionbar__0.0%3Ahead_css&amp;entry=wp_simple_contextmenu_css__0.0%3Ahead_css&amp;entry=wp_toolbar_actionbar__0.0%3Ahead_css&amp;entry=wp_ic4_wai_resources__0.0%3Ahead_css&amp;entry=wp_toolbar_sitepreview__0.0%3Ahead_css&amp;entry=wp_gridlayout__0.0%3Ahead_css&amp;entry=wp_toolbar_moremenu__0.0%3Ahead_css&amp;entry=wp_status_bar__0.0%3Ahead_css&amp;entry=wp_toolbar_projectmenu__0.0%3Ahead_css&amp;entry=wp_analytics_aggregator__0.0%3Ahead_css&amp;entry=wp_oob_sample_styles__0.0%3Ahead_css" type="text/css"/><link rel="alternate" id="head_css_deferred" href="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/sp/mashup:ra:collection?soffset=0&amp;eoffset=8&amp;themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fcss&amp;lm=1777435300000&amp;entry=wp_contextmenu_css__0.0%3Ahead_css&amp;entry=wp_federated_documents_picker__0.0%3Ahead_css&amp;entry=wp_analytics_tags__0.0%3Ahead_css&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Ahead_css&amp;entry=wp_dnd_css__0.0%3Ahead_css&amp;entry=wcm_inplaceEdit__0.0%3Ahead_css&amp;entry=wp_content_targeting_cam__0.0%3Ahead_css&amp;deferred=true"/><script type="text/javascript">var djConfig={"baseUrl":"/portal_dojo/v1.9/dojo/","locale":"pt_BR","isDebug":false,"debugAtAllCosts":false,"parseOnLoad":false,"afterOnLoad":false,"has":{"dojo-bidi":true},"modulePaths":{"com":"/themeModules/js/com","ibm":"/themeModules/js/ibm","pagebuilder":"/themeModules/modules/pagebuilder/js","portalclient":"/themeModules/modules/portalclient/js","asa":"/themeModules/modules/asa/js","contentmapping":"/themeModules/modules/contentmapping/js","federation":"/themeModules/modules/federation/js"}};djConfig.locale=djConfig.locale.replace(/_/g, "-").replace(/iw/, "he").toLowerCase();(function(){if (typeof(wpModules) == 'undefined') wpModules = {}; if (typeof(wpModules.state) == 'undefined') wpModules.state = {}; if (typeof(wpModules.state.page) == 'undefined') wpModules.state.page = {};wpModules.state.page._initial=[{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"selection","value":["Z6_086423G03HEOD06U7G8HUVUIC5"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"labelMappings","value":["Z6_000000000000000000000000A0","Z6_086423G03HEOD06U7G8HUVUIC5","Z6_086423G03HEOD06U7G8HUVUIC5","Z6_000000000000000000000000A0"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"expansions","value":["Z6_000000000000000000000000A0"]}];wpModules.state.page.selectionPath=['Z6_000000000000000000000000A0','Z6_086423G03HEOD06U7G8HUVUIC5'];wpModules.state.page.supportsEditMode=true;wpModules.state.page.supportsToolbar=true;wpModules.state.page.path='';wpModules.state.page.protectedPath='/usuario';wpModules.state.page.publicPath='';})();</script><script type="text/javascript" src="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777435300000&amp;entry=wp_client_main__0.0%3Ahead_js&amp;entry=wp_client_ext__0.0%3Ahead_js&amp;entry=wp_client_logging__0.0%3Ahead_js&amp;entry=wp_client_tracing__0.0%3Ahead_js&amp;entry=wp_modules__0.0%3Ahead_js&amp;entry=wp_photon_dom__0.0%3Ahead_js&amp;entry=wp_toolbar_common__0.0%3Ahead_js&amp;entry=wp_dialog_util__0.0%3Ahead_js&amp;entry=wp_dialog_draggable__0.0%3Ahead_js&amp;entry=wp_dialog_main__0.0%3Ahead_js&amp;entry=wp_a11y__0.0%3Ahead_js&amp;entry=wp_state_page__0.0%3Ahead_js&amp;entry=wp_theme_portal_85__0.0%3Ahead_js&amp;entry=wp_theme_utils__0.0%3Ahead_js&amp;entry=wp_toolbar_viewframe_validator__0.0%3Ahead_js&amp;entry=wp_analytics_aggregator__0.0%3Ahead_js"></script><link rel="alternate" id="head_js_deferred" href="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1738690798000&amp;entry=dojo_19__0.0%3Ahead_js&amp;entry=dojo_app_19__0.0%3Ahead_js&amp;entry=dojo_fx_19__0.0%3Ahead_js&amp;entry=dojo_dom_19__0.0%3Ahead_js&amp;entry=dojo_dnd_basic_19__0.0%3Ahead_js&amp;entry=dojo_data_19__0.0%3Ahead_js&amp;entry=dojo_selector_lite_19__0.0%3Ahead_js&amp;entry=dijit_19__0.0%3Ahead_js&amp;entry=dojo_dnd_ext_19__0.0%3Ahead_js&amp;entry=dijit_layout_basic_19__0.0%3Ahead_js&amp;entry=dojox_layout_basic_19__0.0%3Ahead_js&amp;entry=dijit_menu_19__0.0%3Ahead_js&amp;entry=dojo_fmt_19__0.0%3Ahead_js&amp;entry=dijit_tree_19__0.0%3Ahead_js&amp;entry=wp_dnd_namespace__0.0%3Ahead_js&amp;entry=wp_dnd_source__0.0%3Ahead_js&amp;entry=dijit_layout_ext_19__0.0%3Ahead_js&amp;entry=dijit_form_19__0.0%3Ahead_js&amp;entry=wp_client_selector__0.0%3Ahead_js&amp;entry=wp_client_dnd__0.0%3Ahead_js&amp;entry=wp_contextmenu_js__0.0%3Ahead_js&amp;entry=wp_dnd_target__0.0%3Ahead_js&amp;entry=wp_dnd_util__0.0%3Ahead_js&amp;entry=wcm_inplaceEdit__0.0%3Ahead_js&amp;deferred=true"/><link id="tzDeUPbp_W3" rel="alternate" href="https://www.justica.sp.gov.br/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/"><script type="text/javascript">(function() {
-	var element = document.getElementById("tzDeUPbp_W3");
+	<link rel="stylesheet" href="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/sp/mashup:ra:collection?soffset=0&amp;eoffset=18&amp;themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fcss&amp;lm=1790976950000&amp;entry=wp_toolbar_common__0.0%3Ahead_css&amp;entry=wp_dialog_css__0.0%3Ahead_css&amp;entry=wp_toolbar_logo__0.0%3Ahead_css&amp;entry=wp_theme_portal_edit_85__0.0%3Ahead_css&amp;entry=wp_theme_portal_85__0.0%3Ahead_css&amp;entry=wp_portlet_css__0.0%3Ahead_css&amp;entry=wp_toolbar_common_actionbar__0.0%3Ahead_css&amp;entry=wp_simple_contextmenu_css__0.0%3Ahead_css&amp;entry=wp_toolbar_actionbar__0.0%3Ahead_css&amp;entry=wp_ic4_wai_resources__0.0%3Ahead_css&amp;entry=wp_toolbar_sitepreview__0.0%3Ahead_css&amp;entry=wp_gridlayout__0.0%3Ahead_css&amp;entry=wp_toolbar_moremenu__0.0%3Ahead_css&amp;entry=wp_status_bar__0.0%3Ahead_css&amp;entry=wp_toolbar_projectmenu__0.0%3Ahead_css&amp;entry=wp_analytics_aggregator__0.0%3Ahead_css&amp;entry=wp_oob_sample_styles__0.0%3Ahead_css" type="text/css"/><link rel="alternate" id="head_css_deferred" href="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/sp/mashup:ra:collection?soffset=0&amp;eoffset=8&amp;themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fcss&amp;lm=1790976950000&amp;entry=wp_contextmenu_css__0.0%3Ahead_css&amp;entry=wp_federated_documents_picker__0.0%3Ahead_css&amp;entry=wp_analytics_tags__0.0%3Ahead_css&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Ahead_css&amp;entry=wp_dnd_css__0.0%3Ahead_css&amp;entry=wcm_inplaceEdit__0.0%3Ahead_css&amp;entry=wp_content_targeting_cam__0.0%3Ahead_css&amp;deferred=true"/><script type="text/javascript">var djConfig={"baseUrl":"/portal_dojo/v1.9/dojo/","locale":"pt_BR","isDebug":false,"debugAtAllCosts":false,"parseOnLoad":false,"afterOnLoad":false,"has":{"dojo-bidi":true},"modulePaths":{"com":"/themeModules/js/com","ibm":"/themeModules/js/ibm","pagebuilder":"/themeModules/modules/pagebuilder/js","portalclient":"/themeModules/modules/portalclient/js","asa":"/themeModules/modules/asa/js","contentmapping":"/themeModules/modules/contentmapping/js","federation":"/themeModules/modules/federation/js"}};djConfig.locale=djConfig.locale.replace(/_/g, "-").replace(/iw/, "he").toLowerCase();(function(){if (typeof(wpModules) == 'undefined') wpModules = {}; if (typeof(wpModules.state) == 'undefined') wpModules.state = {}; if (typeof(wpModules.state.page) == 'undefined') wpModules.state.page = {};wpModules.state.page._initial=[{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"selection","value":["Z6_086423G03HEOD06U7G8HUVUIC5"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"labelMappings","value":["Z6_000000000000000000000000A0","Z6_086423G03HEOD06U7G8HUVUIC5","Z6_086423G03HEOD06U7G8HUVUIC5","Z6_000000000000000000000000A0"]},{"nsuri":"http://www.ibm.com/xmlns/prod/websphere/portal/publicparams","name":"expansions","value":["Z6_000000000000000000000000A0"]}];wpModules.state.page.selectionPath=['Z6_000000000000000000000000A0','Z6_086423G03HEOD06U7G8HUVUIC5'];wpModules.state.page.supportsEditMode=true;wpModules.state.page.supportsToolbar=true;wpModules.state.page.path='';wpModules.state.page.protectedPath='/usuario';wpModules.state.page.publicPath='';})();</script><script type="text/javascript" src="/contenthandler/!ut/p/digest!TQmtu-0vGTQvPHURf0bFlQ/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1790976950000&amp;entry=wp_client_main__0.0%3Ahead_js&amp;entry=wp_client_ext__0.0%3Ahead_js&amp;entry=wp_client_logging__0.0%3Ahead_js&amp;entry=wp_client_tracing__0.0%3Ahead_js&amp;entry=wp_modules__0.0%3Ahead_js&amp;entry=wp_photon_dom__0.0%3Ahead_js&amp;entry=wp_toolbar_common__0.0%3Ahead_js&amp;entry=wp_dialog_util__0.0%3Ahead_js&amp;entry=wp_dialog_draggable__0.0%3Ahead_js&amp;entry=wp_dialog_main__0.0%3Ahead_js&amp;entry=wp_a11y__0.0%3Ahead_js&amp;entry=wp_state_page__0.0%3Ahead_js&amp;entry=wp_theme_portal_85__0.0%3Ahead_js&amp;entry=wp_theme_utils__0.0%3Ahead_js&amp;entry=wp_toolbar_viewframe_validator__0.0%3Ahead_js&amp;entry=wp_analytics_aggregator__0.0%3Ahead_js"></script><link rel="alternate" id="head_js_deferred" href="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1738690798000&amp;entry=dojo_19__0.0%3Ahead_js&amp;entry=dojo_app_19__0.0%3Ahead_js&amp;entry=dojo_fx_19__0.0%3Ahead_js&amp;entry=dojo_dom_19__0.0%3Ahead_js&amp;entry=dojo_dnd_basic_19__0.0%3Ahead_js&amp;entry=dojo_data_19__0.0%3Ahead_js&amp;entry=dojo_selector_lite_19__0.0%3Ahead_js&amp;entry=dijit_19__0.0%3Ahead_js&amp;entry=dojo_dnd_ext_19__0.0%3Ahead_js&amp;entry=dijit_layout_basic_19__0.0%3Ahead_js&amp;entry=dojox_layout_basic_19__0.0%3Ahead_js&amp;entry=dijit_menu_19__0.0%3Ahead_js&amp;entry=dojo_fmt_19__0.0%3Ahead_js&amp;entry=dijit_tree_19__0.0%3Ahead_js&amp;entry=wp_dnd_namespace__0.0%3Ahead_js&amp;entry=wp_dnd_source__0.0%3Ahead_js&amp;entry=dijit_layout_ext_19__0.0%3Ahead_js&amp;entry=dijit_form_19__0.0%3Ahead_js&amp;entry=wp_client_selector__0.0%3Ahead_js&amp;entry=wp_client_dnd__0.0%3Ahead_js&amp;entry=wp_contextmenu_js__0.0%3Ahead_js&amp;entry=wp_dnd_target__0.0%3Ahead_js&amp;entry=wp_dnd_util__0.0%3Ahead_js&amp;entry=wcm_inplaceEdit__0.0%3Ahead_js&amp;deferred=true"/><link id="Y:bkUzKeCG9" rel="alternate" href="https://www.justica.sp.gov.br/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/"><script type="text/javascript">(function() {
+	var element = document.getElementById("Y:bkUzKeCG9");
 	if (element) {
 		wpModules.theme.WindowUtils.baseURL.resolve(element.href);
 	}
 }());</script><style id="layout-wstate-styles"></style><base href="https://www.justica.sp.gov.br/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/">
-<title>SEC. JUSTIÇA</title>
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content='SEC. JUSTIÇA' />
-  <meta property="og:url" content="www.sggd.sp.gov.br" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:description" content="CMS - Sistema de Gestão de Conteúdo do estado de São Paulo" />
-  <meta property="og:image" content="https://sggd.sp.gov.br/statics/img/logo-meta.png" />
- 
+    <title>Secretaria da Justiça e Cidadania | Governo do Estado de SP</title>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content='Secretaria da Justiça e Cidadania | Governo do Estado de SP' />
+    <meta property="og:url" content="https://sggd.sp.gov.br" />    
+    <meta property="og:description" content="CMS - Sistema de Gestão de Conteúdo do estado de São Paulo" />
+    <meta property="og:image" content="https://sggd.sp.gov.br/statics/periodo-eleitoral/assets/images/logo-preto-meta.png" />
 
-<link id="com.ibm.lotus.NavStateUrl" rel="alternate" href="/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/dz/d5/L2dJQSEvUUt3QS80TmxFL1o2XzA4NjQyM0cwM0hFT0QwNlU3RzhIVVZVSUM1/" />
-
-
-<link href="/statics/src/favicon.ico" keepNavigationalState="false" lateBinding="false" protected="false" rel="shortcut icon" type="image/x-icon">
-
-
-  <!-- Bootstrap core CSS -->
-  <link href="/statics/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="/statics/css/custom.css" rel="stylesheet">
-
-  <!-- Fonts -->
-  <link href="/statics/src/core.css" rel="stylesheet">
-  <link href="/statics/fontawesome/css/all.min.css" rel="stylesheet" />
-  <link href="/statics/fontawesome-6.4.2/css/all.min.css" rel="stylesheet">
-  <link href="/statics/favicon/favicon-16x16.png" rel="icon" type="image/png">
-  <link href="https://fonts.cdnfonts.com/css/rawline" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="/statics/slick/slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="/statics/slick/slick/slick-theme.css">
-   
-  <!-- Script -->
-  <script src="/statics/js/jquery-3.3.1.min.js" type="text/javascript"></script>
     
-   <!-- Slick -->
-   <script type="text/javascript" src="/statics/js/jquery-migrate-3.4.1.min.js"></script>
-   <script type="text/javascript" src="/statics/slick/slick/slick.min.js"></script>
+    <link id="com.ibm.lotus.NavStateUrl" rel="alternate" href="/sec_justica/!ut/p/z1/04_Sj9CPykssy0xPLMnMz0vMAfIjo8ziDSzMTIyM3Q2MPVz9XQzMQs3dLTxCw0I9nU31wyEKcABHA_0oovTjVhCF3_hw_ShCSgpyQyMM0hUVAfWN_J4!/dz/d5/L2dJQSEvUUt3QS80TmxFL1o2XzA4NjQyM0cwM0hFT0QwNlU3RzhIVVZVSUM1/">
 
-   <!-- Acessibilidade -->
-   <link rel="stylesheet" type="text/css" href="/statics/css/acessibilidade.css">
-   
-   <!-- Plugin JQuery-->
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
+    
+    <link href="/statics/periodo-eleitoral/favicon2.ico" rel="shortcut icon" type="image/x-icon">
 
-    <script src="/statics/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-    	
-  	<script src="/statics/js/custom.js" type="text/javascript"></script>
-  	<script src="/statics/js/agenda.js" type="text/javascript"></script>
-  	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-  	<!-- V1.2-->
-<script>
-$( document ).ready(function() {
-	$("head").append(document.getElementById('analytics'));
-});
-</script>
+    <!-- Bootstrap core CSS -->
+    <link href="/statics/css/bootstrap.min.css" rel="stylesheet">
 
-<style>
+    <!-- Custom styles for this template -->
+    <link href="/statics/css/custom.min.css" rel="stylesheet">
 
-.tooltipContextMenu,
-.wpToolbarLogo .wpLogoTooltip {
-	display: none;
-}
+    <!-- Fonts -->
+    <link href="/statics/src/core.min.css" rel="stylesheet">
+    <link href="/statics/fontawesome-6.4.2/css/all.min.css" rel="stylesheet">    
+    <link href="/statics/rawline/css/rawline.min.css" rel="stylesheet">
+      
+    <!-- JQuery -->
+    <script src="/statics/js/jquery-3.3.1.min.js"></script>
+    <script src="/statics/js/jquery-migrate-3.4.1.min.js"></script>  
 
-.wpthemeControlBody, .wpthemeOverflowAuto, .wpthemeClear {
-	overflow:hidden;
-}
- 
-.wpthemeInner, .wpthemeSecondaryNav {
-    margin: 0 auto;
-	width: 100%;
-}
- 
-.wptheme1Col .wpthemeCol {
-  	width: 100%;
-}
+    <!-- Acessibilidade -->
+    <link href="/statics/css/acessibilidade.css" rel="stylesheet" type="text/css">
 
-.wpthemeCol {
-  	margin: 0px;
-}
+    <!-- Plugin JQuery-->
+    <link href="/statics/select2/select2.min.css" rel="stylesheet" type="text/css">
+    <link href="/statics/slick/slick/slick.css" rel="stylesheet" type="text/css">
+    <link href="/statics/slick/slick/slick-theme.css" rel="stylesheet" type="text/css">
 
-.wpthemeControl{
-	margin: 0px;
-}
+    <!-- Bootstrap -->
+    <script src="/statics/js/bootstrap.bundle.min.js"></script>
 
-.wpthemeLayoutContainers{
-	padding: 0px
-}
-</style></head>
+    <!-- Select2 -->
+    <script src="/statics/select2/select2.min.js"></script>
+
+    <!-- Slick -->
+    <script src="/statics/slick/slick/slick.min.js"></script>
+
+    <!-- Componentes -->
+    <script src="/statics/js/custom.js"></script>
+    <script src="/statics/js/agenda.js"></script>  
+
+    <!-- V1.2-->
+    <script>
+      $( document ).ready(function() {
+        $("head").append(document.getElementById('analytics'));
+      });
+    </script>
+    
+    <style>
+      .tooltipContextMenu,
+      .wpToolbarLogo .wpLogoTooltip {
+        display: none;
+      }
+
+      .wpthemeControlBody, .wpthemeOverflowAuto, .wpthemeClear {
+        overflow:hidden;
+      }
+      
+      .wpthemeInner, .wpthemeSecondaryNav {
+          margin: 0 auto;
+        width: 100%;
+      }
+      
+      .wptheme1Col .wpthemeCol {
+          width: 100%;
+      }
+
+      .wpthemeCol {
+          margin: 0px;
+      }
+
+      .wpthemeControl {
+        margin: 0px;
+      }
+
+      .wpthemeLayoutContainers {
+        padding: 0px
+      }
+    </style></head>
 
 <body cz-shortcut-listen="true">
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLJX84Q"
-		height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WNLJX84Q" height="0" width="0"
+			style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<div id="analytics">
@@ -147,7 +150,7 @@ $( document ).ready(function() {
 	</div>
 	<div id="barra-gov">
 		<div class="gov-mobile">
-			<img src="/statics/img/logo-gov-branco.png" alt="SP.Gov.br" class="img-fluid">
+			<img src="/statics/periodo-eleitoral/assets/images/spgov-logo-branco.svg" alt="Governo do Estado de São Paulo" class="img-fluid">
 		</div>
 		<div class="container">
 			<div class="row align-items-center justify-content-between px-4">
@@ -187,7 +190,7 @@ let tagALogo = document.querySelector("#linkLogo");
 tagALogo.setAttribute('href', linkHomeA.attributes["data-href"].nodeValue);
 </script></div>
 				<div class="col-auto">
-					<img class="govbr" src="/statics/img/logo-gov.png" alt="sp.gov.br">
+					<img class="govbr" src="/statics/periodo-eleitoral/assets/images/logo-sp-governo-estado-light.svg" alt="Governo do Estado de São Paulo">
 				</div>
 			</div>
 		</div>
@@ -524,7 +527,7 @@ tagALogo.setAttribute('href', linkHomeA.attributes["data-href"].nodeValue);
 	                         <ul class="dropdown-menu" aria-labelledby="Receitas e despesas3-1">
 			                
                                 <li class="dropdown-item">
-                                	<a href="https://www.transparencia.sp.gov.br/Home/Demonstra">
+                                	<a href="https://www.transparencia.sp.gov.br/Home/Receitas">
 	                                  	<span lang="pt-BR" dir="ltr">
 			                  				Receitas
 			                          	</span>
@@ -570,6 +573,14 @@ tagALogo.setAttribute('href', linkHomeA.attributes["data-href"].nodeValue);
 	                           <a href="/sec_justica/transparencia/dados%20abertos">
 							        <span lang="pt-BR" dir="ltr">
 						                      Dados Abertos
+						            </span>
+	                            </a>
+	                           </li>
+	                         
+	                           <li class="dropdown-item">	                           
+	                           <a href="/sec_justica/transparencia/ordem_de_pagamentos">
+							        <span lang="pt-BR" dir="ltr">
+						                      Ordem de Pagamentos
 						            </span>
 	                            </a>
 	                           </li>
@@ -762,14 +773,6 @@ tagALogo.setAttribute('href', linkHomeA.attributes["data-href"].nodeValue);
                         <ul class="dropdown-menu" aria-labelledby="Imprensa">
                         
 	                           <li class="dropdown-item">	                           
-	                           <a href="/sec_justica/imprensa/noticias">
-							        <span lang="pt-BR" dir="ltr">
-						                      Noticias
-						            </span>
-	                            </a>
-	                           </li>
-	                         
-	                           <li class="dropdown-item">	                           
 	                           <a href="/sec_justica/imprensa/galeria_de_fotos">
 							        <span lang="pt-BR" dir="ltr">
 						                      Galeria de Fotos
@@ -913,49 +916,162 @@ if (document.readyState === 'loading') {
     atualizarLinkLogo();
     redirecionar();
   });
+</script>
 
-</script><div class="container">
+<script>
+
+(function() {
+
+  const DOMINIOS_COM_SUBPASTAS = [
+    "https://www.educacao.sp.gov.br"
+
+  ];
+
+  function obterHostnameLimpo(urlStr) {
+    try {
+      const url = new URL(urlStr, window.location.origin);
+      return url.hostname.replace(/^www\./i, '').toLowerCase();
+    } catch (e) {
+      return '';
+    }
+  }
+
+
+  function obterPrimeiroContextoPath(urlStr) {
+    try {
+      const url = new URL(urlStr, window.location.origin);
+
+      const partes = url.pathname.split('/').filter(p => p.length > 0);
+
+      return partes.length > 0 ? partes[0].toLowerCase() : '';
+    } catch (e) {
+      return '';
+    }
+  }
+
+
+  function deveAplicarRegraSubpasta(hostnameAtual) {
+    return DOMINIOS_COM_SUBPASTAS.some(dom => obterHostnameLimpo(dom) === hostnameAtual);
+  }
+
+  function initSubfolderLinkHandler() {
+    const currentHostname = window.location.hostname.replace(/^www\./i, '').toLowerCase();
+
+    if (!deveAplicarRegraSubpasta(currentHostname)) {
+      return;
+    }
+
+    const links = document.querySelectorAll('ul.navbar-nav.mr-auto a[href]');
+    const contextoAtual = obterPrimeiroContextoPath(window.location.href);
+
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+
+
+        if (!href || href.startsWith('#') || href.startsWith('javascript:')) {
+          return;
+        }
+
+        const linkHostname = obterHostnameLimpo(this.href); // 'this.href' resolve a URL completa automaticamente
+        const contextoLink = obterPrimeiroContextoPath(this.href);
+
+        if (linkHostname === currentHostname && contextoAtual !== contextoLink) {
+          e.preventDefault();
+          window.open(this.href, '_blank', 'noopener,noreferrer');
+        }
+      });
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSubfolderLinkHandler);
+  } else {
+    initSubfolderLinkHandler();
+  }
+})();
+
+</script><!-- marca o nivel da pagina e renderiza banners na home e em periodo-eleitoral -->
+	
+<script>
+	(function () {
+		var r = document.documentElement;
+		r.setAttribute('data-sp-level', '1');
+		r.classList.add('sp-level-1');
+		r.classList.add('sp-is-home');
+	})();
+</script>
+
+
+
+	<div id="sp-home-only">
+		<!-- coloque aqui o markup que deve aparecer somente na home -->
+		<section class="componente">
+			<main role="main">
+				<div class="container banner-rotativo">
+					<div class="banner-simples-rotativo banner-tema-cms">
+						<div>
+							<a href="https://www.dengue100duvidas.sp.gov.br/">
+								<img src="/statics/img/banner/tema/gov-dengue-desktop.gif" class="d-none d-md-block w-100 img-fluid" alt="Banner Dengue 100 DÃºvidas"/>
+								<img src="/statics/img/banner/tema/gov-dengue-mobile.gif" class="d-block d-md-none w-100 img-fluid" alt="Banner Dengue 100 DÃºvidas"/>
+							</a>
+						</div>
+						<div>
+							<a href="https://www.portal.prosangue.sp.gov.br/fps">
+								<img src="/statics/img/banner/tema/pro-sangue-desktop.png" class="d-none d-md-block w-100 img-fluid" alt="Banner PrÃ³-Sangue"/>
+								<img src="/statics/img/banner/tema/pro-sangue-mobile.png" class="d-block d-md-none w-100 img-fluid" alt="Banner PrÃ³-Sangue"/>
+							</a>
+						</div>
+					</div>
+				</div>
+			</main>
+		</section>
+
+		<div class="container" style="display: none;">
+			<section id="warning-alert-cms-exibir">
+				<div class="row">
+					<div class="col-md-12 mx-auto">
+						<div class="imagem-container warning-image">
+							<img src="/statics/img/warnings/noticias-periodo-eleitoral.jpeg" alt="Aviso sobre restriÃ§Ãµes de publicaÃ§Ã£o de notÃ­cias durante o perÃ­odo eleitoral">
+							<a href="https://www.agenciasp.sp.gov.br" target="_blank" class="link-invisivel"
+								aria-label="AgÃªncia SP"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	</div>
+
+	<div class="container">
 		<section id="warning-alert-cms">
 			<div class="row">
 				<div class="col-md-12 mx-auto">
-					<div
-					class="alert alert-warning alert-dismissible fade show d-flex justify-content-between py-3"
-					role="alert"
-					>
-					<i class="fa-solid fa-triangle-exclamation p-3 fa-2x"></i>
-					<div class="col-md-11 p-2">
-						Para garantir <strong>rastreabilidade e segurança</strong> nas
-						integrações via <strong>iframe</strong>, solicitamos o envio da
-						<strong>relação de URLs utilizadas.</strong> Com base nessas
-						informações, realizaremos o cadastramento em
-						<strong>whitelist</strong>, assegurando a continuidade dos
-						redirecionamentos. Pedimos, por gentileza, o
-						<strong>envio até 22/05.</strong> A ausência dessas informações
-						poderá acarretar <strong>bloqueios preventivos</strong> de
-						acesso. Contamos com a colaboração de todos.
-						<strong>Equipe CMS.</strong>
-					</div>
-					<button
-						type="button"
-						class="close"
-						data-dismiss="alert"
-						aria-label="Close"
-					>
+					<div class="alert alert-warning alert-dismissible fade show d-flex justify-content-between py-3" role="alert">
+						<i class="fa-solid fa-triangle-exclamation p-3 fa-2x"></i>
+						<div class="col-md-11 p-2">
+							Informamos que será realizada uma janela de manutenção
+							programada no ambiente do CMS, com início
+							<strong>às 20h de sábado (22/08/2026)</strong> e término
+							previsto <strong>às 06h de segunda-feira (24/08/2026)</strong>.
+							<br><br>Durante esse período, poderão ocorrer
+							<strong>instabilidades, indisponibilidade temporária ou 
+							oscilações no ambiente de AUTORIA</strong>
+							(<strong>produção seguirá sem interrupções</strong>), em razão
+							das atividades de manutenção. As equipes técnicas estarão
+							acompanhando o ambiente durante a janela, com o objetivo de
+							garantir a execução das atividades e a normalização dos serviços
+							ao término da manutenção.
+							<br><br>Agradecemos a compreensão.
+						</div>
+						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
-					</button>
+						</button>
 					</div>
 				</div>
-        	</div>
+			</div>
 		</section>
 	</div>
 
-	<div id="modalCustomWarning" class="modal-warning-cms">
-		<div class="modal-content">
-			<button class="close btn-close-modal-warning-cms">&times;</button>
-
-			<img src="/statics/img/warnings/e-mail-novos-grupos.png" alt="Imagem novos grupos" class="modal-img">
-		</div>
-	</div>
 	<div class="wpthemeMainContent" role="main" tabindex="-1" aria-label="HCL Digital Experience">
 		<main role="main">
 			
@@ -1106,151 +1222,7 @@ if (document.readyState === 'loading') {
     
         
             
-            <!-- MAP Hero Banner Modal -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<style>
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d {}
-
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .carousel-acesso .slick-dots li.slick-active button::before,
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .slick-dots li.slick-active button::before {
-    color: #FF0000;
-  }
-
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .carousel-acesso .slick-prev::before,
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .carousel-acesso .slick-next::before,
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .slick-prev::before,
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .slick-next::before {
-    color: #FF0000 !important;
-  }
-
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .btnSemDegradeComBackground {
-    background: #FF0000 !important;
-    /* color: #fff !important; */
-  }
-
-  #bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d .btnSemDegradeSemBackground {
-    border-color: #FF0000 !important;
-  }
-</style>
-
-
-
-
-<section id='bannerRotativo7cce40a4-2630-4270-af82-edfd8c31e42d'  class="banner-global">
-
-  <!-- MN - Banners rotativos -->
-<!-- Inicio NotEditMode -->
-
-
-
-<div>
-  <div class="hero-banner">
-    <a href=''>
-      <div class="row align-items-center">
-        <div class="col">
-          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/df0cad0e-583b-46e5-9302-0bf4349fe601/renditions/22fa9b30-2666-413e-9556-559031990655?binary=true'
-            alt="" class="d-none d-md-block w-100 img-fluid img-full">
-          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/880b526c-c33c-4e3d-90a1-4208140a6ebc/renditions/6e15904c-fc41-4fec-9f4c-775d72fcf723?binary=true' alt=""
-            class="d-block d-md-none w-100 img-fluid img-full">            
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-
-
-
-
-
-
-
-<!-- Inicio EditMode -->
-<!-- MN - Banners rotativos -->
-<!-- Inicio NotEditMode -->
-
-
-
-<div>
-  <div class="hero-banner">
-    <a href='/sec_justica/imprensa/noticias/abrilindigenareunecomunidadesparacelebraradataefortalecerodialogointercultural'>
-      <div class="row align-items-center">
-        <div class="col">
-          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/58dab278-be18-4ba1-b2d6-cea571e0bfd2/renditions/fbcc58eb-8269-42f5-9266-6c2439dad503?binary=true'
-            alt="" class="d-none d-md-block w-100 img-fluid img-full">
-          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/c9a76ac8-3be6-4c23-941d-e398d95120a9/renditions/bab27b44-5987-4e02-873c-4de28c6bb630?binary=true' alt=""
-            class="d-block d-md-none w-100 img-fluid img-full">            
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-
-
-
-
-
-
-
-<!-- Inicio EditMode -->
-<!-- MN - Banners rotativos -->
-<!-- Inicio NotEditMode -->
-
-
-
-<div>
-  <div class="hero-banner">
-    <a href='/sec_justica/imprensa/noticias/governodespinaugura70novosleitosdeutinasantacasadesaopaulo'>
-      <div class="row align-items-center">
-        <div class="col">
-          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/36ff9a88-761e-4e88-85b0-678a0aa954a5/renditions/60878d55-f027-477b-9762-bad054d7f2ac?binary=true'
-            alt="" class="d-none d-md-block w-100 img-fluid img-full">
-          <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/76a83c80-2b09-4215-ae0f-21d13f675b52/renditions/cd3c950b-f675-4532-8e34-bcf1058e0215?binary=true' alt=""
-            class="d-block d-md-none w-100 img-fluid img-full">            
-        </div>
-      </div>
-    </a>
-  </div>
-</div>
-
-
-
-
-
-
-
-<!-- Inicio EditMode -->
-
-
-</section>
-
-
-<script>
-function bannerVideo(src, id){
-  let videoBanner = document.getElementById(`videoBanner${id}`);
-  videoBanner.setAttribute('src', src);
-}
-
-function fecharModal(id){
-  let videoBanner = document.getElementById(`videoBanner${id}`);
-  videoBanner.setAttribute('src', '');
-}
-</script>
-
-
-
-
+            
         
         
     
@@ -1273,10 +1245,7 @@ function fecharModal(id){
     
 <div class="wpthemeClear"></div>
 	</div>
-</section></div></div></div>
-<!-- this layout has one main container -->
-<div class="wptheme1Col">
-	<div class='component-container wpthemeLeft wpthemeCol ibmDndColumn wpthemeCol12of12 wpthemeFull wpthemePrimary id-Z7_086423G03HEOD06U7G8HUVUIS4' name='ibmMainContainer' ><div class='component-control id-Z7_086423G03HMOD063KA8KIV2EH1' ><span id="Z7_086423G03HMOD063KA8KIV2EH1"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+</section></div><div class='component-control id-Z7_086423G03HMOD063KA8KIV2EH1' ><span id="Z7_086423G03HMOD063KA8KIV2EH1"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
 
 	
 	
@@ -1395,129 +1364,635 @@ function fecharModal(id){
     
         
             
-            <!-- MAP - Banner Rotativo -->
+            
+        
+        
+    
+
+    
+        
 
 
 
 
 
-<!-- Sem Modo de Edição -->
+        
 
+
+
+
+
+
+
+    
+<div class="wpthemeClear"></div>
+	</div>
+</section></div></div></div>
+<!-- this layout has one main container -->
+<div class="wptheme1Col">
+	<div class='component-container wpthemeLeft wpthemeCol ibmDndColumn wpthemeCol12of12 wpthemeFull wpthemePrimary id-Z7_086423G03HEOD06U7G8HUVUIS4' name='ibmMainContainer' ><div class='component-control id-Z7_MH1A1C404PLID06V37OS9QS1L1' ><span id="Z7_MH1A1C404PLID06V37OS9QS1L1"></span><section class="ibmPortalControl wpthemeControl wpthemeHidden a11yRegionTarget" role="region">
+
+	
+	
+	<div class="asa.portlet asa-hidden" id="asa.portlet.Z7_MH1A1C404PLID06V37OS9QS1L1">
+		<span class="asa.portlet.id">Z7_MH1A1C404PLID06V37OS9QS1L1</span>
+
+		
+
+	</div>
+	
+<!-- start header markup -->
+	<header class="wpthemeControlHeader" role="banner" aria-label="Skin header">
+		<div class="wpthemeInner">
+			<h2>
+				<img class="dndHandle" draggable="true" ondragstart="wpModules.dnd.util.portletDragStart(event, this, this.parentNode, 30, 0);"
+				ondragend="wpModules.dnd.util.portletDragEnd(event);" 
+				src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
+				<!-- lm-dynamic-title node marks location for dynamic title support -->
+ 				<span class="lm-dynamic-title asa.portlet.title a11yRegionLabel"><span lang="pt-BR" dir="ltr">Visualizador do Conteúdo da Web</span></span>
+			</h2>
+			<a aria-haspopup="true" aria-label="Exibir menu de conteúdo" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus contextMenuInSkinIcon" style="display:none" tabindex="0">
+				<span title="Exibir menu de conteúdo"><img aria-label="Exibir menu de conteúdo" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Menu de ação do componente</span>
+				<!-- start CAM template -->
+				<span class="wpthemeMenu" data-positioning-handler="horizontallyCenteredBelow">
+					<div class="wpthemeMenuBorder">
+						<!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
+						<ul class="wpthemeMenuDropDown wpthemeTemplateMenu" role="menu">
+							<li class="${css-class}" role="menuitem" tabindex="-1"><span
+								class="wpthemeMenuText">${title}</span></li>
+						</ul>
+						<div class="verticalMenuPointer pointer"></div>
+					</div> <!-- Template for loading -->
+					<div class="wpthemeMenuLoading wpthemeTemplateLoading">${loading}</div>
+					<!-- Template for submenu -->
+					<div class="wpthemeAnchorSubmenu wpthemeTemplateSubmenu">
+						<div class="wpthemeMenuBorder wpthemeMenuSubmenu">
+							<ul id="${submenu-id}" class="wpthemeMenuDropDown"
+								role="menu">
+								<li role="menuitem" tabindex="-1"></li>
+							</ul>
+						</div>
+					</div>
+				</span>
+				<!-- end CAM template -->
+			</a>
+			<a aria-haspopup="true" aria-label="Display portlet menu" role="button" href="javascript:;" class="wpthemeIcon wpthemeMenuFocus" tabindex="0"
+                onclick="if (typeof wptheme != 'undefined') wptheme.contextMenu.init({ 'node': this, menuId: 'skinAction', jsonQuery: {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}, params: {'alignment':'right'}});"
+				onkeydown="javascript:if (typeof i$ != 'undefined' &amp;&amp; typeof wptheme != 'undefined') {if (event.keyCode ==13 || event.keyCode ==32 || event.keyCode==38 || event.keyCode ==40) {wptheme.contextMenu.init(this, 'skinAction', {'navID':ibmCfg.portalConfig.currentPageOID,'windowID':wptheme.getWindowIDFromSkin(this)}); return false;}}">
+				<span title="Exibir menu do portlet"><img aria-label="Exibir menu do portlet" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"></span>
+				<span class="wpthemeAltText">Ações</span>
+			</a>
+		</div>
+	</header>
+	
+	<div class="wpthemeControlBody wpthemeOverflowAuto wpthemeClear"> <!-- lm:control dynamic spot injects markup of layout control -->
+	<!-- asa.overlay marks the node that the AsaOverlayWidget will be placed in -->
+		<div class="wpthemeASARelPosition">
+			<div class="analytics.overlay" ></div>
+		</div>
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+
+
+    
+    
+        
+            
+            <link href="/statics/dsc/main.css" rel="stylesheet">
 <style>
-    .banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0 .slick-prev::before {
-        color: #000000 !important;
-    }
 
-    .banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0 .slick-next::before {
-        color: #000000 !important;
-    }
+	/* ============================================================
+	EDIT MODE
+	============================================================ */
+	.flex-center, .header-info {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-    .banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0 .slick-dots li.slick-active button::before {
-        color: #000000 !important;
-    }
+	
 </style>
-<main role="main">
-    <div class='container banner-rotativo8049761a-6dbc-4fab-b173-8aaacafa8fc0'>
-        <div class="banner-simples-rotativo">
+<style>
+  table.layoutRow.ibmDndRow.component-container tbody tr td {
+    border-bottom: 0
+  }
 
-<!-- Pagina do site -->
-<div>
-    <a href='/sec_justica/imprensa/noticias/governodespabreeditalder300milhoesparafinanciarprojetosmunicipais'>
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/10308529-9611-44e6-bd7f-059c3690c9dc/renditions/99e5c873-4168-4b4e-8752-6785b5c59c8e?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/10308529-9611-44e6-bd7f-059c3690c9dc/renditions/99e5c873-4168-4b4e-8752-6785b5c59c8e?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
-    </a>
-</div>
+  table.layoutColumn.layoutNode tbody tr td {
+    border-bottom: 0
+  }
 
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .error.text-danger.hide {
+    display: none;
+  }
 
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert {
+    border: var(--border-none) !important;
+    font-family: var(--font-family-primary) !important;
+    font-size: var(--font-size-base) !important;
+    min-height: 58px;
+    max-width: 1152px;
+  }
 
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .text-body {
+    margin-bottom: var(--spacing-0) !important;
+  }
 
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .text-body b {
+    font-weight: var(--font-weight-semibold) !important;
+    color: var(--color-black) !important;
+  }
 
-
-<!-- Pagina do site -->
-<div>
-    <a href='/sec_justica/imprensa/noticias/setursplancaguiaturisticodereligioesorientaiseconsolidasegmentacaoreligiosanoestado'>
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/311d7973-2233-4927-9a18-9a594674aafa/renditions/e0da46e2-51f3-4c42-bcda-b5f731f7d77f?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/311d7973-2233-4927-9a18-9a594674aafa/renditions/e0da46e2-51f3-4c42-bcda-b5f731f7d77f?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
-    </a>
-</div>
-
-
-
-
-
-
-<!-- Pagina do site -->
-<div>
-    <a href='/sec_justica/imprensa/noticias/4encontrodajuventudereuniumaisde180municipiosemlins'>
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/e52e04fa-2e76-4d0d-9efa-f7d7f172f3a3/renditions/2710ebc7-0870-4e72-90cd-6cf32fa5f7f2?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/e52e04fa-2e76-4d0d-9efa-f7d7f172f3a3/renditions/2710ebc7-0870-4e72-90cd-6cf32fa5f7f2?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
-    </a>
-</div>
-
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .text-body span {
+    font-weight: var(--font-weight-normal) !important;
+    color: var(--color-black) !important;
+    word-break: break-word;
+    display: block;
+  }
 
 
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .text-body span .link-aviso {
+    font-weight: var(--font-weight-semibold) !important;
+    text-decoration: underline !important;
+  }
 
 
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 a.link-edit-aviso {
+    --focus-offset: var(--spacing-1) !important;
+    color: var(--color-info) !important;
+  }
 
-<!-- Pagina do site -->
-<div>
-    <a href='/sec_justica/imprensa/noticias/cidadaniaitineranteofereceservicosgratuitosemquatrocidadesedoisbairrosdesaopaulo'>
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/532681ec-6bba-40f5-98fa-e878103499d9/renditions/102c5476-2799-481c-87d8-bd1f3cb6aec6?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/532681ec-6bba-40f5-98fa-e878103499d9/renditions/102c5476-2799-481c-87d8-bd1f3cb6aec6?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
-    </a>
-</div>
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert i.fa-2x {
+    font-size: var(--font-size-2xl) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .close {
+    color: var(--color-gray-900) !important;
+    padding: 10px var(--spacing-5) !important;
+    z-index: var(--z-modal) !important;
+    opacity: 1;
+  }
+
+  /* .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .close .heading-2 {
+    color: var(--color-gray-900) !important;
+  } */
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .close:not(:disabled):not(.disabled):focus,
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .close:not(:disabled):not(.disabled):hover {
+    color: var(--color-gray-900) !important;
+    opacity: 1 !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-warning {
+    background-color: var(--color-warning-light) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-warning span a.link-aviso {
+    color: var(--color-warning-dark) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-warning i.fa-triangle-exclamation {
+    color: var(--color-warning-dark) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-danger {
+    background-color: var(--color-error-light) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-danger span a.link-aviso {
+    color: var(--color-error) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-danger i.fa-circle-xmark {
+    color: var(--color-error) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-info {
+    background-color: var(--color-info-light) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-info span a.link-aviso {
+    color: var(--color-info) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-info i.fa-circle-info {
+    color: var(--color-info) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-success {
+    background-color: var(--color-success-light) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-success span a.link-aviso {
+    color: var(--color-success) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-success i.fa-circle-check {
+    color: var(--color-success) !important;
+  }
+
+  /* Cor do × por tipo de aviso */
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-warning .close .heading-2 {
+    color: var(--color-warning-dark) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-info .close .heading-2 {
+    color: var(--color-info) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-danger .close .heading-2 {
+    color: var(--color-error) !important;
+  }
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert.alert-success .close .heading-2 {
+    color: var(--color-success) !important;
+  }
+
+  /* Fora do main.css */
+  /* .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert-dismissible i { margin-top: var(--spacing-2) !important;} */
+
+  /* .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert-dismissible i.fa-triangle-exclamation { margin-top: var(--spacing-2) !important;} */
+
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert-dismissible i {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 3px;
+  }
 
 
+  .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .wcm-default-inplace-editable>.wcm-inplace-content-region {}
 
+  .contrast .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 b,
+  .contrast .texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 a {
+    background-color: transparent !important;
+  }
 
+  @media only screen and (max-width: 767px) {
+    .mobile {
+      display: flex;
+      flex-direction: column;
+      padding-left: 12px !important;
+    }
 
+    .mobile b {
+      margin-bottom: var(--spacing-1);
+    }
 
-<!-- Pagina do site -->
-<div>
-    <a href='/sec_justica/imprensa/noticias/ipemsprealizacerimoniadeaberturadasemanametrologica2026emcomemoracaoaos59anosdoinstituto'>
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/78d1c7cd-1956-4e59-b484-75c1988f4af6/renditions/7ee0e7f7-69f3-45d8-a3b2-b02b9cb78016?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/78d1c7cd-1956-4e59-b484-75c1988f4af6/renditions/7ee0e7f7-69f3-45d8-a3b2-b02b9cb78016?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
-    </a>
-</div>
+    .mobile span {
+      display: flex;
+      flex-direction: column;
+    }
 
+    .link-aviso {
+      margin-top: 8px;
+    }
+  }
+</style>
+<style>
+  .aviso-header {
+    display: flex;
+    align-items: start;
+    gap: 16px;
+    width: 100%;
+  }
 
+  .aviso-header>i {
+    align-self: flex-start;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
 
+  .aviso-header>i.fa-circle-xmark,
+  .aviso-header>i.fa-circle-check,
+  .aviso-header>i.fa-circle-info {
+    margin-top: 1px;
+  }
 
+  .aviso-conteudo {
+    display: flex;
+    align-items: center;
+    flex: 1;
+  }
 
+  .aviso-conteudo>i {
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 3px;
+  }
 
-<!-- Pagina do site -->
-<div>
-    <a href='/sec_justica/imprensa/noticias/educacaodesplancadiretrizesparaescolasindigenasesetornaoprimeiroestadodopaisaadotaramedida'>
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/042bde24-f537-4db6-818d-de8812f5cb3b/renditions/5ee455fd-533f-45f1-806b-e705d0a71ea9?binary=true' class="d-none d-md-block w-100 img-fluid" alt="Imagem do banner">
-      <img src='/dx/api/dam/v1/collections/359a8e24-fac8-4c36-be57-d05e0c3ea185/items/042bde24-f537-4db6-818d-de8812f5cb3b/renditions/5ee455fd-533f-45f1-806b-e705d0a71ea9?binary=true' class="d-block d-md-none w-100 img-fluid" alt="Imagem do banner">
-    </a>
-</div>
+  .aviso-texto {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+  }
 
+  .aviso-actions-f01a7ed1-6e96-45d0-bdd0-6894a571e2c0 {
+    display: flex;
+    justify-content: end;
+    align-items: flex-start;
 
+  }
 
+  .aviso-actions-f01a7ed1-6e96-45d0-bdd0-6894a571e2c0 input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+       accent-color: #155BCB;
+     
+  }
 
-</div>
-    </div>
-</main>
+  .aviso-checkbox {
+    height: fit-content;
+    display: flex;
+    gap: 8px;
+    position: relative;
+    top: 2px;
+  }
+
+  .label-checkbox {
+    position: relative;
+    top: 1px;
+  }
+
+  @media (max-width: 1315px) {
+    .aviso-header {
+      flex-direction: column;
+    }
+
+    .aviso-header>i {
+      position: relative;
+      top: 6px;
+    }
+
+    .aviso-header>i.fa-circle-xmark,
+    .aviso-header>i.fa-circle-check,
+    .aviso-header>i.fa-circle-info {
+      position: relative;
+      top: 8px;
+    }
+
+    .aviso-conteudo {
+      flex-direction: row;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .aviso-titulo {
+      white-space: normal;
+      margin-bottom: 0;
+      padding-bottom: 8px;
+    }
+
+    .aviso-texto {
+      width: 100%;
+      padding: 0 0 14px 0 !important;
+    }
+
+    .aviso-actions-f01a7ed1-6e96-45d0-bdd0-6894a571e2c0 {
+      justify-content: flex-start;
+      padding: 0;
+      padding-bottom: 12px;
+      margin-left: 32px;
+    }
+  }
+</style>
 <script>
-    let indicadoresbanner_simples_rotativo = document.querySelectorAll("ol.carousel-indicators li");
-    for (let i = 0; i < indicadoresbanner_simples_rotativo.length; i++) {
-        if (i == 0) {
-            indicadoresbanner_simples_rotativo[i].setAttribute("data-slide-to", i);
-            indicadoresbanner_simples_rotativo[i].classList.add("active");
-        } else {
-            indicadoresbanner_simples_rotativo[i].setAttribute("data-slide-to", i);
-        }
-    }
-    let itensCarrouselbanner_simples_rotativo = document.querySelector(".carousel-item");
-    if (itensCarrouselbanner_simples_rotativo == null) {
-    }else {
-        itensCarrouselbanner_simples_rotativo.classList.add("active");
-    }
+document.addEventListener("DOMContentLoaded", function () {
 
+ const idDivAlert = `#texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert`;
+
+ const idIconAlert = `#texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert i`;
+
+const linkAlert = document.querySelector(
+  "#texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 .alert .link a"
+);
+
+if (linkAlert) {
+  linkAlert.setAttribute("target", "_blank");
+  linkAlert.setAttribute("rel", "noopener noreferrer");
+  linkAlert.setAttribute("class", "link-aviso");  
+}
+
+ const divAlert = document.querySelector(idDivAlert);
+
+ const iconAlert = document.querySelector(idIconAlert);
+
+function changeTypeAlert() {
+
+  const tipoAviso = `Informação`;
+
+  if (!divAlert) return;
+
+  divAlert.classList.remove("alert-success", "alert-info", "alert-warning", "alert-danger");
+
+  if (iconAlert) {
+    iconAlert.classList.remove(
+      "fa-triangle-exclamation",
+      "fa-circle-info",
+      "fa-circle-check",
+      "fa-circle-xmark"
+    );
+  }
+
+  let classeTipoAlert = "alert-warning"; // padrão
+  let icone = "fa-triangle-exclamation"; // padrão
+
+  switch (tipoAviso) {
+    case "Sucesso":
+      classeTipoAlert = "alert-success";
+      icone = "fa-circle-check";
+      break;
+
+    case "Informação":
+      classeTipoAlert = "alert-info";
+      icone = "fa-circle-info";
+      break;
+
+    case "Atenção":
+      classeTipoAlert = "alert-warning";
+      icone = "fa-triangle-exclamation";
+      break;
+
+    case "Erro":
+      classeTipoAlert = "alert-danger";
+      icone = "fa-circle-xmark";
+      break;
+  }
+
+  divAlert.classList.add(
+    "alert",
+    classeTipoAlert,
+    "alert-dismissible",
+    "fade",
+    "show",
+    "d-flex",
+    "align-center",
+    "py-2"
+  );
+
+  if (iconAlert) {
+    iconAlert.classList.add(
+     "fa-solid",
+      icone,
+      "fa-2x"
+   );
+  }
+}
+
+  changeTypeAlert();
+
+
+});
+</script>
+
+<script>
+document.addEventListener("click", function (event) {
+    const el = event.target;
+
+    // Verifica se clicou em um <a>
+    if (el.tagName === "A" && el.id && el.id.startsWith("linkf01a7ed1-6e96-45d0-bdd0-6894a571e2c0")) {
+        const currentDomain = window.location.hostname;
+        const linkUrl = new URL(el.href);
+        
+        // Se o domínio for diferente, abre em nova aba
+        if (linkUrl.hostname !== currentDomain) {
+            event.preventDefault(); // impede o comportamento padrão
+            window.open(el.href, "_blank");
+        }
+        // se for o mesmo domínio, deixa fluir normalmente
+    }
+});
 </script>
 
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const id = "f01a7ed1-6e96-45d0-bdd0-6894a571e2c0";
+        const checkbox = document.getElementById(`checkbox-aviso${id}`);
+
+        if (checkbox) {
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    localStorage.setItem(`aviso-fechado-${id}`, 'true');
+                } else {
+                    localStorage.removeItem(`aviso-fechado-${id}`);
+                }
+
+            });
+        }
+
+        const avisoFechado = localStorage.getItem(`aviso-fechado-${id}`);
+        if (avisoFechado === 'true') {
+            const elemento = document.getElementById(`texto-aviso${id}`);
+
+            if (elemento) {
+                elemento.style.display = 'none';
+            }
+        }
+    });
+</script>
+
+
+
+
+<section id="texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0"
+  class="texto-avisof01a7ed1-6e96-45d0-bdd0-6894a571e2c0 section">
+
+  <div class="container">
+
+    
+
+    <div class="row">
+      <div class="col-md-12 mx-auto">
+        <div
+          class="alert alert-warning alert-dismissible fade show d-flex align-center py-3 mb-4 "
+          role="alert">
+          
+          
+          <div class="aviso-header d-flex" style="gap: 8px;">
+            <div class="aviso-conteudo">
+              <i class="fa-solid fa-triangle-exclamation fa-2x"></i>
+              <div class="px-3 text-body mobile aviso-texto">
+                <span id="textof01a7ed1-6e96-45d0-bdd0-6894a571e2c0">
+                  <strong>
+                    Informativo.
+                  </strong>
+                  FID divulga resultado da pré-seleção de propostas do Chamamento Público 2026
+
+                  <a id="linkf01a7ed1-6e96-45d0-bdd0-6894a571e2c0" href="https://www.justica.sp.gov.br/dx/api/dam/v1/collections/241ca032-6cf9-4240-85fe-506344cf61b1/items/edbd305c-c52e-4136-aa38-e9d0a35ec054/renditions/a701af52-4246-4e39-883b-20fe76cedbe8?binary=true" class="link-aviso ">Acessar página para mais informaçõe</a>
+                </span>
+              </div>
+            </div>
+            <button id="btn-fechar-warningf01a7ed1-6e96-45d0-bdd0-6894a571e2c0" type="button"
+              class="position-absolute t-0 r-0 z-index-2 close" data-dismiss="alert" aria-label="Close">
+              <span class="heading-2" aria-hidden="true">×</span>
+            </button>
+          </div>
+          
+
+        </div>
+        <div id="texto-errorf01a7ed1-6e96-45d0-bdd0-6894a571e2c0" class="error text-danger hide">
+          O máximo permitido é de 255 caracteres.
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+</section>
         
         
     
@@ -1830,122 +2305,7 @@ function fecharModal(id){
     
         
             
-            <!-- MAP Noticia Destaque -->
-
-
-
-
-
-
-
-<style>
-  .noticiaDestaqued9d90559-b5aa-4ab3-b08c-83ce8a39cd94 .noticia.noticias-secundarias p {
-    border-color: #CC0000 !important;
-  }
-</style>
-
-
-
-  
-  <section id="noticias-home" class='noticiaDestaqued9d90559-b5aa-4ab3-b08c-83ce8a39cd94'
-    style="background-color:#ededed">
-    
-    <div class="container">
-      
-
             
-      <h3 id='ÚLTIMAS NOTÍCIAS' class="tit-area"
-        style='border-color: #CC0000'>ÚLTIMAS NOTÍCIAS</h3>
-      
-      <a href="/sec_justica/imprensa/noticias"
-        style="display:none;">Clique aqui</a>
-      <div class="row">
-        
-        
-        <div class="col-lg-6">
-          <!-- Notícia principal -->
-
-<div class="noticia noticia-principal">
-  <a href="?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/secretariadajusticaecidadaniaparticipadecerimoniadeposseadministrativadoprocuradorgeraldejusticadoestadodesaopaulo">
-    <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/3701e335-20aa-4df9-839e-118bbacaec03/renditions/6bf4ab52-4dba-4b23-8ffd-d85e433b0f26?binary=true' class="img-fluid">
-      <p>Secretaria da Justiça e Cidadania participa de cerimônia de posse administrativa do Procurador-Geral de Justiça do Estado de São Paulo</p>
-      <small>16/04/2026</small>
-  </a>
-</div>
-
-
-
-        </div>
-        
-        
-        
-        <div class="col-lg-6">
-          
-<div class="noticia noticias-secundarias" style='border-color: #'>
-  <a href='?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/ipemspinauguralaboratoriosdeinovacaoedesoldagemnocentrotecnologicodacapital'>
-    <div class="row align-items-center">
-      <div class="col-md-8">
-        <p>Ipem-SP inaugura Laboratórios de Inovação e de Soldagem no Centro Tecnológico da capital</p>
-        <small>30/04/2026</small>
-      </div>
-      <div class="col-md-4">
-        <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/a19578cf-2cda-420d-9201-21eab3d4fa29/renditions/ab73354f-f567-4ce5-914f-e89229450a0a?binary=true'
-          alt="Imagem Notícia" class="img-fluid">
-      </div>
-    </div>
-  </a>
-</div>
-
-
-<div class="noticia noticias-secundarias" style='border-color: #'>
-  <a href='?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/ipemsprealizacerimoniadeaberturadasemanametrologica2026emcomemoracaoaos59anosdoinstituto'>
-    <div class="row align-items-center">
-      <div class="col-md-8">
-        <p>Ipem-SP realiza cerimônia de abertura da Semana Metrológica 2026 em comemoração aos 59 anos do instituto</p>
-        <small>29/04/2026</small>
-      </div>
-      <div class="col-md-4">
-        <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/30856603-2bcc-4f58-9e63-1c7c990ec140/renditions/f3f156f2-85f5-4a8b-9813-d0d8e69af411?binary=true'
-          alt="Imagem Notícia" class="img-fluid">
-      </div>
-    </div>
-  </a>
-</div>
-
-
-<div class="noticia noticias-secundarias" style='border-color: #'>
-  <a href='?1dmy&amp;urile=wcm%3apath%3a/wcm/connect/sec_justica_content/sec_justica/imprensa/noticias/4encontrodajuventudereuniumaisde180municipiosemlins'>
-    <div class="row align-items-center">
-      <div class="col-md-8">
-        <p>4&ordm; Encontro da Juventude reuniu mais de 180 municípios em Lins</p>
-        <small>29/04/2026</small>
-      </div>
-      <div class="col-md-4">
-        <img src='/dx/api/dam/v1/collections/8edb65b1-e306-4e18-aa87-de060799c8bf/items/034057e1-212d-4242-a076-5f1f61175879/renditions/b304aa53-50c1-4faa-abd7-e398a20373d1?binary=true'
-          alt="Imagem Notícia" class="img-fluid">
-      </div>
-    </div>
-  </a>
-</div>
-
-</div>
-        </div>
-        
-      </div>
-      <div class="container text-right mt-3">
-        <a href="/sec_justica/imprensa/noticias"
-          class="btn btn-outline-custom-dark rounded-pill">
-          Mais notícias <i class="fa-solid fa-chevron-right ml-2"></i>
-        </a>
-      </div>
-
-    </div>
-    
-  
-</section>
-
-
-
         
         
     
@@ -2091,21 +2451,16 @@ function fecharModal(id){
 
 
 
-
-
-
-
-
-<section id="painel-destaque" class='painelImagens17fed9ae-dc61-4196-aee1-03e4ab48b3de' style='background-color: #FFFFFF'>
-
-
-     <div class="container">
-        <h1 class="tit-area" style='border-color: # !important;'>Destaques</h1>
-        
-        <div class="row">
-
-
-
+<section class="componente">
+	
+	<section id="painel-destaque" class='painelImagens17fed9ae-dc61-4196-aee1-03e4ab48b3de' style='background-color: #FFFFFF'>
+	
+	
+		<div class="container">
+			<h1 class="tit-area" style='border-color: # !important;'>Destaques</h1>
+			
+			<div class="row">
+				
 
 
 
@@ -2129,7 +2484,7 @@ function fecharModal(id){
 
 <!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
 <div class="col-lg-6">
-            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/617cb699-37f6-45cd-8e9e-99c590741e4c/renditions/b3237349-adf2-4194-9443-85de4c55aa2f?binary=true') no-repeat center;">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/c1722d44-597f-459b-a902-a3ac28712367/renditions/93e59b82-fffe-4946-81ba-8d430d60d297?binary=true') no-repeat center;">
               
               <a href='/sec_justica/Edital_FID'>
               
@@ -2171,6 +2526,63 @@ function fecharModal(id){
 
 
 
+<!--MEDIO-->
+
+
+<!-- INICIO TAMANHO MEDIO-->
+
+
+
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+
+<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+<div class="col-lg-6">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/bee5661a-241a-4dc2-9f8f-51e52f0deba1/renditions/ce41ea99-1e01-4920-80dd-b211eb275ff8?binary=true') no-repeat center;">
+              
+              <a href='/sec_justica/Certificadosjuventude2026'>
+              
+                <div class="overlay" style="background:none;"></div>
+                
+                <div class="painel-title" style="background:none;">
+                </div>
+              
+              </a>
+              
+            </div>
+          </div>
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
+
+
+<!-- FIM TAMANHO MEDIO -->
+
+
+
+
+
+
+
+
+
+
+
 
 <!--MEDIO-->
 
@@ -2188,7 +2600,7 @@ function fecharModal(id){
 
 <!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
 <div class="col-lg-6">
-            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/e63dca55-8790-44c8-8ed9-32d6a40bafdd/renditions/821eda4b-bd14-4e23-8811-f111e2ba29a0?binary=true') no-repeat center;">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/37113063-2690-4e04-afbe-d525a7f56778/renditions/ee1a87ec-4c9b-42d2-a0aa-725c90dec809?binary=true') no-repeat center;">
               
               <a href='/sec_justica/peritos'>
               
@@ -2230,7 +2642,6 @@ function fecharModal(id){
 
 
 
-
 <!--MEDIO-->
 
 
@@ -2247,7 +2658,7 @@ function fecharModal(id){
 
 <!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
 <div class="col-lg-6">
-            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/d78a8bc4-14d2-4297-b33f-021ef1750c95/renditions/74aba632-5997-4d18-aa48-6837f5b093aa?binary=true') no-repeat center;">
+            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/0abb7739-3b68-4b7d-bbcd-684599117402/renditions/236e825e-8b49-4188-a9da-7248789bfa11?binary=true') no-repeat center;">
               
               <a href='/sec_justica/cursos_cic'>
               
@@ -2277,7 +2688,6 @@ function fecharModal(id){
 
 
 <!-- FIM TAMANHO MEDIO -->
-
 
 
 
@@ -2341,129 +2751,14 @@ function fecharModal(id){
 
 
 
-
-
-
-
-
-
-
-
-<!--MEDIO-->
-
-
-<!-- INICIO TAMANHO MEDIO-->
-
-
-
-
-
-
-<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
-
-
-
-<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
-<div class="col-lg-6">
-            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/c9df6ae1-c184-4538-b3f6-20d245a8436f/renditions/ef2087a4-5869-411d-9432-a311eab29dca?binary=true') no-repeat center;">
-              
-              <a href='/sec_justica/8-Conferencia-Estadual-de-Direitos-Humanos'>
-              
-                <div class="overlay" style="background:none;"></div>
-                
-                <div class="painel-title" style="background:none;">
-                </div>
-              
-              </a>
-              
-            </div>
-          </div>
-<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
-
-
-<!-- FIM TAMANHO MEDIO -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--MEDIO-->
-
-
-<!-- INICIO TAMANHO MEDIO-->
-
-
-
-
-
-
-<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO -->
-
-
-
-<!-- INICIO TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
-<div class="col-lg-6">
-            <div class="painel-item painel-2" style="background: url('/dx/api/dam/v1/collections/90deb856-c157-4779-9b39-656f882087d0/items/bd84b575-1436-45c6-83bb-7bff22766be8/renditions/b09985e4-4f6d-4ea8-a701-eb340f423af3?binary=true') no-repeat center;">
-              
-              <a href='https://l1nk.dev/1JgkV'>
-              
-                <div class="overlay" style="background:none;"></div>
-                
-                <div class="painel-title" style="background:none;">
-                </div>
-              
-              </a>
-              
-            </div>
-          </div>
-<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO > LINK INTERNO-->
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- FIM TAMANHO MEDIO > NAO USAR TEXTO -->
-
-
-<!-- FIM TAMANHO MEDIO -->
-
-
-
-
-
-        </div>
-        <!-- Se não tiver texto não tem botão -->
-        
-    </div>
+			</div>
+			
+			<!-- Se não tiver texto não tem botão -->
+			
+		</div>
+	</section>
 </section>
+
 
 
         
@@ -3216,31 +3511,31 @@ function fecharModal(id){
 
 
 
-
 <style>
-  .galeriaDeCards41583a3d-6247-42dd-af11-cfb22a322a0d article .overlay-perfil {
-    border-color: # !important;
-  }
- .corTituloModal{
-border-color: #;
-}
-
+	.galeriaDeCards41583a3d-6247-42dd-af11-cfb22a322a0d article .overlay-perfil {
+		border-color: # !important;
+	}
+	.corTituloModal{
+		border-color: #;
+	}
 </style>
-<!-- Cores de Fundo -->
 
-  
-  <section id="GaleriaCards" style="background-color:#ededed"class="py-5">
-    
-    <div class='container galeriaDeCards41583a3d-6247-42dd-af11-cfb22a322a0d'>
-      <section id='preview-cards'>
-        <h1 class="tit-area corTituloModal">MATERIAIS DIDÁTICOS</h1>
-        <p></p>
-        <div class="row">
-          
-          
-          
-          
-          <!-- MN Galeria de Cards -->
+<!-- cores de fundo -->
+
+	
+
+<section id="GaleriaCards" class="componente cinza">
+
+	<div class='container galeriaDeCards41583a3d-6247-42dd-af11-cfb22a322a0d'>
+		<section id="preview-cards" class="p-0">
+			<h1 class="tit-area corTituloModal">MATERIAIS DIDÁTICOS</h1>
+			<p></p>
+			<div class="row">
+				
+				
+				
+				
+				<!-- MN Galeria de Cards -->
 
 
 
@@ -4135,14 +4430,12 @@ ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
 
 
 
-          
-        </div>
-      </section>
-    </div>
-    
-  </section>
-  
-  
+				
+			</div>
+		</section>
+	</div>
+</section>
+
 
 
         
@@ -4290,11 +4583,9 @@ ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
   #btnCopyPaste1bf705b22-af1d-4224-8762-aab37a353d20 {
     border-color: # !important;
   }
-
   #btnCopyPaste1bf705b22-af1d-4224-8762-aab37a353d20:hover {
     background-color: # !important;
   }
-
   .textoCorbf705b22-af1d-4224-8762-aab37a353d20 p {
     border-color: # !important;
   }
@@ -4303,68 +4594,66 @@ ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
 
 <!-- Layout 1-->
 
-<section class="jumbotron exibir_bg textoCorbf705b22-af1d-4224-8762-aab37a353d20" id="banner-bg" style="background-color: #ffffff;">
-  
-  
-    <div class="container textoComImagembf705b22-af1d-4224-8762-aab37a353d20">
-      <div class="col-lg-10 mx-auto">
-        <div class="row align-items-center">
-          <div class="col-lg-6 col-md-7 order-2 order-sm-1">
-            <h2>GALERIA DE FOTOS</h2>
-            <p dir="ltr">Acesse nosso Flickr e fique por dentro dos principais acontecimentos da Secretaria da Justiça e Cidadania.</p>
-            <!-- d-none d-md-block -->
-             <div class="d-block">
-              <div class="row">
-                
-                <div class="col-auto">
-                  
+<section class="componente exibir_bg textoCorbf705b22-af1d-4224-8762-aab37a353d20" id="banner-bg" style="background-color: #fff;">
 
-                  
 
-                   <a id='btnCopyPaste1bf705b22-af1d-4224-8762-aab37a353d20'
-                    href='https://www.flickr.com/photos/justica-sp/albums/'
-                    target="_blank" class="btn btn-outline-custom rounded-pill"> Saiba mais </a> 
 
-                  
+	<div class="container textoComImagembf705b22-af1d-4224-8762-aab37a353d20">
+		<div class="col-lg-10 mx-auto">
+			<div class="row align-items-center">
+				<div class="col-lg-6 col-md-7 order-2 order-sm-1">
+					<h2 class="mt-0">GALERIA DE FOTOS</h2>
+					<p dir="ltr">Acesse nosso Flickr e fique por dentro dos principais acontecimentos da Secretaria da Justiça e Cidadania.</p>
+					
+					<div class="d-none d-md-block">
+						<div class="row">
+							<!-- mostrar botao 1 -->
+							
+							<div class="col-auto">
+								
+								         
+								
+								<a id='btnCopyPaste1bf705b22-af1d-4224-8762-aab37a353d20' href='https://www.flickr.com/photos/justica-sp/albums/' target="_blank" class="btn btn-outline-custom rounded-pill">Saiba mais</a>
+								
+								
+								
+								
 
-                  
+								
+							</div>
+							
 
-                  
+							<!-- mostrar botao 2 -->
+							
 
-                  
-                </div>
+							<!-- mostrar botao 3 -->
+							
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-6 col-md-5 order-1 order-sm-2">
+					<img src='' alt="Imagens do aplicativo do SGGD" class="img-fluid img-banner">
+				</div>
 
-                
-                
-                
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-5 order-1 order-sm-2"> <img
-              src='/dx/api/dam/v1/collections/5b3a9d70-9405-481a-9880-47d819771ce8/items/f569829c-9226-4c16-98c0-fd73212f3d4b/renditions/eecb8c54-7e58-4032-a30f-df76af6007bf?binary=true'
-              alt="Imagens do aplicativo do SGGD" class="img-fluid img-banner"> </div>
-          <div class="col order-3">
-            <!-- Solução aplicada abaixo para inverter as classes: d-none d-md-block    --> 
-            <!--
-            <div class="d-block d-md-none">
-              <div class="row">
-                <div class="col-auto"> <small class="d-block">Android</small> <a href="" target="_blank"> <img
-                      src="/wcm/myconnect/66255891-3968-4473-b86e-3c053b824aa8/disponivel-google-play-badge+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-66255891-3968-4473-b86e-3c053b824aa8-p1kXbK3"
-                      alt="Disponível no Google Play" class="img-fluid"> </a> </div>
-                <div class="col-auto"> <small class="d-block">iOS</small> <a href="" target="_blank"> <img
-                      src="/wcm/myconnect/48c2fce8-8190-4212-92e1-12bbf9e5c960/disponivel-na-app-store-botao-1+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-48c2fce8-8190-4212-92e1-12bbf9e5c960-p1kXbK3"
-                      alt="Disponível na App Store" class="img-fluid"> </a> </div>
-              </div>
-            </div>
-            -->
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </section>
-  
-  
+				<div class="col order-3">
+					<div class="d-block d-md-none">
+						<div class="row">
+							<div class="col-auto">
+								<small class="d-block">Android</small>
+								<a href="" target="_blank"><img src="/wcm/myconnect/66255891-3968-4473-b86e-3c053b824aa8/disponivel-google-play-badge+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-66255891-3968-4473-b86e-3c053b824aa8-p1kXbK3" alt="Disponível no Google Play" class="img-fluid"></a>
+							</div>
+							<div class="col-auto">
+								<small class="d-block">iOS</small>
+								<a href="" target="_blank"><img src="/wcm/myconnect/48c2fce8-8190-4212-92e1-12bbf9e5c960/disponivel-na-app-store-botao-1+1.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-48c2fce8-8190-4212-92e1-12bbf9e5c960-p1kXbK3" alt="Disponível na App Store" class="img-fluid"></a>
+							</div>
+						</div>
+					</div>
+				</div>					
+			</div>
+		</div>
+	</div>
+</section>
 
 
 
@@ -4509,140 +4798,7 @@ ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
     
         
             
-            <style>
-    .nao_exibir {
-        display: none;
-    }
-
-    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item a:hover::before {
-        background-color: # !important;
-    }
-
-    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item a:hover {
-        background-color: # !important;
-    }
-
-    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item a:hover i {
-        color: white !important;
-        transform: translate(-50%, -50%) scale(0.5);
-        background-color: #;
-        border-radius: 100%;
-        width: 80px;
-        padding: 18px 20px;
-        height: 80px;
-        margin: auto;
-    }
-
-    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item i {
-        color: #;
-    }
-
-    .linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624 #redes-home .list-inline-item i:hover {
-        background: #;
-    }
-
-    .lead p {
-        font-size: 24px;
-        font-family: "rawline";
-        font-style: normal;
-        font-weight: 400;
-    }
-</style>
-
-
-
-    
-    
-        
-        <section id="redes-sociais" style="background-color:#ededed">
             
-
-            <div class='container linksRedesSociaisa50a5e49-3cf9-4955-811a-17df68a0d624'>
-                <section id="redes-home" class="componente">
-                    <h3 class="tit-area" style="border-color:#">
-                        Nossas redes sociais
-                    </h3>
-                    <div id='Redes Sociais' class="row">
-                        <div class="col-lg-6 lead">
-                            <p dir="ltr">Siga nossas redes sociais e fique por dentro das novidades</p>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <!-- início UL redes -->
-                            <ul class="list-inline">
-
-                                
-                                <!-- INICIO FACEBOOK -->
-                                <li class="list-inline-item exibir">
-                                    <a href="https://www.facebook.com/justicasp/"
-                                        target="_blank" title="">
-                                        <i class='fab fa-facebook-f fa-3x'></i>
-                                    </a>
-                                </li>
-                                <!-- FIM FACEBOOK -->
-                                
-
-
-                                
-                                <!-- INICIO TWITTER  -->
-                                <li class="list-inline-item exibir">
-                                    <a href="https://twitter.com/JusticaSP"
-                                        target="_blank" title="">
-                                        <i class='fa-brands fa-x-twitter fa-3x'></i>
-                                    </a>
-                                </li>
-                                <!-- FIM TWITTER  -->
-                                
-
-                                
-                                <!-- INICIO INSTAGRAM  -->
-                                <li class="list-inline-item exibir">
-                                    <a href="https://www.instagram.com/justicasp/"
-                                        target="_blank" title="">
-                                        <i class='fab fa-instagram fa-3x'></i>
-                                    </a>
-                                </li>
-                                <!-- FIM INSTAGRAM  -->
-                                
-
-                                
-
-                                
-                                <!-- INICIO YOUTUBE  -->
-                                <li class="list-inline-item exibir">
-                                    <a href="https://www.youtube.com/user/justicasp"
-                                        target="_blank" title="">
-                                        <i
-                                            class='fab fa-youtube fa-3x'></i>
-                                    </a>
-                                </li>
-                                <!-- FIM YOUTUBE  -->
-                                
-
-
-                                
-
-                                
-                                <!--INICIO Flickr -->
-                                <li class="list-inline-item exibir">
-                                    <a href="https://www.flickr.com/photos/justicaecidadaniasp/albums/"
-                                        target="_blank" title="">
-                                        <i class='fa-brands fa-flickr fa-3x'></i>
-                                    </a>
-                                </li>
-                                <!--FIM Flickr -->
-                                
-                                
-                                
-                                <!--FIM Threads-->
-
-                            </ul>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </section>
-
         
         
     
@@ -4676,149 +4832,27 @@ ocultarModalFooter('Sim','Não', '900f7cc3-2d92-4845-a163-b720a86bb27b');
 	<!--end main content-->
 	<footer>
 		<div class="container">
-			<div class="row justify-content-between">
-				<style>
-    footer{
-       color: #FFF !important;
-    }
-    footer h4{
-       color: #FFF !important;
-    }
-
-@media (max-width: 767px) {
-  footer h4.semIcon::after{
-    color: black;
-  }
-}
-
-
-</style>
-
-<div class="col-lg-9">
-	<div class='row footerSecoes06bb724d-b7ba-43b0-a824-06760dceea1b'>
-	</div>
-</div>
-<script>
-function montarFooter(...itens){
-
-  itens.forEach((item) =>{
-     if(!(item === "" || item === "Nenhuma")){
-         let itensDoMenu = document.querySelectorAll(".navbar-nav .nav-item > a");
-         itensDoMenu.forEach((itemMenu) =>{
-             if(itemMenu.textContent.trim() === item){
-
-                  let proximoItem = itemMenu.nextSibling;
-
-                      let divCol4 = document.createElement("div");
-                      divCol4.classList.add("col-lg-4");
-
-                  if(proximoItem.nextSibling){
-
-       let textId = itemMenu.textContent.trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, "");
-  
-       let divDosTitulos = document.createElement("div");
-       divDosTitulos.setAttribute('id', `titulos${textId}`);
-
-       let tituloH4Desktop = document.createElement("h4");
-       tituloH4Desktop.setAttribute("class", 'd-none d-md-block');
-       tituloH4Desktop.textContent = itemMenu.textContent.trim();
-
-       let tituloH4Mobile = document.createElement("h4");
-       tituloH4Mobile .setAttribute("class", 'd-block d-md-none collapsed');
-       tituloH4Mobile .textContent = itemMenu.textContent.trim();
-       tituloH4Mobile .setAttribute("aria-controls", `collapse${textId}`);
-       tituloH4Mobile .setAttribute("aria-expanded", "true");
-       tituloH4Mobile .setAttribute("data-target", `#collapse${textId}`);
-       tituloH4Mobile .setAttribute("data-toggle", "collapse");
-       tituloH4Mobile .setAttribute("role", "button");
-
-       divDosTitulos.appendChild(tituloH4Desktop);
-       divDosTitulos.appendChild(tituloH4Mobile);
-       divCol4.appendChild(divDosTitulos);
-
-       let divDaLista = document.createElement("div");
-       divDaLista.setAttribute('aria-labelledby',`titulos${textId}`);
-       divDaLista.setAttribute('class',"collapse show");
-       divDaLista.setAttribute('id',`collapse${textId}`);
-
-       let ulDaLista = document.createElement("ul");
-       
-         for(let i = 0; i < proximoItem.nextSibling.children.length; i++){
-           if(!(proximoItem.nextSibling.children[i].classList.contains("dropdown"))){
-     
-                let liDaLista = document.createElement("li");
-  
-                let aDaLista = document.createElement("a");
-
-                let urlAtual = window.location.hostname;
-                if(!(proximoItem.nextSibling.children[i].firstElementChild.href.includes(urlAtual))){
-                   aDaLista.setAttribute("target", "_blank");
-                }
-                aDaLista.setAttribute("href", proximoItem.nextSibling.children[i].firstElementChild.href);
-                aDaLista.textContent = proximoItem.nextSibling.children[i].firstElementChild.textContent.trim();
-             
-                liDaLista.appendChild(aDaLista);
-                ulDaLista.appendChild(liDaLista);
-             }
-       }
-       divDaLista.appendChild(ulDaLista);
-       divCol4.appendChild(divDaLista);
-
-                 }else{
-   
-                      let tagH4 = document.createElement("h4");
-                      tagH4.setAttribute("class", "semIcon");
-                      
-                      let tagA = document.createElement("a");
-                      tagA.textContent = itemMenu.textContent.trim();
-                      tagA.setAttribute("href", itemMenu.href);
-
-                      tagH4.appendChild(tagA);
-                      divCol4.appendChild(tagH4);
-             
-                      if(itemMenu.attributes["target"]){
-                        tagA.setAttribute("target", "_blank");
-                      }
-                 }
-
-                      document.querySelector(".footerSecoes06bb724d-b7ba-43b0-a824-06760dceea1b").appendChild(divCol4);
-              }
-         });
-     }
-     
-  });
-  
-}
-
-montarFooter('Institucional', 
-             'Canais de Comunicação',
-             '',
-             '',
-             '',
-             '',
-             '');
-</script>
-
-<div class="col-lg-3">
-					<div class="row">
-						<div class="col-12 footer-menu">
-							<h4>
-								<a href="https://fala.sp.gov.br" target="_blank">Fala SP</a> 
+			<div class="row justify-content-between">				
+				<div class="col-12">
+					<div class="row justify-content-center text-center">
+						<div class="col-12 col-sm-6 col-lg-3 footer-menu">
+							<h4 class="no-child">
+								<a href="https://fala.sp.gov.br" target="_blank">Fala SP</a>
 							</h4>
 						</div>
-						<div class="col-12 footer-menu">
-							<h4>
+						<div class="col-12 col-sm-6 col-lg-3 footer-menu">
+							<h4 class="no-child">
 								<a href="http://www.transparencia.sp.gov.br/" target="_blank">Transpar&ecirc;ncia</a>
 							</h4>
 						</div>
-						<div class="col-12 footer-menu">
-							<h4>
+						<div class="col-12 col-sm-6 col-lg-3 footer-menu">
+							<h4 class="no-child">
 								<a href="https://www.cms.sp.gov.br/cms/termo-uso" target="_blank"
 									style="text-decoration: none;">Termo de Uso</a>
 							</h4>
 						</div>
-						<div class="col-12 footer-menu">
-							<h4>
+						<div class="col-12 col-sm-6 col-lg-3 footer-menu">
+							<h4 class="no-child">
 								<a href="https://www.cms.sp.gov.br/cms/politica-privacidade" target="_blank"
 									style="text-decoration: none;">Política de Privacidade</a>
 							</h4>
@@ -4827,65 +4861,11 @@ montarFooter('Institucional',
 				</div>
 			</div>
 
-			<div class="row align-items-center mt-5 text-center text-md-left">
-				<div class="col-12 col-md">
-					<a href="https://www.sp.gov.br/">
-						<img src="/statics/img/logo-footer.png" alt="Logo São Paulo - Governo do Estado"
-							target="_blank">
+			<div class="row align-items-center mt-5">
+				<div class="col-12 text-center">
+					<a href="https://www.sp.gov.br/" target="_blank">
+						<img src="/statics/periodo-eleitoral/assets/images/logo-sp-governo-estado-dark.svg" alt="Governo do Estado de São Paulo" class="d-inline govbr">
 					</a>
-				</div>
-				<div class="col-12 col-md-auto">
-					<ul class="list-inline redes">
-						<li class="list-inline-item text-mob">
-							<p class="small">Acompanhe as novidades do Governo do Estado de São Paulo</p>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.facebook.com/governosp/" target="_blank">
-								<i class="fab fa-facebook-f fa-xl"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.twitter.com/governosp/" target="_blank">
-								<i class="fa-brands fa-x-twitter fa-xl"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.instagram.com/governosp/" target="_blank">
-								<i class="fab fa-instagram fa-xl"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.linkedin.com/company/governosp/" target="_blank">
-								<i class="fab fa-linkedin-in fa-xl"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.youtube.com/governosp/" target="_blank">
-								<i class="fab fa-youtube fa-xl"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.tiktok.com/@governosp" target="_blank">
-								<i class="fab fa-tiktok fa-xl"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://whatsapp.com/channel/0029Va4tIbCFHWq7sOctpz23" target="_blank">
-								<i class="fa-brands fa-whatsapp fa-xl"></i>
-							</a>
-						</li>
-						<li class="list-inline-item">
-							<a href="https://www.flickr.com/photos/governosp" target="_blank">
-								<i class="fa-brands fa-flickr fa-xl"></i>
-							</a>
-						</li>
-						<!-- Adicionar Rede Social Threads -->
-						<li class="list-inline-item">
-							<a href="https://www.threads.com/@governosp" target="_blank">
-								<i class="fa-brands fa-threads fa-xl"></i>
-							</a>
-						</li>
-					</ul>
 				</div>
 			</div>
 			<div class="text-center copyright mt-5">
@@ -4927,7 +4907,7 @@ montarFooter('Institucional',
 			</div>
 			<a href="#menuAcessibilidade" id="btnAcessibilidade"
 				style="padding: 0px 9px 0px 0px; background-image: none;" onclick="toggleAcessibilidadeMenu(event)">
-				<img class="" src="/statics/img/acessibilidade.png"></a>
+				<img src="/statics/img/acessibilidade.png" alt="Logo de acessibilidade que abre um menu de opções visuais"></a>
 		</div>
 
 		
@@ -4935,7 +4915,7 @@ montarFooter('Institucional',
   	<!-- Acessibilidade -->
   	<script src="/statics/js/script-acessibilidade.js"></script>
   	
-  		<!--   VLibras -->
+  	<!--   VLibras -->
 	<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 	
 	 <script>
@@ -4950,7 +4930,7 @@ montarFooter('Institucional',
 	<div class="wpthemeComplementaryContent" id="wpthemeComplementaryContent" role="region" tabindex="-1"
 		aria-labelledby="wpthemeComplementaryContentText">
 		<span class="wpthemeAltText" id="wpthemeComplementaryContentText">Complementary Content</span>
-		<script type="text/javascript" src="/contenthandler/!ut/p/digest!Dal1CObNXebH8jDfutHTCA/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777427345778&amp;entry=wp_portal__0.0%3Aconfig_config_static&amp;entry=wcm_config__0.0%3Aconfig_config_static&amp;entry=wcm_inplaceEdit__0.0%3Aconfig_config_static"></script><script type="text/javascript">i$.merge({"ibmCfg":{"themeConfig":{"themeUniqueName":"SPTheme","themeRootURI":"/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/war/SPTheme/themes/html/SPTheme","themeWebAppBaseURI":"/SPTheme/themes/html/dynamicSpots","themeWebDAVBaseURI":"war:SPTheme/themes/html/SPTheme/","modulesWebAppBaseURI":"/themeModules","commonResourcesRootURI":"/contenthandler/!ut/p/digest!Dal1CObNXebH8jDfutHTCA/dav/fs-type1/common-resources","isRTL":false,"isPageRenderModeCSA":false,"portletOverridePageTitle":"SEC. JUSTIÇA","currentContentNodeOID":"Z6_086423G03HEOD06U7G8HUVUIC5","loadingImage":"css/images/loading.gif","dndSourceDefinitions":[],"categorySources":["system/WebContentCategory.json,label:shelf_socialCategory"],"styleSources":[],"layoutSources":["war:SPTheme/themes/html/SPTheme/system/layouts.json"]},"portalConfig":{"locale":"pt-br","portalURI":"","contentHandlerURI":"/contenthandler/!ut/p/digest!XxchXHvecs1E6AMXjFintQ/","pocURI":"/!ut/p/z0/0wcA1NLTeQ!!/","isVirtualPortal":false,"canImpersonate":false,"themeRootURI":"/SPTheme/themes/html/dynamicSpots","parentPageID":"Z6_000000000000000000000000A0","currentPageOID":"Z6_086423G03HEOD06U7G8HUVUIC5","canAnonymousUserViewCurrentPage":true,"bootstrapState":"&lt;?xml version=&#034;1.0&#034; encoding=&#034;UTF-8&#034;?&gt;&lt;root xmlns=&#034;http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/portal-state&#034;&gt;&lt;state type=&#034;navigational&#034;&gt;&lt;selection selection-node=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034;&gt;&lt;mapping src=&#034;Z6_000000000000000000000000A0&#034; dst=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034;/&gt;&lt;mapping src=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034; dst=&#034;Z6_000000000000000000000000A0&#034;/&gt;&lt;/selection&gt;&lt;expansions&gt;&lt;node id=&#034;Z6_000000000000000000000000A0&#034;/&gt;&lt;/expansions&gt;&lt;/state&gt;&lt;/root&gt;","isUserLoggedIn":false,"currentUser":"anonymous portal user","currentUserOID":"","aggregatedStyle":null,"isCurrentPageEditable":true,"wcmPageMetadata":{"contentRoot":null,"sharingScope":null},"projectUUID":null},"userName":""},"com_ibm_theme_capabilities":{"wp_dynamicContentSpots_85":"0.0","wp_dialog_draggable":"0.0","getting_started_module":"0.0","wp_hiddenpages":"0.0","wp_simple_contextmenu_ext":"0.0","wp_simple_contextmenu_js":"0.0","wp_toolbar_sitepreview_menuactions":"0.0","wp_portlet_css":"0.0","wp_theme_utils":"0.0","SPTheme":"0.0","wp_toolbar_menuactions":"0.0","wp_toolbar_host_view":"0.0","wp_hiddencontent":"0.0","wp_theme_skin_region":"0.0","wp_portal":"0.0","photon.dom":"1.0","wp_photon_dom":"0.0","wp_toolbar_sitepreview":"0.0","highContrast":"1.0","wp_status_bar":"0.0","wp_client_tracing":"0.0","modules":"0.1","hasBaseURL":"true","wp_state_page_modes":"0.0","wp_toolbar_common_actionbar":"0.0","wp_gridlayout":"0.0","wp_client_main":"0.0","wp_toolbar_viewframe_validator":"0.0","wp_high_contrast":"0.0","wp_toolbar_actionbar":"0.0","simple-contextmenu":"1.1","wp_dialog_css":"0.0","wp_theme_menus":"0.0","wp_client_logging":"0.0","wp_state_page":"0.0","wp_toolbar_common":"0.0","wp_theme_portal_edit_85":"0.0","wp_toolbar_projectmenu":"0.0","wp_dialog_main":"0.0","wp_ic4_wai_resources":"0.0","wp_simple_contextmenu_main":"0.0","wp_layout_windowstates":"0.0","wp_toolbar_moremenu":"0.0","wp_custom_page_style":"0.0","wp_toolbar_contextmenu":"0.0","wp_searchbar":"0.0","wp_toolbar_informationmode":"0.0","wp_client_ext":"0.0","wp_simple_contextmenu_css":"0.0","wp_toolbar85":"0.0","wp_modules":"0.0","wp_analytics_aggregator":"0.0","toolbar":"8.5","wp_dialog_util":"0.0","wp_oob_sample_styles":"0.0","wp_toolbar_utils":"0.0","a11y":"1.0","wp_a11y":"0.0","analytics_aggregator":"8.0","wp_theme_portal_85":"0.0","wp_simple_contextmenu_templates":"0.0","wp_toolbar_logo":"0.0"},"com_ibm_device_class":[]});ibmCfg.portalConfig.bootstrapState=(ibmCfg.portalConfig.bootstrapState||"").replace(/&lt;/gm, '<').replace(/&gt;/gm, '>').replace(/&amp;/gm, '&').replace(/&#039;/gm, "'").replace(/&#034;/gm, '"');i$.merge({"ibmCfg":{"portalConfig":{"asaConfig":{"canViewAsaReports":"false","canViewAsaSitePromotions":"false","canCreateAsaSitePromotions":"false","canDeleteAsaSitePromotions":"false","reportConfig":{"scopes":[]}}}}});i$.merge({"ibmCfg":{"portalConfig":{"isShowHiddenPages":false}}});</script><script type="text/javascript" src="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777435300000&amp;entry=wp_dialog_main__0.0%3Aconfig_js&amp;entry=wp_high_contrast__0.0%3Aconfig_js&amp;entry=wp_toolbar_utils__0.0%3Aconfig_js&amp;entry=wp_state_page_modes__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_ext__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_js__0.0%3Aconfig_js&amp;entry=wp_toolbar_actionbar__0.0%3Aconfig_js&amp;entry=wp_toolbar_menuactions__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview_menuactions__0.0%3Aconfig_js&amp;entry=wp_ic4_wai_resources__0.0%3Aconfig_js&amp;entry=wp_theme_skin_region__0.0%3Aconfig_js&amp;entry=wp_status_bar__0.0%3Aconfig_js&amp;entry=wp_toolbar_projectmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_contextmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview__0.0%3Aconfig_js"></script><a rel="alternate" id="config_js_deferred" href="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1777427346000&amp;entry=wp_liveobject_framework_core__0.0%3Aconfig_js&amp;entry=wp_portal_ui_utils__0.0%3Aconfig_js&amp;entry=wp_contextmenu_js__0.0%3Aconfig_js&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Aconfig_js&amp;entry=wp_skin_cam__0.0%3Aconfig_js&amp;entry=wp_contextmenu_config_lof__0.0%3Aconfig_js&amp;entry=wp_federated_documents_picker__0.0%3Aconfig_js&amp;entry=wp_dnd_main__0.0%3Aconfig_js&amp;entry=wp_movecontrols__0.0%3Aconfig_js&amp;entry=wp_toolbar_controlactions__0.0%3Aconfig_js&amp;entry=wp_content_targeting_cam__0.0%3Aconfig_js&amp;entry=wp_analytics_tags__0.0%3Aconfig_js&amp;deferred=true" style="display:none"> Deferred Modules </a><span id="simpleMenuTemplate" class="wpthemeMenuLeft">
+		<script type="text/javascript" src="/contenthandler/!ut/p/digest!Dal1CObNXebH8jDfutHTCA/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1790969429706&amp;entry=wp_portal__0.0%3Aconfig_config_static&amp;entry=wcm_config__0.0%3Aconfig_config_static&amp;entry=wcm_inplaceEdit__0.0%3Aconfig_config_static"></script><script type="text/javascript">i$.merge({"ibmCfg":{"themeConfig":{"themeUniqueName":"SPTheme","themeRootURI":"/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/war/SPTheme/themes/html/SPTheme","themeWebAppBaseURI":"/SPTheme/themes/html/dynamicSpots","themeWebDAVBaseURI":"war:SPTheme/themes/html/SPTheme/","modulesWebAppBaseURI":"/themeModules","commonResourcesRootURI":"/contenthandler/!ut/p/digest!Dal1CObNXebH8jDfutHTCA/dav/fs-type1/common-resources","isRTL":false,"isPageRenderModeCSA":false,"portletOverridePageTitle":"Secretaria da Justiça e Cidadania | Governo do Estado de SP","currentContentNodeOID":"Z6_086423G03HEOD06U7G8HUVUIC5","loadingImage":"css/images/loading.gif","dndSourceDefinitions":[],"categorySources":["system/WebContentCategory.json,label:shelf_socialCategory"],"styleSources":[],"layoutSources":["war:SPTheme/themes/html/SPTheme/system/layouts.json"]},"portalConfig":{"locale":"pt-br","portalURI":"","contentHandlerURI":"/contenthandler/!ut/p/digest!p-x6-zW1QWScRJzM8Oo0wg/","pocURI":"/!ut/p/z0/0wcA1NLTeQ!!/","isVirtualPortal":false,"canImpersonate":false,"themeRootURI":"/SPTheme/themes/html/dynamicSpots","parentPageID":"Z6_000000000000000000000000A0","currentPageOID":"Z6_086423G03HEOD06U7G8HUVUIC5","canAnonymousUserViewCurrentPage":true,"bootstrapState":"&lt;?xml version=&#034;1.0&#034; encoding=&#034;UTF-8&#034;?&gt;&lt;root xmlns=&#034;http://www.ibm.com/xmlns/prod/websphere/portal/v6.1/portal-state&#034;&gt;&lt;state type=&#034;navigational&#034;&gt;&lt;selection selection-node=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034;&gt;&lt;mapping src=&#034;Z6_000000000000000000000000A0&#034; dst=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034;/&gt;&lt;mapping src=&#034;Z6_086423G03HEOD06U7G8HUVUIC5&#034; dst=&#034;Z6_000000000000000000000000A0&#034;/&gt;&lt;/selection&gt;&lt;expansions&gt;&lt;node id=&#034;Z6_000000000000000000000000A0&#034;/&gt;&lt;/expansions&gt;&lt;/state&gt;&lt;/root&gt;","isUserLoggedIn":false,"currentUser":"anonymous portal user","currentUserOID":"","aggregatedStyle":null,"isCurrentPageEditable":true,"wcmPageMetadata":{"contentRoot":null,"sharingScope":null},"projectUUID":null},"userName":""},"com_ibm_theme_capabilities":{"wp_dynamicContentSpots_85":"0.0","wp_dialog_draggable":"0.0","getting_started_module":"0.0","wp_hiddenpages":"0.0","wp_simple_contextmenu_ext":"0.0","wp_simple_contextmenu_js":"0.0","wp_toolbar_sitepreview_menuactions":"0.0","wp_portlet_css":"0.0","wp_theme_utils":"0.0","SPTheme":"0.0","wp_toolbar_menuactions":"0.0","wp_toolbar_host_view":"0.0","wp_hiddencontent":"0.0","wp_theme_skin_region":"0.0","wp_portal":"0.0","photon.dom":"1.0","wp_photon_dom":"0.0","wp_toolbar_sitepreview":"0.0","highContrast":"1.0","wp_status_bar":"0.0","wp_client_tracing":"0.0","modules":"0.1","hasBaseURL":"true","wp_state_page_modes":"0.0","wp_toolbar_common_actionbar":"0.0","wp_gridlayout":"0.0","wp_client_main":"0.0","wp_toolbar_viewframe_validator":"0.0","wp_high_contrast":"0.0","wp_toolbar_actionbar":"0.0","simple-contextmenu":"1.1","wp_dialog_css":"0.0","wp_theme_menus":"0.0","wp_client_logging":"0.0","wp_state_page":"0.0","wp_toolbar_common":"0.0","wp_theme_portal_edit_85":"0.0","wp_toolbar_projectmenu":"0.0","wp_dialog_main":"0.0","wp_ic4_wai_resources":"0.0","wp_simple_contextmenu_main":"0.0","wp_layout_windowstates":"0.0","wp_toolbar_moremenu":"0.0","wp_custom_page_style":"0.0","wp_toolbar_contextmenu":"0.0","wp_searchbar":"0.0","wp_toolbar_informationmode":"0.0","wp_client_ext":"0.0","wp_simple_contextmenu_css":"0.0","wp_toolbar85":"0.0","wp_modules":"0.0","wp_analytics_aggregator":"0.0","toolbar":"8.5","wp_dialog_util":"0.0","wp_oob_sample_styles":"0.0","wp_toolbar_utils":"0.0","a11y":"1.0","wp_a11y":"0.0","analytics_aggregator":"8.0","wp_theme_portal_85":"0.0","wp_simple_contextmenu_templates":"0.0","wp_toolbar_logo":"0.0"},"com_ibm_device_class":[]});ibmCfg.portalConfig.bootstrapState=(ibmCfg.portalConfig.bootstrapState||"").replace(/&lt;/gm, '<').replace(/&gt;/gm, '>').replace(/&amp;/gm, '&').replace(/&#039;/gm, "'").replace(/&#034;/gm, '"');i$.merge({"ibmCfg":{"portalConfig":{"asaConfig":{"canViewAsaReports":"false","canViewAsaSitePromotions":"false","canCreateAsaSitePromotions":"false","canDeleteAsaSitePromotions":"false","reportConfig":{"scopes":[]}}}}});i$.merge({"ibmCfg":{"portalConfig":{"isShowHiddenPages":false}}});</script><script type="text/javascript" src="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1790976950000&amp;entry=wp_dialog_main__0.0%3Aconfig_js&amp;entry=wp_high_contrast__0.0%3Aconfig_js&amp;entry=wp_toolbar_utils__0.0%3Aconfig_js&amp;entry=wp_state_page_modes__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_ext__0.0%3Aconfig_js&amp;entry=wp_simple_contextmenu_js__0.0%3Aconfig_js&amp;entry=wp_toolbar_actionbar__0.0%3Aconfig_js&amp;entry=wp_toolbar_menuactions__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview_menuactions__0.0%3Aconfig_js&amp;entry=wp_ic4_wai_resources__0.0%3Aconfig_js&amp;entry=wp_theme_skin_region__0.0%3Aconfig_js&amp;entry=wp_status_bar__0.0%3Aconfig_js&amp;entry=wp_toolbar_projectmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_contextmenu__0.0%3Aconfig_js&amp;entry=wp_toolbar_sitepreview__0.0%3Aconfig_js"></script><a rel="alternate" id="config_js_deferred" href="/contenthandler/!ut/p/digest!cHjRKn-eUv59BtO81BV89w/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fjavascript&amp;lm=1790969430000&amp;entry=wp_liveobject_framework_core__0.0%3Aconfig_js&amp;entry=wp_portal_ui_utils__0.0%3Aconfig_js&amp;entry=wp_contextmenu_js__0.0%3Aconfig_js&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Aconfig_js&amp;entry=wp_skin_cam__0.0%3Aconfig_js&amp;entry=wp_contextmenu_config_lof__0.0%3Aconfig_js&amp;entry=wp_federated_documents_picker__0.0%3Aconfig_js&amp;entry=wp_dnd_main__0.0%3Aconfig_js&amp;entry=wp_movecontrols__0.0%3Aconfig_js&amp;entry=wp_toolbar_controlactions__0.0%3Aconfig_js&amp;entry=wp_content_targeting_cam__0.0%3Aconfig_js&amp;entry=wp_analytics_tags__0.0%3Aconfig_js&amp;deferred=true" style="display:none"> Deferred Modules </a><span id="simpleMenuTemplate" class="wpthemeMenuLeft">
     <div class="wpthemeMenuBorder">
         <div class="wpthemeMenuNotchBorder"></div>
         <!-- define the menu item template inside the "ul" element.  only "css-class", "description", and "title" are handled by the theme's sample javascript. -->
@@ -4966,7 +4946,7 @@ montarFooter('Institucional',
             <ul id="${submenu-id}" class="wpthemeMenuDropDown" role="menu"><li role="menuitem" tabindex="-1"></li></ul>
         </div>
     </div>
-</span><a rel="alternate" id="config_markup_deferred" href="/contenthandler/!ut/p/digest!f2tmtn4L-51xsk17QzGE-A/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fplain&amp;entry=wp_contextmenu_templates__0.0%3Aconfig_markup&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Aconfig_markup&amp;entry=wp_skin_cam__0.0%3Aconfig_markup&amp;entry=wp_dnd_main__0.0%3Aconfig_markup&amp;deferred=true" style="display:none"> Deferred Modules </a></div>
+</span><a rel="alternate" id="config_markup_deferred" href="/contenthandler/!ut/p/digest!_BnUVVRWMnVpqXxGtJ8qRw/mashup/ra:collection?themeID=ZJ_086423G0313SC06QD0S50410V0&amp;locale=pt-BR&amp;locale=pt&amp;locale=en&amp;mime-type=text%2Fplain&amp;entry=wp_contextmenu_templates__0.0%3Aconfig_markup&amp;entry=wp_toolbar_gridlayout_inlineedit__0.0%3Aconfig_markup&amp;entry=wp_skin_cam__0.0%3Aconfig_markup&amp;entry=wp_dnd_main__0.0%3Aconfig_markup&amp;deferred=true" style="display:none"> Deferred Modules </a></div>
 	<!-- Modal Aviso Timeout -->
 	<div id="modal-screen-alt">
 		<div id="overlay" class="overlay"></div>
@@ -4995,24 +4975,30 @@ montarFooter('Institucional',
 		</p>
 		<button type="submit" id="cadastrar" class="lgpd-btn">Aceitar</button>
 	</div>
-		<script>
+	<script>
 		const modalWarningCms = document.getElementById("modalCustomWarning");
 		const btnCloseWarningCms = document.querySelector(".btn-close-modal-warning-cms");
 
 		function abrirModalWarningCms() {
-			modalWarningCms.style.display = "block";
+			if (modalWarningCms) {
+				modalWarningCms.style.display = "block";
+			}
 		}
 
-		btnCloseWarningCms.onclick = function () {
-			modalWarningCms.style.display = "none";
+		if (btnCloseWarningCms) {
+			btnCloseWarningCms.onclick = function () {
+				if (modalWarningCms) {
+					modalWarningCms.style.display = "none";
+				}
+			}
 		}
 
 		window.onclick = function (event) {
-			if (event.target === modalWarningCms) {
+			if (modalWarningCms && event.target === modalWarningCms) {
 				modalWarningCms.style.display = "none";
 			}
 		}
 	</script>
-<a href="/decpti0n.html" style='display:none'>login</a></body>
+</body>
 
 </html>

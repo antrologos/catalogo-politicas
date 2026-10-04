@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicado</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            /* Adiciona uma sombra sutil (opcional) */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+    </style>
+</head>
+<body>
+
+    <img src="TCE.jpg" alt="Comunicado - Legislação Eleitoral">
+
+</body>
+</html>

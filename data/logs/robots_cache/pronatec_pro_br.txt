@@ -1,0 +1,9 @@
+Sitemap: https://pronatec.pro.br/wp-sitemap.xml
+Sitemap: https://pronatec.pro.br/sitemap-news.xml
+Sitemap: https://pronatec.pro.br/wp-sitemap-posts-post-1.xml
+Sitemap: https://pronatec.pro.br/wp-sitemap-posts-post-2.xml
+
+User-agent: *
+Disallow: /tags/
+Disallow: /page/
+Disallow: /?s=

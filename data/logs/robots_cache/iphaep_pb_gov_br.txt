@@ -1,0 +1,48 @@
+Sitemap: /sitemap.xml.gz
+
+# Define access-restrictions for robots/spiders
+# http://www.robotstxt.org/wc/norobots.html
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: bingbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: facebookexternalhit
+Disallow: /
+
+User-agent: SentiBot
+Disallow: /
+
+User-agent: Barkrowler
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# By default we allow robots to access all areas of our site 
+# already accessible to anonymous users
+
+User-agent: *
+Disallow:
+
+
+
+# Add Googlebot-specific syntax extension to exclude forms 
+# that are repeated for each piece of content in the site 
+# the wildcard is only supported by Googlebot
+# http://www.google.com/support/webmasters/bin/answer.py?answer=40367&ctx=sibling
+
+User-agent: AdsBot-Google
+User-agent: Googlebot
+User-agent: Googlebot-Image

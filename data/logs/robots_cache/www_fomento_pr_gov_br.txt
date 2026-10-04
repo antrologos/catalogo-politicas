@@ -13,6 +13,15 @@
 # For more information about the robots.txt standard, see:
 # http://www.robotstxt.org/robotstxt.html
 
+User-agent: Google-Extended  # Controla o uso do conteúdo para treinar o Gemini e fornecer respostas ancoradas (grounding)
+User-agent: OAI-SearchBot    # Usado para exibir a Fomento PR nos resultados de busca do ChatGPT
+User-agent: GPTBot           # Permite que a IA leia o site para treinar e entender o contexto institucional
+User-agent: ChatGPT-User     # Ativado quando um usuário pede diretamente para o ChatGPT ler um link do site
+User-agent: Claude-SearchBot # Alimenta os resultados de pesquisa em tempo real do Claude
+User-agent: ClaudeBot        # Permite que o modelo geral do Claude consuma as informações do site
+User-agent: Claude-User      # Ativado quando um usuário cola um link do seu site no chat do Claude
+User-agent: PerplexityBot    # Permite que o site seja citado e indexado nas respostas estruturadas do Perplexity
+User-agent: Perplexity-User  # Permite que a IA acesse o link em tempo real se um usuário solicitar no chat
 User-agent: *
 # CSS, JS, Images
 Allow: /core/*.css$
@@ -69,6 +78,9 @@ Disallow: /noticias/aen/
 
 # Login personalizado
 Disallow: /usuario/
+Disallow: /celepar-captcha-audio/
 
 # Webservices
 Disallow: /webservices/
+
+Sitemap: https://fomento.pr.gov.br/sitemap.xml

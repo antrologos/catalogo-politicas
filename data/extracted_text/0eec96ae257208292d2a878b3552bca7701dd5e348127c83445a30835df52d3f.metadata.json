@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ce.pdf",
   "url_final": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ce.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "0eec96ae257208292d2a878b3552bca7701dd5e348127c83445a30835df52d3f",
   "extensao": "pdf",
   "tamanho_bytes": 7055692,
-  "tempo_ms": 4711,
+  "tempo_ms": 2837,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/0e/0eec96ae257208292d2a878b3552bca7701dd5e348127c83445a30835df52d3f.pdf",
   "caminho_texto": "data/extracted_text/0eec96ae257208292d2a878b3552bca7701dd5e348127c83445a30835df52d3f.txt",
@@ -21,6 +21,6 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:32:15-03:00",
+  "timestamp_iso": "2026-10-04T18:07:00-03:00",
   "tipo_documento_declarado": null
 }

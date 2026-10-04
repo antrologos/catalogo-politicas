@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://www.ceed.rs.gov.br/upload/arquivos/202512/16094032-resolucao-391-ept.pdf",
   "url_final": "https://www.ceed.rs.gov.br/upload/arquivos/202512/16094032-resolucao-391-ept.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "1e803c994e78b41579497ef65f6e5b1bc4c20bf75e75f253993c42aae9fc4dbe",
   "extensao": "pdf",
   "tamanho_bytes": 1090287,
-  "tempo_ms": 605,
+  "tempo_ms": 454,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/1e/1e803c994e78b41579497ef65f6e5b1bc4c20bf75e75f253993c42aae9fc4dbe.pdf",
   "caminho_texto": "data/extracted_text/1e803c994e78b41579497ef65f6e5b1bc4c20bf75e75f253993c42aae9fc4dbe.txt",
@@ -21,6 +21,6 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:29:10-03:00",
+  "timestamp_iso": "2026-10-04T18:05:23-03:00",
   "tipo_documento_declarado": null
 }

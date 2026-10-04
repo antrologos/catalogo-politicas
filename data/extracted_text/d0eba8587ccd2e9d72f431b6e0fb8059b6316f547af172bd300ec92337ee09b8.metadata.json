@@ -22,5 +22,6 @@
   "erro_tipo": null,
   "erro_msg": null,
   "timestamp_iso": "2026-05-01T12:28:17-03:00",
-  "tipo_documento_declarado": null
+  "tipo_documento_declarado": null,
+  "ultima_validacao": "2026-10-04T18:16:32.084138"
 }

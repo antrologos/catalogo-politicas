@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://ssps.rs.gov.br/upload/arquivos/202301/24100513-19131940-plano-educacao-para-pessoas-presas.pdf",
   "url_final": "https://ssps.rs.gov.br/upload/arquivos/202301/24100513-19131940-plano-educacao-para-pessoas-presas.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "5dc6e55837ce8ebec85530144207a01e60506719aa637ecb20237db4c75a5118",
   "extensao": "pdf",
   "tamanho_bytes": 4970992,
-  "tempo_ms": 2482,
+  "tempo_ms": 694,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/5d/5dc6e55837ce8ebec85530144207a01e60506719aa637ecb20237db4c75a5118.pdf",
   "caminho_texto": "data/extracted_text/5dc6e55837ce8ebec85530144207a01e60506719aa637ecb20237db4c75a5118.txt",
@@ -21,6 +21,7 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:29:01-03:00",
-  "tipo_documento_declarado": null
+  "timestamp_iso": "2026-10-04T18:05:08-03:00",
+  "tipo_documento_declarado": null,
+  "ultima_validacao": "2026-10-04T18:20:01.721000"
 }

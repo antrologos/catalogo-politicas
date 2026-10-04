@@ -59,6 +59,13 @@ Disallow: /index.php/user/password/
 Disallow: /index.php/user/register/
 Disallow: /index.php/user/login/
 Disallow: /index.php/user/logout/
-
-Disallow: /print/*
-Disallow: /index.php/print/*
+# Converted to PDF
+Disallow: /print/
+Disallow: /index.php/print/
+# Noticias Externas
+Disallow: /external-print/
+Disallow: /noticias/aen/
+# Login personalizado
+Disallow: /usuario/
+# Webservices
+Disallow: /webservices/

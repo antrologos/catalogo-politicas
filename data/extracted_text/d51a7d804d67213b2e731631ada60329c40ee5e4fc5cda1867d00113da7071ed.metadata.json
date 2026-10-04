@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/RELATORIO-ANUAL-DE-INDICADORES-2024.pdf",
   "url_final": "https://portal.educacao.pe.gov.br/wp-content/uploads/2025/11/RELATORIO-ANUAL-DE-INDICADORES-2024.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "d51a7d804d67213b2e731631ada60329c40ee5e4fc5cda1867d00113da7071ed",
   "extensao": "pdf",
   "tamanho_bytes": 5009236,
-  "tempo_ms": 14265,
+  "tempo_ms": 760,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/d5/d51a7d804d67213b2e731631ada60329c40ee5e4fc5cda1867d00113da7071ed.pdf",
   "caminho_texto": "data/extracted_text/d51a7d804d67213b2e731631ada60329c40ee5e4fc5cda1867d00113da7071ed.txt",
@@ -21,6 +21,7 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:30:26-03:00",
-  "tipo_documento_declarado": null
+  "timestamp_iso": "2026-10-04T18:08:04-03:00",
+  "tipo_documento_declarado": null,
+  "ultima_validacao": "2026-10-04T18:24:17.161875"
 }

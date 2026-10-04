@@ -7,12 +7,12 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="/css/vendor.css?hash=1720535641547"
+      href="/css/vendor.css?hash=1787605175923"
     />
     <link
       rel="stylesheet"
       type="text/css"
-      href="/css/app.css?hash=1720535641547"
+      href="/css/app.css?hash=1787605175923"
     />
 
     <link
@@ -168,7 +168,7 @@
     <script
       type="text/javascript"
       defer
-      src="/js/app.js?hash=1720535641547"
+      src="/js/app.js?hash=1787605175923"
     ></script>
 
     <script

@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/RELATORIO%20DE%20GESTA%CC%83O%202022-393a2.pdf",
   "url_final": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/portal_seduc/RELATORIO%20DE%20GESTA%CC%83O%202022-393a2.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "4c52dab0cc31cc3e885d2eed27382b25055d02b548e895bd295b63e93e1574b8",
   "extensao": "pdf",
   "tamanho_bytes": 5758822,
-  "tempo_ms": 3829,
+  "tempo_ms": 738,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/4c/4c52dab0cc31cc3e885d2eed27382b25055d02b548e895bd295b63e93e1574b8.pdf",
   "caminho_texto": "data/extracted_text/4c52dab0cc31cc3e885d2eed27382b25055d02b548e895bd295b63e93e1574b8.txt",
@@ -21,6 +21,7 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:29:49-03:00",
-  "tipo_documento_declarado": null
+  "timestamp_iso": "2026-10-04T18:06:51-03:00",
+  "tipo_documento_declarado": null,
+  "ultima_validacao": "2026-10-04T18:22:49.678683"
 }

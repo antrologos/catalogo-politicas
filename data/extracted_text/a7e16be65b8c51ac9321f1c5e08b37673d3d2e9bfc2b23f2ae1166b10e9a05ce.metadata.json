@@ -23,6 +23,6 @@
   "erro_msg": null,
   "timestamp_iso": "2026-05-01T12:21:52-03:00",
   "tipo_documento_declarado": null,
-  "superseded_by_sha256": "431328d29aa69e47a5e66b5d19302447acfd155089ccc163d582e6a66e020825",
-  "superseded_at": "2026-05-01T12:39:27.325552"
+  "superseded_by_sha256": "61284a9477b32f90d0cc63b2b3808a894be1a083c748d9ff8268de720b768ef6",
+  "superseded_at": "2026-10-04T18:27:53.271952"
 }

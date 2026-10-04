@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://teses.usp.br/teses/disponiveis/48/48134/tde-09102007-093437/publico/DissertacaoAlineAbbonizio.pdf",
   "url_final": "https://teses.usp.br/teses/disponiveis/48/48134/tde-09102007-093437/publico/DissertacaoAlineAbbonizio.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "afcfa58020b3684f0ca75921b87d06787735d1d28a189953d03c4cf4c158d818",
   "extensao": "pdf",
   "tamanho_bytes": 6381920,
-  "tempo_ms": 2283,
+  "tempo_ms": 451,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/af/afcfa58020b3684f0ca75921b87d06787735d1d28a189953d03c4cf4c158d818.pdf",
   "caminho_texto": "data/extracted_text/afcfa58020b3684f0ca75921b87d06787735d1d28a189953d03c4cf4c158d818.txt",
@@ -21,6 +21,7 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:22:03-03:00",
-  "tipo_documento_declarado": null
+  "timestamp_iso": "2026-10-04T17:46:09-03:00",
+  "tipo_documento_declarado": null,
+  "ultima_validacao": "2026-10-04T18:15:15.152268"
 }

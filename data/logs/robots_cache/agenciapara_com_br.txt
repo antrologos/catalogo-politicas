@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Comunicado Eleitoral 2026</title>
+
+  <style>
+    :root {
+      --page-bg: #f8f8f8;
+      --text: #74747c;
+      --link: #0f6ec7;
+      --link-hover: #1f5f9b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page-bg);
+      color: var(--text);
+      font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    .pagina-eleitoral {
+      width: 100%;
+      min-height: 100svh;
+      height: 100dvh;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      padding: clamp(20px, 5svh, 58px) 24px;
+    }
+
+    .conteudo {
+      width: min(100%, 930px);
+      max-height: 100%;
+      display: grid;
+      justify-items: center;
+      align-content: center;
+      gap: clamp(28px, 5.4svh, 62px);
+      text-align: center;
+    }
+
+    .mensagem {
+      margin: 0;
+      font-size: clamp(2rem, 3.65vw, 3.15rem);
+      font-weight: 300;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+    }
+
+    .mensagem-principal {
+      max-width: 900px;
+    }
+
+    .mensagem-secundaria {
+      max-width: 855px;
+    }
+
+    .perfil-x {
+      color: var(--link);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      white-space: nowrap;
+      transition: color .18s ease, border-color .18s ease;
+    }
+
+    .perfil-x:hover,
+    .perfil-x:focus-visible {
+      color: var(--link-hover);
+      border-bottom-color: currentColor;
+      outline: none;
+    }
+
+    .marca {
+      display: block;
+      object-fit: contain;
+    }
+
+    .marca {
+      width: clamp(240px, 24vw, 370px);
+      max-height: 17svh;
+    }
+
+    @media (max-width: 640px) {
+      .pagina-eleitoral {
+        padding: clamp(16px, 4.5svh, 30px) 20px;
+      }
+
+      .conteudo {
+        width: min(100%, 390px);
+        gap: clamp(23px, 4.7svh, 39px);
+      }
+
+      .mensagem {
+        font-size: clamp(1.38rem, 7.35vw, 1.64rem);
+        line-height: 1.25;
+        letter-spacing: -0.04em;
+      }
+
+      .mensagem-principal,
+      .mensagem-secundaria {
+        max-width: 100%;
+      }
+
+      .marca {
+        width: auto;
+        max-width: 58vw;
+        max-height: clamp(88px, 16svh, 128px);
+      }
+    }
+
+    /* Mantém todos os elementos visíveis em telas baixas ou em modo paisagem. */
+    @media (max-height: 720px) {
+      .pagina-eleitoral {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      .conteudo {
+        gap: clamp(16px, 3.5svh, 28px);
+      }
+
+      .mensagem {
+        font-size: clamp(1.22rem, 4.35vh, 2.25rem);
+        line-height: 1.18;
+      }
+
+      .marca {
+        width: clamp(190px, 23vw, 300px);
+        max-height: 14svh;
+      }
+    }
+
+    @media (max-width: 640px) and (max-height: 720px) {
+      .mensagem {
+        font-size: clamp(1.16rem, 6vw, 1.42rem);
+        line-height: 1.21;
+      }
+
+      .conteudo {
+        gap: clamp(16px, 3.4svh, 25px);
+      }
+
+      .marca {
+        width: auto;
+        max-width: 52vw;
+        max-height: 12svh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="pagina-eleitoral" aria-labelledby="titulo-comunicado">
+    <section class="conteudo">
+      <p id="titulo-comunicado" class="mensagem mensagem-principal">
+        Em respeito à legislação eleitoral, este site está suspenso até o fim das eleições 2026.
+      </p>
+
+      <p class="mensagem mensagem-secundaria">
+        O perfil do X
+        <a
+          class="perfil-x"
+          href="https://x.com/govpara"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir o perfil @govpara no X"
+        >@govpara</a>
+        foi criado para divulgar informações de utilidade pública somente neste período.
+      </p>
+
+      <picture>
+        <source media="(min-width: 641px)" srcset="/images/brasao_govpara_2026.png">
+        <img
+          class="marca"
+          src="/images/brasao_govpara_2026_vertical.png"
+          alt="Governo do Estado do Pará"
+        >
+      </picture>
+    </section>
+  </main>
+</body>
+</html>

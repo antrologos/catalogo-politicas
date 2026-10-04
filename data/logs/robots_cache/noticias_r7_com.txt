@@ -1,0 +1,48 @@
+Sitemap: https://noticias.r7.com/arc/outboundfeeds/sitemap-news-index/
+Sitemap: https://noticias.r7.com/arc/outboundfeeds/sitemap-section-index/
+Sitemap: https://noticias.r7.com/arc/outboundfeeds/sitemap-index-byday/
+
+User-agent: proximic
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: Starkbot
+Disallow: /
+
+User-agent: Scrapy
+Disallow: /
+
+User-Agent: VoluumDSP-content-bot
+Disallow: /
+
+User-agent: Seekport Crawler
+Disallow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: / 
+
+User-agent: *
+Allow: /prisma/todos-os-blogs/$
+Disallow: /busca/*
+Disallow: /tudo-de-noticias/*
+Disallow: /guidebook/*
+Disallow: /guidebook-fazenda/*
+Disallow: /validacao/*
+Disallow: /validacao-de-templates/*
+Disallow: /embeds/
+Disallow: /index2.html
+Disallow: /supprod2022/*
+Disallow: /suporte/*
+Disallow: /media/*
+Disallow: /prisma/todos-os-blogs/*

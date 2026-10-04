@@ -1,0 +1,25 @@
+User-agent: Baidoospider
+Disallow: /
+
+User-agent: Yandex
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: Baidoospider
+Disallow: /
+
+User-Agent: *
+Allow: /
+Allow: /*/amp/*.html$
+Disallow: /_conteudos/
+Disallow: /*.json
+Disallow: /*.php
+Disallow: /webparts/
+Disallow: /search/
+Sitemap:https://www.rcnonline.com.br/sitemap/1.xml
+Sitemap:https://www.rcnonline.com.br/sitemap.xml
+Sitemap:https://www.jornalmetas.com.br/news-sitempa.xml
+Sitemap:https://www.jornalmetas.com.br/categoria-sitempa.xml
+Sitemap:https://www.jornalmetas.com.br/index-sitempa.xml

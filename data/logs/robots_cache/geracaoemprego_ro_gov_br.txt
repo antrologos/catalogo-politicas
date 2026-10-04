@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+Sitemap: https://geracaoemprego.ro.gov.br/sitemap.xml
+User-agent: *
+Disallow:

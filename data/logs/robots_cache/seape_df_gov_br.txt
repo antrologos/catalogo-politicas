@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-conteudo/plugins/
+Disallow: /wp-conteudo/themes/
+Disallow: /wp-login.php
+Disallow: /wp-comments-post.php
+Disallow: /trackback/
+Disallow: /xmlrpc.php
+Allow: /wp-admin/admin-ajax.php	
+
+Sitemap: https://seape.df.gov.br/wp-sitemap.xml

@@ -1,5 +1,5 @@
 {
-  "status": "ok",
+  "status": "inalterado",
   "url_solicitada": "https://ole.uff.br/wp-content/uploads/sites/296/2017/12/projeto-escola-fabrica.pdf",
   "url_final": "https://ole.uff.br/wp-content/uploads/sites/296/2017/12/projeto-escola-fabrica.pdf",
   "http_status": 200,
@@ -7,7 +7,7 @@
   "sha256": "de4e99da1cf468a3a55ab04060c6655402962eaa2768af4758bb26b12410c261",
   "extensao": "pdf",
   "tamanho_bytes": 591767,
-  "tempo_ms": 1032,
+  "tempo_ms": 144,
   "encoding": "utf-8",
   "caminho_snapshot": "data/external_snapshots/de/de4e99da1cf468a3a55ab04060c6655402962eaa2768af4758bb26b12410c261.pdf",
   "caminho_texto": "data/extracted_text/de4e99da1cf468a3a55ab04060c6655402962eaa2768af4758bb26b12410c261.txt",
@@ -21,6 +21,7 @@
   "retries": 0,
   "erro_tipo": null,
   "erro_msg": null,
-  "timestamp_iso": "2026-05-01T12:28:54-03:00",
-  "tipo_documento_declarado": null
+  "timestamp_iso": "2026-10-04T18:04:59-03:00",
+  "tipo_documento_declarado": null,
+  "ultima_validacao": "2026-10-04T18:19:34.110887"
 }

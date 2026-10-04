@@ -8,5 +8,8 @@ Disallow: /?s=*
 Disallow: /comunicar-erro/
 
 Allow: /wp-content/uploads/
+Allow: /wp-content/themes/bemparana/assets/img/icons/
+Allow: /wp-content/themes/bemparana/manifest.json
+
 Sitemap: https://www.bemparana.com.br/sitemap_index.xml
 Sitemap: https://www.bemparana.com.br/news-sitemap.xml 
