@@ -11,9 +11,9 @@ Compromissos de transparência do **Catálogo de Políticas** conforme princípi
 
 ## Política de revisão dos dados
 
-- **Versão atual**: PoC 2026-05-01 (1ª onda).
-- **Próxima revisão geral**: prevista para **outubro de 2026** (atualização do status das políticas e do conjunto de fontes oficiais preservadas).
-- **Frequência futura**: **semestral** após o lançamento público (ver [cobertura e cronograma](../cobertura/)).
+- **Versão atual**: **{{ site.versao }}** (4 de outubro de 2026) — produto permanente da Rede EJA e Inclusão Produtiva, com as 27 unidades da federação e a esfera federal.
+- **Última revisão geral**: outubro de 2026 (incorporação da 3ª onda e revisão do vocabulário de categorias).
+- **Frequência de revisão**: **semestral** (ver [cobertura e cronograma](../cobertura/)).
 - **Captura de fontes oficiais**: quando o catálogo preserva localmente um documento normativo, segue a regra interna `captura-responsavel` — robots.txt respeitado, rate-limit 0,5 req/s por domínio, atribuição preservada.
 
 ## Qualidade dos dados
@@ -32,6 +32,7 @@ Compromissos de transparência do **Catálogo de Políticas** conforme princípi
 | PoC 2026-05-01 | 2026-05-01 | 1ª publicação — 9 UFs + Federal |
 | 2ª onda | 2026-05-13 | +9 UFs (GO, ES, SC, MA, AM, MT, PB, AL, RN) — 18 UFs + Federal |
 | 3ª onda | 2026-10-04 | +9 UFs (MS, RR, DF, RO, PI, AC, SE, TO, AP) — 27 UFs + Federal |
+| **1.0** | 2026-10-04 | Lançamento como produto permanente da Rede EJA e Inclusão Produtiva; categorias revisadas pelo dicionário oficial; nova citação (obra e editora: Rede EJA) |
 | (próximas) | (a vir) | Aumento da cobertura de fontes integrais; atualização das fichas |
 
 Acompanhe o [histórico completo de commits no GitHub](https://github.com/antrologos/catalogo-politicas/commits/main).

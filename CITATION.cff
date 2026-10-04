@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Se você usar este catálogo em seu trabalho, por favor cite-o conforme abaixo."
-title: "Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica"
-abstract: "Mapeamento de 439 políticas públicas brasileiras (federais e estaduais) sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação. Cada ficha inclui metadados estruturados (vocabulário canônico controlado), referência à norma instituidora e — quando possível — snapshot integral do texto da norma."
+title: "Catálogo de Políticas da Rede EJA e Inclusão Produtiva"
+abstract: "Mapeamento de 366 políticas públicas brasileiras (33 federais e 333 estaduais, nas 27 unidades da federação) sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação. Produto permanente da Rede EJA e Inclusão Produtiva. Cada ficha inclui metadados estruturados (vocabulário canônico controlado), referência à norma instituidora e — quando possível — o texto integral da norma preservado."
 type: dataset
 authors:
   - family-names: "Barbosa"
@@ -19,8 +19,8 @@ authors:
     given-names: "Cintia Maria"
   - family-names: "Sant'ana"
     given-names: "Jaqueline"
-date-released: "2026-05-01"
-version: "PoC-2026-05-01"
+date-released: "2026-10-04"
+version: "1.0"
 license: "CC-BY-4.0"
 url: "https://antrologos.github.io/catalogo-politicas/"
 repository-code: "https://github.com/antrologos/catalogo-politicas"
@@ -35,3 +35,4 @@ keywords:
   - "catálogo"
   - "vocabulário controlado"
   - "dados abertos"
+  - "Rede EJA e Inclusão Produtiva"

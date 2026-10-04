@@ -1,30 +1,22 @@
-# Catálogo de Políticas
+# Catálogo de Políticas da Rede EJA e Inclusão Produtiva
 
-Catálogo interativo de políticas públicas brasileiras (federais e estaduais) sobre **EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação** — uma frente do **Projeto Juventudes Fora da Escola sem Educação Básica**.
+Catálogo interativo de políticas públicas brasileiras (federais e estaduais) sobre **EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação**, nas **27 unidades da federação**. Produto permanente da **[Rede EJA e Inclusão Produtiva](https://www.frm.org.br/projeto/rede-eja)**.
 
 **Site público:** https://antrologos.github.io/catalogo-politicas/
 
-> **Status (2026-05-01):** Bloco F.1 do roadmap em andamento — site MVP no ar com Home, Busca facetada, 439 fichas individuais com 5 abas ARIA + Citation Box (4 formatos), Sobre completo. Próximas sprints: 404 fuzzy + sub-rotas Sobre + header/footer polish + (depois) Página por UF + Comparação inter-UF + Mapa coroplético + Grafo de relacionamentos.
+> **Versão 1.0 (2026-10-04):** 366 verbetes únicos (33 federais + 333 estaduais) cobrindo as 27 UFs + esfera federal, levantados em três ondas. Busca facetada, mapa, comparação entre UFs, páginas por UF e por categoria, citação em ABNT/APA/BibTeX/RIS.
 
-## Iniciativa
+## Rede EJA e Inclusão Produtiva
 
-**Rede EJA e Inclusão Produtiva**
+A Rede é formada por 16 instituições da sociedade civil e organismos multilaterais: Ação Educativa, Ashoka, Conhecimento Social, Conselho Nacional do SESI, Fundação Arymax, Fundação Bradesco, Fundação Itaú (Itaú Educação e Trabalho), Fundação Roberto Marinho, GIFE, Instituto Rodrigo Mendes, Pacto Global da ONU – Rede Brasil, Redes da Maré, Todos Pela Educação, UNESCO, UNICEF e United Way Brasil (Juventudes Potentes).
 
-### Realizadores
-- [Fundação Roberto Marinho (FRM)](https://www.frm.org.br/)
-- [Fundação Bradesco](https://fundacao.bradesco/)
+### Pesquisa e desenvolvimento
+- [Centro para o Estudo da Riqueza e da Estratificação Social (Ceres/IESP-UERJ)](https://iesp.uerj.br/nucleo/ceres/)
+- [Laboratório de Monitoramento e Avaliação de Políticas e Eleições (MAPE)](https://mape.org.br/)
+- [Instituto de Estudos Sociais e Políticos (IESP-UERJ)](https://iesp.uerj.br/)
 
-### Parceiros
-- [Fundação Itaú Educação e Trabalho](https://www.itaueducacaoetrabalho.org.br/)
-- [Fundação Arymax](https://arymax.org.br/)
-
-### Cooperação
-- [UNESCO](https://www.unesco.org/pt)
-
-### Parceria técnica
-- Centro para o Estudo da Riqueza e da Estratificação Social (Ceres/IESP-UERJ)
-- Laboratório de Monitoramento e Avaliação de Políticas e Eleições (MAPE/IESP-UERJ)
-- [Instituto de Estudos Sociais e Políticos (IESP-UERJ)](http://www.iesp.uerj.br/)
+### Apoio ao levantamento
+O levantamento que deu origem ao catálogo foi realizado no âmbito do Projeto Juventudes Fora da Escola sem Educação Básica — realização: [Fundação Roberto Marinho](https://www.frm.org.br/) e [Fundação Bradesco](https://fundacao.bradesco/); parceiros: [Itaú Educação e Trabalho](https://www.itaueducacaoetrabalho.org.br/) e [Fundação Arymax](https://arymax.org.br/); cooperação: [UNESCO](https://www.unesco.org/pt).
 
 ### Equipe
 
@@ -36,8 +28,8 @@ Catálogo interativo de políticas públicas brasileiras (federais e estaduais) 
 
 ## O que tem aqui
 
-- **439 fichas** de políticas públicas (1ª onda) cobrindo Federal + 9 UFs (SP, RJ, MG, PR, RS, BA, PA, PE, CE)
-- **148 snapshots** integrais de leis, decretos, portarias e resoluções (HTML + PDF + DOC + ODT)
+- **366 verbetes únicos** (1158 fichas com as réplicas estaduais das políticas federais) cobrindo Federal + 27 UFs, em três ondas de levantamento
+- **Textos integrais preservados** de leis, decretos, portarias e resoluções (HTML + PDF + DOC + ODT)
 - **Pipeline ETL reproduzível** que transforma a planilha-fonte em JSON canônico validado contra JSON Schema v0.2
 - **Skill de captura responsável** com OCR (Tesseract pt), conversão de documentos legados (LibreOffice), retry específico para gov.br/planalto, dedup SHA-256
 - **Vocabulário canônico** controlado para todos os campos categóricos
@@ -95,13 +87,13 @@ Detalhes em [`docs/RUNBOOK.md`](docs/RUNBOOK.md).
 ## Como citar
 
 ```bibtex
-@misc{catalogoPoliticasJuventudes2026,
-  author       = {Barbosa, Rogério Jerônimo and Gama, Maria Clara da and
-                  Guicheney, Hellen and Schaefer, Bruno},
-  title        = {Catálogo de Políticas — Projeto Juventudes Fora da Escola
-                  sem Educação Básica},
-  publisher    = {Rede EJA e Inclusão Produtiva (FRM, Fundação Bradesco, IESP-UERJ)},
+@misc{catalogoPoliticasRedeEja2026,
+  editor       = {Barbosa, Rogério Jerônimo},
+  title        = {Catálogo de Políticas da Rede EJA e Inclusão Produtiva},
+  publisher    = {Rede EJA e Inclusão Produtiva},
+  address      = {Rio de Janeiro},
   year         = {2026},
+  version      = {1.0},
   url          = {https://antrologos.github.io/catalogo-politicas/},
   note         = {Licenciado sob CC BY 4.0}
 }

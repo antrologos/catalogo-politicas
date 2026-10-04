@@ -1,6 +1,6 @@
 {
   "name": "catalogo-politicas-site",
-  "version": "0.1.0-poc",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "description": "PoC Eleventy 3 do site do Catálogo de Políticas Públicas (FRM/IESP-UERJ)",

@@ -193,11 +193,14 @@ export default function (eleventyConfig) {
   const ORGANIZADOR_ABNT = "BARBOSA, R. J.";
   const ORGANIZADOR_APA = "Barbosa, R. J.";
   const ORGANIZADOR_BIB = "{Barbosa, Rog{\\'e}rio Jer{\\^o}nimo}";
-  const EDITORA_PLAIN = "Ceres/IESP-UERJ";
-  const EDITORA_BIB = "Ceres/IESP-UERJ";
+  // 2026-10-04 (v1.0): o catálogo passa a ser produto permanente da Rede EJA;
+  // obra e editora passam a ser a Rede (antes: Ceres/IESP-UERJ e o título
+  // "— Projeto Juventudes Fora da Escola sem Educação Básica").
+  const EDITORA_PLAIN = "Rede EJA e Inclusão Produtiva";
+  const EDITORA_BIB = "Rede EJA e Inclus{\\~a}o Produtiva";
   const LOCAL_PUBLICACAO = "Rio de Janeiro";
-  const OBRA_PLAIN = "Catálogo de Políticas — Projeto Juventudes Fora da Escola sem Educação Básica. Rede EJA e Inclusão Produtiva";
-  const OBRA_BIB = "Cat{\\'a}logo de Pol{\\'i}ticas --- Projeto Juventudes Fora da Escola sem Educa{\\c{c}}{\\~a}o B{\\'a}sica. Rede EJA e Inclus{\\~a}o Produtiva";
+  const OBRA_PLAIN = "Catálogo de Políticas da Rede EJA e Inclusão Produtiva";
+  const OBRA_BIB = "Cat{\\'a}logo de Pol{\\'i}ticas da Rede EJA e Inclus{\\~a}o Produtiva";
 
   eleventyConfig.addFilter("citacaoAbnt", (p) => {
     const ano = (p.data_revisao || "2026-05-01").slice(0, 4);

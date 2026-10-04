@@ -25,9 +25,9 @@ Sob a seguinte condição:
 Ao reutilizar dados ou conteúdo do catálogo, **inclua a atribuição completa** abaixo:
 
 ```
-BARBOSA, R. J. (org.). Catálogo de Políticas — Projeto Juventudes Fora
-da Escola sem Educação Básica. Rede EJA e Inclusão Produtiva.
-Rio de Janeiro: Ceres/IESP-UERJ, 2026. Disponível em:
+BARBOSA, R. J. (org.). Catálogo de Políticas da Rede EJA e Inclusão
+Produtiva. Versão {{ site.versao }}. Rio de Janeiro: Rede EJA e Inclusão
+Produtiva, 2026. Disponível em:
 https://antrologos.github.io/catalogo-politicas/. Licenciado sob CC BY 4.0.
 ```
 
@@ -47,11 +47,11 @@ Quando o catálogo referencia **sites de programas governamentais** (campo `font
 
 ## Marcas e logotipos
 
-Marcas e logotipos das instituições envolvidas (FRM, Fundação Bradesco, Fundação Itaú, Fundação Arymax, UNESCO, IESP-UERJ, Ceres, MAPE) são propriedade de suas respectivas entidades e seu uso requer autorização específica de cada uma.
+Marcas e logotipos das 16 instituições que compõem a Rede EJA e Inclusão Produtiva e das instituições de pesquisa e de apoio ao levantamento (Ceres/IESP-UERJ, MAPE, IESP-UERJ) são propriedade de suas respectivas entidades. No catálogo, aparecem apenas para identificar essas instituições; qualquer outro uso requer autorização específica de cada uma. A licença CC BY 4.0 do catálogo **não** se estende a marcas e logotipos.
 
 ## Sem garantia
 
-O catálogo é fornecido **"como está"**, sem garantia de qualquer tipo, expressa ou implícita. Os realizadores e parceiros não respondem por:
+O catálogo é fornecido **"como está"**, sem garantia de qualquer tipo, expressa ou implícita. A Rede EJA e Inclusão Produtiva e as instituições envolvidas não respondem por:
 
 - Decisões tomadas com base nos dados aqui apresentados;
 - Eventuais erros, omissões ou desatualizações nos metadados;
