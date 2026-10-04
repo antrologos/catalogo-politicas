@@ -1,0 +1,26 @@
+Logos das 16 instituições da Rede EJA e Inclusão Produtiva — procedência
+(levantamento de 2026-10-04; usados só para identificar as instituições no
+painel do site; marcas pertencem às respectivas entidades e não estão sob a
+licença CC BY 4.0 do catálogo).
+
+Intervenções permitidas e feitas: recorte de margens, remoção de fundo branco
+ou de retângulo de fundo, redução para ~600 px de largura. Nada foi
+redesenhado, recolorido ou ampliado.
+
+acao-educativa.png ............ https://alfabetismofuncional.org.br/wp-content/uploads/2026/03/logo-ae.png (PNG RGB oficial, 12304 px, reduzido)
+ashoka.svg .................... https://www.ashoka.org/themes/custom/blanco_ashoka_org/logo.svg
+conhecimento-social.png ....... https://alfabetismofuncional.org.br/wp-content/uploads/2025/04/logo-cs-vertical.png (versão vertical; não há versão horizontal positiva em alta definição publicada)
+conselho-nacional-sesi.png .... https://www.cnsesi.com.br/manual-marca — arquivo "Selo cor_80 anos" (PNG RGB oficial, 771 px)
+fundacao-arymax.png ........... https://arymax.org.br/website/wp-content/themes/arymax26-tema/img/logo-arymax-grande.png
+fundacao-bradesco.svg ......... https://gife.org.br/wp-content/themes/gife-v2/assets/img/apoio-institucional/fundacao-bradesco.svg
+fundacao-itau.svg ............. https://www.fundacaoitau.org.br/images/logos/logo-fundacao-itau-2024.svg
+itau-educacao-e-trabalho.png .. https://www.fundacaoitau.org.br/images/logos/logo-itau-educacao-e-trabalho.png
+fundacao-roberto-marinho.png .. https://alfabetismofuncional.org.br/wp-content/uploads/2025/04/frm-logo-rgb-positivo-principal-positivo.png (arquivo oficial da marca FRM, reduzido)
+gife.svg ...................... pasta pública "Logo e Manual de Marca do GIFE" linkada em https://gife.org.br/transparencia/ — GIFE_LOGO_DESCRITIVO_RGB_PRINCIPAL_POSITIVO.svg (sem o retângulo de fundo)
+instituto-rodrigo-mendes.png .. https://institutorodrigomendes.org.br/wp-content/uploads/2020/08/logo-irm.png
+pacto-global.svg .............. https://www.pactoglobal.org.br/wp-content/themes/pacto-global/img/navbar/logo-pacto-color.svg
+redes-da-mare.png ............. kit oficial https://www.redesdamare.org.br/parceiros/images/RdM_marca.zip — RdM_marca_horizontal cor.png
+todos-pela-educacao.png ....... https://todospelaeducacao.org.br/wordpress/wp-content/uploads/2026/04/logo-todos-20-anos-recorte.png (sem o selo "20 anos")
+unesco.svg .................... https://www.unesco.org/themes/custom/bunesco8/assets/images/logo/logo-blue.svg
+unicef.png .................... https://www.unicef.org/brazil/sites/unicef.org.brazil/files/Portuguese-Inverse.png
+juventudes-potentes-united-way.png  https://juventudespotentes.org.br/wp-content/uploads/2024/07/Parceiro-Articulador-e1719920515221.png

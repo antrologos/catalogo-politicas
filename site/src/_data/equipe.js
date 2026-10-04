@@ -55,12 +55,15 @@ export default {
     { nome: "Ação Educativa", url: "https://acaoeducativa.org.br/", linha: 1, logos: ["acao-educativa.png"] },
     { nome: "Ashoka", url: "https://www.ashoka.org/pt-br", linha: 1, logos: ["ashoka.svg"] },
     { nome: "Conhecimento Social – estratégia e gestão", url: "https://conhecimentosocial.com/", linha: 1, logos: ["conhecimento-social.png"] },
-    { nome: "Conselho Nacional do SESI", url: "https://www.cnsesi.com.br/", linha: 1, logos: ["conselho-nacional-sesi.png"] },
+    // CN SESI: certificado HTTPS vencido em 03/10/2026 (aviso de segurança no
+    // navegador); o site responde por HTTP sem redirecionar. Voltar a https://
+    // quando o certificado for renovado.
+    { nome: "Conselho Nacional do SESI", url: "http://www.cnsesi.com.br/", linha: 1, logos: ["conselho-nacional-sesi.png"] },
     { nome: "Fundação Arymax", url: "https://arymax.org.br/", linha: 1, logos: ["fundacao-arymax.png"] },
     { nome: "Fundação Bradesco", url: "https://fundacao.bradesco/", linha: 2, logos: ["fundacao-bradesco.svg"] },
     { nome: "Fundação Itaú — Itaú Educação e Trabalho", url: "https://www.itaueducacaoetrabalho.org.br/", linha: 2, logos: ["fundacao-itau.svg", "itau-educacao-e-trabalho.png"] },
-    { nome: "Fundação Roberto Marinho", url: "https://www.frm.org.br/", linha: 2, logos: ["fundacao-roberto-marinho.svg"] },
-    { nome: "GIFE — Grupo de Institutos, Fundações e Empresas", url: "https://gife.org.br/", linha: 2, logos: ["gife.png"] },
+    { nome: "Fundação Roberto Marinho", url: "https://www.frm.org.br/", linha: 2, logos: ["fundacao-roberto-marinho.png"] },
+    { nome: "GIFE — Grupo de Institutos, Fundações e Empresas", url: "https://gife.org.br/", linha: 2, logos: ["gife.svg"] },
     { nome: "Instituto Rodrigo Mendes", url: "https://institutorodrigomendes.org.br/", linha: 2, logos: ["instituto-rodrigo-mendes.png"] },
     { nome: "Pacto Global da ONU — Rede Brasil", url: "https://www.pactoglobal.org.br/", linha: 3, logos: ["pacto-global.svg"] },
     { nome: "Redes da Maré", url: "https://www.redesdamare.org.br/", linha: 3, logos: ["redes-da-mare.png"] },
