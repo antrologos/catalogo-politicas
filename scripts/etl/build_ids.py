@@ -3,8 +3,8 @@
 - id_interno: `FRM-CP-{ano}-{eixo}-{seq:04d}`
   - ano = 2026 (ano de entrada no catálogo desta onda)
   - eixo = 3-letter code derivado de tipo_politica:
-      'Educacional direta'                          → EDU
-      'Trabalho/qualificação direta'                → TRAB
+      'Educacional'                                 → EDU
+      'Trabalho e qualificação'                     → TRAB
       'Proteção social com impacto educacional'     → PSOC
   - seq = sequencial 4 dígitos por eixo (não global) para legibilidade
 
@@ -35,8 +35,8 @@ ANO_CATALOGO = "2026"
 
 # Mapeamento tipo_politica → eixo (3 letras canônicas, ASCII)
 TIPO_TO_EIXO: dict[str, str] = {
-    "Educacional direta": "EDU",
-    "Trabalho/qualificação direta": "TRAB",
+    "Educacional": "EDU",
+    "Trabalho e qualificação": "TRAB",
     "Proteção social com impacto educacional": "PSOC",
 }
 

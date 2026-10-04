@@ -34,6 +34,6 @@ def test_slugify_apenas_pontuacao():
 
 
 def test_tipo_to_eixo_3_categorias_canonicas():
-    assert TIPO_TO_EIXO["Educacional direta"] == "EDU"
-    assert TIPO_TO_EIXO["Trabalho/qualificação direta"] == "TRAB"
+    assert TIPO_TO_EIXO["Educacional"] == "EDU"
+    assert TIPO_TO_EIXO["Trabalho e qualificação"] == "TRAB"
     assert TIPO_TO_EIXO["Proteção social com impacto educacional"] == "PSOC"
