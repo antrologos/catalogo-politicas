@@ -29,11 +29,11 @@ O levantamento que deu origem ao catálogo foi realizado no âmbito do Projeto J
 ## O que tem aqui
 
 - **366 verbetes únicos** (1158 fichas com as réplicas estaduais das políticas federais) cobrindo Federal + 27 UFs, em três ondas de levantamento
-- **Textos integrais preservados** de leis, decretos, portarias e resoluções (HTML + PDF + DOC + ODT)
+- **Cópias de arquivo das fontes oficiais** (HTML + PDF + DOC + ODT) para parte das políticas, guardadas fora do repositório público; o índice fica em `data/external_snapshots/index.json`
 - **Pipeline ETL reproduzível** que transforma a planilha-fonte em JSON canônico validado contra JSON Schema v0.2
 - **Skill de captura responsável** com OCR (Tesseract pt), conversão de documentos legados (LibreOffice), retry específico para gov.br/planalto, dedup SHA-256
 - **Vocabulário canônico** controlado para todos os campos categóricos
-- **Site Eleventy 3** com 5 facetas Pagefind, Tabs ARIA W3C, citação ABNT/APA/BibTeX/RIS
+- **Site Eleventy 3** com busca Pagefind (4 facetas: UF, Situação, Tipo, Modalidade), mapa D3, comparação entre UFs, Tabs ARIA W3C, citação ABNT/APA/BibTeX/RIS
 - **CI bloqueante** com WCAG 2 AA (pa11y-ci) + Lighthouse + JSON Schema
 - **Backup mensal** automatizado em GitHub Releases
 - **Documentação completa** das decisões em `.claude/decisions/` e dos planos em `.claude/plans/`
@@ -48,7 +48,7 @@ O levantamento que deu origem ao catálogo foi realizado no âmbito do Projeto J
 ├── scripts/
 │   ├── etl/                      # Pipeline planilha → JSON
 │   └── captura/                  # Skill de scraping responsável
-├── tests/                        # 57 testes (toy + unit + integração)
+├── tests/                        # testes pytest do ETL e da captura (toy + unit + integração)
 ├── site/                         # Frontend Eleventy 3
 │   ├── src/                      # Templates + componentes + dados Eleventy
 │   ├── _site/                    # Output build (gitignored)
@@ -73,7 +73,7 @@ cd catalogo-politicas
 # Pipeline ETL (Python)
 pip install -r requirements.txt
 just etl              # planilha → JSON canônico
-just testar           # 57 testes
+python -B -m pytest tests/ -q   # suíte do ETL e da captura
 
 # Site (Node)
 cd site

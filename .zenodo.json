@@ -1,0 +1,33 @@
+{
+  "title": "Catálogo de Políticas da Rede EJA e Inclusão Produtiva",
+  "upload_type": "dataset",
+  "description": "<p>Mapeamento de políticas públicas brasileiras, federais e estaduais, sobre Educação de Jovens e Adultos (EJA), qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação, nas 27 unidades da federação. Produto permanente da Rede EJA e Inclusão Produtiva.</p><p>Cada ficha traz metadados estruturados com vocabulário controlado, referência à norma instituidora e link para a fonte oficial. O pacote inclui o código do site (Eleventy) e do pipeline de dados (Python), o JSON canônico e as planilhas de levantamento.</p><p>Site: https://antrologos.github.io/catalogo-politicas/</p>",
+  "creators": [
+    { "name": "Barbosa, Rogério Jerônimo", "affiliation": "IESP-UERJ" },
+    { "name": "Gama, Maria Clara da" },
+    { "name": "Guicheney, Hellen" },
+    { "name": "Schaefer, Bruno" },
+    { "name": "Garcia, Maria Julieta Ramalho" },
+    { "name": "Frazão, Cintia Maria" },
+    { "name": "Sant'ana, Jaqueline" }
+  ],
+  "license": "cc-by-4.0",
+  "language": "por",
+  "keywords": [
+    "EJA",
+    "Educação de Jovens e Adultos",
+    "qualificação profissional",
+    "inclusão produtiva",
+    "transferência de renda condicionada",
+    "políticas públicas",
+    "Brasil",
+    "Rede EJA e Inclusão Produtiva"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://antrologos.github.io/catalogo-politicas/",
+      "relation": "isDocumentedBy",
+      "resource_type": "other"
+    }
+  ]
+}

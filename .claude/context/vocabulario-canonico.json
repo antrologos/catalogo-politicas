@@ -1,7 +1,7 @@
 {
   "_versao_schema": "1.0",
-  "_data_atualizacao": "2026-05-01",
-  "_origem": "Bloco C.1.b — exploração rica dos 439 fichas da planilha-fonte (1ª onda)",
+  "_data_atualizacao": "2026-10-04",
+  "_origem": "Bloco C.1.b — exploração das 439 fichas da 1ª onda; ampliado com as ondas 2 e 3 e com o dicionário oficial 'Modelos de Categorias' da 3ª onda (2026-10-04; ADR 2026-10-04_vocabulario-3a-onda).",
   "_documentacao": "Estrutura e instruções de uso em vocabulario-canonico.md (mesma pasta).",
   "_como_usar": [
     "1. canonical_values: lista FECHADA de valores aceitos (case-sensitive, exatos).",
@@ -13,7 +13,7 @@
   "_decisoes": [
     "Sufixos descritivos em esfera_execucao (ex.: '+ rede ofertante', '+ Sistema S') NÃO são parte do canonical: foram movidos para esfera_execucao_apoios_parcerias quando o pipeline detecta. Aqui ficam apenas as variantes do tronco principal.",
     "Versões longas com explicação entre parênteses na situacao_atual e abrangencia_territorial são tratadas como variantes da versão curta canônica.",
-    "Outliers únicos descritivos (ex.: 'Incentivo financeiro-educacional federal...' em origem_proposta) são logados para revisão manual; não entram em variants.",
+    "Outliers únicos descritivos eram só logados; desde 2026-10-04 são mapeados pelo dicionário oficial da 3ª onda, e valores que pertencem a outro campo viram 'Sem informação' (ver _outliers_observados de cada campo e o ADR 2026-10-04_vocabulario-3a-onda).",
     "Aspas tipográficas «» e en-dash – em arranjo_logistico/esfera_execucao são normalizadas antes do lookup."
   ],
   "campos": {

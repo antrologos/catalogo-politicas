@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://frm-catalogopoliticas.local/schemas/policies-schema.json",
   "title": "Schema canônico de políticas públicas — FRM Catálogo",
-  "description": "Schema JSON Schema draft-07 que define o formato canônico de cada ficha de política pública no projeto FRM_CatalogoPoliticas. Incorpora os 10 padrões importados da pesquisa de benchmark (R3.2): URL persistente (slug), fonte clicável + snapshot, badge de qualidade (completude_pct), unidade de medida controlada, citação acadêmica, tesauro hierárquico, versionamento + validade, vocabulário canônico fechado, timestamps de auditoria e versão acessível (descricao_simples + descricao_tecnica). Versão 0.1 — abre revisão a cada Bloco do roadmap.",
+  "description": "Schema JSON Schema draft-07 que define o formato canônico de cada ficha de política pública no projeto FRM_CatalogoPoliticas. Incorpora os 10 padrões importados da pesquisa de benchmark (R3.2): URL persistente (slug), fonte clicável + snapshot, badge de qualidade (completude_pct), unidade de medida controlada, citação acadêmica, tesauro hierárquico, versionamento + validade, vocabulário canônico fechado, timestamps de auditoria e versão acessível (descricao_simples + descricao_tecnica). Versão 0.2 (campos de snapshot fonte_sha256/fonte_extensao/fonte_ocr_aplicado; ADR 2026-05-01_schema-v0.2-snapshot-info) — abre revisão a cada Bloco do roadmap.",
   "type": "object",
 
   "required": [

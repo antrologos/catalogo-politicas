@@ -61,8 +61,9 @@ Para deploy manual: `gh workflow run "Build & Deploy site"`.
 
 | Workflow | Frequência | Função |
 |---|---|---|
-| `backup.yml` | 1º de cada mês | Cria release com tarball de `data/derived/` + metadata snapshots |
-| `deploy.yml` | A cada push | Validação + build + a11y + Lighthouse + deploy |
+| `backup.yml` | 1º de cada mês | Release com tarball verificado: planilhas de `data/raw/`, `data/derived/`, índice e metadados dos snapshots, schema e vocabulário (os binários das fontes ficam só no Drive) |
+| `deploy.yml` | A cada push no site/dados | Validação do schema + `npm test` + build + pa11y (20 páginas) + Lighthouse (9 páginas) + deploy |
+| `tests.yml` | A cada push no ETL/dados | pytest: toy, unit e integração (roda o ETL completo sobre `data/raw/`) |
 
 ### Tarefa manual mensal (~30min)
 
@@ -76,12 +77,24 @@ Para deploy manual: `gh workflow run "Build & Deploy site"`.
 
 ```bash
 cd "g:/Drives compartilhados/FRM_CatalogoPoliticas"
-just revalidar              # apenas URLs com proxima_revisao_prevista < hoje
+just revalidar              # apenas snapshots com revisão vencida
 # ou
-just revalidar-todas        # todas as 182 URLs únicas
+just revalidar-todas        # todos os snapshots
 ```
 
-Saída em `data/derived/revalidacao-YYYY-MM-DD.json`. Se snapshots novos forem capturados, abrir PR atualizando `data/derived/latest.json`.
+Para uma **rodada completa** (inclui fontes de fichas novas), rodar em sequência:
+
+```bash
+python -B scripts/etl/extract_links.py
+python -B scripts/captura/validar_links.py
+python -B scripts/captura/validar_links.py --apenas-falhas
+python -B scripts/captura/consolidar_links.py     # gera links-validados-onda-1-<hoje>-final.csv
+python -B scripts/captura/capturar_completo.py
+python -B scripts/captura/revalidar.py --todas
+just etl                                        # vincula os snapshots e atualiza as datas de acesso
+```
+
+Saída em `data/derived/` e `data/external_snapshots/index.json`. Commitar o índice, os CSVs do dia e o `latest.json`.
 
 ### 2. Atualizar dependências npm
 
@@ -205,7 +218,7 @@ npm run css:dev               # Tailwind --watch
 npm run build                 # eleventy + tailwind + pagefind
 
 # Test
-npm test                      # toy + unit (node --test)
+npm test                      # testes dos dados do site (site/tests, node --test)
 
 # CI local (antes de push)
 npm run audit                 # npm audit high+critical
@@ -226,7 +239,7 @@ gh release list
 cd "g:/Drives compartilhados/FRM_CatalogoPoliticas"
 just etl                      # planilha → JSON canônico
 just revalidar                # re-checa URLs com proxima_revisao_prevista < hoje
-just testar                   # 57 testes ETL+captura
+python -B -m pytest tests/ -q # suíte do ETL e da captura
 ```
 
 ## Pendências conhecidas (não-bloqueantes)
