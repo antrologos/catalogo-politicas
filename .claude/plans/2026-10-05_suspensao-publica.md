@@ -1,6 +1,6 @@
 # Suspensão temporária do acesso público
 
-Status: em preparação; publicação imediata autorizada pelo usuário, sem depender de comunicação prévia.
+Status: concluído e publicado em 05/10/2026; suspensão conferida no endereço público.
 
 Em 05/10/2026, o usuário cancelou expressamente a reversão para a versão antiga. Autorizou preservar integralmente a versão revisada e substituir o site público por página temporária de atualização até uma apresentação combinada. Em seguida autorizou fazê-lo imediatamente, sem consultar terceiros. Nenhuma mensagem a terceiros foi enviada.
 
@@ -13,3 +13,11 @@ Verificar: somente arquivos permitidos no artefato, index e 404 iguais, ausênci
 Retomada: alterar modo para catalogo e publicar após autorização. A cadeia normal de schema/testes/acessibilidade/desempenho permanece ativa para a retomada.
 
 A branch de preservação é local. O envio de uma branch remota adicional foi bloqueado pela revisão automática por risco de exposição; não foi repetido. A versão c984d57 já existente no histórico permanece intacta. A suspensão altera somente o artefato publicado e sua configuração, sem reversão de conteúdo.
+
+## Resultado
+
+- Commit de implementação: af4c179. Publicação aprovada na execução https://github.com/antrologos/catalogo-politicas/actions/runs/37313650078.
+- Artefato publicado contém somente index.html, 404.html e assets/rede-eja-logo.svg. A cadeia completa do catálogo permanece preservada e volta a executar apenas no modo catalogo.
+- Validação local em 1440/390/320 px, sem overflow ou erros, logo carregado e conteúdo disponível sem JavaScript. Rotas antigas de UF, busca, ficha, JSON e Pagefind exibem o aviso com404.
+- Conferência pública às 13:03:44 UTC: raiz200 e logo200; seis rotas antigas404. Os sete HTML recebidos são idênticos ao aviso local porSHA256, e o logo também confere. Requisições novas sem conteúdo anterior em cache. Evidência privada em qa-suspensao/resultado-publico.json.
+- git diff c984d57 -- data site/src sem diferenças: nenhum conteúdo revisado do catálogo foi revertido ou apagado.

@@ -11,7 +11,7 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 - O usuário determinou suspensão imediata do catálogo até uma apresentação combinada. Não reverter o conteúdo; preservar a versão revisada integralmente.
 - `site/publicacao.json` controla o artefato público: `atualizacao` publica somente aviso, 404 e logo; `catalogo` reativa o fluxo completo de validação e publicação. Não mudar para `catalogo` sem novo pedido do usuário.
 - Fontes e dados permanecem intactos. A branch local `versao-revisada-2026-10-05` preserva c984d57. A suspensão não torna privado o repositório nem apaga conteúdo anteriormente acessado.
-- Plano: `.claude/plans/2026-10-05_suspensao-publica.md`.
+- Suspensão publicada por af4c179; execução 37313650078 aprovada. Verificação pública: raiz e logo200; seis rotas antigas404 com aviso idêntico ao local. Plano: `.claude/plans/2026-10-05_suspensao-publica.md`.
 
 ## Orientação editorial aprovada em 04/10/2026
 
