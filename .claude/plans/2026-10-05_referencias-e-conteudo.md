@@ -11,3 +11,7 @@ Pedido: resolver as frentes de referências externas e conteúdo do catálogo pu
 7. Documentar resolvidos e limites e publicar pelo fluxo de commit/push/deploy já autorizado.
 
 O produto identifica experiências e referências para a Rede EJA, com defesa da educação pública e presencial. Não inventar vigência, números, orçamento ou resultados. Não equivale a revisão humana exaustiva de todas as políticas. A autorização atual é para implementar; não será exigida revisão do usuário em lotes.
+
+## Fechamento
+
+Concluído em 05/10/2026: 47 fichas únicas corrigidas por curadoria declarativa, 44 URLs principais substituídas, 11 ausências de referência resolvidas no conjunto publicado, auditoria de 385 URLs (363 atuais). Validação: 144 testes Python, 34 testes do site, geração determinística, dados e identidades preservados. Publicação do commit c6d7422796436af5e2f4b4405fbd45f860009bca confirmada pelos workflows 37265033098 e 37265032989 e por inspeção direta de quatro fichas em produção. Relatório completo em docs/RELATORIO_REFERENCIAS_E_CONTEUDO_2026-10-05.md; incertezas documentais e falhas externas de acesso permanecem explicitadas, sem inferir vigência.

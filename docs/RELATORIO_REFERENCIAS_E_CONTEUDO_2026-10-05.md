@@ -4,7 +4,7 @@
 
 ## Síntese da rodada
 
-A rodada corrige referências ausentes ou inadequadas, textos transportados entre estados, mistura entre marcos nacionais e execução local, confusão entre programas homônimos e afirmações de atividade, alcance, financiamento ou impacto que as fontes não sustentavam. A integração dos dados foi executada pelo pipeline e validada por testes; a verificação do site e a publicação permanecem discriminadas na seção final.
+A rodada corrige referências ausentes ou inadequadas, textos transportados entre estados, mistura entre marcos nacionais e execução local, confusão entre programas homônimos e afirmações de atividade, alcance, financiamento ou impacto que as fontes não sustentavam. A integração dos dados foi executada pelo pipeline e validada por testes; o site foi validado e a publicação foi confirmada, conforme a seção final.
 
 Os cinco manifestos finais registram **47 IDs únicos, 575 entradas de campo e 574 diferenças declaradas entre anterior e novo**. Uma entrada é idempotente e repete o valor anterior. Esses números descrevem o pacote editorial e não equivalem ao total de diferenças do JSON gerado: citações, versão e outros metadados derivados também são recalculados.
 
@@ -994,13 +994,17 @@ Resultados registrados na execução e verificação automatizada desta rodada:
 
 Essas verificações documentam o recorte ensaiado. A inspeção de quatro fichas não constitui avaliação manual de acessibilidade de todas as 426 páginas. A validade substantiva das políticas continua limitada pelas fontes e ressalvas descritas acima.
 
-## Validação e publicação — a consolidar
+## Publicação concluída e verificada
 
-A reconsolidação final dos 575 campos foi concluída. A auditoria registra 144 testes Python aprovados, 1.158/1.158 registros válidos com verificação de formatos e geração determinística. Os resultados do site estão na seção anterior.
+A versão revisada está publicada em [Catálogo de Políticas da Rede EJA](https://antrologos.github.io/catalogo-politicas/). Commit do site: [`c6d7422`](https://github.com/antrologos/catalogo-politicas/commit/c6d7422796436af5e2f4b4405fbd45f860009bca).
 
-Permanecem para preenchimento no fechamento da publicação:
+- [Testes Python no GitHub](https://github.com/antrologos/catalogo-politicas/actions/runs/37265033098): concluídos com sucesso.
+- [Construção e publicação](https://github.com/antrologos/catalogo-politicas/actions/runs/37265032989): schema, testes do site, build, pa11y/WCAG2AA, Lighthouse e GitHub Pages aprovados.
+- Confirmação direta em produção: quatro fichas a 390 px, com resposta HTTP 200, referências e notas de alcance presentes, sem overflow, erros de JavaScript ou violações detectadas pelo axe nesse recorte. Foram conferidas EJA nacional, Conecta Trabalho/TO, Via Rápida/SP e o plano prisional do Amazonas.
+- Evidência estruturada: [publicacao-curadoria-2026-10-05.json](../data/auditoria/publicacao-curadoria-2026-10-05.json).
 
-- Proveniência concluída: não foram geradas capturas novas nem alterados os arquivos capturados. O índice recebeu o status de 420 metadados existentes. A associação passou de 755 para 697 registros com snapshot, principalmente porque uma referência substituída não pode herdar o arquivo e a data de outra URL. A pesquisa documental possui suas próprias datas de consulta. Capturas rejeitadas não são promovidas pelo pipeline.
-- Commit, execução de CI, endereço publicado e confirmação da versão em produção.
+A reconsolidação final dos 575 campos passou por 144 testes Python, 34 testes do site, validação dos 1.158 registros e verificação de geração determinística. As quatro planilhas originais, IDs, slugs e vínculos territoriais foram preservados.
 
-**Publicação ainda não declarada como concluída neste relatório.**
+Não foram geradas capturas novas nem alterados os arquivos capturados. O índice recebeu o status de 420 metadados existentes. A associação passou de 755 para 697 registros com snapshot, principalmente porque uma referência substituída não pode herdar o arquivo e a data de outra URL. A pesquisa documental possui suas próprias datas de consulta. Capturas rejeitadas não são promovidas pelo pipeline.
+
+A publicação encerra esta rodada de correção documental. Permanecem os limites individualizados nas fichas: fontes externas indisponíveis, implementação atual não comprovada em alguns casos e 319 fichas únicas que não receberam revisão substantiva nesta rodada. O catálogo serve à identificação de experiências e referências; não deve ser apresentado como certificação de oferta ativa ou avaliação de resultados.

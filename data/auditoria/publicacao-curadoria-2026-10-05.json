@@ -1,0 +1,89 @@
+{
+  "verificado_em": "2026-10-05T04:56:11+00:00",
+  "commit_site": "c6d7422796436af5e2f4b4405fbd45f860009bca",
+  "url": "https://antrologos.github.io/catalogo-politicas/",
+  "ci": [
+    {
+      "id": "37265033098",
+      "status": "completed",
+      "conclusao": "success",
+      "url": "https://github.com/antrologos/catalogo-politicas/actions/runs/37265033098",
+      "jobs": [
+        {
+          "nome": "pytest (toy + unit + integração)",
+          "conclusao": "success"
+        }
+      ]
+    },
+    {
+      "id": "37265032989",
+      "status": "completed",
+      "conclusao": "success",
+      "url": "https://github.com/antrologos/catalogo-politicas/actions/runs/37265032989",
+      "jobs": [
+        {
+          "nome": "Validate JSON Schema",
+          "conclusao": "success"
+        },
+        {
+          "nome": "Build site",
+          "conclusao": "success"
+        },
+        {
+          "nome": "Lighthouse-CI (bloqueante)",
+          "conclusao": "success"
+        },
+        {
+          "nome": "A11y pa11y-ci (bloqueante WCAG2AA)",
+          "conclusao": "success"
+        },
+        {
+          "nome": "Deploy to GitHub Pages",
+          "conclusao": "success"
+        }
+      ]
+    }
+  ],
+  "verificacao_producao": [
+    {
+      "id_interno": "FRM-CP-2026-EDU-0001",
+      "slug": "educacao-de-jovens-e-adultos-eja-br",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0,
+      "referencias_exibidas": 5
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0376",
+      "slug": "conecta-trabalho-to",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0,
+      "referencias_exibidas": 2
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0017",
+      "slug": "via-rapida-emprego-sp",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0,
+      "referencias_exibidas": 2
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0265",
+      "slug": "plano-estadual-de-educacao-para-pessoas-privadas-de-liberdade-peep-do-amazonas-2025-2028-am",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0,
+      "referencias_exibidas": 3
+    }
+  ]
+}
