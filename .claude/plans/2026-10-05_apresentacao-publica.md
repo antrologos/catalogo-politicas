@@ -8,7 +8,7 @@ Implementação: usar texto corrido legível para ressalvas, divisórias horizon
 
 Validação: testes Node existentes, build completo, inspeção de telas desktop e celular, navegação e ressalvas legíveis. Commit/push e publicação com autorização persistente da sessão; conferir CI e endereço público.
 
-Status: implementação concluída; validação local aprovada; publicação em andamento.
+Status: concluído e publicado em 05/10/2026; endereço público conferido.
 
 ## Ajuste de escopo durante a execução
 
@@ -31,3 +31,12 @@ O usuário pediu uma home mais atraente e identificou o mapa interativo como rec
 - Verificação de redação nos 447 HTML: removidas as três formulações apontadas pelo usuário (advertência sobre materiais digitais, descrição genérica das categorias e chamada repetida sobre limites).
 
 - Conferência focal final: home e páginas AM/SP/CE/DF em 320 px, antes e depois do filtro Educacional, sem overflow. Limitada a largura dos controles de filtros de UF; cinco links principais permanecem na mesma linha.
+
+## Publicação
+
+Implementação publicada pelo commit [c59e8d4](https://github.com/antrologos/catalogo-politicas/commit/c59e8d4614009deeef4c0f29d916a85f380cc895).
+
+- [CI do site](https://github.com/antrologos/catalogo-politicas/actions/runs/37308976784): schema, 47 testes Node, build, pa11y, Lighthouse em nove URLs e deploy aprovados na primeira execução.
+- [CI Python](https://github.com/antrologos/catalogo-politicas/actions/runs/37308976673): 175 testes aprovados, incluindo integração.
+- Endereço público conferido em 05/10/2026 às 12:28 UTC: home em 1440/390 px, 27 UFs, menu e subtítulo, clique/toque até Amazonas, busca Cemeapi com filtro AM e abertura da ficha, PNLD e Cadeja com redações corrigidas. Nenhum erro HTTP, JavaScript ou carregamento nos 52 recursos observados.
+- Evidências locais ficam na pasta privada da rodada, em qa-publica/. A validação automatizada não substitui auditoria manual completa com leitor de tela.

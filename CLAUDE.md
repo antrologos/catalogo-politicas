@@ -43,6 +43,7 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 - Ressalvas devem se referir a características ou lacunas concretas da experiência. Evitar advertências genéricas sobre EaD em materiais didáticos, cadastros ou serviços digitais, e não repetir chamadas sobre limites em todas as seções. Links públicos usam “Metodologia e fontes” e “Cobertura do catálogo”.
 - Home com busca e mapa interativo em destaque; Mapa é um dos cinco links principais. A abertura usa o mapa para navegar por UF, sem escala de contagens; a página Mapa preserva métricas e exportação. D3 é servido localmente.
 - Ajustes editoriais em 29 fichas, sem alterar referências, categorias ou níveis de evidência: data/auditoria/ajustes-redacao-publica-2026-10-05.json. Derivado atual: policies-apresentacao-publica-2026-10-05.json; versões anteriores preservadas.
+- Publicação c59e8d4 confirmada: CI do site 37308976784 e Python 37308976673 aprovados (47 testes Node, 175 Python, pa11y e Lighthouse). Home, mapa, busca e redações verificadas no endereço público, sem erros nos 52 recursos observados.
 - Plano e validação desta rodada: .claude/plans/2026-10-05_apresentacao-publica.md.
 
 ## Estado atual (2026-10-05 — apresentação pública)
