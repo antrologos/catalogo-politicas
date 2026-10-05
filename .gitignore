@@ -172,3 +172,6 @@ data/derived/**/*.tar.gz
 # NÃO ignorar: .claude/ (versionar tudo dentro, exceto o que .claude/.gitignore exclui)
 # -----------------------------------------------------------------------------
 !.claude/
+
+# Relatorios privados e material de trabalho da curadoria
+/.claude/working/curadoria-relatorios-2026-10-05/

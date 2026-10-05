@@ -77,8 +77,17 @@ def _validar_correcao(correcao: dict, propriedades: dict) -> None:
         raise ValueError(f"{contexto}: justificativa obrigatória")
     verificado = _data(correcao.get("verificado_em"), contexto)
     referencias = correcao.get("referencias")
-    if not isinstance(referencias, list) or not referencias:
-        raise ValueError(f"{contexto}: referências obrigatórias")
+    if not isinstance(referencias, list):
+        raise ValueError(f"{contexto}: referências devem ser uma lista")
+    if not referencias:
+        if correcao.get("nivel") != "leitura_editorial_evidencia_insuficiente":
+            raise ValueError(f"{contexto}: referências obrigatórias sem nível editorial explícito")
+        campos_editoriais = correcao.get("campos")
+        mudanca_nota = (campos_editoriais.get("duvidas_revisor")
+                        if isinstance(campos_editoriais, dict) else None)
+        nota = mudanca_nota.get("novo") if isinstance(mudanca_nota, dict) else None
+        if not isinstance(nota, str) or not nota.strip():
+            raise ValueError(f"{contexto}: revisão editorial exige nota em duvidas_revisor")
     for referencia in referencias:
         if not isinstance(referencia, dict) or not _url_publica(referencia.get("url")):
             raise ValueError(f"{contexto}: URL de referência inválida")
@@ -100,7 +109,7 @@ def _validar_correcao(correcao: dict, propriedades: dict) -> None:
         erro = next(validador.iter_errors(mudanca["novo"]), None)
         if erro:
             raise ValueError(f"{contexto}/{campo}: novo valor inválido: {erro.message}")
-        if campo == "fonte_url" and not _url_publica(mudanca["novo"]):
+        if campo == "fonte_url" and mudanca["novo"] is not None and not _url_publica(mudanca["novo"]):
             raise ValueError(f"{contexto}: fonte_url deve ser URL pública")
 
 

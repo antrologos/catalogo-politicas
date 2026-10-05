@@ -35,6 +35,8 @@ from pathlib import Path
 
 import pandas as pd
 
+from novas_experiencias import carregar_novas, adicionar_novas, CHAVE_COLUNA, PREFIXO_CHAVE
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent.parent
 IN_CSV = ROOT / "data" / "derived" / "_intermediate" / "deduped.csv"
@@ -94,10 +96,16 @@ def chaves(df: pd.DataFrame) -> list[str]:
     """Chave estável por linha: uf|nome normalizado|n-ésima ocorrência."""
     contagem: dict[str, int] = {}
     out: list[str] = []
-    for uf, nome in zip(df["uf"], df["nome"]):
+    for i, (uf, nome) in enumerate(zip(df["uf"], df["nome"])):
+        fonte = df[CHAVE_COLUNA].iat[i] if CHAVE_COLUNA in df else None
+        if fonte is not None and not pd.isna(fonte) and str(fonte).strip():
+            out.append(PREFIXO_CHAVE + str(fonte).strip())
+            continue
         base = f"{str(uf).strip()}|{nome_norm(nome)}"
         contagem[base] = contagem.get(base, 0) + 1
         out.append(f"{base}|{contagem[base]}")
+    if len(out) != len(set(out)):
+        raise ValueError("Chave de identidade duplicada")
     return out
 
 
@@ -160,6 +168,8 @@ def atribuir_ids(
         chave = df["_chave"].iat[i]
         if chave in por_chave:
             r = reg.iloc[por_chave[chave]]
+            if chave.startswith(PREFIXO_CHAVE) and r["uf"] != getattr(row, "uf", ""):
+                raise ValueError(f"UF alterada para chave persistente {chave}")
             ids.append(r["id_interno"])
             slugs.append(r["slug"])
             continue
@@ -203,6 +213,10 @@ def main() -> int:
         print(f"  registro: {len(registro)} fichas conhecidas ({REGISTRO_CSV.name})")
     else:
         print("  registro ausente: primeira execução, numeração pela ordem de entrada")
+
+    experiencias = carregar_novas()
+    df = adicionar_novas(df, experiencias)
+    print(f"  {len(experiencias)} experiências documentais adicionadas sem replicação")
 
     hoje = datetime.now().strftime("%Y-%m-%d")
     n_antes = 0 if registro is None else len(registro)

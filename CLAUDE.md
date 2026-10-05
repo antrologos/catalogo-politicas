@@ -1,5 +1,9 @@
 # CLAUDE.md
 
+## Limite de edição determinado pelo usuário em 05/10/2026
+
+É terminantemente proibido alterar arquivos ou pastas fora de `G:/Drives compartilhados/FRM_CatalogoPoliticas`. Os relatórios estaduais e nacional são somente leitura. Scripts, cópias de trabalho e caches desta tarefa ficam dentro do projeto; o material integral dos relatórios não entra no Git público. No Amazonas, incorporar alterações somente na leitura/análise, sem salvar o DOCX. Ver [regra completa](.claude/rules/limite-edicao-projeto.md). Esta instrução mais recente prevalece sobre orientações antigas de usar o segundo clone para escrita.
+
 Orientações para o Claude Code (claude.ai/code) neste repositório. O histórico detalhado das rodadas de maio a outubro de 2026 está em `.claude/archive/CLAUDE-historico-ate-2026-10-04.md`. Use-o como arqueologia, não como checklist.
 
 ## Orientação editorial aprovada em 04/10/2026
@@ -9,8 +13,8 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 - Inclusão produtiva é um componente; educação e trabalho abrangem também cuidados, direitos, desigualdades e formação crítica. O projeto não defende privatização nem EaD para EJA.
 - A rodada autorizada aproveita o acervo existente, sem depender de revisão do responsável em lotes. As diretrizes completas estão em [docs/DIRETRIZES_E_PLANO_EDITORIAL_2026-10-04.md](docs/DIRETRIZES_E_PLANO_EDITORIAL_2026-10-04.md).
 - As fichas passam a quatro blocos visíveis: Identificação, Finalidade, Território e Referências. A situação e a abrangência reproduzem o levantamento; não comprovam oferta atual. Datas de consulta e do catálogo não comprovam vigência.
-- A fonte do site foi reorganizada localmente, com testes de renderização em `site/tests/editorial.test.mjs`. Dados, IDs, slugs, schema e vocabulário permanecem preservados. A versão reorganizada foi publicada em 05/10/2026, com o plano ampliado de design.
-- A nota em `_data/notasEditoriais.js` sinaliza que a ficha federal de EJA contém descrição e órgãos de São Paulo, sem alterar o registro original.
+- A fonte do site foi reorganizada, com testes de renderização em `site/tests/editorial.test.mjs`. IDs e slugs foram preservados; dados, schema e vocabulário foram posteriormente atualizados pela curadoria documentada. A versão reorganizada foi publicada em 05/10/2026, com o plano ampliado de design.
+- A curadoria declarativa corrigiu a ficha federal de EJA e separa referências consultadas, referências herdadas e alcance editorial. Os relatórios de origem permanecem imutáveis.
 
 ## Implementação do plano ampliado de design (concluída em 2026-10-05)
 
@@ -21,14 +25,24 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 - Busca: `catalogo-busca.js` + `catalogo-busca-estado.js`; adaptador público `catalogo-pagefind/pagefind.js` garante OU dentro da faceta. Não substituir pelos scripts legados sem revalidar os percursos.
 - Relatório: [docs/IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md](docs/IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md). Plano de referência: [docs/PLANO_DESIGN_E_USABILIDADE_2026-10-04.md](docs/PLANO_DESIGN_E_USABILIDADE_2026-10-04.md).
 
-## Estado atual (2026-10-04)
+## Curadoria dos relatórios e do restante do acervo (2026-10-05)
+
+- Lidas individualmente as 319 fichas remanescentes; 321 intervenções, incluindo dois complementos à rodada anterior, e 22 novas fichas.
+- 202 intervenções com pesquisa documental limitada e 119 editoriais com evidência insuficiente; não apresentar esses números como validação integral de execução.
+- Relatório para continuidade: [curadoria do acervo](docs/RELATORIO_CURADORIA_ACERVO_2026-10-05.md), com cobertura por ID e limites.
+- Manifestos: data/curadoria/correcoes- 2026-10-05b-relatorios.json e novas- 2026-10-05-relatorios.json. Derivado: policies-relatorios- 2026-10-05.json; a versão anterior foi preservada.
+- Exames autônomos de certificação são contexto complementar. Prova presencial em computador não determina modalidade de ensino.
+- No loader Eleventy de revisões, manter apenas export default; helper testável fica em site/lib/revisoes.js. Export adicional no loader impede a execução esperada no build real.
+- Verificações locais: 175 testes Python e 45 testes Node aprovados; 447 HTML, busca com 388 fichas e zero links/âncoras locais ausentes. Ver relatório para limites e confirmação de publicação.
+
+## Estado atual (2026-10-05 — curadoria do acervo)
 
 - **Produto**: Catálogo de Políticas da **Rede EJA e Inclusão Produtiva**, um produto permanente da Rede (16 instituições). A página da Rede (https://www.frm.org.br/projeto/rede-eja) lista o catálogo em "Evidências".
   - Site: https://antrologos.github.io/catalogo-politicas/
   - Repositório público: https://github.com/antrologos/catalogo-politicas (CC BY 4.0)
   - Versão **1.0** (tag/release `v1.0.0`)
 - **Dados**:
-  - `data/derived/latest.json` tem **1158 fichas**: 792 réplicas federais e **366 verbetes únicos** (33 federais e 333 estaduais/distritais), cobrindo **27 UFs + esfera federal** em três ondas.
+  - `data/derived/latest.json` tem **1180 registros**: 792 réplicas federais e **388 fichas únicas** (39 federais e 349 estaduais/distritais), cobrindo **27 UFs + esfera federal** em três ondas.
   - Validação: 0 erros de schema e 0 valores fora do vocabulário.
 - **Decisões da usuária em vigor**:
   - o grafo continua **oculto**;
@@ -45,11 +59,8 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 
 ## Organização
 
-- **Dois clones do mesmo repositório** (não são projetos separados):
-  - `G:/Drives compartilhados/FRM_CatalogoPoliticas`: planilhas, ETL, captura e documentação;
-  - `C:/Users/antro/dev/catalogo-politicas`: build do site e validação com puppeteer (tem `site/node_modules`).
-  - Fluxo: commitar num clone, `git pull --ff-only` no outro, um único push.
-  - No Drive, o Git às vezes marca arquivos como modificados sem diff de conteúdo, por causa da sincronização. Confira com `git show HEAD:<arq> | cmp - <arq>`.
+- **Área de execução autorizada**: todas as edições, ETL, builds e caches ficam neste projeto em G. O segundo clone em C é apenas referência de leitura; não fazer pull, build ou sincronização com escrita nele. Publicar a partir do repositório em G.
+- Arquivos locais auxiliares desta rodada ficam na área ignorada .claude/working/curadoria-relatorios-2026-10-05/.
 - **Pastas principais**:
   - `data/raw/`: planilhas-fonte, imutáveis.
   - `scripts/etl/` e `scripts/captura/`: pipeline de dados e captura de fontes.

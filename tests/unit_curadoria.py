@@ -215,3 +215,67 @@ def test_atribuicao_usa_hostname_real_e_nao_presume_licenca():
         "licenca_inferida": "CC BY-ND 3.0 (presumida; gov.br)",
     }})
     assert ficha["licenca_inferida"] == "sem_licenca_explicita"
+
+
+def editorial():
+    item = correcao({"duvidas_revisor": {"anterior": None,
+        "novo": "A referência não permite confirmar funcionamento atual."}})
+    item["nivel"] = "leitura_editorial_evidencia_insuficiente"
+    item["justificativa"] = "Delimitar a leitura sem alegar consulta externa."
+    item["referencias"] = []
+    return item
+
+
+def test_editorial_sem_fonte_nova_preserva_fonte_e_identidade():
+    original = fichas()
+    resultado, campos = aplicar_curadoria(original, [editorial()])
+    assert resultado[0]["duvidas_revisor"] == editorial()["campos"]["duvidas_revisor"]["novo"]
+    assert resultado[0]["fonte_url"] == original[0]["fonte_url"]
+    assert resultado[0]["id_interno"] == original[0]["id_interno"]
+    assert campos[BR] == {"duvidas_revisor"}
+    assert "duvidas_revisor" not in original[0]
+
+
+@pytest.mark.parametrize("nota", [None, "", "  ", 42])
+def test_editorial_sem_nota_substantiva_nao_dispensa_evidencia(nota):
+    item = editorial()
+    item["campos"]["duvidas_revisor"]["novo"] = nota
+    with pytest.raises(ValueError, match="exige nota"):
+        aplicar_curadoria(fichas(), [item])
+
+
+@pytest.mark.parametrize("nivel", [None, "editorial", "documental"])
+def test_refs_vazias_exigem_nivel_exato(nivel):
+    item = editorial()
+    item["nivel"] = nivel
+    with pytest.raises(ValueError, match="referências obrigatórias"):
+        aplicar_curadoria(fichas(), [item])
+
+
+def test_retirar_fonte_incompativel_limpa_proveniencia_e_citacao():
+    from build_json import gerar_citacoes
+    original = fichas()
+    original[0].update(fonte_sha256="a" * 64, fonte_arquivo_path="velho.html",
+                       fonte_data_acesso="2026-10-01", atribuicao="Fonte antiga")
+    item = editorial()
+    item["campos"]["fonte_url"] = {"anterior": original[0]["fonte_url"], "novo": None}
+    resultado, campos = aplicar_curadoria(original, [item])
+    for ficha in resultado[:2]:
+        vincular_fonte(ficha, {}, campos[ficha["id_interno"]])
+        assert ficha["fonte_url"] is None
+        assert ficha["fonte_sha256"] is None
+        assert ficha["fonte_arquivo_path"] is None
+        assert ficha["fonte_data_acesso"] is None
+        apa, bibtex = gerar_citacoes(ficha)
+        assert "https://" not in apa + bibtex
+        assert "urldate" not in bibtex and "url " not in bibtex
+        assert "None" not in apa + bibtex
+    assert original[0]["fonte_sha256"] == "a" * 64
+
+
+def test_nulo_nao_permite_url_invalida_ou_placeholder_novo():
+    for url in ["", "arquivo.pdf", "https://nao-e-publico.local/fonte"]:
+        item = editorial()
+        item["campos"]["fonte_url"] = {"anterior": fichas()[0]["fonte_url"], "novo": url}
+        with pytest.raises(ValueError):
+            aplicar_curadoria(fichas(), [item])

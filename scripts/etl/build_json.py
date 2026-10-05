@@ -19,6 +19,7 @@ de symlink — Drive sync não lida bem com links).
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import re
@@ -29,6 +30,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 from curadoria import carregar_correcoes, aplicar_curadoria, snapshots_validos
+from novas_experiencias import carregar_novas, aplicar_campos_novos, CHAVE_COLUNA
 
 import pandas as pd
 
@@ -208,7 +210,7 @@ def gerar_citacoes(ficha: dict) -> tuple[str, str]:
     """
     nome = ficha.get("nome", "")
     ano = ficha.get("ano_criacao", "")
-    url = ficha.get("fonte_url", "")
+    url = ficha.get("fonte_url") or ""
     if ".local/" in url:
         url = ""
     atrib = ficha.get("atribuicao") or "Brasil"
@@ -286,7 +288,7 @@ def vincular_fonte(
 ) -> None:
     """Refaz a proveniência pela URL atual; nenhuma data vem da curadoria."""
     curados = campos_curados or set()
-    url = ficha["fonte_url"]
+    url = ficha.get("fonte_url") or ""
     if "fonte_tipo" not in curados:
         ficha["fonte_tipo"] = infer_fonte_tipo(url)
     if "atribuicao" not in curados:
@@ -326,7 +328,27 @@ def vincular_fonte(
         ficha["proxima_revisao_prevista"] = (base + timedelta(days=ttl)).strftime("%Y-%m-%d")
 
 
-def main() -> int:
+def destino_saida(output: str | Path | None, tem_novas: bool = False) -> Path:
+    """Saída opcional fica no projeto; novas entradas não sobrescrevem a onda antiga."""
+    destino = Path(output) if output is not None else (
+        ROOT / "data/derived" / f"policies-curadoria-{DATA_HOJE}.json" if tem_novas else OUT_JSON
+    )
+    if not destino.is_absolute():
+        destino = ROOT / destino
+    destino = destino.resolve()
+    if not destino.is_relative_to(ROOT.resolve()) or destino.suffix.lower() != ".json":
+        raise ValueError("Saída deve ser JSON dentro da raiz do projeto")
+    if destino == LATEST.resolve():
+        raise ValueError("Saída deve ser distinta de latest.json")
+    return destino
+
+
+def main(output: str | Path | None = None) -> int:
+    novas = carregar_novas(CURADORIA_DIR)
+    novas_por_chave = {item["chave_fonte"]: item for item in novas}
+    campos_novos: dict[str, set[str]] = {}
+    novas_encontradas: set[str] = set()
+    out_json = destino_saida(output, bool(novas))
     if not IN_CSV.exists():
         print(f"ERRO: rodar build_ids.py primeiro (ausente: {IN_CSV})", file=sys.stderr)
         return 1
@@ -428,15 +450,23 @@ def main() -> int:
             "proxima_revisao_prevista": None,
         }
 
-        vincular_fonte(ficha, snapshot_by_url)
+        campos_entrada = aplicar_campos_novos(ficha, row, novas_por_chave)
+        if campos_entrada:
+            novas_encontradas.add(row[CHAVE_COLUNA])
+            campos_novos[ficha["id_interno"]] = campos_entrada
+        vincular_fonte(ficha, snapshot_by_url, campos_entrada)
         fichas.append(ficha)
+
+    if novas_encontradas != set(novas_por_chave):
+        faltantes = sorted(set(novas_por_chave) - novas_encontradas)
+        raise ValueError(f"Novas experiências ausentes em with_ids.csv: {faltantes}; executar build_ids novamente")
 
     # Confrontar valores anteriores no objeto canônico enriquecido. Só então
     # reaplicar a proveniência pela URL corrigida, antes de hash/datas/citações.
     fichas, campos_curados = aplicar_curadoria(fichas, correcoes)
     print(f"  curadoria: {len(correcoes)} entradas, {len(campos_curados)} fichas alcançadas")
     for posicao, ficha in enumerate(fichas):
-        vincular_fonte(ficha, snapshot_by_url, campos_curados.get(ficha["id_interno"]))
+        vincular_fonte(ficha, snapshot_by_url, campos_novos.get(ficha["id_interno"], set()) | campos_curados.get(ficha["id_interno"], set()))
         com_snapshot += bool(ficha.get("fonte_sha256"))
 
         # Datas da ficha a partir do registro (build_ids.py): atualizado_em só
@@ -459,6 +489,7 @@ def main() -> int:
         # Limpeza: remover chaves None (schema aceita ausência ou null; preferir ausência para opcionais)
         # MAS preservar Nones onde schema declara `["string", "null"]`
         nullable_keys = {
+            "fonte_url",
             "fonte_arquivo_path", "data_validade_fim", "supersedes_id",
             "superseded_by_id", "federal_source_id", "informacoes_complementares",
             "duvidas_revisor", "unidade_medida", "proxima_revisao_prevista", "revisado_por",
@@ -481,16 +512,16 @@ def main() -> int:
         )
         print(f"  registro atualizado: {REGISTRO_CSV.name}")
 
-    OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
-    OUT_JSON.write_text(
+    out_json.parent.mkdir(parents=True, exist_ok=True)
+    out_json.write_text(
         json.dumps(fichas, ensure_ascii=False, indent=2),
         encoding="utf-8", newline="\n"
     )
-    print(f"\nSalvo: {OUT_JSON}  ({OUT_JSON.stat().st_size:,} bytes)  {len(fichas)} fichas")
+    print(f"\nSalvo: {out_json}  ({out_json.stat().st_size:,} bytes)  {len(fichas)} fichas")
 
     # Atualiza latest.json (cópia, não symlink — Drive sync)
     try:
-        shutil.copyfile(OUT_JSON, LATEST)
+        shutil.copyfile(out_json, LATEST)
         print(f"Latest atualizado: {LATEST}")
     except Exception as e:
         print(f"  [WARN] não consegui atualizar latest.json: {e}", file=sys.stderr)
@@ -507,4 +538,6 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output", help="JSON versionado de saída dentro do projeto; latest também é atualizado")
+    sys.exit(main(parser.parse_args().output))

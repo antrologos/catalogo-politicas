@@ -64,13 +64,13 @@ function ambiente() {
   return env;
 }
 
-async function renderizar(p, referenciasAuditadas = {}) {
+async function renderizar(p, referenciasAuditadas = {}, revisoesTeste = revisoes) {
   // Front matter e encadeamento de layouts pertencem ao Eleventy.
   const fonte = readFileSync(resolve(INCLUDES, "layouts/ficha.njk"), "utf-8")
     .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
   return new Promise((resolver, rejeitar) => {
     ambiente().renderString(fonte, {
-      p, site, equipe, ufs, notasEditoriais, revisoes, referenciasAuditadas,
+      p, site, equipe, ufs, notasEditoriais, revisoes: revisoesTeste, referenciasAuditadas,
       policies: lista, relacionadas: {},
       sinonimos: { aliasesPorSlug: {} },
       page: { url: "/politica/" + p.slug + "/" },
@@ -238,13 +238,21 @@ test("data da curadoria não inventa data de captura", async () => {
   assert.match(referencias, /nao confirmam a continuidade/);
 });
 
-test("referências de revisão são links públicos com título e data", () => {
+test("referências de revisão são links públicos com título e data e fontes herdadas permanecem acessíveis", async () => {
   assert.ok(Object.keys(revisoes).length > 0);
   for (const p of lista.filter((f) => revisoes[f.id_interno])) {
     const refs = revisoes[p.id_interno].referencias;
-    assert.ok(refs.length > 0);
-    assert.ok(refs.every((r) => r.titulo && /^\d{4}-\d{2}-\d{2}$/.test(r.consultado_em)));
-    assert.ok(refs.some((r) => r.url === p.fonte_url) || /\.local/.test(p.fonte_url), p.id_interno + ": fonte principal deve estar nas referências");
+    const editorial = revisoes[p.id_interno].nivel === "leitura_editorial_evidencia_insuficiente";
+    assert.ok(refs.length > 0 || (editorial && p.duvidas_revisor), p.id_interno + ": ausência de fonte exige alcance editorial explícito");
+    assert.ok(refs.every((r) => r.titulo && /^https?:\/\//.test(r.url) && /^\d{4}-\d{2}-\d{2}$/.test(r.consultado_em)));
+    const urlsAtuais = revisoes[p.id_interno].urls_da_revisao;
+    assert.ok(Array.isArray(urlsAtuais));
+    assert.ok(urlsAtuais.every((url) => refs.some((r) => r.url === url)));
+    if (p.fonte_url && !/\.local/.test(p.fonte_url) && !urlsAtuais.includes(p.fonte_url)) {
+      const html = secao(await renderizar(p), "referencias");
+      assert.ok(html.includes('href="' + p.fonte_url.replace(/&/g, "&amp;") + '"'), p.id_interno + ": fonte herdada deve permanecer acessível");
+      assert.match(texto(html), /Referência indicada no levantamento — não revalidada nesta revisão/);
+    }
   }
 });
 
@@ -257,4 +265,73 @@ test("erro de acesso à fonte não se torna encerramento da política", async ()
   assert.match(refs, /pagina nao encontrada/);
   assert.match(refs, /nao informa a situacao/);
   assert.doesNotMatch(normalizado(secao(html, "identificacao")), /encerrad/);
+});
+
+const NIVEL_EDITORIAL = "leitura_editorial_evidencia_insuficiente";
+
+test("revisão editorial sem nova consulta preserva a fonte original, alcance e datas distintas", async () => {
+  const p = fichaBase({
+    fonte_url: "https://www.exemplo.gov.br/levantamento",
+    fonte_data_acesso_br: "03/02/2025",
+    duvidas_revisor: "Leitura editorial: execução atual não confirmada; sem nova consulta a fonte primária.",
+  });
+  const revisao = { nivel: NIVEL_EDITORIAL, verificado_em: "2026-10-07", referencias: [], tem_referencias_na_revisao: false };
+  const html = await renderizar(p, {}, { [p.id_interno]: revisao });
+  const refs = secao(html, "referencias");
+  assert.ok(refs.includes('href="' + p.fonte_url + '"'));
+  assert.match(texto(refs), /Referência indicada no levantamento — não revalidada nesta revisão/);
+  assert.doesNotMatch(refs, /<ul\b[^>]*class="policy-references"/);
+  assert.doesNotMatch(texto(refs), /Referências da revisão|Consulta em 07\/10\/2026/);
+  assert.match(texto(refs), /Alcance da revisão editorial de 07\/10\/2026/);
+  assert.match(texto(html), /a revisão indicada na seção Referências/);
+  assert.doesNotMatch(texto(html), /revisão documental indicada/);
+  assert.match(texto(refs), /Consulta registrada na captura 03\/02\/2025/);
+  assert.match(texto(secao(html, "finalidade")), /Descrição revisada editorialmente/);
+  assert.doesNotMatch(texto(secao(html, "finalidade")), /revisada com as referências/);
+  const semFonte = await renderizar({ ...p, fonte_url: null, fonte_data_acesso_br: null }, {}, { [p.id_interno]: revisao });
+  assert.match(texto(secao(semFonte, "referencias")), /Link de referência não identificado/);
+  assert.doesNotMatch(texto(secao(semFonte, "referencias")), /Consulta em 07\/10\/2026/);
+});
+
+test("revisão editorial posterior não atribui consulta nova às evidências anteriores", async () => {
+  const p = fichaBase({ fonte_url: "https://www.exemplo.gov.br/levantamento", duvidas_revisor: "Sem nova consulta." });
+  const html = await renderizar(p, {}, { [p.id_interno]: {
+    nivel: NIVEL_EDITORIAL, verificado_em: "2026-10-07", tem_referencias_na_revisao: false,
+    referencias: [{ url: "https://www.exemplo.gov.br/anterior", titulo: "Fonte da revisão anterior", consultado_em: "2026-10-05" }],
+  } });
+  const refs = secao(html, "referencias");
+  assert.ok(refs.includes('href="' + p.fonte_url + '"'));
+  assert.match(texto(refs), /Consulta em 05\/10\/2026/);
+  assert.doesNotMatch(texto(refs), /Consulta em 07\/10\/2026/);
+  assert.match(texto(refs), /não revalidada nesta revisão/);
+});
+
+test("revisão documental com nova norma preserva fonte herdada sem fingir reconsulta", async () => {
+  const p = fichaBase({ fonte_url: "https://www.exemplo.gov.br/levantamento", fonte_data_acesso_br: "03/02/2025", duvidas_revisor: "Revisão restrita ao marco legal consultado." });
+  const html = await renderizar(p, {}, { [p.id_interno]: {
+    nivel: "documental", verificado_em: "2026-10-07", tem_referencias_na_revisao: true,
+    urls_da_revisao: ["https://www.exemplo.gov.br/norma"],
+    referencias: [{ url: "https://www.exemplo.gov.br/norma", titulo: "Norma consultada", consultado_em: "2026-10-07" }],
+  } });
+  const refs = secao(html, "referencias");
+  assert.ok(refs.includes('href="' + p.fonte_url + '"'));
+  assert.ok(refs.includes('href="https://www.exemplo.gov.br/norma"'));
+  assert.match(texto(refs), /Consulta em 07\/10\/2026/);
+  assert.match(texto(refs), /Referência indicada no levantamento — não revalidada nesta revisão/);
+  assert.match(texto(refs), /Consulta registrada na captura 03\/02\/2025/);
+  const listaRef = refs.match(/<ul class="policy-references">([\s\S]*?)<\/ul>/)[1];
+  assert.ok(!listaRef.includes(p.fonte_url));
+});
+
+test("referência contextual não encobre ausência de fonte principal identificada", async () => {
+  const p = fichaBase({ fonte_url: null, fonte_data_acesso_br: null, duvidas_revisor: "Fonte do programa não identificada; homônimo descartado." });
+  const html = await renderizar(p, {}, { [p.id_interno]: {
+    nivel: NIVEL_EDITORIAL, verificado_em: "2026-10-05", tem_referencias_na_revisao: true,
+    urls_da_revisao: ["https://www.exemplo.gov.br/homonimo"],
+    referencias: [{ url: "https://www.exemplo.gov.br/homonimo", titulo: "Programa distinto: referência de delimitação", consultado_em: "2026-10-05" }],
+  } });
+  const refs = secao(html, "referencias");
+  assert.match(texto(refs), /Link de referência não identificado/);
+  assert.match(refs, /href="https:\/\/www.exemplo.gov.br\/homonimo"/);
+  assert.doesNotMatch(refs, /<a\b[^>]*class="[^"]*\bpolicy-reference(?:\s|")/);
 });

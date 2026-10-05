@@ -133,7 +133,7 @@ Conferir saída:
 python -B scripts/etl/validate.py
 ```
 
-O validate.py **não bloqueia** — apenas reporta. Erros típicos da
+Para publicação, executar `python -B scripts/etl/validate.py --strict`: erros devem bloquear o avanço. Sem `--strict`, o comando apenas reporta. Erros típicos da
 incorporação de nova onda:
 
 - **`situacao_atual` fora do vocabulário**: valor novo como
@@ -153,45 +153,30 @@ Cada ficha inválida fica visível em
 com `id_interno`, `slug`, `uf` e `mensagem`. Compartilhar com a equipe de
 pesquisa.
 
-### 6. Sincronizar com o site
+### 6. Validar o site dentro do projeto
 
-O site operacional vive em outro repositório, em `C:/Users/antro/dev/
-catalogo-politicas/`. Copiar o JSON:
+Nesta rodada toda escrita fica em `G:/Drives compartilhados/FRM_CatalogoPoliticas`.
+O segundo clone é somente leitura; não copiar derivados nem executar build nele.
+O site desta árvore lê os derivados do mesmo projeto.
 
-```bash
-cp data/derived/latest.json /c/Users/antro/dev/catalogo-politicas/data/derived/latest.json
+```powershell
+.venv/Scripts/python.exe -B scripts/etl/validate.py --strict
+Set-Location site
+npm test
+npm run build
 ```
 
-Rebuild local antes de push:
+Conferir contagens e navegação (`/`, `/sobre/`, `/uf/<sigla>/`). O loader do site
+filtra réplicas federais. Usar saída isolada dentro do projeto se houver prévia
+concorrente; não apagar saídas ou encerrar processos de outras sessões.
 
-```bash
-cd /c/Users/antro/dev/catalogo-politicas/site
-rm -rf _site && npx @11ty/eleventy
-```
+### 7. Commit e publicação
 
-Conferir contagens novas (`/`, `/sobre/`, `/uf/<sigla>/`). O `_data/policies.js`
-do site filtra `is_federal_replica`, então o número de fichas únicas cai
-automaticamente em relação ao total bruto.
-
-### 7. Commit
-
-```bash
-git add data/raw/"Fichas das Políticas - Nª onda.xlsx" \
-        data/derived/policies-onda-N-*.json \
-        data/derived/latest.json \
-        scripts/etl/load_planilha.py
-git commit -m "etl: incorpora Nª onda (UFs: ..., ...)"
-```
-
-No repo do site:
-
-```bash
-git add data/derived/latest.json
-git commit -m "data: atualiza catálogo com Nª onda"
-git push
-```
-
-GitHub Pages faz deploy automático em ~2 min.
+Quando autorizados, revisar o diff e commitar a partir da raiz deste projeto:
+manifestos, registro persistente, derivados, código e documentação pertinentes.
+Não incluir relatórios privados, caches, snapshots binários ou fontes imutáveis
+alteradas. Executar o push diretamente deste repositório G e acompanhar testes
+e deploy no GitHub Actions. O tempo de publicação depende da execução da CI.
 
 ## Padrões e armadilhas conhecidas
 
@@ -269,3 +254,33 @@ IDs **nunca** são reaproveitados — política revogada mantém seu ID.
 - `.claude/rules/dados-politicas.md` — schema canônico e vocabulário
 - `.claude/context/policies-schema.json` — JSON Schema v0.2
 - `.claude/context/vocabulario-canonico.json` — valores aceitos por campo
+
+## Novas experiências documentais (sem modificar planilhas)
+
+Manifestos data/curadoria/novas-*.json usam versao: 1 e experiencias.
+Cada entrada contém chave_fonte estável, campos canônicos, justificativa,
+referencias públicas (url, titulo, consultado_em) e verificado_em.
+Nome, UF, tipo de política, fonte pública e descrição são obrigatórios.
+
+build_ids.py acrescenta as entradas após dedupe e preserva sua identidade no
+mesmo registro_fichas.csv, sob curadoria|chave_fonte. Não modificar a chave
+quando corrigir o título. Novas BR não são replicadas automaticamente nas UFs.
+Campos de ID, slug, captura e datas derivadas não são aceitos no manifesto.
+
+build_json.py aplica os campos tipados antes das capturas e das correções.
+A consulta de uma referência não cria data de captura. Com novas entradas,
+a saída padrão passa a policies-curadoria-YYYY-MM-DD.json, preservando o
+produto da onda anterior. Um nome explícito também pode ser usado:
+
+    python -B scripts/etl/build_json.py --output data/derived/policies-relatorios-2026-10-05.json
+
+O caminho deve ficar dentro do projeto e ser distinto de latest.json; a
+cópia latest continua sendo atualizada. Executar depois `python -B scripts/etl/validate.py --strict`.
+
+## Revisão editorial e ausência de fonte
+
+Correções sem consulta externa usam `nivel: leitura_editorial_evidencia_insuficiente`,
+`referencias: []`, justificativa e nota explícita em `duvidas_revisor`. Não são
+confirmações substantivas. Uma fonte incompatível pode ser removida com `novo: null`;
+o pipeline limpa sua proveniência e gera citação sem URL. Novas experiências
+continuam exigindo fonte pública. Ver o ADR de 05/10/2026 sobre revisão editorial.

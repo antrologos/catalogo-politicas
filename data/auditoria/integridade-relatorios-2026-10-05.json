@@ -1,0 +1,48 @@
+{
+  "data": "2026-10-05",
+  "metodo": "Comparação SHA-256 dos sete arquivos fornecidos, lidos sem salvar alterações. Caminhos privados omitidos.",
+  "resultados": [
+    {
+      "relatorio": "BR",
+      "sha256_antes": "d35438db81c86e7cf683802b7385bcc4acc75287c36d1d72923e5cdd95bb3bae",
+      "sha256_depois": "d35438db81c86e7cf683802b7385bcc4acc75287c36d1d72923e5cdd95bb3bae",
+      "inalterado": true
+    },
+    {
+      "relatorio": "SP",
+      "sha256_antes": "4906db610c8eadeed60c3fc2a5667df60c0343bfd0dd0eb76e2a8ec851be1601",
+      "sha256_depois": "4906db610c8eadeed60c3fc2a5667df60c0343bfd0dd0eb76e2a8ec851be1601",
+      "inalterado": true
+    },
+    {
+      "relatorio": "RJ",
+      "sha256_antes": "d5a478de004d4a9cbfae4b5c03eaf25e6d479885b93d08fb7061a5aed2352b45",
+      "sha256_depois": "d5a478de004d4a9cbfae4b5c03eaf25e6d479885b93d08fb7061a5aed2352b45",
+      "inalterado": true
+    },
+    {
+      "relatorio": "PI",
+      "sha256_antes": "994749bd7c3658b20d855b2bb2ddafb661e41ce1edd4e836b39c236c7d22772e",
+      "sha256_depois": "994749bd7c3658b20d855b2bb2ddafb661e41ce1edd4e836b39c236c7d22772e",
+      "inalterado": true
+    },
+    {
+      "relatorio": "CE",
+      "sha256_antes": "c4b7eaa1161748e32180cfc39e99935c12915ea418958b6910fa44408b1fd138",
+      "sha256_depois": "c4b7eaa1161748e32180cfc39e99935c12915ea418958b6910fa44408b1fd138",
+      "inalterado": true
+    },
+    {
+      "relatorio": "AM",
+      "sha256_antes": "90747fba6b9e800abdd3d2c995d88e4a128617f2bd7e6f1f0feb68dc7e70762a",
+      "sha256_depois": "90747fba6b9e800abdd3d2c995d88e4a128617f2bd7e6f1f0feb68dc7e70762a",
+      "inalterado": true
+    },
+    {
+      "relatorio": "PA",
+      "sha256_antes": "84169eefc4dbed831a9adc3295a69a6e33b05250e1117f371ec92df9478cf06d",
+      "sha256_depois": "84169eefc4dbed831a9adc3295a69a6e33b05250e1117f371ec92df9478cf06d",
+      "inalterado": true
+    }
+  ]
+}

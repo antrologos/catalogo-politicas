@@ -103,3 +103,8 @@ Toda mudança no vocabulário canônico **deve**:
 - `CLAUDE.md` § Vocabulário canônico (de Modelo categorias)
 - `.claude/working/R1-A1.3-lacunas.md` lacunas #3 e #5
 - `.claude/working/Checkpoint3-decisoes.md` decisão #1
+## Extensão de 05/10/2026
+
+A execução admite `Não governamental`, preservando identificação de órgãos e sem inferência sobre financiamento. O JSON é a lista vigente; contagens e quadros históricos acima registram etapas anteriores. Ver ADR `2026-10-05_revisao-editorial-sem-nova-fonte.md`.
+
+A formulação admite `Sem informação` quando sua autoria não estiver demonstrada; não inferir pela natureza do executor ou pelo financiamento.

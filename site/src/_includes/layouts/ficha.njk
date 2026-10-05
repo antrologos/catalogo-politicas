@@ -8,6 +8,10 @@ layout: layouts/base.njk
 ] %}
 {% include "components/breadcrumb.njk" %}
 {% set revisao = revisoes[p.id_interno] %}
+{% set revisaoEditorial = revisao and revisao.nivel == 'leitura_editorial_evidencia_insuficiente' %}
+{% set temReferenciasRevisao = revisao and (revisao.referencias | length) %}
+{% set fonteRevalidada = revisao and revisao.urls_da_revisao and (p.fonte_url in revisao.urls_da_revisao) %}
+{% set referenciaLevantamento = not temReferenciasRevisao or not p.fonte_url or not fonteRevalidada %}
 
 <article data-pagefind-body data-ficha
          data-pagefind-meta="uf:{{ p.uf }}"
@@ -86,7 +90,7 @@ layout: layouts/base.njk
     <h2 id="finalidade">Finalidade</h2>
     {% set descricaoPrincipal = p.descricao_simples or p.resumo or p.apresentacao or p.descricao_tecnica %}
     {% if descricaoPrincipal %}
-      <p class="text-base text-neutral-700" data-pagefind-ignore>{{ 'Descrição revisada com as referências abaixo:' if revisao else 'Descrição registrada no levantamento:' }}</p>
+      <p class="text-base text-neutral-700" data-pagefind-ignore>{% if revisaoEditorial %}Descrição revisada editorialmente, sem confirmação factual adicional:{% elif temReferenciasRevisao %}Descrição revisada com as referências abaixo:{% else %}Descrição registrada no levantamento:{% endif %}</p>
       <p class="whitespace-pre-line" data-pagefind-meta="descricao">{{ descricaoPrincipal }}</p>
       {% if (p.resumo and p.resumo != descricaoPrincipal) or (p.apresentacao and p.apresentacao != descricaoPrincipal) %}
         <details class="my-lg print-expand">
@@ -150,8 +154,8 @@ layout: layouts/base.njk
 
   <section aria-labelledby="referencias">
     <h2 id="referencias">Referências</h2>
-    {% if revisao %}
-      <h3>Referências da revisão</h3>
+    {% if temReferenciasRevisao %}
+      <h3>{{ 'Referências de revisões anteriores' if (revisaoEditorial and not revisao.tem_referencias_na_revisao) else 'Referências da revisão' }}</h3>
       <ul class="policy-references">
         {% for referencia in revisao.referencias %}
           <li>
@@ -162,23 +166,22 @@ layout: layouts/base.njk
           </li>
         {% endfor %}
       </ul>
-      {% if p.duvidas_revisor %}
-        <aside class="policy-note my-lg" aria-label="Alcance da revisão" data-pagefind-ignore>
-          <strong>Alcance da revisão de {{ revisao.verificado_em | dataBR }}:</strong>
-          <p class="whitespace-pre-line mb-0">{{ p.duvidas_revisor }}</p>
-        </aside>
+    {% endif %}
+    {% if referenciaLevantamento %}
+      <h3>Referência indicada no levantamento{% if revisao %} — não revalidada nesta revisão{% endif %}</h3>
+      {% if p.fonte_url and ('.local' not in (p.fonte_url | lower)) %}
+        <p><a href="{{ p.fonte_url }}" class="btn btn--secondary policy-reference" rel="external nofollow noopener" target="_blank">Consultar a referência ↗</a> <span class="text-sm text-neutral-700 print-hide">(abre em nova aba)</span></p>
+      {% else %}
+        <p>Link de referência não identificado no levantamento. Consulte os instrumentos citados abaixo e os órgãos responsáveis informados.</p>
       {% endif %}
-    {% else %}
-    <h3>Referência indicada no levantamento</h3>
-    {% if p.fonte_url and ('.local' not in (p.fonte_url | lower)) %}
-      <p><a href="{{ p.fonte_url }}" class="btn btn--secondary policy-reference" rel="external nofollow noopener" target="_blank">Consultar a referência ↗</a> <span class="text-sm text-neutral-700 print-hide">(abre em nova aba)</span></p>
-    {% else %}
-      <p>Link de referência não identificado no levantamento. Consulte os instrumentos citados abaixo e os órgãos responsáveis informados.</p>
-    {% endif %}
-    {% endif %}
-    {% if not revisao %}
       {% set acesso = referenciasAuditadas[p.fonte_url] %}
       {% if acesso %}<p class="text-sm text-neutral-700" data-pagefind-ignore>{{ acesso.mensagem }} Checagem: {{ acesso.checado_em | dataBR }}. Essa resposta não informa a situação da experiência.</p>{% endif %}
+    {% endif %}
+    {% if revisao and p.duvidas_revisor %}
+      <aside class="policy-note my-lg" aria-label="Alcance da revisão" data-pagefind-ignore>
+        <strong>Alcance da revisão{% if revisaoEditorial %} editorial{% endif %} de {{ revisao.verificado_em | dataBR }}:</strong>
+        <p class="whitespace-pre-line mb-0">{{ p.duvidas_revisor }}</p>
+      </aside>
     {% endif %}
     <dl class="policy-facts text-sm" data-pagefind-ignore>
       <dt class="font-semibold text-neutral-700">{{ 'Consulta registrada na captura' if revisao else 'Consulta da referência' }}</dt>

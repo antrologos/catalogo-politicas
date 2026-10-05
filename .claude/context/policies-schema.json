@@ -58,12 +58,12 @@
 
     "esfera_formulacao": {
       "type": "string",
-      "description": "Esfera responsável pela formulação da política. Vocabulário canônico em vocabulario-canonico.json (~12 valores oficiais)."
+      "description": "Esfera responsável pela formulação; Sem informação quando a autoria não estiver demonstrada. Valores em vocabulario-canonico.json."
     },
 
     "esfera_execucao": {
       "type": "string",
-      "description": "Esfera responsável pela execução. Vocabulário canônico em vocabulario-canonico.json (~20 valores oficiais; alvo de drift ortográfico sério na planilha-fonte)."
+      "description": "Esfera responsável pela execução, incluindo Não governamental quando documentado. Valores em vocabulario-canonico.json."
     },
 
     "abrangencia_territorial": {
@@ -145,10 +145,10 @@
     },
 
     "fonte_url": {
-      "type": "string",
+      "type": ["string", "null"],
       "format": "uri",
       "pattern": "^https?://",
-      "description": "URL canônica da fonte primária (lei/decreto/página oficial). Padrão #2 R3.2: toda ficha tem fonte clicável validada."
+      "description": "URL pública da fonte primária; null registra ausência ou retirada documentada de fonte incompatível. A presença da URL não comprova validade ou execução da política."
     },
 
     "fonte_tipo": {

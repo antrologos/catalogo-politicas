@@ -1,0 +1,26 @@
+{
+  "data": "2026-10-05",
+  "python_testes": 175,
+  "node_testes": 45,
+  "schema_fichas_validas": 1180,
+  "html": 447,
+  "pagefind_fichas": 388,
+  "pagefind_filtros": 4,
+  "links_locais": 24091,
+  "ancoras": 3329,
+  "problemas_links": 0,
+  "responsividade_px": [
+    1440,
+    390,
+    320
+  ],
+  "percursos": [
+    "Ficha editorial com fonte herdada",
+    "Nova ficha Bora Acolher",
+    "Avança Mais SC sem fonte compatível",
+    "Navegação Início/Explorar/Sobre",
+    "Busca Cemeapi, filtro AM e abertura da nova ficha"
+  ],
+  "problemas_js_recursos_locais_overflow": 0,
+  "limite": "Amostra de navegação e inspeção visual, com analytics e VLibras bloqueados; não equivale a auditoria completa de acessibilidade."
+}

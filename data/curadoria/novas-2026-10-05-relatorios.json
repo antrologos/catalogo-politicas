@@ -1,0 +1,872 @@
+{
+  "versao": 1,
+  "experiencias": [
+    {
+      "chave_fonte": "am:ifam:maues:agroecologia-eja-satere-mawe",
+      "campos": {
+        "uf": "AM",
+        "nome": "Agroecologia integrada à EJA — IFAM/Maués e povo Sateré-Mawé",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "União",
+        "esfera_execucao": "União",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Presencial",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "Não confirmado",
+        "descricao_tecnica": "Experiência de educação profissional integrada à EJA para indígenas Sateré-Mawé, realizada pelo IFAM em Maués com pedagogia da alternância e articulação com o território comunitário.",
+        "resumo": "Experiência de educação profissional integrada à EJA para indígenas Sateré-Mawé, realizada pelo IFAM em Maués com pedagogia da alternância e articulação com o território comunitário.",
+        "fonte_url": "https://www2.ifam.edu.br/noticias/ifam-e-a-missao-de-promover-a-educacao-escolar-indigena",
+        "fonte_tipo": "outros",
+        "revisado_por": null,
+        "licenca_inferida": "sem_licenca_explicita",
+        "duvidas_revisor": "Turma histórica territorialmente identificada. Não foi confirmada nova turma em 2026 nem generalização da experiência para todas as ofertas indígenas.",
+        "orgaos_responsaveis": [
+          "Instituto Federal do Amazonas (IFAM) — Campus Maués",
+          "Comunidade indígena Sateré-Mawé"
+        ],
+        "informacoes_complementares": "O IFAM documenta formatura em março de 2023 na comunidade Ilha Michiles. Alternância envolve tempos formativos na instituição e na comunidade; não foi classificada automaticamente como EaD."
+      },
+      "justificativa": "Experiência territorial identificada na leitura final do relatório AM e confrontada com fonte pública primária. Não duplica automaticamente programa federal.",
+      "referencias": [
+        {
+          "url": "https://www2.ifam.edu.br/noticias/ifam-e-a-missao-de-promover-a-educacao-escolar-indigena",
+          "titulo": "IFAM — missão de promover educação escolar indígena, 18/04/2023",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "am:lei-7114-2024:campanha-eja",
+      "campos": {
+        "uf": "AM",
+        "nome": "Campanha estadual de informação sobre EJA — Lei 7.114/2024",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Estado",
+        "esfera_execucao": "Estado",
+        "abrangencia_territorial": "Estadual",
+        "tipo_oferta": "Serviço/Atendimento",
+        "modalidade_oferta": "Sem informação",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2024",
+        "descricao_tecnica": "Previsão legal de campanha informativa sobre EJA no Amazonas, a ser realizada anualmente em setembro, incluindo acesso, continuidade dos estudos e oportunidades de formação.",
+        "resumo": "Previsão legal de campanha informativa sobre EJA no Amazonas, a ser realizada anualmente em setembro, incluindo acesso, continuidade dos estudos e oportunidades de formação.",
+        "fonte_url": "https://legisla.imprensaoficial.am.gov.br/diario_am/12/2024/10/13991",
+        "fonte_tipo": "lei",
+        "revisado_por": null,
+        "licenca_inferida": "sem_licenca_explicita",
+        "duvidas_revisor": "A fonte comprova a previsão normativa. Não foram encontradas nesta revisão evidências suficientes de realização da campanha; não inferir oferta de vagas ou funcionamento atual.",
+        "base_legal": "Lei estadual 7.114, de 03/10/2024."
+      },
+      "justificativa": "Experiência territorial identificada na leitura final do relatório AM e confrontada com fonte pública primária. Não duplica automaticamente programa federal.",
+      "referencias": [
+        {
+          "url": "https://legisla.imprensaoficial.am.gov.br/diario_am/12/2024/10/13991",
+          "titulo": "Amazonas — Lei 7.114, de 03/10/2024",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "am:manaus:cemeapi",
+      "campos": {
+        "uf": "AM",
+        "nome": "Escolarização de adultos e pessoas idosas — Cemeapi/Manaus",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Presencial",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "Não confirmado nas fontes públicas consultadas",
+        "descricao_tecnica": "Oferta municipal de escolarização para adultos e idosos, em turmas presenciais multisseriadas e espaços de instituições parceiras. A unidade da FUnATI integra essa rede e não constitui programa escolar independente.",
+        "resumo": "Oferta municipal de escolarização para adultos e idosos, em turmas presenciais multisseriadas e espaços de instituições parceiras. A unidade da FUnATI integra essa rede e não constitui programa escolar independente.",
+        "fonte_url": "https://www.manaus.am.gov.br/noticia/educacao/prefeitura-realiza-8a-socializacao-das-praticas-pedagogicas-do-cemeapi/",
+        "fonte_tipo": "outros",
+        "revisado_por": null,
+        "licenca_inferida": "sem_licenca_explicita",
+        "duvidas_revisor": "Evidência documental do período indicado; funcionamento e resultados atuais não foram confirmados.",
+        "orgaos_responsaveis": [
+          "Secretaria Municipal de Educação de Manaus (Semed)",
+          "Centro Municipal de Escolarização do Adulto e da Pessoa Idosa (Cemeapi)",
+          "FUnATI e demais instituições parceiras"
+        ],
+        "informacoes_complementares": "A notícia municipal de 2023 descreve atendimento a partir de 30 anos, manhã e tarde. Totais daquele ano não representam cobertura atual. A carga e a duração devem seguir a proposta pedagógica vigente, sem somar cronogramas de notícias antigas."
+      },
+      "justificativa": "Experiência territorial identificada na leitura final do relatório AM e confrontada com fonte pública primária. Não duplica automaticamente programa federal.",
+      "referencias": [
+        {
+          "url": "https://www.manaus.am.gov.br/noticia/educacao/prefeitura-realiza-8a-socializacao-das-praticas-pedagogicas-do-cemeapi/",
+          "titulo": "Manaus — organização e práticas pedagógicas do Cemeapi, 26/07/2023",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.funati.am.gov.br/2022/01/07/funati-abre-inscricoes-para-escolarizacao-de-adultos-e-idosos-2/",
+          "titulo": "FUnATI — parceria Cemeapi/Semed e escolarização, 07/01/2022",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.manaus.am.gov.br/semed/wp-content/uploads/sites/3/2024/09/PPROPOSTA_PEDAGOGICA_EJA-_2023_SEMED1.pdf",
+          "titulo": "Semed Manaus — Proposta pedagógica EJA 2023",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "am:manaus:monifes",
+      "campos": {
+        "uf": "AM",
+        "nome": "Movimento Ninguém Fora da Escola (Monifes) — Manaus",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Serviço/Atendimento",
+        "modalidade_oferta": "Presencial",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2012 (início informado pela Semed em 2015)",
+        "descricao_tecnica": "Ação municipal de acolhimento e mobilização de estudantes da EJA noturna, com atividades culturais e de convivência para fortalecer o vínculo com a escola.",
+        "resumo": "Ação municipal de acolhimento e mobilização de estudantes da EJA noturna, com atividades culturais e de convivência para fortalecer o vínculo com a escola.",
+        "fonte_url": "https://www.manaus.am.gov.br/semcom/movimento-ninguem-fora-da-escola-da-prefeitura-de-manaus-conta-com-participacao-de-mais-de-8-mil-alunos-em-2023/",
+        "fonte_tipo": "outros",
+        "revisado_por": null,
+        "licenca_inferida": "sem_licenca_explicita",
+        "duvidas_revisor": "Evidência documental do período indicado; funcionamento e resultados atuais não foram confirmados.",
+        "orgaos_responsaveis": [
+          "Secretaria Municipal de Educação de Manaus (Semed)"
+        ],
+        "informacoes_complementares": "A notícia de 2023 documenta edição semestral. Participação em eventos não equivale a redução comprovada da evasão."
+      },
+      "justificativa": "Experiência territorial identificada na leitura final do relatório AM e confrontada com fonte pública primária. Não duplica automaticamente programa federal.",
+      "referencias": [
+        {
+          "url": "https://www.manaus.am.gov.br/semcom/movimento-ninguem-fora-da-escola-da-prefeitura-de-manaus-conta-com-participacao-de-mais-de-8-mil-alunos-em-2023/",
+          "titulo": "Manaus — Monifes nas escolas de EJA, 24/03/2023",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.manaus.am.gov.br/noticia/manaus/semed-realiza-mobilizacao-para-sensibilizar-alunos-e-professores-do-ensino-noturno/",
+          "titulo": "Manaus — mobilização do ensino noturno e início em 2012, 12/06/2015",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "am:sao-sebastiao-uatuma:escola-floresta-jose-loureiro",
+      "campos": {
+        "uf": "AM",
+        "nome": "Escola da Floresta José Loureiro da Silva — RDS Uatumã",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Estado",
+        "esfera_execucao": "Estado",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Presencial",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2024",
+        "descricao_tecnica": "Escola pública estadual na RDS Uatumã, em São Sebastião do Uatumã, com EJA noturna documentada e oferta regular organizada segundo o contexto ribeirinho.",
+        "resumo": "Escola pública estadual na RDS Uatumã, em São Sebastião do Uatumã, com EJA noturna documentada e oferta regular organizada segundo o contexto ribeirinho.",
+        "fonte_url": "https://www.seduc.am.gov.br/index.php/not%C3%ADcias/5871-escola-da-floresta-inicia-2025-com-novas-turmas-na-modalidade-de-tempo-integral",
+        "fonte_tipo": "outros",
+        "revisado_por": null,
+        "licenca_inferida": "sem_licenca_explicita",
+        "duvidas_revisor": "Evidência documental do período indicado; funcionamento e resultados atuais não foram confirmados.",
+        "orgaos_responsaveis": [
+          "Secretaria de Estado de Educação e Desporto Escolar do Amazonas (Seduc-AM)"
+        ],
+        "informacoes_complementares": "A EJA noturna é distinta das turmas regulares de tempo integral. A capacidade do prédio não foi convertida em matrícula; outras escolas anunciadas não são tratadas como entregues."
+      },
+      "justificativa": "Experiência territorial identificada na leitura final do relatório AM e confrontada com fonte pública primária. Não duplica automaticamente programa federal.",
+      "referencias": [
+        {
+          "url": "https://www.seduc.am.gov.br/index.php/not%C3%ADcias/5871-escola-da-floresta-inicia-2025-com-novas-turmas-na-modalidade-de-tempo-integral",
+          "titulo": "Seduc-AM — oferta da Escola da Floresta no ano de 2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.casacivil.am.gov.br/governador-wilson-lima-inaugura-primeira-escola-da-floresta-na-rds-de-sao-sebastiao-do-uatuma/",
+          "titulo": "Casa Civil-AM — inauguração da Escola da Floresta em 2024",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "am:uea:reescrevendo-futuro",
+      "campos": {
+        "uf": "AM",
+        "nome": "Reescrevendo o Futuro — alfabetização de jovens e adultos",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Estado",
+        "esfera_execucao": "Estado",
+        "abrangencia_territorial": "Estadual",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Presencial",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2003",
+        "descricao_tecnica": "Programa histórico de alfabetização presencial coordenado pela UEA, com colaboração da Seduc e de municípios, articulando letramento e temas socioambientais.",
+        "resumo": "Programa histórico de alfabetização presencial coordenado pela UEA, com colaboração da Seduc e de municípios, articulando letramento e temas socioambientais.",
+        "fonte_url": "https://data.uea.edu.br/ssgp/area/1/ppp/2203-7.pdf",
+        "fonte_tipo": "outros",
+        "revisado_por": null,
+        "licenca_inferida": "sem_licenca_explicita",
+        "duvidas_revisor": "Registro histórico documentado em relatórios de 2006 e 2008. Não foi confirmado ato de encerramento, nem operação em 2026; não classificado automaticamente como ativo ou encerrado.",
+        "orgaos_responsaveis": [
+          "Universidade do Estado do Amazonas (UEA)",
+          "Seduc-AM",
+          "Municípios parceiros"
+        ],
+        "informacoes_complementares": "Públicos documentados incluem trabalhadores rurais, indígenas e pessoas privadas de liberdade. Amazonas Mais Alfabetizado, voltado à alfabetização de crianças, não foi tratado como sucessor equivalente."
+      },
+      "justificativa": "Experiência territorial identificada na leitura final do relatório AM e confrontada com fonte pública primária. Não duplica automaticamente programa federal.",
+      "referencias": [
+        {
+          "url": "https://data.uea.edu.br/ssgp/area/1/ppp/2203-7.pdf",
+          "titulo": "UEA — Relatório de atividades 2006, Programa Reescrevendo o Futuro",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://data.uea.edu.br/ssgp/area/1/ppp/2203-11.pdf",
+          "titulo": "UEA — Relatório de gestão 2008, seção 3.2",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "br:fundeb",
+      "campos": {
+        "uf": "BR",
+        "nome": "Fundeb — financiamento da educação básica",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "União",
+        "esfera_execucao": "Compartilhada interfederativa: União-Estado-Município",
+        "abrangencia_territorial": "Nacional",
+        "tipo_oferta": "Não aplicável",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2007; configuração permanente regulamentada em 2020",
+        "base_legal": "Constituição Federal, art. 212-A; Emenda Constitucional nº 108/2020; Lei nº 14.113/2020 e normas anuais de operacionalização.",
+        "orgaos_responsaveis": [
+          "União",
+          "Estados e Distrito Federal",
+          "Municípios",
+          "Conselhos de acompanhamento e controle social do Fundeb"
+        ],
+        "publico_alvo": "Redes e instituições beneficiárias nos termos da legislação, seus estudantes e profissionais da educação básica.",
+        "resumo": "Mecanismo de financiamento público da educação básica e de valorização de seus profissionais, incluindo a EJA.",
+        "descricao_tecnica": "A Lei nº 14.113/2020 regulamenta fundos de natureza contábil em cada estado e no Distrito Federal, com redistribuição de receitas e complementação da União. Matrículas e parâmetros legais integram o cálculo. Não existe um valor universal por estudante da EJA aplicável a qualquer rede e ano.",
+        "apresentacao": "A Lei nº 14.113/2020 regulamenta fundos de natureza contábil em cada estado e no Distrito Federal, com redistribuição de receitas e complementação da União. Matrículas e parâmetros legais integram o cálculo. Não existe um valor universal por estudante da EJA aplicável a qualquer rede e ano.",
+        "duvidas_revisor": "Marco de financiamento, não curso nem benefício individual. Valores anuais, ponderações e execução por rede precisam ser examinados no exercício correspondente; esta ficha não audita aplicação de recursos.",
+        "continuidade_governos": "Não aferida nesta revisão; ver marcos e limites nas referências.",
+        "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14113.htm",
+        "fonte_tipo": "lei",
+        "revisado_por": null
+      },
+      "justificativa": "Experiência ausente do acervo identificada na leitura e conferida nas referências públicas indicadas. Registro delimitado a desenho, finalidade e território; não comprova implementação local.",
+      "referencias": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14113.htm",
+          "titulo": "Lei nº 14.113/2020 — regulamentação do Fundeb",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "br:pdde-equidade-eja",
+      "campos": {
+        "uf": "BR",
+        "nome": "PDDE Equidade — Educação de Jovens e Adultos",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "União",
+        "esfera_execucao": "Compartilhada interfederativa: União-Estado-Município",
+        "abrangencia_territorial": "Nacional",
+        "tipo_oferta": "Benefício/Auxílio financeiro",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2024 (PDDE Equidade); regras atualizadas em 2026",
+        "base_legal": "Resolução CD/FNDE nº 8, de 7 de maio de 2026, que revogou a Resolução nº 17/2024; Decreto nº 12.048/2024.",
+        "orgaos_responsaveis": [
+          "MEC/SECADI",
+          "FNDE",
+          "Secretarias de educação e unidades executoras das escolas"
+        ],
+        "publico_alvo": "Escolas públicas das redes estaduais, distrital e municipais que atendam aos critérios do subeixo EJA; seus estudantes são beneficiários do apoio à oferta.",
+        "resumo": "Apoio financeiro suplementar a escolas públicas que ofertam EJA, para melhorar condições materiais e pedagógicas de acesso, permanência e conclusão.",
+        "descricao_tecnica": "A Resolução FNDE nº 8/2026 inclui EJA no eixo PDDE Diversidades. Secretarias e unidades executoras aderem ao programa; escolas elegíveis devem ofertar EJA fundamental ou média e integrar redes que aderiram ao Pacto EJA. Priorização e repasse dependem de critérios, matrículas e disponibilidade orçamentária.",
+        "apresentacao": "A Resolução FNDE nº 8/2026 inclui EJA no eixo PDDE Diversidades. Secretarias e unidades executoras aderem ao programa; escolas elegíveis devem ofertar EJA fundamental ou média e integrar redes que aderiram ao Pacto EJA. Priorização e repasse dependem de critérios, matrículas e disponibilidade orçamentária.",
+        "duvidas_revisor": "A norma comprova desenho e elegibilidade. Não foram aferidos repasses, despesas realizadas, escolas atendidas ou resultados. Recursos são destinados às escolas; não são benefício individual ao estudante.",
+        "continuidade_governos": "Não aferida nesta revisão; ver marcos e limites nas referências.",
+        "fonte_url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2026/resolucao-cd-fnde-no-8-de-7-de-maio-de-2026",
+        "fonte_tipo": "resolucao",
+        "revisado_por": null
+      },
+      "justificativa": "Experiência ausente do acervo identificada na leitura e conferida nas referências públicas indicadas. Registro delimitado a desenho, finalidade e território; não comprova implementação local.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/legislacao/resolucoes/2026/resolucao-cd-fnde-no-8-de-7-de-maio-de-2026",
+          "titulo": "Resolução CD/FNDE nº 8/2026 — PDDE Equidade",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "br:pne-2026",
+      "campos": {
+        "uf": "BR",
+        "nome": "Plano Nacional de Educação — PNE 2026",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "União",
+        "esfera_execucao": "Compartilhada interfederativa: União-Estado-Município",
+        "abrangencia_territorial": "Nacional",
+        "tipo_oferta": "Não aplicável",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2026",
+        "base_legal": "Lei nº 15.388, de 14 de abril de 2026, especialmente o objetivo 11 e estratégias do Anexo I.",
+        "orgaos_responsaveis": [
+          "União",
+          "Estados e Distrito Federal",
+          "Municípios",
+          "Instâncias de acompanhamento previstas na lei"
+        ],
+        "publico_alvo": "População brasileira; no objetivo 11, jovens, adultos e idosos que não acessaram ou concluíram a educação básica.",
+        "resumo": "Plano decenal com objetivos, metas e estratégias para a educação, incluindo alfabetização e acesso, permanência e conclusão da educação básica de jovens, adultos e idosos.",
+        "descricao_tecnica": "A Lei nº 15.388/2026 estabelece duração de dez anos. O objetivo 11 contempla a EJA; inclui metas de escolaridade, expansão de matrículas e atendimento da demanda por vagas, com chamada pública e busca ativa. As estratégias tratam de gratuidade, turnos, permanência, formação docente e materiais.",
+        "apresentacao": "A Lei nº 15.388/2026 estabelece duração de dez anos. O objetivo 11 contempla a EJA; inclui metas de escolaridade, expansão de matrículas e atendimento da demanda por vagas, com chamada pública e busca ativa. As estratégias tratam de gratuidade, turnos, permanência, formação docente e materiais.",
+        "duvidas_revisor": "Metas são compromissos de política pública, não resultados alcançados ou garantia de vaga imediata. A ficha não comprova execução dos planos, cumprimento de metas ou cobertura em cada território.",
+        "continuidade_governos": "Não aferida nesta revisão; ver marcos e limites nas referências.",
+        "fonte_url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15388.htm",
+        "fonte_tipo": "lei",
+        "revisado_por": null
+      },
+      "justificativa": "Experiência ausente do acervo identificada na leitura e conferida nas referências públicas indicadas. Registro delimitado a desenho, finalidade e território; não comprova implementação local.",
+      "referencias": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2026/lei/l15388.htm",
+          "titulo": "Lei nº 15.388/2026 — Plano Nacional de Educação",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "br:pnld-eja-2026-2029",
+      "campos": {
+        "uf": "BR",
+        "nome": "PNLD EJA — Obras didáticas 2026–2029",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "União",
+        "esfera_execucao": "Compartilhada interfederativa: União-Estado-Município",
+        "abrangencia_territorial": "Nacional",
+        "tipo_oferta": "Insumo/Bem de apoio",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2023 (edital do ciclo 2026–2029)",
+        "base_legal": "Decreto nº 9.099/2017; Edital CGPLI nº 2/2023 e retificações — PNLD EJA 2026–2029.",
+        "orgaos_responsaveis": [
+          "MEC/SEB",
+          "MEC/SECADI",
+          "FNDE"
+        ],
+        "publico_alvo": "Estudantes e professores da EJA fundamental das redes públicas e demais instituições admitidas no edital.",
+        "resumo": "Seleção e aquisição de obras didáticas para estudantes e professores da EJA nos anos iniciais e finais do ensino fundamental.",
+        "descricao_tecnica": "O Edital CGPLI nº 2/2023, retificado, organiza o ciclo PNLD EJA 2026–2029 em dois segmentos. Prevê inscrição e avaliação das coleções e procedimentos de aquisição. A ficha identifica esse ciclo e não toda a trajetória do PNLD.",
+        "apresentacao": "O Edital CGPLI nº 2/2023, retificado, organiza o ciclo PNLD EJA 2026–2029 em dois segmentos. Prevê inscrição e avaliação das coleções e procedimentos de aquisição. A ficha identifica esse ciclo e não toda a trajetória do PNLD.",
+        "duvidas_revisor": "O edital demonstra público e procedimento de aquisição, não entrega em cada escola. A existência de materiais digitais não equivale a oferta de EaD nem substitui a escolarização presencial.",
+        "continuidade_governos": "Não aferida nesta revisão; ver marcos e limites nas referências.",
+        "fonte_url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/programas/programas-do-livro/consultas-editais/editais/pnld-eja-2025-2028/Edital_EJA_3a_retificacao.pdf",
+        "fonte_tipo": "edital",
+        "revisado_por": null
+      },
+      "justificativa": "Experiência ausente do acervo identificada na leitura e conferida nas referências públicas indicadas. Registro delimitado a desenho, finalidade e território; não comprova implementação local.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/programas/programas-do-livro/consultas-editais/editais/pnld-eja-2025-2028/Edital_EJA_3a_retificacao.pdf",
+          "titulo": "FNDE — Edital PNLD EJA 2026–2029, terceira retificação",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/programas/programas-do-livro/consultas-editais/editais/pnld-eja-2025-2028",
+          "titulo": "FNDE — documentos do ciclo PNLD EJA",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "br:pnld-literario-equidade-eja",
+      "campos": {
+        "uf": "BR",
+        "nome": "PNLD Literário Equidade — Educação de Jovens e Adultos",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "União",
+        "esfera_execucao": "Compartilhada interfederativa: União-Estado-Município",
+        "abrangencia_territorial": "Nacional",
+        "tipo_oferta": "Insumo/Bem de apoio",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2024 (edital)",
+        "base_legal": "Decreto nº 9.099/2017; Edital CGPLI nº 3/2024; Portaria SEB/MEC nº 129, de 8 de abril de 2026 (resultado prévio).",
+        "orgaos_responsaveis": [
+          "MEC/SEB",
+          "FNDE"
+        ],
+        "publico_alvo": "Estudantes e educadores da EJA, conforme o objeto e as regras do edital.",
+        "resumo": "Seleção de obras literárias destinadas à Educação de Jovens e Adultos, no Objeto 1 do PNLD Literário Equidade.",
+        "descricao_tecnica": "O Edital CGPLI nº 3/2024 possui objeto específico para a EJA. A Portaria SEB/MEC nº 129/2026 publica resultado prévio da avaliação pedagógica, com aprovação, aprovação condicionada e reprovação. Essa etapa é distinta de aquisição e entrega dos livros.",
+        "apresentacao": "O Edital CGPLI nº 3/2024 possui objeto específico para a EJA. A Portaria SEB/MEC nº 129/2026 publica resultado prévio da avaliação pedagógica, com aprovação, aprovação condicionada e reprovação. Essa etapa é distinta de aquisição e entrega dos livros.",
+        "duvidas_revisor": "A evidência consultada confirma avaliação pedagógica. O resultado final e eventuais retificações posteriores, aquisições e distribuição não foram integralmente verificados. Não confundir acervo literário com coleções didáticas do PNLD EJA.",
+        "continuidade_governos": "Não aferida nesta revisão; ver marcos e limites nas referências.",
+        "fonte_url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/programas/programas-do-livro/consultas-editais/editais/pnld-literario-equidade/ResultadoprviodaavaliaopedaggicaPNLDEquidadeObj01.pdf",
+        "fonte_tipo": "portaria",
+        "revisado_por": null
+      },
+      "justificativa": "Experiência ausente do acervo identificada na leitura e conferida nas referências públicas indicadas. Registro delimitado a desenho, finalidade e território; não comprova implementação local.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/programas/programas-do-livro/consultas-editais/editais/pnld-literario-equidade/ResultadoprviodaavaliaopedaggicaPNLDEquidadeObj01.pdf",
+          "titulo": "FNDE — resultado prévio da avaliação pedagógica, Objeto 1/EJA",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "br:sne",
+      "campos": {
+        "uf": "BR",
+        "nome": "Sistema Nacional de Educação — SNE",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "União",
+        "esfera_execucao": "Compartilhada interfederativa: União-Estado-Município",
+        "abrangencia_territorial": "Nacional",
+        "tipo_oferta": "Não aplicável",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2025",
+        "base_legal": "Lei Complementar nº 220, de 31 de outubro de 2025.",
+        "orgaos_responsaveis": [
+          "MEC",
+          "Gestores estaduais, distritais e municipais de educação",
+          "Instâncias intergestores previstas na lei"
+        ],
+        "publico_alvo": "Sistemas de ensino e população atendida pelas políticas educacionais, incluindo a EJA.",
+        "resumo": "Marco de cooperação entre União, estados, Distrito Federal e municípios para articular planejamento e políticas educacionais.",
+        "descricao_tecnica": "A Lei Complementar nº 220/2025 organiza relações entre sistemas de ensino e prevê instâncias de pactuação: Cite em âmbito nacional e Cibes nos estados. Define responsabilidades e mecanismos de articulação, respeitando a autonomia federativa.",
+        "apresentacao": "A Lei Complementar nº 220/2025 organiza relações entre sistemas de ensino e prevê instâncias de pactuação: Cite em âmbito nacional e Cibes nos estados. Define responsabilidades e mecanismos de articulação, respeitando a autonomia federativa.",
+        "duvidas_revisor": "A instituição do sistema não comprova instalação e funcionamento de todas as comissões nem expansão efetiva da oferta. Trata-se de governança educacional, não programa de matrícula.",
+        "continuidade_governos": "Não aferida nesta revisão; ver marcos e limites nas referências.",
+        "fonte_url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp220.htm",
+        "fonte_tipo": "lei",
+        "revisado_por": null
+      },
+      "justificativa": "Experiência ausente do acervo identificada na leitura e conferida nas referências públicas indicadas. Registro delimitado a desenho, finalidade e território; não comprova implementação local.",
+      "referencias": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/lcp/lcp220.htm",
+          "titulo": "Lei Complementar nº 220/2025 — Sistema Nacional de Educação",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "ce:eja-comunidade-cigana-sobral",
+      "campos": {
+        "uf": "CE",
+        "nome": "EJA na comunidade cigana da Fazenda Joelma — Sobral",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Presencial",
+        "arranjo_logistico": "Unidade fixa",
+        "situacao_atual": "Ativa / em execução",
+        "ano_criacao": "2026",
+        "base_legal": "Implantação administrativa de turma municipal noticiada pela Secretaria da Educação em março de 2026; ato específico de autorização não examinado.",
+        "orgaos_responsaveis": [
+          "Secretaria da Educação de Sobral",
+          "Escola Leonilia Gomes Parente"
+        ],
+        "resumo": "Turma municipal de EJA instalada no território de uma comunidade cigana em Sobral, como anexo de escola pública.",
+        "descricao_tecnica": "A inauguração de 9 de março de 2026 foi documentada na Fazenda Joelma, localidade de Jaburuna, às margens da BR-222. A sala funciona no complexo do Instituto Cigano do Brasil e é anexo da Escola Leonilia Gomes Parente, do distrito de Jaibaras.",
+        "apresentacao": "Experiência de aproximação territorial da oferta pública de EJA à comunidade cigana.",
+        "informacoes_complementares": "A referência menciona cerca de 40 famílias na comunidade; esse número não equivale a estudantes matriculados ou beneficiários efetivamente atendidos.",
+        "fonte_url": "https://educacao.sobral.ce.gov.br/comunicacao/principais/sobral-inaugura-primeira-turma-da-eja-voltada-a-comunidade-cigana-no-ceara",
+        "fonte_tipo": "outros",
+        "duvidas_revisor": "A inauguração documenta execução local em março de 2026. Não foram confirmados matrículas, etapa curricular, carga horária, resultados ou expansão a outras comunidades; não se generaliza a experiência para todo o Ceará.",
+        "revisado_por": null
+      },
+      "justificativa": "Relatório CE p666 e p711; fonte municipal sustenta experiência territorial específica, com unidade pública responsável identificada.",
+      "referencias": [
+        {
+          "url": "https://educacao.sobral.ce.gov.br/comunicacao/principais/sobral-inaugura-primeira-turma-da-eja-voltada-a-comunidade-cigana-no-ceara",
+          "titulo": "SME Sobral — turma de EJA na comunidade cigana da Fazenda Joelma, março de 2026",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "ce:nova-eja-fortaleza",
+      "campos": {
+        "uf": "CE",
+        "nome": "Nova EJA Fortaleza",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Mista",
+        "arranjo_logistico": "Unidade fixa",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2023",
+        "base_legal": "Lançamento administrativo documentado pela Prefeitura em 23/01/2023; ato normativo específico não localizado nesta revisão.",
+        "orgaos_responsaveis": [
+          "Secretaria Municipal da Educação de Fortaleza"
+        ],
+        "resumo": "Programa anunciado em 2023 para a EJA da rede municipal de Fortaleza, com revisão curricular, formação de professores e apoios aos estudantes.",
+        "descricao_tecnica": "O lançamento descreve ensino fundamental para jovens a partir de 15 anos, adultos e idosos, atividades presenciais e virtuais e ações complementares de formação. Tablets, bolsas e investimentos foram anunciados como parte de um pacote; esses anúncios não são contabilizados aqui como entregas comprovadas.",
+        "apresentacao": "Experiência municipal de reorganização e apoio à EJA, voltada à continuidade da escolarização.",
+        "informacoes_complementares": "O relato público de 2023 é anterior às diretrizes nacionais de EJA de 2025. A menção a atividades virtuais registra o desenho histórico, sem recomendar substituição de aulas presenciais.",
+        "fonte_url": "https://www.fortaleza.ce.gov.br/noticias/prefeitura-lanca-programa-nova-eja-fortaleza-com-pacote-de-investimentos-de-cerca-de-r-30-milhoes",
+        "fonte_tipo": "outros",
+        "duvidas_revisor": "Não foram verificados execução integral dos benefícios, quantitativo de matrículas, continuidade atual sob esse nome ou adequação do desenho às normas posteriores. A ausência de confirmação atual não equivale a encerramento.",
+        "revisado_por": null
+      },
+      "justificativa": "Relatório CE p665; fonte municipal confirma lançamento e componentes, com separação explícita entre anúncio e execução.",
+      "referencias": [
+        {
+          "url": "https://www.fortaleza.ce.gov.br/noticias/prefeitura-lanca-programa-nova-eja-fortaleza-com-pacote-de-investimentos-de-cerca-de-r-30-milhoes",
+          "titulo": "Prefeitura de Fortaleza — lançamento Nova EJA Fortaleza, 23/01/2023",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "pa:bora-acolher-belem",
+      "campos": {
+        "situacao_atual": "Sem informação",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "revisado_por": null,
+        "uf": "PA",
+        "nome": "Bora Acolher — apoio à permanência na EJAI em Belém",
+        "tipo_politica": "Proteção social com impacto educacional",
+        "tipo_oferta": "Serviço/Atendimento",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "ano_criacao": "2022 (implantação informada pela prefeitura)",
+        "orgaos_responsaveis": [
+          "Secretaria Municipal de Educação de Belém (Semec)",
+          "Coordenadoria de Educação de Jovens, Adultos e Idosos (Coejai)"
+        ],
+        "resumo": "Acolhimento de filhos de estudantes da EJAI durante as aulas, documentado em escola municipal de Outeiro, Belém.",
+        "descricao_tecnica": "A iniciativa atende crianças enquanto seus responsáveis estudam. Na experiência de 2023 da EMEF Helder Fialho, uma equipe desenvolvia atividades pedagógicas, lúdicas e esportivas no horário noturno, com alimentação. A notícia registra atendimento a famílias indígenas Warao.",
+        "informacoes_complementares": "Registro de funcionamento em maio de 2023, sem confirmação de cobertura ou continuidade em 2026. A afirmação institucional sobre evasão zero não foi convertida em evidência causal.",
+        "duvidas_revisor": "Curadoria documental de 05/10/2026: experiência municipal documentada em 2023; situação atual, financiamento e norma instituidora não confirmados. Não se atribui responsabilidade pelos cuidados apenas às mulheres nem se generaliza o piloto para toda a rede.",
+        "fonte_url": "https://agenciabelem.com.br/Noticia/234152/iniciativa-da-prefeitura-de-belem-alcanca-evasao-zero-em-escola-municipal-que-acolhe-filhos-dos-estudantes",
+        "fonte_tipo": "pagina_programa"
+      },
+      "justificativa": "Experiência local de apoio aos cuidados e permanência de estudantes da EJAI, identificada no relatório PA e confirmada em fonte municipal.",
+      "referencias": [
+        {
+          "url": "https://agenciabelem.com.br/Noticia/234152/iniciativa-da-prefeitura-de-belem-alcanca-evasao-zero-em-escola-municipal-que-acolhe-filhos-dos-estudantes",
+          "titulo": "Agência Belém, notícia sobre o Bora Acolher, 24 de maio de 2023",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "pa:empodera-mais-guajara",
+      "campos": {
+        "situacao_atual": "Ativa / em execução",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "revisado_por": null,
+        "uf": "PA",
+        "nome": "Empodera+ — projeto-piloto na Região de Integração Guajará",
+        "tipo_politica": "Proteção social com impacto educacional",
+        "tipo_oferta": "Serviço/Atendimento",
+        "esfera_formulacao": "Interfederativa: União-Estado",
+        "esfera_execucao": "Compartilhada interfederativa: União-Estado",
+        "abrangencia_territorial": "Estadual",
+        "ano_criacao": "2024 (Acordo de Cooperação Técnica; seleção estadual em 2025)",
+        "base_legal": "Acordo de Cooperação Técnica MDHC nº 22/2024, identificado no edital estadual de 18 de junho de 2025.",
+        "orgaos_responsaveis": [
+          "Secretaria de Estado de Igualdade Racial e Direitos Humanos do Pará (Seirdh-PA)",
+          "Ministério dos Direitos Humanos e da Cidadania (MDHC)",
+          "Fundacentro",
+          "Secretaria de Estado de Educação do Pará (parceria educacional)"
+        ],
+        "resumo": "Projeto-piloto de apoio à escolarização, qualificação e inclusão no trabalho de pessoas LGBTQIA+ em vulnerabilidade na região Guajará.",
+        "descricao_tecnica": "O edital estadual prevê acompanhamento individual e bolsas, com seleção de pessoas LGBTQIA+ maiores de 18 anos sem vínculo formal de trabalho. O piloto abrange Belém, Ananindeua, Benevides, Marituba e Santa Bárbara do Pará. Em fevereiro de 2026, a Seirdh documentou início de aulas de EJA para participantes em escola estadual de Belém.",
+        "transferencia_recursos": "O edital de 2025 prevê bolsas por etapa e perfil, condicionadas ao termo de outorga da Fundacentro; não há valor único para todos os participantes.",
+        "informacoes_complementares": "A execução educacional documentada em fevereiro de 2026 não comprova inserção laboral, renda ou conclusão escolar. Esta ficha descreve o piloto paraense, distinto das execuções em outras UFs.",
+        "duvidas_revisor": "Curadoria documental de 05/10/2026: edital de 2025 e início de aulas em 2026 consultados. Valores e requisitos pertencem à seleção citada; cobertura atual integral e resultados de emprego/renda não foram aferidos.",
+        "fonte_url": "https://seirdh.pa.gov.br/sites/default/files/2025-06/EDITAL%20EMPODERA%2B%202025.pdf",
+        "fonte_tipo": "edital"
+      },
+      "justificativa": "Execução territorial própria, confirmada por edital paraense e início de aulas, com relação concreta entre direitos, cuidados educacionais e trabalho.",
+      "referencias": [
+        {
+          "url": "https://seirdh.pa.gov.br/sites/default/files/2025-06/EDITAL%20EMPODERA%2B%202025.pdf",
+          "titulo": "Seirdh-PA, Edital Empodera+ de 18 de junho de 2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.seirdh.pa.gov.br/node/865",
+          "titulo": "Seirdh-PA, Participantes do Empodera+ iniciam aulas na rede estadual em Belém, fevereiro de 2026",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "pi:eja-diurna-picos",
+      "campos": {
+        "situacao_atual": "Sem informação",
+        "modalidade_oferta": "Presencial",
+        "arranjo_logistico": "Unidade fixa",
+        "revisado_por": null,
+        "uf": "PI",
+        "nome": "Oferta diurna de EJA na rede municipal de Picos",
+        "tipo_politica": "Educacional",
+        "tipo_oferta": "Oferta educacional",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "ano_criacao": "2025 (anúncio da ampliação diurna; não é a criação da EJA municipal)",
+        "orgaos_responsaveis": [
+          "Secretaria Municipal de Educação de Picos"
+        ],
+        "resumo": "Ampliação da oferta municipal de EJA para o período diurno, anunciada em fevereiro de 2025.",
+        "descricao_tecnica": "A prefeitura anunciou turmas diurnas de EJA do Ensino Fundamental e expansão dos pontos de atendimento urbanos e rurais. A mudança buscava atender trajetórias escolares com atraso e ampliar alternativas de horário.",
+        "informacoes_complementares": "A fonte é anúncio de matrícula de 2025. Não comprova funcionamento de todas as turmas anunciadas nem resultados ou continuidade em 2026.",
+        "duvidas_revisor": "Curadoria documental de 05/10/2026: proposta local documentada em comunicação de matrícula. Execução integral, número atual de turmas e resultados não foram confirmados. A experiência não é recomendação de transferir adolescentes automaticamente para EJA.",
+        "fonte_url": "https://www2.picos.pi.gov.br/secretarias/educacao/seme-oferta-vagas-em-periodo-diurno-para-alunos-da-educacao-de-jovens-e-adultos/",
+        "fonte_tipo": "pagina_programa"
+      },
+      "justificativa": "Organização local de horário citada pelo relatório PI; registra-se o anúncio e seu limite, sem afirmar execução integral.",
+      "referencias": [
+        {
+          "url": "https://www2.picos.pi.gov.br/secretarias/educacao/seme-oferta-vagas-em-periodo-diurno-para-alunos-da-educacao-de-jovens-e-adultos/",
+          "titulo": "Prefeitura de Picos, oferta diurna de EJA, 12 de fevereiro de 2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "pi:proveja-piripiri",
+      "campos": {
+        "situacao_atual": "Sem informação",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Não aplicável",
+        "revisado_por": null,
+        "uf": "PI",
+        "nome": "Programa de Valorização da Educação de Jovens e Adultos (PROVEJA) — Piripiri",
+        "tipo_politica": "Educacional",
+        "tipo_oferta": "Benefício/Auxílio financeiro",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "orgaos_responsaveis": [
+          "Secretaria Municipal de Educação de Piripiri"
+        ],
+        "resumo": "Incentivo municipal à matrícula e permanência na EJA do Ensino Fundamental, com bolsas e apoios materiais documentados em Piripiri.",
+        "descricao_tecnica": "Notícia municipal registra pagamento de bolsas referentes aos bimestres de 2023, além de transporte, material didático e uniforme. O recebimento estava associado a frequência e desempenho escolar, conforme condições descritas na publicação.",
+        "informacoes_complementares": "O benefício é municipal e não se confunde com o PROEJA federal. A página de 2024 descreve pagamentos de 2023 e apresenta marcos distintos de 2021/2022, insuficientes para fixar uma data única de criação.",
+        "duvidas_revisor": "Curadoria documental de 05/10/2026: funcionamento histórico confirmado por pagamento documentado. Não se confirmou a lei citada sem número, nem oferta e valores atuais. Não se inferiu eficácia sobre evasão.",
+        "fonte_url": "https://www.piripiri.pi.gov.br/post/alunos-do-proveja-recebem-valor-integral-de-quatro-parcelas-das-bolsas-de-estudo-de-2023",
+        "fonte_tipo": "pagina_programa"
+      },
+      "justificativa": "Incentivo local distinto do PROEJA federal e do Alfabetiza Piauí, com execução financeira histórica documentada.",
+      "referencias": [
+        {
+          "url": "https://www.piripiri.pi.gov.br/post/alunos-do-proveja-recebem-valor-integral-de-quatro-parcelas-das-bolsas-de-estudo-de-2023",
+          "titulo": "Prefeitura de Piripiri, pagamento de bolsas PROVEJA referentes a 2023, página datada de 18 de outubro de 2024",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "rj:dam-mais-rio",
+      "campos": {
+        "uf": "RJ",
+        "nome": "Projeto DAM+ — Rio de Janeiro",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Misto",
+        "modalidade_oferta": "Sem informação",
+        "arranjo_logistico": "Unidade fixa",
+        "situacao_atual": "Ativa / em execução",
+        "ano_criacao": null,
+        "base_legal": "Oferta administrativa documentada pela Casa Civil municipal em 02/07/2026; ato específico de instituição não localizado nesta revisão.",
+        "orgaos_responsaveis": [
+          "Coordenadoria da Diversidade Sexual da Casa Civil do Rio de Janeiro",
+          "Secretaria Municipal de Educação",
+          "Centro Municipal de Referência de Educação de Jovens e Adultos (CREJA)"
+        ],
+        "resumo": "Apoio à conclusão do Ensino Fundamental de pessoas trans, travestis e não binárias em vulnerabilidade social, por meio do CREJA municipal.",
+        "descricao_tecnica": "A notícia de julho de 2026 documenta nova turma, bolsa para permanência escolar e previsão de experiência profissional em equipamentos municipais. A escolarização e a etapa de trabalho são componentes distintos.",
+        "apresentacao": "Iniciativa municipal de acesso e permanência na educação básica para população trans e travesti.",
+        "informacoes_complementares": "A referência menciona edições anteriores, mas não informa o ano de criação, a duração universal ou o valor da bolsa.",
+        "fonte_url": "https://casacivil.prefeitura.rio/noticias/diversidade-sexual-e-sme-abrem-inscricoes-para-bolsas-de-estudo/",
+        "fonte_tipo": "outros",
+        "duvidas_revisor": "A execução está documentada por chamada de julho de 2026; não se afirma que inscrições continuam abertas em outubro. A fonte não detalha carga horária, distribuição presencial das aulas ou quantas pessoas concluíram o curso. O ano 2022 citado internamente não foi transferido sem confirmação pública.",
+        "revisado_por": null
+      },
+      "justificativa": "Relatório RJ p717; notícia oficial recuperada diretamente e salva no cache privado, sem publicar o relatório interno.",
+      "referencias": [
+        {
+          "url": "https://casacivil.prefeitura.rio/noticias/diversidade-sexual-e-sme-abrem-inscricoes-para-bolsas-de-estudo/",
+          "titulo": "Casa Civil/Rio — nova turma DAM+, 02/07/2026, atualização 17/07/2026; leitura direta bem-sucedida",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "rj:escolaridade-rio",
+      "campos": {
+        "uf": "RJ",
+        "nome": "Programa EscolarIdade — Rio de Janeiro",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Município",
+        "esfera_execucao": "Município",
+        "abrangencia_territorial": "Municipal",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Presencial",
+        "arranjo_logistico": "Unidade fixa",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2025",
+        "base_legal": "Lançamento administrativo noticiado pela SME em 21/10/2025. A notícia relaciona a iniciativa ao objetivo de educação do Decreto Rio 55.996/2025; não se afirma que esse decreto instituiu especificamente o programa.",
+        "orgaos_responsaveis": [
+          "Secretaria Municipal de Educação do Rio de Janeiro",
+          "Secretaria Municipal do Envelhecimento Saudável e Qualidade de Vida"
+        ],
+        "resumo": "Alfabetização em classes anexas à EJA municipal, instaladas em Casas de Convivência da Zona Oeste do Rio de Janeiro.",
+        "descricao_tecnica": "O lançamento de outubro de 2025 descreve aulas de manhã e à tarde nas Casas Dercy Gonçalves, em Santa Cruz, e Lolita Rodrigues, em Guaratiba, com materiais e uniforme. A primeira etapa anunciada previa 75 estudantes; expansão para outras Casas era gradual.",
+        "apresentacao": "Experiência que aproxima a alfabetização pública de pessoas mais velhas por meio de equipamentos de convivência no território.",
+        "informacoes_complementares": "A notícia chama o público de idoso, mas o serviço informa ingresso a partir de 50 anos. Preserva-se essa informação sem alterar o conceito legal de pessoa idosa.",
+        "fonte_url": "https://educacao.prefeitura.rio/noticias/prefeitura-do-rio-garante-direito-a-educacao-para-idosos-com-o-programa-escolaridade/",
+        "fonte_tipo": "outros",
+        "duvidas_revisor": "Oferta documentada no lançamento de 2025. Continuidade das turmas, matrículas realizadas, vagas atuais e expansão posterior não verificadas. Sem informação sobre situação atual não significa programa encerrado.",
+        "revisado_por": null
+      },
+      "justificativa": "Relatório RJ p679; fonte municipal sustenta finalidade, funcionamento presencial e dois territórios, com limites de idade e escala.",
+      "referencias": [
+        {
+          "url": "https://educacao.prefeitura.rio/noticias/prefeitura-do-rio-garante-direito-a-educacao-para-idosos-com-o-programa-escolaridade/",
+          "titulo": "SME-Rio — lançamento do EscolarIdade, 21/10/2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "sp:novotec",
+      "campos": {
+        "uf": "SP",
+        "nome": "Novotec",
+        "tipo_politica": "Educacional",
+        "esfera_formulacao": "Estado",
+        "esfera_execucao": "Estado",
+        "abrangencia_territorial": "Estadual",
+        "tipo_oferta": "Oferta educacional",
+        "modalidade_oferta": "Mista",
+        "arranjo_logistico": "Misto (fixa + itinerante)",
+        "situacao_atual": "Sem informação",
+        "ano_criacao": "2019",
+        "base_legal": "Lançamento administrativo documentado pela SEDUC-SP em 01/03/2019; ato específico de instituição não localizado nesta revisão.",
+        "orgaos_responsaveis": [
+          "Secretaria de Desenvolvimento Econômico do Estado de São Paulo",
+          "Centro Paula Souza",
+          "Secretaria da Educação do Estado de São Paulo"
+        ],
+        "resumo": "Programa paulista anunciado em 2019 para articular ensino médio e formação técnica ou qualificação profissional.",
+        "descricao_tecnica": "O desenho de lançamento distingue Novotec Integrado, ligado ao ensino médio regular, e ofertas Expresso, Móvel e Virtual. A notícia informa cursos em escolas estaduais, Etecs e unidades móveis, com formas de oferta diferentes. Não se trata de programa exclusivo de EJA.",
+        "apresentacao": "Experiência estadual de educação profissional articulada ao ensino médio e de cursos de qualificação.",
+        "informacoes_complementares": "Quantidades de vagas e duração divulgadas no lançamento referem-se a 2019. Não foram tratadas como oferta aberta em 2026.",
+        "fonte_url": "https://www.educacao.sp.gov.br/sp-lanca-programa-de-ensino-tecnico-profissionalizante/",
+        "fonte_tipo": "outros",
+        "duvidas_revisor": "Registro histórico: a referência consultada comprova lançamento e desenho de 2019, sem confirmar a continuidade atual de todas as modalidades, sucessões ou vínculo específico com EJA. O componente virtual é descrição da experiência, não recomendação de substituição do ensino presencial.",
+        "revisado_por": null
+      },
+      "justificativa": "Relatório SP p841; confirmação pública do lançamento e dos formatos, mantendo a situação atual sem informação.",
+      "referencias": [
+        {
+          "url": "https://www.educacao.sp.gov.br/sp-lanca-programa-de-ensino-tecnico-profissionalizante/",
+          "titulo": "SEDUC-SP — lançamento do Novotec, 01/03/2019",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "chave_fonte": "sp:superacao-sp",
+      "campos": {
+        "uf": "SP",
+        "nome": "SuperAção SP — Programa de Superação da Pobreza",
+        "tipo_politica": "Proteção social com impacto educacional",
+        "esfera_formulacao": "Estado",
+        "esfera_execucao": "Compartilhada interfederativa: Estado-Município",
+        "abrangencia_territorial": "Estadual",
+        "tipo_oferta": "Misto",
+        "modalidade_oferta": "Não aplicável",
+        "arranjo_logistico": "Misto (fixa + itinerante)",
+        "situacao_atual": "Ativa / em execução",
+        "ano_criacao": "2025",
+        "base_legal": "Lei estadual 18.176, de 08/07/2025; a página da ALESP remete à regulamentação pelo Decreto 69.762, de 04/08/2025.",
+        "orgaos_responsaveis": [
+          "Secretaria de Desenvolvimento Social do Estado de São Paulo",
+          "Municípios participantes"
+        ],
+        "resumo": "Programa estadual que articula serviços públicos e benefícios para famílias em vulnerabilidade, com acompanhamento e plano de desenvolvimento familiar.",
+        "descricao_tecnica": "Agentes identificam necessidades e conectam as famílias a políticas de assistência, saúde, educação e trabalho. O módulo Desenvolver inclui EJA entre as possibilidades de atendimento. A política tem escopo mais amplo que escolarização e não cria, por si só, turmas de EJA.",
+        "apresentacao": "Articulação de proteção social, acesso a serviços e inclusão produtiva de famílias paulistas.",
+        "informacoes_complementares": "Implementação gradual em municípios participantes; abrangência prevista estadual não equivale a atendimento simultâneo de todas as famílias ou cidades.",
+        "fonte_url": "https://www.superacaosp.sp.gov.br/",
+        "fonte_tipo": "pagina_programa",
+        "duvidas_revisor": "A página oficial consultada descreve implementação em ondas e municípios participantes. Não foram verificados o número de famílias efetivamente atendidas, matrículas em EJA ou efeitos do programa. Benefícios dependem dos critérios e instrumentos vigentes.",
+        "revisado_por": null
+      },
+      "justificativa": "Relatório SP p852 orientou consulta; lei e portal oficiais confirmam identidade e componente de escolarização. A fonte interna não integra a referência pública.",
+      "referencias": [
+        {
+          "url": "https://www.superacaosp.sp.gov.br/",
+          "titulo": "Governo de São Paulo — SuperAção SP; desenho, municípios e serviços articulados",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.al.sp.gov.br/repositorio/legislacao/lei/2025/lei-18176-08.07.2025.html",
+          "titulo": "ALESP — Lei 18.176, de 08/07/2025; Programa de Superação da Pobreza",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    }
+  ]
+}

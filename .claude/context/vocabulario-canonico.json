@@ -1,6 +1,6 @@
 {
-  "_versao_schema": "1.0",
-  "_data_atualizacao": "2026-10-04",
+  "_versao_schema": "1.1",
+  "_data_atualizacao": "2026-10-05",
   "_origem": "Bloco C.1.b — exploração das 439 fichas da 1ª onda; ampliado com as ondas 2 e 3 e com o dicionário oficial 'Modelos de Categorias' da 3ª onda (2026-10-04; ADR 2026-10-04_vocabulario-3a-onda).",
   "_documentacao": "Estrutura e instruções de uso em vocabulario-canonico.md (mesma pasta).",
   "_como_usar": [
@@ -14,7 +14,9 @@
     "Sufixos descritivos em esfera_execucao (ex.: '+ rede ofertante', '+ Sistema S') NÃO são parte do canonical: foram movidos para esfera_execucao_apoios_parcerias quando o pipeline detecta. Aqui ficam apenas as variantes do tronco principal.",
     "Versões longas com explicação entre parênteses na situacao_atual e abrangencia_territorial são tratadas como variantes da versão curta canônica.",
     "Outliers únicos descritivos eram só logados; desde 2026-10-04 são mapeados pelo dicionário oficial da 3ª onda, e valores que pertencem a outro campo viram 'Sem informação' (ver _outliers_observados de cada campo e o ADR 2026-10-04_vocabulario-3a-onda).",
-    "Aspas tipográficas «» e en-dash – em arranjo_logistico/esfera_execucao são normalizadas antes do lookup."
+    "Aspas tipográficas «» e en-dash – em arranjo_logistico/esfera_execucao são normalizadas antes do lookup.",
+    "2026-10-05: esfera_execucao admite Não governamental para executores como SESI/SENAI, sem atribuição indevida a governo; ver ADR de revisão editorial sem nova fonte.",
+    "2026-10-05: esfera_formulacao admite Sem informação quando a autoria não está demonstrada; não inferir formulação pela natureza do executor."
   ],
   "campos": {
     "tipo_politica": {
@@ -43,7 +45,8 @@
         "Município",
         "Não governamental",
         "Interfederativa: União-Estado",
-        "Interfederativa: União-Estado-Município"
+        "Interfederativa: União-Estado-Município",
+        "Sem informação"
       ],
       "variants": {
         "interfederativa: união–estado": "Interfederativa: União-Estado",
@@ -52,7 +55,8 @@
         "união-estado": "Interfederativa: União-Estado",
         "interfederativa: união - estado": "Interfederativa: União-Estado",
         "união-estado/distrito federal": "Interfederativa: União-Estado",
-        "distrito federal": "Estado"
+        "distrito federal": "Estado",
+        "sem informação": "Sem informação"
       },
       "_outliers_observados": [
         "interfederativa/interinstitucional: União-Estado-Município+Sistema S+entidades formadoras+empresasis, além do Sistema S, sistema de justiça (1 ocorrência; mover sufixo descritivo para descricao_tecnica) — mapeado para 'Interfederativa: União-Estado-Município' em 2026-10-04",
@@ -86,7 +90,8 @@
         "Compartilhada interfederativa: União-Estado-Município",
         "Compartilhada interfederativa: Estado-Município",
         "Compartilhada interfederativa: União-Município",
-        "Interinstitucional: descentralizada via Comitê Gestor"
+        "Interinstitucional: descentralizada via Comitê Gestor",
+        "Não governamental"
       ],
       "variants": {
         "compartilhada interfederativa: união–estado–município": "Compartilhada interfederativa: União-Estado-Município",
@@ -113,7 +118,8 @@
         "estado + rede de execução + instituições de ensino públicas/privadas": "Estado",
         "união-estado-município": "Compartilhada interfederativa: União-Estado-Município",
         "união-estado": "Compartilhada interfederativa: União-Estado",
-        "compartilhada interfederativamente: estado + união": "Compartilhada interfederativa: União-Estado"
+        "compartilhada interfederativamente: estado + união": "Compartilhada interfederativa: União-Estado",
+        "não governamental": "Não governamental"
       },
       "_outliers_observados": [
         "União - Empresas empregadoras + Entidades qualificadoras (13 ocorrências) — sufixo '+...' move para esfera_execucao_apoios_parcerias; tronco vira 'União'",
@@ -130,7 +136,7 @@
         "Estado + rede de execução + instituições de ensino públicas/privadas (1) — sufixo livre; mapeado para 'Estado' em 2026-10-04",
         "'Distrito Federal' (DF, 3ª onda) é opção do dicionário oficial; equivale a 'Estado' e mapeia para ele — o site exibe o rótulo 'Distrito Federal' nas fichas do DF (2026-10-04)"
       ],
-      "descricao": "8 valores canônicos no tronco principal. Drift sério (31 variantes detectadas). Sufixos descritivos '+ rede X', '+ Sistema S' devem migrar para esfera_execucao_apoios_parcerias na normalização. Variants mapeadas cobrem ~80% dos casos com sufixo simples."
+      "descricao": "9 valores canônicos no tronco principal, incluindo execução Não governamental (ADR de 2026-10-05). Órgãos e parcerias detalham o executor; o rótulo não determina a origem do financiamento."
     },
     "abrangencia_territorial": {
       "canonical_values": [

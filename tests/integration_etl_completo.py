@@ -17,9 +17,12 @@ from pathlib import Path
 import pytest
 import jsonschema
 
+from novas_experiencias import carregar_novas
+
 ROOT = Path(__file__).resolve().parent.parent
 LATEST = ROOT / "data" / "derived" / "latest.json"
 SCHEMA = ROOT / ".claude" / "context" / "policies-schema.json"
+NOVAS = carregar_novas(ROOT / "data/curadoria")
 with (ROOT / "data/derived/registro_fichas.csv").open(encoding="utf-8", newline="") as registro_inicial:
     IDENTIDADES_ANTES = {p["id_interno"]: p["slug"] for p in csv.DictReader(registro_inicial)}
 
@@ -46,7 +49,8 @@ def pipeline_executado():
         "scripts/etl/build_ids.py",
         "scripts/etl/build_json.py",
     ):
-        result = run(script)
+        argumentos = ("--output", ".claude/working/curadoria-relatorios-2026-10-05/integration-policies.json") if script.endswith("build_json.py") else ()
+        result = run(script, *argumentos)
         assert result.returncode == 0, f"{script} falhou: {result.stderr[:500]}"
     return LATEST
 
@@ -61,9 +65,9 @@ def politicas(pipeline_executado) -> list[dict]:
 
 # ─── Estrutura geral ───────────────────────────────────────────────
 
-def test_total_1158_fichas(politicas):
+def test_total_fichas_base_mais_novas(politicas):
     """Ondas 1-3 somam 1158 fichas (33 federais + 26 UFs, réplicas incluídas)."""
-    assert len(politicas) == 1158
+    assert len(politicas) == 1158 + len(NOVAS)
 
 
 def test_todas_validam_contra_schema(politicas):
@@ -95,9 +99,9 @@ def test_slugs_dentro_do_limite_120(politicas):
 
 # ─── Distribuição por UF ─────────────────────────────────────────
 
-def test_uf_br_tem_33_federais(politicas):
+def test_uf_br_preserva_base_e_acrescenta_novas(politicas):
     federais = [f for f in politicas if f["uf"] == "BR"]
-    assert len(federais) == 33
+    assert len(federais) == 33 + sum(e["campos"]["uf"] == "BR" for e in NOVAS)
 
 
 def test_todas_27_ufs_estao_presentes(politicas):
@@ -176,6 +180,7 @@ def test_curadoria_preserva_identidades_registradas(politicas):
 
 
 def test_curadoria_aplicada_e_propagada_sem_mudar_territorio(politicas):
+    esperados = {}
     por_id = {p["id_interno"]: p for p in politicas}
     for arquivo in sorted((ROOT / "data/curadoria").glob("correcoes-*.json")):
         for correcao in json.loads(arquivo.read_text(encoding="utf-8"))["correcoes"]:
@@ -184,7 +189,9 @@ def test_curadoria_aplicada_e_propagada_sem_mudar_territorio(politicas):
                                and p.get("federal_source_id") == origem["id_interno"]]
             for alvo in alvos:
                 for campo, mudanca in correcao["campos"].items():
-                    assert alvo.get(campo) == mudanca["novo"], (alvo["id_interno"], campo)
+                    esperados[(alvo["id_interno"], campo)] = mudanca["novo"]
+    for (id_, campo), valor in esperados.items():
+        assert por_id[id_].get(campo) == valor, (id_, campo)
 
 
 def test_curadoria_nao_introduz_categorias_fora_do_vocabulario(politicas):
@@ -203,3 +210,17 @@ def test_curadoria_nao_atribui_revisao_automatizada_a_pessoa(politicas):
             ficha = por_id[correcao["id_interno"]]
             assert ficha.get("revisado_por") is None, ficha["id_interno"]
             assert ficha.get("duvidas_revisor"), ficha["id_interno"]
+
+
+def test_novas_resolvem_registro_sem_replicacao_automatica(politicas):
+    with (ROOT / "data/derived/registro_fichas.csv").open(encoding="utf-8", newline="") as arquivo:
+        registros = {r["chave"]: r for r in csv.DictReader(arquivo)}
+    por_id = {p["id_interno"]: p for p in politicas}
+    for entrada in NOVAS:
+        registro = registros["curadoria|" + entrada["chave_fonte"]]
+        ficha = por_id[registro["id_interno"]]
+        assert ficha["uf"] == entrada["campos"]["uf"]
+        assert ficha["is_federal_replica"] is False
+        assert ficha["federal_source_id"] is None
+        assert ficha["revisado_por"] is None
+        assert not any(p.get("federal_source_id") == ficha["id_interno"] for p in politicas)
