@@ -6,6 +6,13 @@
 
 Orientações para o Claude Code (claude.ai/code) neste repositório. O histórico detalhado das rodadas de maio a outubro de 2026 está em `.claude/archive/CLAUDE-historico-ate-2026-10-04.md`. Use-o como arqueologia, não como checklist.
 
+## Suspensão temporária do acesso público (2026-10-05)
+
+- O usuário determinou suspensão imediata do catálogo até uma apresentação combinada. Não reverter o conteúdo; preservar a versão revisada integralmente.
+- `site/publicacao.json` controla o artefato público: `atualizacao` publica somente aviso, 404 e logo; `catalogo` reativa o fluxo completo de validação e publicação. Não mudar para `catalogo` sem novo pedido do usuário.
+- Fontes e dados permanecem intactos. A branch local `versao-revisada-2026-10-05` preserva c984d57. A suspensão não torna privado o repositório nem apaga conteúdo anteriormente acessado.
+- Plano: `.claude/plans/2026-10-05_suspensao-publica.md`.
+
 ## Orientação editorial aprovada em 04/10/2026
 
 - Produto público para consulta geral, produzido pela Rede EJA. A Rede é referência institucional, sem restrição de público. Orientação atualizada pelo usuário em 05/10/2026.

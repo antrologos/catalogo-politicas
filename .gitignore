@@ -175,3 +175,6 @@ data/derived/**/*.tar.gz
 
 # Relatorios privados e material de trabalho da curadoria
 /.claude/working/curadoria-relatorios-2026-10-05/
+
+# Artefato temporário de suspensão pública
+/site/_atualizacao/

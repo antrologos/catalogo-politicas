@@ -29,8 +29,55 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  modo:
+    name: Selecionar modo de publicação
+    runs-on: ubuntu-latest
+    outputs:
+      modo: ${{ steps.publicacao.outputs.modo }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validar configuração de publicação
+        id: publicacao
+        run: |
+          python <<'PYEOF'
+          import json, os
+          with open('site/publicacao.json', encoding='utf-8') as arquivo:
+              modo = json.load(arquivo).get('modo')
+          if modo not in ('catalogo', 'atualizacao'):
+              raise SystemExit('Modo de publicação inválido: use catalogo ou atualizacao.')
+          with open(os.environ['GITHUB_OUTPUT'], 'a', encoding='utf-8') as arquivo:
+              arquivo.write(f'modo={modo}\n')
+          print(f'Modo de publicação: {modo}')
+          PYEOF
+
+  atualizacao:
+    name: Publicar página temporária de atualização
+    needs: modo
+    if: needs.modo.outputs.modo == 'atualizacao' && github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: site/.nvmrc
+      - name: Preparar e validar artefato restrito de atualização
+        run: node site/scripts/build-atualizacao.mjs
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/_atualizacao
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
+
   validate:
     name: Validate JSON Schema
+    needs: modo
+    if: needs.modo.outputs.modo == 'catalogo'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -178,7 +225,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: [a11y, lighthouse]
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && (github.event_name == 'push' || github.event_name == 'workflow_dispatch')
     runs-on: ubuntu-latest
     environment:
       name: github-pages
