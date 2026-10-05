@@ -11,14 +11,14 @@ permalink: /explorar/
 {% include "components/breadcrumb.njk" %}
 
 <section aria-labelledby="explorar-h" class="page-intro">
-  <p class="eyebrow">Conheça o levantamento</p>
+  <p class="eyebrow">Territórios e áreas</p>
   <h1 id="explorar-h">Explorar o catálogo</h1>
   <p class="page-lead">
     Comece por um território ou uma área da política.
     Cada opção leva aos registros reunidos no catálogo.
   </p>
   <p class="text-note mt-md">
-    Já tem um nome ou assunto em mente? <a href="/buscar/">Faça uma busca</a>.
+    Para localizar um nome ou assunto, <a href="/buscar/">use a busca</a>.
   </p>
   <nav aria-label="Caminhos de exploração" class="flex flex-wrap gap-md mt-lg">
     <a href="#territorios" class="btn btn--secondary">Por território</a>
@@ -27,7 +27,7 @@ permalink: /explorar/
 </section>
 
 <div class="grid lg:grid-cols-2 gap-xl my-xl">
-  <section id="territorios" aria-labelledby="territorios-h" class="surface-panel">
+  <section id="territorios" aria-labelledby="territorios-h" class="catalog-section">
     <h2 id="territorios-h" class="section-heading">{% icon "list" %} Por território</h2>
     <p class="text-note mt-sm">
       Escolha a UF associada ao registro ou consulte a esfera federal.
@@ -37,7 +37,7 @@ permalink: /explorar/
       {% for sigla in agregados.ufsCobertas %}
         <li>
           <a href="/uf/{{ sigla | lower }}/"
-             class="flex min-h-[48px] h-full items-center justify-between gap-sm rounded border border-neutral-200 bg-white px-sm py-sm no-underline text-primary hover:border-primary">
+             class="flex min-h-[48px] h-full items-center justify-between gap-sm border-b border-neutral-200 py-sm text-primary hover:border-primary">
             <span>{% if sigla == "BR" %}Esfera federal{% else %}{{ ufs[sigla].nome or sigla }} <span class="text-note">({{ sigla }})</span>{% endif %}</span>
             <span class="text-note" aria-label="{{ agregados.countByUf[sigla] }} registros">{{ agregados.countByUf[sigla] }}</span>
           </a>
@@ -49,13 +49,12 @@ permalink: /explorar/
   <section id="areas" aria-labelledby="areas-h">
     <h2 id="areas-h" class="section-heading">{% icon "books" %} Por área da política</h2>
     <p class="text-note mt-sm">
-      As três áreas usadas no levantamento. Cada opção abre a lista dos
-      registros classificados nesse grupo.
+      Consulte as experiências por área da política.
     </p>
     <ul class="grid gap-md list-none p-0 mt-lg">
       {% for area in agregados.distribuicaoTipo %}
         <li>
-          <a href="/tipo/{{ area.tipo | slug }}/" class="access-card">
+          <a href="/tipo/{{ area.tipo | slug }}/" class="access-link">
             <h3 class="text-xl">{{ area.tipo }}</h3>
             <p>{{ area.n }} registros no levantamento</p>
           </a>
@@ -63,8 +62,7 @@ permalink: /explorar/
       {% endfor %}
     </ul>
     <p class="text-note mt-lg">
-      Para assuntos mais específicos, pesquise palavras da descrição.
-      As áreas acima são grupos amplos, não uma classificação por público ou etapa de ensino.
+      Para encontrar experiências por público, etapa de ensino ou assunto específico, use a busca.
     </p>
     <p class="mt-md"><a href="/buscar/" class="btn btn--secondary">Buscar um assunto</a></p>
   </section>
@@ -78,7 +76,7 @@ permalink: /explorar/
   </p>
 
   <div class="grid md:grid-cols-2 gap-md mt-lg">
-    <details class="surface-panel">
+    <details class="catalog-details">
       <summary class="font-semibold cursor-pointer">Situação no levantamento</summary>
       <p class="text-note mt-md">A classificação registrada não confirma oferta atual nem vigência jurídica.</p>
       <ul class="space-y-sm mt-md">
@@ -88,9 +86,9 @@ permalink: /explorar/
       </ul>
     </details>
 
-    <details class="surface-panel">
+    <details class="catalog-details">
       <summary class="font-semibold cursor-pointer">Modalidade informada</summary>
-      <p class="text-note mt-md">Consulte a ficha para conhecer a organização descrita. O rótulo não detalha o componente presencial, as atividades fora da escola ou o uso de internet.</p>
+      <p class="text-note mt-md">Consulte a ficha para conhecer a organização da oferta e suas referências.</p>
       <ul class="space-y-sm mt-md">
         {% for item in agregados.distribuicaoModalidade %}
           <li><a href="/modalidade/{{ item.valor | slug }}/">{{ item.valor }}</a> <span class="text-note">({{ item.n }})</span></li>
@@ -98,7 +96,7 @@ permalink: /explorar/
       </ul>
     </details>
 
-    <details class="surface-panel">
+    <details class="catalog-details">
       <summary class="font-semibold cursor-pointer">Abrangência informada</summary>
       <p class="text-note mt-md">O alcance declarado não equivale a locais de atendimento confirmados.</p>
       <ul class="space-y-sm mt-md">
@@ -108,7 +106,7 @@ permalink: /explorar/
       </ul>
     </details>
 
-    <details class="surface-panel">
+    <details class="catalog-details">
       <summary class="font-semibold cursor-pointer">Origem dos registros</summary>
       <p class="text-note mt-md">O catálogo reúne {{ agregados.federaisCount }} registros federais e {{ agregados.estaduaisUnicasCount }} estaduais ou distritais.</p>
       <ul class="space-y-sm mt-md">
@@ -118,7 +116,7 @@ permalink: /explorar/
     </details>
   </div>
 
-  <details class="surface-panel mt-md">
+  <details class="catalog-details mt-md">
     <summary class="font-semibold cursor-pointer">Outros termos para buscar</summary>
     <p class="text-note mt-md">
       Os links abaixo fazem buscas textuais pelos termos registrados.
@@ -144,17 +142,17 @@ permalink: /explorar/
 <section aria-labelledby="recursos-h" class="my-xl">
   <h2 id="recursos-h" class="section-heading">Outras formas de consultar o acervo</h2>
   <div class="grid md:grid-cols-3 gap-md mt-lg">
-    <a href="/mapa/" class="access-card">
+    <a href="/mapa/" class="access-link">
       <h3 class="text-xl">{% icon "map-trifold" %} Ver o mapa dos registros</h3>
       <p>Localize as UFs e veja as contagens do levantamento.</p>
     </a>
-    <a href="/comparacao/" class="access-card">
+    <a href="/comparacao/" class="access-link">
       <h3 class="text-xl">{% icon "chart-bar" %} Comparar UFs</h3>
       <p>Compare contagens e classificações de 2 a 9 UFs ou da esfera federal.</p>
     </a>
-    <a href="/sobre/cobertura/" class="access-card">
+    <a href="/sobre/cobertura/" class="access-link">
       <h3 class="text-xl">Entender a cobertura</h3>
-      <p>Conheça o recorte e os limites do acervo.</p>
+      <p>Conheça os territórios e as etapas da pesquisa.</p>
     </a>
   </div>
 </section>

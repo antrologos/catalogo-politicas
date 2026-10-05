@@ -1,28 +1,11 @@
-/**
- * Mapa coroplético D3 do Brasil (Sprint 8.1 + 8.2 do Bloco F.3, 2026-05-03).
- *
- * Renderiza GeoJSON simplificado das 27 UFs em #mapa-svg, colore proporcionalmente
- * à métrica selecionada (total/ativas), gradiente azul-IBGE.
- * UFs cobertas (1ª onda) recebem 5 stops; não cobertas ficam cinza com label
- * "em planejamento" no tooltip.
- *
- * Sprint 8.2 adiciona:
- *   - Toolbar com 2 modos de coloração (total/ativas)
- *   - Download SVG (XMLSerializer) e PNG (canvas 1200×1200)
- *
- * Sprint 8.3 vai adicionar mobile collapse + polish a11y.
- *
- * D3 v7 carregado via CDN jsdelivr — ~95KB minified+gz só nesta página.
- *
- * Lista textual paralela em <table> abaixo do mapa é fonte de verdade
- * canônica para leitores de tela (NF-M-10).
- */
-
-/* D3 v7 carregado via UMD em mapa.njk (window.d3 global).
-   Wait pelo D3 estar disponível antes de iniciar (defer carrega assíncrono). */
-function waitForD3(cb) {
-  if (typeof window !== "undefined" && window.d3) return cb();
-  setTimeout(() => waitForD3(cb), 30);
+/** Mapa compartilhado pela página inicial e pela consulta territorial. */
+function waitForD3(cb, attempts = 0) {
+  if (window.d3) return cb();
+  if (attempts < 100) return setTimeout(() => waitForD3(cb, attempts + 1), 30);
+  const svg = document.getElementById("mapa-svg");
+  if (svg) svg.innerHTML = '<text x="300" y="300" text-anchor="middle" fill="#625F70" font-size="16">Consulte a lista de estados abaixo.</text>';
+  const status = document.getElementById("mapa-status");
+  if (status) status.textContent = "Mapa indisponível. Consulte a lista de estados.";
 }
 
 waitForD3(async function init() {
@@ -45,10 +28,13 @@ waitForD3(async function init() {
     return;
   }
   const { porUf, pathPrefix } = data;
+  const modoNavegacao = svg.dataset.mapaModo === "navegacao";
+  const selecao = document.getElementById("mapa-selecao");
 
   let geo;
   try {
     const res = await fetch(`${pathPrefix}assets/geo/br-ufs.geojson`);
+    if (!res.ok) throw new Error(`GeoJSON: HTTP ${res.status}`);
     geo = await res.json();
   } catch (e) {
     console.error("[mapa] falha ao carregar GeoJSON:", e);
@@ -67,17 +53,8 @@ waitForD3(async function init() {
   // Sintoma sem essa correção: D3 tratava rings com winding "errado" como
   // "buraco no mundo todo", adicionando moldura mercator infinita ao path
   // (terminava com L0,0 L600,0 Z gigante). Agora paths são limpos.
-  const projection = d3.geoMercator().fitSize([width, height], geo);
+  const projection = d3.geoMercator().fitExtent([[12, 12], [width - 12, height - (modoNavegacao ? 18 : 75)]], geo);
   const pathGen = d3.geoPath().projection(projection);
-
-  // Diagnóstico inline (visível em DevTools > Console)
-  console.info("[mapa] D3 version:", d3.version);
-  console.info("[mapa] projection scale:", projection.scale().toFixed(0),
-               "translate:", projection.translate().map((n) => n.toFixed(0)));
-  // Sanity-check primeiro path
-  const firstPath = pathGen(geo.features[0]);
-  console.info("[mapa] AC path length:", firstPath ? firstPath.length : "NULL",
-               "first 80 chars:", firstPath ? firstPath.substring(0, 80) : "NULL");
 
   // === Estado global do mapa: métrica de coloração ativa ===
   const METRICAS = {
@@ -97,7 +74,7 @@ waitForD3(async function init() {
     return {
       scale: d3.scaleSequential()
         .domain([Math.max(0, min - 1), max])
-        .interpolator(d3.interpolateRgb("#D6E4F2", "#1A4F8B")),
+        .interpolator(d3.interpolateRgb("#E9E4F1", "#665A8E")),
       max,
       min,
     };
@@ -105,7 +82,7 @@ waitForD3(async function init() {
 
   // Cinza mais perceptível em UFs não cobertas (antes #E5DFD3 era quase
   // indistinguível do background bg-papel #FAF7F2 — fix visibilidade).
-  const COR_NAO_COBERTA = "#C7BFAE";
+  const COR_NAO_COBERTA = "#E1E2EA";
 
   const svgD3 = d3.select("#mapa-svg")
     .attr("viewBox", `0 0 ${width} ${height}`);
@@ -122,6 +99,20 @@ waitForD3(async function init() {
     if (statusEl) statusEl.textContent = msg;
   }
 
+  function posicionarTooltip(event) {
+    const container = document.getElementById("mapa-container");
+    const rect = container.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    tooltip.style.left = `${Math.max(0, Math.min(x + 12, rect.width - tooltip.offsetWidth))}px`;
+    tooltip.style.top = `${Math.max(0, Math.min(y + 12, rect.height - tooltip.offsetHeight))}px`;
+  }
+
+  function restaurarEstado(node, feature) {
+    d3.select(node).attr("stroke", "#847C94").attr("stroke-width", .8).attr("fill", node.dataset.fill);
+    labels.filter((f) => f === feature).attr("fill", function () { return this.dataset.fill; });
+  }
+
   // === Render dos 27 estados (paths + interação) ===
   // Sprint 8.3: usa Pointer Events (cobre mouse + touch + pen).
   // tabindex=0 apenas em paths clicáveis (evita 17 stops vazios em UFs não-cobertas).
@@ -130,7 +121,7 @@ waitForD3(async function init() {
     .enter()
     .append("path")
     .attr("d", pathGen)
-    .attr("stroke", "#3C342A")
+    .attr("stroke", "#847C94")
     .attr("stroke-width", 0.8)
     .attr("vector-effect", "non-scaling-stroke")
     .attr("data-sigla", (d) => d.properties.sigla)
@@ -144,47 +135,45 @@ waitForD3(async function init() {
       const nome = d.properties.name;
 
       d3.select(this)
-        .attr("stroke", "#3C342A")
-        .attr("stroke-width", 1.5);
+        .attr("stroke", "#493A6D")
+        .attr("stroke-width", 2)
+        .attr("fill", "#BFDE42");
+      if (selecao && agg) selecao.textContent = `${nome} (${sigla}) · ${agg.total} registros`;
+      labels.filter((f) => f.properties.sigla === sigla).attr("fill", "#252333");
 
       let html;
       if (agg) {
         html = `
           <div class="font-semibold">${nome} (${sigla})</div>
-          <div class="mt-2xs">${agg.total} registros · ${agg.ativas} com situação ativa no levantamento</div>
-          <div class="mt-2xs opacity-70">Clique para ver página da UF</div>
+          <div class="mt-2xs">${agg.total} registros${modoNavegacao ? "" : ` · ${agg.ativas} com situação ativa no levantamento`}</div>
+          <div class="mt-2xs opacity-70">Abrir experiências</div>
         `;
       } else {
         html = `
           <div class="font-semibold">${nome} (${sigla})</div>
-          <div class="mt-2xs">Em planejamento — não catalogada na 1ª onda</div>
+          <div class="mt-2xs">Sem registros neste catálogo</div>
         `;
       }
       tooltip.innerHTML = html;
       tooltip.classList.remove("hidden");
+      posicionarTooltip(event);
     })
-    .on("pointermove", function (event) {
-      const container = document.getElementById("mapa-container");
-      const rect = container.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      tooltip.style.left = `${x + 12}px`;
-      tooltip.style.top = `${y + 12}px`;
-    })
-    .on("pointerleave", function () {
-      d3.select(this)
-        .attr("stroke", "#3C342A")
-        .attr("stroke-width", 0.8);
+    .on("pointermove", posicionarTooltip)
+    .on("pointerleave", function (event, d) {
+      if (document.activeElement !== this) restaurarEstado(this, d);
       tooltip.classList.add("hidden");
     })
     .on("focus", function (event, d) {
-      // Anunciar para leitores de tela ao receber foco via Tab
       const sigla = d.properties.sigla;
       const agg = porUf[sigla];
       if (agg) {
-        announce(`${d.properties.name}, ${agg.total} políticas catalogadas. Pressione Enter para abrir página.`);
+        d3.select(this).attr("stroke", "#493A6D").attr("stroke-width", 2).attr("fill", "#BFDE42");
+        labels.filter((f) => f.properties.sigla === sigla).attr("fill", "#252333");
+        if (selecao) selecao.textContent = `${d.properties.name} (${sigla}) · ${agg.total} registros`;
+        announce(`${d.properties.name}, ${agg.total} registros. Pressione Enter para conhecer as experiências.`);
       }
     })
+    .on("blur", function (event, d) { restaurarEstado(this, d); })
     .on("click", function (event, d) {
       const sigla = d.properties.sigla;
       if (!porUf[sigla]) return;
@@ -209,47 +198,60 @@ waitForD3(async function init() {
     .attr("y", (d) => pathGen.centroid(d)[1])
     .attr("text-anchor", "middle")
     .attr("dominant-baseline", "middle")
-    .attr("font-size", "11")
+    .attr("font-size", "14")
     .attr("font-weight", "600")
     .attr("pointer-events", "none")
     .text((d) => d.properties.sigla);
 
   // === Legenda dinâmica (gradiente + ticks) ===
+  const legenda = svgD3.append("g").attr("aria-hidden", "true");
+  if (modoNavegacao) legenda.attr("display", "none");
   const defs = svgD3.append("defs");
   const gradient = defs.append("linearGradient")
     .attr("id", "mapa-gradient")
     .attr("x1", "0%").attr("x2", "100%")
     .attr("y1", "0%").attr("y2", "0%");
-  gradient.append("stop").attr("offset", "0%").attr("stop-color", "#D6E4F2");
-  gradient.append("stop").attr("offset", "100%").attr("stop-color", "#1A4F8B");
+  gradient.append("stop").attr("offset", "0%").attr("stop-color", "#E9E4F1");
+  gradient.append("stop").attr("offset", "100%").attr("stop-color", "#665A8E");
 
   const legendWidth = 200;
   const legendHeight = 12;
   const legendX = width - legendWidth - 20;
   const legendY = height - 35;
 
-  svgD3.append("rect")
+  legenda.append("rect")
     .attr("x", legendX).attr("y", legendY)
     .attr("width", legendWidth).attr("height", legendHeight)
     .attr("fill", "url(#mapa-gradient)")
-    .attr("stroke", "#3C342A").attr("stroke-width", 0.5);
+    .attr("stroke", "#847C94").attr("stroke-width", 0.5);
 
-  const legendaTitulo = svgD3.append("text")
+  const legendaTitulo = legenda.append("text")
     .attr("x", legendX).attr("y", legendY - 18)
     .attr("font-size", "10")
     .attr("font-weight", "600")
     .attr("fill", "#3C342A");
 
-  const legendaMin = svgD3.append("text")
+  const legendaMin = legenda.append("text")
     .attr("x", legendX).attr("y", legendY - 4)
     .attr("font-size", "9")
     .attr("fill", "#3C342A");
 
-  const legendaMax = svgD3.append("text")
+  const legendaMax = legenda.append("text")
     .attr("x", legendX + legendWidth).attr("y", legendY - 4)
     .attr("font-size", "9")
     .attr("text-anchor", "end")
     .attr("fill", "#3C342A");
+
+  function contrasteTexto(corFundo) {
+    const cor = d3.color(corFundo).rgb();
+    const canais = [cor.r, cor.g, cor.b].map((valor) => {
+      const s = valor / 255;
+      return s <= .04045 ? s / 12.92 : Math.pow((s + .055) / 1.055, 2.4);
+    });
+    const luminancia = .2126 * canais[0] + .7152 * canais[1] + .0722 * canais[2];
+    if ((luminancia + .05) / .0685 >= 4.5) return "#252333";
+    return 1.05 / (luminancia + .05) >= 4.5 ? "#FFFFFF" : "#000000";
+  }
 
   // === Função de re-coloração (chamada inicial e ao trocar métrica) ===
   function recolorize(metrica) {
@@ -260,24 +262,27 @@ waitForD3(async function init() {
       .attr("fill", (d) => {
         const agg = porUf[d.properties.sigla];
         if (!agg || agg[metrica] === 0) return COR_NAO_COBERTA;
-        return scale(agg[metrica]);
+        return modoNavegacao ? "#DCD5EA" : scale(agg[metrica]);
       })
+      .attr("data-fill", function () { return this.getAttribute("fill"); })
       .attr("aria-label", (d) => {
         const sigla = d.properties.sigla;
         const agg = porUf[sigla];
-        if (!agg) return `${d.properties.name} — em planejamento`;
-        return `${d.properties.name} — ${agg[metrica]} ${METRICAS[metrica].label.toLowerCase()}`;
+        if (!agg) return `${d.properties.name} — sem registros`;
+        return `${d.properties.name} — ${agg[metrica]} ${METRICAS[metrica].label.toLowerCase()}. Conhecer experiências.`;
       });
 
     labels
       .attr("fill", (d) => {
         const agg = porUf[d.properties.sigla];
-        return agg && agg[metrica] > max * 0.5 ? "#FAF7F2" : "#3C342A";
-      });
+        const cor = modoNavegacao ? "#DCD5EA" : (!agg || agg[metrica] === 0 ? COR_NAO_COBERTA : scale(agg[metrica]));
+        return contrasteTexto(cor);
+      })
+      .attr("data-fill", function () { return this.getAttribute("fill"); });
 
     legendaTitulo.text(METRICAS[metrica].label);
-    legendaMin.text(`${min} pol.`);
-    legendaMax.text(`${max} pol.`);
+    legendaMin.text(`${min} registros`);
+    legendaMax.text(`${max} registros`);
   }
 
   recolorize("total");
@@ -334,7 +339,7 @@ waitForD3(async function init() {
       canvas.height = 1200;
       const ctx = canvas.getContext("2d");
       // Fundo papel (a paleta V2)
-      ctx.fillStyle = "#FAF7F2";
+      ctx.fillStyle = "#F6F7FB";
       ctx.fillRect(0, 0, 1200, 1200);
       ctx.drawImage(img, 0, 0, 1200, 1200);
       URL.revokeObjectURL(svgUrl);
@@ -357,5 +362,5 @@ waitForD3(async function init() {
     img.src = svgUrl;
   });
 
-  console.info(`[mapa] sprint 8.2 ready: ${geo.features.length} UFs, métricas total/ativas`);
+  svg.dataset.mapaPronto = "true";
 });

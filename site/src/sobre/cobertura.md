@@ -1,26 +1,25 @@
 ---
 layout: layouts/base.njk
-title: "Cobertura geográfica e cronograma"
+title: "Cobertura geográfica"
 permalink: /sobre/cobertura/
 ---
 
-# Cobertura geográfica e cronograma
+# Cobertura geográfica
 
 ## Ondas do levantamento
 
 | Esfera | UFs cobertas | Incorporação |
 |---|---|---|
-| Federal | Brasil (políticas federais canônicas) | maio de 2026 |
+| Federal | Brasil (políticas federais) | maio de 2026 |
 | Estadual — 1ª onda | SP, RJ, MG, PR, RS, BA, PA, PE, CE | maio de 2026 |
 | Estadual — 2ª onda | GO, ES, SC, MA, AM, MT, RN, PB, AL | maio de 2026 |
 | Estadual — 3ª onda | MS, RR, DF, RO, PI, AC, SE, TO, AP | outubro de 2026 |
 
-Com a 3ª onda, o catálogo passa a cobrir **todas as {{ agregados.ufsCobertas | length - 1 }} unidades da federação** (26 estados + Distrito Federal) e a esfera federal: **{{ agregados.estaduaisUnicasCount }} políticas estaduais únicas** + **{{ agregados.federaisCount }} políticas federais canônicas** = **{{ agregados.total }} verbetes únicos**.
+O acervo reúne experiências das {{ agregados.ufsCobertas | length - 1 }} unidades da federação e da esfera federal. São {{ agregados.total }} fichas: {{ agregados.estaduaisUnicasCount }} estaduais e distritais e {{ agregados.federaisCount }} federais, contadas uma única vez.
 
 Nas fichas do Distrito Federal, a abrangência territorial aparece como **Distrital**; em buscas e listas ela é tratada como **Estadual**.
 
-> **Importante:** cobrir todas as UFs não significa ter catalogado todas as políticas de cada uma.
-> Veja a [metodologia](/sobre/metodologia/) sobre como ler as contagens — o catálogo é **levantamento, não censo**.
+A presença de todas as UFs no acervo não significa que todas as experiências de cada território tenham sido catalogadas. As contagens refletem o alcance da pesquisa, conforme os critérios e limites descritos na [metodologia](/sobre/metodologia/).
 
 ## Critério de seleção das UFs
 
@@ -34,6 +33,6 @@ A seleção foi planejada conforme três critérios:
 
 O catálogo é atualizado em rodadas, com correções e novas fichas. Acompanhe o [GitHub do projeto](https://github.com/antrologos/catalogo-politicas) para atualizações.
 
-## Reportar política não catalogada
+## Sugerir uma inclusão
 
-Se você gostaria de ver uma política específica adicionada, abra uma [issue no GitHub](https://github.com/antrologos/catalogo-politicas/issues/new) com o nome do programa e UF.
+Sugestões de novas experiências podem ser enviadas pelo [canal de contribuições no GitHub](https://github.com/antrologos/catalogo-politicas/issues/new). Inclua o nome, o território e uma referência que permita conhecer a experiência.

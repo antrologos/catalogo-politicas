@@ -31,7 +31,7 @@ layout: layouts/base.njk
     <p class="text-base text-neutral-700 mb-sm" data-pagefind-ignore>Registro do levantamento · {% if p.isFederal %}Federal{% else %}{{ p.uf }}{% endif %}</p>
     <h1 class="mt-0">{{ p.nome_programa }}</h1>
     <p class="text-base text-neutral-700" data-pagefind-ignore>
-      Conheça a experiência descrita e suas referências. As informações do levantamento não confirmam, por si só, funcionamento atual ou resultados.
+      Descrição, finalidade, território e referências da experiência.
     </p>
     <div class="policy-actions not-prose print-hide" data-pagefind-ignore>
       <a href="/buscar/" data-ficha-retorno hidden>← Voltar aos resultados</a>
@@ -82,7 +82,7 @@ layout: layouts/base.njk
       <dd class="m-0">{% include "components/tag-status.njk" %}</dd>
     </dl>
     <p class="text-base text-neutral-700" data-pagefind-ignore>
-      A situação acima reproduz a classificação registrada. A vigência jurídica e a continuidade da oferta precisam ser verificadas nas referências e com o órgão responsável.
+      Consulte o órgão responsável para informações sobre funcionamento atual, inscrições e atendimento.
     </p>
   </section>
 
@@ -116,9 +116,6 @@ layout: layouts/base.njk
       <dt class="font-semibold text-neutral-700">Carga horária</dt>
       <dd class="m-0">{{ p.carga_horaria or 'Não informado no levantamento.' }}</dd>
     </dl>
-    <p class="text-base text-neutral-700" data-pagefind-ignore>
-      As categorias não detalham, por si só, o componente presencial, as atividades fora da escola ou o uso de internet. <a href="/sobre/metodologia/">Entenda os limites do levantamento</a>.
-    </p>
     {% if p.fonte_financiamento or p.transferencia_recursos or p.continuidade_governos or (p.integra_lista and p.integra_lista | length) %}
       <details class="my-lg print-expand">
         <summary class="cursor-pointer font-semibold py-sm">Outras informações do levantamento</summary>
@@ -148,7 +145,7 @@ layout: layouts/base.njk
       <dd class="m-0">{{ 'Distrito Federal' if (p.uf == 'DF' and p.esfera_execucao == 'Estado') else (p.esfera_execucao or 'Não informado no levantamento.') }}</dd>
     </dl>
     <p class="text-base text-neutral-700" data-pagefind-ignore>
-      A abrangência registrada não comprova atendimento em todos os locais. Quando a descrição mencionar público atendido ou tamanho da oferta, observe o território e o período a que a informação se refere.
+      Consulte a descrição e as fontes para informações sobre locais de atendimento e público atendido.
     </p>
   </section>
 
@@ -192,7 +189,6 @@ layout: layouts/base.njk
     <p class="text-base text-neutral-700" data-pagefind-ignore>Essas datas se referem à consulta da fonte e ao catálogo; não confirmam a continuidade da oferta.</p>
     <h3>Instrumentos citados</h3>
     {% if p.base_legal %}<p class="whitespace-pre-line">{{ p.base_legal }}</p>{% else %}<p>Instrumentos legais não informados no levantamento.</p>{% endif %}
-    <p class="text-base text-neutral-700" data-pagefind-ignore>A existência de um instrumento legal não comprova sua vigência atual nem a implementação da experiência.</p>
     {% if p.atribuicao %}<p class="text-base text-neutral-700"><strong>Atribuição registrada:</strong> {{ p.atribuicao }}</p>{% endif %}
     {% if p.licenca_inferida %}<p class="text-base text-neutral-700"><strong>Licença atribuída à fonte no levantamento:</strong> {{ 'Não explicitada na referência.' if p.licenca_inferida == 'sem_licenca_explicita' else p.licenca_inferida }}</p>{% endif %}
     <details id="citacao" class="mt-lg print-citation" data-pagefind-ignore>

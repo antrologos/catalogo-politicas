@@ -24,7 +24,7 @@ const termos = [
     sigla: "EJA",
     expansao: "Educação de Jovens e Adultos",
     categoria: "Educação",
-    descricao: "Modalidade de ensino destinada a quem não concluiu ensino fundamental ou médio na idade regular. Oferece percursos formativos adaptados (presencial, EAD, semipresencial). Marco legal: LDB 9.394/96.",
+    descricao: "Modalidade de ensino destinada a quem não concluiu ensino fundamental ou médio na idade regular. Marco legal: LDB 9.394/96.",
   },
   {
     sigla: "PRONATEC",
@@ -36,7 +36,7 @@ const termos = [
     sigla: "ENCCEJA",
     expansao: "Exame Nacional para Certificação de Competências de Jovens e Adultos",
     categoria: "Educação",
-    descricao: "Exame federal anual que certifica conclusão do ensino fundamental e médio para pessoas de 15+ (fundamental) ou 18+ (médio) que não tiveram oportunidade na idade regular. Substitui supletivo presencial.",
+    descricao: "Exame federal anual que certifica conclusão do ensino fundamental e médio para pessoas de 15+ (fundamental) ou 18+ (médio) que não tiveram oportunidade na idade regular.",
   },
   {
     sigla: "PROEJA",
@@ -66,7 +66,7 @@ const termos = [
     sigla: "EAD",
     expansao: "Educação a Distância",
     categoria: "Modalidade",
-    descricao: "Modalidade de ensino mediada por tecnologias digitais, sem necessidade de presença física do estudante na maior parte do percurso. Regulamentada por decreto federal.",
+    descricao: "Educação mediada por tecnologias de informação e comunicação, com atividades realizadas a distância.",
   },
   {
     sigla: "FIES",

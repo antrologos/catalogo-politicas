@@ -3,7 +3,7 @@ export default {
   shortTitle: "Catálogo de Políticas",
   subtitle: "Rede EJA e Inclusão Produtiva",
   description:
-    "Experiências e referências para os profissionais da Rede EJA, em defesa da educação pública, presencial e de qualidade para jovens, adultos e idosos e no diálogo com os governos.",
+    "Experiências e referências para fortalecer a Educação de Jovens, Adultos e Idosos no Brasil.",
   url: "https://antrologos.github.io",
   pathPrefix: "/catalogo-politicas/",
   baseUrl: "https://antrologos.github.io/catalogo-politicas",
@@ -19,6 +19,7 @@ export default {
   navegacao: [
     { texto: "Início", href: "/" },
     { texto: "Buscar", href: "/buscar/" },
+    { texto: "Mapa", href: "/mapa/" },
     { texto: "Explorar", href: "/explorar/" },
     { texto: "Sobre", href: "/sobre/" },
   ],

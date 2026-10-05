@@ -15,15 +15,15 @@
 {% if crumbs and crumbs | length %}
 <nav aria-label="Caminho da navegação">
   <ol class="breadcrumb list-none p-0">
-    {% for item in crumbs %}
+    {%- for item in crumbs -%}
       <li>
-        {% if item.href and not loop.last %}
+        {%- if item.href and not loop.last -%}
           <a href="{{ item.href }}">{{ item.texto }}</a>
-        {% else %}
+        {%- else -%}
           <span aria-current="page">{{ item.texto }}</span>
-        {% endif %}
+        {%- endif -%}
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ol>
 </nav>
 {% endif %}

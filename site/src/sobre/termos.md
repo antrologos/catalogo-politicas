@@ -31,7 +31,7 @@ Produtiva, 2026. Disponível em:
 https://antrologos.github.io/catalogo-politicas/. Licenciado sob CC BY 4.0.
 ```
 
-Para citar fichas individuais, cada página de política oferece **4 formatos prontos** (ABNT, APA, BibTeX, RIS) na aba "Como citar".
+Para citar fichas individuais, cada página de política oferece **4 formatos prontos** (ABNT, APA, BibTeX, RIS) em "Como citar esta ficha", no bloco Referências.
 
 ## Reprodução de normas oficiais
 

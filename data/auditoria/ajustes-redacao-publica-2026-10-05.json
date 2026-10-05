@@ -1,0 +1,285 @@
+{
+  "data": "2026-10-05",
+  "tipo": "ajuste_de_redacao",
+  "fichas_unicas": 29,
+  "campos_ajustados": 33,
+  "escopo": "Supressão de advertências genéricas e redação voltada ao público. Não constitui nova consulta externa; referências, datas de consulta, nível de evidência e classificações mantidos.",
+  "alteracoes": [
+    {
+      "id": "FRM-CP-2026-EDU-0510",
+      "campo": "duvidas_revisor",
+      "anterior": "O edital demonstra público e procedimento de aquisição, não entrega em cada escola. A existência de materiais digitais não equivale a oferta de EaD nem substitui a escolarização presencial.",
+      "novo": "O edital demonstra público e procedimento de aquisição, não entrega em cada escola.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/novas-2026-10-05-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0501",
+      "campo": "informacoes_complementares",
+      "anterior": "O IFAM documenta formatura em março de 2023 na comunidade Ilha Michiles. Alternância envolve tempos formativos na instituição e na comunidade; não foi classificada automaticamente como EaD.",
+      "novo": "O IFAM documenta formatura em março de 2023 na comunidade Ilha Michiles. Alternância envolve tempos formativos na instituição e na comunidade.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/novas-2026-10-05-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0004",
+      "campo": "informacoes_complementares",
+      "anterior": "Ofertas presenciais e a distância precisam ser examinadas por instituição, público e edição. Sua presença no catálogo não constitui recomendação de EaD para a escolarização da EJA.",
+      "novo": "Ofertas presenciais e a distância precisam ser examinadas por instituição, público e edição.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0037",
+      "campo": "informacoes_complementares",
+      "anterior": "Estudos registram diferenças de implementação entre escolas e discutem a relação público-privado. Esses achados têm recortes próprios e não foram generalizados como diagnóstico atual de toda a rede. Catalogar a experiência não implica recomendar privatização da educação.",
+      "novo": "Estudos registram diferenças de implementação entre escolas e discutem a relação público-privado. Esses achados têm recortes próprios e não foram generalizados como diagnóstico atual de toda a rede.",
+      "motivo": "Retira declaração de posição institucional inserida na ficha; preserva estudos e limites de generalização.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0053",
+      "campo": "informacoes_complementares",
+      "anterior": "A informação anterior de 80% a distância não descreve a organização apresentada no portal estadual em 2026. O registro das modalidades existentes não constitui recomendação de substituição da EJA presencial.",
+      "novo": "A informação anterior de 80% a distância não descreve a organização apresentada no portal estadual em 2026.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0102",
+      "campo": "duvidas_revisor",
+      "anterior": "NÃO CONSEGUI ENCONTRAR A RESOLUÇÃO/NORMATIVA QUE INSTITUIU O PROGRAMA\n\nA fonte registra uma edição de 2021. Não foi confirmada a continuidade atual nem a alegada transformação em Conectar Educação; a oferta de qualificação remota não é recomendação de EaD para a EJA.",
+      "novo": "Não foi localizada a norma que instituiu o programa. A fonte registra uma edição de 2021. Não foi confirmada a continuidade atual nem a transformação em Conectar Educação.",
+      "motivo": "Retira ressalva de não recomendação de EaD e nota pessoal em maiúsculas, preservando as três lacunas documentais.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0144",
+      "campo": "duvidas_revisor",
+      "anterior": "Notícia do Conselho Nacional do SESI de 18/03/2026 confirma lançamento estadual e distingue escolarização de qualificação. A referência de dois meses não descreve a duração da EJA. A fonte menciona ensino a distância; a proporção de atividades presenciais e o ato autorizativo local não foram examinados. O catálogo descreve a experiência sem recomendar substituição da EJA pública presencial.",
+      "novo": "Notícia do Conselho Nacional do SESI de 18/03/2026 confirma lançamento estadual e distingue escolarização de qualificação. A referência de dois meses não descreve a duração da EJA. A fonte menciona ensino a distância; a proporção de atividades presenciais e o ato autorizativo local não foram examinados.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0373",
+      "campo": "duvidas_revisor",
+      "anterior": "Trata-se de SESI/SENAI, não da rede pública estadual. Cursos anunciados são de 2025; matrículas abertas, continuidade e resultados em 2026 não foram confirmados. Esse formato não é apresentado como recomendação para a EJA pública.",
+      "novo": "Trata-se de SESI/SENAI, não da rede pública estadual. Cursos anunciados são de 2025; matrículas abertas, continuidade e resultados em 2026 não foram confirmados.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0514",
+      "campo": "informacoes_complementares",
+      "anterior": "O relato público de 2023 é anterior às diretrizes nacionais de EJA de 2025. A menção a atividades virtuais registra o desenho histórico, sem recomendar substituição de aulas presenciais.",
+      "novo": "O relato público de 2023 é anterior às diretrizes nacionais de EJA de 2025. A menção a atividades virtuais registra o desenho histórico.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/novas-2026-10-05-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0519",
+      "campo": "duvidas_revisor",
+      "anterior": "Registro histórico: a referência consultada comprova lançamento e desenho de 2019, sem confirmar a continuidade atual de todas as modalidades, sucessões ou vínculo específico com EJA. O componente virtual é descrição da experiência, não recomendação de substituição do ensino presencial.",
+      "novo": "Registro histórico: a referência consultada comprova lançamento e desenho de 2019, sem confirmar a continuidade atual de todas as modalidades, sucessões ou vínculo específico com EJA.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/novas-2026-10-05-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0515",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria documental de 05/10/2026: proposta local documentada em comunicação de matrícula. Execução integral, número atual de turmas e resultados não foram confirmados. A experiência não é recomendação de transferir adolescentes automaticamente para EJA.",
+      "novo": "Curadoria documental de 05/10/2026: proposta local documentada em comunicação de matrícula. Execução integral, número atual de turmas e resultados não foram confirmados.",
+      "motivo": "Retira advertência sobre recomendação que não corresponde a uma informação sobre a experiência.",
+      "manifesto": "data/curadoria/novas-2026-10-05-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0393",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria de 05/10/2026: Leitura editorial do Programa Atitude: o texto alterna blocos e etapas sem delimitar versão curricular. Planejamento para oito anos não comprova execução atual; interesse do MEC em 2020 não é resultado. Não se recomenda aceleração ou transferência à EJA a partir deste cadastro.",
+      "novo": "Curadoria de 05/10/2026: Leitura editorial do Programa Atitude: o texto alterna blocos e etapas sem delimitar versão curricular. Planejamento para oito anos não comprova execução atual; interesse do MEC em 2020 não é resultado.",
+      "motivo": "Retira advertência sobre recomendação que não corresponde a uma informação sobre a experiência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0187",
+      "campo": "informacoes_complementares",
+      "anterior": "O plano prevê expansão de EaD, entre outras ações. Essa previsão não foi adotada como recomendação para a EJA: falta detalhar a etapa atendida, presença, mediação docente e acesso efetivo aos recursos. Números de uma obra ou escola não medem execução do plano inteiro.",
+      "novo": "O plano prevê expansão de EaD, entre outras ações. As referências consultadas não detalham as etapas atendidas, a organização das atividades presenciais, a mediação docente e o acesso aos recursos. Números de uma obra ou escola não medem a execução do plano inteiro.",
+      "motivo": "Mantém a previsão de EaD e a lacuna concreta sobre sua organização; retira declaração de não recomendação.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0190",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria de 05/10/2026: Página estadual sem data descreve 80% de atividades a distância e 20% presenciais. O registro é documental, não recomendação de EaD nem confirmação de adequação às diretrizes posteriores. Retirada carga de 400 horas presenciais incompatível com o percentual informado; oferta atual, polos e matriz vigente não foram confirmados.",
+      "novo": "Curadoria de 05/10/2026: Página estadual sem data descreve 80% de atividades a distância e 20% presenciais. A adequação às diretrizes posteriores não foi confirmada. Retirada carga de 400 horas presenciais incompatível com o percentual informado; oferta atual, polos e matriz vigente não foram confirmados.",
+      "motivo": "Preserva os percentuais declarados, a incompatibilidade horária e a falta de confirmação normativa; retira apenas a não recomendação.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0218",
+      "campo": "apresentacao",
+      "anterior": "A formação profissional complementa percursos educacionais. Não substitui a oferta pública presencial de EJA e não comprova acesso a equipamentos, internet ou apoio individual no Amazonas.",
+      "novo": "A formação profissional complementa percursos educacionais. Não foram identificadas informações sobre oferta local de equipamentos, conexão à internet ou apoio individual aos participantes no Amazonas.",
+      "motivo": "Substitui defesa genérica do ensino presencial pela lacuna específica de condições de acesso no Amazonas.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0004",
+      "campo": "duvidas_revisor",
+      "anterior": "Certificação é um direito, mas não substitui a oferta pública de escolarização presencial. A ficha não promete inscrições abertas na data da consulta.",
+      "novo": "Calendário e inscrições devem ser consultados nos canais responsáveis pelo exame.",
+      "motivo": "Retira declaração normativa e metalinguagem sobre o que a ficha promete; preserva orientação de consulta e, no RJ, a limitação territorial.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0040",
+      "campo": "duvidas_revisor",
+      "anterior": "Certificação é um direito, mas não substitui a oferta pública de escolarização presencial. A ficha não promete inscrições abertas na data da consulta. Esta ficha estadual descreve o desenho federal. A revisão não confirmou implementação, vagas ou atendimento específico no Rio de Janeiro; a presença no recorte estadual não comprova oferta local.",
+      "novo": "Calendário e inscrições devem ser consultados nos canais responsáveis pelo exame. Esta ficha estadual descreve o desenho federal. A revisão não confirmou implementação, vagas ou atendimento específico no Rio de Janeiro; a presença no recorte estadual não comprova oferta local.",
+      "motivo": "Retira declaração normativa e metalinguagem sobre o que a ficha promete; preserva orientação de consulta e, no RJ, a limitação territorial.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0015",
+      "campo": "informacoes_complementares",
+      "anterior": "Atendimento digital é canal de serviço e não modalidade EaD. A existência da rede não assegura todas as especialidades ou vagas disponíveis em cada unidade.",
+      "novo": "A existência da rede não assegura todas as especialidades ou vagas disponíveis em cada unidade.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0001",
+      "campo": "informacoes_complementares",
+      "anterior": "1996 corresponde ao marco da LDB, não à criação histórica da EJA. As diretrizes de 2025 preveem EJA presencial no ensino fundamental e admitem atividades não presenciais limitadas a 50% da carga horária no ensino médio; a transição prevista pela Resolução CNE/CEB nº 6/2025 terminou em 31/12/2025. Flexibilidade de percurso ou presença não equivale automaticamente a EaD. A existência da modalidade como direito não comprova oferta de vagas em cada localidade.",
+      "novo": "1996 corresponde ao marco da LDB, não à criação histórica da EJA. As diretrizes de 2025 preveem EJA presencial no ensino fundamental e admitem atividades não presenciais limitadas a 50% da carga horária no ensino médio; a transição prevista pela Resolução CNE/CEB nº 6/2025 terminou em 31/12/2025. A existência da modalidade como direito não comprova oferta de vagas em cada localidade.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0021",
+      "campo": "duvidas_revisor",
+      "anterior": "Carta de serviço consultada; quantidades de unidades e regras nela listadas podem refletir versões anteriores. A presença flexível não deve ser confundida automaticamente com EaD.\n\nA norma mais recente consultada qualifica as informações da carta de serviço anterior. Não foi levantada lista atual de vagas por unidade; 43 CEEJAs é quantidade do anúncio de janeiro de 2026, recuperado pelo índice de pesquisa.",
+      "novo": "Carta de serviço consultada; quantidades de unidades e regras nela listadas podem refletir versões anteriores.\n\nA norma mais recente consultada qualifica as informações da carta de serviço anterior. Não foi levantada lista atual de vagas por unidade; 43 CEEJAs é quantidade do anúncio de janeiro de 2026, recuperado pelo índice de pesquisa.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0128",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria documental de 05/10/2026: A modalidade está documentada pela Seduc em 2022. Ano de implantação, vigência da Instrução Normativa 003/2020 para esta oferta, total atual de centros e funcionamento em 2026 não foram confirmados. Flexibilidade do percurso não significa EaD.",
+      "novo": "Curadoria documental de 05/10/2026: A modalidade está documentada pela Seduc em 2022. Ano de implantação, vigência da Instrução Normativa 003/2020 para esta oferta, total atual de centros e funcionamento em 2026 não foram confirmados.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0130",
+      "campo": "informacoes_complementares",
+      "anterior": "O relatório estadual de 2022 registra início em 2014 e, em outro trecho, implementação em 2015; ambos se referem a etapas históricas da oferta. Registra encerramento em 2020 e posterior implantação do Trilhas no Pará. Mediação tecnológica não demonstra, por si só, oferta de EaD.",
+      "novo": "O relatório estadual de 2022 registra início em 2014 e, em outro trecho, implementação em 2015; ambos se referem a etapas históricas da oferta. Registra encerramento em 2020 e posterior implantação do Trilhas no Pará.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0149",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria documental de 05/10/2026: Retirada Portaria 2815/2025 por aplicabilidade não confirmada, sem atribuir origem a outro estado. A IN 08/2020 foi consultada diretamente, mas sua vigência atual e oferta por município não foram verificadas. Alternância entre Escola e Comunidade não equivale automaticamente a EaD nem a unidade itinerante; o arranjo logístico original permanece pendente.",
+      "novo": "Curadoria documental de 05/10/2026: A aplicação da Portaria 2815/2025 a esta oferta não foi confirmada. A IN 08/2020 foi consultada diretamente, mas sua vigência atual e oferta por município não foram verificadas. A organização dos locais de atendimento permanece sem confirmação.",
+      "motivo": "Preserva as lacunas sobre norma, vigência, território e logística; retira justificativa de edição e bordão sobre alternância e EaD.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0273",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria de 05/10/2026: Leitura editorial do Gente do Campo. Limite de 30 horas refere-se ao tempo-comunidade, não à duração total da graduação. Retirada transferência “fundo a fundo” sem instrumento. Editais, bolsas de 2026 e financiamento do RN Sustentável II não foram reconferidos; alternância não significa EaD.",
+      "novo": "Curadoria de 05/10/2026: Leitura editorial do Gente do Campo. Limite de 30 horas refere-se ao tempo-comunidade, não à duração total da graduação. Retirada transferência “fundo a fundo” sem instrumento. Editais, bolsas de 2026 e financiamento do RN Sustentável II não foram reconferidos.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-PSOC-0205",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria de 05/10/2026: Leitura editorial: referência federal de relançamento em 2024 não comprova retomada do ProJovem no Distrito Federal. Experiência de Planaltina é histórica e não foi reconferida nesta rodada. Mantida situação Sem informação; alternância de tempos formativos não implica EaD.",
+      "novo": "Curadoria de 05/10/2026: Leitura editorial: referência federal de relançamento em 2024 não comprova retomada do ProJovem no Distrito Federal. Experiência de Planaltina é histórica e não foi reconferida nesta rodada. Mantida situação Sem informação.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0455",
+      "campo": "descricao_tecnica",
+      "anterior": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante; flexibilidade não caracteriza, por si só, ensino a distância.",
+      "novo": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0455",
+      "campo": "apresentacao",
+      "anterior": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante; flexibilidade não caracteriza, por si só, ensino a distância.",
+      "novo": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0455",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria de 05/10/2026: Leitura editorial da oferta estadual. Presença flexível não é sinônimo de EaD. Número de estudantes, escolas e municípios usa recorte de 2025; não foi revalidado como atual. Retirada previsão de continuidade alta e afirmação genérica de modelo inspirado em CEEJAs sem documento correspondente.",
+      "novo": "Curadoria de 05/10/2026: Leitura editorial da oferta estadual. Número de estudantes, escolas e municípios usa recorte de 2025; não foi revalidado como atual. Retirada previsão de continuidade alta e afirmação genérica de modelo inspirado em CEEJAs sem documento correspondente.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-EDU-0488",
+      "campo": "duvidas_revisor",
+      "anterior": "Modalidade decorre da organização declarada, não das provas. Proporções remotas/presenciais, resultados e continuidade em 2026 não confirmados. Flexibilidade e permanência não são sinônimos de EaD.",
+      "novo": "Proporções remotas/presenciais, resultados e continuidade em 2026 não confirmados.",
+      "motivo": "Mantém a lacuna efetiva de funcionamento e resultados; retira bordões sobre provas e flexibilidade que não acrescentam informação à descrição semipresencial.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0285",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria de 05/10/2026: A ficha descreve plataforma de serviços, não curso. Retirada classificação EaD derivada apenas do canal digital e continuidade “alta por lançamento recente”. Não foram reconferidas funcionalidades, cursos disponíveis ou operação atual.",
+      "novo": "Curadoria de 05/10/2026: O registro trata de uma plataforma de serviços. Funcionalidades, cursos disponíveis e operação atual não foram reconferidos; não há confirmação de continuidade.",
+      "motivo": "Substitui histórico da correção de EaD e justificativa de continuidade por limite concreto da evidência sobre a plataforma.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0332",
+      "campo": "duvidas_revisor",
+      "anterior": "Curadoria documental de 05/10/2026: Confirmada a função da plataforma e sua divulgação em 25/06/2026. Retirada classificação EaD, pois a ficha registra serviço digital. Ato específico de criação e composição financeira não foram confirmados; não se atribuem ao portal as condições de Oportunidade Jovem.",
+      "novo": "Curadoria documental de 05/10/2026: Confirmada a função da plataforma e sua divulgação em 25/06/2026. Ato específico de criação e composição financeira não foram confirmados. Oportunidade Jovem é uma iniciativa distinta, cujas condições não se aplicam automaticamente aos usuários do portal.",
+      "motivo": "Retira metalinguagem sobre correção de modalidade e preserva os limites financeiros, legais e de benefícios do portal.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0332",
+      "campo": "descricao_tecnica",
+      "anterior": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Seu funcionamento digital não é uma modalidade de ensino. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada.",
+      "novo": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    },
+    {
+      "id": "FRM-CP-2026-TRAB-0332",
+      "campo": "apresentacao",
+      "anterior": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Seu funcionamento digital não é uma modalidade de ensino. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada.",
+      "novo": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada.",
+      "motivo": "Retira ressalva normativa ou genérica sobre EaD, sem alterar a descrição da experiência ou os limites da evidência.",
+      "manifesto": "data/curadoria/correcoes-2026-10-05b-relatorios.json"
+    }
+  ],
+  "validacao": {
+    "registros": 1180,
+    "fichas_unicas": 388,
+    "identidades_preservadas": true,
+    "categorias_fontes_e_datas_de_consulta_preservadas": true,
+    "schema_erros": 0,
+    "registros_com_ajustes": 101,
+    "replicas_federais_alcancadas": 72,
+    "campos_com_ajustes_incluindo_replicas": 105,
+    "derivado": "data/derived/policies-apresentacao-publica-2026-10-05.json",
+    "versao_anterior_preservada": "data/derived/policies-relatorios-2026-10-05.json"
+  }
+}

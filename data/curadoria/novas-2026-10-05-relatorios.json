@@ -25,7 +25,7 @@
           "Instituto Federal do Amazonas (IFAM) — Campus Maués",
           "Comunidade indígena Sateré-Mawé"
         ],
-        "informacoes_complementares": "O IFAM documenta formatura em março de 2023 na comunidade Ilha Michiles. Alternância envolve tempos formativos na instituição e na comunidade; não foi classificada automaticamente como EaD."
+        "informacoes_complementares": "O IFAM documenta formatura em março de 2023 na comunidade Ilha Michiles. Alternância envolve tempos formativos na instituição e na comunidade."
       },
       "justificativa": "Experiência territorial identificada na leitura final do relatório AM e confrontada com fonte pública primária. Não duplica automaticamente programa federal.",
       "referencias": [
@@ -384,7 +384,7 @@
         "resumo": "Seleção e aquisição de obras didáticas para estudantes e professores da EJA nos anos iniciais e finais do ensino fundamental.",
         "descricao_tecnica": "O Edital CGPLI nº 2/2023, retificado, organiza o ciclo PNLD EJA 2026–2029 em dois segmentos. Prevê inscrição e avaliação das coleções e procedimentos de aquisição. A ficha identifica esse ciclo e não toda a trajetória do PNLD.",
         "apresentacao": "O Edital CGPLI nº 2/2023, retificado, organiza o ciclo PNLD EJA 2026–2029 em dois segmentos. Prevê inscrição e avaliação das coleções e procedimentos de aquisição. A ficha identifica esse ciclo e não toda a trajetória do PNLD.",
-        "duvidas_revisor": "O edital demonstra público e procedimento de aquisição, não entrega em cada escola. A existência de materiais digitais não equivale a oferta de EaD nem substitui a escolarização presencial.",
+        "duvidas_revisor": "O edital demonstra público e procedimento de aquisição, não entrega em cada escola.",
         "continuidade_governos": "Não aferida nesta revisão; ver marcos e limites nas referências.",
         "fonte_url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/programas/programas-do-livro/consultas-editais/editais/pnld-eja-2025-2028/Edital_EJA_3a_retificacao.pdf",
         "fonte_tipo": "edital",
@@ -543,7 +543,7 @@
         "resumo": "Programa anunciado em 2023 para a EJA da rede municipal de Fortaleza, com revisão curricular, formação de professores e apoios aos estudantes.",
         "descricao_tecnica": "O lançamento descreve ensino fundamental para jovens a partir de 15 anos, adultos e idosos, atividades presenciais e virtuais e ações complementares de formação. Tablets, bolsas e investimentos foram anunciados como parte de um pacote; esses anúncios não são contabilizados aqui como entregas comprovadas.",
         "apresentacao": "Experiência municipal de reorganização e apoio à EJA, voltada à continuidade da escolarização.",
-        "informacoes_complementares": "O relato público de 2023 é anterior às diretrizes nacionais de EJA de 2025. A menção a atividades virtuais registra o desenho histórico, sem recomendar substituição de aulas presenciais.",
+        "informacoes_complementares": "O relato público de 2023 é anterior às diretrizes nacionais de EJA de 2025. A menção a atividades virtuais registra o desenho histórico.",
         "fonte_url": "https://www.fortaleza.ce.gov.br/noticias/prefeitura-lanca-programa-nova-eja-fortaleza-com-pacote-de-investimentos-de-cerca-de-r-30-milhoes",
         "fonte_tipo": "outros",
         "duvidas_revisor": "Não foram verificados execução integral dos benefícios, quantitativo de matrículas, continuidade atual sob esse nome ou adequação do desenho às normas posteriores. A ausência de confirmação atual não equivale a encerramento.",
@@ -661,7 +661,7 @@
         "resumo": "Ampliação da oferta municipal de EJA para o período diurno, anunciada em fevereiro de 2025.",
         "descricao_tecnica": "A prefeitura anunciou turmas diurnas de EJA do Ensino Fundamental e expansão dos pontos de atendimento urbanos e rurais. A mudança buscava atender trajetórias escolares com atraso e ampliar alternativas de horário.",
         "informacoes_complementares": "A fonte é anúncio de matrícula de 2025. Não comprova funcionamento de todas as turmas anunciadas nem resultados ou continuidade em 2026.",
-        "duvidas_revisor": "Curadoria documental de 05/10/2026: proposta local documentada em comunicação de matrícula. Execução integral, número atual de turmas e resultados não foram confirmados. A experiência não é recomendação de transferir adolescentes automaticamente para EJA.",
+        "duvidas_revisor": "Curadoria documental de 05/10/2026: proposta local documentada em comunicação de matrícula. Execução integral, número atual de turmas e resultados não foram confirmados.",
         "fonte_url": "https://www2.picos.pi.gov.br/secretarias/educacao/seme-oferta-vagas-em-periodo-diurno-para-alunos-da-educacao-de-jovens-e-adultos/",
         "fonte_tipo": "pagina_programa"
       },
@@ -812,7 +812,7 @@
         "informacoes_complementares": "Quantidades de vagas e duração divulgadas no lançamento referem-se a 2019. Não foram tratadas como oferta aberta em 2026.",
         "fonte_url": "https://www.educacao.sp.gov.br/sp-lanca-programa-de-ensino-tecnico-profissionalizante/",
         "fonte_tipo": "outros",
-        "duvidas_revisor": "Registro histórico: a referência consultada comprova lançamento e desenho de 2019, sem confirmar a continuidade atual de todas as modalidades, sucessões ou vínculo específico com EJA. O componente virtual é descrição da experiência, não recomendação de substituição do ensino presencial.",
+        "duvidas_revisor": "Registro histórico: a referência consultada comprova lançamento e desenho de 2019, sem confirmar a continuidade atual de todas as modalidades, sucessões ou vínculo específico com EJA.",
         "revisado_por": null
       },
       "justificativa": "Relatório SP p841; confirmação pública do lançamento e dos formatos, mantendo a situação atual sem informação.",

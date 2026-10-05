@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Mapa do Brasil"
-description: "Mapa coroplético interativo das 27 UFs brasileiras com contagem de políticas catalogadas (todas cobertas, em azul conforme a contagem). Lista textual paralela acessível para leitores de tela."
+description: "Explore as experiências por estado e pelo Distrito Federal. O mapa e a lista apresentam os registros reunidos no catálogo."
 permalink: /mapa/
 ---
 
@@ -21,7 +21,7 @@ permalink: /mapa/
   <h1>Mapa do Brasil — registros por UF</h1>
   <p class="text-neutral-700 max-w-3xl">
     {{ agregados.total }} políticas catalogadas nas {{ agregados.ufsCobertas | length - 1 }}
-    unidades da federação + esfera federal. A cor de cada UF reflete a contagem de registros
+    unidades da federação e na esfera federal. A cor de cada UF reflete a contagem de registros
     (claro = poucos, escuro = muitos). Essa distribuição não mede atendimento ou resultados.
   </p>
   <p class="text-sm text-neutral-700 mt-sm md:hidden">
@@ -70,67 +70,22 @@ permalink: /mapa/
   </div>
 </section>
 
-{# === Mapa SVG renderizado por D3 ===
-   Sprint 8.3 melhorias a11y/mobile:
-   - max-height responsiva (50vh mobile, 75vh desktop)
-   - touch tooltip via Pointer Events (cobre mouse + touch + pen)
-   - tabindex em paths cobertos (focável via teclado)
-   - aria-live region para anunciar mudanças de coloração
-   - prefers-reduced-motion: sem transition #}
-<div class="relative my-xl">
-  <div id="mapa-container"
-       class="bg-papel border border-neutral-200 rounded overflow-hidden"
-       role="img"
-       aria-labelledby="mapa-h"
-       aria-describedby="mapa-desc">
-    <h2 id="mapa-h" class="sr-only">Mapa coroplético do Brasil por UF</h2>
-    <p id="mapa-desc" class="sr-only">
-      Mapa visual das 27 UFs brasileiras coloridas por número de políticas catalogadas.
-      Use Tab para navegar entre estados, Enter ou Espaço para abrir página da UF.
-      A lista textual paralela abaixo contém a mesma informação em formato tabela.
-    </p>
-    <svg id="mapa-svg" viewBox="0 0 600 600" preserveAspectRatio="xMidYMid meet"
-         class="w-full h-auto max-h-[50vh] md:max-h-[75vh]">
-      <text x="300" y="300" text-anchor="middle" fill="#5C5347" font-size="16">
-        Carregando mapa...
-      </text>
-    </svg>
-  </div>
-
-  {# Tooltip absoluto que segue o pointer (mouse + touch), populado por JS #}
-  <div id="mapa-tooltip" aria-hidden="true"
-       role="tooltip"
-       class="hidden absolute pointer-events-none bg-tinta text-white text-xs px-sm py-2xs rounded shadow-md z-10"
-       style="max-width: 220px;">
-  </div>
-
-  {# aria-live region para anunciar mudanças de coloração / estado a leitores de tela.
-     polite = não interrompe leitura corrente, anuncia quando o leitor terminar. #}
-  <div id="mapa-status" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
-</div>
-
-<noscript>
-  <div role="alert" class="my-xl bg-warning/15 text-warning-dark p-md rounded">
-    <p>O mapa requer JavaScript. A <a href="#lista-ufs">lista textual abaixo</a>
-    contém a mesma informação em formato acessível, com link para cada página de UF.</p>
-  </div>
-</noscript>
+{% set mapaNaHome = false %}
+{% include "components/mapa-interativo.njk" %}
 
 {# === Lista textual paralela canônica (NF-M-10 a11y) ===
    Não escondida — é fonte de verdade igualmente válida. Abaixo do mapa para
    complementar visão geográfica com leitura linear acessível. #}
 <section aria-labelledby="lista-ufs-h" id="lista-ufs" class="my-2xl">
-  <h2 id="lista-ufs-h">Lista das UFs com cobertura</h2>
+  <h2 id="lista-ufs-h">Estados, Distrito Federal e esfera federal</h2>
   <p class="text-sm text-neutral-700">
-    Equivalente textual do mapa: ordenada por contagem decrescente. Cada UF é
-    clicável e leva à lista de verbetes associados.
+    Escolha um território para consultar as experiências e suas referências.
   </p>
 
   <div class="overflow-x-auto" role="region" tabindex="0" aria-label="Tabela de políticas por UF (role para os lados se necessário)">
   <table class="w-full mt-md border-collapse text-sm">
     <caption class="sr-only">
-      Lista das {{ agregados.ufsCobertas | length }} UFs catalogadas,
-      ordenadas por número de políticas (decrescente).
+      Registros das 27 unidades da federação e da esfera federal, ordenados por sigla.
     </caption>
     <thead>
       <tr class="border-b-2 border-neutral-500 text-left">
@@ -170,35 +125,9 @@ permalink: /mapa/
 
   <p class="text-sm text-neutral-700 mt-md">
     Veja
-    <a href="/sobre/cobertura/" class="text-primary">cobertura e cronograma</a>
+    <a href="/sobre/cobertura/" class="text-primary">cobertura do catálogo</a>
     para saber em qual onda do levantamento cada UF entrou.
   </p>
 </section>
 
-{# === Dados embarcados como JSON para o JS ler === #}
-<script id="mapa-data" type="application/json">
-{
-  "porUf": {
-    {%- set comma = "" -%}
-    {%- for sigla in agregados.ufsCobertas -%}
-      {%- set agg = agregados.porUf[sigla] -%}
-      {%- set info = ufs[sigla] -%}
-      {{ comma }}"{{ sigla }}": {
-        "nome": {{ (info.nome if info else sigla) | dump | safe }},
-        "regiao": {{ (info.regiao if info else "Federal") | dump | safe }},
-        "total": {{ agg.total }},
-        "ativas": {{ agg.ativas }}
-      }
-      {%- set comma = "," -%}
-    {%- endfor %}
-  },
-  "pathPrefix": {{ site.pathPrefix | dump | safe }}
-}
-</script>
-
-{# D3 v7 UMD via CDN (~95KB minified+gz). UMD é mais compatível que +esm em
-   browsers/ad-blockers. Atribui window.d3 global usado pelo mapa.js abaixo. #}
-<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"
-        crossorigin="anonymous"
-        defer></script>
-<script src="{{ '/assets/js/mapa.js' }}" defer></script>
+{% include "components/mapa-recursos.njk" %}

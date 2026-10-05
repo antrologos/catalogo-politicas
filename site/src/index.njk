@@ -1,81 +1,134 @@
 ---
 layout: layouts/base.njk
 title: "Início"
-description: "Experiências e referências para fortalecer a EJA pública, presencial e de qualidade. Um catálogo para os profissionais da Rede EJA e o diálogo com os governos."
+description: "Experiências e referências para fortalecer a Educação de Jovens, Adultos e Idosos no Brasil."
 ---
-<section aria-labelledby="hero-h" class="home-hero page-intro">
-  <p class="eyebrow">{{ site.subtitle }}</p>
-  <h1 id="hero-h">{{ site.title }}</h1>
-  <p class="page-lead">
-    Experiências e referências para fortalecer a <strong>EJA pública, presencial e de qualidade</strong>.
-  </p>
-  <p class="text-note reading-width mt-md">
-    Para membros, coordenadores e profissionais da Rede conhecerem experiências,
-    compreenderem suas finalidades e dialogarem com os governos.
-  </p>
+<style>
+  .home-abertura { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 2.5rem; align-items: start; padding-block: .5rem 2rem; }
+  .home-abertura > * { min-width: 0; }
+  .home-apresentacao { padding-top: 1.25rem; }
+  .home-apresentacao h1 { font-size: clamp(2.5rem, 4.7vw, 3.6rem); max-width: 12ch; margin-bottom: 1.25rem; }
+  .home-apresentacao .page-lead { max-width: 33ch; font-size: 1.25rem; line-height: 1.55; }
+  .home-apresentacao .page-lead strong { color: var(--color-primary-dark); font-weight: 600; }
+  .home-busca { margin-top: 2rem; }
+  .home-busca .search-form { gap: .625rem; }
+  .home-busca .form-input { flex-basis: 100%; }
+  .home-busca .btn { padding-inline: 1.25rem; }
+  .home-busca .text-note { font-size: .9375rem; }
+  .home-temas { display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem 1rem; margin-top: 1rem; font-size: .9375rem; }
+  .home-temas a { display: inline-block; padding-block: .375rem; }
+  .home-mapa h2 { font-size: 1.375rem; margin: 1.25rem 0 .25rem; }
+  .home-mapa .mapa-desenho { max-height: 475px; }
+  .home-mapa .mapa-legenda-selecao { text-align: center; margin-top: -.5rem; font-size: .9375rem; }
+  .home-mapa-acessos { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1rem; border-top: 1px solid var(--color-border); padding-top: .625rem; font-size: .9375rem; }
+  .home-mapa-acessos > a, .home-mapa-acessos summary { padding-block: .5rem; min-height: 44px; }
+  .home-mapa-acessos details { flex: 1 1 100%; }
+  .home-mapa-acessos summary { color: var(--color-primary); text-decoration: underline; text-underline-offset: .2em; }
+  .home-lista-estados { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .125rem 1rem; margin-top: .5rem; padding: 0; list-style: none; }
+  .home-lista-estados a { display: flex; justify-content: space-between; gap: .5rem; padding-block: .5rem; min-height: 44px; }
+  .home-lista-estados span { color: var(--color-muted); font-variant-numeric: tabular-nums; }
+  .home-acervo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 2rem; padding-block: 1.5rem; border-block: 1px solid var(--color-border); }
+  .home-acervo h2 { margin: 0; font-size: 1.25rem; }
+  .home-acervo-numero { display: block; color: var(--color-primary); font-size: 3rem; line-height: 1; font-weight: 600; margin-bottom: .5rem; font-variant-numeric: tabular-nums; }
+  .home-acervo .text-note { max-width: 65ch; }
+  .home-areas { padding-block: 2rem 1rem; }
+  .home-areas ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; margin: 0; padding: 0; list-style: none; }
+  .home-areas a { display: block; min-height: 44px; color: var(--color-primary-dark); font-size: 1.25rem; font-weight: 600; line-height: 1.35; text-decoration-thickness: 1px; }
+  .home-areas li p { font-size: .9375rem; color: var(--color-muted); margin-top: .5rem; }
+  @media (max-width: 899px) {
+    .home-abertura { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+    .home-apresentacao { padding-top: 0; }
+    .home-apresentacao h1 { max-width: none; font-size: clamp(2.5rem, 7vw, 3.5rem); }
+    .home-apresentacao .page-lead { max-width: 42ch; }
+    .home-busca { max-width: 620px; margin-top: 1.5rem; }
+    .home-busca .form-input { flex-basis: 18rem; }
+    .home-mapa { max-width: 680px; width: 100%; margin-inline: auto; }
+    .home-mapa .mapa-desenho { max-height: 490px; }
+  }
+  @media (max-width: 599px) {
+    .home-abertura { padding-top: 0; }
+    .home-apresentacao .page-lead { font-size: 1.1875rem; }
+    .home-busca .btn { width: 100%; }
+    .home-mapa .mapa-desenho { max-height: none; }
+    .home-mapa h2 { font-size: 1.25rem; }
+    .home-acervo { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+    .home-acervo-numero { display: inline; font-size: 2rem; margin-right: .375rem; }
+    .home-areas ul { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+    .home-areas li + li { border-top: 1px solid var(--color-border); padding-top: 1.25rem; }
+  }
+  @media (max-width: 359px) { .home-lista-estados { grid-template-columns: minmax(0, 1fr); } }
+</style>
 
-  <form action="/buscar/" method="get" role="search" class="surface-panel mt-xl">
-    <label for="busca-hero" class="form-label">O que você procura?</label>
-    <div class="search-form mt-sm">
-      <input type="search" id="busca-hero" name="q"
-             placeholder="Assunto, nome, sigla ou órgão responsável"
-             autocomplete="off" aria-describedby="busca-hero-ajuda"
-             class="form-input flex-1 min-w-0">
-      <button type="submit" class="btn btn--primary">
-        {% icon "magnifying-glass" %} Buscar no catálogo
-      </button>
-    </div>
-    <p id="busca-hero-ajuda" class="text-note mt-sm">
-      Nos resultados, você pode refinar a consulta por território e área da política.
+<div class="home-abertura">
+  <section aria-labelledby="hero-h" class="home-apresentacao">
+    <p class="eyebrow">{{ site.subtitle }}</p>
+    <h1 id="hero-h">{{ site.title }}</h1>
+    <p class="page-lead">
+      Experiências e referências para fortalecer a <strong>Educação de Jovens, Adultos e Idosos</strong> <span class="whitespace-nowrap">no Brasil.</span>
     </p>
-  </form>
+    <p class="text-note mt-md">
+      Conheça políticas e programas, suas finalidades e os territórios onde foram identificados.
+    </p>
+
+    <form action="/buscar/" method="get" role="search" class="home-busca">
+      <label for="busca-hero" class="form-label">O que você procura?</label>
+      <div class="search-form mt-sm">
+        <input type="search" id="busca-hero" name="q" placeholder="Assunto, nome ou sigla"
+               autocomplete="off" class="form-input flex-1 min-w-0">
+        <button type="submit" class="btn btn--primary">{% icon "magnifying-glass" %} Buscar no catálogo</button>
+      </div>
+      <p class="home-temas">
+        <span class="text-note">Explore também:</span>
+        <a href="/buscar/?q=alfabetiza%C3%A7%C3%A3o">Alfabetização</a>
+        <a href="/buscar/?q=PROEJA">PROEJA</a>
+        <a href="/buscar/?q=perman%C3%AAncia">Permanência nos estudos</a>
+      </p>
+    </form>
+  </section>
+
+  <section class="home-mapa" aria-labelledby="home-mapa-h">
+    <h2 id="home-mapa-h">Conheça experiências pelo Brasil</h2>
+    <p class="text-note">Clique no mapa para explorar por estado.</p>
+    {% set mapaNaHome = true %}
+    {% include "components/mapa-interativo.njk" %}
+    <div class="home-mapa-acessos">
+      <a href="/uf/br/">Esfera federal <span class="text-note">({{ agregados.federaisCount }})</span></a>
+      <a href="/mapa/">Ampliar o mapa {% icon "arrow-up-right" %}</a>
+      <details id="home-lista-ufs">
+        <summary>Escolher pelo nome do estado</summary>
+        <ul class="home-lista-estados">
+          {% for sigla in agregados.ufsCobertas %}
+            {% if sigla != "BR" %}
+              <li><a href="/uf/{{ sigla | lower }}/">{{ ufs[sigla].nome }} <span aria-label="{{ agregados.porUf[sigla].total }} registros">{{ agregados.porUf[sigla].total }}</span></a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </details>
+    </div>
+  </section>
+</div>
+
+<section id="cobertura-uf-h" aria-labelledby="cobertura-aside-h" class="home-acervo">
+  <h2 id="cobertura-aside-h"><span class="home-acervo-numero">{{ agregados.total }}</span> experiências e referências</h2>
+  <div>
+    <p>Registros nas 27 unidades da federação e na esfera federal, reunindo educação, trabalho e proteção social.</p>
+    <p class="text-note mt-sm">As contagens descrevem o acervo pesquisado e não representam a oferta total de políticas em cada estado.</p>
+    <p class="text-note mt-sm"><a href="/sobre/cobertura/">Conheça a cobertura do catálogo</a></p>
+  </div>
 </section>
 
-<section aria-label="Outras formas de consultar" class="grid md:grid-cols-2 gap-lg my-xl">
-  <a href="/explorar/#areas" class="access-card">
-    <h2 class="text-xl">{% icon "books" %} Explorar por área da política</h2>
-    <p>Conheça os registros de educação, trabalho e proteção social.</p>
-  </a>
-  <a href="/explorar/#territorios" class="access-card">
-    <h2 class="text-xl">{% icon "list" %} Explorar por território</h2>
-    <p>Escolha um estado, o Distrito Federal ou a esfera federal.</p>
-  </a>
-</section>
-
-<section aria-labelledby="exemplos-h" class="my-xl">
-  <h2 id="exemplos-h" class="section-heading">Experimente uma busca</h2>
-  <ul class="grid sm:grid-cols-3 gap-sm list-none p-0 mt-md">
-    {% for busca in sinonimos.buscasComuns %}
-      {% if loop.index <= 3 %}
-        <li>
-          <a href="/buscar/?q={{ busca.q | urlencode }}" class="access-card h-full">
-            <span class="font-semibold">{{ busca.label }}</span>
-            <span class="block text-note mt-2xs">{{ busca.contexto }}</span>
-          </a>
-        </li>
-      {% endif %}
+<section aria-labelledby="exemplos-h" class="home-areas">
+  <h2 id="exemplos-h" class="section-heading">Explore por área</h2>
+  <ul>
+    {% for area in agregados.distribuicaoTipo %}
+      <li>
+        <a href="/tipo/{{ area.tipo | slug }}/">{{ area.tipo }} {% icon "arrow-up-right" %}</a>
+        <p>{{ area.n }} registros no catálogo</p>
+      </li>
     {% endfor %}
   </ul>
-  <p class="text-note mt-md">
-    <a href="/sobre/comece-por-aqui/">Como consultar o catálogo</a>
-  </p>
 </section>
 
-<section id="cobertura-uf-h" aria-labelledby="cobertura-aside-h" class="surface-panel my-xl">
-  <h2 id="cobertura-aside-h" class="section-heading">O que você encontra no acervo</h2>
-  <p class="reading-width mt-md">
-    <strong>{{ agregados.total }} registros únicos</strong>, nas
-    <strong>{{ agregados.ufsCobertas | length - 1 }} unidades da federação</strong> e na esfera federal.
-    A educação é o centro da consulta, em diálogo com trabalho, inclusão produtiva
-    e proteção social.
-  </p>
-  {% include "components/caveat-metodologia.njk" %}
-  <ul class="mt-md flex flex-wrap gap-md list-none p-0">
-    <li><a href="/sobre/cobertura/">Cobertura e limites do levantamento</a></li>
-    <li><a href="/mapa/">{% icon "map-trifold" %} Ver o mapa</a></li>
-    <li><a href="/comparacao/">{% icon "chart-bar" %} Comparar UFs</a></li>
-  </ul>
-</section>
-
-{% set painelTitulo = "Um produto da Rede EJA e Inclusão Produtiva, composta por:" %}
+{% set painelTitulo = "Instituições da Rede EJA e Inclusão Produtiva" %}
 {% include "components/painel-rede.njk" %}
+{% include "components/mapa-recursos.njk" %}

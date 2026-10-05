@@ -153,7 +153,7 @@
         },
         "duvidas_revisor": {
           "anterior": "EM TODOS OS ESTADOS",
-          "novo": "Certificação é um direito, mas não substitui a oferta pública de escolarização presencial. A ficha não promete inscrições abertas na data da consulta."
+          "novo": "Calendário e inscrições devem ser consultados nos canais responsáveis pelo exame."
         },
         "revisado_por": {
           "anterior": "Maria Clara Gama",
@@ -910,7 +910,7 @@
         },
         "duvidas_revisor": {
           "anterior": "Carta de serviço consultada; quantidades de unidades e regras nela listadas podem refletir versões anteriores. A presença flexível não deve ser confundida automaticamente com EaD.",
-          "novo": "Carta de serviço consultada; quantidades de unidades e regras nela listadas podem refletir versões anteriores. A presença flexível não deve ser confundida automaticamente com EaD.\n\nA norma mais recente consultada qualifica as informações da carta de serviço anterior. Não foi levantada lista atual de vagas por unidade; 43 CEEJAs é quantidade do anúncio de janeiro de 2026, recuperado pelo índice de pesquisa."
+          "novo": "Carta de serviço consultada; quantidades de unidades e regras nela listadas podem refletir versões anteriores.\n\nA norma mais recente consultada qualifica as informações da carta de serviço anterior. Não foi levantada lista atual de vagas por unidade; 43 CEEJAs é quantidade do anúncio de janeiro de 2026, recuperado pelo índice de pesquisa."
         }
       },
       "justificativa": "Atualizar referência de organização e impedir leitura da regra mensal como dispensa de presencialidade.",
@@ -1338,7 +1338,7 @@
         },
         "informacoes_complementares": {
           "anterior": "Em 2011, a Resolução seeduc nº 4733 autorizou a emissão de certificados de conclusão de ensino médio. E de acordo com documento elaborado pelos inspetores escolares da Regional Metropolitana II (São Gonçalo) - processo nº 44/EEAA-MII/CPPA/06/13, protocolado em 21/07/2013, confirma-se que muitas escolas em São Gonçalo, entre outras, não implementaram o projeto, pelos motivos relatados: i) não foram informadas, ii) falta de professor capacitado pela fundação, iii) falta de equipamentos (televisão, DVD, material didático). Informação retirada da Dissertação com título \"PROJETO AUTONOMIA: O PRIVADO E O  PÚBLICO NAS ESCOLAS ESTADUAIS DO RIO DE JANEIRO\", de Francineide Castilho Ramos. Link para acesso: https://api.arca.fiocruz.br/api/core/bitstreams/823bdc3b-7030-4a1f-a517-19925d631826/content",
-          "novo": "Estudos registram diferenças de implementação entre escolas e discutem a relação público-privado. Esses achados têm recortes próprios e não foram generalizados como diagnóstico atual de toda a rede. Catalogar a experiência não implica recomendar privatização da educação."
+          "novo": "Estudos registram diferenças de implementação entre escolas e discutem a relação público-privado. Esses achados têm recortes próprios e não foram generalizados como diagnóstico atual de toda a rede."
         },
         "fonte_url": {
           "anterior": "https://www.frm.org.br/institucional/a-fundacao/como-chegamos-ate-aqui/2009",
@@ -1569,7 +1569,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Certificação é um direito, mas não substitui a oferta pública de escolarização presencial. A ficha não promete inscrições abertas na data da consulta. Esta ficha estadual descreve o desenho federal. A revisão não confirmou implementação, vagas ou atendimento específico no Rio de Janeiro; a presença no recorte estadual não comprova oferta local."
+          "novo": "Calendário e inscrições devem ser consultados nos canais responsáveis pelo exame. Esta ficha estadual descreve o desenho federal. A revisão não confirmou implementação, vagas ou atendimento específico no Rio de Janeiro; a presença no recorte estadual não comprova oferta local."
         },
         "descricao_tecnica": {
           "anterior": "Funciona como alternativa de certificação para quem está fora do fluxo regular, com inscrições periódicas e prova aplicada nacionalmente. No RJ e em outros estados, pode ser articulado com políticas de EJA e programas de permanência, ampliando rotas de conclusão da educação básica",
@@ -2092,7 +2092,7 @@
         },
         "informacoes_complementares": {
           "anterior": "Conta com apoio tecnológico da Prodemge (Companhia de Tecnologia da Informação do Estado de Minas Gerais) para desenvolvimento e manutenção do Sistema Cesec, plataforma online de gestão acadêmica integrada ao Sistema Mineiro de Administração Escolar (Simade). A Resolução SEE/MG nº 4.955, de fevereiro de 2024 – determina que, a partir de 2026, 80% da carga horária da EJA ocorra na modalidade EaD, impactando o funcionamento dos CESECs",
-          "novo": "A informação anterior de 80% a distância não descreve a organização apresentada no portal estadual em 2026. O registro das modalidades existentes não constitui recomendação de substituição da EJA presencial."
+          "novo": "A informação anterior de 80% a distância não descreve a organização apresentada no portal estadual em 2026."
         },
         "continuidade_governos": {
           "anterior": "Alta (política estrutural, com ajustes de desenho ao longo do tempo)",
@@ -3035,7 +3035,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria documental de 05/10/2026: A modalidade está documentada pela Seduc em 2022. Ano de implantação, vigência da Instrução Normativa 003/2020 para esta oferta, total atual de centros e funcionamento em 2026 não foram confirmados. Flexibilidade do percurso não significa EaD."
+          "novo": "Curadoria documental de 05/10/2026: A modalidade está documentada pela Seduc em 2022. Ano de implantação, vigência da Instrução Normativa 003/2020 para esta oferta, total atual de centros e funcionamento em 2026 não foram confirmados."
         }
       },
       "justificativa": "Retira ano estimado, norma não individualizada e prognóstico político; mantém identificação institucional documentada.",
@@ -3155,7 +3155,7 @@
         },
         "informacoes_complementares": {
           "anterior": "O projeto foi criado para reduzir distorção idade-série, permitindo que estudantes recuperem anos escolares mais rapidamente por meio de metodologias mediadas por tecnologia e conteúdos estruturados",
-          "novo": "O relatório estadual de 2022 registra início em 2014 e, em outro trecho, implementação em 2015; ambos se referem a etapas históricas da oferta. Registra encerramento em 2020 e posterior implantação do Trilhas no Pará. Mediação tecnológica não demonstra, por si só, oferta de EaD."
+          "novo": "O relatório estadual de 2022 registra início em 2014 e, em outro trecho, implementação em 2015; ambos se referem a etapas históricas da oferta. Registra encerramento em 2020 e posterior implantação do Trilhas no Pará."
         },
         "revisado_por": {
           "anterior": "Maria Clara Gama",
@@ -4189,7 +4189,7 @@
         },
         "informacoes_complementares": {
           "anterior": "Através do Decreto Estadual N.° 36.214/2024, a 1' Escola Estadual de Educação Profissional para Pessoas Privadas de Liberdade de Itaitinga (EEEPPL de Itaitinga) na Unidade Prisional de Ensino, Capacitação e Trabalho de Itaitinga (UPECT-Itaitinga). Essa escola foi construida pelos próprios internos da unidade. A construção possibilitou a capacitação de aproximadamente 1.800 internos. A obra foi realizada em parceria com o SENAI que capacitou os internos com curso de eletricista, pedreiro, gesseiro, pintor entre outros",
-          "novo": "O plano prevê expansão de EaD, entre outras ações. Essa previsão não foi adotada como recomendação para a EJA: falta detalhar a etapa atendida, presença, mediação docente e acesso efetivo aos recursos. Números de uma obra ou escola não medem execução do plano inteiro."
+          "novo": "O plano prevê expansão de EaD, entre outras ações. As referências consultadas não detalham as etapas atendidas, a organização das atividades presenciais, a mediação docente e o acesso aos recursos. Números de uma obra ou escola não medem a execução do plano inteiro."
         },
         "duvidas_revisor": {
           "anterior": null,
@@ -4328,7 +4328,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria de 05/10/2026: Página estadual sem data descreve 80% de atividades a distância e 20% presenciais. O registro é documental, não recomendação de EaD nem confirmação de adequação às diretrizes posteriores. Retirada carga de 400 horas presenciais incompatível com o percentual informado; oferta atual, polos e matriz vigente não foram confirmados."
+          "novo": "Curadoria de 05/10/2026: Página estadual sem data descreve 80% de atividades a distância e 20% presenciais. A adequação às diretrizes posteriores não foi confirmada. Retirada carga de 400 horas presenciais incompatível com o percentual informado; oferta atual, polos e matriz vigente não foram confirmados."
         }
       },
       "justificativa": "Página estadual sem data descreve 80% de atividades a distância e 20% presenciais. O registro é documental, não recomendação de EaD nem confirmação de adequação às diretrizes posteriores. Retirada carga de 400 horas presenciais incompatível com o percentual informado; oferta atual, polos e matriz vigente não foram confirmados.",
@@ -6809,7 +6809,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Trata-se de SESI/SENAI, não da rede pública estadual. Cursos anunciados são de 2025; matrículas abertas, continuidade e resultados em 2026 não foram confirmados. Esse formato não é apresentado como recomendação para a EJA pública."
+          "novo": "Trata-se de SESI/SENAI, não da rede pública estadual. Cursos anunciados são de 2025; matrículas abertas, continuidade e resultados em 2026 não foram confirmados."
         },
         "situacao_atual": {
           "anterior": "Ativa / em execução",
@@ -7369,7 +7369,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria de 05/10/2026: Leitura editorial do Programa Atitude: o texto alterna blocos e etapas sem delimitar versão curricular. Planejamento para oito anos não comprova execução atual; interesse do MEC em 2020 não é resultado. Não se recomenda aceleração ou transferência à EJA a partir deste cadastro."
+          "novo": "Curadoria de 05/10/2026: Leitura editorial do Programa Atitude: o texto alterna blocos e etapas sem delimitar versão curricular. Planejamento para oito anos não comprova execução atual; interesse do MEC em 2020 não é resultado."
         }
       },
       "justificativa": "Leitura editorial do Programa Atitude: o texto alterna blocos e etapas sem delimitar versão curricular. Planejamento para oito anos não comprova execução atual; interesse do MEC em 2020 não é resultado. Não se recomenda aceleração ou transferência à EJA a partir deste cadastro.",
@@ -8336,11 +8336,11 @@
         },
         "descricao_tecnica": {
           "anterior": "A Educação de Jovens e Adultos é organizada pela Secretaria de Educação para garantir o direito à educação de quem não teve acesso ou não concluiu os estudos na idade adequada. Nos últimos anos, as diretrizes da política garantem que o estado ofereça dois modelos complementares: a EJA de presença regular, com aulas presenciais em horários definidos (noturno) e a EJA de presença flexível, inspirada nos CEEJAs, que permite ao estudante organizar seu percurso formativo de forma personalizada",
-          "novo": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante; flexibilidade não caracteriza, por si só, ensino a distância."
+          "novo": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante."
         },
         "apresentacao": {
           "anterior": "A Educação de Jovens e Adultos é organizada pela Secretaria de Educação para garantir o direito à educação de quem não teve acesso ou não concluiu os estudos na idade adequada. Nos últimos anos, as diretrizes da política garantem que o estado ofereça dois modelos complementares: a EJA de presença regular, com aulas presenciais em horários definidos (noturno) e a EJA de presença flexível, inspirada nos CEEJAs, que permite ao estudante organizar seu percurso formativo de forma personalizada",
-          "novo": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante; flexibilidade não caracteriza, por si só, ensino a distância."
+          "novo": "Oferta de ensino fundamental e médio para jovens, adultos e pessoas idosas na rede estadual de Sergipe. Organização de horários, percurso e frequência deve ser conferida nas diretrizes e na unidade ofertante."
         },
         "revisado_por": {
           "anterior": "Maria Clara Gama",
@@ -8348,7 +8348,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria de 05/10/2026: Leitura editorial da oferta estadual. Presença flexível não é sinônimo de EaD. Número de estudantes, escolas e municípios usa recorte de 2025; não foi revalidado como atual. Retirada previsão de continuidade alta e afirmação genérica de modelo inspirado em CEEJAs sem documento correspondente."
+          "novo": "Curadoria de 05/10/2026: Leitura editorial da oferta estadual. Número de estudantes, escolas e municípios usa recorte de 2025; não foi revalidado como atual. Retirada previsão de continuidade alta e afirmação genérica de modelo inspirado em CEEJAs sem documento correspondente."
         }
       },
       "justificativa": "Leitura editorial da oferta estadual. Presença flexível não é sinônimo de EaD. Número de estudantes, escolas e municípios usa recorte de 2025; não foi revalidado como atual. Retirada previsão de continuidade alta e afirmação genérica de modelo inspirado em CEEJAs sem documento correspondente.",
@@ -8727,7 +8727,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Modalidade decorre da organização declarada, não das provas. Proporções remotas/presenciais, resultados e continuidade em 2026 não confirmados. Flexibilidade e permanência não são sinônimos de EaD."
+          "novo": "Proporções remotas/presenciais, resultados e continuidade em 2026 não confirmados."
         },
         "situacao_atual": {
           "anterior": "Ativa / em execução",
@@ -10515,7 +10515,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria de 05/10/2026: Leitura editorial: referência federal de relançamento em 2024 não comprova retomada do ProJovem no Distrito Federal. Experiência de Planaltina é histórica e não foi reconferida nesta rodada. Mantida situação Sem informação; alternância de tempos formativos não implica EaD."
+          "novo": "Curadoria de 05/10/2026: Leitura editorial: referência federal de relançamento em 2024 não comprova retomada do ProJovem no Distrito Federal. Experiência de Planaltina é histórica e não foi reconferida nesta rodada. Mantida situação Sem informação."
         }
       },
       "justificativa": "Leitura editorial: referência federal de relançamento em 2024 não comprova retomada do ProJovem no Distrito Federal. Experiência de Planaltina é histórica e não foi reconferida nesta rodada. Mantida situação Sem informação; alternância de tempos formativos não implica EaD.",
@@ -10808,7 +10808,7 @@
         },
         "informacoes_complementares": {
           "anterior": "Painel de Demandas (Monitor de Profissões): Desenvolvido em parceria com a Agência Brasileira de Desenvolvimento Industrial (ABDI) , o Monitor de Profissões é uma ferramenta interativa que relaciona informações sobre os cursos da educação profissional e tecnológica com a demanda por força de trabalho em diferentes setores da economia. O painel oferece um panorama das vocações econômicas em cada estado, com base em indicadores de trabalho e renda, setores e postos mais relevantes, e sua correspondência com os cursos ofertados. Os dados são acompanhados por indicadores socioeconômicos como PIB, taxas de desemprego, escolaridade, rendimento médio mensal e distribuição da população por idade, sexo, raça e cor. A ferramenta foi elaborada em parceria com a Secretaria de Desenvolvimento Social do Estado de Minas Gerais e está disponível no portal do programa para orientar instituições de ensino sobre a oferta de cursos de acordo com a realidade econômica de cada região",
-          "novo": "Ofertas presenciais e a distância precisam ser examinadas por instituição, público e edição. Sua presença no catálogo não constitui recomendação de EaD para a escolarização da EJA."
+          "novo": "Ofertas presenciais e a distância precisam ser examinadas por instituição, público e edição."
         },
         "duvidas_revisor": {
           "anterior": "EM TODOS OS ESTADOS",
@@ -11133,7 +11133,7 @@
         },
         "informacoes_complementares": {
           "anterior": "Em alguns locais pode haver serviços digitais/complementares. Lei nº 7.998/1990 Para sustentar juridicamente a criação do PAT (Posto de Atendimento ao Trabalhador) no Estado de São Paulo, não existe uma única “lei estadual que criou o PAT”. Ele é resultado de uma política pública federal executada pelos estados e municípios por meio de convênios e atos administrativos. Rede/unidade de atendimento da política estadual de emprego, articulada ao Sine",
-          "novo": "Atendimento digital é canal de serviço e não modalidade EaD. A existência da rede não assegura todas as especialidades ou vagas disponíveis em cada unidade."
+          "novo": "A existência da rede não assegura todas as especialidades ou vagas disponíveis em cada unidade."
         },
         "fonte_url": {
           "anterior": "https://www.desenvolvimentoeconomico.sp.gov.br/DesenvolvimentoEconomico/institucional/Programas/pat_programa#:~:text=Visualizador%20do%20Conte%C3%BAdo%20da%20Web,-Menu%20de%20a%C3%A7%C3%A3o",
@@ -13474,7 +13474,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Notícia do Conselho Nacional do SESI de 18/03/2026 confirma lançamento estadual e distingue escolarização de qualificação. A referência de dois meses não descreve a duração da EJA. A fonte menciona ensino a distância; a proporção de atividades presenciais e o ato autorizativo local não foram examinados. O catálogo descreve a experiência sem recomendar substituição da EJA pública presencial."
+          "novo": "Notícia do Conselho Nacional do SESI de 18/03/2026 confirma lançamento estadual e distingue escolarização de qualificação. A referência de dois meses não descreve a duração da EJA. A fonte menciona ensino a distância; a proporção de atividades presenciais e o ato autorizativo local não foram examinados."
         }
       },
       "justificativa": "Notícia do Conselho Nacional do SESI de 18/03/2026 confirma lançamento estadual e distingue escolarização de qualificação. A referência de dois meses não descreve a duração da EJA. A fonte menciona ensino a distância; a proporção de atividades presenciais e o ato autorizativo local não foram examinados. O catálogo descreve a experiência sem recomendar substituição da EJA pública presencial.",
@@ -14488,7 +14488,7 @@
         },
         "apresentacao": {
           "anterior": "A Escola do Trabalhador 4.0 oferece cursos online e gratuitos voltados ao desenvolvimento de competências digitais e à inserção profissional na chamada Economia 4.0. Atualmente, a plataforma disponibiliza 190 cursos distribuídos em nove categorias e 39 trilhas educacionais, totalizando 778 horas de capacitação.  Os cursos podem ser realizados a qualquer hora e de qualquer lugar, conforme a disponibilidade do aluno, e não é exigida escolaridade mínima.  Ao final de cada curso, os participantes recebem um certificado de conclusão conferido pelo Ministério do Trabalho e Emprego e pela Microsoft.  Os alunos também têm acesso gratuito ao Microsoft 365 (Word, Excel e PowerPoint) e contam com a ClaudIA, ferramenta de orientação de carreira que recomenda trilhas personalizadas conforme perfil e objetivos profissionais",
-          "novo": "A formação profissional complementa percursos educacionais. Não substitui a oferta pública presencial de EJA e não comprova acesso a equipamentos, internet ou apoio individual no Amazonas."
+          "novo": "A formação profissional complementa percursos educacionais. Não foram identificadas informações sobre oferta local de equipamentos, conexão à internet ou apoio individual aos participantes no Amazonas."
         },
         "informacoes_complementares": {
           "anterior": "Pessoas capacitadas (2022 a jan/2025): mais de 320 mil. Inscritos na plataforma: mais de 2 milhões. Desempregados no momento da inscrição: 57,7%. Desempregados que conseguiram emprego ou aumentaram renda: 13,6% (15,3% em 2025). Empregados que evoluíram na carreira após os cursos: 17,2%. Participação feminina: 37,2%. Avanços profissionais em áreas de TI: 61,9%. Avaliação positiva dos cursos pelos empregados: 90% (27,9% essencial; 61,8% complemento relevante). Avaliação positiva pelos desempregados que conseguiram vaga: mais de 85%",
@@ -15057,7 +15057,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria de 05/10/2026: Leitura editorial do Gente do Campo. Limite de 30 horas refere-se ao tempo-comunidade, não à duração total da graduação. Retirada transferência “fundo a fundo” sem instrumento. Editais, bolsas de 2026 e financiamento do RN Sustentável II não foram reconferidos; alternância não significa EaD."
+          "novo": "Curadoria de 05/10/2026: Leitura editorial do Gente do Campo. Limite de 30 horas refere-se ao tempo-comunidade, não à duração total da graduação. Retirada transferência “fundo a fundo” sem instrumento. Editais, bolsas de 2026 e financiamento do RN Sustentável II não foram reconferidos."
         }
       },
       "justificativa": "Leitura editorial do Gente do Campo. Limite de 30 horas refere-se ao tempo-comunidade, não à duração total da graduação. Retirada transferência “fundo a fundo” sem instrumento. Editais, bolsas de 2026 e financiamento do RN Sustentável II não foram reconferidos; alternância não significa EaD.",
@@ -15183,7 +15183,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria de 05/10/2026: A ficha descreve plataforma de serviços, não curso. Retirada classificação EaD derivada apenas do canal digital e continuidade “alta por lançamento recente”. Não foram reconferidas funcionalidades, cursos disponíveis ou operação atual."
+          "novo": "Curadoria de 05/10/2026: O registro trata de uma plataforma de serviços. Funcionalidades, cursos disponíveis e operação atual não foram reconferidos; não há confirmação de continuidade."
         }
       },
       "justificativa": "A ficha descreve plataforma de serviços, não curso. Retirada classificação EaD derivada apenas do canal digital e continuidade “alta por lançamento recente”. Não foram reconferidas funcionalidades, cursos disponíveis ou operação atual.",
@@ -15795,11 +15795,11 @@
         },
         "descricao_tecnica": {
           "anterior": "O Piauí Oportunidades é uma iniciativa inovadora do Governo do Estado que conecta empresas, instituições e pessoas para promover a empregabilidade no Piauí. Administrada pelo Piauí Instituto de Tecnologia (PIT), a plataforma atua como um elo entre profissionais em busca de oportunidades e empresas que desejam contratar. A plataforma conta com a Inteligência Artificial NAZA, que auxilia os candidatos no entendimento de suas habilidades e na definição de trilhas de desenvolvimento profissional personalizadas",
-          "novo": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Seu funcionamento digital não é uma modalidade de ensino. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada."
+          "novo": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada."
         },
         "apresentacao": {
           "anterior": "O Piauí Oportunidades é uma iniciativa inovadora do Governo do Estado que conecta empresas, instituições e pessoas para promover a empregabilidade no Piauí. Administrada pelo Piauí Instituto de Tecnologia (PIT), a plataforma atua como um elo entre profissionais em busca de oportunidades e empresas que desejam contratar. A plataforma conta com a Inteligência Artificial NAZA, que auxilia os candidatos no entendimento de suas habilidades e na definição de trilhas de desenvolvimento profissional personalizadas",
-          "novo": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Seu funcionamento digital não é uma modalidade de ensino. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada."
+          "novo": "Administrada pelo PIT, a plataforma divulga vagas e oportunidades de formação e permite o cadastramento de profissionais. Critérios de contratação, ingresso em cursos e benefícios pertencem a cada oportunidade anunciada."
         },
         "informacoes_complementares": {
           "anterior": "A plataforma ultrapassou 10 mil cadastros em agosto de 2025. Conta com 198 cursos gratuitos e 61 empresas cadastradas. Em 2026, foi lançado o programa Skills do Amanhã, em parceria com a AWS, com meta de capacitar 20 mil piauienses em nuvem e IA. Vinculado à plataforma, o Programa Oportunidade Jovem oferece vagas de aprendizagem para jovens de 14 a 21 anos que estejam cursando, no mínimo, o Ensino Fundamental ou o Ensino Médio na rede pública estadual, ou que já tenham concluído o Ensino Médio em instituição pública . Os selecionados atuam nas secretarias estaduais do governo piauiense, com jornada de trabalho de 20 horas semanais, e recebem salário de R$ 761,55, vale-transporte, férias, 13º salário, FGTS, seguro de vida e uniforme",
@@ -15811,7 +15811,7 @@
         },
         "duvidas_revisor": {
           "anterior": null,
-          "novo": "Curadoria documental de 05/10/2026: Confirmada a função da plataforma e sua divulgação em 25/06/2026. Retirada classificação EaD, pois a ficha registra serviço digital. Ato específico de criação e composição financeira não foram confirmados; não se atribuem ao portal as condições de Oportunidade Jovem."
+          "novo": "Curadoria documental de 05/10/2026: Confirmada a função da plataforma e sua divulgação em 25/06/2026. Ato específico de criação e composição financeira não foram confirmados. Oportunidade Jovem é uma iniciativa distinta, cujas condições não se aplicam automaticamente aos usuários do portal."
         }
       },
       "justificativa": "Distingue portal digital, cursos e programa de aprendizagem; retira associação indevida de benefícios/gestor e projeção apresentada como consolidação.",

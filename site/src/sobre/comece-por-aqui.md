@@ -14,9 +14,7 @@ permalink: /sobre/comece-por-aqui/
 
 # Como consultar o catálogo
 
-O catálogo foi organizado para membros, coordenadores e profissionais da Rede EJA encontrarem experiências e referências úteis ao fortalecimento da educação pública e ao diálogo com os governos.
-
-Comece por uma pergunta: **que experiências foram levantadas sobre o tema que estou procurando?**
+O catálogo permite encontrar experiências relacionadas à Educação de Jovens, Adultos e Idosos, conhecer suas finalidades e consultar as referências disponíveis. A pesquisa pode começar pelo nome de uma experiência, por um tema ou por um território.
 
 ## 1. Busque e refine
 
@@ -49,7 +47,7 @@ Para citar o verbete, abra **Como citar esta ficha** nesse mesmo bloco. Estão d
 
 ## Apoio à leitura
 
-- [Metodologia e alcance](/sobre/metodologia/) — interpretação das informações e das lacunas.
-- [Finalidade e orientação editorial](/sobre/) — compromisso com a EJA pública, presencial e de qualidade.
+- [Metodologia e fontes](/sobre/metodologia/) — interpretação das informações e das lacunas.
+- [Sobre o catálogo](/sobre/) — finalidade, instituições e equipe responsável.
 - [Glossário](/sobre/glossario/) — termos e siglas do levantamento.
 - Encontrou um erro? Use o link de relato ao final da ficha.

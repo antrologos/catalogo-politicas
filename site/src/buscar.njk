@@ -56,13 +56,13 @@ permalink: /buscar/
 <section aria-labelledby="buscas-comuns-h" class="mt-2xl border-t border-neutral-200 pt-lg">
   <h2 id="buscas-comuns-h" class="text-lg">{% icon "compass" %} Exemplos de busca</h2>
   <p class="text-note">
-    Use um exemplo como ponto de partida. São consultas sugeridas, não novas categorias do levantamento.
+    Acesse uma das consultas abaixo ou pesquise outro assunto.
   </p>
   <ul class="mt-md grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-sm list-none p-0">
     {% for b in sinonimos.buscasComuns %}
       <li>
         <a href="/buscar/?q={{ b.q | urlencode }}"
-           class="block p-sm border border-neutral-200 rounded hover:border-primary hover:bg-primary/5 no-underline transition-colors">
+           class="access-link">
           <span class="font-semibold text-primary">{{ b.label }}</span>
           <span class="block text-sm text-neutral-700 mt-2xs">{{ b.contexto }}</span>
         </a>
@@ -70,7 +70,7 @@ permalink: /buscar/
     {% endfor %}
   </ul>
   <p class="text-note mt-md">
-    Conheça a <a href="/sobre/cobertura/">cobertura e os limites do levantamento</a>.
+    Consulte a <a href="/sobre/cobertura/">cobertura do catálogo</a>.
   </p>
 </section>
 
@@ -219,7 +219,7 @@ permalink: /buscar/
     font: inherit;
   }
   .search-filter-toggle, .search-view-results { display: none; }
-  .search-help { border-left: 4px solid var(--color-primary, #665A8E); padding: 1rem 1.25rem; background: var(--color-background, #F6F7FB); }
+  .search-help { border-top: 1px solid var(--color-border, #E1E2EA); padding-block: 1rem; }
   .search-help h2 { margin-top: 0; }
   #search[data-search-state="failure"] .pagefind-ui__results-area { display: none; }
   @media (max-width: 767px) {

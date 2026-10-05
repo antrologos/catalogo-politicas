@@ -2,58 +2,49 @@
 layout: layouts/base.njk
 title: "Acesso à informação"
 permalink: /sobre/transparencia/
-description: "Compromissos de transparência do Catálogo de Políticas, conforme princípios da Lei de Acesso à Informação (Lei 12.527/2011)."
+description: "Como o catálogo é atualizado, onde consultar suas fontes e como contribuir com correções e novas referências."
 ---
 
 # Acesso à informação
 
-Compromissos de transparência do **Catálogo de Políticas** conforme princípios da [Lei de Acesso à Informação (Lei 12.527/2011)](http://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12527.htm) e prática consolidada de portais governamentais brasileiros.
+O catálogo oferece consulta gratuita às experiências e às referências reunidas pela pesquisa. As fichas apresentam as fontes disponíveis e os limites das informações, para que possam ser examinadas e utilizadas em outros trabalhos.
 
-## Política de revisão dos dados
+## Atualização do acervo
 
-- **Versão atual**: **{{ site.versao }}** (4 de outubro de 2026) — produto permanente da Rede EJA e Inclusão Produtiva, com as 27 unidades da federação e a esfera federal.
-- **Última revisão geral**: outubro de 2026 (incorporação da 3ª onda e revisão do vocabulário de categorias).
-- **Frequência de revisão**: **semestral** (ver [cobertura e cronograma](../cobertura/)).
-- **Captura de fontes oficiais**: quando o catálogo preserva localmente um documento normativo, segue a regra interna `captura-responsavel` — robots.txt respeitado, rate-limit 0,5 req/s por domínio, atribuição preservada.
+O acervo é atualizado em rodadas de pesquisa, com correções e inclusão de novas experiências. A revisão de outubro de 2026 incorporou a terceira onda do levantamento e informações dos relatórios nacional e estaduais. O bloco Referências de cada ficha informa o alcance da revisão realizada.
 
-## Qualidade dos dados
+As revisões documentais examinam fontes para corrigir ou complementar as informações. As revisões editoriais ajustam a apresentação e explicam lacunas, sem significar nova comprovação externa. Nenhuma dessas revisões equivale a monitoramento contínuo da oferta.
 
-- **Validação automática**: cada ficha valida contra **JSON Schema v0.2** (32 campos canônicos) em CI a cada commit.
-- **Vocabulário canônico**: 8 dimensões categóricas com lista fechada (tipo de política, situação atual, esfera de execução, modalidade, etc).
-- **Cobertura de fontes integrais**: parte das fichas tem texto da norma preservado localmente; o restante segue pendente por:
-  - **WAF gov.br**: 71 URLs bloqueiam scraping (em revisão).
-  - **Timeout planalto.gov.br**: 23 URLs com instabilidade persistente.
-  - **Outras causas**: 13 URLs com erro de DNS/SSL ou conteúdo dinâmico.
+## Fontes e qualidade das informações
+
+As informações passam por verificações de estrutura e consistência das classificações. Essas verificações não comprovam, por si sós, o funcionamento, o atendimento ou os resultados de uma experiência.
+
+As fontes podem ter abrangência e datas diferentes. Parte delas descreve normas, planos ou anúncios; outras documentam atividades realizadas. A [metodologia](/sobre/metodologia/) explica essas diferenças e seus efeitos na leitura das fichas.
+
+Algumas páginas externas podem estar temporariamente indisponíveis ou bloquear o acesso automatizado. A equipe preserva cópias de parte das fontes para conferência, sem publicá-las no site. As correções e seus registros estão disponíveis no [repositório do catálogo](https://github.com/antrologos/catalogo-politicas).
 
 ## Histórico de versões
 
-| Versão | Data | Mudanças principais |
+| Etapa | Data | Principais mudanças |
 |---|---|---|
-| PoC 2026-05-01 | 2026-05-01 | 1ª publicação — 9 UFs + Federal |
-| 2ª onda | 2026-05-13 | +9 UFs (GO, ES, SC, MA, AM, MT, PB, AL, RN) — 18 UFs + Federal |
-| 3ª onda | 2026-10-04 | +9 UFs (MS, RR, DF, RO, PI, AC, SE, TO, AP) — 27 UFs + Federal |
-| **1.0** | 2026-10-04 | Lançamento como produto permanente da Rede EJA e Inclusão Produtiva; categorias revisadas pelo dicionário oficial; nova citação (obra e editora: Rede EJA) |
-| (próximas) | (a vir) | Aumento da cobertura de fontes integrais; atualização das fichas |
+| Primeiro levantamento | Maio de 2026 | Experiências de nove UFs e da esfera federal |
+| Segunda onda | Maio de 2026 | Incorporação de GO, ES, SC, MA, AM, MT, PB, AL e RN |
+| Terceira onda | 4 de outubro de 2026 | Incorporação de MS, RR, DF, RO, PI, AC, SE, TO e AP; presença das 27 UFs no acervo |
+| Versão {{ site.versao }} | 4 de outubro de 2026 | Lançamento como produto permanente da Rede EJA e Inclusão Produtiva |
+| Curadoria do acervo | 5 de outubro de 2026 | Revisão de referências e conteúdo; inclusão de 22 experiências identificadas nos relatórios nacional e estaduais |
 
-Acompanhe o [histórico completo de commits no GitHub](https://github.com/antrologos/catalogo-politicas/commits/main).
+O [histórico do repositório](https://github.com/antrologos/catalogo-politicas/commits/main) registra as alterações publicadas.
 
-## Canal de relato — encontrou erro?
+## Correções e contribuições
 
-**SLA público: revisão em até 90 dias.**
+Sugestões de inclusão, correções e referências podem ser enviadas pelo [canal de contribuições no GitHub](https://github.com/antrologos/catalogo-politicas/issues/new). Inclua o nome da experiência, o território, a informação a corrigir e a fonte correspondente, com sua data quando disponível. Os relatos desse canal são públicos.
 
-Três canais:
-1. **Issue no GitHub** (preferido — público, rastreável): [abrir issue](https://github.com/antrologos/catalogo-politicas/issues/new).
-2. **E-mail institucional**: contato direto com a coordenação (Rogério Jerônimo Barbosa).
-3. **Pull request** (para correções pequenas): forke o repositório e abra PR.
+## Alcance do catálogo
 
-## O que NÃO temos
+O catálogo é uma iniciativa de pesquisa da Rede EJA e Inclusão Produtiva. Não substitui os órgãos responsáveis pelas experiências nem seus canais de atendimento. Informações sobre inscrições, serviços e oferta atual precisam ser confirmadas com esses órgãos.
 
-Para ser explícito sobre limites:
-
-- **Não somos órgão público**. Não temos relação institucional com órgãos das UFs catalogadas. Não respondemos a pedidos via e-SIC.
-- **Não somos fonte primária**. Para a versão atual da norma, sempre consulte o portal oficial (link "Acessar no portal oficial" em cada ficha).
-- **Não garantimos cobertura completa**. O catálogo cobre as 27 UFs, mas não todas as políticas de cada uma — é levantamento, não censo (ver [cobertura](../cobertura/) e [metodologia](../metodologia/)).
+A presença de uma experiência no acervo não significa recomendação ou comprovação de eficácia. A cobertura das 27 UFs também não representa um inventário completo das políticas de cada território. Consulte a [cobertura geográfica](/sobre/cobertura/) e a [metodologia](/sobre/metodologia/) para conhecer os limites do levantamento.
 
 ## Reuso e atribuição
 
-Conteúdo do catálogo é licenciado sob [CC BY 4.0](../termos/). Reuso permitido com atribuição. Para tirar dúvidas sobre atribuição, consulte os [termos de uso](../termos/).
+O conteúdo do catálogo pode ser reutilizado com atribuição, conforme a licença [CC BY 4.0](/sobre/termos/). Os [termos de uso](/sobre/termos/) apresentam as condições e a forma de citar o material.

@@ -8,7 +8,7 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 
 ## Orientação editorial aprovada em 04/10/2026
 
-- Público prioritário: membros, coordenadores e profissionais das instituições da Rede EJA.
+- Produto público para consulta geral, produzido pela Rede EJA. A Rede é referência institucional, sem restrição de público. Orientação atualizada pelo usuário em 05/10/2026.
 - Finalidade: conhecer experiências, suas finalidades, funcionamento básico, território e referências, fortalecendo o direito à EJA pública, presencial e de qualidade e o diálogo com os governos.
 - Inclusão produtiva é um componente; educação e trabalho abrangem também cuidados, direitos, desigualdades e formação crítica. O projeto não defende privatização nem EaD para EJA.
 - A rodada autorizada aproveita o acervo existente, sem depender de revisão do responsável em lotes. As diretrizes completas estão em [docs/DIRETRIZES_E_PLANO_EDITORIAL_2026-10-04.md](docs/DIRETRIZES_E_PLANO_EDITORIAL_2026-10-04.md).
@@ -35,7 +35,17 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 - No loader Eleventy de revisões, manter apenas export default; helper testável fica em site/lib/revisoes.js. Export adicional no loader impede a execução esperada no build real.
 - Verificações locais: 175 testes Python e 45 testes Node aprovados; 447 HTML, busca com 388 fichas e zero links/âncoras locais ausentes. Publicada pelo commit 8c8642c; CI do site 37275066799 e Python 37275942629 aprovados. Conteúdo público e índice de 388 fichas conferidos; ver relatório para evidências e limites.
 
-## Estado atual (2026-10-05 — curadoria do acervo)
+## Apresentação pública (2026-10-05)
+
+- Subtítulo aprovado: “Experiências e referências para fortalecer a Educação de Jovens, Adultos e Idosos no Brasil.”
+- Apresentação destinada ao público geral. As diretrizes substantivas continuam orientando a pesquisa, sem reproduzir instruções à equipe, manifestos ou linguagem de desenvolvimento na interface.
+- Notas metodológicas permanecem visíveis em texto corrido, com links para aprofundamento; evitar caixas coloridas, faixas laterais e slogans. Navegação e indicadores usam tipografia, espaçamento e divisórias leves.
+- Ressalvas devem se referir a características ou lacunas concretas da experiência. Evitar advertências genéricas sobre EaD em materiais didáticos, cadastros ou serviços digitais, e não repetir chamadas sobre limites em todas as seções. Links públicos usam “Metodologia e fontes” e “Cobertura do catálogo”.
+- Home com busca e mapa interativo em destaque; Mapa é um dos cinco links principais. A abertura usa o mapa para navegar por UF, sem escala de contagens; a página Mapa preserva métricas e exportação. D3 é servido localmente.
+- Ajustes editoriais em 29 fichas, sem alterar referências, categorias ou níveis de evidência: data/auditoria/ajustes-redacao-publica-2026-10-05.json. Derivado atual: policies-apresentacao-publica-2026-10-05.json; versões anteriores preservadas.
+- Plano e validação desta rodada: .claude/plans/2026-10-05_apresentacao-publica.md.
+
+## Estado atual (2026-10-05 — apresentação pública)
 
 - **Produto**: Catálogo de Políticas da **Rede EJA e Inclusão Produtiva**, um produto permanente da Rede (16 instituições). A página da Rede (https://www.frm.org.br/projeto/rede-eja) lista o catálogo em "Evidências".
   - Site: https://antrologos.github.io/catalogo-politicas/

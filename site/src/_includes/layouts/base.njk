@@ -41,7 +41,7 @@
 
   {% include "components/header.njk" %}
 
-  <main id="conteudo" tabindex="-1" class="site-main flex-1 w-full min-w-0 container-prose" role="main">
+  <main id="conteudo" tabindex="-1" class="site-main flex-1 w-full min-w-0 container-prose{% if page.url | startsWith('/sobre/') %} editorial-page{% endif %}" role="main">
     {{ content | safe }}
   </main>
 

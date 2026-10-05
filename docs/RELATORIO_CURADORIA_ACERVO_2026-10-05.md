@@ -116,7 +116,7 @@ Respostas 404, bloqueios, falhas de rede, redirecionamentos genéricos e timeout
 
 - Correções declarativas: [correcoes-2026-10-05b-relatorios.json](../data/curadoria/correcoes-2026-10-05b-relatorios.json).
 - Inclusões declarativas: [novas-2026-10-05-relatorios.json](../data/curadoria/novas-2026-10-05-relatorios.json).
-- Conjunto gerado: [policies-relatorios-2026-10-05.json](../data/derived/policies-relatorios-2026-10-05.json), também disponibilizado em latest.json.
+- Conjunto gerado: [policies-relatorios-2026-10-05.json](../data/derived/policies-relatorios-2026-10-05.json), preservado como versão desta rodada. O arquivo latest.json acompanha as revisões posteriores; os ajustes de apresentação estão registrados em [auditoria de redação pública](../data/auditoria/ajustes-redacao-publica-2026-10-05.json).
 - Decisão técnica: [novas experiências documentais](../.claude/decisions/2026-10-05_novas-experiencias-documentais.md).
 - Instruções de reprodução: [pipeline ETL](../scripts/etl/README.md).
 
