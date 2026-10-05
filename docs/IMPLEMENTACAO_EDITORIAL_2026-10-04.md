@@ -46,3 +46,7 @@ A rodada não realizou commit, push ou publicação. Para continuar, partir do c
 Planilhas, dados canônicos, IDs, slugs, schema, vocabulário, ETL e fontes originais foram preservados. **Não houve novo levantamento substantivo, verificação atual de todas as ofertas nem avaliação de resultados.** A reorganização melhora a apresentação do material disponível e não confirma a correção substantiva de todas as fichas. Experiências históricas continuam no acervo; ausência de confirmação não foi convertida em encerramento.
 
 Grafo oculto, identidade da Rede, créditos, endereço público e escopo institucional foram mantidos. A [lista de revisão da equipe de pesquisa](revisao-equipe-pesquisa-2026-10.md) continua como referência para questões substantivas, sem transformar toda a lista em condição desta entrega.
+
+## Atualização de publicação — 05/10/2026
+
+A reorganização editorial foi publicada junto da implementação visual. O [relatório do plano ampliado](IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md) registra commits, validações automáticas e conferência no site público.

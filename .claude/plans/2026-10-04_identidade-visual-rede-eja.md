@@ -1,9 +1,9 @@
 # Plano: identidade visual e usabilidade do Catálogo da Rede EJA
-> **Revisão ampliada:** após a pesquisa de boas práticas solicitada pelo usuário, o [Plano ampliado de design e usabilidade](../../docs/PLANO_DESIGN_E_USABILIDADE_2026-10-04.md) passa a ser a referência principal. Este documento e o estudo estático registram a proposta preliminar; tamanhos móveis, estados da busca e retorno à lista devem seguir a revisão. A implementação posterior da revisão ampliada está concluída localmente; ver [relatório](../../docs/IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md).
+> **Revisão ampliada:** após a pesquisa de boas práticas solicitada pelo usuário, o [Plano ampliado de design e usabilidade](../../docs/PLANO_DESIGN_E_USABILIDADE_2026-10-04.md) passa a ser a referência principal. Este documento e o estudo estático registram a proposta preliminar; tamanhos móveis, estados da busca e retorno à lista devem seguir a revisão. A implementação posterior da revisão ampliada foi publicada em 05/10/2026; ver [relatório](../../docs/IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md).
 
 **Data:** 4 de outubro de 2026.
 
-**Status:** HISTÓRICO — proposta preliminar substituída pelo plano ampliado, já implementado e validado localmente.
+**Status:** HISTÓRICO — proposta preliminar substituída pelo plano ampliado, já implementado, validado e publicado.
 
 **Escopo:** uma rodada de acabamento visual e usabilidade sobre a reorganização editorial já concluída.
 

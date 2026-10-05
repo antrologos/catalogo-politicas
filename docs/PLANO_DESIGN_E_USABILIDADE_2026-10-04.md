@@ -2,7 +2,7 @@
 
 **Data:** 4 de outubro de 2026.
 
-**Status:** IMPLEMENTADO E VALIDADO LOCALMENTE — autorizado por “implemente o plano ampliado”. Dados preservados; sem publicação. Consulte o [relatório da implementação](IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md).
+**Status:** IMPLEMENTADO, VALIDADO E PUBLICADO — autorizado por “implemente o plano ampliado”. Dados preservados; publicação concluída em 05/10/2026. Consulte o [relatório da implementação](IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md).
 
 **Versão:** revisão 2; consolida e amplia o [plano visual anterior](../.claude/plans/2026-10-04_identidade-visual-rede-eja.md).
 
@@ -201,4 +201,4 @@ Implementação futura: `site/tailwind.config.js`, CSS global e de impressão, l
 
 Dados, IDs, slugs, schema, vocabulário, planilhas e ETL permanecem fora do escopo. A finalidade pública, presencialidade, trabalho e cuidados e a colaboração com governos continuam orientando a apresentação. Não confundir inclusão no catálogo com recomendação de uma política.
 
-Este documento substitui o plano anterior como referência principal para a próxima implementação. O HTML e as imagens do estudo anterior permanecem como registro visual preliminar. **Pesquisa e implementação local concluídas. O resultado, as correções e as validações estão no [relatório da implementação](IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md).**
+Este documento substitui o plano anterior como referência principal para a próxima implementação. O HTML e as imagens do estudo anterior permanecem como registro visual preliminar. **Pesquisa, implementação e publicação concluídas. O resultado, as correções e as validações estão no [relatório da implementação](IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md).**

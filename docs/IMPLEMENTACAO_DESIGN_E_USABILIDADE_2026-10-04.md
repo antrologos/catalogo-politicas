@@ -2,7 +2,7 @@
 
 **Data:** rodada iniciada em 4 de outubro e concluída em 5 de outubro de 2026.
 
-**Estado:** concluído localmente, validado e sincronizado nos dois clones. Sem commit, push ou publicação.
+**Estado:** publicado e verificado em produção em 5 de outubro de 2026, com os dois clones sincronizados.
 
 **Referência:** [Plano ampliado de design e usabilidade](PLANO_DESIGN_E_USABILIDADE_2026-10-04.md), autorizado pelo pedido “implemente o plano ampliado”.
 
@@ -10,7 +10,7 @@
 
 O catálogo recebeu a identidade da Rede EJA, uma entrada centrada na consulta, exploração por território e área, resultados mais legíveis e continuidade entre busca e ficha. A rodada preserva a finalidade de conhecer experiências, finalidades, territórios e referências para fortalecer a EJA pública, presencial e de qualidade.
 
-A prévia está disponível, enquanto o servidor local estiver em execução, em [localhost:8775/catalogo-politicas](http://localhost:8775/catalogo-politicas/). O site público ainda não recebeu essas alterações.
+A versão está disponível no [site público do catálogo](https://antrologos.github.io/catalogo-politicas/). Implementação publicada no commit `a759f6c`, com ajuste final de tipografia no commit `5b1cc49`. A [execução final de publicação](https://github.com/antrologos/catalogo-politicas/actions/runs/37259832186) concluiu todas as etapas com sucesso.
 
 ## O que foi implementado
 
@@ -37,6 +37,8 @@ A prévia está disponível, enquanto o servidor local estiver em execução, em
 - O estilo de impressão ocultava também o botão que contém a referência. A referência permanece visível como link textual, com sua URL.
 - As listas por dimensão usavam o indicador de réplica para rotular a origem. Como as réplicas já são excluídas, os federais apareciam como estaduais. O rótulo agora usa a UF canônica BR; o DF aparece como Distrital, preservando o vocabulário dos filtros.
 
+- A conferência pública detectou que a configuração de títulos emitia uma declaração CSS para cada alternativa de fonte. A lista agora é serializada em uma única declaração, preservando Plex Sans nos títulos das fichas e dos textos institucionais.
+
 ## Validação realizada
 
 | Verificação | Resultado |
@@ -51,6 +53,7 @@ A prévia está disponível, enquanto o servidor local estiver em execução, em
 | Layout e leitura | Inspeção de capturas reais, navegação visível, ausência de transbordamento da página e teste de espaçamento ampliado nas cinco páginas principais. Conferência adicional em 768 px. |
 | Ficha e impressão | Link e citação copiados corretamente; leitura sem JavaScript; abertura e restauração dos detalhes; nota BR/São Paulo e URL da referência preservadas na emulação de impressão do Chromium. |
 | Páginas secundárias | UF/DF, Educacional, mapa e comparação em 1440/390 px. Mapa com teclado e exportação SVG/PNG; comparação com seleção, limpeza e cópia de URL. |
+| Publicação | GitHub Pages concluído; schema, 31 testes, build, pa11y e Lighthouse aprovados. Conferência pública de identidade, quatro seções, nota BR/São Paulo, filtros OU/E, paginação, retorno à mesma posição e layout móvel. |
 | Sincronização | **24 arquivos de implementação** sincronizados entre C e Drive, após comparação com o estado inicial e conferência dos hashes. Alterações anteriores preservadas. |
 
 A avaliação foi técnica e visual, sem teste com profissionais da Rede. Auditoria automatizada não equivale a certificação integral de acessibilidade ou a revisão com leitor de tela.
@@ -63,7 +66,7 @@ As principais fontes de manutenção são os layouts e componentes em `site/src/
 
 Nenhuma dependência foi adicionada ou atualizada. Ao atualizar Pagefind, manter a verificação dos filtros múltiplos, estados de falha e retorno à lista. O build ainda informa que sua base Browserslist está antiga; isso não impediu a compilação desta rodada.
 
-Publicação é uma etapa separada. Não houve alteração remota, nem exigência de revisão do responsável em lotes.
+A publicação foi autorizada explicitamente em 05/10/2026 e concluída. Não foi exigida revisão do responsável em lotes. Os links externos das fontes continuam fora da revalidação desta rodada.
 
 ## Capturas da implementação
 
