@@ -1,6 +1,6 @@
 # Catálogo de Políticas da Rede EJA e Inclusão Produtiva
 
-Catálogo interativo de políticas públicas brasileiras (federais e estaduais) sobre **EJA, qualificação profissional, inclusão produtiva e transferência de renda condicionada à educação**, nas **27 unidades da federação**. Produto permanente da **[Rede EJA e Inclusão Produtiva](https://www.frm.org.br/projeto/rede-eja)**.
+Levantamento de experiências e referências para apoiar membros, coordenadores e profissionais da Rede EJA no fortalecimento do direito à **educação pública, presencial e de qualidade** e no diálogo com os governos. As fichas permitem consultar identificação, finalidade, território e referências, explicitando os limites da informação disponível. Produto permanente da **[Rede EJA e Inclusão Produtiva](https://www.frm.org.br/projeto/rede-eja)**, com registros nas **27 unidades da federação** e na esfera federal.
 
 **Site público:** https://antrologos.github.io/catalogo-politicas/
 

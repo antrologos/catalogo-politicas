@@ -10,13 +10,17 @@
    Zotero browser connector reconhece estes tags automaticamente.
    Sprint 9.8: autoria do verbete = equipe de pesquisa; Rogério é editor.
    Desde 2026-10-04 (v1.0) obra e publicação são da Rede EJA. #}
+{% set dataPublicacao = p.criado_em or p.data_versao_catalogo %}
+{% set dataAtualizacao = p.atualizado_em or p.data_versao_catalogo %}
 <meta name="citation_title" content="Verbete: {{ p.nome_programa }}">
 <meta name="citation_author" content="Gama, Maria Clara da">
 <meta name="citation_author" content="Garcia, Maria Julieta Ramalho">
 <meta name="citation_author" content="Frazão, Cintia Maria">
 <meta name="citation_author" content="Sant'ana, Jaqueline">
 <meta name="citation_editor" content="Barbosa, Rogério Jerônimo">
-<meta name="citation_publication_date" content="{{ p.data_revisao or '2026-05-01' }}">
+{% if dataPublicacao %}
+<meta name="citation_publication_date" content="{{ dataPublicacao.split('T')[0] }}">
+{% endif %}
 <meta name="citation_journal_title" content="Catálogo de Políticas da Rede EJA e Inclusão Produtiva">
 <meta name="citation_publisher" content="Rede EJA e Inclusão Produtiva">
 <meta name="citation_language" content="pt-BR">
@@ -24,12 +28,7 @@
 {% if p.resumo %}
 <meta name="citation_abstract" content="{{ p.resumo | striptags | truncate(500) }}">
 {% endif %}
-{% if p.fonte_url and ('.local/' not in p.fonte_url) %}
-<meta name="citation_pdf_url" content="{{ p.fonte_url }}">
-{% endif %}
-{% if p.id_universal %}
-<meta name="citation_doi" content="{{ p.id_universal }}">
-{% endif %}
+{# O identificador interno e a referência da fonte não são DOI nem PDF do verbete. #}
 
 {# === Schema.org Dataset (R2.2 padrão complementar) ===
    Google Scholar Dataset Search e crawlers usam JSON-LD.
@@ -63,8 +62,8 @@
     { "@type": "Person", "name": "Jaqueline Sant'ana" }
   ],
   "editor": { "@type": "Person", "name": "Rogério Jerônimo Barbosa" },
-  "dateModified": "{{ p.data_revisao or '2026-05-01' }}",
-  {% if p.ano_criacao %}"datePublished": "{{ p.ano_criacao }}",{% endif %}
+  {% if dataAtualizacao %}"dateModified": {{ dataAtualizacao | dump | safe }},{% endif %}
+  {% if dataPublicacao %}"datePublished": {{ dataPublicacao | dump | safe }},{% endif %}
   "spatialCoverage": {
     "@type": "Place",
     "name": "{% if p.uf == 'BR' %}Brasil{% else %}{{ p.uf }}, Brasil{% endif %}"

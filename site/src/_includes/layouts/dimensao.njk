@@ -41,12 +41,12 @@ layout: layouts/base.njk
 
   <div class="bg-primary text-white p-md rounded text-center">
     <p class="text-3xl font-bold">{{ grupo.count }}</p>
-    <p class="text-xs mt-2xs">políticas total</p>
+    <p class="text-sm mt-2xs">verbetes do levantamento</p>
   </div>
 
   <div class="bg-success text-white p-md rounded text-center">
     <p class="text-3xl font-bold">{{ grupo.ativas }}</p>
-    <p class="text-xs mt-2xs">ativas / em execução</p>
+    <p class="text-sm mt-2xs">registradas como ativas</p>
   </div>
 </section>
 
@@ -54,8 +54,8 @@ layout: layouts/base.njk
 {% if (grupo.porUf | length) > 1 %}
 <section aria-labelledby="dist-uf-h" class="my-xl">
   <h2 id="dist-uf-h">Distribuição por UF</h2>
-  <p class="text-sm text-neutral-700">
-    Quantas das {{ grupo.count }} políticas desta categoria existem em cada unidade federativa.
+  <p class="text-note">
+    Distribuição dos {{ grupo.count }} verbetes desta categoria segundo a UF associada no levantamento.
   </p>
 
   <ul class="mt-md space-y-sm list-none p-0">
@@ -89,9 +89,9 @@ layout: layouts/base.njk
     Todas as políticas em "{{ grupo.valor }}"
     (<span id="contador-fichas">{{ grupo.count }}</span>)
   </h2>
-  <p class="text-sm text-neutral-700">
-    Ordenadas alfabeticamente. Para refinar a lista por UF ou outra dimensão,
-    use os filtros via querystring (ex.: <code>?uf=PE</code>).
+  <p class="text-note">
+    Escolha uma ficha para conhecer sua descrição e referências.
+    Para combinar território e área da política, <a href="/buscar/">use a busca do catálogo</a>.
   </p>
 
   {# Chips de filtro ativo (via querystring + dimensao-filtros.js) #}
@@ -101,6 +101,8 @@ layout: layouts/base.njk
     <a href="" id="limpar-filtros" class="text-sm text-primary underline">Limpar todos</a>
   </div>
 
+  <p class="text-note sm:hidden mt-md">Em telas pequenas, deslize a tabela para ver todas as colunas.</p>
+  <div class="overflow-x-auto" tabindex="0" role="region" aria-labelledby="lista-dim-h">
   <table class="w-full mt-md border-collapse">
     <caption class="sr-only">
       Lista completa das {{ grupo.count }} políticas da categoria "{{ grupo.valor }}".
@@ -109,7 +111,7 @@ layout: layouts/base.njk
       <tr class="border-b-2 border-neutral-500 text-left">
         <th scope="col" class="p-sm font-semibold">Nome</th>
         <th scope="col" class="p-sm font-semibold">UF</th>
-        <th scope="col" class="p-sm font-semibold">Situação</th>
+        <th scope="col" class="p-sm font-semibold">Situação no levantamento</th>
         <th scope="col" class="p-sm font-semibold">Origem</th>
       </tr>
     </thead>
@@ -118,7 +120,7 @@ layout: layouts/base.njk
         <tr class="ficha-row border-b border-neutral-200 hover:bg-neutral-100"
             data-uf="{{ f.uf }}"
             data-situacao="{{ f.situacao or '' }}"
-            data-origem="{% if f.isFederalReplica %}federal{% else %}estadual{% endif %}">
+            data-origem="{% if f.uf == "BR" %}federal{% else %}estadual{% endif %}">
           <th scope="row" class="p-sm font-medium">
             <a href="/politica/{{ f.slug }}/" class="text-primary">{{ f.nome }}</a>
           </th>
@@ -128,21 +130,22 @@ layout: layouts/base.njk
             </a>
           </td>
           <td class="p-sm">
-            <span class="tag tag--{{ f.situacao_classe }} text-xs">
+            <span class="tag tag--{{ f.situacao_classe }} text-sm">
               {{ f.situacao or "—" }}
             </span>
           </td>
           <td class="p-sm text-sm">
-            {% if f.isFederalReplica %}
-              <span class="tag tag--federal text-xs">Federal</span>
+            {% if f.uf == "BR" %}
+              <span class="tag tag--federal text-sm">Federal</span>
             {% else %}
-              <span class="text-neutral-700">Estadual</span>
+              <span class="text-neutral-700">{{ 'Distrital' if f.uf == 'DF' else 'Estadual' }}</span>
             {% endif %}
           </td>
         </tr>
       {% endfor %}
     </tbody>
   </table>
+  </div>
 
   <p id="vazio-ficha" class="hidden mt-md p-md bg-neutral-100 rounded text-center">
     Nenhuma política corresponde aos filtros aplicados.

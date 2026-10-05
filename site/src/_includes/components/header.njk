@@ -1,50 +1,16 @@
-{# Header sticky com nav responsivo (Sprint 5).
-   - aria-current="page" indica página ativa (calculado por comparação de URL).
-   - Mobile (<768px): nav colapsada num menu hambúrguer com aria-expanded.
-   - Desktop (≥768px): nav horizontal sempre visível.
-   - Sem JS: nav permanece visível (degradação graciosa via CSS-only). #}
-
+{# Marca integral da Rede e quatro acessos visíveis, inclusive sem JavaScript. #}
 {% set urlAtual = page.url or "/" %}
-
-<header class="bg-primary text-white shadow-md sticky top-0 z-50" role="banner">
-  <div class="container-prose py-md flex items-center justify-between gap-md relative">
-
-    <a href="/" class="text-white no-underline hover:text-focus flex items-center gap-sm flex-1 sm:flex-initial">
-      <span class="text-xl sm:text-2xl font-bold">{{ site.shortTitle }}</span>
+<header class="site-header" role="banner">
+  <div class="container-prose site-header-inner">
+    <a href="/" class="site-brand">
+      <img src="/assets/img/rede/rede-eja-logo.svg" alt="Rede EJA e Inclusão Produtiva" width="477" height="100" class="site-brand-logo" decoding="async">
+      <span class="site-brand-name">{{ site.shortTitle }}</span>
     </a>
-
-    {# Botão hambúrguer (visível só em mobile) #}
-    <button type="button"
-            id="nav-toggle"
-            class="md:hidden bg-transparent border-2 border-white text-white px-md rounded font-semibold"
-            style="min-height: 44px;"
-            aria-expanded="false"
-            aria-controls="nav-principal"
-            aria-label="Abrir menu de navegação">
-      <span aria-hidden="true">☰</span>
-      <span class="sr-only">Menu</span>
-    </button>
-
-    {# Nav: visível em desktop, colapsada em mobile (controlada por hambúrguer + JS).
-       Sem JS: classe md:flex força visibilidade em ≥768px. #}
-    <nav id="nav-principal"
-         class="hidden md:flex"
-         aria-label="Principal"
-         data-nav-mobile-state="closed">
-      <ul class="flex flex-col md:flex-row gap-sm md:gap-md text-base
-                 absolute md:static top-full left-0 right-0 md:top-auto
-                 bg-primary md:bg-transparent
-                 p-md md:p-0 shadow-md md:shadow-none
-                 border-t md:border-0 border-primary-dark list-none">
+    <nav id="nav-principal" class="site-nav" aria-label="Principal">
+      <ul>
         {% for item in site.navegacao %}
           {% set ativo = (item.href == "/" and urlAtual == "/") or (item.href != "/" and (urlAtual | startsWith(item.href))) %}
-          <li>
-            <a href="{{ item.href }}"
-               class="block py-sm md:py-2xs text-white no-underline hover:text-focus underline-offset-4 {{ 'underline font-semibold' if ativo else '' }}"
-               {% if ativo %}aria-current="page"{% endif %}>
-              {{ item.texto }}
-            </a>
-          </li>
+          <li><a href="{{ item.href }}"{% if ativo %} aria-current="page"{% endif %}>{{ item.texto }}</a></li>
         {% endfor %}
       </ul>
     </nav>

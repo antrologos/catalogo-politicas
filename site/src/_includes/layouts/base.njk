@@ -7,7 +7,7 @@
   <meta name="description" content="{{ description or site.description }}">
   <meta name="author" content="{{ site.author }}">
   <link rel="canonical" href="{{ site.baseUrl }}{{ page.url | replace(site.pathPrefix, '') }}">
-  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/img/rede/rede-eja-favicon.png" type="image/png" sizes="100x100">
 
   <!-- Open Graph / Twitter Card -->
   <meta property="og:type" content="website">
@@ -17,13 +17,9 @@
   <meta property="og:locale" content="pt_BR">
   <meta name="twitter:card" content="summary">
 
-  <!-- Preload das fontes Plex mais usadas (Sprint V1 do MVP-UX 2026-05-02).
-       Latin-ext cobre PT-BR; subset latin é o primeiro carregado pelo browser
-       conforme unicode-range. Fontes self-hosted via @fontsource (passthrough). -->
+  <!-- IBM Plex Sans servida localmente para títulos e leitura. -->
   <link rel="preload" as="font" type="font/woff2" crossorigin
         href="{{ '/assets/css/files/ibm-plex-sans-latin-wght-normal.woff2' }}">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-        href="{{ '/assets/css/files/ibm-plex-serif-latin-700-normal.woff2' }}">
 
   {# Meta tags acadêmicas — apenas em páginas de ficha individual (Sprint F2).
      Inclui Highwire Press citation_* (Zotero auto-detect) + Schema.org Dataset
@@ -45,7 +41,7 @@
 
   {% include "components/header.njk" %}
 
-  <main id="conteudo" class="flex-1 w-full min-w-0 container-prose py-xl" role="main">
+  <main id="conteudo" tabindex="-1" class="site-main flex-1 w-full min-w-0 container-prose" role="main">
     {{ content | safe }}
   </main>
 
@@ -69,9 +65,7 @@
     });
   </script>
 
-  {# JS global: ativa nav (hambúrguer mobile + aria-current), tabs e copy
-     em qualquer página onde aparecerem. Defer: não bloqueia render. #}
-  <script src="{{ '/assets/js/nav.js' }}" defer></script>
+  {# Recursos usados pelas páginas; a navegação principal dispensa JavaScript. #}
   <script src="{{ '/assets/js/tabs.js' }}" defer></script>
   <script src="{{ '/assets/js/copy.js' }}" defer></script>
 </body>

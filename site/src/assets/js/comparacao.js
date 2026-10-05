@@ -113,7 +113,7 @@
       },
       {
         chave: "ativas",
-        rotulo: "Políticas ativas / em execução",
+        rotulo: "Registradas como ativas no levantamento",
         filtroUrl: () => "situacao=" + encodeURIComponent("Ativa / em execução"),
       },
       {

@@ -1,105 +1,48 @@
-<footer class="bg-neutral-100 border-t border-neutral-200 mt-3xl" role="contentinfo">
-  <div class="container-prose py-xl">
-
-    {# Linha 1: o catálogo é produto permanente da Rede EJA (desde 2026-10-04).
-       O painel com os logos das 16 instituições fica em /sobre/ e na home;
-       aqui, só texto e links. #}
-    <section aria-labelledby="footer-creditos-h" class="border-b border-neutral-200 pb-lg mb-lg">
-      <h2 id="footer-creditos-h" class="text-base font-semibold mb-sm">Rede EJA e Inclusão Produtiva</h2>
-      <p class="text-sm">
-        O Catálogo de Políticas é um produto da <strong>Rede EJA e Inclusão Produtiva</strong>,
-        formada por 16 instituições da sociedade civil e organismos multilaterais.
-        <a href="/sobre/#rede-eja">Instituições da Rede</a> ·
-        <a href="{{ equipe.redeUrl }}" rel="external">Conheça a Rede ↗</a>
-      </p>
-      <p class="text-sm mt-2xs">
-        Pesquisa e desenvolvimento:
-        <a href="https://iesp.uerj.br/nucleo/ceres/" rel="external">Ceres/IESP-UERJ</a> ·
-        <a href="https://mape.org.br/" rel="external">MAPE</a> ·
-        <a href="https://iesp.uerj.br/" rel="external">IESP-UERJ</a>.
-      </p>
-      <p class="text-sm mt-2xs">
-        Apoio ao levantamento:
-        <a href="https://www.frm.org.br/" rel="external">Fundação Roberto Marinho</a> ·
-        <a href="https://fundacao.bradesco/" rel="external">Fundação Bradesco</a> ·
-        <a href="https://www.itaueducacaoetrabalho.org.br/" rel="external">Itaú Educação e Trabalho</a> ·
-        <a href="https://arymax.org.br/" rel="external">Fundação Arymax</a> ·
-        <a href="https://www.unesco.org/pt" rel="external">UNESCO</a>.
-      </p>
-      <p class="text-sm mt-sm">
-        <a href="/sobre/" class="font-semibold">Equipe completa, créditos e como citar →</a>
-      </p>
+<footer class="site-footer" role="contentinfo">
+  <div class="container-prose footer-inner">
+    <section aria-labelledby="footer-creditos-h" class="footer-credits">
+      <h2 id="footer-creditos-h">Rede EJA e Inclusão Produtiva</h2>
+      <p>O Catálogo de Políticas é um produto da <strong>Rede EJA e Inclusão Produtiva</strong>, formada por 16 instituições da sociedade civil e organismos multilaterais. <a href="/sobre/#rede-eja">Instituições da Rede</a> · <a href="{{ equipe.redeUrl }}" rel="external">Conheça a Rede ↗</a></p>
+      <p>Pesquisa e desenvolvimento: <a href="https://iesp.uerj.br/nucleo/ceres/" rel="external">Ceres/IESP-UERJ</a> · <a href="https://mape.org.br/" rel="external">MAPE</a> · <a href="https://iesp.uerj.br/" rel="external">IESP-UERJ</a>.</p>
+      <p>Apoio ao levantamento: <a href="https://www.frm.org.br/" rel="external">Fundação Roberto Marinho</a> · <a href="https://fundacao.bradesco/" rel="external">Fundação Bradesco</a> · <a href="https://www.itaueducacaoetrabalho.org.br/" rel="external">Itaú Educação e Trabalho</a> · <a href="https://arymax.org.br/" rel="external">Fundação Arymax</a> · <a href="https://www.unesco.org/pt" rel="external">UNESCO</a>.</p>
+      <p><a href="/sobre/">Equipe completa e créditos →</a></p>
     </section>
-
-    {# Linha 2: explorar + documentos + dados + licença em 4 colunas #}
-    <div class="grid gap-lg sm:grid-cols-2 lg:grid-cols-4 text-sm">
-
+    <div class="footer-grid">
       <div>
-        <h2 class="text-base font-semibold mb-sm">Explorar por</h2>
-        <ul class="space-y-2xs">
-          <li><a href="/explorar/">{% icon "compass" %} Hub de exploração</a></li>
+        <h2>Consultar</h2>
+        <ul>
+          <li><a href="/buscar/">{% icon "magnifying-glass" %} Buscar com filtros</a></li>
+          <li><a href="/explorar/">{% icon "compass" %} Explorar por área e território</a></li>
           <li><a href="/mapa/">{% icon "map-trifold" %} Mapa do Brasil</a></li>
-          <li><a href="/buscar/">{% icon "magnifying-glass" %} Busca facetada</a></li>
           <li><a href="/comparacao/">{% icon "chart-bar" %} Comparar UFs</a></li>
         </ul>
-        <h3 class="text-sm font-semibold mt-md mb-2xs">UFs cobertas</h3>
-        <ul class="flex flex-wrap gap-2xs">
-          {% for sigla in agregados.ufsCobertas %}
-            <li>
-              <a href="/uf/{{ sigla | lower }}/" class="inline-block px-2xs text-xs">
-                {% if sigla == "BR" %}Federal{% else %}{{ sigla }}{% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
       </div>
-
       <div>
-        <h2 class="text-base font-semibold mb-sm">Documentos institucionais</h2>
-        <ul class="space-y-2xs">
-          <li><a href="/sobre/">Sobre o catálogo</a></li>
-          <li><a href="/sobre/comece-por-aqui/">Comece por aqui</a></li>
+        <h2>Sobre o catálogo</h2>
+        <ul>
+          <li><a href="/sobre/">Finalidade e equipe</a></li>
+          <li><a href="/sobre/comece-por-aqui/">Como consultar</a></li>
           <li><a href="/sobre/metodologia/">Metodologia e alcance</a></li>
-          <li><a href="/sobre/glossario/">Glossário (32 termos)</a></li>
           <li><a href="/sobre/cobertura/">Cobertura e limites</a></li>
-          <li><a href="/sobre/transparencia/">Acesso à informação (LAI)</a></li>
-          <li><a href="/sobre/privacidade/">Política de privacidade (LGPD)</a></li>
-          <li><a href="/sobre/termos/">Termos de uso</a></li>
-          <li><a href="/sobre/acessibilidade/">Acessibilidade</a></li>
+          <li><a href="/sobre/glossario/">Glossário</a></li>
         </ul>
       </div>
-
       <div>
-        <h2 class="text-base font-semibold mb-sm">Para pesquisador</h2>
-        <ul class="space-y-2xs">
-          <li><a href="/sobre/#como-citar">Como citar (ABNT, APA, BibTeX, RIS)</a></li>
-          <li><a href="/sobre/cobertura/">Metodologia + cobertura</a></li>
-          <li>
-            <span class="text-neutral-700">DOI Zenodo:</span>
-            <span class="text-xs italic text-neutral-700">em preparação</span>
-          </li>
-          <li><a href="{{ site.github }}" rel="external">{% icon "package" %} Código + dados no GitHub ↗</a></li>
+        <h2>Referências e dados</h2>
+        <ul>
+          <li><a href="/sobre/#como-citar">Como citar o catálogo</a></li>
+          <li><a href="{{ site.github }}" rel="external">{% icon "package" %} Código e dados no GitHub ↗</a></li>
         </ul>
-        <p class="mt-md text-xs text-neutral-700">
-          <strong>{{ agregados.total }}</strong> políticas · {{ agregados.ufsCobertas | length - 1 }} UFs + Federal<br>
-          Última atualização: <time datetime="2026-10-04">04/10/2026</time><br>
-          Versão {{ site.versao }}
-        </p>
+        <p class="footer-meta">DOI Zenodo: em preparação.<br>Versão {{ site.versao }} · Atualização: <time datetime="2026-10-04">04/10/2026</time>.</p>
+        <p class="footer-meta">Você pode compartilhar e adaptar mediante atribuição, conforme os <a href="/sobre/termos/">termos de uso</a>.</p>
       </div>
-
-      <div>
-        <h2 class="text-base font-semibold mb-sm">Licença</h2>
-        <p>
-          Licenciado sob
-          <a href="{{ site.licenca.url }}" rel="external license">
-            {{ site.licenca.nome }}
-          </a>
-        </p>
-        <p class="mt-sm text-xs">
-          Você pode compartilhar e adaptar mediante atribuição. Veja
-          <a href="/sobre/termos/">termos de uso</a> para texto completo de citação.
-        </p>
-      </div>
+    </div>
+    <div class="footer-legal">
+      <a href="/sobre/acessibilidade/">Acessibilidade</a>
+      <a href="/sobre/transparencia/">Acesso à informação</a>
+      <a href="/sobre/privacidade/">Privacidade</a>
+      <a href="/sobre/termos/">Termos de uso</a>
+      <a href="{{ site.licenca.url }}" rel="external license">{{ site.licenca.nome }}</a>
     </div>
   </div>
 </footer>

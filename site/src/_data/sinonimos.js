@@ -82,22 +82,22 @@ export const aliasesPorSlug = {
  * Buscas comuns sugeridas no zero-result e no estado vazio da busca.
  * Cada entrada vira um chip clicável que dispara a busca via ?q=.
  *
- * Ordenadas por demanda esperada (siglas conhecidas primeiro, depois temas
- * amplos, depois UFs específicas).
+ * Ordenadas pela centralidade editorial da EJA (siglas e assuntos primeiro;
+ * sugestões são consultas textuais, não novas categorias nem recomendações).
  */
 export const buscasComuns = [
-  { q: "PRONATEC", label: "PRONATEC", contexto: "Curso técnico gratuito" },
   { q: "EJA", label: "EJA", contexto: "Educação de Jovens e Adultos" },
-  { q: "Bolsa Família", label: "Bolsa Família", contexto: "Transferência de renda" },
-  { q: "ENCCEJA", label: "ENCCEJA", contexto: "Certificação supletiva" },
-  { q: "qualificação profissional", label: "Qualificação profissional", contexto: "Tema amplo" },
-  { q: "alfabetização", label: "Alfabetização", contexto: "Tema amplo" },
-  { q: "jovem aprendiz", label: "Jovem aprendiz", contexto: "Primeiro emprego" },
-  { q: "transferência de renda", label: "Transferência de renda", contexto: "Tema amplo" },
-  { q: "EAD", label: "EAD", contexto: "Educação a distância" },
-  { q: "SINE", label: "SINE", contexto: "Intermediação de mão de obra" },
-  { q: "PROEJA", label: "PROEJA", contexto: "EJA profissional" },
-  { q: "CRAS", label: "CRAS", contexto: "Assistência social" },
+  { q: "alfabetização", label: "Alfabetização", contexto: "Assunto presente nas descrições" },
+  { q: "PROEJA", label: "PROEJA", contexto: "Educação básica integrada à educação profissional" },
+  { q: "ensino fundamental", label: "Ensino fundamental", contexto: "Busca por etapa mencionada nas descrições" },
+  { q: "ENCCEJA", label: "ENCCEJA", contexto: "Referências sobre certificação" },
+  { q: "qualificação profissional", label: "Qualificação profissional", contexto: "Educação e trabalho no levantamento" },
+  { q: "PRONATEC", label: "PRONATEC", contexto: "Registros sobre formação profissional" },
+  { q: "jovem aprendiz", label: "Jovem aprendiz", contexto: "Referências sobre aprendizagem profissional" },
+  { q: "Bolsa Família", label: "Bolsa Família", contexto: "Registros de proteção social" },
+  { q: "transferência de renda", label: "Transferência de renda", contexto: "Assunto presente nas descrições" },
+  { q: "SINE", label: "SINE", contexto: "Sistema Nacional de Emprego" },
+  { q: "CRAS", label: "CRAS", contexto: "Referências sobre assistência social" },
 ];
 
 export default { aliasesPorSlug, buscasComuns };

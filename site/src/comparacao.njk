@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Comparar UFs"
-description: "Compare 2 a 9 UFs do catálogo lado a lado em uma tabela com indicadores agregados."
+description: "Compare os registros do levantamento associados a 2 a 9 UFs, por tipo e situação informada."
 permalink: /comparacao/
 ---
 {% set crumbs = [
@@ -13,7 +13,7 @@ permalink: /comparacao/
 <section aria-labelledby="comp-h">
   <h1 id="comp-h">Comparar UFs do catálogo</h1>
   <p class="text-neutral-700">
-    Selecione 2 a 9 unidades federativas para ver indicadores lado a lado.
+    Selecione 2 a 9 unidades federativas para comparar as contagens do levantamento.
     A URL atualiza com sua seleção, então você pode compartilhar o link
     da comparação por e-mail.
   </p>
@@ -60,7 +60,7 @@ permalink: /comparacao/
   <div class="mt-md overflow-x-auto" tabindex="0" role="region" aria-label="Tabela de comparação inter-UF">
     <table id="comp-tabela" class="w-full mt-md border-collapse min-w-[600px]">
       <caption class="sr-only">
-        Comparação de indicadores entre as UFs selecionadas. Linhas: indicadores. Colunas: UFs.
+        Comparação de registros do levantamento entre as UFs selecionadas. Linhas: contagens por categoria. Colunas: UFs.
       </caption>
       <thead id="comp-thead">
         {# Cabeçalho mínimo para a tabela ser lida como tabela de dados antes do JS preencher #}
@@ -91,7 +91,7 @@ permalink: /comparacao/
   <ol class="mt-md list-decimal pl-md space-y-sm">
     <li>Marque pelo menos <strong>2 UFs</strong> nos checkboxes acima (máximo 9).</li>
     <li>Clique em <strong>Comparar</strong>. A URL muda incluindo sua seleção.</li>
-    <li>Veja a tabela com indicadores lado a lado: total de políticas, ativas, distribuição por tipo.</li>
+    <li>Veja as contagens lado a lado: total de verbetes, registradas como ativas e distribuição por tipo.</li>
     <li>Use <strong>Copiar link</strong> para compartilhar a comparação por e-mail (a URL contém os parâmetros).</li>
     <li>Use <strong>Imprimir</strong> para gerar PDF (Ctrl+P / Cmd+P).</li>
   </ol>

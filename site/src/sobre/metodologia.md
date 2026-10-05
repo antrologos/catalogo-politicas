@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: "Metodologia e alcance"
 permalink: /sobre/metodologia/
-description: "Como o Catálogo de Políticas foi montado, o que ele não é, e como ler as contagens corretamente."
+description: "Como o levantamento foi organizado e como interpretar as fichas, suas referências e os limites das informações disponíveis."
 ---
 
 {% set crumbs = [
@@ -16,47 +16,53 @@ description: "Como o Catálogo de Políticas foi montado, o que ele não é, e c
 
 ## Como o catálogo foi montado
 
-O Catálogo de Políticas foi produzido a partir de **trabalho de levantamento e curadoria** conduzido pela equipe de pesquisa. Para cada unidade da federação coberta, a equipe consultou portais oficiais (Diário Oficial, sites de secretarias estaduais, repositórios legislativos), agregou referências cruzadas em estudos e relatórios prévios, e organizou os resultados segundo o vocabulário canônico do catálogo (8 dimensões: tipo de política, esfera de formulação, esfera de execução, situação atual, abrangência territorial, modalidade da oferta, arranjo logístico, transferência de recursos).
+O catálogo resulta de **levantamento e curadoria** conduzidos pela equipe de pesquisa. Foram consultados portais oficiais, repositórios legislativos, estudos e relatórios, e as informações foram organizadas segundo o vocabulário do catálogo. As descrições e referências disponíveis são apresentadas sem completar lacunas por inferência.
 
-Cada política recebeu metadados estruturados e, quando possível, **referência à norma instituidora** com cópia de arquivo da fonte oficial guardada pela equipe quando possível (não publicada no site).
+O levantamento foi realizado em três ondas, que reuniram políticas federais e experiências das 27 unidades da federação. A [página de cobertura](/sobre/cobertura/) identifica as UFs de cada onda.
 
-O levantamento foi feito em três ondas. A primeira cobriu **políticas federais e nove unidades da federação**: Bahia, Ceará, Minas Gerais, Pará, Paraná, Pernambuco, Rio de Janeiro, Rio Grande do Sul e São Paulo. A segunda acrescentou Alagoas, Amazonas, Espírito Santo, Goiás, Maranhão, Mato Grosso, Paraíba, Rio Grande do Norte e Santa Catarina; a terceira, Acre, Amapá, Distrito Federal, Mato Grosso do Sul, Piauí, Rondônia, Roraima, Sergipe e Tocantins — completando as 27 unidades da federação (ver [cobertura](/sobre/cobertura/)).
+O acervo inclui programas, planos, serviços, benefícios, normas e ofertas educacionais. A natureza de cada registro deve ser lida a partir da identificação, da descrição e das referências disponíveis: uma norma ou um plano não devem ser tomados, por si sós, como serviço implementado.
 
-## O que este catálogo **não é**
+## Como ler a ficha
 
-> **Este catálogo não é um censo das políticas existentes em cada unidade da federação.**
+Cada ficha reúne quatro blocos:
 
-Trata-se de **levantamento seguido de seleção** de políticas consideradas relevantes para os objetivos do estudo. Assim:
+- **Identificação:** nome, classificação, responsáveis e datas informadas no levantamento.
+- **Finalidade:** finalidade, público, funcionamento e organização da oferta, conforme as informações disponíveis no levantamento.
+- **Território:** vínculo territorial, abrangência e esfera de execução informados. Um recorte territorial previsto não comprova atendimento efetivo em todos os locais.
+- **Referências:** instrumentos citados, fonte identificada e data de consulta, quando disponíveis, além da referência bibliográfica da própria ficha.
 
-- **A ausência intencional ou não de uma política no catálogo não significa que ela não exista naquele território.**
-- **Quando dois estados aparecem com contagens diferentes no catálogo**, isso reflete o universo da pesquisa, e não uma diferença censitária entre todas as políticas existentes nos territórios comparados. Um estado com 'mais políticas listadas' não tem necessariamente mais política pública vigente do que outro — pode apenas refletir variações no levantamento.
+“Não informado no levantamento” indica uma lacuna do acervo. Isso não demonstra que a informação ou a experiência inexista. A reorganização das fichas facilita a consulta ao material disponível; uma compreensão operacional mais aprofundada pode exigir outras fontes.
 
-Ler as contagens como se fossem censitárias é o erro mais comum em catálogos curados como este. As páginas de [Mapa](/mapa/), [Comparar UFs](/comparacao/) e cada [página de UF](/explorar/) trazem um lembrete inline justamente para reforçar esse ponto.
+## O que as referências permitem afirmar
 
-## Como ler as contagens
+**Existência jurídica, vigência da norma e implementação são informações distintas.** Uma lei pode instituir um programa sem comprovar que exista oferta atual. Uma página institucional também precisa ser examinada quanto ao período e ao conteúdo que documenta.
 
-| Contagem mostrada | O que significa | O que **não** significa |
-|---|---|---|
-| "{{ agregados.total }} políticas catalogadas" | Número de verbetes únicos ativos no catálogo (federais canônicas + estaduais exclusivas; cada política federal é contada uma única vez mesmo que executada em vários estados). | "Existem exatamente esse número de políticas no Brasil sobre estes temas." |
-| "BA: N políticas" | A equipe identificou e descreveu N políticas na Bahia segundo os critérios do estudo. | "A Bahia tem exatamente N políticas vigentes nesses eixos." |
-| "PR: M políticas" (M ≠ N) | Idem, para o Paraná, com universo possivelmente distinto. | A diferença para BA não significa "o Paraná tem menos política pública do que a Bahia." |
-| "{{ agregados.federaisCount }} políticas federais" | Verbetes de políticas com formulação na esfera federal, registradas uma única vez. | "Existem exatamente esse número de políticas federais em EJA, qualificação ou inclusão produtiva." |
+A **situação informada no levantamento** registra a classificação recebida pela ficha. Ela não equivale a uma verificação contínua de funcionamento. Experiências históricas podem ser úteis; a falta de confirmação atual não autoriza concluir que tenham sido encerradas.
 
-A comparação útil é **dentro do universo do catálogo** — quais políticas estão estruturadas de forma X ou Y, como evoluem ao longo do tempo, quais aparecem em mais UFs. Comparações entre UFs com peso censitário exigiriam estratégia metodológica diferente.
+**Objetivos declarados não são resultados demonstrados, e metas não são realizações.** Informações de atendimento precisam ser lidas com sua unidade, seu período e sua fonte. A abrangência prevista não substitui evidência de execução no território.
 
-## Como sugerir uma política ausente
+A **data de consulta da fonte** informa quando ela foi acessada ou verificada. Não substitui a data da norma nem o período a que a informação se refere. Um link inacessível em uma consulta não prova o encerramento ou a inexistência da experiência.
 
-Se você atua em uma das UFs cobertas e identificou uma política que **deveria estar no catálogo e não está**, queremos saber.
+Links oficiais são apresentados quando identificados. Para parte do acervo, a equipe preserva uma cópia de arquivo para auditoria; essas cópias não são publicadas no site. As referências da ficha devem ser consultadas conforme a informação que efetivamente sustentam.
 
-- **Abrir uma issue no GitHub** (público, rastreável): [novo registro de política](https://github.com/antrologos/catalogo-politicas/issues/new?title=Sugest%C3%A3o+de+inclus%C3%A3o+de+pol%C3%ADtica%3A+).
-- **E-mail institucional**: contato com a coordenação (Rogério Jerônimo Barbosa).
+## Cobertura e contagens
 
-Inclua, sempre que possível: nome do programa, esfera (federal/estadual/municipal), norma instituidora (lei/decreto/portaria), órgão responsável, situação atual e link para a fonte oficial.
+**O catálogo é um levantamento, não um censo.** A seleção de experiências reflete os objetivos e o alcance da pesquisa. Uma política ausente do acervo pode existir no território.
 
-A inclusão depende dos critérios de relevância para o estudo e é avaliada pela equipe de pesquisa.
+O total de **{{ agregados.total }} verbetes únicos** corresponde a {{ agregados.federaisCount }} políticas federais, contadas uma única vez, e {{ agregados.estaduaisUnicasCount }} registros estaduais e distritais. As réplicas federais presentes na base de pesquisa não somam outra ficha na interface.
+
+Diferenças de contagem entre UFs descrevem o universo catalogado. Não demonstram, por si sós, que um território tenha mais políticas vigentes, maior atendimento ou melhores resultados. O [mapa](/mapa/) e a [comparação de UFs](/comparacao/) ajudam a explorar esse universo, respeitando esse limite.
+
+## Como contribuir
+
+Para sugerir uma inclusão ou corrigir uma informação, use o link de relato ao final da ficha ou [abra uma issue no repositório](https://github.com/antrologos/catalogo-politicas/issues/new). Inclua o nome da experiência, o território, a informação a corrigir e a referência que a sustenta, com sua data ou período quando disponível.
+
+A inclusão no catálogo depende dos critérios do levantamento e não representa recomendação ou comprovação de eficácia.
 
 ## Para saber mais
 
-- [Cobertura e cronograma](/sobre/cobertura/) — UFs cobertas em cada onda do levantamento.
-- [Acesso à informação](/sobre/transparencia/) — política de revisão, histórico, canal de relato.
-- [Como citar](/sobre/#como-citar) — formatos ABNT, APA, BibTeX e RIS, no catálogo inteiro e por verbete individual.
+- [Finalidade e orientação editorial](/sobre/) — o direito à EJA pública presencial e o público do catálogo.
+- [Como consultar](/sobre/comece-por-aqui/) — da busca às referências.
+- [Cobertura](/sobre/cobertura/) — as três ondas do levantamento.
+- [Acesso à informação](/sobre/transparencia/) — histórico e canais de relato.
+- [Como citar o catálogo](/sobre/#como-citar).

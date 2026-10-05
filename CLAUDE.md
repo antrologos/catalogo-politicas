@@ -2,6 +2,24 @@
 
 Orientações para o Claude Code (claude.ai/code) neste repositório. O histórico detalhado das rodadas de maio a outubro de 2026 está em `.claude/archive/CLAUDE-historico-ate-2026-10-04.md`. Use-o como arqueologia, não como checklist.
 
+## Orientação editorial aprovada em 04/10/2026
+
+- Público prioritário: membros, coordenadores e profissionais das instituições da Rede EJA.
+- Finalidade: conhecer experiências, suas finalidades, funcionamento básico, território e referências, fortalecendo o direito à EJA pública, presencial e de qualidade e o diálogo com os governos.
+- Inclusão produtiva é um componente; educação e trabalho abrangem também cuidados, direitos, desigualdades e formação crítica. O projeto não defende privatização nem EaD para EJA.
+- A rodada autorizada aproveita o acervo existente, sem depender de revisão do responsável em lotes. As diretrizes completas estão em [docs/DIRETRIZES_E_PLANO_EDITORIAL_2026-10-04.md](docs/DIRETRIZES_E_PLANO_EDITORIAL_2026-10-04.md).
+- As fichas passam a quatro blocos visíveis: Identificação, Finalidade, Território e Referências. A situação e a abrangência reproduzem o levantamento; não comprovam oferta atual. Datas de consulta e do catálogo não comprovam vigência.
+- A fonte do site foi reorganizada localmente, com testes de renderização em `site/tests/editorial.test.mjs`. Dados, IDs, slugs, schema e vocabulário permanecem preservados. A publicação remota ainda não faz parte desta rodada.
+- A nota em `_data/notasEditoriais.js` sinaliza que a ficha federal de EJA contém descrição e órgãos de São Paulo, sem alterar o registro original.
+
+## Implementação do plano ampliado de design (concluída em 2026-10-05)
+
+- Concluída localmente e sincronizada nos dois clones, conforme pedido “implemente o plano ampliado”. Sem commit, push ou publicação.
+- Logo oficial da Rede, navegação visível, home por busca, exploração por território/área, filtros compartilháveis e retorno à consulta; ficha com cópia, citação e impressão das ressalvas.
+- Validação: 31 testes aprovados; build e índice com 366 fichas; 22.916 referências locais sem destinos ou âncoras ausentes; verificações de navegador, acessibilidade e responsividade documentadas.
+- Busca: `catalogo-busca.js` + `catalogo-busca-estado.js`; adaptador público `catalogo-pagefind/pagefind.js` garante OU dentro da faceta. Não substituir pelos scripts legados sem revalidar os percursos.
+- Relatório: [docs/IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md](docs/IMPLEMENTACAO_DESIGN_E_USABILIDADE_2026-10-04.md). Plano de referência: [docs/PLANO_DESIGN_E_USABILIDADE_2026-10-04.md](docs/PLANO_DESIGN_E_USABILIDADE_2026-10-04.md).
+
 ## Estado atual (2026-10-04)
 
 - **Produto**: Catálogo de Políticas da **Rede EJA e Inclusão Produtiva**, um produto permanente da Rede (16 instituições). A página da Rede (https://www.frm.org.br/projeto/rede-eja) lista o catálogo em "Evidências".

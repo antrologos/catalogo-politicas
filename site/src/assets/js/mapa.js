@@ -81,8 +81,8 @@ waitForD3(async function init() {
 
   // === Estado global do mapa: métrica de coloração ativa ===
   const METRICAS = {
-    total: { label: "Total de políticas", chave: "total" },
-    ativas: { label: "Apenas ativas", chave: "ativas" },
+    total: { label: "Total de registros", chave: "total" },
+    ativas: { label: "Registradas como ativas", chave: "ativas" },
   };
   let metricaAtual = "total";
 
@@ -151,7 +151,7 @@ waitForD3(async function init() {
       if (agg) {
         html = `
           <div class="font-semibold">${nome} (${sigla})</div>
-          <div class="mt-2xs">${agg.total} políticas · ${agg.ativas} ativas</div>
+          <div class="mt-2xs">${agg.total} registros · ${agg.ativas} com situação ativa no levantamento</div>
           <div class="mt-2xs opacity-70">Clique para ver página da UF</div>
         `;
       } else {

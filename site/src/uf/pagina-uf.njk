@@ -7,7 +7,7 @@ pagination:
 permalink: "/uf/{{ ufSigla | lower }}/"
 eleventyComputed:
   title: "Políticas em {{ ufs[ufSigla].nome or ufSigla }}"
-  description: "Página executiva da UF {{ ufSigla }}: KPIs, distribuição por eixo e situação, lista filtrável das políticas catalogadas."
+  description: "Registros do levantamento associados à UF {{ ufSigla }}, com distribuição por tipo, situação informada e lista filtrável."
 ---
 {% set info = ufs[ufSigla] %}
 {% set agg = agregados.porUf[ufSigla] %}
@@ -15,7 +15,7 @@ eleventyComputed:
 
 {% set crumbs = [
   { texto: "Início", href: "/" },
-  { texto: "Por UF", href: "/explorar/#cobertura-aside-h" },
+  { texto: "Por UF", href: "/explorar/#territorios" },
   { texto: info.nome or ufSigla }
 ] %}
 {% include "components/breadcrumb.njk" %}
@@ -32,11 +32,10 @@ eleventyComputed:
     {% endif %}
   </h1>
   <p class="text-neutral-700 mt-md">
-    Panorama executivo das <strong>{{ agg.total }}</strong> políticas
-    catalogadas em {{ info.nome }}.
+    <strong>{{ agg.total }}</strong> verbetes do levantamento
+    associados a {{ info.nome }}.
     {% if agg.total > 0 %}
-      Filtros via URL são bookmarkáveis — ex.:
-      <code class="text-xs">?situacao=ativa-em-execucao</code> filtra apenas as ativas.
+      Você pode compartilhar o endereço da página com os filtros selecionados.
     {% endif %}
   </p>
 
@@ -57,12 +56,12 @@ eleventyComputed:
 
   <div class="bg-primary text-white p-md rounded text-center">
     <p class="text-3xl font-bold">{{ agg.total }}</p>
-    <p class="text-xs mt-2xs">políticas total</p>
+    <p class="text-xs mt-2xs">verbetes do levantamento</p>
   </div>
 
   <div class="bg-success text-white p-md rounded text-center">
     <p class="text-3xl font-bold">{{ agg.ativas }}</p>
-    <p class="text-xs mt-2xs">ativas / em execução</p>
+    <p class="text-xs mt-2xs">registradas como ativas</p>
   </div>
 </section>
 
@@ -87,7 +86,7 @@ eleventyComputed:
 </section>
 
 <section aria-labelledby="dist-sit-uf-h" class="my-2xl">
-  <h2 id="dist-sit-uf-h">Situação atual</h2>
+  <h2 id="dist-sit-uf-h">Situação no levantamento</h2>
   <ul class="mt-md grid grid-cols-2 sm:grid-cols-4 gap-md list-none p-0">
     {% for d in agg.distribuicaoSituacao %}
       <li class="border border-neutral-200 rounded p-md">
@@ -106,18 +105,18 @@ eleventyComputed:
             {{ d.situacao }}
           </span>
         </p>
-        <p class="text-xs text-neutral-700 mt-2xs">{{ d.pct }}% das políticas em {{ ufSigla }}</p>
+        <p class="text-xs text-neutral-700 mt-2xs">{{ d.pct }}% dos verbetes associados a {{ ufSigla }}</p>
       </li>
     {% endfor %}
   </ul>
 </section>
 
 <section aria-labelledby="lista-uf-h" class="my-2xl">
-  <h2 id="lista-uf-h">Todas as políticas em {{ info.nome }}
+  <h2 id="lista-uf-h">Verbetes associados a {{ info.nome }}
     (<span id="contador-fichas">{{ agg.total }}</span>)
   </h2>
   <p class="text-sm text-neutral-700">
-    Filtre a lista por tipo, situação ou modalidade abaixo, ou use a
+    Filtre a lista por tipo, situação no levantamento ou modalidade abaixo, ou use a
     <a href="/buscar/?q=" class="text-primary">busca facetada</a> para cruzar UFs.
   </p>
 
@@ -134,7 +133,7 @@ eleventyComputed:
       </select>
     </label>
     <label class="flex flex-col text-sm gap-2xs">
-      <span class="font-semibold">Situação</span>
+      <span class="font-semibold">Situação no levantamento</span>
       <select name="situacao" class="px-sm py-2xs border border-neutral-500 rounded bg-white">
         <option value="">Todas</option>
         {% for d in agg.distribuicaoSituacao %}
@@ -173,7 +172,7 @@ eleventyComputed:
       <tr class="border-b-2 border-neutral-500 text-left">
         <th scope="col" class="p-sm font-semibold">Nome</th>
         <th scope="col" class="p-sm font-semibold">Tipo</th>
-        <th scope="col" class="p-sm font-semibold">Situação</th>
+        <th scope="col" class="p-sm font-semibold">Situação no levantamento</th>
       </tr>
     </thead>
     <tbody id="tbody-fichas">

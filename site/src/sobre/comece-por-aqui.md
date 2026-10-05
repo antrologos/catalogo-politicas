@@ -1,91 +1,55 @@
 ---
 layout: layouts/base.njk
-title: "Comece por aqui"
-description: "Três caminhos curados de entrada no Catálogo de Políticas Públicas Brasileiras — para técnico estadual, pesquisador acadêmico ou curioso sem ideia clara."
+title: "Como consultar o catálogo"
+description: "Busque uma experiência, refine os resultados, leia a ficha e consulte suas referências."
 permalink: /sobre/comece-por-aqui/
 ---
 
 {% set crumbs = [
   { texto: "Início", href: "/" },
   { texto: "Sobre", href: "/sobre/" },
-  { texto: "Comece por aqui" }
+  { texto: "Como consultar" }
 ] %}
 {% include "components/breadcrumb.njk" %}
 
-# Comece por aqui
+# Como consultar o catálogo
 
-Três caminhos curados pelas formas mais comuns de chegar ao catálogo. Escolha o que mais se aproxima do que você procura — cada um aponta para uma ficha-modelo onde dá pra ver toda a estrutura na prática.
+O catálogo foi organizado para membros, coordenadores e profissionais da Rede EJA encontrarem experiências e referências úteis ao fortalecimento da educação pública e ao diálogo com os governos.
 
----
+Comece por uma pergunta: **que experiências foram levantadas sobre o tema que estou procurando?**
 
-## Você é técnico ou coordenador estadual?
+## 1. Busque e refine
 
-Você provavelmente quer **comparar como sua UF organiza uma política com o que outros estados estão fazendo**, ou descobrir se uma política federal já tem réplica local executada.
+Na [busca](/buscar/), digite um tema, nome, sigla, órgão responsável ou referência legal. Use os filtros disponíveis para restringir os resultados. A situação e a modalidade são classificações do levantamento; elas não comprovam, por si sós, oferta atual ou adequação da experiência.
 
-**Caminho recomendado**:
+Se você ainda não tem um nome em mente, [explore por tema ou território](/explorar/). Nas páginas de UF, os filtros de tipo, situação e modalidade ajudam a percorrer a lista.
 
-1. Use a [busca](/buscar/) com a sigla ou tema (ex.: <a href="/buscar/?q=PRONATEC">PRONATEC</a>, <a href="/buscar/?q=EJA">EJA</a>).
-2. Abra a ficha federal canônica — verá um bloco **"Esta política federal é executada em N UFs do catálogo"** com chips clicáveis.
-3. Compare a versão da sua UF com 1-2 vizinhas usando a aba **Detalhes**.
-4. Para visão agregada, vá em [/comparacao/](/comparacao/).
+## 2. Leia a lista e abra uma ficha
 
-**Ficha-modelo**: [PRONATEC (federal canônica) →](/politica/programa-nacional-de-acesso-ao-ensino-tecnico-e-emprego-pronatec-br/)
+Compare os nomes e as informações apresentadas nos resultados. Abra a experiência que corresponde à sua pergunta.
 
----
+Para uma visão do acervo por território, use o [mapa](/mapa/) ou [compare UFs](/comparacao/). As contagens refletem o levantamento, sem medir toda a oferta existente em cada lugar.
 
-## Você é pesquisador ou estudante de pós?
+## 3. Conheça a experiência
 
-Você provavelmente quer **citar uma política em artigo, monografia ou relatório**, ou usar o catálogo como fonte primária de pesquisa.
+A ficha tem quatro blocos, acessíveis pelos links no início da página:
 
-**Caminho recomendado**:
+- **Identificação:** quem ou o que está registrado, com os dados disponíveis.
+- **Finalidade:** finalidade, público, funcionamento e organização da oferta, conforme o levantamento.
+- **Território:** vínculo territorial, abrangência e esfera de execução informados.
+- **Referências:** instrumentos citados e fontes disponíveis para aprofundar a leitura.
 
-1. Encontre a ficha pela [busca](/buscar/) ou pelo [hub /explorar/](/explorar/).
-2. Na ficha, abra a aba **Como citar** — disponível em ABNT, APA, BibTeX e RIS, com botão Copiar individual.
-3. **Bônus**: o site expõe meta tags Highwire Press no `<head>` de cada ficha. Se você usa o **conector Zotero ou Mendeley** no navegador, basta clicar no ícone do gerenciador para importar a referência completa, sem copiar/colar.
-4. Para estatísticas agregadas (distribuições, cobertura), veja a [página inicial](/).
+Quando aparecer **“não informado no levantamento”**, trate o campo como uma lacuna. Não deduza encerramento, ausência de oferta ou resultado a partir da falta de informação.
 
-**Ficha-modelo**: [ENCCEJA (federal) →](/politica/exame-nacional-para-certificacao-de-competencias-de-jovens-e-adultos-encceja-br/)
+## 4. Consulte as referências
 
----
+No bloco **Referências**, examine a fonte, sua data e o período a que se refere. A data de consulta informa quando houve acesso; não é a data de funcionamento da experiência. A existência de uma norma também não confirma sua implementação atual.
 
-## Você é gestor curioso, jornalista ou está chegando aqui pela primeira vez?
+Para citar o verbete, abra **Como citar esta ficha** nesse mesmo bloco. Estão disponíveis os formatos ABNT, APA, BibTeX e RIS. A citação da ficha identifica o registro do catálogo; para fundamentar uma afirmação sobre a experiência, consulte também a fonte correspondente.
 
-Você quer entender **o que existe, o que está ativo, o que mudou** — sem precisar saber nomes de programas de antemão.
+## Apoio à leitura
 
-**Caminho recomendado**:
-
-1. Vá ao [hub /explorar/](/explorar/) — verá cards visuais por dimensão (tipo, situação, modalidade, abrangência, UF, origem).
-2. Comece pela situação **"Ativa em execução"** ou pelo tipo **"Educacional"** para ver as políticas ainda vigentes.
-3. Cada card de dimensão leva a uma página índice com KPIs e tabela completa.
-4. Tags coloridas no header de cada ficha são clicáveis — encontrou "Modalidade EAD"? Clique e veja outras políticas na mesma modalidade.
-5. Não sabe sigla? A [busca](/buscar/) reconhece termos coloquiais — *"curso pra adulto"*, *"voltar a estudar"*, *"transferência de renda"*.
-
-**Ficha-modelo**: [EJA Federal (canônica, com 7 réplicas estaduais) →](/politica/educacao-de-jovens-e-adultos-eja-br/)
-
----
-
-## O que você vai encontrar em cada ficha
-
-Toda ficha do catálogo segue a mesma estrutura — uma vez que você se familiariza com uma, todas fazem sentido:
-
-- **Header**: nome do programa + chips clicáveis (Situação, UF/Federal, Tipo, Modalidade) + ID universal + completude dos metadados
-- **Bloco "Aparece em N UFs"** (apenas em fichas federais canônicas): chips das UFs onde a política tem execução estadual
-- **5 abas**: Resumo · Detalhes · Base legal · Documentos (link para a fonte oficial) · **Como citar** (4 formatos)
-- **Continue explorando** (rodapé): outras fichas relacionadas (mesma família federal, mesmo tipo na UF, mesma modalidade na UF)
-- **Proveniência** (fim): revisor, próxima revisão, versão do catálogo, ID interno
-
----
-
-## Glossário e siglas
-
-Vocabulário técnico opaco? O [Glossário](/sobre/glossario/) tem 32 termos das áreas de educação, qualificação profissional, assistência social e estatística com definição curta e contexto.
-
-Em qualquer página do site, siglas como {% abbr "EJA" %}, {% abbr "PRONATEC" %}, {% abbr "BPC" %} ou {% abbr "CRAS" %} aparecem com sublinhado pontilhado e mostram a expansão ao passar o mouse — sem precisar sair da página.
-
----
-
-## Ainda perdido?
-
-- **Cobertura e limites** — [/sobre/cobertura/](/sobre/cobertura/) mostra quais UFs entraram em cada onda do levantamento.
-- **Metodologia** — [/sobre/](/sobre/) traz equipe, vocabulário canônico, licença CC-BY 4.0 e cronograma.
-- **Erro encontrado?** Cada ficha tem link "Abrir issue no GitHub" no rodapé.
+- [Metodologia e alcance](/sobre/metodologia/) — interpretação das informações e das lacunas.
+- [Finalidade e orientação editorial](/sobre/) — compromisso com a EJA pública, presencial e de qualidade.
+- [Glossário](/sobre/glossario/) — termos e siglas do levantamento.
+- Encontrou um erro? Use o link de relato ao final da ficha.

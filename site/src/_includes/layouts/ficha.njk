@@ -3,394 +3,188 @@ layout: layouts/base.njk
 ---
 {% set crumbs = [
   { texto: "Início", href: "/" },
-  { texto: ("Políticas " + p.uf), href: ("/buscar/?uf=" + p.uf) },
+  { texto: "Buscar", href: "/buscar/" },
   { texto: p.nome_programa }
 ] %}
 {% include "components/breadcrumb.njk" %}
 
-<article data-pagefind-body
-         data-pagefind-meta="uf:{{ p.uf }}, ano:{{ p.ano_criacao or '—' }}"
-         class="prose prose-neutral max-w-3xl mx-auto">
-
-  {# Filtros Pagefind: cada um deve ser um elemento separado com data-pagefind-filter
-     como CHAVE (não chave:valor numa única string — isso quebra a UI).
-     Escondidos visualmente; Pagefind lê apenas o atributo + textContent. #}
+<article data-pagefind-body data-ficha
+         data-pagefind-meta="uf:{{ p.uf }}"
+         class="prose prose-neutral policy-sheet mx-auto">
+  {# Os valores dos filtros reproduzem o levantamento, sem reclassificação. #}
   <span data-pagefind-filter="UF" class="visually-hidden">{{ p.uf }}</span>
   <span data-pagefind-filter="Situação" class="visually-hidden">{{ p.situacao_atual or 'Sem informação' }}</span>
-  <span data-pagefind-filter="Tipo" class="visually-hidden">{{ p.tipo_politica or 'Sem classificação' }}</span>
+  <span data-pagefind-filter="Tipo" data-pagefind-meta="tipo" class="visually-hidden">{{ p.tipo_politica or 'Sem classificação' }}</span>
   {% if p.modalidade_oferta %}
     <span data-pagefind-filter="Modalidade" class="visually-hidden">{{ p.modalidade_oferta }}</span>
   {% endif %}
-  {# Sinônimos curados (Sprint F1, _data/sinonimos.js): aliases injetados como
-     conteúdo indexável para Pagefind capturar buscas por sigla, vocabulário
-     coloquial e variações ortográficas. Visualmente escondido. #}
   {% if sinonimos.aliasesPorSlug[p.slug] %}
-    <span data-pagefind-meta="aliases" class="visually-hidden">
-      {{ sinonimos.aliasesPorSlug[p.slug] | join(' · ') }}
-    </span>
+    <span data-pagefind-meta="aliases" class="visually-hidden">{{ sinonimos.aliasesPorSlug[p.slug] | join(' · ') }}</span>
   {% endif %}
 
-
-  <header class="border-b border-neutral-200 pb-lg mb-xl">
-    <h1>{{ p.nome_programa }}</h1>
-    <p class="text-sm text-neutral-700 mt-sm flex flex-wrap gap-md items-center">
-      {# Tags clicáveis: cada uma vira link para página índice da dimensão.
-         EX.2 conecta a páginas reais: /tipo/<slug>/, /situacao/<slug>/,
-         /uf/<sigla>/, /modalidade/<slug>/. #}
-      {% if p.situacao_atual %}
-        <a href="/situacao/{{ p.situacao_atual | slug }}/"
-           class="no-underline"
-           aria-label="Ver outras políticas com situação {{ p.situacao_atual }}">
-          {% include "components/tag-status.njk" %}
-        </a>
-      {% else %}
-        {% include "components/tag-status.njk" %}
-      {% endif %}
-      {% if p.isFederal %}
-        <a href="/uf/br/" class="no-underline" aria-label="Ver todas as políticas federais">
-          <span class="tag tag--federal">Federal</span>
-        </a>
-      {% else %}
-        <a href="/uf/{{ p.uf | lower }}/" class="no-underline" aria-label="Ver todas as políticas de {{ p.uf }}">
-          <span class="tag tag--estadual">{{ p.uf }}</span>
-        </a>
-      {% endif %}
-      {% if p.tipo_politica %}
-        <a href="/tipo/{{ p.tipo_politica | slug }}/"
-           class="tag tag--neutral"
-           aria-label="Ver outras políticas do tipo {{ p.tipo_politica }}">
-          {{ p.tipo_politica }}
-        </a>
-      {% endif %}
-      {% if p.modalidade_oferta %}
-        <a href="/modalidade/{{ p.modalidade_oferta | slug }}/"
-           class="tag tag--neutral"
-           aria-label="Ver outras políticas com modalidade {{ p.modalidade_oferta }}">
-          {{ p.modalidade_oferta }}
-        </a>
-      {% endif %}
-      <span aria-label="Identificador universal">ID: <code>{{ p.id_universal }}</code></span>
-      {% if p.completude_pct %}
-        {% set badgeValor = p.completude_pct %}
-        {% set badgeSufixo = "%" %}
-        {% set badgeLabel = "Completude dos metadados" %}
-        {% set badgeVariant = "" %}
-        {% include "components/badge.njk" %}
-      {% endif %}
+  <header class="mb-lg">
+    <p class="text-base text-neutral-700 mb-sm" data-pagefind-ignore>Registro do levantamento · {% if p.isFederal %}Federal{% else %}{{ p.uf }}{% endif %}</p>
+    <h1 class="mt-0">{{ p.nome_programa }}</h1>
+    <p class="text-base text-neutral-700" data-pagefind-ignore>
+      Conheça a experiência descrita e suas referências. As informações do levantamento não confirmam, por si só, funcionamento atual ou resultados.
     </p>
-
+    <div class="policy-actions not-prose print-hide" data-pagefind-ignore>
+      <a href="/buscar/" data-ficha-retorno hidden>← Voltar aos resultados</a>
+      <div class="flex flex-wrap gap-sm">
+        <button type="button" class="btn btn--ghost js-copy" data-ficha-action hidden
+                data-copy-target="#ficha-url" aria-describedby="ficha-copy-feedback"
+                data-copy-success="Link da ficha copiado para a área de transferência."
+                data-copy-error="Não foi possível copiar. Use o endereço da página no navegador.">Copiar link</button>
+        <a href="#citacao" class="btn btn--ghost" data-ficha-citar>Como citar</a>
+        <button type="button" class="btn btn--ghost" data-ficha-action data-ficha-imprimir hidden>Imprimir</button>
+      </div>
+      <span id="ficha-url" hidden>{{ site.baseUrl }}/politica/{{ p.slug }}/</span>
+      <p id="ficha-copy-feedback" role="status" aria-live="polite" class="visually-hidden"></p>
+    </div>
   </header>
 
-  {% set rel = relacionadas[p.slug] %}
-
-  {# === Conteúdo das abas (capturado via {% set %}) === #}
-  {% set abaResumo %}
-    {% if p.descricao_simples %}
-      <h3>Em linguagem simples</h3>
-      <p>{{ p.descricao_simples }}</p>
-    {% endif %}
-    {% if p.resumo %}
-      <h3>Resumo</h3>
-      <p>{{ p.resumo }}</p>
-    {% endif %}
-    {% if p.apresentacao and p.apresentacao != p.descricao_tecnica %}
-      <h3>Apresentação</h3>
-      <p>{{ p.apresentacao }}</p>
-    {% endif %}
-    {% if not p.descricao_simples and not p.resumo and not p.apresentacao %}
-      <p class="text-neutral-700">Sem descrição cadastrada nesta versão da ficha.</p>
-    {% endif %}
-  {% endset %}
-
-  {% set abaDetalhes %}
-    <h3 class="sr-only">Detalhes institucionais</h3>
-    <dl class="grid grid-cols-1 sm:grid-cols-[200px_1fr] gap-x-md gap-y-sm">
-      <dt class="font-semibold text-neutral-700">Tipo de política</dt>
-      <dd>{{ p.tipo_politica or '—' }}</dd>
-
-      {# DF: "Distrito Federal" equivale a Estado nos dados e nas listas; só o rótulo muda #}
-      {% if p.esfera_formulacao %}
-        <dt class="font-semibold text-neutral-700">Esfera de formulação</dt>
-        <dd>{{ "Distrito Federal" if (p.uf == "DF" and p.esfera_formulacao == "Estado") else p.esfera_formulacao }}</dd>
-      {% endif %}
-      {% if p.esfera_execucao %}
-        <dt class="font-semibold text-neutral-700">Esfera de execução</dt>
-        <dd>{{ "Distrito Federal" if (p.uf == "DF" and p.esfera_execucao == "Estado") else p.esfera_execucao }}</dd>
-      {% endif %}
-      {% if p.abrangencia_territorial %}
-        <dt class="font-semibold text-neutral-700">Abrangência territorial</dt>
-        {# DF: "Distrital" equivale a Estadual nos dados e nas listas; só o rótulo muda #}
-        <dd>{{ "Distrital" if (p.uf == "DF" and p.abrangencia_territorial == "Estadual") else p.abrangencia_territorial }}</dd>
-      {% endif %}
-      {% if p.tipo_oferta %}
-        <dt class="font-semibold text-neutral-700">
-          <abbr title="Categoria do que a política entrega ao público (curso, bolsa, vaga em rede escolar, atendimento, certificação, apoio produtivo).">Tipo de oferta</abbr>
-        </dt>
-        <dd>
-          {% if 'Misto' in p.tipo_oferta %}
-            <abbr title="Combina múltiplos tipos de oferta sem predominância clara.">{{ p.tipo_oferta }}</abbr>
-          {% else %}
-            {{ p.tipo_oferta }}
-          {% endif %}
-        </dd>
-      {% endif %}
-      {% if p.modalidade_oferta %}
-        <dt class="font-semibold text-neutral-700">
-          <abbr title="Forma como a oferta chega ao público: presencial, EaD (educação a distância), semipresencial/híbrida, ou mista.">Modalidade da oferta</abbr>
-        </dt>
-        <dd>
-          {% if 'Mist' in p.modalidade_oferta %}
-            <abbr title="Combina múltiplas modalidades (ex.: presencial + EaD) sem predominância clara.">{{ p.modalidade_oferta }}</abbr>
-          {% else %}
-            {{ p.modalidade_oferta }}
-          {% endif %}
-        </dd>
-      {% endif %}
-      {% if p.arranjo_logistico %}
-        <dt class="font-semibold text-neutral-700">
-          <abbr title="Estrutura física da oferta: unidade fixa (escola, posto), itinerante (equipes/unidades móveis), ou misto.">Arranjo logístico</abbr>
-        </dt>
-        <dd>
-          {% if 'Misto' in p.arranjo_logistico or 'Mist' in p.arranjo_logistico %}
-            <abbr title="Combina unidade fixa e itinerante.">{{ p.arranjo_logistico }}</abbr>
-          {% else %}
-            {{ p.arranjo_logistico }}
-          {% endif %}
-        </dd>
-      {% endif %}
-      {% if p.carga_horaria %}
-        <dt class="font-semibold text-neutral-700">Carga horária</dt>
-        <dd>{{ p.carga_horaria }}</dd>
-      {% endif %}
-      {% if p.ano_criacao %}
-        <dt class="font-semibold text-neutral-700">Ano de criação</dt>
-        <dd>{{ p.ano_criacao }}</dd>
-      {% endif %}
-      {% if p.fonte_financiamento %}
-        <dt class="font-semibold text-neutral-700">Fonte de financiamento</dt>
-        <dd>{{ p.fonte_financiamento }}</dd>
-      {% endif %}
-      {% if p.transferencia_recursos %}
-        <dt class="font-semibold text-neutral-700">Transferência de recursos</dt>
-        <dd>{{ p.transferencia_recursos }}</dd>
-      {% endif %}
-      {% if p.continuidade_governos %}
-        <dt class="font-semibold text-neutral-700">Continuidade entre governos</dt>
-        <dd>{{ p.continuidade_governos }}</dd>
-      {% endif %}
-      {% if p.orgaos_lista and p.orgaos_lista | length %}
-        <dt class="font-semibold text-neutral-700">Órgãos responsáveis</dt>
-        <dd>
-          <ul class="list-disc pl-md">
-            {% for o in p.orgaos_lista %}<li>{{ o }}</li>{% endfor %}
-          </ul>
-        </dd>
-      {% endif %}
-      {% if p.integra_lista and p.integra_lista | length %}
-        <dt class="font-semibold text-neutral-700">Integra com</dt>
-        <dd>
-          <ul class="list-disc pl-md">
-            {% for i in p.integra_lista %}<li>{{ i }}</li>{% endfor %}
-          </ul>
-        </dd>
-      {% endif %}
-    </dl>
-
-    {# Sprint 9.8: glossário das três categorias mais técnicas, baseado no
-       vocabulario-canonico.json. Acessível via <details> nativo (teclado-friendly). #}
-    <details class="mt-lg text-sm">
-      <summary class="cursor-pointer font-medium text-neutral-800 py-xs">
-        Como interpretar tipo de oferta, modalidade e arranjo logístico?
-      </summary>
-      <div class="mt-sm pl-md border-l-2 border-neutral-300 space-y-sm text-neutral-800">
-        <p>
-          <strong>Tipo de oferta</strong> — categoria do <em>que</em> a política entrega
-          ao público. Valores: <em>Curso/Formação</em> (qualificação profissional,
-          capacitação), <em>Benefício/Auxílio financeiro</em> (bolsa, subsídio,
-          vale-transporte), <em>Oferta educacional</em> (vaga, matrícula, turma),
-          <em>Serviço/Atendimento</em> (orientação, tutoria, busca ativa),
-          <em>Apoio produtivo/financeiro</em> (crédito, fomento, incubação),
-          <em>Certificação de escolaridade/competências</em>, <em>Misto</em>
-          (combina múltiplos tipos sem predominância clara) ou <em>Não aplicável</em>.
-        </p>
-        <p>
-          <strong>Modalidade da oferta</strong> — <em>forma</em> como a oferta
-          chega ao público. Valores: <em>Presencial</em>, <em>Educação à
-          distância (EaD)</em>, <em>Semipresencial/híbrida</em>, <em>Mista</em>
-          (combina múltiplas modalidades sem predominância clara),
-          <em>Sem informação</em> ou <em>Não aplicável</em>.
-        </p>
-        <p>
-          <strong>Arranjo logístico</strong> — estrutura <em>física</em> da
-          oferta. Valores: <em>Unidade fixa</em> (local permanente como escola
-          ou posto), <em>Itinerante</em> (equipes/unidades móveis, ações em
-          comunidades), <em>Misto (fixa + itinerante)</em>, <em>Sem informação</em>
-          ou <em>Não aplicável</em>.
-        </p>
-      </div>
-    </details>
-  {% endset %}
-
-  {% set abaBaseLegal %}
-    <h3 class="sr-only">Base legal</h3>
-    {% if p.base_legal %}
-      <p class="whitespace-pre-line">{{ p.base_legal }}</p>
-    {% else %}
-      <p class="text-neutral-700">Base legal não cadastrada nesta versão da ficha.</p>
-    {% endif %}
-  {% endset %}
-
-  {% set abaDocumentos %}
-    <h3 class="sr-only">Documentos e fonte oficial</h3>
-    {# fonte_url é obrigatório no schema; quando o levantamento não achou link,
-       o ETL grava um placeholder em domínio .local — não exibir como link. #}
-    {% if p.fonte_url and ('.local/' not in p.fonte_url) %}
-      <p>
-        <strong>Fonte oficial:</strong>
-        <a href="{{ p.fonte_url }}" rel="external nofollow noopener" target="_blank">
-          Acessar no portal oficial ↗
-        </a>
-        <span class="text-xs text-neutral-700">(abre em nova aba)</span>
-      </p>
-    {% else %}
-      <p>
-        <strong>Fonte oficial:</strong> não identificada no levantamento.
-        Consulte a aba <em>Base legal</em> e o órgão responsável pela política.
-      </p>
-    {% endif %}
-
-    {% if p.atribuicao %}
-      <p class="mt-md text-sm text-neutral-700">
-        <strong>Atribuição:</strong> {{ p.atribuicao }}
-      </p>
-    {% endif %}
-    {% if p.licenca_inferida %}
-      <p class="text-sm text-neutral-700">
-        <strong>Licença da fonte:</strong> {{ p.licenca_inferida }}
-      </p>
-    {% endif %}
-  {% endset %}
-
-  {% set abaCitacao %}
-    {% include "components/citation-box.njk" %}
-  {% endset %}
-
-  {% set tabsList = [
-    { id: "resumo", label: "Resumo", panel: abaResumo },
-    { id: "detalhes", label: "Detalhes", panel: abaDetalhes },
-    { id: "base-legal", label: "Base legal", panel: abaBaseLegal },
-    { id: "documentos", label: "Documentos", panel: abaDocumentos },
-    { id: "citacao", label: "Como citar", panel: abaCitacao }
-  ] %}
-
-  {% set tabsLabel = "Seções da ficha" %}
-  {% set tabsId = "tabs-" + p.slug %}
-  {% include "components/tabs.njk" %}
-
-  {# Sprint 9.8: seção "Proveniência" removida da UI pública (informação técnica
-     que não interessa a gestores). Dados de versão/ID/revisão seguem
-     disponíveis em meta tags HTML, JSON-LD Schema.org e na citação acadêmica
-     gerada na aba "Como citar". O link para abrir issue fica como rodapé
-     discreto, sem header. #}
-  <p class="mt-2xl pt-md border-t border-neutral-200 text-xs text-neutral-700">
-    Encontrou erro ou tem sugestão sobre este verbete?
-    <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=Correção:+{{ p.nome_programa | urlencode }}"
-       rel="noopener" target="_blank">
-      Abra uma issue no GitHub ↗
-    </a>
-  </p>
-
-  {# === EX.3: seção "Continue explorando" === #}
-  {% if rel and (rel.mesmaFamilia.length > 0 or rel.mesmoTipoUf.length > 0 or rel.mesmaModalidadeUf.length > 0) %}
-    <section class="mt-2xl pt-lg border-t-2 border-neutral-200" aria-labelledby="continue-explorando-h">
-      <h2 id="continue-explorando-h" class="mt-0">Continue explorando</h2>
-
-      {% if rel.mesmaFamilia.length > 0 %}
-        <h3 class="mt-lg">
-          {% if p.isFederal %}
-            Esta família federal nas UFs ({{ rel.mesmaFamilia.length }})
-          {% else %}
-            Mesma família federal — outras UFs ({{ rel.mesmaFamilia.length }})
-          {% endif %}
-        </h3>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
-          {% for r in rel.mesmaFamilia %}
-            <li>
-              <a href="/politica/{{ r.slug }}/"
-                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors"
-                 aria-label="Abrir ficha de {{ r.nome }} em {% if r.uf == 'BR' %}âmbito federal{% else %}{{ r.uf }}{% endif %}">
-                <span class="text-xs font-semibold text-neutral-700">
-                  {% if r.uf == 'BR' %}Federal{% else %}{{ r.uf }}{% endif %}
-                </span>
-                <p class="m-0 mt-2xs text-sm font-medium text-neutral-900">{{ r.nome }}</p>
-                {% if r.situacao %}
-                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
-                    {{ r.situacao }}
-                  </span>
-                {% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% endif %}
-
-      {% if rel.mesmoTipoUf.length > 0 %}
-        <h3 class="mt-lg">
-          Mesmo tipo em {{ p.uf }}
-          <span class="text-sm font-normal text-neutral-700">
-            ({{ p.tipo_politica }})
-          </span>
-        </h3>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
-          {% for r in rel.mesmoTipoUf %}
-            <li>
-              <a href="/politica/{{ r.slug }}/"
-                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
-                <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
-                {% if r.situacao %}
-                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
-                    {{ r.situacao }}
-                  </span>
-                {% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-        <p class="text-sm mt-sm">
-          <a href="/tipo/{{ p.tipo_politica | slug }}/">
-            Ver todas as políticas do tipo "{{ p.tipo_politica }}" →
-          </a>
-        </p>
-      {% endif %}
-
-      {% if rel.mesmaModalidadeUf.length > 0 %}
-        <h3 class="mt-lg">
-          Mesma modalidade em {{ p.uf }}
-          <span class="text-sm font-normal text-neutral-700">
-            ({{ p.modalidade_oferta }})
-          </span>
-        </h3>
-        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-sm list-none p-0 m-0 not-prose">
-          {% for r in rel.mesmaModalidadeUf %}
-            <li>
-              <a href="/politica/{{ r.slug }}/"
-                 class="block p-sm border border-neutral-200 rounded hover:border-primary hover:shadow-sm no-underline transition-colors">
-                <p class="m-0 text-sm font-medium text-neutral-900">{{ r.nome }}</p>
-                {% if r.situacao %}
-                  <span class="tag tag--{{ r.situacao_classe }} text-xs mt-2xs">
-                    {{ r.situacao }}
-                  </span>
-                {% endif %}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-        <p class="text-sm mt-sm">
-          <a href="/modalidade/{{ p.modalidade_oferta | slug }}/">
-            Ver todas as políticas com modalidade "{{ p.modalidade_oferta }}" →
-          </a>
-        </p>
-      {% endif %}
-    </section>
+  {% if notasEditoriais[p.slug] %}
+    <aside class="policy-note mb-lg" aria-label="Observação sobre este registro" data-pagefind-ignore>
+      <strong>Observação sobre este registro:</strong> {{ notasEditoriais[p.slug] }}
+    </aside>
   {% endif %}
+
+  <nav aria-label="Seções da ficha" class="not-prose policy-sections mb-xl" data-pagefind-ignore>
+    <ul class="flex flex-wrap gap-x-lg gap-y-sm list-none p-0 m-0 text-sm">
+      <li><a href="#identificacao">Identificação</a></li>
+      <li><a href="#finalidade">Finalidade</a></li>
+      <li><a href="#territorio">Território</a></li>
+      <li><a href="#referencias">Referências</a></li>
+    </ul>
+  </nav>
+
+  <section aria-labelledby="identificacao">
+    <h2 id="identificacao">Identificação</h2>
+    <dl class="policy-facts">
+      <dt class="font-semibold text-neutral-700">Órgãos responsáveis informados</dt>
+      <dd class="m-0">
+        {% if p.orgaos_lista and p.orgaos_lista | length %}
+          <ul class="m-0 pl-md">{% for orgao in p.orgaos_lista %}<li>{{ orgao }}</li>{% endfor %}</ul>
+        {% else %}Não informado no levantamento.{% endif %}
+      </dd>
+      <dt class="font-semibold text-neutral-700">Área da política</dt>
+      <dd class="m-0">{{ p.tipo_politica or 'Não informado no levantamento.' }}</dd>
+      <dt class="font-semibold text-neutral-700">Ano ou marco informado</dt>
+      <dd class="m-0">{{ p.ano_criacao or 'Não informado no levantamento.' }}</dd>
+      <dt class="font-semibold text-neutral-700">Esfera de formulação informada</dt>
+      <dd class="m-0">{{ 'Distrito Federal' if (p.uf == 'DF' and p.esfera_formulacao == 'Estado') else (p.esfera_formulacao or 'Não informado no levantamento.') }}</dd>
+      <dt class="font-semibold text-neutral-700">Situação no levantamento</dt>
+      <dd class="m-0">{% include "components/tag-status.njk" %}</dd>
+    </dl>
+    <p class="text-base text-neutral-700" data-pagefind-ignore>
+      A situação acima reproduz a classificação registrada. A vigência jurídica e a continuidade da oferta precisam ser verificadas nas referências e com o órgão responsável.
+    </p>
+  </section>
+
+  <section aria-labelledby="finalidade">
+    <h2 id="finalidade">Finalidade</h2>
+    {% set descricaoPrincipal = p.descricao_simples or p.resumo or p.apresentacao or p.descricao_tecnica %}
+    {% if descricaoPrincipal %}
+      <p class="text-base text-neutral-700" data-pagefind-ignore>Descrição registrada no levantamento:</p>
+      <p class="whitespace-pre-line" data-pagefind-meta="descricao">{{ descricaoPrincipal }}</p>
+      {% if (p.resumo and p.resumo != descricaoPrincipal) or (p.apresentacao and p.apresentacao != descricaoPrincipal) %}
+        <details class="my-lg print-expand">
+          <summary class="cursor-pointer font-semibold py-sm">Ler descrição complementar</summary>
+          {% if p.resumo and p.resumo != descricaoPrincipal %}<p class="whitespace-pre-line">{{ p.resumo }}</p>{% endif %}
+          {% if p.apresentacao and p.apresentacao != descricaoPrincipal and p.apresentacao != p.resumo %}<p class="whitespace-pre-line">{{ p.apresentacao }}</p>{% endif %}
+        </details>
+      {% endif %}
+    {% else %}
+      <p>Finalidade e funcionamento básico não informados no levantamento.</p>
+    {% endif %}
+    <h3>Organização da oferta informada</h3>
+    <dl class="policy-facts">
+      <dt class="font-semibold text-neutral-700">Tipo de oferta</dt>
+      <dd class="m-0">{{ p.tipo_oferta or 'Não informado no levantamento.' }}</dd>
+      <dt class="font-semibold text-neutral-700">Modalidade</dt>
+      <dd class="m-0">{{ p.modalidade_oferta or 'Não informado no levantamento.' }}</dd>
+      <dt class="font-semibold text-neutral-700">Organização dos locais de oferta</dt>
+      <dd class="m-0">{{ p.arranjo_logistico or 'Não informado no levantamento.' }}</dd>
+      <dt class="font-semibold text-neutral-700">Carga horária</dt>
+      <dd class="m-0">{{ p.carga_horaria or 'Não informado no levantamento.' }}</dd>
+    </dl>
+    <p class="text-base text-neutral-700" data-pagefind-ignore>
+      As categorias não detalham, por si só, o componente presencial, as atividades fora da escola ou o uso de internet. <a href="/sobre/metodologia/">Entenda os limites do levantamento</a>.
+    </p>
+    {% if p.fonte_financiamento or p.transferencia_recursos or p.continuidade_governos or (p.integra_lista and p.integra_lista | length) %}
+      <details class="my-lg print-expand">
+        <summary class="cursor-pointer font-semibold py-sm">Outras informações do levantamento</summary>
+        <dl class="policy-facts mt-md">
+          {% if p.fonte_financiamento %}<dt class="font-semibold">Financiamento informado</dt><dd class="m-0">{{ p.fonte_financiamento }}</dd>{% endif %}
+          {% if p.transferencia_recursos %}<dt class="font-semibold">Transferência de recursos informada</dt><dd class="m-0">{{ p.transferencia_recursos }}</dd>{% endif %}
+          {% if p.continuidade_governos %}<dt class="font-semibold">Continuidade descrita no levantamento</dt><dd class="m-0">{{ p.continuidade_governos }}</dd>{% endif %}
+          {% if p.integra_lista and p.integra_lista | length %}
+            <dt class="font-semibold">Articulações mencionadas</dt>
+            <dd class="m-0"><ul class="m-0 pl-md">{% for item in p.integra_lista %}<li>{{ item }}</li>{% endfor %}</ul></dd>
+          {% endif %}
+        </dl>
+      </details>
+    {% endif %}
+  </section>
+
+  <section aria-labelledby="territorio">
+    <h2 id="territorio">Território</h2>
+    <dl class="policy-facts">
+      <dt class="font-semibold text-neutral-700">Vínculo territorial do registro</dt>
+      <dd class="m-0">
+        {% if p.uf %}<a href="/uf/{{ p.uf | lower }}/">{{ 'Federal' if p.isFederal else ('Distrito Federal' if p.uf == 'DF' else p.uf) }}</a>{% else %}Não informado no levantamento.{% endif %}
+      </dd>
+      <dt class="font-semibold text-neutral-700">Abrangência informada</dt>
+      <dd class="m-0">{{ 'Distrital' if (p.uf == 'DF' and p.abrangencia_territorial == 'Estadual') else (p.abrangencia_territorial or 'Não informado no levantamento.') }}</dd>
+      <dt class="font-semibold text-neutral-700">Esfera de execução informada</dt>
+      <dd class="m-0">{{ 'Distrito Federal' if (p.uf == 'DF' and p.esfera_execucao == 'Estado') else (p.esfera_execucao or 'Não informado no levantamento.') }}</dd>
+    </dl>
+    <p class="text-base text-neutral-700" data-pagefind-ignore>
+      A abrangência registrada não comprova atendimento em todos os locais. Quando a descrição mencionar público atendido ou tamanho da oferta, observe o território e o período a que a informação se refere.
+    </p>
+  </section>
+
+  <section aria-labelledby="referencias">
+    <h2 id="referencias">Referências</h2>
+    <h3>Referência indicada no levantamento</h3>
+    {% if p.fonte_url and ('.local' not in (p.fonte_url | lower)) %}
+      <p><a href="{{ p.fonte_url }}" class="btn btn--secondary policy-reference" rel="external nofollow noopener" target="_blank">Consultar a referência ↗</a> <span class="text-sm text-neutral-700 print-hide">(abre em nova aba)</span></p>
+    {% else %}
+      <p>Link de referência não identificado no levantamento. Consulte os instrumentos citados abaixo e os órgãos responsáveis informados.</p>
+    {% endif %}
+    <dl class="policy-facts text-sm" data-pagefind-ignore>
+      <dt class="font-semibold text-neutral-700">Consulta da referência</dt>
+      <dd class="m-0">{{ p.fonte_data_acesso_br or 'Data não informada no levantamento.' }}</dd>
+      <dt class="font-semibold text-neutral-700">Versão do levantamento</dt>
+      <dd class="m-0">{{ p.versao_catalogo_br or (p.data_versao_catalogo | dataBR) or 'Data não informada.' }}</dd>
+    </dl>
+    <p class="text-base text-neutral-700" data-pagefind-ignore>Essas datas se referem à consulta da fonte e ao catálogo; não confirmam a continuidade da oferta.</p>
+    <h3>Instrumentos citados</h3>
+    {% if p.base_legal %}<p class="whitespace-pre-line">{{ p.base_legal }}</p>{% else %}<p>Instrumentos legais não informados no levantamento.</p>{% endif %}
+    <p class="text-base text-neutral-700" data-pagefind-ignore>A existência de um instrumento legal não comprova sua vigência atual nem a implementação da experiência.</p>
+    {% if p.atribuicao %}<p class="text-base text-neutral-700"><strong>Atribuição registrada:</strong> {{ p.atribuicao }}</p>{% endif %}
+    {% if p.licenca_inferida %}<p class="text-base text-neutral-700"><strong>Licença atribuída à fonte no levantamento:</strong> {{ 'Não explicitada na referência.' if p.licenca_inferida == 'sem_licenca_explicita' else p.licenca_inferida }}</p>{% endif %}
+    <details id="citacao" class="mt-lg print-citation" data-pagefind-ignore>
+      <summary class="cursor-pointer font-semibold py-sm">Como citar esta ficha</summary>
+      {% include "components/citation-box.njk" %}
+    </details>
+  </section>
+
+  {% set rel = relacionadas[p.slug] %}
+  {% set registrosRelacionados = [] %}
+  {% if rel %}
+    {% if rel.mesmaFamilia | length %}{% set registrosRelacionados = rel.mesmaFamilia %}
+    {% elif rel.mesmoTipoUf | length %}{% set registrosRelacionados = rel.mesmoTipoUf %}
+    {% elif rel.mesmaModalidadeUf | length %}{% set registrosRelacionados = rel.mesmaModalidadeUf %}{% endif %}
+  {% endif %}
+  {% if registrosRelacionados | length %}
+    <details class="mt-xl border-t border-neutral-200 pt-md print-hide" data-pagefind-ignore>
+      <summary class="cursor-pointer font-semibold py-sm">Outros registros relacionados</summary>
+      <ul>{% for registro in registrosRelacionados %}<li><a href="/politica/{{ registro.slug }}/">{{ registro.nome }}</a> <span class="text-base text-neutral-700">({{ 'Federal' if registro.uf == 'BR' else registro.uf }})</span></li>{% endfor %}</ul>
+    </details>
+  {% endif %}
+  <p class="mt-xl pt-md border-t border-neutral-200 text-sm text-neutral-700 print-hide" data-pagefind-ignore>
+    Encontrou um erro neste registro? <a href="https://github.com/antrologos/catalogo-politicas/issues/new?title=Correção:+{{ p.nome_programa | urlencode }}" rel="noopener" target="_blank">Envie uma correção pelo GitHub ↗</a>.
+  </p>
 </article>
+<script type="module" src="/assets/js/ficha.js"></script>

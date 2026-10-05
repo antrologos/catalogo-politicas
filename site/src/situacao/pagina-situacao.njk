@@ -6,9 +6,9 @@ pagination:
   size: 1
 permalink: "/situacao/{{ grupo.slug }}/"
 eleventyComputed:
-  title: "Políticas {{ grupo.valor }}"
-  description: "Lista das {{ grupo.count }} políticas catalogadas com situação {{ grupo.valor }}, com distribuição por UF e tabela completa."
-  dimensaoNome: "Situação atual"
+  title: "Situação no levantamento: {{ grupo.valor }}"
+  description: "Lista dos {{ grupo.count }} verbetes com situação {{ grupo.valor }} informada no levantamento, com distribuição por UF. Essa classificação não confirma oferta atual."
+  dimensaoNome: "Situação no levantamento"
   dimensaoSlug: "situacao"
   dimensaoIcone: "traffic-signal"
 ---

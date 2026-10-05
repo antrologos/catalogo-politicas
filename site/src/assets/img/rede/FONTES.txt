@@ -24,3 +24,10 @@ todos-pela-educacao.png ....... https://todospelaeducacao.org.br/wordpress/wp-co
 unesco.svg .................... https://www.unesco.org/themes/custom/bunesco8/assets/images/logo/logo-blue.svg
 unicef.png .................... https://www.unicef.org/brazil/sites/unicef.org.brazil/files/Portuguese-Inverse.png
 juventudes-potentes-united-way.png  https://juventudespotentes.org.br/wp-content/uploads/2024/07/Parceiro-Articulador-e1719920515221.png
+
+Identidade do catálogo — arquivos oficiais da Rede EJA (2026-10-04)
+rede-eja-logo.svg ............. https://www.frm.org.br/static/images/pages/projeto/rede-eja/RedeEJA_Logo-Header.svg
+rede-eja-favicon.png .......... https://www.frm.org.br/static/images/pages/projeto/rede-eja/EJA_favicon.png
+Origem institucional: https://redeeja.org.br/ (destino: https://www.frm.org.br/projeto/rede-eja).
+Arquivos incorporados integralmente, sem recorte, recoloração ou alteração de caminhos.
+A marca da Rede, como as marcas participantes acima, não está abrangida pela licença CC BY 4.0 do catálogo.

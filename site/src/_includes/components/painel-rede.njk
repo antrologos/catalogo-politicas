@@ -1,27 +1,17 @@
-{#- Painel das 16 instituições que compõem a Rede EJA e Inclusão Produtiva.
-   Mesmo layout da barra oficial da Rede (linhas 5/5/6), montado com os logos
-   individuais em assets/img/rede/ — cada um leva ao site oficial e tem texto
-   alternativo próprio. Dados: equipe.redeEja. Em telas estreitas as linhas
-   quebram naturalmente (flex-wrap).
-   Parâmetro opcional: painelTitulo (texto do <h2>).
-   Todas as tags usam controle de espaço ({%- -%}) porque o componente também
-   é incluído em Markdown (/sobre/): linha em branco encerraria o bloco HTML. -#}
-{%- set _titulo = painelTitulo or "A Rede EJA e Inclusão Produtiva é composta por:" -%}
-<section class="painel-rede bg-white border border-neutral-200 rounded px-md py-lg my-xl not-prose" aria-labelledby="painel-rede-h">
-<h2 id="painel-rede-h" class="text-xl sm:text-2xl text-center mt-0 mb-lg">{{ _titulo }}</h2>
-{%- for n in [1, 2, 3] %}
-<ul class="list-none m-0 p-0 mb-lg flex flex-wrap justify-center items-center gap-x-xl gap-y-lg">
-{%- for inst in equipe.redeEja -%}
-{%- if inst.linha == n %}
-<li class="m-0 p-0"><a href="{{ inst.url }}" rel="external" title="{{ inst.nome }}" class="flex items-center gap-sm h-[60px] no-underline rounded">
+{#- As 16 instituições mantêm nomes, links, logos e ordem do cadastro.
+   Controle de espaço preserva o bloco HTML quando incluído em Markdown. -#}
+{%- set _titulo = painelTitulo or "Instituições da Rede EJA e Inclusão Produtiva" -%}
+<section class="painel-rede not-prose" aria-labelledby="painel-rede-h">
+<h2 id="painel-rede-h">{{ _titulo }}</h2>
+<ul class="rede-logos">
+{%- for inst in equipe.redeEja %}
+<li><a href="{{ inst.url }}" rel="external" title="{{ inst.nome }}" class="rede-logo-link{{ ' rede-logo-link--paired' if inst.logos | length > 1 else '' }}">
 {%- for arq in inst.logos -%}
-{%- if not loop.first %}<span aria-hidden="true" class="block w-px h-[44px] bg-neutral-200"></span>{% endif -%}
-<img src="/assets/img/rede/{{ arq }}" alt="{{ inst.nome if loop.first else '' }}" class="h-[56px] w-auto object-contain {{ 'max-w-[108px]' if inst.logos | length > 1 else 'max-w-[180px]' }}" loading="lazy" decoding="async">
+{%- if not loop.first %}<span aria-hidden="true" class="rede-logo-divider"></span>{% endif -%}
+<img src="/assets/img/rede/{{ arq }}" alt="{{ inst.nome if loop.first else '' }}" loading="lazy" decoding="async">
 {%- endfor -%}
 </a></li>
-{%- endif -%}
 {%- endfor %}
 </ul>
-{%- endfor %}
-<p class="text-center text-sm m-0"><a href="{{ equipe.redeUrl }}" rel="external">Conheça a Rede EJA e Inclusão Produtiva ↗</a></p>
+<p class="rede-panel-link"><a href="{{ equipe.redeUrl }}" rel="external">Conheça a Rede EJA e Inclusão Produtiva ↗</a></p>
 </section>

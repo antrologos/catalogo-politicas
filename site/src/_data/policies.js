@@ -48,10 +48,11 @@ function normalize(p) {
     ...p,
     nome_programa: p.nome,
     id_universal: p.id_interno,
-    data_revisao: p.data_versao_catalogo,
+    data_revisao: p.atualizado_em || p.data_versao_catalogo,
     statusKey: deriveStatusKey(p.situacao_atual),
     isFederal: p.uf === "BR",
-    revisado_em_br: formatDateBR(p.data_versao_catalogo),
+    revisado_em_br: formatDateBR(p.atualizado_em || p.data_versao_catalogo),
+    versao_catalogo_br: formatDateBR(p.data_versao_catalogo),
     proxima_revisao_br: formatDateBR(p.proxima_revisao_prevista),
     fonte_data_acesso_br: formatDateBR(p.fonte_data_acesso),
     completude_classe:

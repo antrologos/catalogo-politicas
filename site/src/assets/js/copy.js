@@ -53,17 +53,15 @@
     // Feedback visual no botão
     const original = btn.textContent;
     btn.textContent = ok ? "Copiado ✓" : "Erro ao copiar";
-    btn.setAttribute("aria-pressed", "true");
     setTimeout(() => {
       btn.textContent = original;
-      btn.removeAttribute("aria-pressed");
     }, 1500);
 
     // Live region (anúncio para screen reader)
     if (feedback) {
       feedback.textContent = ok
-        ? `${label} copiada para a área de transferência.`
-        : `Erro ao copiar ${label}. Tente selecionar o texto manualmente.`;
+        ? (btn.dataset.copySuccess || `${label} copiada para a área de transferência.`)
+        : (btn.dataset.copyError || `Erro ao copiar ${label}. Tente selecionar o texto manualmente.`);
       setTimeout(() => {
         feedback.textContent = "";
       }, 3000);

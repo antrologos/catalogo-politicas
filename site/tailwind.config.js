@@ -24,13 +24,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Paleta autoral brasileira+editorial (ADR-011, Sprint V2 do MVP-UX 2026-05-02).
-        // Substitui gov.uk-clone por tons mornos e azul institucional brasileiro.
-        // Todas as combinações principais validadas WCAG AA (ver ADR-011).
+        // Identidade da Rede EJA. Cores semânticas permanecem distintas da marca.
         primary: {
-          DEFAULT: '#1A4F8B', // azul-IBGE editorial (~9.2:1 sobre papel)
-          dark:    '#11385F',
-          light:   '#3D7AAE',
+          DEFAULT: '#665A8E', // roxo do logo oficial; texto branco ≈ 6,14:1
+          dark:    '#493A6D',
+          light:   '#8073A7',
         },
         success: {
           DEFAULT: '#0E7B4A', // verde-floresta (~5.8:1 sobre papel)
@@ -48,17 +46,20 @@ export default {
           DEFAULT: '#357AB7', // azul-frio editorial (~5.4:1)
           dark:    '#27598C',
         },
+        accent: '#BFDE42',
+        'brand-blue': '#5A83CF',
+        'brand-sky': '#79AABD',
         neutral: {
-          900: '#3C342A', // tinta morna (~12:1 sobre papel — substitui #0b0c0c quase-preto frio)
-          700: '#5C5347',
-          500: '#8A7E70', // borders
-          200: '#E5DFD3',
-          100: '#F2EDE2', // backgrounds suaves
+          900: '#252333', // texto principal
+          700: '#625F70',
+          500: '#847C94', // contornos de controles
+          200: '#E1E2EA',
+          100: '#EEEBF5', // superfície secundária
         },
-        // Cores de superfície (substituem bg-white e text-neutral-900 default).
-        papel: '#FAF7F2', // off-white morno (body bg)
-        tinta: '#3C342A', // alias semântico para neutral.900
-        focus: '#FFB81C', // âmbar editorial (substitui amarelo neon #ffdd00)
+        // Superfícies claras e foco contrastante.
+        papel: '#F6F7FB',
+        tinta: '#252333',
+        focus: '#493A6D',
       },
       fontFamily: {
         // Plex Sans Variable: family name é "IBM Plex Sans Variable" (não "IBM Plex Sans").
@@ -67,8 +68,35 @@ export default {
         serif: ['"IBM Plex Serif"', 'Georgia', 'Cambria', 'serif'],
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Consolas', 'monospace'],
       },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            '--tw-prose-body': theme('colors.neutral.900'),
+            '--tw-prose-headings': theme('colors.neutral.900'),
+            '--tw-prose-links': theme('colors.primary.DEFAULT'),
+            '--tw-prose-bold': theme('colors.neutral.900'),
+            '--tw-prose-counters': theme('colors.neutral.700'),
+            '--tw-prose-bullets': theme('colors.neutral.500'),
+            '--tw-prose-hr': theme('colors.neutral.200'),
+            '--tw-prose-quotes': theme('colors.neutral.900'),
+            '--tw-prose-quote-borders': theme('colors.neutral.200'),
+            '--tw-prose-captions': theme('colors.neutral.700'),
+            '--tw-prose-code': theme('colors.neutral.900'),
+            fontSize: '1.0625rem',
+            lineHeight: '1.65',
+            maxWidth: '70ch',
+            h1: { fontFamily: theme('fontFamily.sans'), fontWeight: '650', fontSize: 'clamp(2rem, 3.5vw, 2.75rem)', lineHeight: '1.15', marginBottom: '1rem' },
+            h2: { fontFamily: theme('fontFamily.sans'), fontWeight: '650', fontSize: '1.625rem', lineHeight: '1.25', marginTop: '2rem', marginBottom: '1rem' },
+            h3: { fontWeight: '600', fontSize: '1.1875rem', lineHeight: '1.35', marginTop: '1.5rem', marginBottom: '.75rem' },
+            p: { marginTop: '.875em', marginBottom: '.875em' },
+            a: { textUnderlineOffset: '.18em' },
+            code: { fontWeight: '450' },
+          },
+        },
+      }),
       maxWidth: {
-        container: '1020px', // gov.uk default
+        container: '1120px',
+        reading: '70ch',
       },
       spacing: {
         // 8 tokens recomendados (E.1.B)
