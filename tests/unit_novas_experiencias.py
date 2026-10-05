@@ -146,12 +146,15 @@ def test_build_json_completo_isolado_preserva_onda_e_campos_tipados(tmp_path, mo
     latest = tmp_path / "latest.json"
     saida = tmp_path / "curadoria.json"
     for nome, valor in {
+        "ROOT": tmp_path,
         "CURADORIA_DIR": pasta, "IN_CSV": entrada_csv, "REGISTRO_CSV": reg_csv,
         "OUT_JSON": anterior, "LATEST": latest,
         "SNAPSHOT_INDEX": tmp_path / "sem-indice.json",
         "EXTRACTED_DIR": tmp_path / "sem-captura",
     }.items():
         monkeypatch.setattr(build_json, nome, valor)
+    with pytest.raises(ValueError, match="dentro da raiz"):
+        build_json.destino_saida(tmp_path.parent / "fora-do-projeto.json")
     assert build_json.main(saida) == 0
     assert anterior.read_text(encoding="utf-8") == "preservado"
     dados = json.loads(saida.read_text(encoding="utf-8"))

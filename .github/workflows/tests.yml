@@ -39,4 +39,4 @@ jobs:
       - name: Instalar dependências
         run: pip install -r requirements.txt
       - name: Rodar testes
-        run: python -B -m pytest tests/ -q
+        run: python -B -m pytest tests/ -q --basetemp .claude/working/curadoria-relatorios-2026-10-05/cache/pytest-ci -o cache_dir=.claude/working/curadoria-relatorios-2026-10-05/cache/pytest-cache-ci
