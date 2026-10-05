@@ -49,4 +49,4 @@ Os sete documentos foram encontrados e tiveram hashes registrados. O diretório 
 
 ## Execução consolidada
 
-Sete relatórios lidos sem alteração (hashes iguais); 319 remanescentes cobertas, 321 intervenções e 22 inclusões. Manifestos e pipeline implementados; 175 testes Python aprovados; identidades anteriores e produto datado preservados. Resultado, limites e verificação do site no relatório de curadoria. Publicação será confirmada após CI.
+Sete relatórios lidos sem alteração (hashes iguais); 319 remanescentes cobertas, 321 intervenções e 22 inclusões. Manifestos e pipeline implementados; 175 testes Python aprovados; identidades anteriores e produto datado preservados. Resultado, limites e verificação do site no relatório de curadoria. Publicação concluída e confirmada: commit 8c8642c, CI do site 37275066799 e CI Python 37275942629 aprovados. Cinco HTML públicos iguais ao build local e índice publicado com 388 fichas. Evidências em data/auditoria/publicacao-curadoria-relatorios-2026-10-05.json. Esta rodada está concluída; os limites de verificação substantiva permanecem explícitos no relatório.

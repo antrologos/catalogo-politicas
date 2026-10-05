@@ -140,6 +140,18 @@ O schema admite fonte principal ausente para retirada documentada de referência
 
 Foi corrigido um problema de carregamento identificado no HTML real: export adicional no módulo de dados impedia o Eleventy de executar o carregador de revisões. O helper testável foi separado do loader, que mantém apenas export default, e foi acrescentada regressão com o importador real.
 
+## Publicação confirmada
+
+A rodada foi publicada em 5 de outubro de 2026 em https://antrologos.github.io/catalogo-politicas/, a partir do commit [8c8642c](https://github.com/antrologos/catalogo-politicas/commit/8c8642c964a96b7c7a5a2ce48c3fe33f77ee77b1).
+
+- [Validação e publicação do site](https://github.com/antrologos/catalogo-politicas/actions/runs/37275066799): schema, 45 testes Node, build, pa11y, Lighthouse e deploy aprovados. O Lighthouse passou na segunda execução, com o mesmo código e os mesmos limites, após uma medição isolada abaixo do limiar de desempenho na home.
+- [Validação do pipeline](https://github.com/antrologos/catalogo-politicas/actions/runs/37275942629): 175 testes Python aprovados. O teste isolado passou a simular a raiz do projeto; o workflow prepara os temporários dentro do checkout.
+- Conferência pública por HTTP: início, busca, nova ficha Cemeapi, ficha com revisão editorial, ficha sem fonte principal e índice Pagefind. Todas responderam com sucesso e apresentaram o conteúdo esperado; os cinco HTML conferidos são idênticos ao build local.
+- O índice público confirma versão Pagefind 1.5.2, idioma pt-br e 388 fichas. Seu hash difere do índice local; não se declara identidade binária entre os dois índices.
+- Busca no site publicado, em 390 px: Cemeapi → filtro AM → um resultado → abertura da ficha EDU-0503. Os 14 recursos de busca retornaram HTTP 200; nenhum erro JavaScript ou overflow no percurso. Analytics e VLibras foram bloqueados nesta checagem pontual.
+
+Registro: [verificação da publicação](../data/auditoria/publicacao-curadoria-relatorios-2026-10-05.json).
+
 ## Limites que permanecem
 
 Esta rodada encerra a leitura editorial do restante do acervo e a integração documentada das inclusões selecionadas. **Não encerra uma investigação substantiva de cada política.** Há 119 intervenções editoriais sem nova verificação externa, referências inacessíveis e muitos casos sem confirmação atual de funcionamento.

@@ -1,0 +1,188 @@
+{
+  "verificado_em": "2026-10-05T07:15:56+00:00",
+  "commit_site": "8c8642c964a96b7c7a5a2ce48c3fe33f77ee77b1",
+  "commit_correcao_fixture": "25c7a7ab1ee1e09b919bc8754f9dae31a516f7c5",
+  "commit_ci_python": "49db3a3846313e61a386af59a24770c1a649ebba",
+  "ci_site": "https://github.com/antrologos/catalogo-politicas/actions/runs/37275066799",
+  "ci_python": "https://github.com/antrologos/catalogo-politicas/actions/runs/37275942629",
+  "resultados": [
+    {
+      "verificacao": "inicio",
+      "url": "https://antrologos.github.io/catalogo-politicas/?revisao=8c8642c",
+      "status_http": 200,
+      "conteudo_esperado_confirmado": true,
+      "sha256": "ef8554d16a935742f5dc67f8fa7b6f3369176e98070802a158b92b2356daa597",
+      "igual_ao_build_local": true
+    },
+    {
+      "verificacao": "busca",
+      "url": "https://antrologos.github.io/catalogo-politicas/buscar/?revisao=8c8642c",
+      "status_http": 200,
+      "conteudo_esperado_confirmado": true,
+      "sha256": "9eb01c6d2da301ccb18996595e585114c5c27695747fc4fcd402cb3b62991c8c",
+      "igual_ao_build_local": true
+    },
+    {
+      "verificacao": "nova",
+      "url": "https://antrologos.github.io/catalogo-politicas/politica/escolarizacao-de-adultos-e-pessoas-idosas-cemeapi-manaus-am/?revisao=8c8642c",
+      "status_http": 200,
+      "conteudo_esperado_confirmado": true,
+      "sha256": "287150649030ccae2e382f6493b2e745c64b7535ce2c36c4582e48d09b4e8719",
+      "igual_ao_build_local": true
+    },
+    {
+      "verificacao": "editorial",
+      "url": "https://antrologos.github.io/catalogo-politicas/politica/campanha-estrategia-de-busca-ativa-escolar-2025-minas-gerais-mg/?revisao=8c8642c",
+      "status_http": 200,
+      "conteudo_esperado_confirmado": true,
+      "sha256": "5b7e2bdaa3ef876c7b0d528c518f34ea607be08c8c16d1436bc79afa1591d465",
+      "igual_ao_build_local": true
+    },
+    {
+      "verificacao": "fonte_ausente",
+      "url": "https://antrologos.github.io/catalogo-politicas/politica/programa-avanca-mais-sc/?revisao=8c8642c",
+      "status_http": 200,
+      "conteudo_esperado_confirmado": true,
+      "sha256": "6b936253e3b79909b95ffd84016b87a2664be90c71cfa9e8ead47f2fcddd7c9b",
+      "igual_ao_build_local": true
+    },
+    {
+      "verificacao": "indice_busca",
+      "url": "https://antrologos.github.io/catalogo-politicas/pagefind/pagefind-entry.json?revisao=8c8642c",
+      "status_http": 200,
+      "conteudo_esperado_confirmado": true,
+      "sha256": "c655addc6d4782347d38fba611e261a23d4f34ab411457c2e2ca4596f259c5b1",
+      "igual_ao_build_local": false
+    }
+  ],
+  "limite": "Verificação HTTP das páginas selecionadas e do índice publicado, acrescida de busca funcional Cemeapi com filtro AM e abertura da ficha em 390 px. Analytics e VLibras bloqueados na checagem de navegador; não equivale a auditoria completa de acessibilidade.",
+  "ci_site_tentativa": 2,
+  "ci_site_conclusao": "success",
+  "ci_python_conclusao": "success",
+  "verificacao_navegador": {
+    "quando": "2026-10-05T07:18:26.927Z",
+    "inicio": "https://antrologos.github.io/catalogo-politicas/buscar/?q=Cemeapi",
+    "viewport": {
+      "width": 390,
+      "height": 1000
+    },
+    "erros": [],
+    "pagefind": [
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/pagefind-ui.js",
+        "status": 200,
+        "mime": "application/javascript; charset=utf-8"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/pagefind-ui.css",
+        "status": 200,
+        "mime": "text/css; charset=utf-8"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/assets/js/catalogo-pagefind/pagefind.js",
+        "status": 200,
+        "mime": "application/javascript; charset=utf-8"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/pagefind.js",
+        "status": 200,
+        "mime": "application/javascript; charset=utf-8"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/pagefind-worker.js",
+        "status": 200,
+        "mime": "application/javascript; charset=utf-8"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/pagefind-entry.json?ts=1791184718450",
+        "status": 200,
+        "mime": "application/json; charset=utf-8"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/pagefind.pt-br_fb5eceb374328.pf_meta",
+        "status": 200,
+        "mime": "application/octet-stream"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/wasm.pt-br.pagefind",
+        "status": 200,
+        "mime": "application/octet-stream"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/filter/pt-br_a0e6f94.pf_filter",
+        "status": 200,
+        "mime": "application/octet-stream"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/filter/pt-br_efb17fd.pf_filter",
+        "status": 200,
+        "mime": "application/octet-stream"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/filter/pt-br_d175a77.pf_filter",
+        "status": 200,
+        "mime": "application/octet-stream"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/filter/pt-br_6081ffc.pf_filter",
+        "status": 200,
+        "mime": "application/octet-stream"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/index/pt-br_f959eaa.pf_index",
+        "status": 200,
+        "mime": "application/octet-stream"
+      },
+      {
+        "url": "https://antrologos.github.io/catalogo-politicas/pagefind/fragment/pt-br_33b8bd2.pf_fragment",
+        "status": 200,
+        "mime": "application/octet-stream"
+      }
+    ],
+    "etapas": [
+      {
+        "etapa": "consulta_publicada",
+        "url": "https://antrologos.github.io/catalogo-politicas/buscar/?q=Cemeapi",
+        "termo": "Cemeapi",
+        "mensagem": "1 registro corresponde a Cemeapi",
+        "resultados": [
+          {
+            "titulo": "Escolarização de adultos e pessoas idosas — Cemeapi/Manaus",
+            "href": "https://antrologos.github.io/catalogo-politicas/politica/escolarizacao-de-adultos-e-pessoas-idosas-cemeapi-manaus-am/"
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "etapa": "filtro_AM",
+        "url": "https://antrologos.github.io/catalogo-politicas/buscar/?q=Cemeapi&uf=AM",
+        "mensagem": "1 registro corresponde a Cemeapi",
+        "territorios": [
+          "AM"
+        ],
+        "resultados": [
+          {
+            "titulo": "Escolarização de adultos e pessoas idosas — Cemeapi/Manaus",
+            "href": "https://antrologos.github.io/catalogo-politicas/politica/escolarizacao-de-adultos-e-pessoas-idosas-cemeapi-manaus-am/"
+          }
+        ],
+        "overflow": false
+      },
+      {
+        "etapa": "ficha_aberta",
+        "url": "https://antrologos.github.io/catalogo-politicas/politica/escolarizacao-de-adultos-e-pessoas-idosas-cemeapi-manaus-am/",
+        "titulo": "Escolarização de adultos e pessoas idosas — Cemeapi/Manaus",
+        "identificador": "FRM-CP-2026-EDU-0503",
+        "secoes": [
+          "identificacao",
+          "finalidade",
+          "territorio",
+          "referencias"
+        ],
+        "overflow": false
+      }
+    ],
+    "status": "aprovado",
+    "limites": "Verificação funcional pontual da URL normal publicada, sem cache-buster. Analytics e VLibras bloqueados via CDP. Não é auditoria completa de acessibilidade."
+  }
+}

@@ -30,10 +30,10 @@ Orientações para o Claude Code (claude.ai/code) neste repositório. O históri
 - Lidas individualmente as 319 fichas remanescentes; 321 intervenções, incluindo dois complementos à rodada anterior, e 22 novas fichas.
 - 202 intervenções com pesquisa documental limitada e 119 editoriais com evidência insuficiente; não apresentar esses números como validação integral de execução.
 - Relatório para continuidade: [curadoria do acervo](docs/RELATORIO_CURADORIA_ACERVO_2026-10-05.md), com cobertura por ID e limites.
-- Manifestos: data/curadoria/correcoes- 2026-10-05b-relatorios.json e novas- 2026-10-05-relatorios.json. Derivado: policies-relatorios- 2026-10-05.json; a versão anterior foi preservada.
+- Manifestos: data/curadoria/correcoes-2026-10-05b-relatorios.json e novas-2026-10-05-relatorios.json. Derivado: policies-relatorios-2026-10-05.json; a versão anterior foi preservada.
 - Exames autônomos de certificação são contexto complementar. Prova presencial em computador não determina modalidade de ensino.
 - No loader Eleventy de revisões, manter apenas export default; helper testável fica em site/lib/revisoes.js. Export adicional no loader impede a execução esperada no build real.
-- Verificações locais: 175 testes Python e 45 testes Node aprovados; 447 HTML, busca com 388 fichas e zero links/âncoras locais ausentes. Ver relatório para limites e confirmação de publicação.
+- Verificações locais: 175 testes Python e 45 testes Node aprovados; 447 HTML, busca com 388 fichas e zero links/âncoras locais ausentes. Publicada pelo commit 8c8642c; CI do site 37275066799 e Python 37275942629 aprovados. Conteúdo público e índice de 388 fichas conferidos; ver relatório para evidências e limites.
 
 ## Estado atual (2026-10-05 — curadoria do acervo)
 
