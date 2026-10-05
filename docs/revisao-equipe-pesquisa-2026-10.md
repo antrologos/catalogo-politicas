@@ -1,5 +1,9 @@
 # Revisão para a equipe de pesquisa — outubro de 2026
 
+> **Atualização de 05/10/2026 — documento histórico.** O [Relatório de referências e conteúdo de 05/10/2026](RELATORIO_REFERENCIAS_E_CONTEUDO_2026-10-05.md) consolida 47 fichas e supera as pendências corrigidas nos IDs e campos ali discriminados. A lista abaixo retrata o levantamento de 04/10/2026; não deve ser usada isoladamente como estado atual do catálogo. Os 11 marcadores de fonte ausente foram substituídos por referências, o que não garante acesso público estável nem comprova execução atual das políticas.
+>
+> As demais dúvidas continuam sendo histórico de trabalho e não foram automaticamente resolvidas. Para acompanhar ou continuar a revisão, consulte o relatório novo, os manifestos com valores anteriores/novos e a auditoria de integração. As planilhas originais permanecem preservadas; não se deve reverter a curadoria com base nesta lista anterior. Os resultados finais de publicação constarão da seção própria do novo relatório.
+
 Lista de pontos do catálogo que dependem de conferência humana. O site e os dados já estão consistentes com o vocabulário oficial; os itens abaixo são **decisões tomadas por regra ou por inferência** que a equipe deve confirmar ou corrigir **na planilha-fonte** (a próxima execução do ETL propaga a correção).
 
 Gerado em 2026-10-04 a partir de `data/derived/latest.json`. Cada nome leva à ficha publicada.

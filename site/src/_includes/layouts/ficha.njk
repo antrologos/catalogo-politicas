@@ -7,6 +7,7 @@ layout: layouts/base.njk
   { texto: p.nome_programa }
 ] %}
 {% include "components/breadcrumb.njk" %}
+{% set revisao = revisoes[p.id_interno] %}
 
 <article data-pagefind-body data-ficha
          data-pagefind-meta="uf:{{ p.uf }}"
@@ -85,7 +86,7 @@ layout: layouts/base.njk
     <h2 id="finalidade">Finalidade</h2>
     {% set descricaoPrincipal = p.descricao_simples or p.resumo or p.apresentacao or p.descricao_tecnica %}
     {% if descricaoPrincipal %}
-      <p class="text-base text-neutral-700" data-pagefind-ignore>Descrição registrada no levantamento:</p>
+      <p class="text-base text-neutral-700" data-pagefind-ignore>{{ 'Descrição revisada com as referências abaixo:' if revisao else 'Descrição registrada no levantamento:' }}</p>
       <p class="whitespace-pre-line" data-pagefind-meta="descricao">{{ descricaoPrincipal }}</p>
       {% if (p.resumo and p.resumo != descricaoPrincipal) or (p.apresentacao and p.apresentacao != descricaoPrincipal) %}
         <details class="my-lg print-expand">
@@ -96,6 +97,9 @@ layout: layouts/base.njk
       {% endif %}
     {% else %}
       <p>Finalidade e funcionamento básico não informados no levantamento.</p>
+    {% endif %}
+    {% if revisao and p.informacoes_complementares %}
+      <p class="whitespace-pre-line">{{ p.informacoes_complementares }}</p>
     {% endif %}
     <h3>Organização da oferta informada</h3>
     <dl class="policy-facts">
@@ -146,14 +150,38 @@ layout: layouts/base.njk
 
   <section aria-labelledby="referencias">
     <h2 id="referencias">Referências</h2>
+    {% if revisao %}
+      <h3>Referências da revisão</h3>
+      <ul class="policy-references">
+        {% for referencia in revisao.referencias %}
+          <li>
+            <a href="{{ referencia.url }}" rel="external nofollow noopener" target="_blank">{{ referencia.titulo }} ↗</a><br>
+            <span class="text-sm text-neutral-700">Consulta em {{ referencia.consultado_em | dataBR }}{% if referencia.url == p.fonte_url %} · Referência principal{% endif %}</span>
+            {% set acesso = referenciasAuditadas[referencia.url] %}
+            {% if acesso %}<p class="text-sm text-neutral-700 mt-xs mb-sm" data-pagefind-ignore>{{ acesso.mensagem }} Checagem: {{ acesso.checado_em | dataBR }}.</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      {% if p.duvidas_revisor %}
+        <aside class="policy-note my-lg" aria-label="Alcance da revisão" data-pagefind-ignore>
+          <strong>Alcance da revisão de {{ revisao.verificado_em | dataBR }}:</strong>
+          <p class="whitespace-pre-line mb-0">{{ p.duvidas_revisor }}</p>
+        </aside>
+      {% endif %}
+    {% else %}
     <h3>Referência indicada no levantamento</h3>
     {% if p.fonte_url and ('.local' not in (p.fonte_url | lower)) %}
       <p><a href="{{ p.fonte_url }}" class="btn btn--secondary policy-reference" rel="external nofollow noopener" target="_blank">Consultar a referência ↗</a> <span class="text-sm text-neutral-700 print-hide">(abre em nova aba)</span></p>
     {% else %}
       <p>Link de referência não identificado no levantamento. Consulte os instrumentos citados abaixo e os órgãos responsáveis informados.</p>
     {% endif %}
+    {% endif %}
+    {% if not revisao %}
+      {% set acesso = referenciasAuditadas[p.fonte_url] %}
+      {% if acesso %}<p class="text-sm text-neutral-700" data-pagefind-ignore>{{ acesso.mensagem }} Checagem: {{ acesso.checado_em | dataBR }}. Essa resposta não informa a situação da experiência.</p>{% endif %}
+    {% endif %}
     <dl class="policy-facts text-sm" data-pagefind-ignore>
-      <dt class="font-semibold text-neutral-700">Consulta da referência</dt>
+      <dt class="font-semibold text-neutral-700">{{ 'Consulta registrada na captura' if revisao else 'Consulta da referência' }}</dt>
       <dd class="m-0">{{ p.fonte_data_acesso_br or 'Data não informada no levantamento.' }}</dd>
       <dt class="font-semibold text-neutral-700">Versão do levantamento</dt>
       <dd class="m-0">{{ p.versao_catalogo_br or (p.data_versao_catalogo | dataBR) or 'Data não informada.' }}</dd>

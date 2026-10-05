@@ -1,0 +1,121 @@
+{
+  "data": "2026-10-05",
+  "testes_site": 34,
+  "paginas_html": 426,
+  "fichas_indexadas": 366,
+  "referencias_locais_verificadas": 22929,
+  "caminhos_internos_quebrados": 0,
+  "ancoras_quebradas": 0,
+  "ids_duplicados": 0,
+  "casos_ui": [
+    {
+      "id_interno": "FRM-CP-2026-EDU-0001",
+      "slug": "educacao-de-jovens-e-adultos-eja-br",
+      "largura": 1440,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0376",
+      "slug": "conecta-trabalho-to",
+      "largura": 1440,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0017",
+      "slug": "via-rapida-emprego-sp",
+      "largura": 1440,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0265",
+      "slug": "plano-estadual-de-educacao-para-pessoas-privadas-de-liberdade-peep-do-amazonas-2025-2028-am",
+      "largura": 1440,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0001",
+      "slug": "educacao-de-jovens-e-adultos-eja-br",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0376",
+      "slug": "conecta-trabalho-to",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0017",
+      "slug": "via-rapida-emprego-sp",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0265",
+      "slug": "plano-estadual-de-educacao-para-pessoas-privadas-de-liberdade-peep-do-amazonas-2025-2028-am",
+      "largura": 390,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": 0
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0001",
+      "slug": "educacao-de-jovens-e-adultos-eja-br",
+      "largura": 320,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0376",
+      "slug": "conecta-trabalho-to",
+      "largura": 320,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0017",
+      "slug": "via-rapida-emprego-sp",
+      "largura": 320,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0265",
+      "slug": "plano-estadual-de-educacao-para-pessoas-privadas-de-liberdade-peep-do-amazonas-2025-2028-am",
+      "largura": 320,
+      "status": 200,
+      "overflow": false,
+      "erros_js": [],
+      "axe_violacoes": null
+    }
+  ],
+  "limites": "Axe no elemento main das quatro fichas a 390px; nao substitui revisao humana com usuarios ou leitor de tela. GoatCounter e VLibras excluidos da medicao automatizada."
+}

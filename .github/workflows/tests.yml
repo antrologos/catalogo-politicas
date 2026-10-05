@@ -12,6 +12,8 @@ on:
       - 'scripts/**'
       - 'tests/**'
       - 'data/raw/**'
+      - 'data/curadoria/**'
+      - 'data/external_snapshots/index.json'
       - 'data/derived/latest.json'
       - '.claude/context/**'
       - 'requirements.txt'

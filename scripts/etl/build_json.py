@@ -26,6 +26,9 @@ import shutil
 import sys
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
+from urllib.parse import urlsplit
+
+from curadoria import carregar_correcoes, aplicar_curadoria, snapshots_validos
 
 import pandas as pd
 
@@ -34,6 +37,8 @@ ROOT = HERE.parent.parent
 IN_CSV = ROOT / "data" / "derived" / "_intermediate" / "with_ids.csv"
 SCHEMA = ROOT / ".claude" / "context" / "policies-schema.json"
 SNAPSHOT_INDEX = ROOT / "data" / "external_snapshots" / "index.json"
+CURADORIA_DIR = ROOT / "data" / "curadoria"
+EXTRACTED_DIR = ROOT / "data" / "extracted_text"
 
 DATA_HOJE = datetime.now().strftime("%Y-%m-%d")
 TZ_BR = timezone(timedelta(hours=-3))
@@ -70,7 +75,7 @@ TTL_DIAS = {
     "outros": 90,
 }
 
-# Atribuição padrão por domínio (substring match em fonte_url)
+# Atribuição pelo hostname real; portais estaduais não herdam a autoria federal.
 ATRIBUICAO_POR_DOMINIO = [
     ("planalto.gov.br", "Brasil. Presidência da República. Casa Civil."),
     ("in.gov.br", "Diário Oficial da União — Imprensa Nacional"),
@@ -78,7 +83,7 @@ ATRIBUICAO_POR_DOMINIO = [
     ("senado.leg.br", "Senado Federal"),
     ("mec.gov.br", "Ministério da Educação"),
     ("inep.gov.br", "INEP — Ministério da Educação"),
-    ("gov.br", "Governo Federal — gov.br (CC BY-ND 3.0)"),
+    ("gov.br", "Governo Federal — gov.br"),
     ("educacao.sp.gov.br", "Secretaria da Educação do Estado de São Paulo"),
     ("educacao.mg.gov.br", "Secretaria de Educação do Estado de Minas Gerais"),
     ("educacao.rj.gov.br", "Secretaria de Estado de Educação do Rio de Janeiro"),
@@ -113,13 +118,17 @@ def infer_fonte_tipo(url: str) -> str:
 
 
 def infer_atribuicao(url: str) -> str:
-    """Retorna atribuição padrão para o primeiro domínio matched, ou string vazia."""
-    if not url:
+    """Identifica hosts conhecidos sem casar texto de path, query ou domínio falso."""
+    try:
+        host = (urlsplit(url).hostname or "").lower().rstrip(".")
+    except ValueError:
         return ""
-    u = url.lower()
-    for sub, atr in ATRIBUICAO_POR_DOMINIO:
-        if sub in u:
-            return atr
+    for dominio, atribuicao in ATRIBUICAO_POR_DOMINIO:
+        if dominio == "gov.br":
+            if host in {"gov.br", "www.gov.br"}:
+                return atribuicao
+        elif host == dominio or host.endswith("." + dominio):
+            return atribuicao
     return ""
 
 
@@ -272,6 +281,51 @@ def iso_meia_noite(d: str) -> str:
     return f"{d}T00:00:00-03:00"
 
 
+def vincular_fonte(
+    ficha: dict, snapshots_por_url: dict[str, dict], campos_curados: set[str] | None = None,
+) -> None:
+    """Refaz a proveniência pela URL atual; nenhuma data vem da curadoria."""
+    curados = campos_curados or set()
+    url = ficha["fonte_url"]
+    if "fonte_tipo" not in curados:
+        ficha["fonte_tipo"] = infer_fonte_tipo(url)
+    if "atribuicao" not in curados:
+        ficha["atribuicao"] = infer_atribuicao(url)
+    if "licenca_inferida" not in curados:
+        ficha["licenca_inferida"] = "sem_licenca_explicita"
+    ficha.update({
+        "fonte_arquivo_path": None, "fonte_sha256": None,
+        "fonte_extensao": None, "fonte_ocr_aplicado": False,
+        "fonte_data_acesso": None, "proxima_revisao_prevista": None,
+    })
+    snap = snapshots_por_url.get(url)
+    if not snap:
+        return
+    sha = snap["sha256"]
+    ext = snap.get("extensao") or "html"
+    ficha.update({
+        "fonte_arquivo_path": f"data/external_snapshots/{sha[:2]}/{sha}.{ext}",
+        "fonte_sha256": sha, "fonte_extensao": ext,
+        "fonte_ocr_aplicado": bool(snap.get("ocr_aplicado", False)),
+        "fonte_data_acesso": data_acesso_snapshot(snap),
+    })
+    atribuicao = snap.get("atribuicao")
+    host = (urlsplit(url).hostname or "").lower().rstrip(".")
+    federal_generico_incorreto = (
+        str(atribuicao or "").startswith("Governo Federal — gov.br")
+        and host not in {"gov.br", "www.gov.br"}
+    )
+    if atribuicao and not federal_generico_incorreto and "atribuicao" not in curados:
+        ficha["atribuicao"] = atribuicao
+    licenca = snap.get("licenca_inferida")
+    if licenca and "presumida" not in licenca.lower() and "licenca_inferida" not in curados:
+        ficha["licenca_inferida"] = licenca
+    if ficha["fonte_data_acesso"]:
+        base = datetime.strptime(ficha["fonte_data_acesso"], "%Y-%m-%d")
+        ttl = TTL_DIAS.get(ficha["fonte_tipo"], 90)
+        ficha["proxima_revisao_prevista"] = (base + timedelta(days=ttl)).strftime("%Y-%m-%d")
+
+
 def main() -> int:
     if not IN_CSV.exists():
         print(f"ERRO: rodar build_ids.py primeiro (ausente: {IN_CSV})", file=sys.stderr)
@@ -281,25 +335,13 @@ def main() -> int:
     df = pd.read_csv(IN_CSV, encoding="utf-8", dtype=str, keep_default_na=False, na_values=[""])
     print(f"  {len(df)} fichas")
 
-    # Carregar index.json de snapshots (D.4) — chave url_canonica → sha
+    # Ponteiros atuais do índice; capturas rejeitadas não viram proveniência.
     snapshot_by_url: dict[str, dict] = {}
     if SNAPSHOT_INDEX.exists():
-        try:
-            idx = json.loads(SNAPSHOT_INDEX.read_text(encoding="utf-8"))
-            for sha, entry in idx.get("by_sha", {}).items():
-                url_orig = entry.get("url_original")
-                url_canon = entry.get("url_canonica")
-                # indexar por ambos
-                rec = {**entry, "sha256": sha}
-                if url_orig:
-                    snapshot_by_url[url_orig] = rec
-                if url_canon and url_canon != url_orig:
-                    snapshot_by_url[url_canon] = rec
-            print(f"  {len(idx.get('by_sha', {}))} snapshots no index.json")
-        except Exception as e:
-            print(f"  [WARN] index.json corrompido: {e}", file=sys.stderr)
-    else:
-        print("  [INFO] index.json não existe; campos fonte_sha256/fonte_extensao ficam null")
+        idx = json.loads(SNAPSHOT_INDEX.read_text(encoding="utf-8"))
+        snapshot_by_url = snapshots_validos(idx, EXTRACTED_DIR)
+        print(f"  {len(snapshot_by_url)} URLs com snapshot validado")
+    correcoes = carregar_correcoes(CURADORIA_DIR)
 
     # Registro de fichas (criado por build_ids.py): id_interno → linha
     registro: dict[str, dict] = {}
@@ -362,7 +404,7 @@ def main() -> int:
             "fonte_extensao": None,
             "fonte_ocr_aplicado": False,
             "atribuicao": atribuicao,
-            "licenca_inferida": "dominio_publico_lei_8_iv" if fonte_tipo in {"lei", "decreto", "portaria", "instrucao_normativa", "resolucao"} else "sem_licenca_explicita",
+            "licenca_inferida": "sem_licenca_explicita",
             "versao": None,
             "data_validade_inicio": None,
             "data_validade_fim": None,
@@ -386,29 +428,16 @@ def main() -> int:
             "proxima_revisao_prevista": None,
         }
 
-        # D.4: popular info de snapshot a partir do index.json
-        if fonte_url in snapshot_by_url:
-            snap = snapshot_by_url[fonte_url]
-            sha = snap["sha256"]
-            ext = snap.get("extensao") or "html"
-            ficha["fonte_arquivo_path"] = f"data/external_snapshots/{sha[:2]}/{sha}.{ext}"
-            ficha["fonte_sha256"] = sha
-            ficha["fonte_extensao"] = ext
-            ficha["fonte_ocr_aplicado"] = bool(snap.get("ocr_aplicado", False))
-            # Atribuição/licença mais precisa do snapshot
-            if snap.get("atribuicao"):
-                ficha["atribuicao"] = snap["atribuicao"]
-            if snap.get("licenca_inferida"):
-                ficha["licenca_inferida"] = snap["licenca_inferida"]
-            ficha["fonte_data_acesso"] = data_acesso_snapshot(snap)
-            com_snapshot += 1
+        vincular_fonte(ficha, snapshot_by_url)
+        fichas.append(ficha)
 
-        # Próxima revisão prevista: último acesso real à fonte + TTL do tipo.
-        # Sem acesso registrado, fica nula (não se inventa prazo).
-        if ficha["fonte_data_acesso"]:
-            ttl = TTL_DIAS.get(fonte_tipo, 90)
-            base = datetime.strptime(ficha["fonte_data_acesso"], "%Y-%m-%d")
-            ficha["proxima_revisao_prevista"] = (base + timedelta(days=ttl)).strftime("%Y-%m-%d")
+    # Confrontar valores anteriores no objeto canônico enriquecido. Só então
+    # reaplicar a proveniência pela URL corrigida, antes de hash/datas/citações.
+    fichas, campos_curados = aplicar_curadoria(fichas, correcoes)
+    print(f"  curadoria: {len(correcoes)} entradas, {len(campos_curados)} fichas alcançadas")
+    for posicao, ficha in enumerate(fichas):
+        vincular_fonte(ficha, snapshot_by_url, campos_curados.get(ficha["id_interno"]))
+        com_snapshot += bool(ficha.get("fonte_sha256"))
 
         # Datas da ficha a partir do registro (build_ids.py): atualizado_em só
         # muda quando o conteúdo muda.
@@ -432,27 +461,30 @@ def main() -> int:
         nullable_keys = {
             "fonte_arquivo_path", "data_validade_fim", "supersedes_id",
             "superseded_by_id", "federal_source_id", "informacoes_complementares",
-            "duvidas_revisor", "unidade_medida", "proxima_revisao_prevista",
+            "duvidas_revisor", "unidade_medida", "proxima_revisao_prevista", "revisado_por",
         }
-        ficha = {k: v for k, v in ficha.items() if v is not None or k in nullable_keys}
+        fichas[posicao] = {k: v for k, v in ficha.items() if v is not None or k in nullable_keys}
 
-        fichas.append(ficha)
-
-    print(f"  {sem_fonte_url} fichas sem fonte_url (placeholder gerado)")
+    placeholders_finais = sum(
+        (urlsplit(ficha.get("fonte_url") or "").hostname or "").endswith(".local")
+        for ficha in fichas
+    )
+    print(f"  {sem_fonte_url} registros sem fonte_url na extração original (antes da curadoria)")
+    print(f"  {placeholders_finais} registros com fonte placeholder após a curadoria")
     print(f"  {com_snapshot} fichas com snapshot capturado em data/external_snapshots/")
 
     # Grava de volta o registro com hash e atualizado_em
     if reg_df is not None:
         cols = list(reg_df.columns)
         pd.DataFrame(list(registro.values()), columns=cols).to_csv(
-            REGISTRO_CSV, index=False, encoding="utf-8"
+            REGISTRO_CSV, index=False, encoding="utf-8", lineterminator="\n"
         )
         print(f"  registro atualizado: {REGISTRO_CSV.name}")
 
     OUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     OUT_JSON.write_text(
         json.dumps(fichas, ensure_ascii=False, indent=2),
-        encoding="utf-8"
+        encoding="utf-8", newline="\n"
     )
     print(f"\nSalvo: {OUT_JSON}  ({OUT_JSON.stat().st_size:,} bytes)  {len(fichas)} fichas")
 

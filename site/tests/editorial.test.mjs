@@ -8,6 +8,7 @@ import { fileURLToPath } from "node:url";
 import nunjucks from "nunjucks";
 import configurarEleventy from "../eleventy.config.js";
 import policies from "../src/_data/policies.js";
+import carregarRevisoes from "../src/_data/revisoes.js";
 import site from "../src/_data/site.js";
 import equipe from "../src/_data/equipe.js";
 import ufs from "../src/_data/ufs.js";
@@ -16,6 +17,7 @@ const AQUI = dirname(fileURLToPath(import.meta.url));
 const INCLUDES = resolve(AQUI, "../src/_includes");
 const SECOES = ["identificacao", "finalidade", "territorio", "referencias"];
 const lista = policies();
+const revisoes = carregarRevisoes();
 // Permite executar o baseline anterior à criação deste módulo.
 const notasEditoriais = existsSync(resolve(AQUI, "../src/_data/notasEditoriais.js"))
   ? (await import("../src/_data/notasEditoriais.js")).default : {};
@@ -62,13 +64,13 @@ function ambiente() {
   return env;
 }
 
-async function renderizar(p) {
+async function renderizar(p, referenciasAuditadas = {}) {
   // Front matter e encadeamento de layouts pertencem ao Eleventy.
   const fonte = readFileSync(resolve(INCLUDES, "layouts/ficha.njk"), "utf-8")
     .replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n/, "");
   return new Promise((resolver, rejeitar) => {
     ambiente().renderString(fonte, {
-      p, site, equipe, ufs, notasEditoriais,
+      p, site, equipe, ufs, notasEditoriais, revisoes, referenciasAuditadas,
       policies: lista, relacionadas: {},
       sinonimos: { aliasesPorSlug: {} },
       page: { url: "/politica/" + p.slug + "/" },
@@ -119,7 +121,7 @@ function secao(html, id) {
 function fichaBase(alteracoes = {}) {
   const real = lista.find((p) => p.uf === "BR");
   assert.ok(real, "o catálogo precisa de uma ficha federal para o teste");
-  return { ...real, ...alteracoes };
+  return { ...real, id_interno: "ficha-de-teste", ...alteracoes };
 }
 
 test("ficha oferece quatro seções de leitura sem abas no conteúdo principal", async () => {
@@ -215,13 +217,44 @@ test("citação completa está em details e usa os filtros reais", async () => {
   assert.match(bibtex, /\/politica\//);
 });
 
-test("divergência territorial da ficha EJA federal fica visível em ressalva", async () => {
+test("EJA nacional corrigida apresenta fontes nacionais e alcance da revisão", async () => {
   const p = lista.find((f) => f.slug === "educacao-de-jovens-e-adultos-eja-br");
-  assert.ok(p, "ficha com divergência territorial precisa continuar no catálogo");
-  const nota = notasEditoriais[p.slug];
-  assert.ok(nota, "a divergência conhecida precisa de nota editorial");
+  assert.ok(p);
   const html = await renderizar(p);
-  const asides = [...html.matchAll(/<aside\b[^>]*>([\s\S]*?)<\/aside>/gi)];
-  assert.ok(asides.some((m) => normalizado(m[1]).includes(normalizado(nota))),
-    "nota deve ser exibida como ressalva acessível, sem alterar a ficha de origem");
+  assert.doesNotMatch(texto(secao(html, "finalidade")), /600 escolas|151 escolas|Seduc-SP/i);
+  const referencias = secao(html, "referencias");
+  assert.match(referencias, /l9394compilado\.htm/);
+  assert.match(normalizado(referencias), /alcance da revisao/);
+  assert.match(normalizado(referencias), /05\/10\/2026/);
+});
+
+test("data da curadoria não inventa data de captura", async () => {
+  const p = lista.find((f) => revisoes[f.id_interno]);
+  assert.ok(p);
+  const html = await renderizar({ ...p, fonte_data_acesso: null, fonte_data_acesso_br: null });
+  const referencias = normalizado(secao(html, "referencias"));
+  assert.match(referencias, /consulta registrada na captura/);
+  assert.match(referencias, /data nao informada/);
+  assert.match(referencias, /nao confirmam a continuidade/);
+});
+
+test("referências de revisão são links públicos com título e data", () => {
+  assert.ok(Object.keys(revisoes).length > 0);
+  for (const p of lista.filter((f) => revisoes[f.id_interno])) {
+    const refs = revisoes[p.id_interno].referencias;
+    assert.ok(refs.length > 0);
+    assert.ok(refs.every((r) => r.titulo && /^\d{4}-\d{2}-\d{2}$/.test(r.consultado_em)));
+    assert.ok(refs.some((r) => r.url === p.fonte_url) || /\.local/.test(p.fonte_url), p.id_interno + ": fonte principal deve estar nas referências");
+  }
+});
+
+test("erro de acesso à fonte não se torna encerramento da política", async () => {
+  const p = fichaBase({ fonte_url: "https://www.exemplo.gov.br/pagina", situacao_atual: "Ativa / em execução" });
+  const html = await renderizar(p, { [p.fonte_url]: {
+    mensagem: "O servidor retornou página não encontrada na verificação de acesso.", checado_em: "2026-10-05T04:00:00+00:00",
+  } });
+  const refs = normalizado(secao(html, "referencias"));
+  assert.match(refs, /pagina nao encontrada/);
+  assert.match(refs, /nao informa a situacao/);
+  assert.doesNotMatch(normalizado(secao(html, "identificacao")), /encerrad/);
 });

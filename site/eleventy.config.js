@@ -33,6 +33,7 @@ export default function (eleventyConfig) {
 
   // ---- Watch targets (dev server reage a mudanças no JSON canônico)
   eleventyConfig.addWatchTarget("../data/derived/latest.json");
+  eleventyConfig.addWatchTarget("../data/curadoria/");
   eleventyConfig.addWatchTarget("./src/assets/css/");
 
   // ---- Filtros customizados

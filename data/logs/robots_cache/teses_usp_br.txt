@@ -39,4 +39,6 @@ Disallow: /*?tipos_documento[]=
 Disallow: /*&tipos_documento[]=
 Disallow: /*?tipos_documento%5B%5D=
 Disallow: /*&tipos_documento%5B%5D=
+Disallow: /*?codpub=
+Disallow: /*&codpub=
 Sitemap: https://teses.usp.br/sitemap.xml

@@ -1,0 +1,580 @@
+{
+  "versao": 1,
+  "correcoes": [
+    {
+      "id_interno": "FRM-CP-2026-EDU-0265",
+      "campos": {
+        "nome": {
+          "anterior": "Plano Estadual de Educação para Pessoas Privadas de Liberdade (PEEP) do Amazonas  (2025-2028)",
+          "novo": "Plano Estadual de Educação para Pessoas Privadas de Liberdade do Amazonas — PEE-PPL 2025–2028"
+        },
+        "base_legal": {
+          "anterior": "Decreto nº 173/1928 (criação da Escola do sistema prisional do Amazonas). Decreto nº 15.250 /1993 (Unidade passou a ser chamada de EE Giovanni Figliuolo). Decreto Federal nº 7.626/2011 (instituiu o Plano Estadual de Educação em Prisões (PEEP)).",
+          "novo": "Lei nº 7.210/1984 (Lei de Execução Penal); Decreto federal nº 7.626/2011 (Plano Estratégico de Educação no âmbito do Sistema Prisional). Referência estadual: PEE-PPL do Amazonas 2025–2028, assinado em 06/01/2025. Decretos estaduais nº 173/1928 e nº 15.250/1993 são marcos históricos da escola prisional, não atos de criação deste plano."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Comitê Estadual de Políticas Penais do Amazonas.\nSeduc-AM – Escola Estadual Giovanni Figliuolo\nSeap – Departamento de Educação e Trabalho\nPrograma Fazendo Justiça (CNJ/PNUD)"
+          ],
+          "novo": [
+            "Secretaria de Estado de Administração Penitenciária do Amazonas (Seap-AM)",
+            "Secretaria de Estado de Educação e Desporto Escolar do Amazonas (Seduc-AM)"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/mec/pt-br/pacto-eja/amazonas.pdf",
+          "novo": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/am.pdf"
+        },
+        "atribuicao": {
+          "anterior": "Governo Federal — gov.br (CC BY-ND 3.0)",
+          "novo": "Amazonas. Seap-AM e Seduc-AM. PEE-PPL 2025–2028."
+        },
+        "resumo": {
+          "anterior": "O Plano Estadual de Educação para Pessoas Privadas de Liberdade (PEEP) do Amazonas é uma política pública de planejamento estratégico, elaborada para o quadriênio 2025-2028, que estabelece diretrizes, metas e ações para garantir o direito à educação da população carcerária no estado",
+          "novo": "Plano estadual que organiza diretrizes, metas e acompanhamento da educação de pessoas privadas de liberdade no Amazonas para 2025–2028."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Amazonas foi um dos primeiros estados brasileiros a oferecer o atendimento educacional em prisões. À época, o Amazonas já estava à frente de outros estados no atendimento educacional prisional, com 1.378 detentos atendidos em dez unidades prisionais de Manaus e nove instaladas em municípios do interior. O Plano Estadual de Educação para Pessoas Privadas de Liberdade (PEEP) do Amazonas começou a ser formulado em 2013, quando o estado se reuniu com representantes do Ministério da Educação e do Ministério da Justiça. O plano foi atualizado para o quadriênio 2025-2028, estabelecendo metas de alfabetização, educação básica (EJA), educação superior e qualificação profissional. A execução da educação prisional é coordenada pela Escola Estadual Giovanni Figliuolo, fundada em 1928 e referência nacional, que funciona de forma descentralizada com salas de aula dentro das unidades prisionais de Manaus e do interior. O principal incentivo para os reeducandos é a remição da pena pelo estudo: a cada 12 horas de frequência escolar, o detento reduz 1 dia de sua pena, conforme previsto na Lei de Execução Penal, em um programa chamado \"Conhecimento que Liberta\". Os detentos também são preparados para exames nacionais como o ENEM-PPL e o ENCCEJA-PPL, que permitem acesso ao ensino superior e certificação",
+          "novo": "O documento reúne diagnóstico, ações e indicadores sobre educação formal e não escolar, qualificação profissional, estrutura e formação de profissionais no sistema prisional amazonense."
+        },
+        "apresentacao": {
+          "anterior": "O Amazonas foi um dos primeiros estados brasileiros a oferecer o atendimento educacional em prisões. À época, o Amazonas já estava à frente de outros estados no atendimento educacional prisional, com 1.378 detentos atendidos em dez unidades prisionais de Manaus e nove instaladas em municípios do interior. O Plano Estadual de Educação para Pessoas Privadas de Liberdade (PEEP) do Amazonas começou a ser formulado em 2013, quando o estado se reuniu com representantes do Ministério da Educação e do Ministério da Justiça. O plano foi atualizado para o quadriênio 2025-2028, estabelecendo metas de alfabetização, educação básica (EJA), educação superior e qualificação profissional. A execução da educação prisional é coordenada pela Escola Estadual Giovanni Figliuolo, fundada em 1928 e referência nacional, que funciona de forma descentralizada com salas de aula dentro das unidades prisionais de Manaus e do interior. O principal incentivo para os reeducandos é a remição da pena pelo estudo: a cada 12 horas de frequência escolar, o detento reduz 1 dia de sua pena, conforme previsto na Lei de Execução Penal, em um programa chamado \"Conhecimento que Liberta\". Os detentos também são preparados para exames nacionais como o ENEM-PPL e o ENCCEJA-PPL, que permitem acesso ao ensino superior e certificação",
+          "novo": "Planejamento da oferta educacional no sistema prisional do Amazonas para o ciclo 2025–2028."
+        },
+        "informacoes_complementares": {
+          "anterior": "O PEEP está integrado ao Plano Estadual Pena Justa, plano de enfrentamento do sistema prisional amazonense entregue ao STF em agosto de 2025, que prevê a garantia de direitos fundamentais, incluindo a educação, como eixo estruturante. os resultados gerais do estado no ENEM 2024 foram os piores do país, com média de 505,3 pontos, ocupando a 27ª posição nacional . O Amazonas ficou atrás de todos os demais estados da Região Norte. O relatório do Centro de Liderança Pública (CLP) aponta que o estado enfrenta baixa taxa de frequência escolar e alta distorção idade-série como fatores que impactam o desempenho educacional",
+          "novo": "O PDF contém assinatura de 06/01/2025. Metas e indicadores de planejamento não equivalem a resultados alcançados. A remição por estudo depende dos requisitos da Lei de Execução Penal; não é benefício automático nem programa exclusivamente estadual."
+        },
+        "carga_horaria": {
+          "anterior": "EJA - Ensino Médio (1.600 horas totais para conclusão, organizadas em duas fases ao longo de dois anos)\nEJA - Ensino Fundamental (800 horas anuais)",
+          "novo": "Varia conforme etapa e ação educacional; não se atribui uma carga horária única ao plano."
+        },
+        "fonte_financiamento": {
+          "anterior": "Recursos Estaduais (Tesouro Estadual / Seduc-AM) – para custeio da oferta da EJA nas unidades prisionais, incluindo salários de professores e material didático.\nRecursos do Fundo Penitenciário Nacional (FUNPEN) – repasses federais para infraestrutura e programas de educação e trabalho no sistema prisional.\nRecursos do Programa Fazendo Justiça (CNJ/PNUD) – apoio técnico e financeiro para implementação de políticas de educação prisional",
+          "novo": "O plano apresenta fontes por ação. Não foi confirmado financiamento específico do CNJ/PNUD para sua execução."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse estadual (Seduc-AM): a Seduc-AM aloca recursos do orçamento estadual para a manutenção da Escola Estadual Giovanni Figliuolo e para a contratação de professores que atuam nas unidades prisionais.\nRepasse federal (FUNPEN): o Fundo Penitenciário Nacional transfere recursos aos estados para projetos de educação, trabalho e assistência social no sistema prisional, mediante apresentação de planos de ação.\nApoio do CNJ/PNUD: o Programa Fazendo Justiça oferece apoio técnico e, em alguns casos, financiamento para ações prioritárias de educação prisional",
+          "novo": "Não foi confirmado fluxo financeiro único do plano; execução e eventual transferência dependem da ação e do instrumento correspondente."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Programa Fazendo Justiça (CNJ/PNUD). Plano Nacional de Educação (PNE). Plano Estadual Pena Justa. Programa Fazendo Justiça (CNJ/PNUD). Política Nacional de Educação nas Prisões"
+          ],
+          "novo": [
+            "Educação de Jovens e Adultos",
+            "Educação profissional",
+            "Exames de certificação e acesso à educação superior"
+          ]
+        },
+        "continuidade_governos": {
+          "anterior": "Alta. Em 2025 foi formulado o Plano Estadual do quadriênio  2025-2028",
+          "novo": "Ciclo de planejamento 2025–2028; não foi aferida continuidade ou cumprimento integral das metas."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Plano oficial localizado. A situação de execução e os resultados das metas não foram verificados nesta revisão documental."
+        }
+      },
+      "justificativa": "Substitui-se a referência MEC que apresentou barreira de acesso pelo PDF oficial da SENAPPEN. O Decreto federal nº 7.626/2011 criou o plano estratégico nacional, não o PEEP do Amazonas. Removem-se números históricos sem data, juízo sobre Enem geral sem pertinência à população prisional, promessa automática de remição e financiamento CNJ/PNUD não confirmado. O documento estadual contém diagnóstico e metas, sem comprovar execução integral em outubro de 2026.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/am.pdf",
+          "titulo": "Amazonas — Plano Estadual de Educação para Pessoas Privadas de Liberdade 2025–2028 (assinatura em 06/01/2025)",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7626.htm",
+          "titulo": "Decreto nº 7.626, de 24 de novembro de 2011 — Plano Estratégico de Educação no âmbito do Sistema Prisional",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+          "titulo": "Lei nº 7.210/1984 — Lei de Execução Penal, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0269",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://centrodemidias.am.gov.br/noticias/aplicativo-aula-em-casa-ganha-funcoes-que-aumentam-interacao-entre-aluno-e-professor-durante-ensino-remoto",
+          "novo": "https://seduc.am.gov.br/institucional/estrutura/centro-de-midias.html"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "atribuicao": {
+          "anterior": "Governo Federal — gov.br (CC BY-ND 3.0)",
+          "novo": "Amazonas. Secretaria de Estado de Educação e Desporto Escolar. Centro de Mídias."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Seduc-AM -  Secretaria Executiva Adjunta Pedagógica. Gerência de Mídias e Conteúdos Digitais ( Cemeam). Semed-Manaus - Divisão de Ensino Fundamental. Fundação Vitória Amazônica:"
+          ],
+          "novo": [
+            "Secretaria de Estado de Educação e Desporto Escolar do Amazonas",
+            "Centro de Mídias de Educação do Amazonas (Cemeam)"
+          ]
+        },
+        "modalidade_oferta": {
+          "anterior": "Educação à distância (EaD)",
+          "novo": "Sem informação"
+        },
+        "arranjo_logistico": {
+          "anterior": "Misto (fixa + itinerante)",
+          "novo": "Sem informação"
+        },
+        "carga_horaria": {
+          "anterior": "EJA - Ensino Médio (1.600 horas totais para conclusão, organizadas em duas fases ao longo de dois anos)\nEJA - Ensino Fundamental (800 horas anuais)",
+          "novo": "Não há carga horária única própria dos recursos do Aula em Casa; depende da etapa e da organização do atendimento."
+        },
+        "resumo": {
+          "anterior": "O Aula em Casa é um programa do Governo do Amazonas, criado em março de 2020 durante a pandemia de Covid-19, para garantir a continuidade das aulas na rede pública de ensino por meio de transmissão em TV aberta, plataformas digitais e aplicativo. O programa oferece conteúdo para Educação Infantil, Anos Iniciais, Anos Finais, Ensino Médio e EJA. As aulas são produzidas no Centro de Mídias de Educação do Amazonas (Cemeam) e transmitidas em seis canais de TV aberta. O aplicativo Aula em Casa permite interação entre alunos e professores via chat, quizzes, enquetes e videoconferências",
+          "novo": "Estratégia de apoio pedagógico criada durante a pandemia, com videoaulas e materiais de estudo, posteriormente também utilizada em resposta a eventos climáticos extremos."
+        },
+        "descricao_tecnica": {
+          "anterior": "A criação do programa contou com a estrutura já existente do Centro de Mídias de Educação do Amazonas (Cemeam), criado em 2007 para levar educação a comunidades remotas por meio de tecnologia. A equipe técnica do Cemeam organizou o conteúdo e fechou parcerias em apenas três dias para viabilizar o lançamento . A TV Encontro das Águas (fundação estadual) foi a parceira inicial para transmissão dos canais de televisão aberta . Posteriormente, firmou-se parceria com a TV Tiradentes para ampliar o número de canais . A Secretaria Municipal de Educação de Manaus (Semed-Manaus) produziu os conteúdos para os anos iniciais do Ensino Fundamental (1º ao 5º ano) e para a Educação Infantil, em parceria com o projeto Aula Digital da Fundação Telefônica Vivo e Fundação Vitória Amazônica. Para alunos do interior com dificuldade de conectividade, o programa utiliza podcasts transmitidos em rádios locais, impressão e distribuição de cadernos de atividades, e encontros presenciais periódicos nas escolas para momentos de tira-dúvidas",
+          "novo": "O Cemeam apresenta o Aula em Casa como apoio ao ensino remoto emergencial, com recursos televisivos, digitais e impressos. A Seduc-AM documentou atualização e distribuição de materiais em ações de resposta à estiagem de 2024."
+        },
+        "apresentacao": {
+          "anterior": "A criação do programa contou com a estrutura já existente do Centro de Mídias de Educação do Amazonas (Cemeam), criado em 2007 para levar educação a comunidades remotas por meio de tecnologia. A equipe técnica do Cemeam organizou o conteúdo e fechou parcerias em apenas três dias para viabilizar o lançamento . A TV Encontro das Águas (fundação estadual) foi a parceira inicial para transmissão dos canais de televisão aberta . Posteriormente, firmou-se parceria com a TV Tiradentes para ampliar o número de canais . A Secretaria Municipal de Educação de Manaus (Semed-Manaus) produziu os conteúdos para os anos iniciais do Ensino Fundamental (1º ao 5º ano) e para a Educação Infantil, em parceria com o projeto Aula Digital da Fundação Telefônica Vivo e Fundação Vitória Amazônica. Para alunos do interior com dificuldade de conectividade, o programa utiliza podcasts transmitidos em rádios locais, impressão e distribuição de cadernos de atividades, e encontros presenciais periódicos nas escolas para momentos de tira-dúvidas",
+          "novo": "Recursos pedagógicos de apoio às atividades escolares, com uso documentado em contextos de interrupção do atendimento presencial."
+        },
+        "informacoes_complementares": {
+          "anterior": "O programa foi criado em apenas três dias, com lançamento em 20 de março e início das transmissões em 23 de março de 2020, sendo o primeiro estado brasileiro a oferecer ensino remoto em TV aberta para a rede pública. O programa atendeu mais de 400 mil alunos da rede estadual em seu primeiro ano e foi exportado para 11 estados brasileiros, alcançando mais de 10 milhões de estudantes. O projeto foi finalista do Prêmio Espírito Público 2022 na categoria Educação",
+          "novo": "Notícia oficial de 23/04/2025 descreve ações de 2024 e planejamento para 2025. Ensino remoto emergencial não equivale automaticamente a oferta regular de EaD. Disponibilidade de acervo ou atualização de aplicativo não comprova continuidade de todas as transmissões, turmas ou canais históricos."
+        },
+        "continuidade_governos": {
+          "anterior": "Mesmo com o fim da pandemia da Covid-19, em 2021, foi ampliado para seis canais de TV e novas funcionalidades foram adicionadas ao aplicativo. Em 2025-2026, o aplicativo continua sendo atualizado (suporte ao Android 15), indicando continuidade da política",
+          "novo": "Uso documentado durante a pandemia e em resposta à estiagem; formato e abrangência operacional atual não confirmados."
+        },
+        "fonte_financiamento": {
+          "anterior": "Recursos Estaduais (Tesouro Estadual / Seduc-AM). Recursos Municipais (Semed-Manaus). Recursos da Fundação Telefônica Vivo/Aula Digital",
+          "novo": "Custos vinculados às ações educacionais da Seduc-AM; fontes e valores por parceiro não confirmados nesta revisão."
+        },
+        "transferencia_recursos": {
+          "anterior": "Os recursos do orçamento estadual são alocados pela Secretaria de Estado de Educação e Desporto (Seduc-AM) para custear a produção das aulas, a manutenção do Centro de Mídias de Educação do Amazonas (Cemeam), a remuneração dos professores envolvidos na gravação e transmissão, a estrutura tecnológica de transmissão via TV e internet, e o desenvolvimento e manutenção do aplicativo Aula em Casa. A Secretaria Municipal de Educação de Manaus (Semed-Manaus) aloca recursos do orçamento municipal para a produção do conteúdo pedagógico destinado à Educação Infantil e aos Anos Iniciais do Ensino Fundamental (1º ao 5º ano), incluindo a remuneração dos professores da rede municipal que participam das gravações. Apoio da Fundação Telefônica Vivo: A Fundação destinou recursos para formação de professores da rede municipal e assessoramento para o uso de tecnologia na educação, por meio da Fundação Vitória Amazônica como parceira executora",
+          "novo": "Não foi confirmado mecanismo próprio de transferência financeira do Aula em Casa nas fontes consultadas."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Centro de Mídias de Educação do Amazonas (Cemeam). Plataforma Saber+/Escola Digital. Aula Digital ProFuturo"
+          ],
+          "novo": [
+            "Centro de Mídias de Educação do Amazonas (Cemeam)",
+            "Ações da Seduc-AM para eventos climáticos extremos"
+          ]
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "A ficha registra uma estratégia de apoio pedagógico e seu histórico. A revisão não comprova oferta regular de EaD, continuidade de seis canais de TV ou funcionamento atual de todas as funcionalidades do aplicativo.\n\nO conteúdo institucional do Centro de Mídias foi recuperado pela pesquisa, mas o endereço consultado respondeu 404 na conferência direta de 05/10/2026. As demais referências documentam edições e componentes; não demonstram disponibilidade atual de todos os serviços."
+        }
+      },
+      "justificativa": "Fonte substituta institucional corresponde ao projeto e explicita sua origem emergencial. Notícia de 23/04/2025 confirma reaproveitamento de materiais para eventos climáticos. Retiram-se inferência de continuidade pelo Android, afirmação de fim da pandemia em 2021, métricas sem delimitação e carga horária de EJA atribuída ao aplicativo. A ficha descreve recursos e usos documentados, sem promover EaD nem presumir operação atual.",
+      "referencias": [
+        {
+          "url": "https://seduc.am.gov.br/institucional/estrutura/centro-de-midias.html",
+          "titulo": "Seduc-AM — Centro de Mídias: projetos e plataformas de apoio à aprendizagem",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.seduc.am.gov.br/index.php/not%C3%ADcias/5967-comissao-intersetorial-da-secretaria-de-educacao-discute-estrategias-para-diminuir-os-impactos-das-crises-climaticas-na-rede-estadual-de-ensino",
+          "titulo": "Comissão Intersetorial da Secretaria de Educação discute estratégias para diminuir os impactos das crises climáticas — 23/04/2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://centrodemidias.am.gov.br/noticias/wilson-lima-anuncia-gratificacao-no-valor-de-um-salario-para-profissionais-envolvidos-no-programa-aula-em-casa",
+          "titulo": "Cemeam — gratificação para profissionais do Aula em Casa; histórico do lançamento em março de 2020",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://centrodemidias.am.gov.br/cursos/ensino-medio-aula-em-casa",
+          "titulo": "Cemeam — acervo Ensino Médio — Aula em Casa",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0278",
+      "campos": {
+        "nome": {
+          "anterior": "Aprendizagem Profissional (Jovem Aprendiz) APRENDIZ RN",
+          "novo": "Programa Estadual de Aprendizagem do Rio Grande do Norte (RN APRENDIZ)"
+        },
+        "esfera_formulacao": {
+          "anterior": "União",
+          "novo": "Estado"
+        },
+        "esfera_execucao": {
+          "anterior": "União",
+          "novo": "Estado"
+        },
+        "abrangencia_territorial": {
+          "anterior": "Nacional",
+          "novo": "Estadual"
+        },
+        "ano_criacao": {
+          "anterior": "2000",
+          "novo": "2019 (criação); regramento de 2021, alterado em 2022"
+        },
+        "base_legal": {
+          "anterior": "Lei N.º 10.097/2000; CLT (arts. aprendizagem); regulamentação consolidada (ex.: Decreto N. 9.579/2018 e normas posteriores)",
+          "novo": "Decreto estadual nº 30.753/2021, alterado pelo Decreto nº 31.902/2022; Lei estadual nº 10.783/2020. O programa foi instituído pelo Decreto nº 29.354/2019, revogado pelo regramento de 2021. Marco federal: CLT, arts. 428 e seguintes, e Decreto nº 9.579/2018."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Ministério do Trabalho e Emprego/União + empresas/entidades formadoras"
+          ],
+          "novo": [
+            "Secretaria de Estado da Administração do RN (coordenação prevista no Decreto nº 30.753/2021)",
+            "Comitê Gestor interinstitucional do RN APRENDIZ"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/trabalho-e-emprego/pt-br/assuntos/inspecao-do-trabalho/areas-de-atuacao/insercao-de-aprendiz",
+          "novo": "https://webdisk.diariooficial.rn.gov.br/Jornal/12021-07-23.pdf"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "decreto"
+        },
+        "atribuicao": {
+          "anterior": "Governo Federal — gov.br (CC BY-ND 3.0)",
+          "novo": "Rio Grande do Norte. Decreto nº 30.753/2021, Diário Oficial de 23/07/2021."
+        },
+        "licenca_inferida": {
+          "anterior": "sem_licenca_explicita",
+          "novo": "dominio_publico_lei_8_iv"
+        },
+        "resumo": {
+          "anterior": "Política pública de qualificação profissional e inserção de jovens no mercado de trabalho. Estabelece a obrigatoriedade de empresas de médio e grande porte contratarem um percentual de 5% a 15% de seus empregados como aprendizes, na faixa etária de 14 a 24 anos, matriculados em programas de aprendizagem teórico-prática oferecidos por entidades formadoras qualificadas (Sistema S, IFs, escolas técnicas). O contrato é especial, por prazo determinado (máximo 2 anos), com direitos trabalhistas garantidos",
+          "novo": "Programa estadual de fomento à aprendizagem profissional, articulado à administração pública do RN e à comprovação de cotas por empresas contratadas pelo estado."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Programa Jovem Aprendiz é uma política pública federal coordenada pelo Ministério do Trabalho e Emprego (MTE) que visa promover a formação técnico-profissional de adolescentes e jovens de 14 a 24 anos, combinando educação teórica e prática. A legislação determina que empresas de médio e grande porte (com 7 ou mais empregados em funções que demandem formação profissional) destinem de 5% a 15% de suas vagas para aprendizes . O aprendiz deve estar matriculado e frequentando a escola (caso não tenha concluído o ensino básico) e inscrito em programa de aprendizagem oferecido por entidades qualificadas, como o Sistema S (SENAI, SENAC, SENAT, SESCOOP), escolas técnicas, Institutos Federais (IFs) e entidades sem fins lucrativos. O contrato de aprendizagem é um contrato de trabalho especial, por prazo determinado (máximo 2 anos), com anotação na Carteira de Trabalho (CTPS) e garantia de direitos como salário mínimo/hora, 13º salário, férias (coincidentes com o recesso escolar), FGTS com alíquota reduzida de 2% e vale-transporte . A jornada de trabalho é limitada a 6 horas diárias para alunos do ensino fundamental e até 8 horas para alunos do ensino médio, desde que computadas as horas de formação teórica",
+          "novo": "O decreto estadual prevê prioridades para jovens em vulnerabilidade e egressos do sistema socioeducativo. Órgãos públicos podem participar como concedentes da experiência prática, observadas as condições legais."
+        },
+        "apresentacao": {
+          "anterior": "O Programa Jovem Aprendiz é uma política pública federal coordenada pelo Ministério do Trabalho e Emprego (MTE) que visa promover a formação técnico-profissional de adolescentes e jovens de 14 a 24 anos, combinando educação teórica e prática. A legislação determina que empresas de médio e grande porte (com 7 ou mais empregados em funções que demandem formação profissional) destinem de 5% a 15% de suas vagas para aprendizes . O aprendiz deve estar matriculado e frequentando a escola (caso não tenha concluído o ensino básico) e inscrito em programa de aprendizagem oferecido por entidades qualificadas, como o Sistema S (SENAI, SENAC, SENAT, SESCOOP), escolas técnicas, Institutos Federais (IFs) e entidades sem fins lucrativos. O contrato de aprendizagem é um contrato de trabalho especial, por prazo determinado (máximo 2 anos), com anotação na Carteira de Trabalho (CTPS) e garantia de direitos como salário mínimo/hora, 13º salário, férias (coincidentes com o recesso escolar), FGTS com alíquota reduzida de 2% e vale-transporte . A jornada de trabalho é limitada a 6 horas diárias para alunos do ensino fundamental e até 8 horas para alunos do ensino médio, desde que computadas as horas de formação teórica",
+          "novo": "Fomento estadual à aprendizagem profissional e à inserção protegida de adolescentes e jovens no trabalho."
+        },
+        "informacoes_complementares": {
+          "anterior": "A execução depende de empresas e entidades formadoras; há regras de idade, jornada e escolaridade",
+          "novo": "A aprendizagem federal e o RN APRENDIZ não são o mesmo objeto. A fonte confirma desenho normativo estadual, sem demonstrar seleção aberta, quantidade de contratos ou execução atual. A alteração de 2022 trata da comprovação da cota."
+        },
+        "carga_horaria": {
+          "anterior": "Formação teórica variável conforme o programa e entidade formadora. Em Institutos Federais, a carga horária teórica pode ser de 4h a 8h semanais, dependendo da modalidade do curso (integrado, subsequente, concomitante) e do módulo. A jornada de trabalho total é de até 6 horas diárias para aprendizes do ensino fundamental e até 8 horas diárias para aprendizes do ensino médio (incluindo horas de formação teórica). A duração do contrato é de máximo de 2 anos, podendo ser menor conforme o módulo do curso em que o aprendiz for contratado",
+          "novo": "Depende do programa formativo e dos limites da CLT. Não foi confirmada carga semanal específica do RN APRENDIZ."
+        },
+        "fonte_financiamento": {
+          "anterior": "Recursos privados das empresas (salário) + estrutura das entidades formadoras (diversos)",
+          "novo": "O decreto prevê dotações do orçamento estadual; a contratação e os custos trabalhistas dependem do instrumento e da entidade contratante."
+        },
+        "transferencia_recursos": {
+          "anterior": "Não aplicável (contrato de trabalho e custeio privado; eventuais incentivos não padronizados)",
+          "novo": "Não há evidência de repasse financeiro uniforme a beneficiários; contratos de aprendizagem e instrumentos de parceria têm condições próprias."
+        },
+        "modalidade_oferta": {
+          "anterior": "Mista",
+          "novo": "Sem informação"
+        },
+        "arranjo_logistico": {
+          "anterior": "Misto (fixa + itinerante)",
+          "novo": "Sem informação"
+        },
+        "continuidade_governos": {
+          "anterior": "Alta (base legal permanente)",
+          "novo": "Marcos estaduais de 2019, 2021 e 2022; continuidade operacional não aferida."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Sim: políticas de qualificação",
+            "educação profissional",
+            "intermediação de mão de obra"
+          ],
+          "novo": [
+            "Aprendizagem profissional prevista na CLT",
+            "Política de atendimento socioeducativo"
+          ]
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Descrição corrigida para o programa estadual RN APRENDIZ. A existência dos decretos não comprova chamadas ou vagas disponíveis."
+        }
+      },
+      "justificativa": "O nome RN APRENDIZ identifica programa estadual específico; o conteúdo anterior reproduzia aprendizagem federal, inclusive regras de jornada simplificadas de modo inexato. Decreto nº 30.753/2021 e alteração nº 31.902/2022 confirmam objeto, governança, criação em 2019 e relação com contratos públicos. Corrige-se o escopo sem deduzir execução de mera vigência normativa. Preservam-se ID e slug.",
+      "referencias": [
+        {
+          "url": "https://webdisk.diariooficial.rn.gov.br/Jornal/12021-07-23.pdf",
+          "titulo": "DOE-RN de 23/07/2021, pp. 1–2 — Decreto nº 30.753, de 22/07/2021",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://webdisk.diariooficial.rn.gov.br/Jornal/12022-09-10.pdf",
+          "titulo": "DOE-RN de 10/09/2022, p. 1 — Decreto nº 31.902, de 09/09/2022",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://webdisk.diariooficial.rn.gov.br/Jornal/12019-12-07.pdf",
+          "titulo": "DOE-RN de 07/12/2019 — Decreto nº 29.354/2019, origem histórica do RN APRENDIZ",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0388",
+      "campos": {
+        "nome": {
+          "anterior": "Plano Estadual de Educação em Ambientes Prisionais (PEESP) - 2025-2028",
+          "novo": "Plano Estadual de Educação para Pessoas Privadas de Liberdade e Egressas do Sistema Prisional de Roraima — 2025–2028"
+        },
+        "esfera_execucao": {
+          "anterior": "Compartilhada interfederativa: Estado-Município",
+          "novo": "Estado"
+        },
+        "ano_criacao": {
+          "anterior": "2010/2011 (marcos nacionais recentes)",
+          "novo": "2025 (edição do plano; marcos nacionais anteriores)"
+        },
+        "base_legal": {
+          "anterior": "Decreto N.º 7626/2011 (instituição do Plano Estratégico de Educação no âmbito do Sistema Prisional - PEESP). Lei N.º 12.433/2011 - Altera a Lei Nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a remição de parte do tempo de execução da pena por estudo ou por trabalho e Lei N.º 19.130/2017 - Institui a diária especial por atividade extrajornada voluntária, a gratificação intra muros, e adota outras providências",
+          "novo": "Lei nº 7.210/1984 (Lei de Execução Penal); Decreto federal nº 7.626/2011; Termo de Cooperação Técnica nº 004/2023/SEED/GAB/RR, citado no plano estadual 2025–2028."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado da Educação e Secretaria de Estado da Justiça e Cidadania"
+          ],
+          "novo": [
+            "Secretaria de Estado da Justiça e da Cidadania de Roraima (Sejuc)",
+            "Secretaria de Estado da Educação e Desporto de Roraima (Seed)"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja/encceja-ppl",
+          "novo": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/rr.pdf"
+        },
+        "atribuicao": {
+          "anterior": "Governo Federal — gov.br (CC BY-ND 3.0)",
+          "novo": "Roraima. Sejuc e Seed. Plano estadual 2025–2028."
+        },
+        "resumo": {
+          "anterior": "Os Planos Estaduais de Educação no Sistema Prisional são elaborados de forma conjunta entre a Secretaria de Estado da Educação e a Secretaria de Estado da Justiça e Cidadania, com a participação ampla de representantes dos diversos segmentos sociais. Eles têm por objetivo a garantia da escolarização básica, no nível fundamental e médio, na modalidade de Educação de Jovens e Adultos (EJA) e a educação profissional às pessoas em privação de liberdade, no Sistema Penitenciário do Estado do Paraná, por meio dos Centros Estaduais de Educação Básica para Jovens e Adultos (CEEBJA) e/ou Ações Pedagógicas Descentralizadas (APED)",
+          "novo": "Plano de Roraima para organizar educação de pessoas privadas de liberdade e egressas do sistema prisional no ciclo 2025–2028."
+        },
+        "descricao_tecnica": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "O plano articula Sejuc e Seed e prevê EJA pública, gratuita e presencial, além de ações de leitura, qualificação e formação de profissionais."
+        },
+        "apresentacao": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Planejamento educacional do sistema prisional de Roraima, com responsabilidades, ações e monitoramento."
+        },
+        "informacoes_complementares": {
+          "anterior": null,
+          "novo": "O documento de 2025 descreve diagnóstico e metas. A previsão de ampliar atendimento não demonstra que todas as unidades e pessoas já sejam atendidas."
+        },
+        "fonte_financiamento": {
+          "anterior": "Tesouro estadual + eventuais cooperações federais (diretrizes PEESP)",
+          "novo": "O plano menciona orçamento estadual da educação, Fundeb e Funpen, conforme finalidade e ação."
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência de verbas via Fundeb + pasta estadual de educação",
+          "novo": "Fontes e responsabilidades são apresentadas no plano; não foi verificado fluxo financeiro único nem execução dos repasses."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Sim. Articula-se principalmente com EJA",
+            "ENCCEJA PLL, diversas políticas de educação com capacitação profissional"
+          ],
+          "novo": [
+            "Educação de Jovens e Adultos",
+            "Encceja PPL",
+            "Educação profissional"
+          ]
+        },
+        "continuidade_governos": {
+          "anterior": "Sim. Trata-se de uma poítiica estável e que segue robusto projeto educacional em todo o país",
+          "novo": "Planejamento para 2025–2028; cumprimento das metas e continuidade operacional não aferidos."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Fonte local substitui o resumo anterior, que se referia ao Paraná. Documento de planejamento não é comprovação de execução integral."
+        }
+      },
+      "justificativa": "O PDF oficial de Roraima identifica Sejuc/Seed e o termo estadual, eliminando o resumo sobre Paraná, CEEBJA e APED. A Lei nº 19.130/2017 é paranaense e trata de diária/gratificação, não serve como base local. Página federal de Encceja não documentava este plano. Corrigem-se escopo, ano e fontes sem presumir execução ou resultados.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/rr.pdf",
+          "titulo": "Roraima — Plano Estadual de Educação para Pessoas Privadas de Liberdade e Egressas do Sistema Prisional 2025–2028 (SEI/GRR 16379954)",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7626.htm",
+          "titulo": "Decreto nº 7.626, de 24 de novembro de 2011 — Plano Estratégico de Educação no âmbito do Sistema Prisional",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+          "titulo": "Lei nº 7.210/1984 — Lei de Execução Penal, texto compilado",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://storage.assembleia.pr.leg.br/ccj/4MhcBtuJgA0CMc5fHifrKLaVpkC2Fp6ryqiG4t7t.pdf",
+          "titulo": "Assembleia Legislativa do Paraná — texto da Lei paranaense nº 19.130/2017, incluído em processo legislativo",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0416",
+      "campos": {
+        "nome": {
+          "anterior": "Plano Estadual de Educação em Ambientes Prisionais (PEESP) - 2025-2028",
+          "novo": "Plano Estadual de Educação para Pessoas Privadas de Liberdade do Sistema Prisional de Rondônia — 2025–2028"
+        },
+        "esfera_execucao": {
+          "anterior": "Compartilhada interfederativa: União-Estado-Município",
+          "novo": "Estado"
+        },
+        "ano_criacao": {
+          "anterior": "2010/2011 (marcos nacionais recentes)",
+          "novo": "2025 (oficialização deste ciclo do plano)"
+        },
+        "base_legal": {
+          "anterior": "Decreto N.º 7626/2011 (instituição do Plano Estratégico de Educação no âmbito do Sistema Prisional - PEESP). Lei N.º 12.433/2011 - Altera a Lei Nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a remição de parte do tempo de execução da pena por estudo ou por trabalho e Lei N.º 19.130/2017 - Institui a diária especial por atividade extrajornada voluntária, a gratificação intra muros, e adota outras providências",
+          "novo": "Lei nº 7.210/1984 (Lei de Execução Penal); Decreto federal nº 7.626/2011. Instrumento estadual: plano 2025–2028, elaborado por Sejus e Seduc mediante cooperação técnica, conforme publicação oficial de 13/08/2025."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado da Educação e Secretaria de Estado da Justiça e Cidadania"
+          ],
+          "novo": [
+            "Secretaria de Estado da Justiça de Rondônia (Sejus)",
+            "Secretaria de Estado da Educação de Rondônia (Seduc)"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/encceja/encceja-ppl",
+          "novo": "https://rondonia.ro.gov.br/plano-estadual-de-educacao-para-pessoas-privadas-de-liberdade-fortalece-praticas-educacionais-no-sistema-prisional/"
+        },
+        "atribuicao": {
+          "anterior": "Governo Federal — gov.br (CC BY-ND 3.0)",
+          "novo": "Rondônia. Governo do Estado. Sejus e Seduc."
+        },
+        "resumo": {
+          "anterior": "Os Planos Estaduais de Educação no Sistema Prisional são elaborados de forma conjunta entre a Secretaria de Estado da Educação e a Secretaria de Estado da Justiça e Cidadania, com a participação ampla de representantes dos diversos segmentos sociais. Eles têm por objetivo a garantia da escolarização básica, no nível fundamental e médio, na modalidade de Educação de Jovens e Adultos (EJA) e a educação profissional às pessoas em privação de liberdade, no Sistema Penitenciário do Estado do Paraná, por meio dos Centros Estaduais de Educação Básica para Jovens e Adultos (CEEBJA) e/ou Ações Pedagógicas Descentralizadas (APED)",
+          "novo": "Plano estadual de Rondônia para orientar educação básica e qualificação no sistema prisional entre 2025 e 2028."
+        },
+        "descricao_tecnica": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Elaborado por Sejus e Seduc, prevê ensino fundamental e médio na modalidade EJA, com participação dos CEEJA nas unidades prisionais, e ações de alfabetização e qualificação profissional."
+        },
+        "apresentacao": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Planejamento da educação no sistema prisional de Rondônia para 2025–2028."
+        },
+        "informacoes_complementares": {
+          "anterior": null,
+          "novo": "A notícia oficial de 13/08/2025 informa oficialização do plano em 21/03/2025. Ampliação da oferta, mediação tecnológica e qualificação são metas anunciadas; sua realização não foi verificada."
+        },
+        "fonte_financiamento": {
+          "anterior": "Tesouro estadual + eventuais cooperações federais (diretrizes PEESP)",
+          "novo": "Não confirmado no recorte documental consultado."
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência de verbas via Fundeb + pasta estadual de educação",
+          "novo": "Não confirmado no recorte documental consultado."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Sim. Articula-se principalmente com EJA",
+            "ENCCEJA PLL, diversas políticas de educação com capacitação profissional"
+          ],
+          "novo": [
+            "Educação de Jovens e Adultos",
+            "Educação profissional"
+          ]
+        },
+        "continuidade_governos": {
+          "anterior": "Sim. Trata-se de uma poítiica estável e que segue robusto projeto educacional em todo o país",
+          "novo": "Ciclo de planejamento 2025–2028; continuidade e resultados não aferidos."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Descrição baseada em publicação do Governo de Rondônia. Retiradas referências ao Paraná; a revisão não atesta cumprimento das metas."
+        }
+      },
+      "justificativa": "Fonte estadual de 13/08/2025 confirma o plano, órgãos e CEEJA de Rondônia. Corrigem-se resumo copiado do Paraná, siglas CEEBJA/APED e Lei paranaense nº 19.130/2017. O PDF RO da SENAPPEN foi localizado (98 páginas digitalizadas, HTTP 200), mas não foi usado para inferir conteúdos que não foram lidos; fonte substantiva desta proposta é a notícia estadual. Financiamento e execução não comprovados permanecem explícitos.",
+      "referencias": [
+        {
+          "url": "https://rondonia.ro.gov.br/plano-estadual-de-educacao-para-pessoas-privadas-de-liberdade-fortalece-praticas-educacionais-no-sistema-prisional/",
+          "titulo": "Plano Estadual de Educação para Pessoas Privadas de Liberdade fortalece práticas educacionais no sistema prisional — Governo de Rondônia, 13/08/2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/decreto/d7626.htm",
+          "titulo": "Decreto nº 7.626, de 24 de novembro de 2011 — Plano Estratégico de Educação no âmbito do Sistema Prisional",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l7210.htm",
+          "titulo": "Lei nº 7.210/1984 — Lei de Execução Penal, texto compilado",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://storage.assembleia.pr.leg.br/ccj/4MhcBtuJgA0CMc5fHifrKLaVpkC2Fp6ryqiG4t7t.pdf",
+          "titulo": "Assembleia Legislativa do Paraná — texto da Lei paranaense nº 19.130/2017, incluído em processo legislativo",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    }
+  ]
+}

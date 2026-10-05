@@ -49,7 +49,7 @@ def main() -> int:
         return 1
     print(f"  {len(data)} fichas para validar\n")
 
-    validator = Draft7Validator(schema)
+    validator = Draft7Validator(schema, format_checker=Draft7Validator.FORMAT_CHECKER)
     erros_por_ficha: list[dict] = []
     erros_por_campo: Counter = Counter()
     fichas_invalidas = 0

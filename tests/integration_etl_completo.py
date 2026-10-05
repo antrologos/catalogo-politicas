@@ -9,6 +9,7 @@ NÃO usa mock: roda os scripts via subprocess, valida data/derived/latest.json c
 from __future__ import annotations
 
 import json
+import csv
 import subprocess
 import sys
 from pathlib import Path
@@ -19,6 +20,9 @@ import jsonschema
 ROOT = Path(__file__).resolve().parent.parent
 LATEST = ROOT / "data" / "derived" / "latest.json"
 SCHEMA = ROOT / ".claude" / "context" / "policies-schema.json"
+with (ROOT / "data/derived/registro_fichas.csv").open(encoding="utf-8", newline="") as registro_inicial:
+    IDENTIDADES_ANTES = {p["id_interno"]: p["slug"] for p in csv.DictReader(registro_inicial)}
+
 
 
 def run(*args: str) -> subprocess.CompletedProcess:
@@ -64,7 +68,7 @@ def test_total_1158_fichas(politicas):
 
 def test_todas_validam_contra_schema(politicas):
     schema = json.loads(SCHEMA.read_text(encoding="utf-8"))
-    validator = jsonschema.Draft7Validator(schema)
+    validator = jsonschema.Draft7Validator(schema, format_checker=jsonschema.Draft7Validator.FORMAT_CHECKER)
     erros: list[str] = []
     for ficha in politicas:
         for e in validator.iter_errors(ficha):
@@ -164,3 +168,38 @@ def test_completude_media_acima_de_85(politicas):
     cs = [f["completude_pct"] for f in politicas]
     media = sum(cs) / len(cs)
     assert media > 85, f"Completude média baixa: {media:.1f}"
+
+
+def test_curadoria_preserva_identidades_registradas(politicas):
+    por_id = {p["id_interno"]: p["slug"] for p in politicas}
+    assert all(por_id.get(id_) == slug for id_, slug in IDENTIDADES_ANTES.items())
+
+
+def test_curadoria_aplicada_e_propagada_sem_mudar_territorio(politicas):
+    por_id = {p["id_interno"]: p for p in politicas}
+    for arquivo in sorted((ROOT / "data/curadoria").glob("correcoes-*.json")):
+        for correcao in json.loads(arquivo.read_text(encoding="utf-8"))["correcoes"]:
+            origem = por_id[correcao["id_interno"]]
+            alvos = [origem] + [p for p in politicas if p.get("is_federal_replica")
+                               and p.get("federal_source_id") == origem["id_interno"]]
+            for alvo in alvos:
+                for campo, mudanca in correcao["campos"].items():
+                    assert alvo.get(campo) == mudanca["novo"], (alvo["id_interno"], campo)
+
+
+def test_curadoria_nao_introduz_categorias_fora_do_vocabulario(politicas):
+    vocab = json.loads((ROOT / ".claude/context/vocabulario-canonico.json").read_text(encoding="utf-8"))["campos"]
+    for ficha in politicas:
+        for campo, regra in vocab.items():
+            valor = ficha.get(campo)
+            if valor is not None:
+                assert valor in regra["canonical_values"], (ficha["id_interno"], campo, valor)
+
+
+def test_curadoria_nao_atribui_revisao_automatizada_a_pessoa(politicas):
+    por_id = {p["id_interno"]: p for p in politicas}
+    for arquivo in sorted((ROOT / "data/curadoria").glob("correcoes-*.json")):
+        for correcao in json.loads(arquivo.read_text(encoding="utf-8"))["correcoes"]:
+            ficha = por_id[correcao["id_interno"]]
+            assert ficha.get("revisado_por") is None, ficha["id_interno"]
+            assert ficha.get("duvidas_revisor"), ficha["id_interno"]

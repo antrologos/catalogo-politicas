@@ -1,6 +1,4 @@
-// Observações de leitura sobre divergências identificadas no acervo.
-// Preservam os registros originais e não confirmam funcionamento atual.
+// Ressalvas de identidade que precisam aparecer antes da leitura da ficha.
 export default {
-  "educacao-de-jovens-e-adultos-eja-br":
-    "Este registro está classificado como federal, mas a descrição e os órgãos responsáveis informados se referem a São Paulo. Os números e a organização da oferta descritos não devem ser interpretados como alcance nacional. A classificação territorial precisa de conferência.",
+  "conecta-trabalho-to": "O levantamento associa este registro ao Tocantins, mas esta revisão não confirmou esse vínculo. A iniciativa localizada nas referências é do Acre. Consulte o alcance da revisão antes de usar este registro.",
 };

@@ -1,6 +1,6 @@
 # RUNBOOK — Catálogo de Políticas Públicas
 
-Manual operacional para mantenedor (Rogério ou sucessor). Atualizado em 2026-05-01 (Sprint 0 do Bloco F).
+Manual operacional para mantenedor (Rogério ou sucessor). Atualizado em 2026-10-05 (curadoria documental e auditoria de referências).
 
 ## Onboarding em 1 dia
 
@@ -54,6 +54,26 @@ Push em `main` dispara `.github/workflows/deploy.yml`:
 5. **deploy** — só roda se tudo passou; publica em GH Pages.
 
 Para deploy manual: `gh workflow run "Build & Deploy site"`.
+
+## Correções documentais e referências externas
+
+As planilhas originais permanecem preservadas. Desde 05/10/2026, correções documentadas podem entrar por `data/curadoria/correcoes-AAAA-MM-DD.json`, conforme o contrato de [curadoria](../data/curadoria/README.md). Arquivos `propostas-*.json` guardam a pesquisa, mas não são aplicados. Cada mudança deve registrar ID, valor anterior, valor novo, motivo e referências datadas; conflitos bloqueiam a geração.
+
+1. Registrar as correções e fontes; distinguir vigência legal, oferta observada e ausência de informação.
+2. Executar `just etl` em cópia isolada. A ordem é carga, normalização, deduplicação, IDs, JSON com curadoria e validação estrita.
+3. Executar `python -B -m pytest tests/ -q` nessa cópia e, em `site/`, `npm test` e `npm run build`.
+4. Conferir IDs/slugs, hashes dos originais e diferenças do conteúdo antes de promover JSON e registro de fichas.
+5. Versionar os manifestos, dados derivados, evidências da auditoria e relatório da revisão.
+
+Para uma checagem de acesso sem gerar novos snapshots:
+
+```bash
+python -B scripts/captura/auditar_referencias.py --input data/derived/latest.json --propostas data/curadoria --output data/auditoria/referencias-http-AAAA-MM-DD.json
+```
+
+O auditor verifica por GET as referências principais e as URLs documentadas na curadoria, respeita robots.txt, limita concorrência e intervalo por domínio e retoma resultados do mesmo dia. O relatório diferencia HTTP 404, restrição de acesso, timeout e redirecionamento suspeito, inclusive páginas de autenticação com HTTP 200. Não avalia vigência ou implementação. O site usa o relatório concluído de data mais recente para mostrar avisos específicos; falha de acesso não muda a situação da política.
+
+Capturas rejeitadas não podem fornecer proveniência às fichas. Datas de consulta da pesquisa ficam nas referências da revisão; elas não geram datas de captura. Novas capturas continuam seguindo o procedimento de manutenção semestral abaixo.
 
 ## Manutenção mensal
 

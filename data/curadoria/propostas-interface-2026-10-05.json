@@ -1,0 +1,597 @@
+{
+  "versao": 1,
+  "correcoes": [
+    {
+      "id_interno": "FRM-CP-2026-EDU-0001",
+      "campos": {
+        "base_legal": {
+          "anterior": "Lei Federal nº 9.394/96 (LDB); Resoluções e portarias das Secretarias de Educação estaduais",
+          "novo": "Lei nº 9.394/1996 (LDB), arts. 4º, VII, 37 e 38; Resolução CNE/CEB nº 3/2025, alterada pela Resolução CNE/CEB nº 6/2025."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "SEDUC-SP",
+            "Diretorias de Ensino",
+            "Escolas Estaduais",
+            "CEEJAs",
+            "CIEJAs"
+          ],
+          "novo": [
+            "Ministério da Educação e Conselho Nacional de Educação (diretrizes nacionais)",
+            "Sistemas e redes de ensino estaduais, distrital e municipais (oferta)"
+          ]
+        },
+        "carga_horaria": {
+          "anterior": "EJA de presença regular: conforme organização curricular (carga horária total definida para cada etapa)",
+          "novo": "Definida por etapa e pelas diretrizes nacionais e normas do respectivo sistema de ensino."
+        },
+        "fonte_financiamento": {
+          "anterior": "Fundeb + orçamento da SEDUC",
+          "novo": "Recursos públicos da educação, conforme responsabilidades dos entes federativos e regras aplicáveis às redes ofertantes."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático \"fundo a fundo\" do Fundeb. A União (FNDE) transfere recursos ao Fundo de Educação do Estado de São Paulo, gerido pela Sefaz-SP, que os distribui à Seduc-SP (rede estadual) e as redes municipais de ensino que ofertam EJA",
+          "novo": "Esta ficha nacional não descreve um repasse único nem benefício financeiro individual. O financiamento e a execução dependem da rede e da oferta."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "SESI-SP + SENAI-SP (EJA Profissionalizante, em 36 unidades)",
+            "Incentivo financeiro SEJA PRO+ (MTE/SESI para jovens de 18 a 29 anos)"
+          ],
+          "novo": [
+            "Educação profissional, conforme articulação prevista no art. 37, § 3º, da LDB"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://www.educacao.sp.gov.br/educacao-jovens-adultos",
+          "novo": "https://www.planalto.gov.br/ccivil_03/leis/l9394compilado.htm"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "lei"
+        },
+        "atribuicao": {
+          "anterior": "Governo Federal — gov.br (CC BY-ND 3.0)",
+          "novo": "Brasil. Presidência da República. Lei nº 9.394/1996."
+        },
+        "licenca_inferida": {
+          "anterior": "CC BY-ND 3.0 (presumida; gov.br)",
+          "novo": "dominio_publico_lei_8_iv"
+        },
+        "resumo": {
+          "anterior": "Modalidade da educação básica destinada a jovens (15+) e adultos que não concluíram a escolaridade na idade regular. Presença regular (aulas presenciais em horários fixos, em 600 escolas) e presença flexível (modelo semipresencial com estudo autônomo)",
+          "novo": "Modalidade da educação básica e direito de quem não teve acesso ou continuidade de estudos nos ensinos fundamental e médio na idade própria."
+        },
+        "descricao_tecnica": {
+          "anterior": "A Educação de Jovens e Adultos no estado de São Paulo é organizada pela Seduc-SP para garantir o direito à educação de quem não teve acesso ou não concluiu os estudos na idade adequada. O estado oferece dois modelos complementares: a EJA de presença regular, com aulas presenciais em horários definidos (noturno), disponível em 600 escolas; e a EJA de presença flexível, inspirada nos CEEJAs, que permite ao estudante organizar seu percurso formativo de forma personalizada. Em 2026, o modelo flexível será ampliado para 151 escolas",
+          "novo": "A EJA é assegurada pela LDB e organizada pelos sistemas de ensino. Esta ficha apresenta o marco nacional, sem atribuir a todo o país modelos ou quantitativos de uma rede estadual."
+        },
+        "apresentacao": {
+          "anterior": "A Educação de Jovens e Adultos no estado de São Paulo é organizada pela Seduc-SP para garantir o direito à educação de quem não teve acesso ou não concluiu os estudos na idade adequada. O estado oferece dois modelos complementares: a EJA de presença regular, com aulas presenciais em horários definidos (noturno), disponível em 600 escolas; e a EJA de presença flexível, inspirada nos CEEJAs, que permite ao estudante organizar seu percurso formativo de forma personalizada. Em 2026, o modelo flexível será ampliado para 151 escolas",
+          "novo": "A EJA integra a educação básica e oferece oportunidades de escolarização ao longo da vida, considerando as condições de vida e trabalho de seus estudantes."
+        },
+        "informacoes_complementares": {
+          "anterior": null,
+          "novo": "1996 corresponde ao marco da LDB, não à criação histórica da EJA. As diretrizes de 2025 preveem EJA presencial no ensino fundamental e admitem atividades não presenciais limitadas a 50% da carga horária no ensino médio; a transição prevista pela Resolução CNE/CEB nº 6/2025 terminou em 31/12/2025. Flexibilidade de percurso ou presença não equivale automaticamente a EaD. A existência da modalidade como direito não comprova oferta de vagas em cada localidade."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": "EM TODOS OS ESTADOS",
+          "novo": "Esta ficha apresenta o marco nacional da EJA como modalidade e direito educacional. Modelos de oferta, arranjos de atendimento e disponibilidade de vagas devem ser verificados junto à respectiva rede de ensino. A revisão documental não comprova a situação operacional de cada oferta local.\n\nA notícia paulista usada para identificar a mistura territorial foi recuperada pela pesquisa, mas redirecionou a página genérica no acesso direto. Ela não é a base do marco nacional descrito nesta ficha."
+        },
+        "modalidade_oferta": {
+          "anterior": "Mista",
+          "novo": "Sem informação"
+        },
+        "arranjo_logistico": {
+          "anterior": "Unidade fixa",
+          "novo": "Sem informação"
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "continuidade_governos": {
+          "anterior": "Sim (política estruturante, com ajustes conforme gestão)",
+          "novo": "A EJA possui marco nacional na LDB; isso não comprova continuidade, disponibilidade de vagas ou atendimento efetivo de cada oferta local."
+        }
+      },
+      "justificativa": "A ficha BR misturava o direito/modalidade nacional com modelos e quantitativos de São Paulo, incluía CIEJA municipal entre estruturas da Seduc-SP e descrevia financiamento paulista como nacional. A URL paulista redirecionou para conteúdo genérico, sem sustentar a descrição. Preservam-se ID, slug e UF; substitui-se a fonte principal pela LDB; metadados de fonte e citações serão regenerados pelo ETL. Normas de 2025 foram verificadas; não se infere execução local nem cobertura atual a partir da lei. Separado o direito e marco normativo nacional da continuidade operacional de ofertas locais.",
+      "referencias": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/leis/l9394compilado.htm",
+          "titulo": "Lei nº 9.394, de 20 de dezembro de 1996 — LDB, texto compilado",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://dgui.cps.sp.gov.br/dgui_atos_normativos/cne-ceb-03/",
+          "titulo": "Resolução CNE/CEB nº 3, de 8 de abril de 2025 — registro normativo do Centro Paula Souza",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/18/2025/08/Resolucao-CNE-CEB-06_2025-07-21.pdf",
+          "titulo": "Resolução CNE/CEB nº 6, de 17 de julho de 2025 — DOU de 21/07/2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.educacao.sp.gov.br/sao-paulo-expande-eja-e-leva-modelo-de-presenca-flexivel-151-escolas-em-2026/",
+          "titulo": "São Paulo expande EJA e leva modelo de presença flexível a 151 escolas em 2026 — 20/01/2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://educacao.sme.prefeitura.sp.gov.br/educacao-de-jovens-e-adultos-eja/formas-de-atendimento/",
+          "titulo": "SME São Paulo — EJA: formas de atendimento",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0010",
+      "campos": {
+        "nome": {
+          "anterior": "Programa Emprega + Mulheres e Jovens",
+          "novo": "Programa Emprega + Mulheres"
+        },
+        "base_legal": {
+          "anterior": "Medida Provisória N.º 1.116/2022 (criação do Emprega + Mulheres e Jovens) e desdobramentos legislativos posteriores",
+          "novo": "Lei nº 14.457, de 21 de setembro de 2022, resultante da conversão da Medida Provisória nº 1.116/2022."
+        },
+        "esfera_execucao": {
+          "anterior": "Compartilhada interfederativa: Estado-Município",
+          "novo": "União"
+        },
+        "modalidade_oferta": {
+          "anterior": "Mista",
+          "novo": "Não aplicável"
+        },
+        "arranjo_logistico": {
+          "anterior": "Misto (fixa + itinerante)",
+          "novo": "Não aplicável"
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Ministério do Trabalho e Emprego",
+            "Ministério da Previdência Social",
+            "empresas e rede de serviços"
+          ],
+          "novo": [
+            "União (marco normativo federal)",
+            "Empregadores e serviços sociais e nacionais de aprendizagem, conforme cada medida"
+          ]
+        },
+        "fonte_financiamento": {
+          "anterior": "Recursos privados das empresas/empregadores;\nFundo de Garantia do Tempo de Serviço (FGTS), na forma de saques pelo(a) trabalhador(a) para apoiar despesas previstas;\nServiços sociais autônomos (Sistema S), quando houver manutenção/subvenção de oferta relacionada;\nOrçamento público regular dos órgãos executores quando a política se desdobra em ofertas públicas de qualificação associadas",
+          "novo": "Custeio e benefícios variam conforme a medida legal e sua implementação; não foi confirmado mecanismo de saque do FGTS na Lei nº 14.457/2022."
+        },
+        "transferencia_recursos": {
+          "anterior": "Ministério do Trabalho e Previdência (pagamento de FTGS). Em regra, não há repasse direto “governo → beneficiário” como benefício monetário; o mecanismo principal envolve:\nsaque do FGTS pelo(a) trabalhador(a) (transferência indireta via acesso ao saldo do fundo); custeio direto pelo empregador (reembolso/apoios), quando existente; subvenção/manutenção pelo Sistema S, quando aplicável; \ne, se houver oferta pública de cursos, o custeio ocorre por execução orçamentária do órgão executor/rede ofertante (podendo envolver instrumentos de fomento/contratualização conforme o desenho da ação)",
+          "novo": "A lei prevê reembolso-creche e, em hipóteses específicas, bolsa de qualificação profissional. Não se trata de repasse estadual-municipal nem de saque geral do FGTS."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Dialoga com Jovem Aprendiz, SINE, qualificação profissional e políticas de inclusão produtiva"
+          ],
+          "novo": [
+            "Programa Empresa Cidadã",
+            "Serviços nacionais de aprendizagem"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-TRAB-0010",
+          "novo": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14457.htm"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "lei"
+        },
+        "atribuicao": {
+          "anterior": "",
+          "novo": "Brasil. Presidência da República. Lei nº 14.457/2022."
+        },
+        "licenca_inferida": {
+          "anterior": "sem_licenca_explicita",
+          "novo": "dominio_publico_lei_8_iv"
+        },
+        "resumo": {
+          "anterior": "Iniciativa federal voltada a incentivar contratação e permanência de jovens (e mulheres), com medidas regulatórias e incentivos",
+          "novo": "Marco federal de medidas para inserção e permanência de mulheres no trabalho, com apoio à parentalidade e à qualificação."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Programa Emprega + Mulheres e Jovens busca estimular contratações e qualificação, prevendo medidas como flexibilizações e incentivos. Parte das medidas foi incorporada/alterada em legislação posterior, o que reconfigurou o desenho original",
+          "novo": "A Lei nº 14.457/2022 reúne medidas trabalhistas, de qualificação e de prevenção à violência no trabalho. Sua aplicação depende dos requisitos de cada dispositivo."
+        },
+        "apresentacao": {
+          "anterior": "O Programa Emprega + Mulheres e Jovens busca estimular contratações e qualificação, prevendo medidas como flexibilizações e incentivos. Parte das medidas foi incorporada/alterada em legislação posterior, o que reconfigurou o desenho original",
+          "novo": "Medidas federais de apoio à inserção e permanência de mulheres no mercado de trabalho."
+        },
+        "informacoes_complementares": {
+          "anterior": "A política segue ativa/vigente. O ponto importante é a nomenclatura: a Medida Provisória N.º 1.116/2022 usava o nome “Programa Emprega + Mulheres e Jovens”, mas ela foi convertida na Lei N.º 14.457/2022, que consolidou o nome legal como “Programa Emprega + Mulheres”",
+          "novo": "A MP nº 1.116/2022 utilizava a expressão Mulheres e Jovens; a lei de conversão adotou Programa Emprega + Mulheres. O registro documenta o marco legal, sem confirmar oferta local de cursos, adesão de empregadores ou concessão individual de benefícios."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "continuidade_governos": {
+          "anterior": "Sim, mas desenho depende do desdobramento legislativo e de regulamentações posteriores (medidas reconfiguradas)",
+          "novo": "Marco legal publicado em 2022; execução e adesão às medidas não verificadas nesta revisão."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": "EM TODOS OS ESTADOS",
+          "novo": "A revisão documental confere o marco federal da Lei nº 14.457/2022. Não comprova adesão dos empregadores, concessão de benefícios nem execução local das medidas."
+        }
+      },
+      "justificativa": "A nomenclatura e os mecanismos da MP foram transportados indevidamente para o presente. A Lei nº 14.457/2022 não prevê o saque do FGTS descrito na ficha; a ocorrência de FGTS no art. 4º trata da base de incidência do reembolso-creche. Corrigem-se escopo, fonte e financiamento sem tratar vigência legal como comprovação de execução operacional. ID e slug históricos ficam preservados.",
+      "referencias": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/l14457.htm",
+          "titulo": "Lei nº 14.457, de 21 de setembro de 2022 — Programa Emprega + Mulheres",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2022/lei/_leis2022.htm",
+          "titulo": "Leis ordinárias de 2022 — registro de publicação da Lei nº 14.457 no DOU de 22/09/2022",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-PSOC-0106",
+      "campos": {
+        "abrangencia_territorial": {
+          "anterior": "Nacional",
+          "novo": "Estadual"
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Ministério dos Direitos Humanos e da Cidadania"
+          ],
+          "novo": [
+            "Ministério dos Direitos Humanos e da Cidadania",
+            "Secretaria de Direitos Humanos do Espírito Santo"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-PSOC-0106",
+          "novo": "https://sedh.es.gov.br/programa-empodera"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "atribuicao": {
+          "anterior": "",
+          "novo": "Espírito Santo. Secretaria de Direitos Humanos."
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência de verbas federais do Ministério dos Direitos Humanos e da Cidadania aos estados aderentes",
+          "novo": "Parceria formalizada por Acordo de Cooperação Técnica entre MDHC e SEDH-ES. A modalidade de transferência financeira aos estados não foi confirmada nas fontes consultadas."
+        },
+        "resumo": {
+          "anterior": "O Projeto possui três etapas: 1) Elaboração de Plano Individual de Atendimento e Plano de Ações para cada pessoa a ser acompanhada; 2) Elevação escolar e/ou qualificação profissional; 3) Integração no mercado de trabalho formal por meio da ocupação de postos de trabalho dignos ou geração de renda digna (empreendedorismo/economia solidária/cooperativismo)",
+          "novo": "Projeto-piloto voltado a pessoas LGBTI+ adultas em vulnerabilidade, com atendimento individual, escolarização ou qualificação e caminhos de trabalho e renda."
+        },
+        "descricao_tecnica": {
+          "anterior": "Vislumbrando a dignidade cidadã de pessoas LGBTQIA+ em situação de vulnerabilidade social, na etapa de elevação escolar e/ou qualificação profissional todas as pessoas acompanhadas participarão de Curso de Formação Cidadã e em Direitos Humanos. Como conteúdo, há tópicos de direitos trabalhistas, letramento racial e Saúde e Segurança no Trabalho (com contribuições da Fundacentro), entre outros assuntos a serem abordados",
+          "novo": "No Espírito Santo, o Empodera+ articula MDHC e SEDH-ES. O desenho prevê plano individual de atendimento, elevação escolar ou qualificação e apoio à inserção no trabalho e à geração de renda."
+        },
+        "apresentacao": {
+          "anterior": "Vislumbrando a dignidade cidadã de pessoas LGBTQIA+ em situação de vulnerabilidade social, na etapa de elevação escolar e/ou qualificação profissional todas as pessoas acompanhadas participarão de Curso de Formação Cidadã e em Direitos Humanos. Como conteúdo, há tópicos de direitos trabalhistas, letramento racial e Saúde e Segurança no Trabalho (com contribuições da Fundacentro), entre outros assuntos a serem abordados",
+          "novo": "Acompanhamento de pessoas LGBTI+ em vulnerabilidade para acesso a escolarização, qualificação, trabalho digno e renda."
+        },
+        "informacoes_complementares": {
+          "anterior": "Programa ainda em atapa de projeto-piloto, atualmente ativo em apenas quatro estados: Ceará, Espírito Santo, Maranhão e Pará. O público-alvo são pessoas LGBTQIA+ maiores de 18 anos em situação de vulnerabilidade social, sem vínculo formal de trabalho, isto é, sem Carteira de Trabalho assinada, independente de auferirem renda informal. Dentre as vagas disponíveis para seleção em cada estado, ao menos 50% serão direcionadas para pessoas negras, além de, pelo menos, 50% das vagas serem para pessoas trans ou travestis",
+          "novo": "A página estadual relaciona cinco estados no piloto: Ceará, Espírito Santo, Maranhão, Pará e Rio Grande do Sul. Há seleção publicada no ES em 28/07/2025. Novas inscrições, vagas e regras de reserva devem ser verificadas no edital correspondente; não se presume chamada aberta em 2026."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "fonte_financiamento": {
+          "anterior": "Recursos federais do Ministério dos Direitos Humanos e da Cidadania",
+          "novo": "Iniciativa articulada pelo MDHC com parceiros estaduais; dotação, repasse e execução financeira do piloto no Espírito Santo não foram confirmados."
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "A página estadual foi recuperada pela pesquisa, mas redirecionou à página inicial na conferência direta de 05/10/2026. A página documental do MDHC também foi recuperada pela pesquisa, com resposta 403 no GET direto. A realização documentada do piloto não demonstra oferta atual nem repasse financeiro."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        }
+      },
+      "justificativa": "Correspondência direta com a página oficial do Empodera+ no ES. A ficha confundia alcance nacional da estratégia com execução estadual do piloto, omitia SEDH-ES e informava quatro estados. Acordo de cooperação, por si só, não comprova transferência financeira. A última seleção estadual localizada é de 28/07/2025; não foi confirmada situação operacional de outubro de 2026. Acordo de cooperação e articulação federal não demonstram transferência financeira efetivamente realizada.",
+      "referencias": [
+        {
+          "url": "https://sedh.es.gov.br/programa-empodera",
+          "titulo": "SEDH-ES — Programa Empodera+ (página sem data editorial explícita)",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.es.gov.br/Noticia/sedh-divulga-selecionados-do-programa-empodera",
+          "titulo": "SEDH divulga selecionados do Programa Empodera+ — 28/07/2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.gov.br/mdh/pt-br/navegue-por-temas/lgbt/campanhas-lgbtqia/lgbtqia-cidadania/projeto-piloto-do-programa-empodera/documentos",
+          "titulo": "MDHC — Documentos do projeto-piloto Empodera+, publicado em 29/05/2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-PSOC-0116",
+      "campos": {
+        "nome": {
+          "anterior": "Estado Presente – eixo de inclusão social de jovens",
+          "novo": "Estado Presente em Defesa da Vida — Eixo de Proteção Social"
+        },
+        "ano_criacao": {
+          "anterior": "2011/2015",
+          "novo": "2011 (programa Estado Presente; manual do eixo social de 2019)"
+        },
+        "base_legal": {
+          "anterior": "Projeto Estado Presente: Segurança Cidadã no ES; documentos e instrumentos de governança do programa",
+          "novo": "Referência documental: Manual do Eixo de Proteção Social do Estado Presente em Defesa da Vida, 1ª edição, 2019. Ato normativo de criação específico do eixo não confirmado nesta revisão."
+        },
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-PSOC-0116",
+          "novo": "https://sedh.es.gov.br/manual-do-eixo-de-protecao-social-do-estado-presente-em-defesa-da-vida"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "atribuicao": {
+          "anterior": "",
+          "novo": "Espírito Santo. Secretaria de Direitos Humanos."
+        },
+        "resumo": {
+          "anterior": "Programa territorial de prevenção social e segurança cidadã com foco em jovens de áreas vulneráveis",
+          "novo": "Eixo de proteção social do Estado Presente, com ações territoriais de prevenção da violência e atenção às juventudes."
+        },
+        "descricao_tecnica": {
+          "anterior": "Ele não é uma política educacional clássica, mas entra no seu recorte porque articula oportunidades para juventudes vulneráveis, inclusive com conexão a qualificação profissional e redução de barreiras sociais ao estudo e ao trabalho",
+          "novo": "Coordenado pela SEDH-ES, o eixo articula ações sociais em territórios priorizados. Os Centros de Referência das Juventudes aparecem entre as iniciativas acompanhadas em notícia oficial de 04/04/2023."
+        },
+        "apresentacao": {
+          "anterior": "Ele não é uma política educacional clássica, mas entra no seu recorte porque articula oportunidades para juventudes vulneráveis, inclusive com conexão a qualificação profissional e redução de barreiras sociais ao estudo e ao trabalho",
+          "novo": "Ações de proteção social e prevenção da violência no âmbito do programa estadual Estado Presente."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Qualificar ES",
+            "juventude",
+            "proteção social",
+            "políticas territoriais de prevenção"
+          ],
+          "novo": [
+            "Centros de Referência das Juventudes",
+            "Políticas territoriais de prevenção da violência"
+          ]
+        },
+        "continuidade_governos": {
+          "anterior": "Média/Alta",
+          "novo": "Há registros oficiais do programa desde 2011 e de ações posteriores; não foi aferida continuidade operacional ininterrupta."
+        },
+        "informacoes_complementares": {
+          "anterior": "O relatório de referência aproxima Estado Presente da estratégia territorial de qualificação e inclusão social de jovens, especialmente quando articulado ao Qualificar ES",
+          "novo": "O manual apresenta diretrizes e projetos, não resultados de impacto educacional. A notícia de 2023 documenta acompanhamento do BID ao projeto de segurança cidadã; não comprova financiamento internacional de todas as ações nem execução em todos os municípios."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "transferencia_recursos": {
+          "anterior": "Execução direta pelo governo estadual, com ações territoriais e articulação entre políticas setoriais",
+          "novo": "Arranjos variam por ação e instrumento, incluindo parcerias. A documentação consultada não sustenta classificar todo o eixo como execução direta nem demonstra desembolsos realizados."
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Manual e notícias foram recuperados pela pesquisa. Na conferência direta de 05/10/2026, a página do manual redirecionou à página inicial e o PDF respondeu 404. As referências documentam o desenho do eixo; não comprovam a execução atual de cada ação."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        }
+      },
+      "justificativa": "Adota-se o nome institucional do eixo. A referência a 2015 e a classificação Média/Alta não estavam sustentadas. O manual é documento de planejamento, não lei. Retira-se texto de bastidor e conexão específica ao Qualificar ES não confirmada no recorte consultado. Fontes de planejamento e ações datadas não comprovam, isoladamente, situação operacional em outubro de 2026. Retirada generalização de execução direta para todas as ações do eixo.",
+      "referencias": [
+        {
+          "url": "https://sedh.es.gov.br/manual-do-eixo-de-protecao-social-do-estado-presente-em-defesa-da-vida",
+          "titulo": "SEDH-ES — Manual do Eixo de Proteção Social do Estado Presente em Defesa da Vida",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://sedh.es.gov.br/Media/sedh/Documentos%202020/Manual%20Eixo%20Protec%CC%A7a%CC%83o%20Social%20-%20v7%20%282%29.pdf",
+          "titulo": "Manual do Eixo de Proteção Social — 1ª edição, 2019",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://sedh.es.gov.br/Noticia/governo-recebe-comitiva-bid-para-acompanhar-os-crjs-e-execucao-do-programa-estado-presente",
+          "titulo": "Governo recebe comitiva BID para acompanhar os CRJs e execução do Programa Estado Presente — 04/04/2023",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.es.gov.br/Noticia/seminario-discute-os-10-anos-do-programa-estado-presente-em-defesa-da-vida",
+          "titulo": "Seminário discute os 10 anos do Programa Estado Presente em Defesa da Vida — 10/11/2021",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0381",
+      "campos": {
+        "ano_criacao": {
+          "anterior": "2025",
+          "novo": "2025 (edição do catálogo; criação da política não confirmada)"
+        },
+        "base_legal": {
+          "anterior": "Catálogo estadual de formação continuada de 2025",
+          "novo": "Referência documental: Catálogo de formação continuada do Ceforr/Seed-RR, edição 2025. O catálogo não é ato normativo de criação."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado da Educação e Desporto de Roraima"
+          ],
+          "novo": [
+            "Secretaria de Estado da Educação e Desporto de Roraima",
+            "Centro Estadual de Formação dos Profissionais da Educação de Roraima (Ceforr)"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-EDU-0381",
+          "novo": "https://portal.rr.gov.br/governo-de-roraima-lanca-catalogo-variado-de-cursos-e-investe-na-formacao-continuada/"
+        },
+        "atribuicao": {
+          "anterior": "",
+          "novo": "Roraima. Secretaria de Estado da Educação e Desporto."
+        },
+        "descricao_tecnica": {
+          "anterior": "Fortalece capacidade da rede de acolher estudantes com interrupções, defasagens e vulnerabilidades",
+          "novo": "O catálogo de 2025 reúne cursos do Ceforr/Seed-RR em áreas como EJA, alfabetização, educação indígena, educação inclusiva e ensino médio, em formatos presencial, remoto e híbrido."
+        },
+        "apresentacao": {
+          "anterior": "Fortalece capacidade da rede de acolher estudantes com interrupções, defasagens e vulnerabilidades",
+          "novo": "Conjunto de cursos de formação continuada divulgado pela Seed-RR no catálogo de 2025."
+        },
+        "informacoes_complementares": {
+          "anterior": null,
+          "novo": "A notícia oficial de 23/05/2025 documenta a divulgação do catálogo. Não comprova realização de todos os cursos, inscrições abertas em 2026 ou efeitos sobre o acolhimento e a permanência de estudantes."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "continuidade_governos": {
+          "anterior": "Média",
+          "novo": "Não aferida; a fonte consultada documenta a edição de 2025."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento estadual da educação",
+          "novo": null
+        },
+        "transferencia_recursos": {
+          "anterior": "Não há transferência direta ao estudante",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "A notícia estadual de 23/05/2025 foi recuperada pela pesquisa, mas respondeu 404 no acesso direto em 05/10/2026. Ela documenta o catálogo de 2025; não comprova inscrições abertas, orçamento ou realização de todos os cursos."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        }
+      },
+      "justificativa": "Correspondência direta com notícia da Seed-RR publicada em 23/05/2025 às 10h29. Preserva-se o caráter de conjunto de formações; não se transforma catálogo genérico em programa autônomo. Corrigem-se ano, base legal e afirmação causal sem evidência. A edição de 2025 não é prova de oferta atual. Retiradas conclusões não verificadas sobre orçamento e inexistência de transferência; catálogo de cursos não demonstra esses fluxos.",
+      "referencias": [
+        {
+          "url": "https://portal.rr.gov.br/governo-de-roraima-lanca-catalogo-variado-de-cursos-e-investe-na-formacao-continuada/",
+          "titulo": "Governo de Roraima lança catálogo variado de cursos e investe na formação continuada — 23/05/2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0355",
+      "campos": {
+        "ano_criacao": {
+          "anterior": "2019 / 2025",
+          "novo": "Não confirmado para o NAT; plataforma GO Sergipe lançada em 19/03/2025."
+        },
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-TRAB-0355",
+          "novo": "https://www.se.gov.br/servicos/588"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "atribuicao": {
+          "anterior": "",
+          "novo": "Sergipe. Secretaria de Estado do Trabalho, Emprego e Empreendedorismo."
+        },
+        "base_legal": {
+          "anterior": "Lei nº 13.667/2018; atos estaduais do NAT e GO Sergipe",
+          "novo": "Lei nº 13.667/2018 (Sistema Nacional de Emprego — Sine). Ato de criação específico do NAT não confirmado nesta revisão."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Núcleo de Apoio ao Trabalho (NAT) é o serviço público de intermediação de mão de obra do Sistema Nacional de Emprego (SINE) no estado de Sergipe, vinculado à Secretaria de Estado do Trabalho, Emprego e Empreendedorismo (Seteem) . O NAT atua na captação de vagas junto a empresas, na triagem e encaminhamento de candidatos, e na oferta de oficinas de qualificação profissional. O serviço é gratuito e atende tanto trabalhadores quanto empresas. A plataforma digital GO Sergipe disponibiliza vagas para todo o estado, com atendimento presencial na unidade matriz em Aracaju. Em parceria com o SergipeTec e o Centro Vocacional Tecnológico (CVT), o NAT oferece oficinas gratuitas de qualificação profissional, como Comunicação e Entrevista de Emprego, Práticas Administrativas, Práticas de Atendimento, Marketing Pessoal, Informática Básica e Elaboração de Currículo",
+          "novo": "O NAT, vinculado à Seteem, realiza gratuitamente cadastro, orientação e encaminhamento de candidatos a vagas. A intermediação também utiliza a plataforma GO Sergipe e atendimento presencial."
+        },
+        "apresentacao": {
+          "anterior": "O Núcleo de Apoio ao Trabalho (NAT) é o serviço público de intermediação de mão de obra do Sistema Nacional de Emprego (SINE) no estado de Sergipe, vinculado à Secretaria de Estado do Trabalho, Emprego e Empreendedorismo (Seteem) . O NAT atua na captação de vagas junto a empresas, na triagem e encaminhamento de candidatos, e na oferta de oficinas de qualificação profissional. O serviço é gratuito e atende tanto trabalhadores quanto empresas. A plataforma digital GO Sergipe disponibiliza vagas para todo o estado, com atendimento presencial na unidade matriz em Aracaju. Em parceria com o SergipeTec e o Centro Vocacional Tecnológico (CVT), o NAT oferece oficinas gratuitas de qualificação profissional, como Comunicação e Entrevista de Emprego, Práticas Administrativas, Práticas de Atendimento, Marketing Pessoal, Informática Básica e Elaboração de Currículo",
+          "novo": "Serviço público gratuito de intermediação de mão de obra, com cadastro e encaminhamento para oportunidades de trabalho em Sergipe."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Dialoga com Qualifica Sergipe, Primeiro Emprego, Radar do Emprego e educação profissional"
+          ],
+          "novo": [
+            "Sistema Nacional de Emprego (Sine)",
+            "GO Sergipe",
+            "Primeiro Emprego",
+            "Qualifica Sergipe"
+          ]
+        },
+        "informacoes_complementares": {
+          "anterior": "Em abril de 2026, Aracaju formalizou sua adesão ao SINE como ente parceiro, um marco histórico após mais de cinco décadas de existência do sistema, permitindo acesso direto a recursos federais do Fundo de Amparo ao Trabalhador (FAT) e integração ao banco nacional de dados de trabalhadores e vagas",
+          "novo": "A carta de serviço foi atualizada em 20/05/2025; notícia de 19/02/2026 confirma uso da plataforma GO Sergipe, apoio presencial no NAT e atendimento móvel. Vagas e exigências variam; encaminhamento não garante contratação. Oficinas antigas não foram confirmadas como oferta contínua atual."
+        },
+        "continuidade_governos": {
+          "anterior": "Alta",
+          "novo": "Serviço documentado em fontes oficiais de diferentes anos; não se atribui grau de continuidade sem critério de avaliação."
+        },
+        "fonte_financiamento": {
+          "anterior": "Fundo de Amparo ao Trabalhador, orçamento estadual e manutenção de plataforma",
+          "novo": "A Lei nº 13.667/2018 prevê recursos do FAT, aportes dos entes aderentes e outras fontes para o Sine. A composição efetiva do NAT não foi auditada."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "A carta de serviço e a notícia oficial documentam o NAT/Sine em Sergipe. Não garantem vagas disponíveis hoje, atendimento em todos os municípios nem comprovação de cursos, orçamento ou resultados atuais."
+        }
+      },
+      "justificativa": "A carta de serviço e notícia operacional de 2026 identificam diretamente o NAT. 2025 é o lançamento da plataforma, não a criação do núcleo. Remove-se enumeração de oficinas antigas no presente e referência à adesão municipal de Aracaju que não caracteriza o serviço estadual. Mantém-se apenas articulação confirmada e situação operacional apoiada por notícia de 2026. Manutenção de plataforma é despesa, não fonte de recursos; marco legal de financiamento não comprova composição financeira local.",
+      "referencias": [
+        {
+          "url": "https://www.se.gov.br/servicos/588",
+          "titulo": "Portal de Serviços de Sergipe — Participar de entrevista para emprego, atualizado em 20/05/2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://sergipe.se.gov.br/secom/noticia/governo_de_sergipe_oferta_678_vagas_de_trabalho_nesta_quinta_feira_19",
+          "titulo": "Governo de Sergipe oferta 678 vagas de trabalho nesta quinta-feira, 19 — 19/02/2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://sergipe.se.gov.br/noticias/desenvolvimento/plataforma_go_sergipe_e_aprovada_por_futuros_usuarios_durante_lancamento",
+          "titulo": "Plataforma GO Sergipe é aprovada por futuros usuários durante lançamento — 19/03/2025",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13667.htm",
+          "titulo": "Lei nº 13.667, de 17 de maio de 2018 — Sistema Nacional de Emprego",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    }
+  ]
+}

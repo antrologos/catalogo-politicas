@@ -22,6 +22,14 @@ O levantamento foi realizado em três ondas, que reuniram políticas federais e 
 
 O acervo inclui programas, planos, serviços, benefícios, normas e ofertas educacionais. A natureza de cada registro deve ser lida a partir da identificação, da descrição e das referências disponíveis: uma norma ou um plano não devem ser tomados, por si sós, como serviço implementado.
 
+## Revisão das referências e do conteúdo
+
+Em 5 de outubro de 2026, uma revisão documental com apoio de ferramentas automatizadas corrigiu referências e inconsistências de conteúdo em parte do acervo. Nas fichas revistas, as fontes consultadas e o alcance da revisão aparecem no bloco Referências.
+
+A revisão distingue o território efetivamente descrito, o período da experiência e o tipo de evidência disponível. Quando só foi possível identificar um anúncio, uma norma ou um plano, isso é indicado. “Sem informação” pode sinalizar que o funcionamento atual não foi confirmado, sem significar encerramento.
+
+Os arquivos originais do levantamento foram preservados. Cada correção tem histórico de valores, justificativa e referências no [registro de curadoria](https://github.com/antrologos/catalogo-politicas/tree/main/data/curadoria). Essa revisão não certifica a exatidão de todas as informações do acervo nem substitui pesquisa sobre implementação e resultados.
+
 ## Como ler a ficha
 
 Cada ficha reúne quatro blocos:

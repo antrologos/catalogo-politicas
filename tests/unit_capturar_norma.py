@@ -257,3 +257,45 @@ def test_update_snapshot_index_idempotente(tmp_path, monkeypatch):
     entry = idx["by_sha"]["b" * 64]
     assert entry["data_captura"] == "2026-05-01T10:00:00-03:00"  # primeira data preservada
     assert entry["ultima_validacao"] == "2026-05-15T10:00:00-03:00"  # nova data
+
+
+def test_captura_rejeitada_nao_atualiza_indice_nem_substitui_ponteiro(tmp_path, monkeypatch):
+    from capturar_norma import CapturaResultado
+    indice = tmp_path / "index-gate.json"
+    monkeypatch.setattr("capturar_norma.INDEX_PATH", indice)
+    original = {"by_sha": {"a" * 64: {"status": "ok"}},
+                "by_url": {"https://x.gov.br/fonte": "a" * 64}}
+    indice.write_text(json.dumps(original), encoding="utf-8")
+    rejeitado = CapturaResultado(
+        status="validacao_falhou", url_solicitada="https://x.gov.br/fonte",
+        url_final="https://x.gov.br/fonte", sha256="b" * 64,
+        timestamp_iso="2026-10-05T12:00:00-03:00",
+    )
+    update_snapshot_index(rejeitado)
+    assert json.loads(indice.read_text(encoding="utf-8")) == original
+
+
+def test_captura_valida_indexa_url_original_e_final(tmp_path, monkeypatch):
+    from capturar_norma import CapturaResultado
+    indice = tmp_path / "index-alias.json"
+    monkeypatch.setattr("capturar_norma.INDEX_PATH", indice)
+    resultado = CapturaResultado(
+        status="ok", url_solicitada="https://x.gov.br/antiga",
+        url_final="https://x.gov.br/nova", sha256="e" * 64,
+        timestamp_iso="2026-10-05T12:00:00-03:00",
+    )
+    update_snapshot_index(resultado)
+    dados = json.loads(indice.read_text(encoding="utf-8"))
+    assert dados["by_url"] == {
+        "https://x.gov.br/antiga": "e" * 64, "https://x.gov.br/nova": "e" * 64,
+    }
+    assert dados["by_sha"]["e" * 64]["status"] == "ok"
+
+
+def test_inferencia_de_fonte_nao_confunde_host_nem_presume_licenca():
+    from capturar_norma import infer_atribuicao, infer_licenca
+    assert "São Paulo" in infer_atribuicao("https://www.educacao.sp.gov.br/pagina")
+    assert "Governo Federal" not in infer_atribuicao("https://gov.br.exemplo.com/")
+    assert "Governo Federal" not in infer_atribuicao("https://foo.gov.br/")
+    assert infer_licenca(None, "https://www.gov.br/") == "sem_licenca_explicita"
+    assert infer_licenca("lei", "https://www.planalto.gov.br/lei") == "sem_licenca_explicita"

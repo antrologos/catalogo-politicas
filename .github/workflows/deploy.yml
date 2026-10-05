@@ -6,6 +6,8 @@ on:
     paths:
       - 'site/**'
       - 'data/derived/latest.json'
+      - 'data/curadoria/**'
+      - 'data/auditoria/referencias-http-*.json'
       - '.claude/context/policies-schema.json'
       - '.github/workflows/deploy.yml'
   pull_request:
@@ -13,6 +15,8 @@ on:
     paths:
       - 'site/**'
       - 'data/derived/latest.json'
+      - 'data/curadoria/**'
+      - 'data/auditoria/referencias-http-*.json'
   workflow_dispatch:
 
 permissions:
@@ -46,7 +50,7 @@ jobs:
           if not isinstance(data, list):
               print(f"ERRO: latest.json deve ser array; obtido {type(data).__name__}")
               sys.exit(1)
-          validator = Draft7Validator(schema)
+          validator = Draft7Validator(schema, format_checker=Draft7Validator.FORMAT_CHECKER)
           errors = []
           for i, item in enumerate(data):
               for err in validator.iter_errors(item):

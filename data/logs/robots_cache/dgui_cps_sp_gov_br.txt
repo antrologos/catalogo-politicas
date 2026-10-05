@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cps.sp.gov.br/wp-content/video/?sitemap.xml

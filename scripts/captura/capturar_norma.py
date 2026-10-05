@@ -69,7 +69,16 @@ ATRIBUICAO_POR_DOMINIO = {
     "senado.leg.br": "Senado Federal",
     "mec.gov.br": "Ministério da Educação",
     "inep.gov.br": "INEP — Ministério da Educação",
-    "gov.br": "Governo Federal — gov.br (CC BY-ND 3.0)",
+    "gov.br": "Governo Federal — gov.br",
+    "educacao.sp.gov.br": "Secretaria da Educação do Estado de São Paulo",
+    "educacao.mg.gov.br": "Secretaria de Educação do Estado de Minas Gerais",
+    "educacao.rj.gov.br": "Secretaria de Estado de Educação do Rio de Janeiro",
+    "educacao.pr.gov.br": "Secretaria da Educação do Estado do Paraná",
+    "educacao.rs.gov.br": "Secretaria da Educação do Estado do Rio Grande do Sul",
+    "educacao.ba.gov.br": "Secretaria da Educação do Estado da Bahia",
+    "educacao.pa.gov.br": "Secretaria de Estado de Educação do Pará",
+    "educacao.pe.gov.br": "Secretaria de Educação e Esportes de Pernambuco",
+    "educacao.ce.gov.br": "Secretaria da Educação do Estado do Ceará",
 }
 
 
@@ -101,18 +110,21 @@ class CapturaResultado:
 
 
 def infer_atribuicao(url: str) -> str:
-    host = urlparse(url).netloc.lower()
-    for sub, atr in ATRIBUICAO_POR_DOMINIO.items():
-        if sub in host:
-            return atr
-    return f"Conteúdo público — {host} (atribuição inferida)"
+    try:
+        host = (urlparse(url).hostname or "").lower().rstrip(".")
+    except ValueError:
+        return ""
+    for dominio, atribuicao in ATRIBUICAO_POR_DOMINIO.items():
+        if dominio == "gov.br":
+            if host in {"gov.br", "www.gov.br"}:
+                return atribuicao
+        elif host == dominio or host.endswith("." + dominio):
+            return atribuicao
+    return f"Fonte — {host} (atribuição não identificada)"
 
 
 def infer_licenca(tipo: str | None, url: str) -> str:
-    if tipo in {"lei", "decreto", "portaria", "instrucao_normativa", "resolucao"}:
-        return "dominio_publico_lei_8_iv"
-    if "gov.br" in url.lower():
-        return "CC BY-ND 3.0 (presumida; gov.br)"
+    """Domínio e classificação da URL não comprovam a licença do documento."""
     return "sem_licenca_explicita"
 
 
@@ -330,8 +342,8 @@ def update_snapshot_index(resultado: "CapturaResultado") -> None:
         "ultima_atualizacao": "..."
       }
     """
-    if not resultado.sha256:
-        return  # nada a indexar
+    if not resultado.sha256 or resultado.status not in {"ok", "inalterado"}:
+        return  # evidência rejeitada permanece arquivada, sem promover ponteiro
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
     if INDEX_PATH.exists():
         try:
@@ -346,6 +358,8 @@ def update_snapshot_index(resultado: "CapturaResultado") -> None:
 
     entry = idx["by_sha"].get(sha, {})
     entry.update({
+        "status": resultado.status,
+        "http_status": resultado.http_status,
         "url_original": resultado.url_solicitada,
         "url_canonica": url_canon,
         "extensao": resultado.extensao,
@@ -360,6 +374,7 @@ def update_snapshot_index(resultado: "CapturaResultado") -> None:
     })
     idx["by_sha"][sha] = entry
     idx["by_url"][url_canon] = sha
+    idx["by_url"][resultado.url_solicitada] = sha
     idx["ultima_atualizacao"] = resultado.timestamp_iso
 
     INDEX_PATH.write_text(json.dumps(idx, ensure_ascii=False, indent=2), encoding="utf-8")

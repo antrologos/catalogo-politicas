@@ -1,0 +1,496 @@
+{
+  "versao": 1,
+  "correcoes": [
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0117",
+      "campos": {
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado de Assistência Social, Trabalho, Emprego e Renda do Pará (Seaster). Gerência de Trabalho e Emprego (Seaster). Coordenação de Intermediação de Mão de Obra. Superintendência Regional do Trabalho e Emprego no Pará (SRTE/PA)"
+          ],
+          "novo": [
+            "Secretaria do Trabalho, Emprego, Renda e Esporte da Bahia (Setre)",
+            "Ministério do Trabalho e Emprego (MTE)"
+          ]
+        },
+        "fonte_url": {
+          "anterior": "https://www.bnews.com.br/noticias/economia-e-mercado/a-bahia-e-lider-na-geracao-de-empregos-no-nordeste-destaca-secretario-durante-inauguracao-de-nova-sede-do-sinebahia.html",
+          "novo": "https://www.ba.gov.br/casacivil/noticias/2025-04/2679/casa-do-trabalhador-e-inaugurada-com-novos-servicos-e-suporte-aos"
+        },
+        "ano_criacao": {
+          "anterior": "2024",
+          "novo": null
+        },
+        "resumo": {
+          "anterior": "Serviço público de emprego voltado a encaminhamento para vagas, intermediação laboral e conexão com outros serviços de trabalho e qualificação",
+          "novo": "Serviços de intermediação de emprego, orientação e atendimento ao trabalhador na rede SineBahia, incluindo a Casa do Trabalhador de Salvador."
+        },
+        "descricao_tecnica": {
+          "anterior": "As Casas do Trabalhador são a nova identidade das unidades do Sistema Nacional de Emprego (SINE) na Bahia, representando a modernização e ampliação dos serviços públicos de emprego. A Casa do Trabalhador é a oitava unidade do país com esse novo padrão e substitui a antiga unidade central do SineBahia, que funcionava no mesmo local. A nova estrutura conta com atendimento mais ágil e serviços integrados. As unidades oferecem serviços gratuitos de intermediação de mão de obra (cadastro de trabalhadores e captação de vagas), habilitação ao seguro-desemprego, orientação profissional com psicólogos e assistentes sociais, autoatendimento para consulta de vagas, qualificação profissional por meio da Escola do Trabalhador 4.0 (cursos gratuitos de tecnologia e produtividade), acesso a microcrédito via CrediBahia, formalização de MEI pelo Bahia MEI, e apoio ao trabalho autônomo pelo Contrate.Ba",
+          "novo": "A Casa do Trabalhador de Salvador foi inaugurada em 10 de abril de 2025, junto ao Terminal de Metrô de Pituaçu, com atuação da Setre e do MTE. Reúne intermediação de emprego, seguro-desemprego, orientação profissional e acesso a qualificação e microcrédito."
+        },
+        "informacoes_complementares": {
+          "anterior": "A Bahia é líder na geração de empregos no Nordeste. A rede SineBahia conta com 123 unidades em mais de 103 municípios. Desde 2023, o estado recebeu R$ 4,7 milhões do FAT para projetos de qualificação. Em outubro de 2025, um Feirão de Emprego celebrou os 50 anos do SINE com 1.720 vagas em 22 municípios baianos [citação:8]. O programa Seja Pro+ do Sesi oferecerá 3 mil vagas na Bahia em EJA profissionalizante",
+          "novo": "A inauguração documentada refere-se à unidade de Salvador e não à criação de toda a rede SineBahia."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim. O SINE é uma política federal consolidada desde 1975. Na Bahia, a rede SineBahia está em expansão, com 123 unidades em 103 municípios, e o projeto de modernização das unidades como Casas do Trabalhador é uma prioridade das atuais gestões federal e estadual. A previsão de expansão para o interior e a inauguração de novas unidades indicam continuidade independentemente de mudanças de governo",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: A notícia de 10/04/2025 documenta a inauguração e serviços anunciados; não comprova resultados, atendimento atual em cada unidade ou execução dos repasses financeiros descritos no levantamento. Ano de criação geral e continuidade entre governos não confirmados."
+        },
+        "apresentacao": {
+          "anterior": "As Casas do Trabalhador são a nova identidade das unidades do Sistema Nacional de Emprego (SINE) na Bahia, representando a modernização e ampliação dos serviços públicos de emprego. A Casa do Trabalhador é a oitava unidade do país com esse novo padrão e substitui a antiga unidade central do SineBahia, que funcionava no mesmo local. A nova estrutura conta com atendimento mais ágil e serviços integrados. As unidades oferecem serviços gratuitos de intermediação de mão de obra (cadastro de trabalhadores e captação de vagas), habilitação ao seguro-desemprego, orientação profissional com psicólogos e assistentes sociais, autoatendimento para consulta de vagas, qualificação profissional por meio da Escola do Trabalhador 4.0 (cursos gratuitos de tecnologia e produtividade), acesso a microcrédito via CrediBahia, formalização de MEI pelo Bahia MEI, e apoio ao trabalho autônomo pelo Contrate.Ba",
+          "novo": "A Casa do Trabalhador de Salvador foi inaugurada em 10 de abril de 2025, junto ao Terminal de Metrô de Pituaçu, com atuação da Setre e do MTE. Reúne intermediação de emprego, seguro-desemprego, orientação profissional e acesso a qualificação e microcrédito."
+        }
+      },
+      "justificativa": "O órgão cadastrado pertencia ao Pará. A fonte estadual identifica os responsáveis e data a unidade de Salvador; não sustenta criação da rede em 2024 nem previsão de continuidade entre governos.",
+      "referencias": [
+        {
+          "url": "https://www.ba.gov.br/casacivil/noticias/2025-04/2679/casa-do-trabalhador-e-inaugurada-com-novos-servicos-e-suporte-aos",
+          "titulo": "Casa do Trabalhador é inaugurada com novos serviços e suporte aos trabalhadores — Governo da Bahia, 10/04/2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0145",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.gov.br/mec/pt-br/assuntos/eb/programa-de-fomento-as-escolas-de-ensino-medio-em-tempo-integral-emti",
+          "novo": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/emti/DiretrizesEMTI_2023_versaofinal-27-02-23-6da24.pdf"
+        },
+        "fonte_tipo": {
+          "anterior": "pagina_programa",
+          "novo": "outros"
+        },
+        "descricao_tecnica": {
+          "anterior": "A EMTI no Paraná amplia o tempo de permanência do estudante na escola, reorganiza o currículo e busca melhorar o desempenho escolar, reduzir evasão e fortalecer o projeto de vida dos jovens",
+          "novo": "As Diretrizes Pedagógicas de 2023 da Seduc-PA orientam o ensino médio em tempo integral na rede estadual do Pará, articulando organização curricular, ampliação da jornada e formação integral. O documento situa essa oferta no Programa de Fomento federal."
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência da União para o estado do Paraná, conforme adesão e número de matrículas em tempo integral",
+          "novo": "O FNDE prevê apoio financeiro aos estados com planos aprovados no EMTI. A referência geral não comprova valores ou repasses efetivamente recebidos pelo Pará."
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Novo Ensino Médio",
+            "Programa Nacional do Livro e do Material Didático",
+            "políticas estaduais de educação integral do Paraná"
+          ],
+          "novo": [
+            "Programa federal de Fomento às Escolas de Ensino Médio em Tempo Integral",
+            "Diretrizes estaduais de ensino médio em tempo integral da Seduc-PA"
+          ]
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: As diretrizes estaduais consultadas são de 2023. Não foram conferidos escolas, matrículas, recursos transferidos nem resultados atuais. O EMTI não deve ser apresentado como oferta específica de EJA."
+        },
+        "apresentacao": {
+          "anterior": "A EMTI no Paraná amplia o tempo de permanência do estudante na escola, reorganiza o currículo e busca melhorar o desempenho escolar, reduzir evasão e fortalecer o projeto de vida dos jovens",
+          "novo": "As Diretrizes Pedagógicas de 2023 da Seduc-PA orientam o ensino médio em tempo integral na rede estadual do Pará, articulando organização curricular, ampliação da jornada e formação integral. O documento situa essa oferta no Programa de Fomento federal."
+        }
+      },
+      "justificativa": "Descrição, apresentação, transferência e integração citavam o Paraná em registro do Pará.",
+      "referencias": [
+        {
+          "url": "https://www.seduc.pa.gov.br/site/public/upload/arquivo/emti/DiretrizesEMTI_2023_versaofinal-27-02-23-6da24.pdf",
+          "titulo": "Diretrizes Pedagógicas do Ensino Médio em Tempo Integral 2023 — Seduc-PA",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.gov.br/fnde/pt-br/acesso-a-informacao/acoes-e-programas/programas/programas_suplementares/ensino_medio/emti",
+          "titulo": "Ensino Médio em Tempo Integral — FNDE, atualizado em 22/06/2026",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0148",
+      "campos": {
+        "resumo": {
+          "anterior": "A Educação de Jovens e Adultos (EJA) da rede estadual da Bahia é a modalidade de ensino destinada a jovens, adultos e idosos que não tiveram oportunidade de concluir os estudos na idade regular",
+          "novo": "Educação de Jovens e Adultos da rede estadual de Pernambuco para pessoas que não iniciaram ou não concluíram o Ensino Fundamental ou o Ensino Médio."
+        },
+        "descricao_tecnica": {
+          "anterior": "A Educação de Jovens e Adultos (EJA) da rede estadual de Pernambuco é a modalidade de ensino destinada a jovens, adultos e idosos que não tiveram oportunidade de concluir os estudos na idade regular.  Ensino Fundamental: idade mínima de 15 anos completos. Ensino Médio: idade mínima de 18 anos completos, com ensino fundamental concluído.  Estudantes matriculados na EJA Médio, com idade entre 19 e 24 anos, que atendam aos critérios econômicos, têm direito ao incentivo financeiro-educacional do Programa Pé-de-Meia (federal)",
+          "novo": "A Secretaria de Educação de Pernambuco anunciou oferta de EJA para 2026, com idade mínima de 15 anos no Ensino Fundamental e 18 anos no Ensino Médio. O atendimento integra a rede estadual e se destina à retomada da escolarização."
+        },
+        "base_legal": {
+          "anterior": "Lei Federal nº 9.394/96 (LDB) (criação do programa). Resolução CEE/PE Nº 02/2004 (egula a oferta da EJA no âmbito do Sistema de Ensino do Estado de Pernambuco). RESOLUÇÃO No 3, DE 15 DE JUNHO DE 2010 e RESOLUÇÃO CNE/CEB No 3, DE 8 DE ABRIL DE 2025 (instituiu e amplia as Diretrizes do EJA). PORTARIA n° 2815/2025 (normatização e implementação da oferta de ensino do Tempo Juvenil e Tempo Formativo)",
+          "novo": "Lei Federal nº 9.394/1996 (LDB); Resolução CEE/PE nº 02/2004, citada nas normas estaduais de EJA. Referências gerais; não constituem comprovação de oferta em cada escola."
+        },
+        "informacoes_complementares": {
+          "anterior": "Em novembro de 2025, o Conselho Estadual de Educação de Pernambuco (CEE-PE), aprovou resolução que estabelece limites para EaD na EJA (até 50% da carga horária para o Ensino Médio) e número mínimo de estudantes para abertura de turmas (15 na zona urbana e 10 na zona rural). O EJA cresceu 3,2% nas matrículas em 2024 (superando a tendência nacional de queda) demonstra a efetividade das ações de fortalecimento da modalidade",
+          "novo": "A notícia oficial de 23/01/2026 anunciou 18.908 vagas. Esse quantitativo é de oferta anunciada, não de matrículas efetivadas ou de vagas disponíveis hoje."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: A Portaria 2815/2025 foi retirada por falta de confirmação de aplicabilidade a Pernambuco, sem atribuí-la a outro estado. A consulta não revalidou todos os atos citados originalmente nem a classificação semipresencial/híbrida e itinerante. A oferta de 2026 é datada e não garante matrícula aberta hoje."
+        },
+        "apresentacao": {
+          "anterior": "A Educação de Jovens e Adultos (EJA) da rede estadual de Pernambuco é a modalidade de ensino destinada a jovens, adultos e idosos que não tiveram oportunidade de concluir os estudos na idade regular.  Ensino Fundamental: idade mínima de 15 anos completos. Ensino Médio: idade mínima de 18 anos completos, com ensino fundamental concluído.  Estudantes matriculados na EJA Médio, com idade entre 19 e 24 anos, que atendam aos critérios econômicos, têm direito ao incentivo financeiro-educacional do Programa Pé-de-Meia (federal)",
+          "novo": "A Secretaria de Educação de Pernambuco anunciou oferta de EJA para 2026, com idade mínima de 15 anos no Ensino Fundamental e 18 anos no Ensino Médio. O atendimento integra a rede estadual e se destina à retomada da escolarização."
+        }
+      },
+      "justificativa": "O resumo identificava a Bahia. A referência à Portaria 2815/2025 não foi confirmada para Pernambuco e a variação de matrículas não sustenta a conclusão causal de efetividade.",
+      "referencias": [
+        {
+          "url": "https://portal.educacao.pe.gov.br/see-oferta-18-908-vagas-para-a-educacao-de-jovens-e-adultos/",
+          "titulo": "SEE oferta 18.908 vagas para a Educação de Jovens e Adultos —23/01/2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://siepe.educacao.pe.gov.br/sme/conteudoinstitucional/menuesquerdo/SandBoxItemMenuPaginaConteudo.ew?idPaginaItemMenuConteudo=6083",
+          "titulo": "Instruções Normativas — Secretaria de Educação de Pernambuco",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://cepebr-prod.s3.amazonaws.com/1/cadernos/2020/20200923/1-PoderExecutivo/PoderExecutivo(20200923).pdf",
+          "titulo": "DOE-PE 23/09/2020, IN SEE 08/2020 e referências à Resolução CEE/PE 02/2004",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0376",
+      "campos": {
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado de Indústria, Ciência e Tecnologia do Acre"
+          ],
+          "novo": null
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "ano_criacao": {
+          "anterior": "2026",
+          "novo": null
+        },
+        "resumo": {
+          "anterior": "Oficinas, preparação para entrevistas, identificação de competências e fortalecimento do Sine",
+          "novo": "A vinculação do projeto Conecta Trabalho ao Tocantins ainda requer confirmação documental."
+        },
+        "descricao_tecnica": {
+          "anterior": "Atualiza a política de intermediação e qualificação ao conectar trabalhadores, empresas e serviços públicos",
+          "novo": "A referência oficial localizada descreve o Conecta Trabalho do Acre. Não foi confirmada, nesta revisão, uma experiência correspondente no Tocantins. O registro permanece identificado com TO para preservar sua procedência e tornar explícita a dúvida territorial."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento estadual de trabalho, ciência e tecnologia; parcerias com setor produtivo",
+          "novo": null
+        },
+        "transferencia_recursos": {
+          "anterior": "Não há transferência direta",
+          "novo": null
+        },
+        "continuidade_governos": {
+          "anterior": "Média",
+          "novo": null
+        },
+        "integra_outras_politicas": {
+          "anterior": [
+            "Dialoga com Sine, EJA e qualificação profissional"
+          ],
+          "novo": []
+        },
+        "modalidade_oferta": {
+          "anterior": "Presencial",
+          "novo": null
+        },
+        "arranjo_logistico": {
+          "anterior": "Misto (fixa + itinerante)",
+          "novo": null
+        },
+        "informacoes_complementares": {
+          "anterior": null,
+          "novo": "O endereço da Sics do Tocantins é uma página institucional geral e não comprova a existência ou execução local do projeto."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: Não localizar correspondência em TO não prova inexistência. Não transferir automaticamente UF, slug ou identidade ao Acre. Órgão, data, modalidade, arranjo, financiamento, vínculos e continuidade foram deixados sem confirmação. A fonte acreana é evidência da divergência, não referência de execução no Tocantins."
+        },
+        "apresentacao": {
+          "anterior": "Atualiza a política de intermediação e qualificação ao conectar trabalhadores, empresas e serviços públicos",
+          "novo": "A referência oficial localizada descreve o Conecta Trabalho do Acre. Não foi confirmada, nesta revisão, uma experiência correspondente no Tocantins. O registro permanece identificado com TO para preservar sua procedência e tornar explícita a dúvida territorial."
+        }
+      },
+      "justificativa": "A ficha atribuída a Tocantins nomeava órgão do Acre. Fonte primária confirma experiência acreana, sem correspondência tocantinense encontrada.",
+      "referencias": [
+        {
+          "url": "https://agencia.ac.gov.br/estado-lanca-projeto-conecta-trabalho-para-fortalecer-geracao-de-empregos-e-aproximar-empresas-e-trabalhadores/",
+          "titulo": "Estado lança projeto Conecta Trabalho — Agência de Notícias do Acre, 18/03/2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.to.gov.br/sics/",
+          "titulo": "Portal da Sics do Tocantins indicado no levantamento; vínculo com o programa Conecta Trabalho não confirmado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0339",
+      "campos": {
+        "fonte_url": {
+          "anterior": "http://www.educacao.rn.gov.br",
+          "novo": "https://webdisk.diariooficial.rn.gov.br/Jornal/12025-12-23.pdf"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "lei"
+        },
+        "resumo": {
+          "anterior": "Modalidade da educação básica destinada a jovens (15+) e adultos que não concluíram a escolaridade na idade regular. Presença regular (aulas presenciais em horários fixos, em 600 escolas) e presença flexível (modelo semipresencial com estudo autônomo)",
+          "novo": "Educação de Jovens e Adultos na rede estadual do Rio Grande do Norte para retomada da escolarização no Ensino Fundamental e no Ensino Médio."
+        },
+        "descricao_tecnica": {
+          "anterior": "O estado desenvolve três ações estruturantes articuladas: o Programa Brasil Alfabetizado (7.095 alfabetizandos), a Política de Superação do Analfabetismo (PSA/RN - mais de 10 mil pessoas alfabetizadas em 113 municípios) e o Programa Pé-de-Meia para estudantes da EJA de 19 a 24 anos (4.820 beneficiários elegíveis em 2025). A EJA no RN também se destaca pela oferta em \"espaços não escolares\" (50 turmas, atendendo 1.345 estudantes) e pela parceria com o IFRN, que oferece 510 vagas em cursos FIC integrados à EJA Fundamental e cursos técnicos integrados ao Ensino Médio na modalidade EJA",
+          "novo": "A Portaria-SEI 11041/2025 da SEEC/RN determina matrícula contínua na EJA ao longo do ano letivo, com idade mínima de 15 anos para o Ensino Fundamental e 18 anos para o Ensino Médio."
+        },
+        "base_legal": {
+          "anterior": "Lei Federal nº 9.394/96 (LDB); Resoluções e portarias das Secretarias de Educação",
+          "novo": "Lei Federal nº 9.394/1996 (LDB); Portaria-SEI nº 11041, de 10 de dezembro de 2025, publicada no DOE-RN de 23/12/2025 (matrícula contínua na EJA)."
+        },
+        "informacoes_complementares": {
+          "anterior": "O estado ultrapassou 28 mil estudantes atendidos pela EJA em 2025 . A rede estadual conta com 202 escolas ofertando a EJA, com 21.690 estudantes matriculados na rede estadual . Em 2025, foram realizadas novas formações de professores e a primeira turma do Ensino Médio da EJA em espaços não escolares concluiu os estudos . Para 2026, a SEEC planeja incluir a matrícula da alfabetização na oferta geral da rede estadual, aprovado pelo Conselho Estadual de Educação. As matrículas na EJA cresceram 20% no Ensino Médio e 11% no Ensino Fundamental em relação ao ano anterior",
+          "novo": "A norma documenta o procedimento de matrícula; não informa quantas escolas ou turmas estão disponíveis em cada localidade."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim. A partir de 2026, a alfabetização será integrada ao currículo regular da rede estadual, deixando de ser uma política pontual para se tornar estruturante",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: A fonte específica foi lida em texto indexado do DOE. Os quantitativos, cargas horárias e mecanismos de financiamento remanescentes do levantamento não foram revalidados nesta correção. A norma não comprova vaga em toda escola nem continuidade entre governos."
+        },
+        "apresentacao": {
+          "anterior": "O estado desenvolve três ações estruturantes articuladas: o Programa Brasil Alfabetizado (7.095 alfabetizandos), a Política de Superação do Analfabetismo (PSA/RN - mais de 10 mil pessoas alfabetizadas em 113 municípios) e o Programa Pé-de-Meia para estudantes da EJA de 19 a 24 anos (4.820 beneficiários elegíveis em 2025). A EJA no RN também se destaca pela oferta em \"espaços não escolares\" (50 turmas, atendendo 1.345 estudantes) e pela parceria com o IFRN, que oferece 510 vagas em cursos FIC integrados à EJA Fundamental e cursos técnicos integrados ao Ensino Médio na modalidade EJA",
+          "novo": "A Portaria-SEI 11041/2025 da SEEC/RN determina matrícula contínua na EJA ao longo do ano letivo, com idade mínima de 15 anos para o Ensino Fundamental e 18 anos para o Ensino Médio."
+        }
+      },
+      "justificativa": "O resumo repetia 600 escolas e presença flexível de ficha paulista. A fonte estadual específica substitui essa atribuição por procedimento normatizado noRN.",
+      "referencias": [
+        {
+          "url": "https://webdisk.diariooficial.rn.gov.br/Jornal/12025-12-23.pdf",
+          "titulo": "DOE-RN 23/12/2025 — Portaria-SEI 11041, de 10/12/2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0389",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://noticias.r7.com/brasilia/df-no-ar/video/secretaria-de-educacao-abre-inscricoes-para-eja-no-distrito-federal-02072025/",
+          "novo": "https://www.educacao.df.gov.br/carta-de-servicos-educacao-especializada/"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "modalidade_oferta": {
+          "anterior": "Mista",
+          "novo": "Presencial"
+        },
+        "arranjo_logistico": {
+          "anterior": "Misto (fixa + itinerante)",
+          "novo": null
+        },
+        "abrangencia_territorial": {
+          "anterior": "Nacional",
+          "novo": "Estadual"
+        },
+        "resumo": {
+          "anterior": "Modalidade da educação básica destinada a jovens (15+) e adultos que não concluíram a escolaridade na idade regular. Presença regular (aulas presenciais em horários fixos, em 600 escolas) e presença flexível (modelo semipresencial com estudo autônomo)",
+          "novo": "Oferta presencial de Educação de Jovens e Adultos da rede pública do Distrito Federal para pessoas que não iniciaram ou interromperam a escolarização básica."
+        },
+        "descricao_tecnica": {
+          "anterior": "A Educação de Jovens e Adultos (EJA) no Distrito Federal é uma política pública ofertada pela Secretaria de Estado de Educação (SEEDF), destinada a jovens a partir de 15 anos (ensino fundamental) e 18 anos (ensino médio) que não concluíram a educação básica na idade regular. A rede conta com 105 escolas, abrangendo as 35 regiões administrativas do DF. Em março de 2025, a SEEDF lançou a Política Distrital para Superação do Analfabetismo e Qualificação da EJA, alinhada ao Pacto Nacional do MEC, com o objetivo de tornar o DF um território livre do analfabetismo",
+          "novo": "A carta de serviços da SEEDF distingue a EJA presencial da oferta a distância. Para a presencial, descreve acesso aos segmentos do Ensino Fundamental a partir de 15 anos e ao Ensino Médio a partir de 18 anos, com inscrição pelos canais divulgados pela Secretaria ou atendimento na escola."
+        },
+        "informacoes_complementares": {
+          "anterior": "O Distrito Federal se consolida como referência nacional em educação. De acordo com a Pesquisa Nacional por Amostra de Domicílios (Pnad), apenas 1,8% da população do DF com 15 anos ou mais não sabe ler ou escrever, o menor índice do país. Entre 2021 e 2024, a taxa de analfabetismo caiu de 4,2% para 1,5%, de acordo com a Pesquisa Distrital por Amostra de Domicílios (PDAD), consolidando o DF com o menor percentual de analfabetismo entre todas as unidades da Federação.",
+          "novo": "A listagem da SEEDF atualizada em 18/03/2025 informa 105 unidades no conjunto da EJA. Esse total não foi confirmado como exclusivo da oferta presencial."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático \"fundo a fundo\" do Fundeb: A União (FNDE) transfere recursos ao Fundo de Educação do Distrito Federal, gerido pela Secretaria de Fazenda do DF (SEFAZ-DF), que os distribui à Secretaria de Estado de Educação do Distrito Federal (SEEDF) para a rede pública e às redes de ensino que ofertam EJA",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: As páginas consultadas têm atualização de 2024 e 2025. Não comprovam vagas abertas ou cobertura atual. O arranjo fixa+itinerante e o detalhamento original de transferência ao Fundo de Educação do DF não foram confirmados. A correção não revalida todos os órgãos e programas relacionados do levantamento."
+        },
+        "apresentacao": {
+          "anterior": "A Educação de Jovens e Adultos (EJA) no Distrito Federal é uma política pública ofertada pela Secretaria de Estado de Educação (SEEDF), destinada a jovens a partir de 15 anos (ensino fundamental) e 18 anos (ensino médio) que não concluíram a educação básica na idade regular. A rede conta com 105 escolas, abrangendo as 35 regiões administrativas do DF. Em março de 2025, a SEEDF lançou a Política Distrital para Superação do Analfabetismo e Qualificação da EJA, alinhada ao Pacto Nacional do MEC, com o objetivo de tornar o DF um território livre do analfabetismo",
+          "novo": "A carta de serviços da SEEDF distingue a EJA presencial da oferta a distância. Para a presencial, descreve acesso aos segmentos do Ensino Fundamental a partir de 15 anos e ao Ensino Médio a partir de 18 anos, com inscrição pelos canais divulgados pela Secretaria ou atendimento na escola."
+        }
+      },
+      "justificativa": "O resumo reproduzia 600 escolas e presença flexível paulista. O título presencial conflitava com modalidadeMista; a rede estadual/distrital não possui execução nacional.",
+      "referencias": [
+        {
+          "url": "https://www.educacao.df.gov.br/carta-de-servicos-educacao-especializada/",
+          "titulo": "Carta de serviços: Educação especializada — SEEDF, atualizada em 06/03/2024",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.educacao.df.gov.br/eja-2/",
+          "titulo": "EJA — SEEDF, atualizada em 18/03/2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0337",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.gov.br/mec/pt-br/assuntos/noticias/2025/junho/divulgados-planos-estaduais-de-educacao-nas-prisoes",
+          "novo": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/al.pdf"
+        },
+        "ano_criacao": {
+          "anterior": "2011",
+          "novo": "2024 (elaboração do plano 2025–2028)"
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "MEC, Secretaria de Estado da Educação (Seduc-AL) e Secretaria de Estado da Justiça e Cidadania"
+          ],
+          "novo": [
+            "Secretaria de Estado da Educação de Alagoas (Seduc)",
+            "Secretaria de Estado de Ressocialização e Inclusão Social de Alagoas (Seris)"
+          ]
+        },
+        "resumo": {
+          "anterior": "Os Planos Estaduais de Educação no Sistema Prisional são elaborados de forma conjunta entre a Secretaria de Estado da Educação e a Secretaria de Estado da Justiça, com a participação ampla de representantes dos diversos segmentos sociais. Eles têm por objetivo a garantia da escolarização básica, no nível fundamental e médio, na modalidade de Educação de Jovens e Adultos (EJA) e a educação profissional às pessoas em privação de liberdade, no Sistema Penitenciário do Estado, por meio dos Centros Estaduais de Educação Básica para Jovens e Adultos (CEEBJA) e/ou Ações Pedagógicas Descentralizadas (APED)",
+          "novo": "Plano de educação para pessoas privadas de liberdade e egressas do sistema prisional de Alagoas, referente a 2025–2028."
+        },
+        "descricao_tecnica": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Elaborado pela Seduc e pela Seris, o plano alagoano orienta a ampliação e qualificação da educação em estabelecimentos penais, com escolarização, leitura, atividades educativas e qualificação profissional."
+        },
+        "base_legal": {
+          "anterior": "Decreto N.º 7626/2011 (instituição do Plano Estratégico de Educação no âmbito do Sistema Prisional - PEESP). Lei N.º 12.433/2011 - Altera a Lei Nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a remição de parte do tempo de execução da pena por estudo ou por trabalho e Lei N.º 19.130/2017 - Institui a diária especial por atividade extrajornada voluntária, a gratificação intra muros, e adota outras providências. Também relaciona-se com Lei de Execução Penal nº 7.210/1984, na Lei de Diretrizes e Bases da Educação Nacional nº 9.394/1996 e na Resolução CNE/CEB nº 2/2010",
+          "novo": "Decreto Federal nº 7.626/2011 (marco nacional); Resolução CEE/AL nº 02/2014, mencionada pelo plano como referência estadual."
+        },
+        "informacoes_complementares": {
+          "anterior": null,
+          "novo": "O documento tem capa 2024 e horizonte 2025–2028. Metas e responsabilidades previstas não comprovam sua realização."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: Plano lido em texto extraído. Publicação no repositório federal não comprova cumprimento das metas ou continuidade entre governos. Ato específico de aprovação e situação jurídica integral não foram reconstituídos."
+        },
+        "apresentacao": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Elaborado pela Seduc e pela Seris, o plano alagoano orienta a ampliação e qualificação da educação em estabelecimentos penais, com escolarização, leitura, atividades educativas e qualificação profissional."
+        }
+      },
+      "justificativa": "O resumo transportava CEEBJA/APED do Paraná, a denominação do órgão prisional não correspondia ao plano alagoano e a Lei 19.130/2017 citada é paranaense.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/al.pdf",
+          "titulo": "Plano Estadual de Educação para Pessoas Privadas de Liberdade e Egressas do Sistema Prisional — Alagoas, 2024; período 2025–2028",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://storage.assembleia.pr.leg.br/ccj/4MhcBtuJgA0CMc5fHifrKLaVpkC2Fp6ryqiG4t7t.pdf",
+          "titulo": "Lei 19.130/2017 do Paraná — texto em anexo da Assembleia Legislativa",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0149",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://g1.globo.com/pe/petrolina-regiao/noticia/2024/09/10/escolas-estaduais-de-petrolina-recebem-inscricoes-para-o-eja-campo-veja-lista.ghtml",
+          "novo": "https://cepebr-prod.s3.amazonaws.com/1/cadernos/2020/20200923/1-PoderExecutivo/PoderExecutivo(20200923).pdf"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "lei"
+        },
+        "base_legal": {
+          "anterior": "Lei Federal nº 9.394/1996 (LDB) (diretrizes nacionais sobre o EJA. Decreto Federal nº 7.352/ 2010 (dispõe sobre a política de educação do campo e o Programa Nacional de Educação na Reforma Agrária (Pronera)). PORTARIA n° 2815/2025 (normatização e implementação da oferta de ensino do Tempo Juvenil e Tempo Formativo). Instrução Normativa SEE nº 8, de 22 de setembro de 2020 ( principal marco regulatório estadual, que fixa diretrizes e orienta procedimentos pedagógicos para a oferta da EJA na Educação do Campo)",
+          "novo": "Lei Federal nº 9.394/1996 (LDB); Decreto Federal nº 7.352/2010; Instrução Normativa SEE/PE nº 08/2020, publicada no DOE de 23/09/2020."
+        },
+        "descricao_tecnica": {
+          "anterior": "A oferta é organizada nos princípios da Pedagogia de Alternância, contemplando Tempo Escola (atividades presenciais) e Tempo Comunidade (atividades práticas nas comunidades). As aulas ocorrem em escolas localizadas preferencialmente em espaço rural, com 35 vagas por turma e matrícula em livre demanda. A EJA Campo é destinada às populações do campo, compreendendo: Agricultores familiares; Extrativistas; Pescadores artesanais; Ribeirinhos; Assentados e acampados; Trabalhadores rurais; Caiçaras; Indígenas; Quilombolas; Povos da floresta; Povos ciganos; Demais povos que vivem no campo",
+          "novo": "A IN SEE/PE 08/2020 organiza a EJA Campo por Pedagogia da Alternância, articulando Tempo Escola e Tempo Comunidade. Prevê atendimento prioritário em escolas rurais, admitindo escolas urbanas que atendam populações do campo, com ingresso a partir de 15 anos no Fundamental e 18 no Médio."
+        },
+        "informacoes_complementares": {
+          "anterior": "A EJA Campo assegura o atendimento a estudantes com deficiência, transtornos globais do desenvolvimento e altas habilidades/superdotação em salas de aula comuns, garantindo Atendimento Educacional Especializado e condições de equidade para participação em todas as atividades",
+          "novo": "Na IN 08/2020, o limite por turma é de 25 estudantes no Fundamental e 35 no Médio. São parâmetros da norma consultada, sujeitos à verificação de atualização, e não vagas abertas."
+        },
+        "carga_horaria": {
+          "anterior": "Ensino Fundamental: organizado em oito módulos semestrais (4 anos). Ensino Médio: organizado em três módulos semestrais (18 meses). A distribuição da carga horária entre Tempo Escola e Tempo Comunidade é definida nos projetos pedagógicos de cada unidade",
+          "novo": "A IN SEE/PE 08/2020 prevê2.000 horas letivas para cada curso: Fundamental anos iniciais, Fundamental anos finais e Médio, distribuídas em quatro eixos/semestres. Organização posterior não verificada."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: Retirada Portaria 2815/2025 por aplicabilidade não confirmada, sem atribuir origem a outro estado. A IN 08/2020 foi consultada diretamente, mas sua vigência atual e oferta por município não foram verificadas. Alternância entre Escola e Comunidade não equivale automaticamente a EaD nem a unidade itinerante; o arranjo logístico original permanece pendente."
+        },
+        "apresentacao": {
+          "anterior": "A oferta é organizada nos princípios da Pedagogia de Alternância, contemplando Tempo Escola (atividades presenciais) e Tempo Comunidade (atividades práticas nas comunidades). As aulas ocorrem em escolas localizadas preferencialmente em espaço rural, com 35 vagas por turma e matrícula em livre demanda. A EJA Campo é destinada às populações do campo, compreendendo: Agricultores familiares; Extrativistas; Pescadores artesanais; Ribeirinhos; Assentados e acampados; Trabalhadores rurais; Caiçaras; Indígenas; Quilombolas; Povos da floresta; Povos ciganos; Demais povos que vivem no campo",
+          "novo": "A IN SEE/PE 08/2020 organiza a EJA Campo por Pedagogia da Alternância, articulando Tempo Escola e Tempo Comunidade. Prevê atendimento prioritário em escolas rurais, admitindo escolas urbanas que atendam populações do campo, com ingresso a partir de 15 anos no Fundamental e 18 no Médio."
+        }
+      },
+      "justificativa": "A referência à Portaria 2815/2025 não foi confirmada paraPE. O texto também generalizava 35 vagas, embora a norma diferencie Fundamental e Médio.",
+      "referencias": [
+        {
+          "url": "https://cepebr-prod.s3.amazonaws.com/1/cadernos/2020/20200923/1-PoderExecutivo/PoderExecutivo(20200923).pdf",
+          "titulo": "DOE-PE 23/09/2020, páginas 4–6 — Instrução Normativa SEE 08/2020",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    }
+  ]
+}

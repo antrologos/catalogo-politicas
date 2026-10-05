@@ -1,0 +1,47 @@
+{
+  "criterio": "O valor anterior do manifesto é confrontado após o saneamento de atribuição/licença do pipeline. Estes valores publicados anteriores permanecem preservados para auditoria.",
+  "ajustes": [
+    {
+      "id_interno": "FRM-CP-2026-EDU-0001",
+      "campo": "atribuicao",
+      "publicado_antes": "Governo Federal — gov.br (CC BY-ND 3.0)",
+      "apos_saneamento_metadados": "Secretaria da Educação do Estado de São Paulo"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0001",
+      "campo": "licenca_inferida",
+      "publicado_antes": "CC BY-ND 3.0 (presumida; gov.br)",
+      "apos_saneamento_metadados": "sem_licenca_explicita"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0265",
+      "campo": "atribuicao",
+      "publicado_antes": "Governo Federal — gov.br (CC BY-ND 3.0)",
+      "apos_saneamento_metadados": "Governo Federal — gov.br"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0269",
+      "campo": "atribuicao",
+      "publicado_antes": "Governo Federal — gov.br (CC BY-ND 3.0)",
+      "apos_saneamento_metadados": ""
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0278",
+      "campo": "atribuicao",
+      "publicado_antes": "Governo Federal — gov.br (CC BY-ND 3.0)",
+      "apos_saneamento_metadados": "Governo Federal — gov.br"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0388",
+      "campo": "atribuicao",
+      "publicado_antes": "Governo Federal — gov.br (CC BY-ND 3.0)",
+      "apos_saneamento_metadados": "Governo Federal — gov.br"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0416",
+      "campo": "atribuicao",
+      "publicado_antes": "Governo Federal — gov.br (CC BY-ND 3.0)",
+      "apos_saneamento_metadados": "Governo Federal — gov.br"
+    }
+  ]
+}

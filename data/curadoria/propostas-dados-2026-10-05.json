@@ -1,0 +1,318 @@
+{
+  "versao": 1,
+  "correcoes": [
+    {
+      "id_interno": "FRM-CP-2026-EDU-0110",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-EDU-0110",
+          "novo": "https://www.ba.gov.br/educacao/sites/site-sec/files/2025-02/Plano%20Estadual%20de%20Educa%C3%A7%C3%A3o%20em%20Pris%C3%B5es%202021-1.pdf"
+        },
+        "resumo": {
+          "anterior": null,
+          "novo": "Plano de organização e ampliação da educação para pessoas privadas de liberdade e egressas do sistema prisional da Bahia."
+        },
+        "descricao_tecnica": {
+          "anterior": null,
+          "novo": "Documento elaborado pela SEAP e pela Secretaria da Educação da Bahia, em abril de 2021, para organizar e ampliar a educação de pessoas privadas de liberdade e egressas do sistema prisional. Prevê educação básica na modalidade EJA, ações de leitura, qualificação profissional e acompanhamento por metas e indicadores."
+        },
+        "apresentacao": {
+          "anterior": null,
+          "novo": "Documento elaborado pela SEAP e pela Secretaria da Educação da Bahia, em abril de 2021, para organizar e ampliar a educação de pessoas privadas de liberdade e egressas do sistema prisional. Prevê educação básica na modalidade EJA, ações de leitura, qualificação profissional e acompanhamento por metas e indicadores."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "informacoes_complementares": {
+          "anterior": null,
+          "novo": "O monitoramento do documento histórico delimita 2021–2024. Há um plano posterior na pasta 2025–2028 da SENAPPEN, cujo texto declara 2025–2029. A existência do sucessor não comprova execução das metas do plano histórico."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: a introdução do plano histórico menciona 2020–2024 e seu monitoramento 2021–2024. Preservado o título do registro. O documento posterior, de capa 2024, está em pasta 2025–2028, mas afirma vigência 2025–2029 na apresentação. Essa divergência deve ser mantida explícita; não foi inferida prorrogação do plano histórico."
+        },
+        "continuidade_governos": {
+          "anterior": null,
+          "novo": "Há um documento posterior no repositório da SENAPPEN. Isso não demonstra continuidade de execução das metas do plano histórico 2021–2024."
+        }
+      },
+      "justificativa": "Substitui referência provisória pelo documento oficial correspondente e preenche a descrição ausente. O prazo documentado já passou e não foi comprovada prorrogação ou execução atual; Sem informação não significa encerramento.",
+      "referencias": [
+        {
+          "url": "https://www.ba.gov.br/educacao/sites/site-sec/files/2025-02/Plano%20Estadual%20de%20Educa%C3%A7%C3%A3o%20em%20Pris%C3%B5es%202021-1.pdf",
+          "titulo": "Plano Estadual de Educação para Pessoas Privadas de Liberdade e Egressas do Sistema Prisional — Bahia, abril de 2021",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ba.pdf",
+          "titulo": "Plano Estadual de Educação para Pessoas Privadas de Liberdade — Bahia, capa 2024, apresentação 2025–2029",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0112",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-EDU-0112",
+          "novo": "https://www.ba.gov.br/educacao/32/formas-de-oferta"
+        },
+        "descricao_tecnica": {
+          "anterior": "O Proeja foi criado inicialmente pelo Decreto nº. 5.478, de 24/06/2005 e denominado como Programa de Integração da Educação Profissional ao Ensino Médio na Modalidade Educação de Jovens e Adultos.O programa teve inicialmente como base de ação a Rede Federal de Educação Profissional e Tecnológica.\nPor meio do Decreto nº. 5.840, de 13 de julho de 2006, é ampliado em termos de abrangência e aprofundado em seus princípios pedagógicos, passando a se chamar Programa Nacional de Integração da Educação Profissional com a Educação Básica na Modalidade de Educação de Jovens e Adultos (Proeja)",
+          "novo": "Na rede estadual da Bahia, o PROEJA Médio integra a educação profissional ao Ensino Médio para pessoas de 18 anos ou mais que concluíram o Ensino Fundamental. A SEC informa duração de cinco semestres, com turmas diurnas ou noturnas. As unidades, os cursos e as vagas dependem da oferta de cada período."
+        },
+        "apresentacao": {
+          "anterior": "O Proeja foi criado inicialmente pelo Decreto nº. 5.478, de 24/06/2005 e denominado como Programa de Integração da Educação Profissional ao Ensino Médio na Modalidade Educação de Jovens e Adultos.O programa teve inicialmente como base de ação a Rede Federal de Educação Profissional e Tecnológica.\nPor meio do Decreto nº. 5.840, de 13 de julho de 2006, é ampliado em termos de abrangência e aprofundado em seus princípios pedagógicos, passando a se chamar Programa Nacional de Integração da Educação Profissional com a Educação Básica na Modalidade de Educação de Jovens e Adultos (Proeja)",
+          "novo": "Na rede estadual da Bahia, o PROEJA Médio integra a educação profissional ao Ensino Médio para pessoas de 18 anos ou mais que concluíram o Ensino Fundamental. A SEC informa duração de cinco semestres, com turmas diurnas ou noturnas. As unidades, os cursos e as vagas dependem da oferta de cada período."
+        },
+        "informacoes_complementares": {
+          "anterior": "A Bahia é a maior ofertante do Brasil na forma de articulação PROEJA entre as redes públicas e privadas, segundo o Censo INEP/MEC. A rede estadual conta com mais de 70 mil estudantes matriculados em cursos técnicos. A alimentação escolar é garantida aos estudantes do período noturno, como incentivo à permanência",
+          "novo": "A SEC divulgou matrícula para o semestre 2026.2 por meio da Portaria nº 1299/2026. Essa publicação documenta uma oferta datada; o prazo anunciado encerrou-se em julho de 2026."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: A oferta estadual foi documentada para 2026.2. Não implica matrícula aberta hoje nem confirma oferta idêntica em todas as instituições federais citadas no levantamento. Não foram confirmadas a aplicação específica do PEJA, o fluxo de repasse/prestação de contas nem a carga de 2.400 h ao conjunto dos cursos estaduais; esses detalhes foram retirados."
+        },
+        "carga_horaria": {
+          "anterior": "Varia conforme o curso (ex.: técnico integrado costuma durar anos letivos; exemplo IFF: 3 anos). PROEJA Técnico (Ensino Médio integrado): mínimo de 2.400 horas (1.200h formação geral + 1.200h formação técnica). PROEJA FIC (Ensino Fundamental integrado à qualificação): mínimo de 1.600 horas (1.400h formação geral + 200h qualificação)",
+          "novo": "A SEC-BA informa duração de cinco semestres para o PROEJA Médio da rede estadual. A carga horária deve ser consultada no plano de cada curso."
+        },
+        "fonte_financiamento": {
+          "anterior": "Mista: PEJA (Programa de Apoio aos Sistemas de Ensino para Atendimento à Educação de Jovens e Adultos) – recursos federais do FNDE destinados ao custeio de novas turmas de EJA (remuneração de docentes, formação continuada, material didático, alimentação, transporte). FUNDEB – financiamento base por matrícula. Orçamentos estaduais e municipais – contrapartida local. Os saldos do PEJA podem ser utilizados para o PROEJA",
+          "novo": null
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência voluntária da União para estados, DF e municípios, via FNDE – O ente cadastra as turmas no Simec, a SEB/MEC calcula os recursos e o FNDE deposita em conta específica. Os recursos são aplicados exclusivamente em despesas de custeio para manutenção das novas turmas de EJA. A prestação de contas é feita pelo SiGPC até 30 de novembro do ano seguinte, com parecer do CACS enviado pelo Sigecon",
+          "novo": null
+        },
+        "continuidade_governos": {
+          "anterior": "Média/Alta (base normativa permanece, mas oferta varia)",
+          "novo": null
+        }
+      },
+      "justificativa": "Relaciona a ficha estadual à descrição oficial da oferta baiana e remove a afirmação sem referência temporal sobre liderança nacional e 70 mil estudantes, que não distingue o total da educação profissional das matrículas PROEJA.",
+      "referencias": [
+        {
+          "url": "https://www.ba.gov.br/educacao/32/formas-de-oferta",
+          "titulo": "Formas de oferta — Secretaria da Educação da Bahia; atualização de 24/08/2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.ba.gov.br/educacao/noticias/2026-07/3491/matriculas-para-cursos-tecnicos-do-proeja-seguem-abertas-na-rede-estadual-ate",
+          "titulo": "Matrículas para cursos técnicos do PROEJA seguem abertas na rede estadual, até 22 de julho — SEC/BA, 14/07/2026",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0127",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-EDU-0127",
+          "novo": "https://www.sistemas.pa.gov.br/sisleis/legislacao/2295"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "lei"
+        },
+        "descricao_tecnica": {
+          "anterior": "Marco de planejamento que organiza metas e estratégias para a educação básica e modalidades, incluindo alfabetização de jovens e adultos e expansão da EJA",
+          "novo": "O Plano Estadual de Educação do Pará, aprovado pela Lei nº 8.186/2015, estabelece diretrizes e metas para a política educacional estadual durante dez anos contados da publicação. A lei prevê monitoramento contínuo e avaliações bienais, com participação da Seduc, do Conselho Estadual, da Assembleia Legislativa e do Fórum Estadual de Educação."
+        },
+        "apresentacao": {
+          "anterior": "Marco de planejamento que organiza metas e estratégias para a educação básica e modalidades, incluindo alfabetização de jovens e adultos e expansão da EJA",
+          "novo": "O Plano Estadual de Educação do Pará, aprovado pela Lei nº 8.186/2015, estabelece diretrizes e metas para a política educacional estadual durante dez anos contados da publicação. A lei prevê monitoramento contínuo e avaliações bienais, com participação da Seduc, do Conselho Estadual, da Assembleia Legislativa e do Fórum Estadual de Educação."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "informacoes_complementares": {
+          "anterior": "O plano estabelece metas educacionais para 10 anos (2015-2025) e inclui estratégias para ampliar a EJA integrada à educação profissional, principalmente para populações do campo, indígenas e quilombolas",
+          "novo": "A referência consultada é a lei de 2015 e seu plano decenal. Não foi confirmada nesta revisão uma prorrogação nem um plano sucessor."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: O artigo 1º prevê dez anos a partir da publicação. Prorrogação, sucessão e execução posterior ao prazo não foram verificadas; por isso a situação revista fica Sem informação. A afirmação genérica de continuidade foi retirada porque não substitui a comprovação de prorrogação ou sucessão."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim, como referência estruturante do planejamento estadual",
+          "novo": null
+        }
+      },
+      "justificativa": "Substitui marcador interno pela lei estadual específica e distingue o plano documentado da continuidade após o decênio. A falta de prova de continuidade não autoriza classificá-lo como encerrado.",
+      "referencias": [
+        {
+          "url": "https://www.sistemas.pa.gov.br/sisleis/legislacao/2295",
+          "titulo": "Lei Ordinária nº 8.186, de 23 de junho de 2015 — Plano Estadual de Educação do Pará",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0323",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-EDU-0323",
+          "novo": "https://www2.ifal.edu.br/o-ifal/ensino/legislacao-e-normas/coordenacao-sistemica-de-registro-academico-2/requerimento-de-solicitacao-de-certificacao-do-ensino-medio-via-encceja"
+        },
+        "resumo": {
+          "anterior": "Política de mobilidade educacional e laboral por certificação de etapas escolares para quem teve trajetória interrompida",
+          "novo": "Referência ao Encceja em Alagoas, com procedimento de certificação do Ensino Médio documentado pelo IFAL."
+        },
+        "descricao_tecnica": {
+          "anterior": "Em Alagoas se articula ao exame estadual do Vem que Dá Tempo e à atuação certificadora do IFAL",
+          "novo": "Em Alagoas, o IFAL realiza certificação do Ensino Médio com base em resultados do Encceja a partir da edição de 2017. O serviço atende participantes com 18 anos na data da prova que indicaram o instituto como certificador, conforme os requisitos de desempenho e a documentação exigida. Também há declaração parcial de proficiência."
+        },
+        "apresentacao": {
+          "anterior": "Em Alagoas se articula ao exame estadual do Vem que Dá Tempo e à atuação certificadora do IFAL",
+          "novo": "Em Alagoas, o IFAL realiza certificação do Ensino Médio com base em resultados do Encceja a partir da edição de 2017. O serviço atende participantes com 18 anos na data da prova que indicaram o instituto como certificador, conforme os requisitos de desempenho e a documentação exigida. Também há declaração parcial de proficiência."
+        },
+        "informacoes_complementares": {
+          "anterior": "O relatório lê a certificação como atalho legítimo de conclusão e ampliação de elegibilidade para vagas e cursos técnicos",
+          "novo": "A página do IFAL, atualizada em janeiro de 2026, informa o procedimento de requerimento e os documentos necessários. O atendimento descrito refere-se à certificação do Ensino Médio."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: A fonte documenta o IFAL como certificador do Ensino Médio. Não confirma articulação formal com Vem que Dá Tempo nem abrange todos os certificadores do Ensino Fundamental em Alagoas."
+        }
+      },
+      "justificativa": "Adiciona fonte primária e elimina a relação não comprovada com Vem que Dá Tempo e o juízo editorial de atalho legítimo. A atuação certificadora do IFAL é documentada diretamente.",
+      "referencias": [
+        {
+          "url": "https://www2.ifal.edu.br/o-ifal/ensino/legislacao-e-normas/coordenacao-sistemica-de-registro-academico-2/requerimento-de-solicitacao-de-certificacao-do-ensino-medio-via-encceja",
+          "titulo": "Requerimento de solicitação de Certificação do Ensino Médio via Encceja — IFAL; atualização de 14/01/2026",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0335",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-EDU-0335",
+          "novo": "https://sapl.al.al.leg.br/norma/1501"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "lei"
+        },
+        "resumo": {
+          "anterior": "Política de base para garantir direitos de aprendizagem e reduzir distorção idade-série na educação básica",
+          "novo": "Política estadual para assegurar direitos de aprendizagem de estudantes da educação básica das redes públicas de Alagoas."
+        },
+        "descricao_tecnica": {
+          "anterior": "Ainda que não seja exclusiva de EJA, atua na origem da demanda futura por retorno escolar ao enfrentar fracasso escolar, atraso e abandono",
+          "novo": "O Programa Escola 10 foi instituído pela Lei estadual nº 8.048, de 23 de novembro de 2018, para assegurar direitos de aprendizagem na educação básica das redes públicas de Alagoas. A norma atribui responsabilidades compartilhadas a profissionais da educação e gestores públicos. Seu escopo é mais amplo que a EJA."
+        },
+        "apresentacao": {
+          "anterior": "Ainda que não seja exclusiva de EJA, atua na origem da demanda futura por retorno escolar ao enfrentar fracasso escolar, atraso e abandono",
+          "novo": "O Programa Escola 10 foi instituído pela Lei estadual nº 8.048, de 23 de novembro de 2018, para assegurar direitos de aprendizagem na educação básica das redes públicas de Alagoas. A norma atribui responsabilidades compartilhadas a profissionais da educação e gestores públicos. Seu escopo é mais amplo que a EJA."
+        },
+        "informacoes_complementares": {
+          "anterior": "Funciona como base sistêmica do desenho educacional recente do estado",
+          "novo": "A Portaria/SEDUC nº 4609/2025 publicou vagas de articuladores de ensino vinculadas ao programa nas redes municipais."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: O ato de 2025 documenta implementação naquele período. O metadado Data Fim Vigência no SAPL coincide com a data da lei e não foi adotado como prova de revogação. Não é curso exclusivo de EJA."
+        }
+      },
+      "justificativa": "Vincula a ficha à lei instituidora e a um ato de implementação de 2025, substituindo a interpretação causal sobre demanda futura de EJA por finalidade sustentada na norma.",
+      "referencias": [
+        {
+          "url": "https://sapl.al.al.leg.br/norma/1501",
+          "titulo": "Lei Ordinária nº 8.048, de 23 de novembro de 2018 — institui o Programa Escola 10",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://diario.imprensaoficial.al.gov.br/apinova/api/editions/viewPdf/50632",
+          "titulo": "Diário Oficial de Alagoas de 21/03/2025, p. 36 — Portaria/SEDUC nº 4609/2025",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0257",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://placeholder.frm-catalogo.local/sem-fonte/FRM-CP-2026-TRAB-0257",
+          "novo": "https://penedo.al.gov.br/2026/07/14/emprega-mais-alagoas-e-criando-renda-comecam-em-penedo-com-quatro-cursos/"
+        },
+        "resumo": {
+          "anterior": "Frente recente de qualificação gratuita voltada a adultos e jovens adultos",
+          "novo": "Iniciativa estadual de qualificação profissional gratuita, com execução municipal documentada em Alagoas."
+        },
+        "descricao_tecnica": {
+          "anterior": "Insere-se no centro do recorte do projeto ao oferecer credenciais rápidas e conexão com oportunidades de trabalho",
+          "novo": "O Emprega Mais Alagoas é uma iniciativa estadual de qualificação profissional executada em parceria com municípios. Em Penedo, publicações oficiais de julho e setembro de 2026 documentam cursos gratuitos e entrega de certificados, em ações apresentadas conjuntamente com o programa Criando Renda."
+        },
+        "apresentacao": {
+          "anterior": "Insere-se no centro do recorte do projeto ao oferecer credenciais rápidas e conexão com oportunidades de trabalho",
+          "novo": "O Emprega Mais Alagoas é uma iniciativa estadual de qualificação profissional executada em parceria com municípios. Em Penedo, publicações oficiais de julho e setembro de 2026 documentam cursos gratuitos e entrega de certificados, em ações apresentadas conjuntamente com o programa Criando Renda."
+        },
+        "base_legal": {
+          "anterior": "Atos e divulgações estaduais de 2024 e 2025",
+          "novo": "PPA de Alagoas 2024–2027, ação 3763 — Emprega Mais Alagoas. Ato específico de criação não identificado nesta revisão."
+        },
+        "informacoes_complementares": {
+          "anterior": "O relatório menciona expansão de vagas e formações em áreas diversas em 2024 e 2025",
+          "novo": "Há execução documentada em Penedo em 2026. Os quantitativos publicados agregam Emprega Mais Alagoas e Criando Renda e não devem ser atribuídos somente a este programa."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Curadoria documental de 05/10/2026: As notícias referem-se a ações conjuntas em Penedo. Não comprovam escala estadual, vagas atualmente abertas, resultados de emprego nem a data de criação do programa."
+        }
+      },
+      "justificativa": "Adiciona evidência primária da existência e execução local, retirando formulações sobre credenciais rápidas e conexão com oportunidades não demonstradas. O PPA identifica a ação orçamentária; não substitui um ato específico de criação.",
+      "referencias": [
+        {
+          "url": "https://penedo.al.gov.br/2026/07/14/emprega-mais-alagoas-e-criando-renda-comecam-em-penedo-com-quatro-cursos/",
+          "titulo": "Emprega Mais Alagoas e Criando Renda começam em Penedo com quatro cursos — Prefeitura de Penedo, 14/07/2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://penedo.al.gov.br/2026/09/18/programas-criando-renda-e-emprega-mais-alagoas-formam-mais-doze-turmas-em-penedo/",
+          "titulo": "Programas Criando Renda e Emprega Mais Alagoas formam mais doze turmas em Penedo — Prefeitura de Penedo, 18/09/2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://dados.al.gov.br/catalogo/dataset/bbd4b0d7-d24c-4560-8f9d-4c47cdf99512/resource/b7a168bb-9ae3-411e-b95e-887ea8b5868a/download/ppa-2024-2027_consolidado.pdf",
+          "titulo": "PPA de Alagoas 2024–2027 — ação 3763 Emprega Mais Alagoas, p. 66; dados de 25/02/2024",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    }
+  ]
+}

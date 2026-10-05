@@ -1,0 +1,1471 @@
+{
+  "versao": 1,
+  "correcoes": [
+    {
+      "id_interno": "FRM-CP-2026-EDU-0010",
+      "campos": {
+        "resumo": {
+          "anterior": "Estratégia e plataforma para identificar, registrar e acompanhar crianças e adolescentes fora da escola, articulando a rede de proteção para reinserção e permanência",
+          "novo": "Estratégia do UNICEF e da Undime que combina trabalho intersetorial e uma ferramenta gratuita para identificar e acompanhar crianças e adolescentes fora da escola ou em risco de abandono. Estados e municípios aderem à estratégia e organizam equipes para o acompanhamento dos casos, a rematrícula e a permanência na escola."
+        },
+        "apresentacao": {
+          "anterior": "A Busca Ativa Escolar no Rio de Janeiro envolve a adesão do Governo do Estado à estratégia do UNICEF/Undime  e a articulação de ações intersetoriais para identificar e acompanhar crianças e adolescentes fora da escola ou em risco de evasão.No RJ, pode ser adotada por municípios para monitorar evasão e infrequência, acionar equipes intersetoriais e registrar encaminhamentos. Atua na prevenção do abandono escolar e na garantia do direito à educação, com forte componente de trabalho territorial",
+          "novo": "Estratégia do UNICEF e da Undime que combina trabalho intersetorial e uma ferramenta gratuita para identificar e acompanhar crianças e adolescentes fora da escola ou em risco de abandono. Estados e municípios aderem à estratégia e organizam equipes para o acompanhamento dos casos, a rematrícula e a permanência na escola."
+        },
+        "descricao_tecnica": {
+          "anterior": "A Busca Ativa Escolar no Rio de Janeiro envolve a adesão do Governo do Estado à estratégia do UNICEF/Undime  e a articulação de ações intersetoriais para identificar e acompanhar crianças e adolescentes fora da escola ou em risco de evasão.No RJ, pode ser adotada por municípios para monitorar evasão e infrequência, acionar equipes intersetoriais e registrar encaminhamentos. Atua na prevenção do abandono escolar e na garantia do direito à educação, com forte componente de trabalho territorial",
+          "novo": "Estratégia do UNICEF e da Undime que combina trabalho intersetorial e uma ferramenta gratuita para identificar e acompanhar crianças e adolescentes fora da escola ou em risco de abandono. Estados e municípios aderem à estratégia e organizam equipes para o acompanhamento dos casos, a rematrícula e a permanência na escola."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "UNICEF",
+            "Undime",
+            "Secretaria de Estado de Educação",
+            "Secretaria de Estado de Saúde",
+            "Secretaria de Estado de Desenvolvimento/Assistência Social",
+            "Prefeituras"
+          ],
+          "novo": [
+            "UNICEF",
+            "Undime",
+            "Governos estaduais e municipais aderentes, com equipes de educação, saúde e assistência social"
+          ]
+        },
+        "base_legal": {
+          "anterior": "Resolução SEEDUC N.º 5.879/2020 + Lei N.º 9.593/2022",
+          "novo": "A estratégia depende de adesão e organização local. As normas do Rio de Janeiro presentes no levantamento original não constituem sua base normativa nacional."
+        },
+        "informacoes_complementares": {
+          "anterior": "No âmbito estadual, a SEEDUC-RJ lançou a campanha “Bora Pra Escola” (junho de 2024) e estruturou governança de apoio como o Grupo Interinstitucional de Trabalho Estadual (Gite). Já no Município do Rio, há um programa permanente de busca ativa (“Bora pra Escola”) instituído por decreto em 26/05/2022, reforçando a institucionalização local",
+          "novo": "A metodologia consultada tem como público crianças e adolescentes. Sua aplicação à busca ativa de adultos e idosos da EJA exige adaptação e não está demonstrada nesta referência."
+        },
+        "transferencia_recursos": {
+          "anterior": "Os recursos financeiros dos entes executores (municípios e estado) são alocados e executados diretamente por meio dos orçamentos próprios das secretarias envolvidas (Educação, Saúde e Assistência Social), utilizando seus mecanismos internos de execução orçamentária",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": "Acre, Alagoas, Amazonas, Amapá, Bahia, Espírito Santo, Goiás, Maranhão, Minas Gerais, Mato Grosso, Pará, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Norte, Rondônia, Roraima, Rio Grande do Sul, Sergipe, Tocantins",
+          "novo": "Acre, Alagoas, Amazonas, Amapá, Bahia, Espírito Santo, Goiás, Maranhão, Minas Gerais, Mato Grosso, Pará, Paraíba, Paraná, Pernambuco, Piauí, Rio de Janeiro, Rio Grande do Norte, Rondônia, Roraima, Rio Grande do Sul, Sergipe, Tocantins\n\nReferência nacional conferida. Adesão, funcionamento das equipes e resultados variam por território; esta revisão não confirma cobertura local."
+        },
+        "continuidade_governos": {
+          "anterior": "Tende a ser contínua quando institucionalizada no município; varia conforme gestão",
+          "novo": "A continuidade das equipes e ações depende da adesão e organização local; não foi aferida nesta revisão."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamentos próprios dos entes executores (principal fonte) - Prefeituras e governos estaduais.  Recursos locais (equipes e rede de proteção) + apoio técnico da parceria (plataforma e capacitação)",
+          "novo": "Não foi confirmado um mecanismo nacional único de financiamento; responsabilidades e despesas devem ser verificadas no arranjo local."
+        }
+      },
+      "justificativa": "O verbete nacional reproduzia a execução e instrumentos do Rio de Janeiro. Retirada previsão de continuidade e qualificação do orçamento local como fonte principal sem demonstração financeira.",
+      "referencias": [
+        {
+          "url": "https://buscaativaescolar.org.br/",
+          "titulo": "Busca Ativa Escolar — apresentação da estratégia",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0216",
+      "campos": {
+        "resumo": {
+          "anterior": "O SINE é uma política federal de intermediação de mão de obra, criada em 1975, que conecta trabalhadores a vagas de emprego formais. Em São Paulo, o sistema é operacionalizado pelos Postos de Atendimento ao Trabalhador (PAT), que utilizam a plataforma federal \"Emprega Brasil\" para cadastro de currículos, captação de vagas, encaminhamento para entrevistas e habilitação ao seguro-desemprego",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Amazonas. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "apresentacao": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Amazonas. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Amazonas. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+          "novo": "https://portaldotrabalhador.am.gov.br/"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "informacoes_complementares": {
+          "anterior": "Em 2026 o Sine Manaus alcançou o primeiro lugar no ranking nacional de eficiência da Rede Sine, registrando 67,32% de eficiência nos encaminhamentos para o mercado de trabalho, liderando com ampla vantagem entre os serviços municipais de emprego do país. Outro indicador que reforça o desempenho da capital amazonense é o ranking nacional de adequação entre o perfil do trabalhador e as vagas oferecidas, que mede o grau de compatibilidade entre os candidatos encaminhados e as exigências das empresas. Nesse critério, Manaus aparece na segunda colocação nacional, com 87,48% de adequação",
+          "novo": null
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "MTE (União) + entes conveniados"
+          ],
+          "novo": [
+            "Secretaria Executiva do Trabalho e Empreendedorismo do Amazonas (SETEMP)",
+            "Ministério do Trabalho e Emprego e entes participantes do Sine"
+          ]
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retiradas descrições dos PATs de São Paulo, que não demonstravam o funcionamento desta rede. Não foram confirmados totais atuais de unidades, vagas, atendimento ou resultados. Dados do Sine municipal de Manaus não foram tratados como resultado do Sine estadual."
+        },
+        "continuidade_governos": {
+          "anterior": "A estrutura da SETEMP e as unidades do Sine Amazonas são mantidas ao longo das gestões, com expansão da rede de atendimento (ex: nova unidade no SindMetal-AM em 2025)",
+          "novo": "O Sine possui marcos nacionais desde 1975; isso não demonstra funcionamento ininterrupto da rede local ao longo das gestões."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento público (federal e contrapartidas estaduais/municipais, conforme convênios) e estrutura local. Fundo de Amparo ao Trabalhador (FAT) (principal) + cofinanciamento por recursos próprios de Estados, Distrito Federal e Municípios, por meio dos Fundos do Trabalho; regras de financiamento e repasse definidas pela Lei nº 13.667/2018 e por normas do Conselho Deliberativo do Fundo de Amparo ao Trabalhador (CODEFAT)",
+          "novo": "A Lei nº 13.667/2018 prevê recursos do FAT, aportes dos entes aderentes e outras fontes. A composição efetiva desta rede local não foi auditada."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático “fundo a fundo”. A fonte principal é o Fundo de Amparo ao Trabalhador (FAT). A União transfere recursos automaticamente do FAT para o Fundo do Trabalho do estado/município/DF que aderiu ao SINE",
+          "novo": "A lei prevê transferências fundo a fundo, sujeitas às condições e critérios aplicáveis aos entes aderentes; não se presume repasse automático incondicional nem valor local."
+        }
+      },
+      "justificativa": "Correção de texto paulista copiado em registro de outra UF e remoção de números sem referência territorial comparável. Separada permanência normativa nacional da continuidade da rede local; financiamento legal não prova recebimento automático por cada ente.",
+      "referencias": [
+        {
+          "url": "https://portaldotrabalhador.am.gov.br/",
+          "titulo": "SETEMP — Portal do Trabalhador do Amazonas",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.gov.br/pt-br/servicos/buscar-emprego-no-sistema-nacional-de-emprego-sine",
+          "titulo": "Gov.br — funcionamento geral da intermediação de emprego",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13667.htm",
+          "titulo": "Lei nº13.667/2018 — organização e financiamento do Sine, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0228",
+      "campos": {
+        "resumo": {
+          "anterior": "O SINE é uma política federal de intermediação de mão de obra, criada em 1975, que conecta trabalhadores a vagas de emprego formais. Em São Paulo, o sistema é operacionalizado pelos Postos de Atendimento ao Trabalhador (PAT), que utilizam a plataforma federal \"Emprega Brasil\" para cadastro de currículos, captação de vagas, encaminhamento para entrevistas e habilitação ao seguro-desemprego",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Mato Grosso. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "apresentacao": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Mato Grosso. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Mato Grosso. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+          "novo": "https://www.secom.mt.gov.br/web/setas/sine3"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "informacoes_complementares": {
+          "anterior": "O Sistema Nacional de Emprego (Sine) possui 29 unidades em Mato Grosso; Uma unidade por município, com\nexceção da capital do Estado que devido a demanda conta com dois postos de atendimento, um na Praça Ipiranga,\ndentro do Ganha Tempo, e a Matriz, próximo ao Pronto Socorro de Cuiabá https://www.folhamax.com/cidades/sine-esta-presente-em-28-municipios-de-mato-grosso/130732",
+          "novo": null
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "MTE (União) + entes conveniados"
+          ],
+          "novo": [
+            "Secretaria de Estado de Assistência Social e Cidadania de Mato Grosso (Setasc)",
+            "Ministério do Trabalho e Emprego e entes participantes do Sine"
+          ]
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retiradas descrições dos PATs de São Paulo, que não demonstravam o funcionamento desta rede. Não foram confirmados totais atuais de unidades, vagas, atendimento ou resultados."
+        },
+        "continuidade_governos": {
+          "anterior": "im, há continuidade entre governos no caso do Sistema Nacional de Emprego (SINE). O sistema foi criado em 1975, pelo Decreto nº 76.403, passou a ser regido por nova lei em 2018 (Lei nº 13.667), teve alterações legislativas em 2023 e 2024, e segue ativo na estrutura do Ministério do Trabalho e Emprego, com adesão de entes subnacionais e acesso a recursos do Fundo de Amparo ao Trabalhador (FAT). Isso indica forte continuidade institucional e normativa ao longo de diferentes governos, ainda que com atualizações e ajustes em seu desenho.",
+          "novo": "O Sine possui marcos nacionais desde 1975; isso não demonstra funcionamento ininterrupto da rede local ao longo das gestões."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento estadual + arranjos do Sistema Público de Emprego",
+          "novo": "A Lei nº 13.667/2018 prevê recursos do FAT, aportes dos entes aderentes e outras fontes. A composição efetiva desta rede local não foi auditada."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático “fundo a fundo”. A fonte principal é o Fundo de Amparo ao Trabalhador (FAT). A União transfere recursos automaticamente do FAT para o Fundo do Trabalho do estado/município/DF que aderiu ao SINE",
+          "novo": "A lei prevê transferências fundo a fundo, sujeitas às condições e critérios aplicáveis aos entes aderentes; não se presume repasse automático incondicional nem valor local."
+        }
+      },
+      "justificativa": "Correção de texto paulista copiado em registro de outra UF e remoção de números sem referência territorial comparável. Separada permanência normativa nacional da continuidade da rede local; financiamento legal não prova recebimento automático por cada ente.",
+      "referencias": [
+        {
+          "url": "https://www.secom.mt.gov.br/web/setas/sine3",
+          "titulo": "Setasc — Sistema Nacional de Emprego em Mato Grosso",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.gov.br/pt-br/servicos/buscar-emprego-no-sistema-nacional-de-emprego-sine",
+          "titulo": "Gov.br — funcionamento geral da intermediação de emprego",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13667.htm",
+          "titulo": "Lei nº13.667/2018 — organização e financiamento do Sine, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0258",
+      "campos": {
+        "resumo": {
+          "anterior": "O SINE é uma política federal de intermediação de mão de obra que conecta trabalhadores a vagas de emprego formais. Em São Paulo, o sistema é operacionalizado pelos Postos de Atendimento ao Trabalhador (PAT), que utilizam a plataforma federal \"Emprega Brasil\" para cadastro de currículos, captação de vagas, encaminhamento para entrevistas e habilitação ao seguro-desemprego",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Alagoas. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "apresentacao": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Alagoas. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Alagoas. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+          "novo": "https://alagoasdigital.al.gov.br/servico/73"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retiradas descrições dos PATs de São Paulo, que não demonstravam o funcionamento desta rede. Não foram confirmados totais atuais de unidades, vagas, atendimento ou resultados."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim, há continuidade entre governos no caso do Sistema Nacional de Emprego (SINE). O sistema foi criado em 1975, pelo Decreto N.º 76.403, passou a ser regido por nova lei em 2018 (Lei N.º 13.667), teve alterações legislativas em 2023 e 2024, e segue ativo na estrutura do Ministério do Trabalho e Emprego, com adesão de entes subnacionais e acesso a recursos do Fundo de Amparo ao Trabalhador (FAT). Isso indica forte continuidade institucional e normativa ao longo de diferentes governos, ainda que com atualizações e ajustes em seu desenho",
+          "novo": "O Sine possui marcos nacionais desde 1975; isso não demonstra funcionamento ininterrupto da rede local ao longo das gestões."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento público (federal e contrapartidas estaduais/municipais, conforme convênios) e estrutura local. Fundo de Amparo ao Trabalhador (FAT) (principal) + cofinanciamento por recursos próprios de Estados, Distrito Federal e Municípios, por meio dos Fundos do Trabalho; regras de financiamento e repasse definidas pela Lei N.º 13.667/2018 e por normas do Conselho Deliberativo do Fundo de Amparo ao Trabalhador (CODEFAT)",
+          "novo": "A Lei nº 13.667/2018 prevê recursos do FAT, aportes dos entes aderentes e outras fontes. A composição efetiva desta rede local não foi auditada."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático “fundo a fundo”. A fonte principal é o Fundo de Amparo ao Trabalhador (FAT). A União transfere recursos automaticamente do FAT para o Fundo do Trabalho do estado/município/DF que aderiu ao SINE",
+          "novo": "A lei prevê transferências fundo a fundo, sujeitas às condições e critérios aplicáveis aos entes aderentes; não se presume repasse automático incondicional nem valor local."
+        }
+      },
+      "justificativa": "Correção de texto paulista copiado em registro de outra UF e remoção de números sem referência territorial comparável. Separada permanência normativa nacional da continuidade da rede local; financiamento legal não prova recebimento automático por cada ente.",
+      "referencias": [
+        {
+          "url": "https://alagoasdigital.al.gov.br/servico/73",
+          "titulo": "Alagoas Digital — serviços do Sine para empresas",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.gov.br/pt-br/servicos/buscar-emprego-no-sistema-nacional-de-emprego-sine",
+          "titulo": "Gov.br — funcionamento geral da intermediação de emprego",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13667.htm",
+          "titulo": "Lei nº13.667/2018 — organização e financiamento do Sine, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0268",
+      "campos": {
+        "resumo": {
+          "anterior": "O SINE é uma política federal de intermediação de mão de obra, criada em 1975, que conecta trabalhadores a vagas de emprego formais. Em São Paulo, o sistema é operacionalizado pelos Postos de Atendimento ao Trabalhador (PAT), que utilizam a plataforma federal \"Emprega Brasil\" para cadastro de currículos, captação de vagas, encaminhamento para entrevistas e habilitação ao seguro-desemprego",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Rio Grande do Norte. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "apresentacao": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Rio Grande do Norte. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Sistema Nacional de Emprego (SINE) foi instituído em 1975 como principal política pública de intermediação de mão de obra no Brasil. Em São Paulo, o SINE é executado pela rede de Postos de Atendimento ao Trabalhador (PAT), em regime de parceria entre o Governo do Estado e as prefeituras municipais. O sistema utiliza a plataforma \"Emprega Brasil\" (antigo \"Mais Emprego\"), que integra as bases de dados de trabalhadores e vagas em todo o território nacional. Além da intermediação, o SINE oferece serviços como habilitação ao seguro-desemprego, orientação profissional e emissão da Carteira de Trabalho Digital",
+          "novo": "Registro do Sistema Nacional de Emprego (Sine) em Rio Grande do Norte. A rede pública aproxima trabalhadores e empregadores por meio de cadastro, registro de vagas e encaminhamento a processos seletivos. O funcionamento de cada posto e os serviços disponíveis devem ser consultados na rede local."
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/trabalho-e-emprego/pt-br/noticias-e-conteudo/2024/janeiro/rede-sine-entenda-o-que-e-e-como-funciona",
+          "novo": "https://www.gov.br/pt-br/servicos/buscar-emprego-no-sistema-nacional-de-emprego-sine"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "informacoes_complementares": {
+          "anterior": "O Sine RN apresenta a Intermediação de Mão de Obra (IMO) como um conjunto de ações de captação de vagas junto a empresas e cadastramento/recrutamento de trabalhadores, compondo a infraestrutura mais direta de acesso a emprego formal, especialmente relevante para públicos de baixa escolaridade, que dependem de canais públicos de encaminhamento. compondo a infraestrutura mais direta de acesso ao emprego formal, especialmente relevante para públicos de baixa escolaridade que dependem de canais públicos de encaminhamento . Além da intermediação, o Sine-RN atua na habilitação ao seguro-desemprego, emissão da Carteira de Trabalho Digital, cadastro de trabalhadores e empregadores, e orientação profissional",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retiradas descrições dos PATs de São Paulo, que não demonstravam o funcionamento desta rede. Não foram confirmados totais atuais de unidades, vagas, atendimento ou resultados. A referência principal explica o serviço nacional; não é uma lista atualizada dos postos potiguares."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim, há continuidade entre governos no caso do Sistema Nacional de Emprego (SINE). O sistema foi criado em 1975, pelo Decreto nº 76.403, passou a ser regido por nova lei em 2018 (Lei nº 13.667), teve alterações legislativas em 2023 e 2024, e segue ativo na estrutura do Ministério do Trabalho e Emprego, com adesão de entes subnacionais e acesso a recursos do Fundo de Amparo ao Trabalhador (FAT). Isso indica forte continuidade institucional e normativa ao longo de diferentes governos, ainda que com atualizações e ajustes em seu desenho",
+          "novo": "O Sine possui marcos nacionais desde 1975; isso não demonstra funcionamento ininterrupto da rede local ao longo das gestões."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento público (federal e contrapartidas estaduais/municipais, conforme convênios) e estrutura local. Fundo de Amparo ao Trabalhador (FAT) (principal) + cofinanciamento por recursos próprios de Estados, Distrito Federal e Municípios, por meio dos Fundos do Trabalho; regras de financiamento e repasse definidas pela Lei nº 13.667/2018 e por normas do Conselho Deliberativo do Fundo de Amparo ao Trabalhador (CODEFAT)",
+          "novo": "A Lei nº 13.667/2018 prevê recursos do FAT, aportes dos entes aderentes e outras fontes. A composição efetiva desta rede local não foi auditada."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático “fundo a fundo”. A fonte principal é o Fundo de Amparo ao Trabalhador (FAT). A União transfere recursos automaticamente do FAT para o Fundo do Trabalho do estado/município/DF que aderiu ao SINE",
+          "novo": "A lei prevê transferências fundo a fundo, sujeitas às condições e critérios aplicáveis aos entes aderentes; não se presume repasse automático incondicional nem valor local."
+        }
+      },
+      "justificativa": "Correção de texto paulista copiado em registro de outra UF e remoção de números sem referência territorial comparável. Separada permanência normativa nacional da continuidade da rede local; financiamento legal não prova recebimento automático por cada ente.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/pt-br/servicos/buscar-emprego-no-sistema-nacional-de-emprego-sine",
+          "titulo": "Gov.br — Buscar emprego no Sine",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2015-2018/2018/lei/l13667.htm",
+          "titulo": "Lei nº13.667/2018 — organização e financiamento do Sine, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0261",
+      "campos": {
+        "resumo": {
+          "anterior": "Os Planos Estaduais de Educação no Sistema Prisional são elaborados de forma conjunta entre a Secretaria de Estado da Educação e a Secretaria de Estado da Justiça e Cidadania, com a participação ampla de representantes dos diversos segmentos sociais. Eles têm por objetivo a garantia da escolarização básica, no nível fundamental e médio, na modalidade de Educação de Jovens e Adultos (EJA) e a educação profissional às pessoas em privação de liberdade, no Sistema Penitenciário do Estado do Paraná, por meio dos Centros Estaduais de Educação Básica para Jovens e Adultos (CEEBJA) e/ou Ações Pedagógicas Descentralizadas (APED)",
+          "novo": "Plano estadual para orientar a educação de pessoas privadas de liberdade e egressas do sistema prisional do Maranhão no ciclo 2025–2028. Organiza responsabilidades, ações educacionais, formação de profissionais e acompanhamento das metas. É um instrumento de planejamento; a execução deve ser examinada nos relatórios e registros de cada rede."
+        },
+        "apresentacao": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Plano estadual para orientar a educação de pessoas privadas de liberdade e egressas do sistema prisional do Maranhão no ciclo 2025–2028. Organiza responsabilidades, ações educacionais, formação de profissionais e acompanhamento das metas. É um instrumento de planejamento; a execução deve ser examinada nos relatórios e registros de cada rede."
+        },
+        "descricao_tecnica": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Plano estadual para orientar a educação de pessoas privadas de liberdade e egressas do sistema prisional do Maranhão no ciclo 2025–2028. Organiza responsabilidades, ações educacionais, formação de profissionais e acompanhamento das metas. É um instrumento de planejamento; a execução deve ser examinada nos relatórios e registros de cada rede."
+        },
+        "fonte_url": {
+          "anterior": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao",
+          "novo": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ma.pdf"
+        },
+        "fonte_tipo": {
+          "anterior": "pagina_programa",
+          "novo": "outros"
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado da Educação e Secretaria de Estado da Justiça e Cidadania"
+          ],
+          "novo": [
+            "Secretaria de Estado da Educação do Maranhão",
+            "Secretaria de Estado de Administração Penitenciária do Maranhão"
+          ]
+        },
+        "ano_criacao": {
+          "anterior": "2011",
+          "novo": "2025–2028 — ciclo do plano consultado"
+        },
+        "base_legal": {
+          "anterior": "Decreto N.º 7626/2011 (instituição do Plano Estratégico de Educação no âmbito do Sistema Prisional - PEESP). Lei N.º 12.433/2011 - Altera a Lei Nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a remição de parte do tempo de execução da pena por estudo ou por trabalho e Lei N.º 19.130/2017 - Institui a diária especial por atividade extrajornada voluntária, a gratificação intra muros, e adota outras providências",
+          "novo": "Lei nº 9.394/1996 (LDB); Lei nº 7.210/1984 (Lei de Execução Penal); Decreto federal nº 7.626/2011; plano estadual para o ciclo 2025–2028, disponível na referência."
+        },
+        "informacoes_complementares": {
+          "anterior": "O sistema educacional prisional do Maranhão alcançou um recorde de participação no Encceja PPL 2025, com mais de 2.000 novos inscritos em comparação a 2023. O crescimento registrado em 2025 reflete o trabalho contínuo da Secretaria de Estado de Administração Penitenciária (Seap) na promoção da educação no sistema prisional. Entre as ações destacam-se programas como o Rumo Certo e a EAD Prisional, além da modernização das unidades, com a expansão de salas de aula, bibliotecas e laboratórios de informática adaptados às necessidades dos internos. Em 2025, o Projeto Vamos Revisar alcança 55 espaços do sistema prisional, contemplando todas as unidades prisionais e as APACs, com a preparação de internos para o ENEM PPL 2025. Resultado histórico: 4.131 inscritos, o maior número já registrado no Maranhão",
+          "novo": null
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência de verbas via Fundeb + pasta estadual de educação",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Documento de planejamento conferido. Metas, previsões financeiras e instrumentos citados não comprovam execução integral, matrículas atuais ou resultados. O texto anterior sobre CEEBJAs/APEDs do Paraná foi retirado."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim. Trata-se de uma poítiica estável e que segue robusto projeto educacional em todo o país",
+          "novo": "Plano para o ciclo 2025–2028; execução e continuidade das ações não aferidas."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "fonte_financiamento": {
+          "anterior": "Tesouro estadual + eventuais cooperações federais (diretrizes PEESP)",
+          "novo": "As fontes devem ser verificadas por ação no plano e nos instrumentos de execução; desembolsos não aferidos nesta revisão."
+        }
+      },
+      "justificativa": "Retirada de resumo copiado do Paraná e de lei estadual sem pertinência demonstrada ao território; uso do plano correspondente. Plano vigente não comprova execução integral, estabilidade ou financiamento efetivamente realizado.",
+      "referencias": [
+        {
+          "url": "https://www.gov.br/senappen/pt-br/acesso-a-informacao/politicas-acoes-e-programas/politicas-penais/educacao/2025-2028/ma.pdf",
+          "titulo": "Plano estadual de educação prisional do Maranhão — 2025–2028",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0485",
+      "campos": {
+        "resumo": {
+          "anterior": "Os Planos Estaduais de Educação no Sistema Prisional são elaborados de forma conjunta entre a Secretaria de Estado da Educação e a Secretaria de Estado da Justiça e Cidadania, com a participação ampla de representantes dos diversos segmentos sociais. Eles têm por objetivo a garantia da escolarização básica, no nível fundamental e médio, na modalidade de Educação de Jovens e Adultos (EJA) e a educação profissional às pessoas em privação de liberdade, no Sistema Penitenciário do Estado do Paraná, por meio dos Centros Estaduais de Educação Básica para Jovens e Adultos (CEEBJA) e/ou Ações Pedagógicas Descentralizadas (APED)",
+          "novo": "Plano estadual para orientar a educação de pessoas privadas de liberdade e egressas do sistema prisional do Tocantins no ciclo 2025–2028. Organiza responsabilidades, ações educacionais, formação de profissionais e acompanhamento das metas. É um instrumento de planejamento; a execução deve ser examinada nos relatórios e registros de cada rede."
+        },
+        "apresentacao": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Plano estadual para orientar a educação de pessoas privadas de liberdade e egressas do sistema prisional do Tocantins no ciclo 2025–2028. Organiza responsabilidades, ações educacionais, formação de profissionais e acompanhamento das metas. É um instrumento de planejamento; a execução deve ser examinada nos relatórios e registros de cada rede."
+        },
+        "descricao_tecnica": {
+          "anterior": "Os PEESP são um programa que visa o fortalecimento da oferta escolar e não escolar associadas à qualificação profissional, técnica e tecnológica, com orientação pedagógica direcionada para o desenvolvimento humano e a cidadania, bem como a reintegração social das pessoas presas e egressas do sistema prisional. Também se propõe a estimular parcerias intersetorial na concepção e implementação de ações educativas articuladas com instituições públicas e privadas",
+          "novo": "Plano estadual para orientar a educação de pessoas privadas de liberdade e egressas do sistema prisional do Tocantins no ciclo 2025–2028. Organiza responsabilidades, ações educacionais, formação de profissionais e acompanhamento das metas. É um instrumento de planejamento; a execução deve ser examinada nos relatórios e registros de cada rede."
+        },
+        "fonte_url": {
+          "anterior": "https://www.to.gov.br/seduc/plano-estadual-de-educacao-para-pessoas-privadas-de-liberdade-e-egressas-do-sistema-prisional-ciclo-2025-2028/67kx4rqwk5ke",
+          "novo": "https://central.to.gov.br/download/463821"
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado da Educação e Secretaria de Estado da Justiça e Cidadania"
+          ],
+          "novo": [
+            "Secretaria da Educação do Tocantins",
+            "Secretaria da Cidadania e Justiça do Tocantins"
+          ]
+        },
+        "ano_criacao": {
+          "anterior": "2010/2011 (marcos nacionais recentes)",
+          "novo": "2025–2028 — ciclo do plano consultado"
+        },
+        "base_legal": {
+          "anterior": "Decreto N.º 7626/2011 (instituição do Plano Estratégico de Educação no âmbito do Sistema Prisional - PEESP). Lei N.º 12.433/2011 - Altera a Lei Nº 7.210, de 11 de julho de 1984 (Lei de Execução Penal), para dispor sobre a remição de parte do tempo de execução da pena por estudo ou por trabalho e Lei N.º 19.130/2017 - Institui a diária especial por atividade extrajornada voluntária, a gratificação intra muros, e adota outras providências",
+          "novo": "Lei nº 9.394/1996 (LDB); Lei nº 7.210/1984 (Lei de Execução Penal); Decreto federal nº 7.626/2011; plano estadual para o ciclo 2025–2028, disponível na referência."
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência de verbas via Fundeb + pasta estadual de educação",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Documento de planejamento conferido. Metas, previsões financeiras e instrumentos citados não comprovam execução integral, matrículas atuais ou resultados. O texto anterior sobre CEEBJAs/APEDs do Paraná foi retirado."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim. Trata-se de uma poítiica estável e que segue robusto projeto educacional em todo o país",
+          "novo": "Plano para o ciclo 2025–2028; execução e continuidade das ações não aferidas."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "fonte_financiamento": {
+          "anterior": "Tesouro estadual + eventuais cooperações federais (diretrizes PEESP)",
+          "novo": "As fontes devem ser verificadas por ação no plano e nos instrumentos de execução; desembolsos não aferidos nesta revisão."
+        }
+      },
+      "justificativa": "Retirada de resumo copiado do Paraná e de lei estadual sem pertinência demonstrada ao território; uso do plano correspondente. Plano vigente não comprova execução integral, estabilidade ou financiamento efetivamente realizado.",
+      "referencias": [
+        {
+          "url": "https://central.to.gov.br/download/463821",
+          "titulo": "Plano estadual de educação prisional do Tocantins — 2025–2028",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-PSOC-0006",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.gov.br/mds/pt-br/auxilio-brasil/beneficios",
+          "novo": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "lei"
+        },
+        "resumo": {
+          "anterior": "Programa federal de transferência de renda que substituiu temporariamente o Bolsa Família (2021–2022), com benefícios e regras próprios",
+          "novo": "Programa federal de transferência de renda instituído em 2021 e substituído pelo Bolsa Família em 2023. Esta ficha preserva a experiência histórica; não se trata de benefício atualmente aberto sob a denominação Auxílio Brasil."
+        },
+        "apresentacao": {
+          "anterior": "Programa federal de transferência de renda que substituiu temporariamente o Bolsa Família (2021–2022), com benefícios e regras próprios. Funcionou como política de proteção social e renda no pós-pandemia, com impactos indiretos em permanência escolar e vulnerabilidade. Foi encerrado/substituído com a retomada do Bolsa Família em 2023, mantendo o Cadastro Único como base de elegibilidade",
+          "novo": "Programa federal de transferência de renda instituído em 2021 e substituído pelo Bolsa Família em 2023. Esta ficha preserva a experiência histórica; não se trata de benefício atualmente aberto sob a denominação Auxílio Brasil."
+        },
+        "descricao_tecnica": {
+          "anterior": "Programa federal de transferência de renda que substituiu temporariamente o Bolsa Família (2021–2022), com benefícios e regras próprios. Funcionou como política de proteção social e renda no pós-pandemia, com impactos indiretos em permanência escolar e vulnerabilidade. Foi encerrado/substituído com a retomada do Bolsa Família em 2023, mantendo o Cadastro Único como base de elegibilidade",
+          "novo": "Programa federal de transferência de renda instituído em 2021 e substituído pelo Bolsa Família em 2023. Esta ficha preserva a experiência histórica; não se trata de benefício atualmente aberto sob a denominação Auxílio Brasil."
+        },
+        "base_legal": {
+          "anterior": "Medida Provisória N.º 1.061/2021 (e conversão na Lei N.º 14.284/2021) e regulamentações; posteriormente substituído pela retomada do Bolsa Família",
+          "novo": "Lei nº 14.284/2021; Lei nº 14.601/2023, art. 1º (substituição pelo Bolsa Família)."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": "EM TODOS OS ESTADOS",
+          "novo": "A referência registra a substituição legal pelo Bolsa Família em 2023. Corrigido o intervalo anterior, que terminava em 2022."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte.",
+      "referencias": [
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2023/lei/l14601.htm",
+          "titulo": "Lei nº 14.601/2023 — substituição do Auxílio Brasil",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0006",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.gov.br/mec/pt-br/areas-de-atuacao/educacao-profissional-e-tecnologica/pronatec",
+          "novo": "https://dadosabertos.mec.gov.br/pronatec"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": "EM TODOS OS ESTADOS",
+          "novo": "A referência descreve o programa nacional e suas iniciativas. Não confirma vagas abertas, cobertura nem execução atual no território da ficha."
+        },
+        "base_legal": {
+          "anterior": "Lei N.º 12.513/2011 (institui o PRONATEC/Bolsa-Formação); Portaria MEC N.º 168/2013 (normas da oferta da Bolsa-Formação); Resolução CD/FNDE N.º 7/2013 (transferência de recursos ao Sistema S para Bolsa-Formação); Lei N.º 10.097/2000 e Decreto N.º 9.579/2018 (regras da Aprendizagem Profissional/Jovem Aprendiz)",
+          "novo": "Lei nº 12.513/2011 (Pronatec), texto compilado, e normas de execução das respectivas ações."
+        },
+        "continuidade_governos": {
+          "anterior": "Média (manteve-se com reconfigurações)",
+          "novo": "Marco federal desde 2011; escala, oferta local e continuidade das ações dependem dos respectivos ciclos e não foram quantificadas nesta revisão."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento da União (MEC), via Bolsa-Formação do Pronatec, com repasses operacionalizados pelo FNDE às instituições ofertantes (incl. Sistema S), e remuneração do aprendiz paga pela empresa contratante",
+          "novo": "Recursos das ações do Pronatec conforme a Lei nº 12.513/2011 e instrumentos de execução. Salário de contrato de aprendizagem não constitui mecanismo geral do programa."
+        },
+        "transferencia_recursos": {
+          "anterior": "Combinação de dois fluxos: Bolsa-Formação do Pronatec (recursos federais às instituições) e salário pago pela empresa ao aprendiz (Lei da Aprendizagem)",
+          "novo": "A Bolsa-Formação financia oferta educacional conforme regras e instrumentos próprios; não se confunde com remuneração de aprendiz pela empresa."
+        },
+        "informacoes_complementares": {
+          "anterior": "Atualmente, o governo federal está fomentando as linhas Mulheres Mil, Qualifica Mais, Bioeconomia na Amazônia Legal, Ensino Médio articulado à Educação Profissional e Tecnológica, Educação de Jovens e Adultos articulado à Educação Profissional e Tecnológica, Pronasci, Aquicultura, Capacita Rede. Teve grande escala nos anos 2010 (incluindo o eixo Bolsa-Formação), mas sofreu forte redução após 2015, com quase cessação de novas vagas após 2018. Mantém-se como referência de política de qualificação, com variações de implementação conforme ciclos de financiamento",
+          "novo": "Quantidade de vagas e oferta disponível devem ser verificadas por ação, território e período. Não foram validadas nesta revisão as afirmações de quase cessação após 2018 nem os totais históricos presentes no levantamento."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Pronatec é um programa federal criado em 2011 para expandir, interiorizar e democratizar a oferta de cursos de educação profissional e tecnológica no país. Em São Paulo, o programa se destaca pela parceria com instituições consolidadas como SENAI, SENAC e IFSP, oferecendo cursos gratuitos nas modalidades técnico e de formação inicial e continuada (qualificação profissional) para estudantes do Ensino Médio da rede pública, inclusive da educação de jovens e adultos (EJA), trabalhadores, beneficiários dos programas federais de transferência de renda e estudantes que tenham cursado o Ensino Médio completo em escolas da rede pública.",
+          "novo": "Programa federal de ampliação do acesso à educação profissional e tecnológica, por diferentes ações e instituições ofertantes. A ficha nacional não caracteriza uma oferta específica em São Paulo."
+        },
+        "apresentacao": {
+          "anterior": "O Pronatec é um programa federal criado em 2011 para expandir, interiorizar e democratizar a oferta de cursos de educação profissional e tecnológica no país. Em São Paulo, o programa se destaca pela parceria com instituições consolidadas como SENAI, SENAC e IFSP, oferecendo cursos gratuitos nas modalidades técnico e de formação inicial e continuada (qualificação profissional) para estudantes do Ensino Médio da rede pública, inclusive da educação de jovens e adultos (EJA), trabalhadores, beneficiários dos programas federais de transferência de renda e estudantes que tenham cursado o Ensino Médio completo em escolas da rede pública.",
+          "novo": "Programa federal de ampliação do acesso à educação profissional e tecnológica, com execução por instituições e ações previstas na legislação."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Retirada mistura entre Pronatec e aprendizagem trabalhista e inferência de descontinuidade de escala sem série comparável; preservado o marco do programa.",
+      "referencias": [
+        {
+          "url": "https://dadosabertos.mec.gov.br/pronatec",
+          "titulo": "MEC — dados abertos do Pronatec",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12513.htm",
+          "titulo": "Lei nº12.513/2011 — Pronatec, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0035",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.gov.br/mec/pt-br/areas-de-atuacao/educacao-profissional-e-tecnologica/pronatec",
+          "novo": "https://dadosabertos.mec.gov.br/pronatec"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "A referência descreve o programa nacional e suas iniciativas. Não confirma vagas abertas, cobertura nem execução atual no território da ficha."
+        },
+        "base_legal": {
+          "anterior": "Lei 12.513/2011 (institui o Pronatec) e normas de execução (edições/ações)",
+          "novo": "Lei nº 12.513/2011 (Pronatec), texto compilado, e normas de execução das respectivas ações."
+        },
+        "continuidade_governos": {
+          "anterior": "Parcial (sofreu descontinuidade de escala e reorientações)",
+          "novo": "Marco federal desde 2011; escala, oferta local e continuidade das ações dependem dos respectivos ciclos e não foram quantificadas nesta revisão."
+        },
+        "fonte_financiamento": {
+          "anterior": "Recursos do Orçamento da União, no âmbito do Ministério da Educação (MEC), operacionalizados pelo Fundo Nacional de Desenvolvimento da Educação (FNDE)",
+          "novo": "Recursos das ações do Pronatec conforme a Lei nº 12.513/2011 e instrumentos de execução. Salário de contrato de aprendizagem não constitui mecanismo geral do programa."
+        },
+        "transferencia_recursos": {
+          "anterior": "Recursos federais transferidos por meio da Bolsa-Formação, pagos às instituições ofertantes",
+          "novo": "A Bolsa-Formação financia oferta educacional conforme regras e instrumentos próprios; não se confunde com remuneração de aprendiz pela empresa."
+        },
+        "informacoes_complementares": {
+          "anterior": "Teve grande escala nos anos 2010 (incluindo o eixo Bolsa-Formação) mas sofreu forte redução após 2015, com quase cessação de novas vagas após 2018. Mantém-se como referência de política de qualificação, com variações de implementação conforme ciclos de financiamento. O Pronatec criou 8 milhões de vagas entre 2011 e 2014, sendo 5,6 milhões em cursos rápidos de qualificação e 2,4 milhões em cursos técnicos. Esse esforço foi considerado pelo governo como “a maior reforma da educação profissional” no Brasil",
+          "novo": "Quantidade de vagas e oferta disponível devem ser verificadas por ação, território e período. Não foram validadas nesta revisão as afirmações de quase cessação após 2018 nem os totais históricos presentes no levantamento."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Retirada mistura entre Pronatec e aprendizagem trabalhista e inferência de descontinuidade de escala sem série comparável; preservado o marco do programa.",
+      "referencias": [
+        {
+          "url": "https://dadosabertos.mec.gov.br/pronatec",
+          "titulo": "MEC — dados abertos do Pronatec",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2011-2014/2011/lei/l12513.htm",
+          "titulo": "Lei nº12.513/2011 — Pronatec, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0021",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://atendimento.educacao.sp.gov.br/knowledgebase/article/SED-08102/pt-br",
+          "novo": "https://servicos.sp.gov.br/fcarta/56446BB1-4603-4FDC-88ED-7B2371174CA1"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Carta de serviço consultada; quantidades de unidades e regras nela listadas podem refletir versões anteriores. A presença flexível não deve ser confundida automaticamente com EaD."
+        },
+        "base_legal": {
+          "anterior": "CF/1988; LDB 9.394/1996, normativas estaduais de criação do EJA; Decreto nº 52.630/2008, implementação dos CEEJAs",
+          "novo": "A carta de serviço atualizada em 18/11/2024 cita Resolução SE nº 75/2018 e alterações pelas Resoluções Seduc nº 119/2021, nº 129/2021 e nº 32/2023. Aplicam-se também as diretrizes nacionais da EJA e normas posteriores da rede."
+        },
+        "carga_horaria": {
+          "anterior": "Variável por etapa/turno (EF anos finais: 1.800h diurno e 1.633h noturno; EM: 1.350h diurno e 1.225h noturno); no CEEJA, mínimo de 75% presencial",
+          "novo": "Conforme etapa e organização curricular vigente dos CEEJA. A carta de serviço consultada não sustenta as cargas por turno nem o percentual mínimo de 75% anteriormente registrados."
+        },
+        "continuidade_governos": {
+          "anterior": "Alta (estrutura permanente da rede, embora possa variar em expansão/recursos)",
+          "novo": "Oferta documentada na rede estadual paulista; não se atribui grau de continuidade com base apenas na carta de serviço."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático \"fundo a fundo\" do Fundeb. A União (FNDE) transfere recursos automaticamente para o Fundo de Educação do Estado de São Paulo, gerido pela Secretaria da Fazenda e Planejamento do Estado de São Paulo (Sefaz-SP), com base no número de matrículas da EJA registradas no Censo Escolar. Os recursos são então alocados à Seduc-SP para manutenção dos CEEJAs e pagamento de pessoal, por meio de dotação orçamentária própria da secretaria",
+          "novo": "Financiamento da rede pública conforme orçamento educacional e regras do Fundeb; não se trata exclusivamente de repasse do FNDE à Seduc-SP. Não foi verificado fluxo específico por CEEJA."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. O Decreto nº52.630/2008 trata de módulo de pessoal das escolas, não da criação dos CEEJA. Removidas carga por turno, percentual75% e simplificação incorreta do financiamento.",
+      "referencias": [
+        {
+          "url": "https://servicos.sp.gov.br/fcarta/56446BB1-4603-4FDC-88ED-7B2371174CA1",
+          "titulo": "Carta de serviços de São Paulo — CEEJA",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2008/decreto-52630-16.01.2008.html",
+          "titulo": "Decreto paulista nº52.630, de16/01/2008 — módulo de pessoal das unidades escolares",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14113.htm",
+          "titulo": "Lei nº14.113/2020 — Fundeb, texto compilado",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0017",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://univesp.br/cursos/qualificacao-profissional",
+          "novo": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2011/decreto-57133-14.07.2011.html"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "decreto"
+        },
+        "resumo": {
+          "anterior": "Cursos de qualificação voltados à demanda do mercado e encaminhamentos ao emprego",
+          "novo": "Experiência de qualificação profissional gratuita do Governo de São Paulo, documentada pelo Centro Paula Souza em 2011. A referência registra a convocação de candidatos para cursos do Via Rápida Emprego; não comprova oferta atual sob esse nome."
+        },
+        "apresentacao": {
+          "anterior": "O Via Rápida Emprego é um programa do Governo de São Paulo que oferece cursos técnicos e de qualificação profissional gratuitos, presenciais ou online, com bolsa-auxílio de R$ 210,00. Voltado a maiores de 16 anos desempregados e alfabetizados, o programa tem duração curta (até 100 horas) e visa rápida inserção no mercado de trabalho",
+          "novo": "Programa paulista de qualificação profissional instituído em 2011. Oferta, cursos e benefícios devem ser verificados nos instrumentos de cada edição."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Via Rápida Emprego é um programa do Governo de São Paulo que oferece cursos técnicos e de qualificação profissional gratuitos, presenciais ou online, com bolsa-auxílio de R$ 210,00. Voltado a maiores de 16 anos desempregados e alfabetizados, o programa tem duração curta (até 100 horas) e visa rápida inserção no mercado de trabalho",
+          "novo": "Programa paulista de qualificação profissional instituído pelo Decreto nº 57.133, de 14 de julho de 2011. O marco normativo e a notícia histórica de seleção não comprovam oferta atual sob esse nome."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "informacoes_complementares": {
+          "anterior": "Via Rápida Emprego SP foi incorporado e transformado no programa Qualifica SP (especificamente nas modalidades \"Novo Emprego\" e \"Meu Primeiro Emprego\") Nos planos plurianuais do estado (PPA), programas relacionados ao Via Rápida aparecem com valores superiores a R$ 419 milhões para o período de planejamento, provenientes de recursos orçamentários estaduais",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Não foi confirmada nesta revisão a continuidade sob o mesmo nome nem uma sucessão jurídica pelo Qualifica SP. Bolsa, carga horária e público dependem da edição e do edital.\n\nA referência principal é o decreto da ALESP, acessível em 05/10/2026. A notícia histórica do CPS foi recuperada pela pesquisa, mas seu endereço redirecionou à página inicial na conferência direta."
+        },
+        "base_legal": {
+          "anterior": "Decreto Estadual nº 57.133, de 11/07/2011 (SP) — institui o Programa Via Rápida Emprego",
+          "novo": "Decreto estadual nº 57.133, de 14 de julho de 2011 (SP), que institui o Programa Via Rápida Emprego, e alterações posteriores."
+        },
+        "continuidade_governos": {
+          "anterior": "Alta, sendo reestruturado em 2025",
+          "novo": "A fonte documenta edição de 2011; reestruturação em 2025 e continuidade operacional atual não confirmadas."
+        },
+        "carga_horaria": {
+          "anterior": "Variável conforme o curso, geralmente entre 60 e 80 horas",
+          "novo": "Varia por curso e edição; não foi confirmada a faixa de 60 a 80 horas como regra geral."
+        },
+        "fonte_financiamento": {
+          "anterior": "SEC.DESENV.ECON.CIÊNCIA,TECNOLOGIA E INOVAÇÃO Plano Plunianual do Governo do Estado de São Paulo",
+          "novo": "Custeio estadual e instrumentos de execução conforme a edição; valores e fontes atuais não confirmados."
+        },
+        "transferencia_recursos": {
+          "anterior": "Nos planos plurianuais do estado (PPA). Execução direta: para cursos ofertados por órgãos públicos estaduais (Centro Paula Souza); Fomento/Subvenção: para contratação de instituições privadas executoras, mediante celebração de contratos, convênios ou termos de cooperação; Bolsa/Benefício direto: pagamento de bolsa-auxílio diretamente aos alunos desempregados",
+          "novo": "Condições de custeio e eventual bolsa devem ser verificadas no instrumento da edição correspondente; não foi demonstrado fluxo único atual."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Corrigida data do decreto para14/07/2011 e retiradas afirmações de reestruturação2025, continuidadeAlta e regras de curso/repasse não demonstradas pela notícia histórica.",
+      "referencias": [
+        {
+          "url": "https://www.cps.sp.gov.br/via-rapida-convoca-os-primeiros-selecionados/",
+          "titulo": "Centro Paula Souza — primeiros selecionados do Via Rápida (2011)",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.al.sp.gov.br/repositorio/legislacao/decreto/2011/decreto-57133-14.07.2011.html",
+          "titulo": "Decreto nº57.133, de14/07/2011 — Via Rápida Emprego",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0047",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-forma",
+          "novo": "https://social.mg.gov.br/component/content/article/116-trabalho/2280-subsecretaria-de-inclusao-produtiva-trabalho-emprego-e-renda"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "resumo": {
+          "anterior": "Iniciativa estadual de qualificação profissional, citada como parte do ecossistema de políticas de trabalho/qualificação em MG",
+          "novo": "Programa da Sedese de Minas Gerais que oferece cursos gratuitos de formação socioprofissional a jovens e adultos em situação de vulnerabilidade. A oferta abrange áreas como cultura, turismo, serviços e indústria, conforme os cursos e municípios participantes."
+        },
+        "apresentacao": {
+          "anterior": "Iniciativa estadual de qualificação profissional, constitui parte do ecossistema de políticas de trabalho/qualificação em MG. Programa coordenado pela Social MG voltado à capacitação de jovens integrando ensino médio e técnico, com componentes de bolsa-auxílio e expansão em 2025",
+          "novo": "Programa da Sedese de Minas Gerais que oferece cursos gratuitos de formação socioprofissional a jovens e adultos em situação de vulnerabilidade. A oferta abrange áreas como cultura, turismo, serviços e indústria, conforme os cursos e municípios participantes."
+        },
+        "descricao_tecnica": {
+          "anterior": "Iniciativa estadual de qualificação profissional, constitui parte do ecossistema de políticas de trabalho/qualificação em MG. Programa coordenado pela Social MG voltado à capacitação de jovens integrando ensino médio e técnico, com componentes de bolsa-auxílio e expansão em 2025",
+          "novo": "Programa da Sedese de Minas Gerais que oferece cursos gratuitos de formação socioprofissional a jovens e adultos em situação de vulnerabilidade. A oferta abrange áreas como cultura, turismo, serviços e indústria, conforme os cursos e municípios participantes."
+        },
+        "informacoes_complementares": {
+          "anterior": "O programa Minas Forma foi lançado oficialmente em 20 de maio de 2024 pelo Governo de Minas Gerais, por meio da Secretaria de Estado de Desenvolvimento Social de Minas Gerais, como uma política estadual de qualificação profissional gratuita para pessoas em situação de vulnerabilidade social, com oferta de cursos em áreas como cultura, turismo, serviços e setores industriais em mais de 100 municípios. O financiamento é feito com recursos do orçamento estadual e, na fase 2025–2026, contou com um aporte ampliado de quase R$ 30 milhões, incluindo repasses direcionados a regiões específicas como o Rio Doce para ampliar a oferta de vagas gratuitas até 2026. O repasse financeiro ocorre por meio de pagamento de bolsa-auxílio diretamente aos estudantes, normalmente de R$ 6,00 por hora/aula frequentada, e por financiamentos às instituições parceiras que executam os cursos (como Senac-MG e Senai-MG), sem transferência de recursos ao estudante além da bolsa pelo comparecimento. A modalidade de oferta é predominantemente presencial, com cursos de curta e média duração (entre cerca de 35 e 100 horas), ministrados nas unidades das instituições parceiras ou em pontos credenciados nos municípios participantes",
+          "novo": "Trata-se de qualificação profissional; a fonte consultada não o caracteriza como curso de Ensino Médio integrado à formação técnica."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retirada a caracterização indevida como integração entre Ensino Médio e técnico. Números, auxílios e vagas de cada fase precisam ser consultados nos editais correspondentes.\n\nLimite de acesso em 05/10/2026: a antiga página da Sedese respondeu 404; a notícia da Agência Minas foi recuperada pela pesquisa, mas o acesso direto retornou comunicado institucional com status 503. Os dados da edição de 2024 não comprovam oferta atual."
+        },
+        "continuidade_governos": {
+          "anterior": "Sem informação (não houve mudança no executivo Estadual)",
+          "novo": "Edições documentadas desde 2024; continuidade entre governos não aferida."
+        },
+        "carga_horaria": {
+          "anterior": "Os cursos têm carga horária entre 35 horas e 100 horas",
+          "novo": "A edição divulgada em 2024 previa cursos de 35 a 100 horas; cargas de outras edições devem ser verificadas."
+        },
+        "transferencia_recursos": {
+          "anterior": "O financiamento é realizado por meio de pagamentos diretos à instituição executora (ex.: Senac-MG ou Senai-MG) para oferta dos cursos, e também por meio de bolsa-auxílio aos estudantes conforme frequência; os valores variam em torno de R$ 210 a R$ 600, dependendo da carga horária (R$ 6,00 por hora de presença)",
+          "novo": "Na edição divulgada em 2024, a oferta em parceria com o Senac previa bolsa de R$ 6 por hora de aula frequentada. Valores e condições não devem ser generalizados a todas as edições."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Contextualizados carga e bolsa pela edição documentada, sem apresentar valores históricos como garantia universal.",
+      "referencias": [
+        {
+          "url": "https://social.mg.gov.br/component/content/article/116-trabalho/2280-subsecretaria-de-inclusao-produtiva-trabalho-emprego-e-renda",
+          "titulo": "Sedese — apresentação do Minas Forma",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://agenciaminas.mg.gov.br/noticia/governo-do-estado-oferece-8-mil-vagas-em-cursos-gratuitos-pelo-minas-forma",
+          "titulo": "Agência Minas — Governo do Estado oferece8mil vagas em cursos gratuitos pelo Minas Forma (2024)",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0051",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-programando",
+          "novo": "https://social.mg.gov.br/noticias-artigos/1598-mostra-de-projetos-marca-conclusao-do-minas-programando-na-regional-de-montes-claros?layout=default&print=1&tmpl=component"
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "informacoes_complementares": {
+          "anterior": "Há evidências de continuidade institucional, mas com ressalva. Em 2025, a Sedese lançou um novo programa de tecnologia cujo curso AWS re/Start foi destinado a egressos do Minas Programando, e a página oficial do projeto segue disponível; porém, nas fontes abertas consultadas, não há edital próprio mais recente do Minas Programando em 2026.                                                         o projeto nasceu de um diagnóstico do setor de TIC feito em 2020 com a Fumsoft; na fase piloto, a meta anunciada era qualificar 2 mil pessoas até o fim de 2022; em 2022, a Agência Minas registrou 411 pessoas qualificadas pelo Minas Programando; e a experiência piloto em Montes Claros começou com 100 mulheres, das quais 50 seguiram para a qualificação em Arduino",
+          "novo": "A fonte registra a conclusão de uma edição piloto, com formação em programação e apresentação de projetos em Montes Claros. Não confirma inscrições ou turmas em funcionamento em 2026."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "A notícia histórica demonstra realização de uma edição. Não foi localizada nesta revisão comprovação de oferta atual do projeto.\n\nLimite de acesso em 05/10/2026: notícia e catálogo oficial foram recuperados pela pesquisa, mas os respectivos endereços responderam 404 na conferência direta. A evidência documental foi mantida com esse limite; a referência não está confirmada como acessível ao público."
+        },
+        "continuidade_governos": {
+          "anterior": "Há continuidade administrativa da iniciativa desde 2021, mas não há, no período de criação até 2025, uma alternância de governo estadual que permita falar com segurança em “continuidade entre governos” no sentido estrito; o que se observa é continuidade dentro da mesma gestão estadual e de sua estrutura de qualificação profissional",
+          "novo": "Há edições documentadas desde 2021; não foi comprovada oferta contínua até 2025 nem situação operacional atual."
+        },
+        "carga_horaria": {
+          "anterior": "Carga horária: variável. Na fase piloto, o projeto previa cursos com 160 a 280 horas/aula; na página oficial atualmente disponível, a turma de Operador de Computador aparece com 200 horas, carga diária de 3 horas e preferência pelo turno noturno",
+          "novo": "Varia conforme edição e curso; o catálogo da Sedese de março de 2023 registra oferta piloto de Programador Web com 200 horas."
+        },
+        "base_legal": {
+          "anterior": "Vinculado à Lei estadual nº 23.448/2019 (Política Estadual de Qualificação Social e Profissional), com operacionalização por meio do Edital Minas Programando nº 01/2021 e do Contrato nº 9292315/2021 com o Senac",
+          "novo": "Referência administrativa: catálogo de oportunidades da Sedese, edição de março de 2023. Ato específico de criação e número de contrato aplicável a cada edição não confirmados nesta revisão."
+        },
+        "fonte_financiamento": {
+          "anterior": "recursos estaduais operacionalizados pela Sedese, com execução contratada a parceiros. A base operacional é o Contrato nº 9292315/2021 entre a Sedese e o Senac",
+          "novo": "O catálogo documenta diferentes arranjos, incluindo oferta pública, doação de curso e contratação de entidade formadora; não há fonte única demonstrada para todas as edições."
+        },
+        "transferencia_recursos": {
+          "anterior": "O desenho identificável nas fontes é de contratação administrativa da Sedese junto ao Senac, com termos aditivos no Diário Oficial",
+          "novo": "Instrumentos variam entre as edições; não foi confirmado um contrato único que represente toda a execução do projeto."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Retiradas projeção de continuidade, faixa160–280h e equiparação de toda a iniciativa a um contrato não verificado. Catálogo oficial documenta mais de um arranjo de oferta.",
+      "referencias": [
+        {
+          "url": "https://social.mg.gov.br/noticias-artigos/1598-mostra-de-projetos-marca-conclusao-do-minas-programando-na-regional-de-montes-claros?layout=default&print=1&tmpl=component",
+          "titulo": "Sedese — conclusão de projetos do Minas Programando",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://social.mg.gov.br/images/CEJUVE/Catlogo-de-Oportunidades-para-as-Mulheres---3a-Edio.pdf",
+          "titulo": "Sedese — Catálogo de oportunidades para as mulheres, 3ªedição, março2023",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0062",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://social.mg.gov.br/trabalho-e-emprego/educacao-profissional/minas-forma",
+          "novo": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-amplia-qualificacao-profissional-e-lanca-nova-etapa-do-programa-minas-forma"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "resumo": {
+          "anterior": "O Minas Froma Delas é parte de uma nova etapa do programa Minas Forma, com foco na qualificação profissional e a inclusão produtiva, buscando fortalecer a autonomia econômica das mulheres mineiras",
+          "novo": "Eixo do Minas Forma anunciado em 2025 para ampliar a participação de mulheres em situação de vulnerabilidade em cursos gratuitos de qualificação e apoiar sua autonomia econômica."
+        },
+        "apresentacao": {
+          "anterior": "Segundo o governo do estado, a iniciativa chega como um marco, focando em mulheres em situação de vulnerabilidade social. O programa vai priorizar a capacitação gratuita e o apoio à geração de renda, estimulando o protagonismo feminino a partir da oferta de cursos que se dividem entre a) cursos de cultura e turismo, vinculados à plataforma SENAC e b) cursos da indústria, vinculados ao Sistema FIEMG e SENAI (como demais cursos do Minas Forma)",
+          "novo": "Eixo do Minas Forma anunciado em 2025 para ampliar a participação de mulheres em situação de vulnerabilidade em cursos gratuitos de qualificação e apoiar sua autonomia econômica."
+        },
+        "descricao_tecnica": {
+          "anterior": "Segundo o governo do estado, a iniciativa chega como um marco, focando em mulheres em situação de vulnerabilidade social. O programa vai priorizar a capacitação gratuita e o apoio à geração de renda, estimulando o protagonismo feminino a partir da oferta de cursos que se dividem entre a) cursos de cultura e turismo, vinculados à plataforma SENAC e b) cursos da indústria, vinculados ao Sistema FIEMG e SENAI (como demais cursos do Minas Forma)",
+          "novo": "Eixo do Minas Forma anunciado em 2025 para ampliar a participação de mulheres em situação de vulnerabilidade em cursos gratuitos de qualificação e apoiar sua autonomia econômica."
+        },
+        "informacoes_complementares": {
+          "anterior": "No evento que marcou o início do programa, realizado em outubro de 2025, a secretária Alê Portela afirmou que o programa reforça a missão da Sedese de promover \"oportunidades reais\": “Agora vamos dar mais um passo importante: ampliar a participação feminina nas ações de qualificação profissional. Com o Minas Forma Delas, vamos promover independência financeira e muito mais oportunidades para que as mulheres possam gerar renda e conquistar sua autonomia”. Fonte: https://portalgerais.com/minas-forma-abre-10-mil-vagas-de-cursos-gratuitos-e-foca-em-mulheres/",
+          "novo": "O anúncio integra uma nova etapa do Minas Forma. Oferta efetiva, inscrições, cursos e benefícios dependem dos instrumentos de execução de cada edição."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "O anúncio documenta a proposta de ampliação do programa; não foi tratado como resultado realizado.\n\nLimite de acesso: o conteúdo da notícia foi recuperado pela pesquisa; a Agência Minas apresentou comunicado institucional/503 no acesso direto. O anúncio não comprova execução nem resultados."
+        },
+        "base_legal": {
+          "anterior": "Regulamentação assinada durante o evento de lançamento (29/10/2025)",
+          "novo": "Notícia de lançamento de 29/10/2025 menciona assinatura simbólica de regulamentação; número e texto do ato não confirmados nesta revisão."
+        },
+        "carga_horaria": {
+          "anterior": "Variável. Os cursos associados ao FIEMG possuem carga horária total variável entre 100 e 400 horas, por exemplo",
+          "novo": "Depende do curso e da edição; não foi confirmada faixa própria do Minas Forma Delas."
+        },
+        "transferencia_recursos": {
+          "anterior": "Transferência direta do orçamento do governo do estado de Minas Gerais",
+          "novo": "A notícia anuncia investimentos no âmbito do Minas Forma, mas não demonstra transferência direta individual nem mecanismo próprio uniforme do eixo Minas Forma Delas."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado de Desenvolvimento Social (Sedese), SENAC, SENAI, FIEMG"
+          ],
+          "novo": [
+            "Secretaria de Estado de Desenvolvimento Social de Minas Gerais (Sedese)"
+          ]
+        },
+        "continuidade_governos": {
+          "anterior": "Ainda não verificável (criada em 2025)",
+          "novo": "Eixo divulgado em 2025; continuidade entre governos não aferida."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento do governo estadual",
+          "novo": "Investimento estadual anunciado no âmbito do Minas Forma; orçamento próprio e execução financeira do eixo Minas Forma Delas não foram verificados."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Não equiparar anúncio de assinatura simbólica a ato normativo identificado nem aplicar cargas e fluxos genéricos de parceiros ao eixo específico.",
+      "referencias": [
+        {
+          "url": "https://www.agenciaminas.mg.gov.br/noticia/governo-de-minas-amplia-qualificacao-profissional-e-lanca-nova-etapa-do-programa-minas-forma",
+          "titulo": "Agência Minas — nova etapa do Minas Forma e Minas Forma Delas",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0067",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.parana.pr.gov.br/aen/Noticia/Programa-Carretas-do-Conhecimento-tera-investimento-de-R-22-milhoes-em-2023",
+          "novo": "https://fundacaogrupovw.org.br/wp-content/uploads/2024/07/FGVW_relatorio_de_atividades_2023_final_compressed.pdf"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Valores e atendimento das referências históricas dizem respeito a suas respectivas edições; não comprovam oferta atual.\n\nA referência principal passou a ser o relatório do parceiro executor, acessível em PDF em 05/10/2026. A notícia histórica da AEN retornou 404 após redirecionamento; a simples troca de domínio não reparou seu acesso. O relatório de 2023 não comprova oferta atual."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim (criado em 2019 e mantido na transição)",
+          "novo": "Há edições documentadas; não foi demonstrada continuidade durante alternância de governos."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "fonte_tipo": {
+          "anterior": "pagina_programa",
+          "novo": "outros"
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento estadual + parcerias institucionais (SENAI e VW)",
+          "novo": "O relatório da Fundação Grupo Volkswagen de 2023 registra parceria com a Volkswagen do Brasil e o Senai-PR, com incentivo fiscal do Paraná Competitivo. Não foi apurada a composição financeira de outras edições."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado do Trabalho, Qualificação e Renda (SETR/PR)"
+          ],
+          "novo": [
+            "Governo do Paraná (articulação estadual)",
+            "Fundação Grupo Volkswagen e Volkswagen do Brasil (parceria documentada em 2023)",
+            "Senai-PR (formação)"
+          ]
+        },
+        "transferencia_recursos": {
+          "anterior": "Governo do estado custeia os cursos oferecidos via parcerias",
+          "novo": "A fonte descreve financiamento da oferta; não confirma benefício financeiro direto ao participante nem fluxo uniforme entre edições."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. A fonte de2023 não comprova operação atual nem a transição entre governos afirmada no campo de continuidade.",
+      "referencias": [
+        {
+          "url": "https://www.aen.pr.gov.br/Noticia/Programa-Carretas-do-Conhecimento-tera-investimento-de-R-22-milhoes-em-2023",
+          "titulo": "AEN — Carretas do Conhecimento (01/02/2023)",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://fundacaogrupovw.org.br/wp-content/uploads/2024/07/FGVW_relatorio_de_atividades_2023_final_compressed.pdf",
+          "titulo": "Fundação Grupo Volkswagen — Relatório de atividades 2023, p. 24 e 43",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0068",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.parana.pr.gov.br/aen/Noticia/Qualificacao-profissional-gratuita-do-Estado-alcancara-os-399-municipios-do-Parana",
+          "novo": "https://www.aen.pr.gov.br/Noticia/Qualificacao-profissional-gratuita-do-Estado-alcancara-os-399-municipios-do-Parana"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "resumo": {
+          "anterior": "Projeto de qualificação profissional descentralizada, citado entre as iniciativas estaduais de capacitação; integrado ao Qualifica em 2025",
+          "novo": "Projeto de qualificação profissional citado entre as iniciativas do Governo do Paraná em notícia de maio de 2024."
+        },
+        "informacoes_complementares": {
+          "anterior": "Um possível desdobramento do Programa Bora  Paraná é o Programa Bora Circular, que foi renovado em 2025. O projeto propõe a formação de pessoas na técnica de upcycling, processo que transforma materiais descartados em novos produtos com maior valor agregado, promovendo, simultaneamente, a redução de volume de resíduos destinados a aterros sanitários e o estímulo ao empreendedorismo, por meio de geração de renda e da inclusão social. O programa é resultado de uma parceria do Governo do Estado com a fabricante de bebidas Ambev, que por meio de recursos do Paraná Competitivo contratou o Instituto Liga Badu Design para promover as qualificações. A iniciativa prevê investimentos de R$ 5,1 milhões, destinados à execução de ações voltadas ao desenvolvimento social e à qualificação profissional em 50 municípios do Paraná, distribuídos nas dez mesorregiões do Estado. Fonte: https://www.trabalho.pr.gov.br/Noticia/Projeto-Bora-Circular-reforca-compromisso-com-inovacao-e-desenvolvimento-sustentavel",
+          "novo": "A notícia reúne diversos projetos. Seu orçamento, total de vagas e meta de municípios não podem ser atribuídos integralmente ao Bora Paraná. A relação com o Bora Circular não foi confirmada nesta revisão."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retiradas afirmações de incorporação e sucessão entre programas que a referência não demonstrava.\n\nA notícia foi recuperada pela pesquisa, mas seu acesso direto apresentou falha após migração de endereço. É evidência documental de 2024, sem confirmação de acesso público estável ou oferta atual."
+        },
+        "continuidade_governos": {
+          "anterior": "Sim. O projeto manteve-se ativo desde a sua criação e passou por recente atualização, com integração ao Projeto Qualifica em 2025",
+          "novo": "A notícia de 29/05/2024 inclui Bora Paraná entre projetos estaduais; integração em 2025 e continuidade atual não confirmadas."
+        },
+        "carga_horaria": {
+          "anterior": "A maioria dos cursos é de 96 horas. Alguns oferecem turmas no turno da tarde e da noite, para ampliar a possibilidade de acesso",
+          "novo": "Não confirmada para o Bora Paraná no recorte consultado."
+        },
+        "fonte_financiamento": {
+          "anterior": "FAT (recursos) + Tesouro Estadual",
+          "novo": "Não confirmado para o projeto específico; a notícia reúne diferentes iniciativas estaduais."
+        },
+        "transferencia_recursos": {
+          "anterior": "Pode oferecer bolsa-auxílio aos participantes em algumas edições, segundo comunicados oficiais",
+          "novo": "Não foi confirmado benefício ou mecanismo financeiro específico do Bora Paraná na fonte consultada."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Notícia conjunta sobre projetos não sustenta atribuir ao Bora Paraná carga96h, FAT, bolsa ou integração posterior.",
+      "referencias": [
+        {
+          "url": "https://www.aen.pr.gov.br/Noticia/Qualificacao-profissional-gratuita-do-Estado-alcancara-os-399-municipios-do-Parana",
+          "titulo": "AEN — conjunto de projetos de qualificação do Paraná (29/05/2024)",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0107",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.estado.rs.gov.br/com-foco-no-combate-a-evasao-na-rede-estadual-governo-lanca-politica-de-protecao-a-trajetoria-escolar",
+          "novo": "https://www.educacao.rs.gov.br/upload/arquivos/202505/06152419-politica-de-protecao-a-trajetoria-do-estudante.pdf"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Documento orientador consultado. Descreve protocolos de acompanhamento; sua publicação não equivale a avaliação de resultados."
+        },
+        "continuidade_governos": {
+          "anterior": "Alta possibilidade de continuidade, por se tratar de política estruturante de permanência escolar",
+          "novo": "Documento de orientação publicado em 2025; continuidade entre governos não aferida."
+        },
+        "base_legal": {
+          "anterior": "Lei nº 9.394/1996 (LDB); Normativas internas da Secretaria da Educação do RS; Diretrizes estaduais de permanência escolar",
+          "novo": "Referência documental: Política de Proteção à Trajetória do Estudante, Seduc-RS, 2025, com diretrizes e protocolos de prevenção ao abandono escolar. Ato normativo específico não identificado nesta revisão."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Governo do Estado do Rio Grande do Sul"
+          ],
+          "novo": [
+            "Secretaria da Educação do Rio Grande do Sul",
+            "Coordenadorias Regionais de Educação e unidades escolares, conforme atribuições do documento"
+          ]
+        },
+        "transferencia_recursos": {
+          "anterior": "Recursos descentralizados para as escolas e regionais, conforme planejamento da Secretaria de Educação",
+          "novo": "O documento orienta ações e articulação com programas de apoio; não foi demonstrado mecanismo próprio de repasse descentralizado para escolas e regionais."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Retirada previsão de continuidade futura e fluxo financeiro não demonstrado; governança passa a refletir as atribuições do documento de2025.",
+      "referencias": [
+        {
+          "url": "https://www.educacao.rs.gov.br/upload/arquivos/202505/06152419-politica-de-protecao-a-trajetoria-do-estudante.pdf",
+          "titulo": "Seduc-RS — Política de Proteção à Trajetória do Estudante (2025)",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0102",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://servidores.rhbahia.ba.gov.br/noticias/2021-12-27/governo-oferta-5-mil-vagas-para-cursos-de-qualificacao-profissional",
+          "novo": "https://www.ba.gov.br/trabalho/noticia/2024-02/3422/setre-divulga-lista-de-aprovados-no-projeto-conectar"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "pagina_programa"
+        },
+        "resumo": {
+          "anterior": "O Projeto Conectar – Qualificação e Trabalho foi uma iniciativa emergencial do Governo do Estado da Bahia, lançada em março de 2021 pela Secretaria do Trabalho, Emprego, Renda e Esporte (SETRE) para mitigar os impactos da pandemia de Covid-19 na economia baiana",
+          "novo": "Iniciativa de qualificação profissional da Setre-BA documentada em maio de 2021, dirigida a jovens egressos de escolas públicas, trabalhadoras autônomas e trabalhadores de transporte. A seleção anunciava cursos remotos e apoio financeiro para acesso à plataforma."
+        },
+        "apresentacao": {
+          "anterior": "O Programa ofereceu 6 mil vagas em cursos gratuitos de qualificação profissional na modalidade Educação a Distância (EaD), com investimento total de R$ 2,2 milhões e bolsa-auxílio de R$ 240,00 por participante (duas parcelas de R$ 120,00) para garantir o acesso à plataforma digital. O público-alvo foi organizado em três eixos principais, totalizando 6 mil vagas: Eixo 1 (4 mil vagas) para jovens de 16 a 29 anos, egressos de escolas públicas a partir do 9º ano do ensino fundamental II e/ou com ensino médio completo; Eixo 2 (600 vagas) para trabalhadoras autônomas cadastradas no Programa Contrate.Ba ; Eixo 3 (1.400 vagas) para trabalhadores rodoviários desempregados, condutores de vans escolares e motoristas de transporte complementar, incluindo cursos de reciclagem",
+          "novo": "Iniciativa de qualificação profissional da Setre-BA documentada em maio de 2021, dirigida a jovens egressos de escolas públicas, trabalhadoras autônomas e trabalhadores de transporte. A seleção anunciava cursos remotos e apoio financeiro para acesso à plataforma."
+        },
+        "descricao_tecnica": {
+          "anterior": "O Programa ofereceu 6 mil vagas em cursos gratuitos de qualificação profissional na modalidade Educação a Distância (EaD), com investimento total de R$ 2,2 milhões e bolsa-auxílio de R$ 240,00 por participante (duas parcelas de R$ 120,00) para garantir o acesso à plataforma digital. O público-alvo foi organizado em três eixos principais, totalizando 6 mil vagas: Eixo 1 (4 mil vagas) para jovens de 16 a 29 anos, egressos de escolas públicas a partir do 9º ano do ensino fundamental II e/ou com ensino médio completo; Eixo 2 (600 vagas) para trabalhadoras autônomas cadastradas no Programa Contrate.Ba ; Eixo 3 (1.400 vagas) para trabalhadores rodoviários desempregados, condutores de vans escolares e motoristas de transporte complementar, incluindo cursos de reciclagem",
+          "novo": "Iniciativa de qualificação profissional da Setre-BA documentada em maio de 2021, dirigida a jovens egressos de escolas públicas, trabalhadoras autônomas e trabalhadores de transporte. A seleção anunciava cursos remotos e apoio financeiro para acesso à plataforma."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "informacoes_complementares": {
+          "anterior": "Em agosto de 2024, o governo estadual relançou a iniciativa no âmbito do Programa Manuel Querino de Qualificação Social e Profissional (PMQ), em parceria com o Ministério do Trabalho e Emprego (MTE), passando a ser denominado Programa Conectar Educação",
+          "novo": null
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": "NÃO CONSEGUI ENCONTRAR A RESOLUÇÃO/NORMATIVA QUE INSTITUIU O PROGRAMA",
+          "novo": "NÃO CONSEGUI ENCONTRAR A RESOLUÇÃO/NORMATIVA QUE INSTITUIU O PROGRAMA\n\nA fonte registra uma edição de 2021. Não foi confirmada a continuidade atual nem a alegada transformação em Conectar Educação; a oferta de qualificação remota não é recomendação de EaD para a EJA."
+        },
+        "continuidade_governos": {
+          "anterior": "O projeto foi uma ação emergencial do governo Rui Costa (PT), encerrada após suas edições em 2021-2022, sofrendo reajustes e relançada em 2024",
+          "novo": "Edição de 2021 documentada; encerramento em 2022 e relançamento em 2024 não confirmados."
+        },
+        "carga_horaria": {
+          "anterior": "60 horas",
+          "novo": "Não confirmada na notícia de seleção consultada."
+        },
+        "transferencia_recursos": {
+          "anterior": "Execução direta e pagamento de bolsa-auxílio – Os recursos foram geridos pela SETRE para custeio da plataforma digital e pagamento da bolsa-auxílio aos participantes, no valor total de R$ 240,00 por beneficiário, dividido em duas parcelas de R$ 120,00",
+          "novo": "Na edição de 2021, a notícia anuncia bolsa de R$ 120 por dois meses aos selecionados. Não comprova pagamento realizado nem benefício atualmente disponível."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. O segmento2024-02 da URL não é data de relançamento: a matéria tem data editorial07/05/2021. Removidas continuidade e carga não sustentadas.",
+      "referencias": [
+        {
+          "url": "https://www.ba.gov.br/trabalho/noticia/2024-02/3422/setre-divulga-lista-de-aprovados-no-projeto-conectar",
+          "titulo": "Setre-BA — selecionados do Projeto Conectar (07/05/2021)",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-TRAB-0192",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.sef.sc.gov.br/noticias/programa-qualifica-sc-capacitara-5-mil-trabalhadores-para-o-mercado-formal",
+          "novo": "https://campoalegre.sc.gov.br/noticia-735433/"
+        },
+        "resumo": {
+          "anterior": "Oferta de cursos gratuitos de qualificação profissional para população de baixa renda e em situação de vulnerabilidade. O Qualifica SC possui três eixos de ação interdependentes: qualificação dos dados do Sistema de Gestão de Santa Catarina (Sisgesc) e do Educacenso, melhoria do fluxo escolar e elevação da proficiência acadêmica",
+          "novo": "Programa de qualificação profissional do Governo de Santa Catarina divulgado em 2022, com cursos gratuitos para trabalhadores e pessoas em situação de vulnerabilidade. A referência municipal documenta a divulgação de vagas naquela edição."
+        },
+        "apresentacao": {
+          "anterior": "Busca aproximar qualificação e inserção no mercado formal, com foco territorial e articulação com serviços de emprego",
+          "novo": "Programa de qualificação profissional do Governo de Santa Catarina divulgado em 2022, com cursos gratuitos para trabalhadores e pessoas em situação de vulnerabilidade. A referência municipal documenta a divulgação de vagas naquela edição."
+        },
+        "descricao_tecnica": {
+          "anterior": "Busca aproximar qualificação e inserção no mercado formal, com foco territorial e articulação com serviços de emprego",
+          "novo": "Programa de qualificação profissional do Governo de Santa Catarina divulgado em 2022, com cursos gratuitos para trabalhadores e pessoas em situação de vulnerabilidade. A referência municipal documenta a divulgação de vagas naquela edição."
+        },
+        "situacao_atual": {
+          "anterior": "Ativa / em execução",
+          "novo": "Sem informação"
+        },
+        "informacoes_complementares": {
+          "anterior": "Na primeira etapa, priorizou municípios de menor IDH e cursos em áreas como turismo, serviços, tecnologia e gastronomia",
+          "novo": "Esta experiência de qualificação profissional não deve ser confundida com a iniciativa escolar homônima voltada a dados, fluxo e proficiência. A continuidade da edição de 2022 não foi confirmada."
+        },
+        "ano_criacao": {
+          "anterior": "2022",
+          "novo": "2022 — edição documentada"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retirados eixos de um programa escolar homônimo que foram incorporados indevidamente ao resumo de qualificação profissional."
+        },
+        "continuidade_governos": {
+          "anterior": "Média, Tende a ser mantido como política de qualificação profissional estadual",
+          "novo": "Edição de 2022 documentada; continuidade posterior não confirmada."
+        },
+        "base_legal": {
+          "anterior": "Programa lançado oficialmente em 16/05/2022 pelo Governo de SC; ato normativo específico não identificado no relatório utilizado",
+          "novo": "Programa divulgado oficialmente em maio de 2022; ato normativo específico não identificado nesta revisão."
+        },
+        "fonte_financiamento": {
+          "anterior": "Orçamento estadual; recursos reservados no âmbito do Gente Catarina",
+          "novo": "Fonte financeira específica não confirmada na divulgação municipal consultada."
+        },
+        "transferencia_recursos": {
+          "anterior": "Não opera por transferência monetária ao cursista; envolve contratação/parceria para oferta de cursos",
+          "novo": "A divulgação informa cursos gratuitos, mas não estabelece mecanismo financeiro nem permite concluir sobre existência de auxílio ao participante."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Retirados prognóstico'Média/tende a ser mantido', financiamentoGenteCatarina e conclusão negativa sobre benefício sem evidência.",
+      "referencias": [
+        {
+          "url": "https://campoalegre.sc.gov.br/noticia-735433/",
+          "titulo": "Município de Campo Alegre — Programa Qualifica SC (2022)",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0275",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://www.seduc.am.gov.br/index.php/programas-e-projetos/programa-de-aceleracao-do-desenvolvimento-da-educacao-do-amazonas-padeam",
+          "novo": "https://www.ugpadeam.am.gov.br/legislacao/"
+        },
+        "resumo": {
+          "anterior": "O programa foi concebido para ampliar a capacidade da rede pública estadual de ensino, melhorar a qualidade educacional e reduzir as desigualdades de acesso, especialmente nas áreas ribeirinhas e de difícil acesso no estado",
+          "novo": "Programa de investimentos na rede pública estadual do Amazonas, com financiamento internacional e contrapartida estadual. Reúne ações de infraestrutura, apoio pedagógico, formação de profissionais e gestão educacional."
+        },
+        "apresentacao": {
+          "anterior": "O projeto visa a construção de novos Centros Educacionais de Tempo Integral, Escolas da Floresta, Escolas Indígenas, Escolas da Floresta Fluvial, modernização do Centro de Mídias, implantação de sistemas de energia solar, aumento da conectividade nas unidades de ensino, aprimoramento das propostas pedagógicas e apoio na formação continuada. O público alvo são alunos do Ensino Fundamental e Médio da rede pública estadual do Amazonas, especialmente aqueles residentes em municípios do interior e em áreas de vulnerabilidade social, incluindo comunidades ribeirinhas, indígenas e de difícil acesso",
+          "novo": "Programa de investimentos na rede pública estadual do Amazonas, com financiamento internacional e contrapartida estadual. Reúne ações de infraestrutura, apoio pedagógico, formação de profissionais e gestão educacional."
+        },
+        "descricao_tecnica": {
+          "anterior": "O projeto visa a construção de novos Centros Educacionais de Tempo Integral, Escolas da Floresta, Escolas Indígenas, Escolas da Floresta Fluvial, modernização do Centro de Mídias, implantação de sistemas de energia solar, aumento da conectividade nas unidades de ensino, aprimoramento das propostas pedagógicas e apoio na formação continuada. O público alvo são alunos do Ensino Fundamental e Médio da rede pública estadual do Amazonas, especialmente aqueles residentes em municípios do interior e em áreas de vulnerabilidade social, incluindo comunidades ribeirinhas, indígenas e de difícil acesso",
+          "novo": "Programa de investimentos na rede pública estadual do Amazonas, com financiamento internacional e contrapartida estadual. Reúne ações de infraestrutura, apoio pedagógico, formação de profissionais e gestão educacional."
+        },
+        "informacoes_complementares": {
+          "anterior": "O Padeam II prevê a construção de 5 escolas da floresta (incluindo uma flutuante) e 6 escolas indígenas, com infraestrutura sustentável (energia solar, captação de água da chuva) e respeito à cultura e língua locais. Ampliação do ensino mediado por tecnologia: O programa financia a expansão do Cemeam, com implantação de 1.500 novas salas para recepção do sinal de ensino mediado por tecnologia no interior, criando 15 mil novas vagas. O Padem I (2014-2012) teve um nvestimento total de US$ 273 milhões (US$ 151 milhões do BID + US$ 122 milhões de contrapartida estadual). Previa a construção de 12 CETIs, a adaptação de 20 escolas para tempo integral e a ampliação do Centro de Mídias com 1.500 novas salas (15 mil novas vagas). Até outubro de 2021, 96% da proposta inicial foi executada",
+          "novo": "A documentação distingue fases do programa. Obras, vagas e valores anunciados para fases diferentes não foram somados nem tratados como resultados realizados."
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retirado o intervalo impossível “2014–2012” e a mistura não demonstrada entre metas e execução do Padeam I e II.\n\nA legislação institucional e o registro específico do BID foram consultados separadamente para distinguir unidade gestora, primeira fase e Padeam II. O ano de criação antes atribuído à lei de 2013 não foi mantido."
+        },
+        "base_legal": {
+          "anterior": "Lei N° 3.941/2013 (Criação do Programa)",
+          "novo": "Leis estaduais nº 3.841, de 20/12/2012, e nº 3.941, de 09/10/2013, tratam da unidade de gerenciamento UGP-Padeam e de sua organização. Não foram tratadas como atos de criação do programa. Cada fase possui documentação e instrumentos de financiamento próprios."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de Estado de Educação e Desporto (Seduc-AM). Unidade de Gerenciamento do Padeam (UGPADEAM). Banco Interamericano de Desenvolvimento (BID). Secretaria de Estado de Infraestrutura (Seinfra)"
+          ],
+          "novo": [
+            "Secretaria de Estado de Educação e Desporto Escolar do Amazonas (Seduc-AM)",
+            "Unidade de Gerenciamento do Padeam (UGP-Padeam)",
+            "Banco Interamericano de Desenvolvimento (financiador)"
+          ]
+        },
+        "continuidade_governos": {
+          "anterior": "O programa está em plena execução. O Padeam I (2014) teve 96% da proposta inicial executada até outubro de 2021 . O Padeam II foi aprovado em abril de 2024 e está em fase de implementação",
+          "novo": "O BID registra o Padeam II (BR-L1621), aprovado em 11/04/2024, em fase de implementação. Esse registro não comprova cumprimento integral das metas nem autoriza transferir percentuais da primeira fase para a segunda."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse do BID para o Estado (Padeam): o Banco Interamericano de Desenvolvimento transfere recursos ao Governo do Amazonas, por meio de contrato de empréstimo, para financiar a construção e adequação das escolas de tempo integral, a ampliação do Centro de Mídias e os programas pedagógicos. Repasse estadual para obras: o Governo do Estado, por meio da Seduc-AM e da UGPADEAM, contrata empresas para execução das obras e aquisição de equipamentos, seguindo os critérios do BID (Licitação Pública Nacional - LPN)",
+          "novo": "Financiamento por operação de empréstimo e contrapartida estadual, conforme os instrumentos de cada fase; desembolsos e contratação de obras não foram auditados nesta revisão."
+        },
+        "fonte_tipo": {
+          "anterior": "pagina_programa",
+          "novo": "pagina_programa"
+        },
+        "ano_criacao": {
+          "anterior": "2013",
+          "novo": "Não confirmado; há marco legal da unidade de gerenciamento em 2012."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. As Leis nº 3.841/2012 e nº 3.941/2013 tratam da unidade gestora, não demonstram a data de criação do programa. Removida associação entre 96% do Padeam I em 2021 e execução atual do II. Fase atual respaldada pelo registro específico do BID, sem inventar resultados.",
+      "referencias": [
+        {
+          "url": "https://educacao.am.gov.br/servi%C3%A7os/chamadas-publicas.html?catid=146&id=5338%3Aprograma-de-acelera%C3%A7%C3%A3o-do-desenvolvimento-da-educa%C3%A7%C3%A3o-do-amazonas-padeam&view=article",
+          "titulo": "Seduc-AM — apresentação do Padeam",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://legisla.imprensaoficial.am.gov.br/diario_am/12/2013/10/7329",
+          "titulo": "Lei AM nº3.941, de09/10/2013 — instituição da UG-PADEAM",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.ugpadeam.am.gov.br/legislacao/",
+          "titulo": "UGP-Padeam — legislação institucional",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.iadb.org/en/project/BR-L1621",
+          "titulo": "BID — Padeam II, projetoBR-L1621, aprovado11/04/2024",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.ugpadeam.am.gov.br/wp-content/uploads/2024/11/0.1.-Lei-no-3841-DE-20-12-2012-CRIACAO-UGPADEAM.pdf",
+          "titulo": "Lei AM nº 3.841, de 20/12/2012 — finalidades, competências e estrutura da UGP-Padeam",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    },
+    {
+      "id_interno": "FRM-CP-2026-EDU-0422",
+      "campos": {
+        "fonte_url": {
+          "anterior": "https://seduc.pi.gov.br/noticias/noticia/6765/seduc-oferece-mais-de-150-mil-vagas-em-todo-o-pi-para-eja",
+          "novo": "https://seduc.pi.gov.br/download/editais/37-editais-16-12-2025-10-12-19.pdf"
+        },
+        "fonte_tipo": {
+          "anterior": "outros",
+          "novo": "edital"
+        },
+        "resumo": {
+          "anterior": "Modalidade da educação básica destinada a jovens (15+) e adultos que não concluíram a escolaridade na idade regular. Presença regular (aulas presenciais em horários fixos, em 600 escolas) e presença flexível (modelo semipresencial com estudo autônomo)",
+          "novo": "Oferta de Educação de Jovens e Adultos da rede pública estadual do Piauí para pessoas que não tiveram acesso ou continuidade de estudos. O edital de matrículas para 2026 inclui a EJA, com ingresso a partir de 15 anos no Ensino Fundamental e de 18 anos no Ensino Médio, conforme a etapa e a oferta disponível."
+        },
+        "apresentacao": {
+          "anterior": "A Educação de Jovens e Adultos é organizada pela Secretaria de Educação para garantir o direito à educação de quem não teve acesso ou não concluiu os estudos na idade adequada. Nos últimos anos, as diretrizes da política garantem que o estado ofereça dois modelos complementares: a EJA de presença regular, com aulas presenciais em horários definidos (noturno) e a EJA de presença flexível, inspirada nos CEEJAs, que permite ao estudante organizar seu percurso formativo de forma personalizada",
+          "novo": "Oferta de Educação de Jovens e Adultos da rede pública estadual do Piauí para pessoas que não tiveram acesso ou continuidade de estudos. O edital de matrículas para 2026 inclui a EJA, com ingresso a partir de 15 anos no Ensino Fundamental e de 18 anos no Ensino Médio, conforme a etapa e a oferta disponível."
+        },
+        "descricao_tecnica": {
+          "anterior": "A Educação de Jovens e Adultos é organizada pela Secretaria de Educação para garantir o direito à educação de quem não teve acesso ou não concluiu os estudos na idade adequada. Nos últimos anos, as diretrizes da política garantem que o estado ofereça dois modelos complementares: a EJA de presença regular, com aulas presenciais em horários definidos (noturno) e a EJA de presença flexível, inspirada nos CEEJAs, que permite ao estudante organizar seu percurso formativo de forma personalizada",
+          "novo": "Oferta de Educação de Jovens e Adultos da rede pública estadual do Piauí para pessoas que não tiveram acesso ou continuidade de estudos. O edital de matrículas para 2026 inclui a EJA, com ingresso a partir de 15 anos no Ensino Fundamental e de 18 anos no Ensino Médio, conforme a etapa e a oferta disponível."
+        },
+        "base_legal": {
+          "anterior": "Lei Federal nº 9.394/96 (LDB); Resoluções e portarias das Secretarias de Educação",
+          "novo": "Lei nº 9.394/1996 (LDB); Resolução CNE/CEB nº 3/2025, alterada pela Resolução CNE/CEB nº 6/2025; edital estadual de matrículas para 2026."
+        },
+        "modalidade_oferta": {
+          "anterior": "Mista",
+          "novo": "Sem informação"
+        },
+        "arranjo_logistico": {
+          "anterior": "Unidade fixa",
+          "novo": "Sem informação"
+        },
+        "revisado_por": {
+          "anterior": "Maria Clara Gama",
+          "novo": null
+        },
+        "duvidas_revisor": {
+          "anterior": null,
+          "novo": "Retirada descrição de 600 escolas e presença flexível oriunda de São Paulo. O edital confirma regras de matrícula para 2026; não demonstra preenchimento de vagas nem atendimento em todos os municípios."
+        },
+        "orgaos_responsaveis": {
+          "anterior": [
+            "Secretaria de EDucação",
+            "Diretorias de Ensino",
+            "Escolas Estaduais",
+            "CEEJAs",
+            "CIEJAs"
+          ],
+          "novo": [
+            "Secretaria da Educação do Piauí (Seduc-PI)",
+            "Unidades escolares da rede estadual ofertantes"
+          ]
+        },
+        "continuidade_governos": {
+          "anterior": "Sim, em geral (política estruturante, com ajustes conforme gestão)",
+          "novo": "Oferta incluída no edital estadual de matrículas para 2026; continuidade local e atendimento efetivo não aferidos."
+        },
+        "carga_horaria": {
+          "anterior": "EJA de presença regular: conforme organização curricular (carga horária total definida para cada etapa)",
+          "novo": "Conforme etapa, organização curricular e normas da rede estadual; não foi verificada carga específica nesta revisão."
+        },
+        "transferencia_recursos": {
+          "anterior": "Repasse automático \"fundo a fundo\" do Fundeb. A União (FNDE) transfere recursos ao Fundo de Educação do Estado, que os distribui para a Secretaria de Educação e as escolas da rede municipal de ensino que ofertam EJA",
+          "novo": "Financiamento da educação básica conforme orçamento e regras do Fundeb. A distribuição não corresponde a um repasse único do FNDE à secretaria e às escolas municipais."
+        }
+      },
+      "justificativa": "Substituição de referência inacessível ou inadequada e delimitação do conteúdo sustentado pela fonte. Retirados CEEJAs/CIEJAs e fluxo financeiro genérico transposto de SP; adequação à rede estadual descrita pelo edital.",
+      "referencias": [
+        {
+          "url": "https://seduc.pi.gov.br/download/editais/37-editais-16-12-2025-10-12-19.pdf",
+          "titulo": "Seduc-PI — edital de matrículas da rede estadual para 2026",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://www.planalto.gov.br/ccivil_03/_ato2019-2022/2020/lei/l14113.htm",
+          "titulo": "Lei nº14.113/2020 — Fundeb, texto compilado",
+          "consultado_em": "2026-10-05"
+        },
+        {
+          "url": "https://bkpsitecpsnew.blob.core.windows.net/uploadsitecps/sites/18/2025/08/Resolucao-CNE-CEB-06_2025-07-21.pdf",
+          "titulo": "Resolução CNE/CEB nº6/2025 — alteração das diretrizes nacionais da EJA",
+          "consultado_em": "2026-10-05"
+        }
+      ],
+      "verificado_em": "2026-10-05"
+    }
+  ]
+}

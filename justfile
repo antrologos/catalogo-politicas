@@ -26,14 +26,14 @@ build-ids:
 
 # C.1.f — Valida contra .claude/context/policies-schema.json
 validate:
-    python -B scripts/etl/validate.py
+    python -B scripts/etl/validate.py --strict
 
 # C.1.g — Gera JSON canônico final + symlink latest.json
 build-json:
     python -B scripts/etl/build_json.py
 
 # Pipeline ETL completo
-etl: load-planilha normalize dedupe build-ids validate build-json
+etl: load-planilha normalize dedupe build-ids build-json validate
 
 # === Links externos (C.2) ===
 
