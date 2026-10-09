@@ -21,3 +21,8 @@ A branch de preservação é local. O envio de uma branch remota adicional foi b
 - Validação local em 1440/390/320 px, sem overflow ou erros, logo carregado e conteúdo disponível sem JavaScript. Rotas antigas de UF, busca, ficha, JSON e Pagefind exibem o aviso com404.
 - Conferência pública às 13:03:44 UTC: raiz200 e logo200; seis rotas antigas404. Os sete HTML recebidos são idênticos ao aviso local porSHA256, e o logo também confere. Requisições novas sem conteúdo anterior em cache. Evidência privada em qa-suspensao/resultado-publico.json.
 - git diff c984d57 -- data site/src sem diferenças: nenhum conteúdo revisado do catálogo foi revertido ou apagado.
+
+## Retomada (09/10/2026)
+
+- O usuário pediu para ativar a versão revisada. `site/publicacao.json` voltou a `catalogo`; nenhuma mudança de conteúdo (`git diff c984d57 HEAD -- data site/src` vazio). Testes Node locais: 47/47.
+- A publicação passa pela cadeia completa do CI (schema, testes, build, pa11y, Lighthouse, deploy).
