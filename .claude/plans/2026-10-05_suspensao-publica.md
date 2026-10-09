@@ -26,3 +26,7 @@ A branch de preservação é local. O envio de uma branch remota adicional foi b
 
 - O usuário pediu para ativar a versão revisada. `site/publicacao.json` voltou a `catalogo`; nenhuma mudança de conteúdo (`git diff c984d57 HEAD -- data site/src` vazio). Testes Node locais: 47/47.
 - A publicação passa pela cadeia completa do CI (schema, testes, build, pa11y, Lighthouse, deploy).
+
+## Nova suspensão (09/10/2026)
+
+- No mesmo dia da retomada, o usuário pediu para retirar o site do ar e voltar à página temporária. `site/publicacao.json` voltou a `atualizacao`; página, builder e workflow são os mesmos de af4c179 (sem diferenças). O builder validou localmente o artefato restrito (index.html, 404.html, assets/rede-eja-logo.svg). Conteúdo do catálogo intacto.

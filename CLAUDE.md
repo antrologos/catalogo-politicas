@@ -6,9 +6,10 @@
 
 Orientações para o Claude Code (claude.ai/code) neste repositório. O histórico detalhado das rodadas de maio a outubro de 2026 está em `.claude/archive/CLAUDE-historico-ate-2026-10-04.md`. Use-o como arqueologia, não como checklist.
 
-## Suspensão temporária do acesso público (2026-10-05) — encerrada em 2026-10-09
+## Suspensão temporária do acesso público (2026-10-05) — reativada em 2026-10-09
 
-- Em 09/10/2026 o usuário pediu para ativar a versão revisada: `site/publicacao.json` voltou a `catalogo` e o catálogo completo (c984d57, sem mudança de conteúdo) foi republicado. Não voltar a `atualizacao` sem novo pedido do usuário.
+- Em 09/10/2026 o usuário pediu para ativar a versão revisada: `site/publicacao.json` voltou a `catalogo` e o catálogo completo (c984d57, sem mudança de conteúdo) foi republicado.
+- No mesmo dia, o usuário pediu para retirar o site do ar de novo: `site/publicacao.json` voltou a `atualizacao` e a página temporária (a mesma de af4c179) foi republicada. **Estado atual: suspenso.** Não mudar para `catalogo` sem novo pedido do usuário.
 - O usuário determinou suspensão imediata do catálogo até uma apresentação combinada. Não reverter o conteúdo; preservar a versão revisada integralmente.
 - `site/publicacao.json` controla o artefato público: `atualizacao` publica somente aviso, 404 e logo; `catalogo` reativa o fluxo completo de validação e publicação.
 - Fontes e dados permanecem intactos. A branch local `versao-revisada-2026-10-05` preserva c984d57. A suspensão não torna privado o repositório nem apaga conteúdo anteriormente acessado.
